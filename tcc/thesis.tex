@@ -1,0 +1,185 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The following comments were written in Portuguese, because this 
+% template applies only for Institute of Philosophy and the 
+% Humanities at University 
+% of Campinas, Brazil.
+%
+% Este Modelo foi adaptado do Modelo criado pelo autor André Leon 
+% Sampaio Gradvohl (gradvohl@ft.unicamp.br), Dr. para a FT da 
+% UNICAMP 
+ 
+% Autor: Jose H C Monteiro da Silva
+% Email: j117439@dac.unicamp.br 
+%  
+% Última versão: 06/Março/2019
+%
+% Primeira versão (06/Março/2019): adaptação do modelo inicial  
+% desenvolvido pelo André para a FT de modo a adequá-lo às  
+% normas do IFCH. 
+
+% more info about tikz:
+% https://onedrive.live.com/?authkey=%21AED7aQ8bLkbLyMw&cid=385368CB57890A6F&id=385368CB57890A6F%21196269&parId=385368CB57890A6F%21146908&o=OneUp
+
+% document class thesis   
+\documentclass[Ingles]{tese-IFCH}
+
+\input{commands.tex}
+
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\doublespacing
+
+\usetikzlibrary{patterns}
+\usetikzlibrary{plotmarks}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{angles}
+\usepackage[portuguese]{babel}
+
+\usetikzlibrary{external}
+%\tikzexternalize[prefix=figures_tikz/]
+
+\newcommand{\fake}[1]      {\textbf{\textcolor{red}{#1}}}
+\newcommand{\inputtikz}[1]{%
+  \tikzsetnextfilename{#1}%
+  \input{#1.tex}%
+}
+\def \FigPath {./figures}
+
+\addbibresource{bibliography.bib}
+
+\newcommand{\printingbibliography}{%
+
+    \pagestyle{myheadings}
+    \markright{}
+    \sloppy
+    \printbibliography[heading=bibintoc, % add to table of contents
+                   title=Bibliography % Chapter name
+                  ]
+    \fussy%
+}
+
+\begin{document}
+
+ % Add lines numbers
+%\linenumbers
+
+% Author
+\autor{André Vieira da Silva}
+%\autora{Nome da Autora}
+
+% title
+\title{\textnormal{\textbf{}}}
+
+
+% Se a língua for o inglês ou o espanhol defina:
+\titulo{\textnormal{\textbf{}}}
+
+% Escolha entre orientador ou orientadora e inclua os títulos:
+\orientador{Prof. Dr. David Dobrigkeit Chinellato}
+%\orientadora{Profa. Dra. Nome da Orientadora}
+
+% Escolha entre coorientador ou coorientadora, se houver, 
+% e inclua os títulos:
+%\coorientador{Prof. Dr. Eng. Lic. Nome do Co-Orientador}
+%\coorientadora{Prof. Dra. Eng. Lic. Nome da Co-Orientadora}
+ 
+% Escolha entre uma das quatro opções a seguir (comente as demais):
+%\bsi         % para Trabalho de Conclusão de Curso em BSI
+%\tads       % para Trabalho de Conclusão de Curso em TADS 
+%\qualificacaoMestrado  % Para textos de qualificação de mestrado.
+%\qualificacaoDoutorado % Para textos de qualificação de doutorado.
+%\mestrado   % para Dissertação de Mestrado em Tecnologia
+\doutorado  % para Tese de Doutorado em Tecnologia
+
+%Defina a área de concentração. Se for TCC, deixe comentado
+\areaConcentracao{Demografia}
+%\areaConcentracao{Ambiente}
+%\areaConcentracao{Ciência dos Materiais}
+
+% Se houve cotutela, defina:
+%\cotutela{Universidade Nova de Plutão}
+
+%Defina a data da defesa no formato {Dia}{Mês}{Ano}
+\datadadefesa{01}{08}{2020}
+
+% Para a versão final defina:
+% Repita o nome do Orientador(a) no primeiro avaliador
+%\avaliadorA{avaliador Nome} 
+
+% Para incluir a ficha catalográfica em PDF na versão final, 
+% copie o arquivo PDF, descomente e ajuste a linha a seguir:
+%\fichacatalografica{} 
+
+% Este comando deve ficar aqui:
+\paginasiniciais
+
+% capa de aprovação da defesa
+%\includepdf[pages=-]{aprovacao.pdf}
+
+% Adicione no arquivo "agradecimentos.tex" os seus agradecimentos
+% Caso prefira omitir os agradecimentos, comente a linha a seguir.
+\input{acknowledgements}
+
+\input{resumo}
+
+\input{abstract}
+
+
+% A lista de figuras:
+\listoffigures
+
+% A lista de tabelas:
+\listoftables
+
+% adicionar abreviações e siglas no texto.
+%\renewcommand{\nomname}{Lista de Abreviações e Siglas}
+\printnomenclature[3cm]
+
+% O sumário vem aqui:
+\fancyfoot[L]{Thesis version \today\     \currenttime}
+\tableofcontents
+
+% E esta linha deve ficar bem aqui:
+\fimdaspaginasiniciais
+
+% O corpo da dissertação ou tese começa aqui:
+%
+% O comando a seguir inclui o arquivo introducao.tex
+% que contém o capítulo de Introdução. 
+% Detalhe: não precisa incluir a extensão .tex
+\include{introduction}
+
+% O comando a seguir inclui o arquivo revisao_bibliografica.tex
+% que contém o capítulo de levantamento bibliográfico. 
+% Detalhe: não precisa incluir a extensão .tex
+%\include{phenomenology}
+
+% O comando a seguir inclui o arquivo metodologia.tex
+% que contém o capítulo de metodologia. 
+% Detalhe: não precisa incluir a extensão .tex
+%\include{chain}
+
+% O comando a seguir inclui o arquivo analise.tex
+% que contém o capítulo de analise. 
+% Detalhe: não precisa incluir a extensão .tex
+%\include{analysis}
+
+% O comando a seguir inclui o arquivo resultados.tex
+% que contém o capítulo de resultados. 
+% Detalhe: não precisa incluir a extensão .tex
+%\include{results}
+
+% O comando a seguir inclui o arquivo conclusoes.tex
+% que contém o capítulo de conclusoes. 
+% Detalhe: não precisa incluir a extensão .tex
+%\include{conclusion}
+
+%%%%%%%% Bibliography 
+% Os comandos para incluir as referências bibliográficas
+\printingbibliography
+
+% Os anexos, se houver, vêm depois das referências:
+\appendix
+
+
+\end{document}
