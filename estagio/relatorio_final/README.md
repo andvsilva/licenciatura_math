@@ -15,3 +15,16 @@ A documentação de estágio deverá ser entregue seguindo a ordem descrita abai
  - Caracterização do estabelecimento;
  - Relato de Experiência;
  - Certificados de cursos extensão/capacitação;
+
+Nome da Escola
+HILTON FEDERICI PROFESSOR
+Endereço
+RUA EDUARDO MODESTO , 91 - VILA SAO ISABEL - CAMPINAS
+Tipo de Escola
+EE
+Diretoria de Ensino
+CAMPINAS LESTE
+CEP
+13084360
+Telefone
+(19)32891259

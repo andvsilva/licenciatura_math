@@ -80,8 +80,8 @@
 %                uniquename=false]{biblatex}
 
 % Definição de novos comandos
-\newcommand{\@IFCH}{\small \textnormal{Instituto de Física ``Gleb Wataghin''}}
-\newcommand{\@UNICAMP}{Universidade Estadual de Campinas}
+\newcommand{\@IFCH}{\small \textnormal{Faculdade IBRA}}
+\newcommand{\@UNICAMP}{Licenciatura em Matem\'atica}
 
 % Criação de variáveis para o texto.
 \let\@autor\relax
