@@ -3,4 +3,5 @@
 \babel@toc {english}{}
 \babel@toc {brazil}{}
 \contentsline {section}{\numberline {1}Introdução}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Escola Austríaca}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.1}Escola Austríaca}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Princ\'ipios Econ\^omicos}{3}{subsection.1.2}%
