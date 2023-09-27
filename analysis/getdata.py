@@ -1,25 +1,57 @@
-
 # importing required modules
 import PyPDF2
 import time
 import enchant
-import nltk
-from nltk.tokenize import word_tokenize
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, Dataset
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
-import pandas as pd
-nltk.download('wordnet')
-nltk.download('stopwords')
-nltk.download('punkt')
-nltk.download('all')
+from sympy.matrices import SparseMatrix
+
 from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
+import torch
+import torch.nn as nn
+from torch.utils.data import DataLoader, Dataset
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import CountVectorizer
+
+import os.path
+import sys
+import gc
+import pandas as pd
+import numpy as np
+
+# Crie uma classe personalizada do conjunto de dados PyTorch
+class TextDataset(Dataset):
+    def __init__(self, data):
+        self.data = data
+
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self, idx):
+        return torch.tensor(self.data[idx], dtype=torch.float32)
+
+# release memory RAM
+def release_memory(df):   
+    del df
+    gc.collect() 
+    df = pd.DataFrame() # point to NULL
+    print('memory RAM released.')
+
+# release memory for large arrays (dictionary)
+def release_array(dd):
+    del dd 
+    gc.collect()
+    dd = None
+
+
+start_time = time.time()
 
 # get dictionary US
 d = enchant.Dict("en_US")
@@ -40,32 +72,6 @@ def preprocess_text(text):
     # Join the tokens back into a string
     processed_text = ' '.join(lemmatized_tokens)
     return processed_text
-
-# Carregue e pré-processe seus dados de texto
-# (você pode usar as etapas de pré-processamento mencionadas anteriormente)
-
-# Vetorize seus dados usando TF-IDF
-vectorizer = TfidfVectorizer()
-
-nltk.download('all')
-
-# get dictionary US
-d = enchant.Dict("en_US")
-
-start_time = time.time()
-
-analyzer = SentimentIntensityAnalyzer()
-
-# Crie uma classe personalizada do conjunto de dados PyTorch
-class TextDataset(Dataset):
-    def __init__(self, data):
-        self.data = data
-
-    def __len__(self):
-        return len(self.data)
-
-    def __getitem__(self, idx):
-        return torch.tensor(self.data[idx].toarray(), dtype=torch.float32)
 
 # Abra o arquivo PDF
 with open('dataset/books/humanaction_bodytest.pdf', 'rb') as pdf_file:
@@ -89,38 +95,38 @@ with open('dataset/books/humanaction_bodytest.pdf', 'rb') as pdf_file:
         # Adicione as words à lista
         all_words.extend(words)
 
-new_words = []
+cleaning_words = []
 
 for word in all_words:
     if(d.check(word)):
-        #print(f"Word found {word}")
-        new_words.append(word)
+        cleaning_words.append(word)
+
+review = ""
 
 istart = 0
 iend = 100
-review = ""
-index = []
+ltexts = []
 
-for jlist in new_words:
+for jlist in cleaning_words:
     review += jlist + " "
-    index.append(istart)
 
     if istart == iend:
-        #scores = analyzer.polarity_scores(review)
-        #print(f'>>> {scores}')
-        istart = 0
-        break
-    istart += 1
+        ltexts.append(review)
+        istart=0
+    else:
+        istart += 1
 
-tfidfv = TfidfVectorizer().fit(review)
-tfidfv.transform(review).toarray()
+## Convert a collection of text documents to a matrix of token counts.
+cv = CountVectorizer()
 
-print(tfidfv.transform(review).toarray())
-print(tfidfv.vocabulary_)
-X = vectorizer.fit_transform()
+# feature
+X = cv.fit_transform(ltexts).toarray() # array type
 
 # Divida seus dados em treinamento e teste
 X_train, X_test = train_test_split(X, test_size=0.2, random_state=42)
+
+# release memory - array
+release_array(X)
 
 # Crie conjuntos de dados e carregadores de dados
 train_dataset = TextDataset(X_train)
@@ -137,7 +143,7 @@ class Autoencoder(nn.Module):
         x = self.encoder(x)
         x = self.decoder(x)
         return x
-    
+
 # Crie o modelo e defina hiperparâmetros
 input_size = X_train.shape[1]
 hidden_size = 256
@@ -145,6 +151,7 @@ model = Autoencoder(input_size, hidden_size)
 criterion = nn.MSELoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
+print("Training the model...")
 # Treine o autoencoder
 num_epochs = 10
 for epoch in range(num_epochs):
@@ -157,25 +164,21 @@ for epoch in range(num_epochs):
     print(f'Época [{epoch + 1}/{num_epochs}], Perda: {loss.item():.4f}')
 
 # Use as saídas do encoder como representações latentes
-representacoes_latentes = model.encoder(torch.tensor(X_test.toarray(), dtype=torch.float32))
+representacoes_latentes = model.encoder(torch.tensor(X_test, dtype=torch.float32))
 
-#istart = 0
-#iend = 100
-#review = ""
-#
-for jlist in new_words:
-    review += jlist + " "
-    if istart == iend:
-        scores = analyzer.polarity_scores(review)
-        print(f'>>> {scores}')
-        istart = 0
-    istart += 1
+# Reconstrua o texto de exemplo
+reconstrucao = model.decoder(representacoes_latentes)
 
+# Calcule a diferença entre a entrada e a reconstrução
+diferenca = np.mean(np.abs(X_train - reconstrucao.detach().numpy()))
 
-#print(len(new_words))
-#print(len(all_words))
-#
-## Agora, todas as words estão na lista "all_words"
-#print(new_words)
+# Defina um limite de anomalia
+limite_anomalia = 0.1  # Ajuste este valor conforme necessário
+
+# Verifique se é uma anomalia
+if diferenca > limite_anomalia:
+    print("Anomalia detectada!")
+else:
+    print("Não é uma anomalia.")
 
 print("--- %s seconds ---" % (time.time() - start_time))
