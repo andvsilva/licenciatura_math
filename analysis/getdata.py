@@ -169,8 +169,10 @@ representacoes_latentes = model.encoder(torch.tensor(X_test, dtype=torch.float32
 # Reconstrua o texto de exemplo
 reconstrucao = model.decoder(representacoes_latentes)
 
+texto_exemplo = cv.transform(["Keynesianism refers to the economic theories and policies associated with the ideas of John Maynard Keynes, a British economist who lived during the early to mid-20th century. Keynesian economics became prominent during and after the Great Depression and had a significant influence on economic thought and government policy."]).toarray()
+
 # Calcule a diferença entre a entrada e a reconstrução
-diferenca = np.mean(np.abs(X_train - reconstrucao.detach().numpy()))
+diferenca = np.mean(np.abs(texto_exemplo - reconstrucao.detach().numpy()))  # Não é necessário toarray() aqui
 
 # Defina um limite de anomalia
 limite_anomalia = 0.1  # Ajuste este valor conforme necessário
