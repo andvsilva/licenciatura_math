@@ -10,20 +10,17 @@ import blockcypher
 import pandas as pd
 import time
 
+file = open('txids.txt', 'r')
 
-df_txids = pd.read_csv('feather/txids.csv')
+while True:
+    txid = file.readline()
+    if not txid:
+        break
 
-#print(df_txids)
+    txid = txid.replace("\n", "")
+    print(txid)
+        
+    print(blockcypher.get_transaction_details(f'{txid}'))
 
-for index, row in df_txids.iterrows():
-    print(row)
-
-#print(blockcypher.get_block_details(f'800000'))
-
-#for iblock in range(800000, 810386):
-#    block_details = blockcypher.get_block_details(f'{iblock}')
-#
-#    print(block_details)
-#    print("Please, wait a few seconds...")
-#    time.sleep(8)
-    
+    #print(block_details)
+    time.sleep(20)

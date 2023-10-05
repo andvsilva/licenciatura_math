@@ -37,9 +37,8 @@ def release_memory(df):
     df = pd.DataFrame() # point to NULL
     print('memory RAM released.')
 
-df = pd.DataFrame(columns=['txids'])
-
 rel.safe_read()
+
 
 def on_message(ws, message):
 
@@ -51,30 +50,23 @@ def on_message(ws, message):
         #if isinstance(subset, int):
             #print(f'{i}: {subset}')
 
+        df = pd.DataFrame()
+
         if isinstance(subset, list):
             newsubset = {key: [i[key] for i in subset] for key in subset[0]}
             for j in newsubset:
                 if j == 'txid':
                     print(f'{j}: {newsubset[j]}')
 
-                    
                     for txid in newsubset[j]:
-                        with open('feather/txids.csv', 'a', encoding='UTF8') as f:
-                            # create the csv writer
-                            writer = csv.writer(f)
 
-                            ltxid = []
-                            ltxid.append(txid)
-
-                            # write a row to the csv file
-                            writer.writerow(ltxid)
-
-                            # close the file
-                            f.close()
-
-            df = pd.read_csv('feather/txids.csv')
-            df = df.reset_index(drop=True)
-            df.to_feather('feather/txids.ftr')
+                        with open('txids.txt', 'a') as file:
+                            file.write(txid)
+                            file.write('\n')
+                        
+                            # Close the file
+                            #file.close()
+                    
 
         #if isinstance(subset, dict):
             #print(f'{subset}')
