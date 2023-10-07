@@ -3,18 +3,3 @@
 \babel@toc {english}{}
 \babel@toc {brazil}{}
 \contentsline {section}{\numberline {1}Introdução}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Escola Austríaca}{3}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Princ\'ipios Econ\^omicos}{3}{subsection.1.2}%
-\contentsline {subsubsection}{\numberline {1.2.1}Valor Subjetivo}{4}{subsubsection.1.2.1}%
-\contentsline {subsubsection}{\numberline {1.2.2}Ação Humana}{4}{subsubsection.1.2.2}%
-\contentsline {subsubsection}{\numberline {1.2.3}Mercados Livres }{4}{subsubsection.1.2.3}%
-\contentsline {subsubsection}{\numberline {1.2.4}Ciclos Econômicos }{4}{subsubsection.1.2.4}%
-\contentsline {subsubsection}{\numberline {1.2.5}Limitação do Papel do Estado}{4}{subsubsection.1.2.5}%
-\contentsline {subsubsection}{\numberline {1.2.6}Propriedade Privada}{4}{subsubsection.1.2.6}%
-\contentsline {subsubsection}{\numberline {1.2.7}Crítica ao Socialismo }{4}{subsubsection.1.2.7}%
-\contentsline {subsubsection}{\numberline {1.2.8}Ordem Espontânea}{4}{subsubsection.1.2.8}%
-\contentsline {section}{\numberline {2}Escola Austr\'iaca aplicada ao Mercado Financeiro}{4}{section.2}%
-\contentsline {section}{\numberline {3}Metodologia de An\'alise dos Dados Econ\^omicos}{4}{section.3}%
-\contentsline {section}{\numberline {4}An\'alise de Sentimento dos Dados das Atividades Econ\^omicas}{4}{section.4}%
-\contentsline {section}{\numberline {5}Resultados}{4}{section.5}%
-\contentsline {section}{\numberline {6}Conclus\~oes}{4}{section.6}%
