@@ -1,22 +1,13 @@
-# Makefile para compilar um documento LaTeX
+############################################
+# Makefile for thesis
+############################################
 
-# Nome do arquivo LaTeX (sem a extensão .tex)
-FILENAME = main
-
-# Comando LaTeX (pode variar de acordo com o sistema)
-LATEX = pdflatex
-
-# Comando para limpar os arquivos auxiliares gerados pelo LaTeX
-CLEAN = rm -f *.aux *.log *.out *.toc main.pdf
-
-all: $(FILENAME).pdf
-
-$(FILENAME).pdf: $(FILENAME).tex
-	$(LATEX) $(FILENAME).tex
-	$(LATEX) $(FILENAME).tex
-	$(LATEX) $(FILENAME).tex
+all:
+	pdflatex -shell-escape main
+	bibtex main
+	pdflatex -shell-escape main
+	pdflatex -shell-escape main
+	date
 
 clean:
-	$(CLEAN)
-
-.PHONY: all clean
+	rm -rf *.gz *.bbl *.bcf *.aux *.log *.blg *.out main.pdf *~

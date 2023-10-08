@@ -1,5 +1,11 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
 \babel@toc {brazil}{}
 \babel@toc {english}{}
 \babel@toc {brazil}{}
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Introdução}{2}{section.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}O que \'e an\'alise on-chain}{3}{section.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Bibliography}{3}{section.2}%
