@@ -151,9 +151,9 @@ de preços do \btcspace atual e futuro usando métricas.
 Estas são as principais noções:
 
 \begin{enumerate}
-    \item \textbf{Blocos}: Uma blockchain é uma estrutura de dados composta por vários blocos. Cada bloco é composto 
-    por um conjunto de informações ou transações. Uma cadeia contínua é criada quando os blocos são 
-    conectados de forma cronológica.
+    \item \textbf{Blocos}: Uma blockchain é uma estrutura de dados composta por cadeia de blocos. 
+    Cada bloco é composto por um conjunto de informações ou transações. Uma cadeia contínua é 
+    criada quando os blocos são conectados de forma cronológica.
 
     \item \textbf{Transações}: As transações são ações ou eventos que estão registrados na blockchain. Por exemplo, 
     transferir bitcoins de um indivíduo para outro pode ser uma transação em uma blockchain de criptomoeda.
@@ -186,7 +186,7 @@ Estas são as principais noções:
      como o Bitcoin, para resolver problemas matemáticos difíceis e adicionar novos blocos à blockchain. 
      Eles recebem criptomoedas como recompensa por seu trabalho.
 
-     \item Armazenamento distribuído: Uma cópia completa da blockchain é armazenada em cada nó da rede blockchain. 
+     \item \textbf{Armazenamento distribuído}: Uma cópia completa da blockchain é armazenada em cada nó da rede blockchain. 
      Isso aumenta a redundância e a segurança da informação.
 \end{enumerate}
 
@@ -204,7 +204,125 @@ para validar transações por meio de criptografia resolve o problema conhecido 
 Esses e outros avanços para a tecnologia de um livro cont\'abil distribu\'ido constitui a base para 
 ativos digitais.}
 
-\hspace{0.5cm}
+\subsection{História do Bitcoin e a importância de Satoshi Nakamoto}
+
+\hspace{0.5cm}O artigo ``Bitcoin: A Peer-to-Peer Electronic Cash System'' foi o primeiro whitepaper 
+que apresentou o Bitcoin. Foi publicado em outubro de 2008. Satoshi Nakamoto escreveu um whitepaper 
+que apresentava uma ideia revolucionária de uma moeda digital que funcionaria em uma rede descentralizada,
+eliminando a necessidade de intermediários financeiros como bancos.
+
+\subsection{Blockchain: O Livro-Razão Público do Bitcoin}
+
+\hspace{0.5cm}O fundamento sobre o qual o Bitcoin e muitas outras criptomoedas são construídas 
+é o blockchain, que significa ``cadeia de blocos'' em português. Ele funciona como um registro 
+público e descentralizado de todas as transações que ocorrem em uma rede de criptomoeda. 
+O papel do blockchain no Bitcoin é essencial para garantir a segurança, transparência e 
+integridade da rede.
+
+\subsubsection{Arquitetura da Blockchain}
+\hspace{0.5cm}O blockchain é chamado de ``cadeia de blocos'' porque é composto por um conjunto 
+de blocos que estão conectados de forma cronológica. Cada bloco contém um conjunto de transações que 
+os mineradores da rede validaram. Aproximadamente a cada dez minutos, essas transações são organizadas 
+em blocos.
+
+\textbf{Principais componentes de um bloco}: 
+
+\begin{enumerate}
+\item \textbf{O cabeçalho do bloco}: Contém informações importantes como o número do bloco, 
+um registro da data e hora, um hash que identifica o bloco anterior (exceto no primeiro bloco, conhecido como 
+``bloco gênesis'') e um hash que representa o conteúdo do bloco atual.
+
+\item \textbf{Transações}: Um conjunto de transações que detalham como transferir bitcoins de um 
+endereço para outro é exibido em cada bloco. Para garantir a segurança e an autenticidade dessas 
+transações, elas são criptografadas e assinadas digitalmente.
+\end{enumerate}
+
+O blockchain do Bitcoin funciona em uma rede mundial de computadores descentralizados que 
+trabalham em conjunto para validar e registrar essas transações. A ``mineração'' é o processo 
+de validar e adicionar um novo bloco à cadeia.
+
+\textbf{Mineração e Consenso}: 
+
+\begin{itemize}
+\item Mineradores de Bitcoin lutam para resolver quebra-cabeças matemáticos complicados conhecidos como 
+``prova de trabalho''. O direito de adicionar um novo bloco ao blockchain pertence ao minerador que é o 
+primeiro a resolver o quebra-cabeça.
+
+\item Os outros nós da rede verificam e aceitam as transações em um bloco a cada vez que é adicionado. 
+Isso os leva a concordar sobre o estado atual do blockchain.
+\end{itemize}
+
+\subsubsection{Segurança e Integridade}
+\hspace{0.5cm}O blockchain do \btcspace é altamente seguro e resistente a manipulações devido a várias 
+características:
+
+\begin{itemize}
+\item \textbf{Criptografia}: As transações no blockchain são protegidas por algoritmos criptográficos 
+robustos.
+
+\item \textbf{Descentralização}: A rede é distribuída globalmente, tornando difícil para qualquer entidade 
+controlar a maioria dos nós.
+
+\item \textbf{Imutabilidade}: Uma vez que um bloco é adicionado ao blockchain, é extremamente difícil 
+(quase impossível) alterá-lo sem o consenso da maioria da rede.
+
+\end{itemize}
+
+\subsubsection{Trilema das Blockchains}
+\hspace{0.5cm}O ``trilema das blockchains'' no contexto do Bitcoin (\btc) refere-se aos três desafios fundamentais 
+que a rede Bitcoin enfrenta ao tentar equilibrar três características principais: 
+
+\important{
+    \begin{itemize}
+    \item \textbf{Segurança}, (Segurity)
+    \item \textbf{Descentralização}, (Decentralization)
+    \item \textbf{Escalabilidade}. (Scalability)
+    \end{itemize}
+    }
+
+\begin{itemize}
+    \item \textbf{Segurança}: A segurança do \btcspace deve ser priorizada. Isso significa que todos os 
+    dados e transações que estão no blockchain do Bitcoin devem ser inalteráveis e indetectáveis. 
+    As informações no blockchain não podem ser comprometidas por meio da criptografia e do protocolo 
+    de consenso à prova de trabalho.
+
+    \item \textbf{Descentralização}: A descentralização é um pilar do \btc. Isso significa que, 
+    em vez de ser controlado por uma única entidade ou grupo, a rede deve ser operada e mantida 
+    por uma ampla rede de nós descentralizados. Isso fortalece a resistência à censura. Além disso, 
+    evita um único ponto de falha.
+
+    \item \textbf{Escalabilidade}: A capacidade do \btcspace de lidar com uma quantidade significativa 
+    de transações sem comprometer sua descentralização e segurança é chamada de escalabilidade. Isso é 
+    essencial para atender à crescente demanda por transações e garantir que o Bitcoin seja uma moeda 
+    viável em larga escala.
+
+\end{itemize}
+
+Esses desafios são frequentemente descritos como um ``trilema'' porque é difícil atender 
+completamente a todos eles simultaneamente na rede \btc. Aqui estão os componentes do 
+trilema específicos para o \btc.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/trillemabtc.png}
+    \caption{Trillema das Blockchains. Figura retirada do site \href{https://coinloan.io/blog/what-is-blockchain-trilemma/}{What is Blockchain Trillema}.}
+    \label{trillemablockchain}
+\end{figure}
+
+O problema com o trilema do \btcspace é que muitas vezes há um compromisso nos outros dois 
+ao tentar melhorar um. Por exemplo, aumentar a escalabilidade pode exigir uma implementação 
+de soluções de segunda camada, como a Lightning Network, que têm o potencial de impactar a
+descentralização. De forma semelhante, o foco na segurança máxima pode afetar a escalabilidade.
+
+A evolução e o crescimento do \btcspace envolveram a busca de soluções para o trilema. 
+Para equilibrar melhor os três fatores, podem ser incluídos atualizações de protocolo, 
+otimizações de software, ajustes nas configurações e soluções de segunda camada. Manter o \btcspace seguro, 
+descentralizado e escalável é um objetivo que os desenvolvedores e a comunidade estão continuamente 
+trabalhando para resolver. É fundamental entender que o trilema é uma questão complicada e flutuante 
+no desenvolvimento do \btc, e encontrar a maneira de equilibrar adequadamente esses três aspectos é 
+fundamental para seu sucesso contínuo.
+
+
 %%%%%%%% Bibliography 
 % Os comandos para incluir as referências bibliográficas
 \printingbibliography

@@ -12,4 +12,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2}Bitcoin: Um Sistema de Dinheiro Eletrônico}{6}{subsection.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Refer\^encias}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}História do Bitcoin e a importância de Satoshi Nakamoto}{6}{subsection.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4}Blockchain: O Livro-Razão Público do Bitcoin}{6}{subsection.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.1}Arquitetura da Blockchain}{6}{subsubsection.2.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.2}Segurança e Integridade}{7}{subsubsection.2.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.3}Trilema das Blockchains}{7}{subsubsection.2.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Refer\^encias}{9}{figure.caption.1}%
