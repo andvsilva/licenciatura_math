@@ -277,23 +277,23 @@ ax1.set(xlabel=None)
 ax1.set(ylabel='Transaction Count')
 plt.legend(framealpha=0)
 plt.title(f'Transactions: {symbol_b} vs {symbol_a}')
-#plt.show()
+plt.show()
 
 # Calculate Large Transactions Moving Averages
-rolling_window=25
-y_a_ltrx_ma = onchain_symbol_a_df['large_transaction_count'].rolling(window=rolling_window).mean() 
-y_b_ltrx_ma = onchain_symbol_b_df['large_transaction_count'].rolling(window=rolling_window).mean() 
-# Lineplot: Large Transactions
-fig, ax1 = plt.subplots(figsize=(16, 6))
-sns.lineplot(data=onchain_symbol_a_df[-1*data_limit::10], x='date', y='large_transaction_count', 
-    linewidth=0.5, color='skyblue', ax=ax1, label=f'{symbol_a} large transactions')
-sns.lineplot(data=onchain_symbol_a_df[-1*data_limit::10], x='date', y=y_a_ltrx_ma, 
-    linewidth=1.0, color='royalblue', linestyle='--', ax=ax1, label=f'{symbol_a} large transactions MA-{window}')
-sns.lineplot(data=onchain_symbol_b_df[-1*data_limit::10], x='date', y='large_transaction_count', 
-    linewidth=0.5, color='lightcoral', ax=ax1, label=f'{symbol_b} large transactions')
-sns.lineplot(data=onchain_symbol_b_df[-1*data_limit::10], x='date', y=y_b_ltrx_ma, 
-    linewidth=1.0, color='red', linestyle='--', ax=ax1, label=f'{symbol_b} large transaction MA-{window}')
-ax1.set(ylabel='Large Transactions')
-plt.title(f'Large Transactions > 100k: {symbol_b} vs {symbol_a}')
-plt.legend(framealpha=0)
-plt.show()
+#rolling_window=25
+#y_a_ltrx_ma = onchain_symbol_a_df['large_transaction_count'].rolling(window=rolling_window).mean() 
+#y_b_ltrx_ma = onchain_symbol_b_df['large_transaction_count'].rolling(window=rolling_window).mean() 
+## Lineplot: Large Transactions
+#fig, ax1 = plt.subplots(figsize=(16, 6))
+#sns.lineplot(data=onchain_symbol_a_df[-1*data_limit::10], x='date', y='large_transaction_count', 
+#    linewidth=0.5, color='skyblue', ax=ax1, label=f'{symbol_a} large transactions')
+#sns.lineplot(data=onchain_symbol_a_df[-1*data_limit::10], x='date', y=y_a_ltrx_ma, 
+#    linewidth=1.0, color='royalblue', linestyle='--', ax=ax1, label=f'{symbol_a} large transactions MA-{window}')
+#sns.lineplot(data=onchain_symbol_b_df[-1*data_limit::10], x='date', y='large_transaction_count', 
+#    linewidth=0.5, color='lightcoral', ax=ax1, label=f'{symbol_b} large transactions')
+#sns.lineplot(data=onchain_symbol_b_df[-1*data_limit::10], x='date', y=y_b_ltrx_ma, 
+#    linewidth=1.0, color='red', linestyle='--', ax=ax1, label=f'{symbol_b} large transaction MA-{window}')
+#ax1.set(ylabel='Large Transactions')
+#plt.title(f'Large Transactions > 100k: {symbol_b} vs {symbol_a}')
+#plt.legend(framealpha=0)
+#plt.show()
