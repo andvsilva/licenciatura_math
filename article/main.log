@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.8.20)  9 OCT 2023 19:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.8.20)  9 OCT 2023 19:50
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1558,7 +1558,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [4] [5] [6] [7]
-<images/trillemabtc.png, id=164, 813.79031pt x 475.7775pt>
+<images/trillemabtc.png, id=169, 813.79031pt x 475.7775pt>
 File: images/trillemabtc.png Graphic file (type png)
 <use images/trillemabtc.png>
 Package pdftex.def Info: images/trillemabtc.png  used on input line 307.
@@ -1569,21 +1569,21 @@ Package caption Warning: Unused \captionsetup[sub] on input line 57.
 See the caption package documentation for explanation.
 
 [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 330.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 330.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 334.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 334.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 330.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 330.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 334.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 334.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 28DDDFF95D82AD88A6C076F542A3D26A;805.
+(rerunfilecheck)             Checksum: DADD8A8463C231464B76114672ABBBBD;873.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 330.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 334.
  ) 
 Here is how much of TeX's memory you used:
- 45288 strings out of 481239
- 1027290 string characters out of 5920377
+ 45289 strings out of 481239
+ 1027292 string characters out of 5920377
  1795222 words of memory out of 5000000
  59702 multiletter control sequences out of 15000+600000
  604322 words of font info for 83 fonts, out of 8000000 for 9000
@@ -1595,10 +1595,10 @@ e/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb>
-Output written on main.pdf (9 pages, 297261 bytes).
+Output written on main.pdf (9 pages, 297514 bytes).
 PDF statistics:
- 214 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 242 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 220 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 250 words of extra memory for PDF output out of 10000 (max. 10000000)
 

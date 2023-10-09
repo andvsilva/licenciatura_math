@@ -22,4 +22,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.4.3}Trilema das Blockchains}{7}{subsubsection.2.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Refer\^encias}{9}{figure.caption.1}%
+\contentsline {section}{\numberline {3}As Principais Métricas do Blockchain}{9}{section.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Refer\^encias}{9}{section.3}%
