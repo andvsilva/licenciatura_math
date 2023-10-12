@@ -6,6 +6,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from icecream import ic
+import blockcypher
 
 options = Options()
 options.add_argument("start-maximized")
@@ -16,8 +17,9 @@ time.sleep(5)
 print('block....')
 time.sleep(5)
 
-for iblock in range(811895,0, -1):
+for iblock in range(811896, 811899):
     print(f'get info from the block number #{iblock}')
+    time.sleep(5)
     link_block = driver.find_element('xpath',f'//*[@id="bitcoin-block-{iblock}"]/a')
 
     link_block.click()
@@ -54,10 +56,19 @@ for iblock in range(811895,0, -1):
                 
             limit_txs_page += 1
             tx = driver.find_element('xpath',f'/html/body/app-root/app-master-page/div/div/main/app-start/app-block/div/app-transactions-list/div/div[{itx}]/a/app-truncate/span/span[1]').text
-            print(f'#{limit_txs}/{numbers_txs} #{itx}: {tx}')
+            txend = driver.find_element('xpath',f'/html/body/app-root/app-master-page/div/div/main/app-start/app-block/div/app-transactions-list/div/div[{itx}]/a/app-truncate/span/span[2]').text
+
+
+            txid = tx + txend
+
+            print(f'#{limit_txs}/{numbers_txs}: {txid}')
+
+            info_txid = blockcypher.get_transaction_details(f'{txid}')
+            print(info_txid)
+
             limit_txs += 1
             itx += 2
-            time.sleep(0.25)
+            time.sleep(3)
         else:
             print('next page...')
             time.sleep(2)
