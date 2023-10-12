@@ -17,7 +17,7 @@ time.sleep(5)
 print('block....')
 time.sleep(5)
 
-for iblock in range(811896, 811899):
+for iblock in range(811910, 811913):
     print(f'get info from the block number #{iblock}')
     time.sleep(5)
     link_block = driver.find_element('xpath',f'//*[@id="bitcoin-block-{iblock}"]/a')
@@ -58,17 +58,23 @@ for iblock in range(811896, 811899):
             tx = driver.find_element('xpath',f'/html/body/app-root/app-master-page/div/div/main/app-start/app-block/div/app-transactions-list/div/div[{itx}]/a/app-truncate/span/span[1]').text
             txend = driver.find_element('xpath',f'/html/body/app-root/app-master-page/div/div/main/app-start/app-block/div/app-transactions-list/div/div[{itx}]/a/app-truncate/span/span[2]').text
 
-
+            # whole hash id for the transaction.
             txid = tx + txend
 
             print(f'#{limit_txs}/{numbers_txs}: {txid}')
 
+            # get info from transaction id
             info_txid = blockcypher.get_transaction_details(f'{txid}')
-            print(info_txid)
+            
+            # extract addresses from transaction details.
+            for key in info_txid:
+                 if key == 'addresses':
+                     print(f'{key}: {info_txid[key]}')
+
 
             limit_txs += 1
             itx += 2
-            time.sleep(3)
+            time.sleep(10)
         else:
             print('next page...')
             time.sleep(2)

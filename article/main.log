@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.8.20)  9 OCT 2023 19:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.8.20)  12 OCT 2023 19:29
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1582,10 +1582,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 334.
  ) 
 Here is how much of TeX's memory you used:
- 45289 strings out of 481239
- 1027292 string characters out of 5920377
- 1795222 words of memory out of 5000000
- 59702 multiletter control sequences out of 15000+600000
+ 45287 strings out of 481239
+ 1027268 string characters out of 5920377
+ 1794242 words of memory out of 5000000
+ 59701 multiletter control sequences out of 15000+600000
  604322 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  81i,11n,138p,1003b,1844s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1595,7 +1595,7 @@ e/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb>
-Output written on main.pdf (9 pages, 297514 bytes).
+Output written on main.pdf (9 pages, 297479 bytes).
 PDF statistics:
  220 PDF objects out of 1000 (max. 8388607)
  174 compressed objects within 2 object streams

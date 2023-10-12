@@ -7,78 +7,45 @@ seg 02 out 2023 19:22:18 -03 Author: @andvsilva
 """
 
 from blockchain_metrics import blockchain_data
+import pandas as pd
 
 block = blockchain_data.blockchain_stats_currency()
 
 #total bitcoins in circulation
-dataframe_total_bitcoins = block.total_bitcoins()
-print(dataframe_total_bitcoins)
-#block.plot_data()
+total_bitcoins = block.total_bitcoins()
+market_price = block.market_price()
+market_cap = block.market_cap()
+n_transactions_total = block.n_transactions_total()
+median_confirmation_time = block.median_confirmation_time()
+hash_rate = block.hash_rate()
+difficulty = block.difficulty()
+transaction_fees = block.transaction_fees()
+cost_per_transaction = block.cost_per_transaction()
+n_unique_addresses = block.n_unique_addresses()
+output_volume = block.output_volume()
+mempool_count = block.mempool_count()
+mempool_growth = block.mempool_growth()
+mempool_size = block.mempool_size()
+utxo_count = block.utxo_count()
+estimated_transaction_volume = block.estimated_transaction_volume()
+my_wallet_n_users = block.my_wallet_n_users()
 
-dataframe_total_bitcoins = block.market_price()
-print(dataframe_total_bitcoins)
-block.plot_data()
+metrics_btc = pd.concat([total_bitcoins, 
+                       market_price, 
+                       market_cap,
+                       n_transactions_total,
+                       median_confirmation_time,
+                       hash_rate,
+                       difficulty,
+                       transaction_fees,
+                       cost_per_transaction,
+                       n_unique_addresses,
+                       mempool_count,
+                       mempool_growth,
+                       mempool_size,
+                       utxo_count,
+                       estimated_transaction_volume,
+                       my_wallet_n_users
+                       ], axis=1)
 
-dataframe_total_bitcoins = block.market_cap()
-#print(dataframe_total_bitcoins)
-#block.plot_data()
-
-dataframe_total_bitcoins = block.n_transactions_total()
-#print(dataframe_total_bitcoins)
-#block.plot_data()
-
-dataframe_total_bitcoins = block.n_transactions_total()
-#print(dataframe_total_bitcoins)
-#block.plot_data()
-
-dataframe_total_bitcoins = block.median_confirmation_time()
-#print(dataframe_total_bitcoins)
-#block.plot_data()
-
-dataframe_total_bitcoins = block.hash_rate()
-#print(dataframe_total_bitcoins)
-#block.plot_data()
-
-dataframe_total_bitcoins = block.difficulty()
-#print(dataframe_total_bitcoins)
-#block.plot_data()
-
-dataframe_total_bitcoins = block.transaction_fees()
-#print(dataframe_total_bitcoins)
-#block.plot_data()
-
-dataframe_total_bitcoins = block.cost_per_transaction()
-#print(dataframe_total_bitcoins)
-#block.plot_data()
-
-dataframe_total_bitcoins = block.n_unique_addresses()
-#print(dataframe_total_bitcoins)
-#block.plot_data()
-
-dataframe_total_bitcoins = block.output_volume()
-#print(dataframe_total_bitcoins)
-#block.plot_data()
-
-dataframe_total_bitcoins = block.mempool_count()
-#print(dataframe_total_bitcoins)
-#block.plot_data()
-
-dataframe_total_bitcoins = block.mempool_growth()
-#print(dataframe_total_bitcoins)
-#block.plot_data()
-
-dataframe_total_bitcoins = block.mempool_size()
-#print(dataframe_total_bitcoins)
-#block.plot_data()
-
-dataframe_total_bitcoins = block.utxo_count()
-#print(dataframe_total_bitcoins)
-#block.plot_data()
-
-dataframe_total_bitcoins = block.estimated_transaction_volume()
-#print(dataframe_total_bitcoins)
-#block.plot_data()
-
-dataframe_total_bitcoins = block.my_wallet_n_users()
-#print(dataframe_total_bitcoins)
-#block.plot_data()
+print(metrics_btc)
