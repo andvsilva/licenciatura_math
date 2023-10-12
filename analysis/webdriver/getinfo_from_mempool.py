@@ -14,7 +14,7 @@ driver.get("https://mempool.space/")
 
 time.sleep(2)
 print('block....')
-link_block = driver.find_element('xpath','//*[@id="bitcoin-block-811764"]/a')
+link_block = driver.find_element('xpath','//*[@id="bitcoin-block-811780"]/a')
 
 link_block.click()
 
@@ -38,22 +38,28 @@ print(timestamp)
 
 limit_txs_page = 0
 limit_txs = 0
+itx = 1
 
+time.sleep(3)
 print('loop on transactions...')
-while limit_txs <= numbers_txs:
-    for itx in range(1, 47, 2):
-        if limit_txs_page <= 25:
-            if limit_txs == numbers_txs:
-                break 
+while limit_txs < numbers_txs:
+    if limit_txs_page < 25:
+        if limit_txs == numbers_txs:
+            break 
             
-            limit_txs_page += 1
-            tx = driver.find_element('xpath',f'/html/body/app-root/app-master-page/div/div/main/app-start/app-block/div/app-transactions-list/div/div[{itx}]/a/app-truncate/span/span[1]').text
-            print(f'#{itx}: {tx}')
-            limit_txs += 1
-        else:
-            print('next page...')
-            next_page = driver.find_element('xpath','/html/body/app-root/app-master-page/div/div/main/app-start/app-block/div/ngb-pagination/ul/li[8]/a/span').click()
-            limit_txs_page = 0
+        limit_txs_page += 1
+        tx = driver.find_element('xpath',f'/html/body/app-root/app-master-page/div/div/main/app-start/app-block/div/app-transactions-list/div/div[{itx}]/a/app-truncate/span/span[1]').text
+        print(f'#{itx}: {tx}')
+        limit_txs += 1
+        itx += 2
+        time.sleep(0.5)
+    else:
+        time.sleep(2)
+        print('next page...')
+        next_page = driver.find_element('xpath','/html/body/app-root/app-master-page/div/div/main/app-start/app-block/div/ngb-pagination/ul/li[8]/a/span').click()
+        time.sleep(15)
+        limit_txs_page = 0
+        itx = 1
 
 
 #/html/body/app-root/app-master-page/div/div/main/app-start/app-transaction/div/app-transactions-list/div/div/div[1]/div[3]/table/tbody/tr[1]/td[1]/a/app-truncate/span/span[1]

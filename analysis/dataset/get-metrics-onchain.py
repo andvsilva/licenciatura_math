@@ -11,17 +11,17 @@ from blockchain_metrics import blockchain_data
 block = blockchain_data.blockchain_stats_currency()
 
 #total bitcoins in circulation
-#dataframe_total_bitcoins = block.total_bitcoins()
-#print(dataframe_total_bitcoins)
+dataframe_total_bitcoins = block.total_bitcoins()
+print(dataframe_total_bitcoins)
 #block.plot_data()
 
-#dataframe_total_bitcoins = block.market_price()
-#print(dataframe_total_bitcoins)
-#block.plot_data()
+dataframe_total_bitcoins = block.market_price()
+print(dataframe_total_bitcoins)
+block.plot_data()
 
 dataframe_total_bitcoins = block.market_cap()
 #print(dataframe_total_bitcoins)
-block.plot_data()
+#block.plot_data()
 
 dataframe_total_bitcoins = block.n_transactions_total()
 #print(dataframe_total_bitcoins)
