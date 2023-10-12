@@ -49,15 +49,15 @@ while limit_txs < numbers_txs:
             
         limit_txs_page += 1
         tx = driver.find_element('xpath',f'/html/body/app-root/app-master-page/div/div/main/app-start/app-block/div/app-transactions-list/div/div[{itx}]/a/app-truncate/span/span[1]').text
-        print(f'#{itx}: {tx}')
+        print(f'#{limit_txs} #{itx}: {tx}')
         limit_txs += 1
         itx += 2
-        time.sleep(0.5)
+        time.sleep(0.3)
     else:
         time.sleep(2)
         print('next page...')
         next_page = driver.find_element('xpath','/html/body/app-root/app-master-page/div/div/main/app-start/app-block/div/ngb-pagination/ul/li[8]/a/span').click()
-        time.sleep(15)
+        time.sleep(8)
         limit_txs_page = 0
         itx = 1
 
