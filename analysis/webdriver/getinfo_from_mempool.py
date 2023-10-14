@@ -16,11 +16,11 @@ driver.get("https://mempool.space/")
 time.sleep(3)
 
 for iblock in range(812054, 812059):
-    print(f'get info from the block number #{iblock}')
-    time.sleep(5)
-    
-    driver.find_element('xpath',f'//*[@id="bitcoin-block-{iblock}"]/div[1]/a').click()
+    time.sleep(3)
+    blockhash = blockcypher.get_block_hash(f'{iblock}')
+    driver.get(f"https://mempool.space/block/{blockhash}")
 
+    print(f'block: {iblock} > {blockhash}')
     ##  Numbers of transactions.
     numbers_txs_block_str = driver.find_element('xpath','//*[@id="block-tx-title"]/h2').text
     numbers_txs_block_str = numbers_txs_block_str.replace(",", "")
@@ -28,10 +28,11 @@ for iblock in range(812054, 812059):
     ic(numbers_txs)
 
     # get hash for the block
-    block = driver.current_url
-    hash = re.sub('https://mempool.space/block/', '', block)
-    print(hash)
+    #block = driver.current_url
+    #hash = re.sub('https://mempool.space/block/', '', block)
+    #print(hash)
 
+    time.sleep(3)
     # timestamp
     timestamp = driver.find_element('xpath','/html/body/app-root/app-master-page/div/div/main/app-start/app-block/div/div[3]/div/div[1]/table/tbody/tr[2]/td[2]/app-timestamp/span') 
     timestamp = timestamp.text
@@ -60,6 +61,7 @@ for iblock in range(812054, 812059):
 
             print(f'#{limit_txs}/{numbers_txs}: {txid}')
 
+            time.sleep(4)
             # get info from transaction id
             info_txid = blockcypher.get_transaction_details(f'{txid}')
             
