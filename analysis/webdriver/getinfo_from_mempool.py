@@ -13,16 +13,13 @@ options.add_argument("start-maximized")
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 driver.get("https://mempool.space/")
 
-time.sleep(5)
-print('block....')
-time.sleep(5)
+time.sleep(3)
 
-for iblock in range(811910, 811913):
+for iblock in range(812054, 812059):
     print(f'get info from the block number #{iblock}')
     time.sleep(5)
-    link_block = driver.find_element('xpath',f'//*[@id="bitcoin-block-{iblock}"]/a')
-
-    link_block.click()
+    
+    driver.find_element('xpath',f'//*[@id="bitcoin-block-{iblock}"]/div[1]/a').click()
 
     ##  Numbers of transactions.
     numbers_txs_block_str = driver.find_element('xpath','//*[@id="block-tx-title"]/h2').text

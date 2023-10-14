@@ -30,22 +30,25 @@ utxo_count = block.utxo_count()
 estimated_transaction_volume = block.estimated_transaction_volume()
 my_wallet_n_users = block.my_wallet_n_users()
 
-metrics_btc = pd.concat([total_bitcoins, 
-                       market_price, 
-                       market_cap,
-                       n_transactions_total,
-                       median_confirmation_time,
-                       hash_rate,
-                       difficulty,
-                       transaction_fees,
-                       cost_per_transaction,
-                       n_unique_addresses,
-                       mempool_count,
-                       mempool_growth,
-                       mempool_size,
-                       utxo_count,
-                       estimated_transaction_volume,
-                       my_wallet_n_users
-                       ], axis=1)
+#metrics_btc = pd.concat([total_bitcoins, 
+#                       market_price, 
+#                       market_cap,
+#                       n_transactions_total,
+#                       median_confirmation_time,
+#                       hash_rate,
+#                       difficulty,
+#                       transaction_fees,
+#                       cost_per_transaction,
+#                       n_unique_addresses,
+#                       mempool_count,
+#                       mempool_growth,
+#                       mempool_size,
+#                       utxo_count,
+#                       estimated_transaction_volume,
+#                       my_wallet_n_users
+#                       ], axis=1)
 
-print(metrics_btc)
+#print(metrics_btc)
+
+print(market_price)
+
