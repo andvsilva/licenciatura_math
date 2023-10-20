@@ -80,19 +80,19 @@
 %                uniquename=false]{biblatex}
 
 % Definição de novos comandos
-\newcommand{\@IFCH}{\small \textnormal{Faculdade IBRA}}
-\newcommand{\@UNICAMP}{Licenciatura em Matem\'atica}
+\newcommand{\@IFCH}{\small \textnormal{Licenciatura em Matem\'atica}}
+\newcommand{\@UNICAMP}{GRUPO EDUCACIONAL IBRA}
 
 % Criação de variáveis para o texto.
+\let\@titulo\relax
+\def\titulo#1{\gdef\@titulo{#1}}
+
 \let\@autor\relax
 \def\autor#1{\gdef\@autor{#1}}
 \author{\@autor}
 
 \let\@autora\relax
 \def\autora#1{\gdef\@autora{#1}}
-
-\let\@titulo\relax
-\def\titulo#1{\gdef\@titulo{#1}}
 
 \def\grau#1{\gdef\@grau{#1}}
 
@@ -133,7 +133,7 @@
   \gdef\@artigo{a}
   \fi
   \gdef\@degnameen{Doctor in Science}
-  \gdef\@monopt{Monografia de qualificação}
+  \gdef\@monopt{Monografia }
   \gdef\@monoes{Monografía de calificación}
   \gdef\@monoen{Qualification monograph}
 }
@@ -253,7 +253,7 @@
 
 \def\logos{
     \noindent
-    \raisebox{-.5\height}{\includegraphics[width=2.2cm]{logo-unicamp.eps}}
+    \raisebox{-.5\height}{\includegraphics[width=2.2cm]{logoibra.png}}
 
     \vspace*{2cm}
     
@@ -269,9 +269,9 @@
   \vskip 35mm
   \begin{center}
     \Large
-    {\MakeUppercase{\bf \if\@autora\relax\@autor\else\@autora\fi}}
-    \vskip 25mm
     {\sc \Large \@title}
+    \vskip 25mm
+    {\MakeUppercase{\bf \if\@autora\relax\@autor\else\@autora\fi}}
     \vskip 25mm
     {\sc \Large \@titulo}
     \vfill
@@ -285,27 +285,24 @@
   \large\bf
   \vfill
   \begin{center}
-    \sc \if\@autora\relax\@autor\else\@autora\fi\\
-    \vspace*{1.3cm}
     \sc \@titulo\\
     \vspace*{0.5cm}
-    \sc  \@title
+    \sc  \@title\\
+    \vspace*{1.3cm}
+    \sc \if\@autora\relax\@autor\else\@autora\fi\\
   \end{center}
   \vfill
   \normalfont
   \normalsize
   \hfill\begin{minipage}[t]{0.54\textwidth}
     \supresshyphen
-    \@monopt\xspace apresentada ao Instituto de Física ``Gleb Wataghin'' da 
-    Universidade Estadual de Campinas como parte dos requisitos exigidos para a 
-    obtenção do título de \@degnamept\xspace \ifx\@areaConcentracao\relax\else, na área de Física.
+    Trabalho de Conclusão de Curso apresentado ao Grupo Educacional IBRA como requisito para a aprovação na disciplina de TCC
+    Trabalho orientado de forma digital pelo corpo docente do Grupo Educacional IBRA
   \end{minipage}
   \vskip 8mm
   \hfill\begin{minipage}[t]{0.54\textwidth}
     \supresshyphen
-    \@monoen\xspace presented to the  ``Gleb Wataghin'' Institute
-    of Physics of the University of Campinas in partial fulfillment of the 
-    requirements for the degree of \@degnameen\xspace, in the area of Physics.
+    %...
     \end{minipage}
     
   \vfill
@@ -342,7 +339,7 @@
       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
       % uncomment this for the final version, PLEASE!
       \sc Este trabalho corresponde à versão final 
-      da \@monopt\xspace defendida pelo aluno \@autor, e orientada pelo \@orientador.
+      da \@monopt defendida pelo aluno \@autor.
       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \end{minipage}
   \fi

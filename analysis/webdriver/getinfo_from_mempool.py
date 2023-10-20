@@ -16,10 +16,9 @@ driver.get("https://mempool.space/")
 time.sleep(3)
 
 for iblock in range(812054, 812059):
-    time.sleep(3)
     blockhash = blockcypher.get_block_hash(f'{iblock}')
     driver.get(f"https://mempool.space/block/{blockhash}")
-
+    time.sleep(3)
     print(f'block: {iblock} > {blockhash}')
     ##  Numbers of transactions.
     numbers_txs_block_str = driver.find_element('xpath','//*[@id="block-tx-title"]/h2').text
@@ -61,14 +60,20 @@ for iblock in range(812054, 812059):
 
             print(f'#{limit_txs}/{numbers_txs}: {txid}')
 
-            time.sleep(4)
+            time.sleep(5)
             # get info from transaction id
             info_txid = blockcypher.get_transaction_details(f'{txid}')
+            
             
             # extract addresses from transaction details.
             for key in info_txid:
                  if key == 'addresses':
-                     print(f'{key}: {info_txid[key]}')
+                     addresses = info_txid[key]
+                     print(f'{key}: {addresses}')
+                     for iaddress in addresses:
+                         with open('wallets.txt', 'a') as file:
+                            file.write(iaddress)
+                            file.write('\n')
 
 
             limit_txs += 1
