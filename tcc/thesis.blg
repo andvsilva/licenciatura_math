@@ -1,10 +1,11 @@
-This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: thesis.aux
 The style file: biblatex.bst
 A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: methods.aux
 A level-1 auxiliary file: analysis.aux
+A level-1 auxiliary file: results.aux
 A level-1 auxiliary file: conclusion.aux
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=200001) to 20 items from 10.
@@ -23,29 +24,29 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: thesis-blx.bib
 Database file #2: bibliography.bib
-Biblatex version: 3.13
+Biblatex version: 3.19
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 1 entry,
-            6365 wiz_defined-function locations,
-            1196 strings with 8936 characters,
-and the built_in function-call counts, 1529 in all, are:
-= -- 72
+            6399 wiz_defined-function locations,
+            1207 strings with 9037 characters,
+and the built_in function-call counts, 1534 in all, are:
+= -- 73
 > -- 70
 < -- 1
 + -- 49
 - -- 28
-* -- 31
-:= -- 368
+* -- 32
+:= -- 370
 add.period$ -- 0
 call.type$ -- 1
 change.case$ -- 0
 chr.to.int$ -- 42
 cite$ -- 0
 duplicate$ -- 11
-empty$ -- 103
+empty$ -- 104
 format.name$ -- 0
-if$ -- 329
+if$ -- 325
 int.to.chr$ -- 0
 int.to.str$ -- 0
 missing$ -- 0
@@ -55,9 +56,9 @@ pop$ -- 47
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 77
+skip$ -- 78
 stack$ -- 0
-substring$ -- 151
+substring$ -- 154
 swap$ -- 1
 text.length$ -- 20
 text.prefix$ -- 0
