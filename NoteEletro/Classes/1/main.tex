@@ -14,7 +14,7 @@
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{cancel}
-
+\usepackage{tikz}
 
 \input{commands.tex}
 
@@ -68,8 +68,8 @@
     \end{center}
     
     \begin{enumerate}
-    \item Griffiths \textbf{Seção 1.1} - 1.5
-    \item Griffiths \textbf{Seção 1.2} - 1.13(*), 1.16(*), 1.19, 1.21, 1.22(a-b)
+    \item Griffiths \textbf{Seção 1.1} - \colorbox{green}{1.5} 
+    \item Griffiths \textbf{Seção 1.2} - \colorbox{green}{1.13(*)}, \colorbox{green}{1.16(*)}, 1.19, 1.21, 1.22(a-b)
     \item Griffiths \textbf{Seção 1.4} - 1.38(*), 1.42
     \item Griffiths \textbf{Seção 1.5} - 1.44, 1.45, 1.46, 1.47, 1
     \item Griffiths \textbf{Seção 1.3} - 1.36.48, 1.49
@@ -213,6 +213,256 @@ Ent\~ao
 \end{aligned}
     }
 \end{equation}\\
+
+Portanto,
+
+\begin{equation}
+    \mathbf{A} \times (\mathbf{B} \times \mathbf{C}) =\mathbf{B} (\mathbf{A} \cdot \mathbf{C}) - \mathbf{C} (\mathbf{A} \cdot \mathbf{B}) \hspace{3cm} \blacksquare
+\end{equation}
+
+
+Ambos os termos concordam!
+
+
+\section*{Problem 1.13 Griffiths - Resolu\c{c}\~ao}
+
+Seja \(\mathbf{r}\) o vetor separação de um ponto fixo \((x', y', z')\) até o ponto \((x, y, z)\), e \(r\) o módulo de \(\mathbf{r}\). Mostre que:
+
+\begin{enumerate}
+    \item[(a)] \(\nabla (r^2) = 2\mathbf{r}\),
+    \item[(b)] \(\nabla \left(\frac{1}{r}\right) = -\frac{\hat{\mathbf{r}}}{r^2}\), onde \(\hat{\mathbf{r}} = \frac{\mathbf{r}}{r}\) é o vetor unitário,
+    \item[(c)] A fórmula geral para \(\nabla (r^n)\)?
+\end{enumerate}
+
+
+Seja o vetor separação \(\mathbf{r}\), definido como:
+
+\begin{equation}
+\mathbf{r} = (x - x', y - y', z - z'),
+\end{equation}
+
+e seu módulo \(r = |\mathbf{r}| = \sqrt{(x - x')^2 + (y - y')^2 + (z - z')^2}\).
+
+\subsection*{Parte (a)}
+
+Queremos mostrar que:
+\begin{equation}
+\nabla (r^2) = 2\mathbf{r}.
+\end{equation}
+
+Sabemos que:
+\begin{equation}
+r^2 = \mathbf{r} \cdot \mathbf{r} = (x - x')^2 + (y - y')^2 + (z - z')^2.
+\end{equation}
+
+O gradiente em coordenadas cartesianas é dado por:
+\begin{equation}
+\nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right).
+\end{equation}
+
+Cálculo das derivadas parciais:
+\begin{equation}
+\frac{\partial (r^2)}{\partial x} = 2(x - x'), \quad
+\frac{\partial (r^2)}{\partial y} = 2(y - y'), \quad
+\frac{\partial (r^2)}{\partial z} = 2(z - z').
+\end{equation}
+
+Logo:
+\begin{equation}
+\nabla (r^2) = \left( 2(x - x'), 2(y - y'), 2(z - z') \right) = 2\mathbf{r}.
+\end{equation}
+
+\subsection*{Parte (b)}
+
+Queremos mostrar que:
+\begin{equation}
+\nabla \left(\frac{1}{r}\right) = -\frac{\hat{\mathbf{r}}}{r^2},
+\end{equation}
+onde \(\hat{\mathbf{r}} = \frac{\mathbf{r}}{r}\) é o vetor unitário.
+
+Sabemos que:
+\begin{equation}
+\frac{1}{r} = \left[ (x - x')^2 + (y - y')^2 + (z - z')^2 \right]^{-1/2}.
+\end{equation}
+
+Aplicando a regra da cadeia:
+\begin{equation}
+\nabla \left(\frac{1}{r}\right) = \nabla \left[ (r^2)^{-1/2} \right] = -\frac{1}{2} (r^2)^{-3/2} \nabla (r^2).
+\end{equation}
+
+Da parte (a), \(\nabla (r^2) = 2\mathbf{r}\). Substituímos:
+\begin{equation}
+\nabla \left(\frac{1}{r}\right) = -\frac{1}{2} (r^2)^{-3/2} (2\mathbf{r}) = -\frac{\mathbf{r}}{r^3}.
+\end{equation}
+
+Escrevendo em termos de \(\hat{\mathbf{r}}\):
+\begin{equation}
+\nabla \left(\frac{1}{r}\right) = -\frac{\hat{\mathbf{r}}}{r^2}.
+\end{equation}
+
+\subsection*{Parte (c)}
+
+Queremos determinar a fórmula geral para:
+\begin{equation}
+\nabla (r^n).
+\end{equation}
+
+Sabemos que \(r^n = (r^2)^{n/2}\). Aplicando a regra da cadeia:
+\begin{equation}
+\nabla (r^n) = \frac{d}{dr}(r^n) \nabla r.
+\end{equation}
+
+A derivada em relação a \(r\) é:
+\begin{equation}
+\frac{d}{dr}(r^n) = n r^{n-1}.
+\end{equation}
+
+Como 
+
+\(\nabla r = \Big(\hat{x}\frac{\partial}{\partial x}, \hat{y}\frac{\partial}{\partial y}, \hat{z}\frac{\partial }{\partial z} \Big) r  = \frac{\mathbf{r}}{r}\), 
+
+
+obtemos:
+\begin{equation}
+\nabla (r^n) = n r^{n-1} \frac{\mathbf{r}}{r} = n r^{n-1} \hat{\mathbf{r}}.
+\end{equation}
+
+\subsection*{Resultado Final}
+
+(a) \(\nabla (r^2) = 2\mathbf{r}\),
+
+(b) \(\nabla \left(\frac{1}{r}\right) = -\frac{\hat{\mathbf{r}}}{r^2}\),
+
+(c) \(\nabla (r^n) = n r^{n-1} \hat{\mathbf{r}}\).
+
+
+\section*{Problem 1.16 Griffiths - Resolu\c{c}\~ao}
+
+\begin{center}
+\begin{tikzpicture}
+    % Ponto de origem
+    \node[circle, fill=red, inner sep=1.5pt] (O) at (0,0) {};
+    
+    % Setas divergentes
+    \draw[->, thick] (O) -- (0,0.5) node[midway, above] {};
+    \draw[->, thick] (0,0.6) -- (0,1) node[midway, above] {};
+    \draw[->, thick] (0,1.1) -- (0,1.6) node[midway, above] {};
+
+    \draw[->, thick] (O) -- (0,-0.5) node[midway, above] {};
+    \draw[->, thick] (0,-0.6) -- (0,-1) node[midway, above] {};
+    \draw[->, thick] (0,-1.1) -- (0,-1.6) node[midway, above] {};
+
+    \draw[->, thick] (O) -- (0.4,0.4) node[midway, above] {};
+    \draw[->, thick] (0.41,0.41) -- (0.8,0.8) node[midway, above] {};
+    \draw[->, thick] (0.81,0.81) -- (1.2,1.2) node[midway, above] {};
+
+    \draw[->, thick] (O) -- (-0.4,0.4) node[midway, above] {};
+    \draw[->, thick] (-0.41,0.41) -- (-0.8,0.8) node[midway, above] {};
+    \draw[->, thick] (-0.81,0.81) -- (-1.2,1.2) node[midway, above] {};
+
+    \draw[->, thick] (O) -- (0.4,-0.4) node[midway, above] {};
+    \draw[->, thick] (0.41,-0.41) -- (0.8,-0.8) node[midway, above] {};
+    \draw[->, thick] (0.81,-0.81) -- (1.2,-1.2) node[midway, above] {};
+
+    \draw[->, thick] (O) -- (-0.4,-0.4) node[midway, above] {};
+    \draw[->, thick] (-0.41,-0.41) -- (-0.8,-0.8) node[midway, above] {};
+    \draw[->, thick] (-0.81,-0.81) -- (-1.2,-1.2) node[midway, above] {};
+
+    \draw[->, thick] (O) -- (0.5,0) node[midway, below] {};
+    \draw[->, thick] (0.51,0) -- (1,0) node[midway, below] {};
+    \draw[->, thick] (1.1,0) -- (1.5,0) node[midway, below] {};
+
+    \draw[->, thick] (O) -- (-0.5,0) node[midway, below] {};
+    \draw[->, thick] (-0.51,0) -- (-1,0) node[midway, below] {};
+    \draw[->, thick] (-1.1,0) -- (-1.5,0) node[midway, below] {};
+
+
+
+\end{tikzpicture}
+\end{center}
+
+Esboce a função vetorial 
+\begin{equation}
+\mathbf{v} = \frac{\hat{\mathbf{r}}}{r^2},
+\end{equation}
+e calcule sua divergência. O resultado pode surpreendê-lo... você consegue explicá-lo?
+
+A função vetorial fornecida é 
+\begin{equation}
+\mathbf{v} = \frac{\hat{\mathbf{r}}}{r^2},
+\end{equation}
+onde:
+\begin{itemize}
+    \item \( \hat{r} \) é o vetor unitário na direção radial;
+    \item \( r = \sqrt{x^2 + y^2 + z^2} \) é a distância até a origem.
+\end{itemize}
+
+---
+
+\subsection*{Cálculo da divergência}
+
+A divergência em coordenadas cartesianas para um campo vetorial puramente radial é dada por:
+
+\begin{equation}
+\nabla \cdot \mathbf{v} = \frac{\partial}{\partial x}\left( \frac{x}{r^3}\right) + \frac{\partial}{\partial y}\left( \frac{y}{r^3}\right) + \frac{\partial}{\partial z}\left( \frac{z}{r^3}\right)
+\end{equation}
+
+\begin{equation}
+    \nabla \cdot \mathbf{v} = \frac{\partial}{\partial x}\left[x(x^2+y^2+z^2)^{-\frac{3}{2}}\right] + \frac{\partial}{\partial y}\left[x(x^2+y^2+z^2)^{-\frac{3}{2}}\right] + \frac{\partial}{\partial z}\left[z(x^2+y^2+z^2)^{-\frac{3}{2}}\right]
+\end{equation}
+
+Para a componente \( x \), temos:
+
+\begin{equation}
+    \frac{\partial}{\partial x}\left[x(x^2+y^2+z^2)^{-\frac{3}{2}}\right] = (x^2+y^2+z^2)^{-\frac{3}{2}} + \left(-\frac{3}{2}\right)(x^2+y^2+z^2)^{-\frac{5}{2}}\left(2x^2\right)
+\end{equation}
+
+\begin{equation}
+    \frac{\partial}{\partial x}\left[x(x^2+y^2+z^2)^{-\frac{3}{2}}\right] = r^{-3} - 3r^{-5}\left(x^2\right)
+\end{equation}
+
+Analogo para y e z:
+
+\begin{equation}
+    \frac{\partial}{\partial y}\left[x(x^2+y^2+z^2)^{-\frac{3}{2}}\right] = r^{-3} - 3r^{-5}\left(y^2\right)
+\end{equation}
+
+\begin{equation}
+    \frac{\partial}{\partial z}\left[x(x^2+y^2+z^2)^{-\frac{3}{2}}\right] = r^{-3} - 3r^{-5}\left(z^2\right)
+\end{equation}
+
+Ent\~ao:
+
+\begin{equation}
+    \nabla \cdot \mathbf{v} = 3r^{-3} -3r^{-5}\left(x^2+y^2+z^2\right)
+\end{equation}
+
+como $r^2 = x^2 + y^2 + z^2$:
+
+\begin{equation}
+    \nabla \cdot \mathbf{v} = 3r^{-3} - 3r^{-5}r^2 = 3r^{-3} - 3r^{-3} = 0 
+\end{equation}
+
+\subsection*{Explicação do resultado surpreendente}
+
+Embora a divergência seja \( 0 \) em todos os pontos onde \( r \neq 0 \), o campo possui uma singularidade no 
+ponto \( r = 0 \), onde o módulo de \( \mathbf{v} \) diverge. Esse comportamento pode ser explicado utilizando 
+o conceito de função delta de Dirac. 
+
+A divergência completa pode ser escrita como:
+\begin{equation}
+\nabla \cdot \mathbf{v} = 4\pi \delta^3(\mathbf{r}),
+\end{equation}
+onde \( \delta^3(\mathbf{r}) \) é a função delta de Dirac em três dimensões. Isso indica que toda a "fonte" 
+do campo está concentrada no ponto \( r = 0 \). A singularidade pode ser tratada utilizando a função delta de Dirac, 
+que é uma função generalizada (ou distribuição) que permite modelar distribuições de carga ou fluxo concentrado em 
+pontos específicos.
+
+---
+
+\section*{Conclusão}
+
+O campo vetorial \( \mathbf{v} = \frac{\hat{r}}{r^2} \) possui divergência igual a \( 0 \) em todos os pontos do espaço, exceto na origem, onde ocorre uma singularidade representada pela função delta de Dirac.
 
 %%%%%%%% Bibliography 
 % Os comandos para incluir as referências bibliográficas
