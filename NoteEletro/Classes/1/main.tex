@@ -69,7 +69,7 @@
     
     \begin{enumerate}
     \item Griffiths \textbf{Seção 1.1} - \colorbox{green}{1.5} 
-    \item Griffiths \textbf{Seção 1.2} - \colorbox{green}{1.13(*)}, \colorbox{green}{1.16(*)}, 1.19, 1.21, 1.22(a-b)
+    \item Griffiths \textbf{Seção 1.2} - \colorbox{green}{1.13(*)}, \colorbox{green}{1.16(*)}, \colorbox{green}{1.19}, 1.21, 1.22(a-b)
     \item Griffiths \textbf{Seção 1.4} - 1.38(*), 1.42
     \item Griffiths \textbf{Seção 1.5} - 1.44, 1.45, 1.46, 1.47, 1
     \item Griffiths \textbf{Seção 1.3} - 1.36.48, 1.49
@@ -462,7 +462,105 @@ pontos específicos.
 
 \section*{Conclusão}
 
-O campo vetorial \( \mathbf{v} = \frac{\hat{r}}{r^2} \) possui divergência igual a \( 0 \) em todos os pontos do espaço, exceto na origem, onde ocorre uma singularidade representada pela função delta de Dirac.
+O campo vetorial \( \mathbf{v} = \frac{\hat{r}}{r^2} \) possui divergência igual a \( 0 \) em todos os pontos do espaço, 
+exceto na origem, onde ocorre uma singularidade representada pela função delta de Dirac.
+
+\newpage
+\section*{Problem 1.19 Griffiths - Resolu\c{c}\~ao}
+
+\begin{figure}[!h]
+    \centering
+\begin{tikzpicture}
+    % Desenho do círculo
+    \draw[thick, dashed] (0,0) circle (3);
+    
+    % Eixos coordenados
+    \draw[->, thick, blue] (-4,0) -- (4,0) node[anchor=west] {$x$};
+    \draw[->, thick, blue] (0,-4) -- (0,4) node[anchor=south] {$y$};
+    \draw[->, thick, blue] (0,0) -- (-2,-3) node[anchor=north] {$z$};
+
+    % Ponto A e vetor velocidade em A
+    \filldraw[red] (-3,0) circle (2pt) node[anchor=north east] {$A$};
+    \draw[->, thick] (-3,0) -- (-3,1) node[anchor=east] {$\mathbf{v}$};
+
+    % Ponto B e vetor velocidade em B
+    \filldraw[red] (-2.12,2.12) circle (2pt) node[anchor=south east] {$B$};
+    \draw[->, thick] (-2.12,2.12) -- (-1.12,3.12) node[anchor=west] {$\mathbf{v}$};
+
+    % Vetores em outros pontos
+    \draw[->, thick] (2.12,2.12) -- (3.12,1.12) node[anchor=west] {$\mathbf{v}$};
+    \draw[->, thick] (2.12,-2.12) -- (1.12,-3.12) node[anchor=east] {$\mathbf{v}$};
+    \draw[->, thick] (-2.12,-2.12) -- (-3.12,-1.12) node[anchor=east] {$\mathbf{v}$};
+\end{tikzpicture}
+\caption{Rotação do vetor \textbf{v} ao movermos o ponto \textbf{A} para o ponto \textbf{B}.}
+\label{fig:circle_diagram}
+\end{figure}
+
+Ao movermos do ponto $A$ para o ponto $B$ (como visto na Figure~\ref{fig:circle_diagram}), $x$ aumenta, $y$ aumenta, $v_x$ aumenta 
+e $v_y$ diminui. Assim, temos que $\partial v_x / \partial y > 0$, enquanto $\partial v_y / \partial y < 0$. 
+No círculo, $v_z = 0$ e não há dependência de $z$, portanto, a Eq. 1.41 nos dá:
+
+\begin{equation}
+\nabla \times \mathbf{v} = \hat{\mathbf{z}} \left( \frac{\partial v_y}{\partial x} - \frac{\partial v_x}{\partial y} \right)
+\end{equation}
+
+e aponta na \fbox{direção negativa de $z$} (para dentro da página), como a regra da mão direita sugere. 
+Escolha quaisquer outros pontos próximos no círculo e você chegará à mesma conclusão.
+
+\section*{Problem 1.21 Griffiths - Resolu\c{c}\~ao}
+
+\section*{Problem 1.22 Griffiths - Resolu\c{c}\~ao}
+
+\textbf{(a)} Se $\mathbf{A}$ e $\mathbf{B}$ são funções vetoriais, a expressão $(\mathbf{A} \cdot \nabla)\mathbf{B}$ representa uma 
+derivada direcional de $\mathbf{B}$ ao longo do vetor $\mathbf{A}$. Em termos dos componentes cartesianos de $\mathbf{A}$, $\mathbf{B}$ e 
+$\nabla$, ela é dada por:
+
+\begin{equation}
+(\mathbf{A} \cdot \nabla)\mathbf{B} =
+\begin{bmatrix}
+A_x \frac{\partial B_x}{\partial x} + A_y \frac{\partial B_x}{\partial y} + A_z \frac{\partial B_x}{\partial z} \\
+A_x \frac{\partial B_y}{\partial x} + A_y \frac{\partial B_y}{\partial y} + A_z \frac{\partial B_y}{\partial z} \\
+A_x \frac{\partial B_z}{\partial x} + A_y \frac{\partial B_z}{\partial y} + A_z \frac{\partial B_z}{\partial z}
+\end{bmatrix},
+\end{equation}
+
+onde $\mathbf{A} = (A_x, A_y, A_z)$ e $\mathbf{B} = (B_x, B_y, B_z)$.
+
+---
+
+\textbf{(b)} Para calcular $(\hat{\mathbf{r}} \cdot \nabla)\hat{\mathbf{r}}$, onde $\hat{\mathbf{r}}$ é o vetor unitário na direção 
+radial, primeiro note que $\hat{\mathbf{r}} = \frac{\mathbf{r}}{|\mathbf{r}|}$, com $\mathbf{r} = (x, y, z)$ e $|\mathbf{r}| = \sqrt{x^2 + y^2 + z^2}$. 
+Assim,
+
+\begin{equation}
+\hat{\mathbf{r}} = \frac{1}{r}(x, y, z),
+\end{equation}
+
+onde $r = |\mathbf{r}|$. A expressão $(\hat{\mathbf{r}} \cdot \nabla)\hat{\mathbf{r}}$ pode ser expandida como:
+
+\begin{equation}
+(\hat{\mathbf{r}} \cdot \nabla)\hat{\mathbf{r}} =
+\begin{bmatrix}
+\hat{\mathbf{r}} \cdot \nabla \hat{r}_x \\
+\hat{\mathbf{r}} \cdot \nabla \hat{r}_y \\
+\hat{\mathbf{r}} \cdot \nabla \hat{r}_z
+\end{bmatrix}.
+\end{equation}
+
+Como $\hat{\mathbf{r}}$ depende apenas da direção e não varia com $r$, o resultado final é dado por:
+
+\begin{equation}
+(\hat{\mathbf{r}} \cdot \nabla)\hat{\mathbf{r}} = \frac{1}{r}\hat{\mathbf{\theta}},
+\end{equation}
+
+onde $\hat{\mathbf{\theta}}$ é o vetor unitário ortogonal a $\hat{\mathbf{r}}$.
+
+---
+
+\textbf{(c)} Para as funções dadas no Problema 1.15, devemos avaliar $(\mathbf{v}_a \cdot \nabla)\mathbf{v}_b$. 
+Substituímos $\mathbf{v}_a$ e $\mathbf{v}_b$ pelas suas respectivas definições e aplicamos o operador $(\mathbf{v}_a \cdot \nabla)$ em $\mathbf{v}_b$ 
+componente a componente. O cálculo detalhado depende da forma explícita de $\mathbf{v}_a$ e $\mathbf{v}_b$, mas segue o mesmo método 
+apresentado no item (a).
 
 %%%%%%%% Bibliography 
 % Os comandos para incluir as referências bibliográficas
