@@ -11,7 +11,7 @@
 \usepackage{subcaption}
 \usepackage{fancyhdr}
 \usepackage{xcolor}
-\usepackage{amsmath,systeme}
+\usepackage{amsmath, amssymb, bm}
 \usepackage{mathtools}
 \usepackage{cancel}
 \usepackage{tikz}
@@ -393,7 +393,7 @@ A função vetorial fornecida é
 \end{equation}
 onde:
 \begin{itemize}
-    \item \( \hat{r} \) é o vetor unitário na direção radial;
+    \item \( \hat{\mathbf{r}} \) é o vetor unitário na direção radial;
     \item \( r = \sqrt{x^2 + y^2 + z^2} \) é a distância até a origem.
 \end{itemize}
 
@@ -462,7 +462,7 @@ pontos específicos.
 
 \section*{Conclusão}
 
-O campo vetorial \( \mathbf{v} = \frac{\hat{r}}{r^2} \) possui divergência igual a \( 0 \) em todos os pontos do espaço, 
+O campo vetorial \( \mathbf{v} = \frac{\hat{\mathbf{r}}}{r^2} \) possui divergência igual a \( 0 \) em todos os pontos do espaço, 
 exceto na origem, onde ocorre uma singularidade representada pela função delta de Dirac.
 
 \newpage
@@ -630,9 +630,104 @@ Escolha quaisquer outros pontos próximos no círculo e você chegará à mesma 
 \end{enumerate}
 
 
-   
-    
+\section*{Problem 1.38 Griffiths - Resolu\c{c}\~ao}
 
+Expresse os vetores unitários \( \hat{\mathbf{r}}, \hat{\mathbf{\theta}}, \hat{\mathbf{\phi}} \) em termos de \( \hat{\mathbf{x}}, \hat{\mathbf{y}}, \hat{\mathbf{z}} \) 
+(ou seja, derive a Eq. 64). Verifique suas respostas de várias formas 
+\(\left( \hat{\mathbf{r}} \cdot \hat{\mathbf{r}} \stackrel{?}{=} 1, \hat{\mathbf{\theta}} \cdot \hat{\mathbf{\phi}} \stackrel{?}{=} 0, \hat{\mathbf{r}} \times \hat{\mathbf{\theta}} \stackrel{?}{=} \hat{\mathbf{\phi}}, \dots \right)\).  
+
+Também determine as fórmulas inversas, expressando \( \hat{x}, \hat{y}, \hat{z} \) em termos de \( \hat{\mathbf{r}}, \hat{\mathbf{\theta}}, \hat{\mathbf{\phi}} \) (e \( \theta, \phi \)).
+
+Vamos definir $\mathbf{r}$ em termos dos versores x, y e z:
+
+\begin{equation}
+    \mathbf{r} = x \hat{\mathbf{x}} + y \hat{\mathbf{y}} + z \hat{\mathbf{z}}.
+\end{equation}
+
+Agora $\mathbf{r}$ em coordernadas esfericas, \'e:
+
+\begin{equation}
+    \mathbf{r} = r\sin{\theta}\cos{\phi} \hat{\mathbf{x}} + r\sin{\theta}\sin{\phi} \hat{\mathbf{y}} + r\cos{\theta} \hat{\mathbf{z}}.
+\end{equation}
+
+Para determinar \( \hat{\mathbf{r}}, \hat{\mathbf{\theta}}, \hat{\mathbf{\phi}} \), vamos pensar no seguinte conceito, a varia\c{c}\~ao
+de r, ou seja, $d\textbf{r} = \frac{\partial}{\partial r}(\textbf{r})$ que \'e um vetor apontando na dire\c{c}\~ao de aumento em r. Com isso,
+o vetor unit\'ario deve ser dividido pelo m\'odulo de \textbf{r}:
+
+\begin{equation}
+\hat{\mathbf{r}} = \frac{\frac{\partial \mathbf{r}}{\partial r}}{\left| \frac{\partial \mathbf{r}}{\partial r} \right|}, \quad
+\hat{\bm{\theta}} = \frac{\frac{\partial \mathbf{r}}{\partial \theta}}{\left| \frac{\partial \mathbf{r}}{\partial \theta} \right|}, \quad
+\hat{\bm{\phi}} = \frac{\frac{\partial \mathbf{r}}{\partial \phi}}{\left| \frac{\partial \mathbf{r}}{\partial \phi} \right|}.
+\end{equation}
+
+\begin{equation}
+\frac{\partial \mathbf{r}}{\partial r} = \sin\theta \cos\phi \, \hat{\mathbf{x}} + \sin\theta \sin\phi \, \hat{\mathbf{y}} + \cos\theta \, \hat{\mathbf{z}},
+\end{equation}
+
+\begin{equation}
+\left| \frac{\partial \mathbf{r}}{\partial r} \right|^2 = \sin^2\theta \cos^2\phi + \sin^2\theta \sin^2\phi + \cos^2\theta = 1.
+\end{equation}
+
+\begin{equation}
+\frac{\partial \mathbf{r}}{\partial \theta} = r \cos\theta \cos\phi \, \hat{\mathbf{x}} + r \cos\theta \sin\phi \, \hat{\mathbf{y}} - r \sin\theta \, \hat{\mathbf{z}},
+\end{equation}
+
+\begin{equation}
+\left| \frac{\partial \mathbf{r}}{\partial \theta} \right|^2 = r^2 \cos^2\theta \cos^2\phi + r^2 \cos^2\theta \sin^2\phi + r^2 \sin^2\theta = r^2.
+\end{equation}
+
+\begin{equation}
+\frac{\partial \mathbf{r}}{\partial \phi} = -r \sin\theta \sin\phi \, \hat{\mathbf{x}} + r \sin\theta \cos\phi \, \hat{\mathbf{y}},
+\end{equation}
+
+\begin{equation}
+\left| \frac{\partial \mathbf{r}}{\partial \phi} \right|^2 = r^2 \sin^2\theta \sin^2\phi + r^2 \sin^2\theta \cos^2\phi = r^2 \sin^2\theta.
+\end{equation}
+
+\begin{equation}
+\Rightarrow
+\begin{cases}
+\hat{\mathbf{r}} = \sin\theta \cos\phi \, \hat{\mathbf{x}} + \sin\theta \sin\phi \, \hat{\mathbf{y}} + \cos\theta \, \hat{\mathbf{z}}, \\
+\hat{\bm{\theta}} = \cos\theta \cos\phi \, \hat{\mathbf{x}} + \cos\theta \sin\phi \, \hat{\mathbf{y}} - \sin\theta \, \hat{\mathbf{z}}, \\
+\hat{\bm{\phi}} = -\sin\phi \, \hat{\mathbf{x}} + \cos\phi \, \hat{\mathbf{y}}.
+\end{cases}
+\end{equation}
+
+\textbf{Verificação:}
+
+\begin{equation}
+\hat{\mathbf{r}} \cdot \hat{\mathbf{r}} = \sin^2\theta (\cos^2\phi + \sin^2\phi) + \cos^2\theta = \sin^2\theta + \cos^2\theta = 1, \quad \checkmark
+\end{equation}
+
+\begin{equation}
+\hat{\bm{\theta}} \cdot \hat{\bm{\phi}} = -\cos\theta \sin\phi \cos\phi + \cos\theta \sin\phi \cos\phi = 0, \quad \checkmark
+\end{equation}
+
+\textbf{Conversão inversa:}
+
+\begin{equation}
+\sin\theta \, \hat{\mathbf{r}} = \sin^2\theta \cos\phi \, \hat{\mathbf{x}} + \sin^2\theta \sin\phi \, \hat{\mathbf{y}} + \sin\theta \cos\theta \, \hat{\mathbf{z}}.
+\end{equation}
+
+\begin{equation}
+\cos\theta \, \hat{\bm{\theta}} = \cos^2\theta \cos\phi \, \hat{\mathbf{x}} + \cos^2\theta \sin\phi \, \hat{\mathbf{y}} - \sin\theta \cos\theta \, \hat{\mathbf{z}}.
+\end{equation}
+
+Somando as expressões acima:
+
+\begin{equation}
+\sin\theta \, \hat{\mathbf{r}} + \cos\theta \, \hat{\bm{\theta}} = +\cos\phi \, \hat{\mathbf{x}} + \sin\phi \, \hat{\mathbf{y}}.
+\end{equation}
+
+\begin{equation}
+\hat{\bm{\phi}} = -\sin\phi \, \hat{\mathbf{x}} + \cos\phi \, \hat{\mathbf{y}}.
+\end{equation}
+
+Multiplicando a equação anterior por \(\cos\phi\) e a seguinte por \(\sin\phi\), e subtraindo:
+
+\begin{equation}
+\hat{\mathbf{x}} = \sin\theta \cos\phi \, \hat{\mathbf{r}} + \cos\theta \cos\phi \, \hat{\bm{\theta}} - \sin\phi \, \hat{\bm{\phi}}.
+\end{equation}
 %%%%%%%% Bibliography 
 % Os comandos para incluir as referências bibliográficas
 %\printingbibliography
