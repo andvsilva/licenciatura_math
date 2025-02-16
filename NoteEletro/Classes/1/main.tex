@@ -632,11 +632,17 @@ Escolha quaisquer outros pontos próximos no círculo e você chegará à mesma 
 
 \section*{Problem 1.38 Griffiths - Resolu\c{c}\~ao}
 
-Expresse os vetores unitários \( \hat{\mathbf{r}}, \hat{\mathbf{\theta}}, \hat{\mathbf{\phi}} \) em termos de \( \hat{\mathbf{x}}, \hat{\mathbf{y}}, \hat{\mathbf{z}} \) 
+Expresse os vetores unitários \( \hat{\mathbf{r}}, \hat{\bm{\theta}}, \hat{\bm{\phi}} \) em termos de \( \hat{\mathbf{x}}, \hat{\mathbf{y}}, \hat{\mathbf{z}} \) 
 (ou seja, derive a Eq. 64). Verifique suas respostas de várias formas 
-\(\left( \hat{\mathbf{r}} \cdot \hat{\mathbf{r}} \stackrel{?}{=} 1, \hat{\mathbf{\theta}} \cdot \hat{\mathbf{\phi}} \stackrel{?}{=} 0, \hat{\mathbf{r}} \times \hat{\mathbf{\theta}} \stackrel{?}{=} \hat{\mathbf{\phi}}, \dots \right)\).  
+\(\left( \hat{\mathbf{r}} \cdot \hat{\mathbf{r}} \stackrel{?}{=} 1, \hat{\bm{\theta}} \cdot \hat{\bm{\phi}} \stackrel{?}{=} 0, \hat{\mathbf{r}} \times \hat{\bm{\theta}} \stackrel{?}{=} \hat{\bm{\phi}}, \dots \right)\).  
 
-Também determine as fórmulas inversas, expressando \( \hat{x}, \hat{y}, \hat{z} \) em termos de \( \hat{\mathbf{r}}, \hat{\mathbf{\theta}}, \hat{\mathbf{\phi}} \) (e \( \theta, \phi \)).
+Também determine as fórmulas inversas, expressando \( \hat{x}, \hat{y}, \hat{z} \) em termos de \( \hat{\mathbf{r}}, \hat{\mathbf{\theta}}, \hat{\bm{\phi}} \) (e \( \theta, \phi \)).
+
+Teorema Fundamental da Trigometria: 
+
+$$\boxed{\cos^{2}\phi + \sin^{2}\phi = 1}$$
+
+$$\boxed{\cos^{2}\theta + \sin^{2}\theta = 1}$$
 
 Vamos definir $\mathbf{r}$ em termos dos versores x, y e z:
 
@@ -646,11 +652,11 @@ Vamos definir $\mathbf{r}$ em termos dos versores x, y e z:
 
 Agora $\mathbf{r}$ em coordernadas esfericas, \'e:
 
-\begin{equation}
+\begin{equation}\label{eq:r_xyz}
     \mathbf{r} = r\sin{\theta}\cos{\phi} \hat{\mathbf{x}} + r\sin{\theta}\sin{\phi} \hat{\mathbf{y}} + r\cos{\theta} \hat{\mathbf{z}}.
 \end{equation}
 
-Para determinar \( \hat{\mathbf{r}}, \hat{\mathbf{\theta}}, \hat{\mathbf{\phi}} \), vamos pensar no seguinte conceito, a varia\c{c}\~ao
+Para determinar \( \hat{\mathbf{r}}, \hat{\bm{\theta}}, \hat{\bm{\phi}} \), vamos pensar no seguinte conceito, a varia\c{c}\~ao
 de r, ou seja, $d\textbf{r} = \frac{\partial}{\partial r}(\textbf{r})$ que \'e um vetor apontando na dire\c{c}\~ao de aumento em r. Com isso,
 o vetor unit\'ario deve ser dividido pelo m\'odulo de \textbf{r}:
 
@@ -684,7 +690,7 @@ o vetor unit\'ario deve ser dividido pelo m\'odulo de \textbf{r}:
 \left| \frac{\partial \mathbf{r}}{\partial \phi} \right|^2 = r^2 \sin^2\theta \sin^2\phi + r^2 \sin^2\theta \cos^2\phi = r^2 \sin^2\theta.
 \end{equation}
 
-\begin{equation}
+\begin{equation}\label{eq:r-theta-phi}
 \Rightarrow
 \begin{cases}
 \hat{\mathbf{r}} = \sin\theta \cos\phi \, \hat{\mathbf{x}} + \sin\theta \sin\phi \, \hat{\mathbf{y}} + \cos\theta \, \hat{\mathbf{z}}, \\
@@ -700,10 +706,28 @@ o vetor unit\'ario deve ser dividido pelo m\'odulo de \textbf{r}:
 \end{equation}
 
 \begin{equation}
+\hat{\bm{\theta}} \cdot \hat{\bm{\theta}} = ( \cos^{2}\phi + \sin^{2}\phi)\cos^{2}\theta + \sin^{2}\theta = 1, \quad \checkmark
+\end{equation}
+
+\begin{equation}
+\hat{\bm{\phi}} \cdot \hat{\bm{\phi}} =\sin^{2}\phi + \cos^{2}\phi = 1, \quad \checkmark
+\end{equation}
+
+\begin{equation}
+\hat{\mathbf{r}} \cdot \hat{\bm{\theta}} = \sin\theta \cos\theta( \cos^{2}\phi + \sin^{2}\phi) - \sin\theta \cos\theta  = 0, \quad \checkmark
+\end{equation}
+
+\begin{equation}
+    \hat{\mathbf{r}} \cdot \hat{\bm{\phi}} = -\sin\theta \cos\phi \sin\phi + \sin\theta \sin\phi \cos\phi = 0, \quad \checkmark
+\end{equation}
+
+\begin{equation}
 \hat{\bm{\theta}} \cdot \hat{\bm{\phi}} = -\cos\theta \sin\phi \cos\phi + \cos\theta \sin\phi \cos\phi = 0, \quad \checkmark
 \end{equation}
 
-\textbf{Conversão inversa:}
+\textbf{Conversão inversa:} 
+
+Multiplicando equação $\hat{\mathbf{r}}$ em  \ref{eq:r-theta-phi} por $\sin\theta$ e $\hat{\bm{\theta}}$ em \ref{eq:r-theta-phi} por $\cos\theta$:
 
 \begin{equation}
 \sin\theta \, \hat{\mathbf{r}} = \sin^2\theta \cos\phi \, \hat{\mathbf{x}} + \sin^2\theta \sin\phi \, \hat{\mathbf{y}} + \sin\theta \cos\theta \, \hat{\mathbf{z}}.
@@ -715,11 +739,11 @@ o vetor unit\'ario deve ser dividido pelo m\'odulo de \textbf{r}:
 
 Somando as expressões acima:
 
-\begin{equation}
+\begin{equation}\label{eq:rtheta-x-y}
 \sin\theta \, \hat{\mathbf{r}} + \cos\theta \, \hat{\bm{\theta}} = +\cos\phi \, \hat{\mathbf{x}} + \sin\phi \, \hat{\mathbf{y}}.
 \end{equation}
 
-\begin{equation}
+\begin{equation}\label{eq:phi_x_y}
 \hat{\bm{\phi}} = -\sin\phi \, \hat{\mathbf{x}} + \cos\phi \, \hat{\mathbf{y}}.
 \end{equation}
 
@@ -728,6 +752,40 @@ Multiplicando a equação anterior por \(\cos\phi\) e a seguinte por \(\sin\phi\
 \begin{equation}
 \hat{\mathbf{x}} = \sin\theta \cos\phi \, \hat{\mathbf{r}} + \cos\theta \cos\phi \, \hat{\bm{\theta}} - \sin\phi \, \hat{\bm{\phi}}.
 \end{equation}
+
+Multiplicando equação ($\ref{eq:rtheta-x-y}$) por \(\sin\phi\) e a equação \ref{eq:phi_x_y} por \(\cos\phi\):
+
+\begin{equation}\label{r_theta_x_y}
+\sin\theta \sin\phi \hat{\mathbf{r}} + \cos\theta \sin\phi \hat{\bm{\theta}} = +\cos\phi \sin\phi \hat{\mathbf{x}} + \sin\phi \sin\phi \hat{\mathbf{y}}.
+\end{equation}
+    
+\begin{equation}\label{theta_xy}
+\cos\phi\hat{\bm{\phi}} = -\sin\phi \cos\phi \hat{\mathbf{x}} + \cos\phi \cos\phi \hat{\mathbf{y}}.
+\end{equation}
+
+somar as equações (\ref{r_theta_x_y}) e (\ref{theta_xy}):
+
+\begin{equation}
+\hat{\mathbf{y}} = \sin\theta \sin\phi \hat{\mathbf{r}} + \cos\theta \sin\phi \hat{\bm{\theta}} + \cos\phi\hat{\bm{\phi}}.
+\end{equation}
+
+Multiplicando equação $\hat{\mathbf{r}}$ em  \ref{eq:r-theta-phi} por $\cos\theta$ e $\hat{\bm{\theta}}$ em \ref{eq:r-theta-phi} por $\sin\theta$:
+
+\begin{equation}\label{eq:r_xyz}
+\cos\theta \, \hat{\mathbf{r}} = \sin\theta \cos\phi \cos\theta \hat{\mathbf{x}} + \sin\theta \sin\phi \cos\theta \hat{\mathbf{y}} + \cos^{2}\theta \hat{\mathbf{z}}
+\end{equation}
+
+\begin{equation}\label{eq:theta_xyz}
+\sin\theta \, \hat{\bm{\theta}} = \cos\theta \cos\phi \sin\theta \hat{\mathbf{x}} + \cos\theta \sin\phi \sin\theta \hat{\mathbf{y}} - \sin^{2}\theta  \hat{\mathbf{z}}
+\end{equation}
+
+Substituir a equa\c{c}\~ao \ref{eq:r_xyz} e da equa\c{c}\~ao \ref{eq:theta_xyz}:
+
+\begin{equation}
+\hat{\mathbf{z}} = \cos\theta \hat{\mathbf{r}} - \sin\theta \hat{\bm{\theta}}
+\end{equation}
+
+
 %%%%%%%% Bibliography 
 % Os comandos para incluir as referências bibliográficas
 %\printingbibliography
