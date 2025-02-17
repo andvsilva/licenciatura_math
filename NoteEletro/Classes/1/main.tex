@@ -70,9 +70,10 @@
     \begin{enumerate}
     \item Griffiths \textbf{Seção 1.1} - \colorbox{green}{1.5} 
     \item Griffiths \textbf{Seção 1.2} - \colorbox{green}{1.13(*)}, \colorbox{green}{1.16(*)}, \colorbox{green}{1.19}, \colorbox{green}{.21}, \colorbox{green}{1.22(a-b)}
-    \item Griffiths \textbf{Seção 1.4} - 1.38(*), 1.42
-    \item Griffiths \textbf{Seção 1.5} - 1.44, 1.45, 1.46, 1.47, 1
-    \item Griffiths \textbf{Seção 1.3} - 1.36.48, 1.49
+    \item Griffiths \textbf{Seção 1.3} - \colorbox{green}{1.36}
+    \item Griffiths \textbf{Seção 1.4} - \colorbox{green}{1.38(*)}, \colorbox{green}{1.42}
+    \item Griffiths \textbf{Seção 1.5} - 1.44, 1.45, 1.46, 1.47. 1.48, 1.49
+    \item Griffiths \textbf{Seção 1.3} - 1.36, 1.48, 1.49
     \item Griffiths \textbf{Seção 1.6} - 1.51, 1.52
     \item Problemas adicionais - 1.62(*), 1.63(*)
     \end{enumerate}
@@ -628,6 +629,92 @@ Escolha quaisquer outros pontos próximos no círculo e você chegará à mesma 
         \end{align}
 
 \end{enumerate}
+\section*{Problem 1.36 Griffiths - Resolu\c{c}\~ao}
+
+(a) \textbf{Demonstre que}
+
+\begin{equation}
+\int_S f (\nabla \times \mathbf{A}) \cdot d\mathbf{a} =
+\int_S [\mathbf{A} \times (\nabla f)] \cdot d\mathbf{a} + \oint_P f \mathbf{A} \cdot d\mathbf{l}.
+\end{equation}
+
+\hspace{-0.65cm}(b) \textbf{Demonstre que}
+
+\begin{equation}
+\int_V \mathbf{B} \cdot (\nabla \times \mathbf{A}) \, d\tau =
+\int_V \mathbf{A} \cdot (\nabla \times \mathbf{B}) \, d\tau +
+\oint_S (\mathbf{A} \times \mathbf{B}) \cdot d\mathbf{a}.
+\end{equation}
+
+\section*{Parte (a)}
+
+Queremos demonstrar que:
+\begin{equation}
+\int_S f (\nabla \times \mathbf{A}) \cdot d\mathbf{a} =
+\int_S [\mathbf{A} \times (\nabla f)] \cdot d\mathbf{a} + \oint_P f \mathbf{A} \cdot d\mathbf{l}.
+\end{equation}
+
+Utilizamos a identidade do produto vetorial para o rotacional:
+\begin{equation}
+\nabla \times (f \mathbf{A}) = f (\nabla \times \mathbf{A}) - \mathbf{A} \times (\nabla f).
+\end{equation}
+Integrando ambos os lados sobre a superfície \( S \):
+\begin{equation}
+\int_S \nabla \times (f \mathbf{A}) \cdot d\mathbf{a} =
+\int_S \left[ f (\nabla \times \mathbf{A}) - \mathbf{A} \times (\nabla f) \right] \cdot d\mathbf{a}.
+\end{equation}
+Separando os termos da integral:
+\begin{equation}
+\int_S f (\nabla \times \mathbf{A}) \cdot d\mathbf{a} =
+\int_S [\mathbf{A} \times (\nabla f)] \cdot d\mathbf{a} +
+\int_S \nabla \times (f \mathbf{A}) \cdot d\mathbf{a}.
+\end{equation}
+Pelo teorema de Stokes:
+\begin{equation}
+\int_S \nabla \times (f \mathbf{A}) \cdot d\mathbf{a} = \oint_P f \mathbf{A} \cdot d\mathbf{l}.
+\end{equation}
+Substituindo na equação anterior, obtemos:
+\begin{equation}
+\int_S f (\nabla \times \mathbf{A}) \cdot d\mathbf{a} =
+\int_S [\mathbf{A} \times (\nabla f)] \cdot d\mathbf{a} + \oint_P f \mathbf{A} \cdot d\mathbf{l}.
+\end{equation}
+O que conclui a demonstração.
+
+\section*{Parte (b)}
+
+Agora, queremos demonstrar que:
+\begin{equation}
+\int_V \mathbf{B} \cdot (\nabla \times \mathbf{A}) \, d\tau =
+\int_V \mathbf{A} \cdot (\nabla \times \mathbf{B}) \, d\tau +
+\oint_S (\mathbf{A} \times \mathbf{B}) \cdot d\mathbf{a}.
+\end{equation}
+
+Utilizamos a identidade vetorial do produto escalar envolvendo o rotacional:
+\begin{equation}
+\nabla \cdot (\mathbf{A} \times \mathbf{B}) = \mathbf{B} \cdot (\nabla \times \mathbf{A}) - \mathbf{A} \cdot (\nabla \times \mathbf{B}).
+\end{equation}
+Integrando ambos os lados sobre o volume \( V \):
+\begin{equation}
+\int_V \nabla \cdot (\mathbf{A} \times \mathbf{B}) \, d\tau =
+\int_V \left[ \mathbf{B} \cdot (\nabla \times \mathbf{A}) - \mathbf{A} \cdot (\nabla \times \mathbf{B}) \right] d\tau.
+\end{equation}
+Separando os termos da integral:
+\begin{equation}
+\int_V \mathbf{B} \cdot (\nabla \times \mathbf{A}) \, d\tau =
+\int_V \mathbf{A} \cdot (\nabla \times \mathbf{B}) \, d\tau +
+\int_V \nabla \cdot (\mathbf{A} \times \mathbf{B}) \, d\tau.
+\end{equation}
+Pelo teorema da divergência:
+\begin{equation}
+\int_V \nabla \cdot (\mathbf{A} \times \mathbf{B}) \, d\tau = \oint_S (\mathbf{A} \times \mathbf{B}) \cdot d\mathbf{a}.
+\end{equation}
+Substituindo na equação anterior, temos:
+\begin{equation}
+\int_V \mathbf{B} \cdot (\nabla \times \mathbf{A}) \, d\tau =
+\int_V \mathbf{A} \cdot (\nabla \times \mathbf{B}) \, d\tau +
+\oint_S (\mathbf{A} \times \mathbf{B}) \cdot d\mathbf{a}.
+\end{equation}
+O que conclui a demonstração.
 
 
 \section*{Problem 1.38 Griffiths - Resolu\c{c}\~ao}
@@ -783,6 +870,91 @@ Substituir a equa\c{c}\~ao \ref{eq:r_xyz} e da equa\c{c}\~ao \ref{eq:theta_xyz}:
 
 \begin{equation}
 \hat{\mathbf{z}} = \cos\theta \hat{\mathbf{r}} - \sin\theta \hat{\bm{\theta}}
+\end{equation}
+
+
+\section*{Problem 1.42 Griffiths - Resolu\c{c}\~ao}
+
+Expresse os vetores unitários cilíndricos $\hat{s}$, $\hat{\phi}$, $\hat{z}$ em termos 
+de $\hat{x}$, $\hat{y}$, $\hat{z}$ (ou seja, derive a Eq. 75). ``Inverta'' suas fórmulas 
+para obter $\hat{x}$, $\hat{y}$, $\hat{z}$ em termos de $\hat{s}$, $\hat{\phi}$, $\hat{z}$ (e $\phi$).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.3\textwidth]{images/cilindro.png}
+    \caption{Coordenadas cilíndricas}
+    \label{fig:exemplo}
+\end{figure}
+
+
+Os vetores unitários do sistema cilíndrico são definidos como:
+
+\begin{equation}\label{eq:coor-cilindricas}
+\Rightarrow
+\begin{cases}
+\hat{\mathbf{s}} = \cos\phi \hat{\mathbf{x}} + \sin\phi \hat{\mathbf{y}} \\
+\hat{\bm{\phi}} = -\sin\phi \hat{\mathbf{x}} + \cos\phi \hat{\mathbf{y}} \\
+\hat{\bm{z}} = \hat{\bm{z}}
+\end{cases}
+\end{equation}
+
+Determinar $\hat{\mathbf{y}}$ em função $\hat{\mathbf{s}}$ e $\hat{\bm{\phi}}$ em \ref{eq:coor-cilindricas}, podemos multiplicar
+por $\sin\phi$ e $\cos\phi$, respectivamente:
+
+\begin{equation}
+\mathbf{Somar}
+\begin{cases}
+    \sin\phi\hat{\mathbf{s}} = \cos\phi\sin\phi \hat{\mathbf{x}} + \sin^{2}\phi \hat{\mathbf{y}}, \\
+    \cos\phi\hat{\bm{\phi}} = -\sin\phi\cos\phi \hat{\mathbf{x}} + \cos^{2}\phi \hat{\mathbf{y}}. \\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+    \hat{\mathbf{y}} = \sin\phi \hat{\mathbf{s}} + \cos\phi \hat{\bm{\phi}},
+\end{equation}
+
+Agora para $\hat{\mathbf{x}}$, em $\hat{\mathbf{s}}$ e $\hat{\bm{\phi}}$ em \ref{eq:coor-cilindricas}, podemos multiplicar
+por $\cos\phi$ e $\sin\phi$, respectivamente:
+
+\begin{equation}
+\mathbf{Substituir}
+\begin{cases}
+    \cos\phi\hat{\mathbf{s}} = \cos^{2}\phi \hat{\mathbf{x}} + \sin\phi\cos\phi \hat{\mathbf{y}} \\
+    \sin\phi\hat{\bm{\phi}} = -\sin^{2}\phi\hat{\mathbf{x}} + \cos\phi \sin\phi \hat{\mathbf{y}} \\
+\end{cases}
+\end{equation}
+
+\begin{equation}
+    \hat{\mathbf{x}} = \cos\phi \hat{\mathbf{s}} - \sin\phi \hat{\bm{\phi}}
+\end{equation}
+
+Portanto,
+
+\begin{equation}
+    \begin{cases}
+        \hat{\mathbf{x}} = \cos\phi \hat{\mathbf{s}} - \sin\phi \hat{\bm{\phi}}, \\
+        \hat{\mathbf{y}} = \sin\phi \hat{\mathbf{s}} + \cos\phi \hat{\bm{\phi}}, \\
+        \hat{\bm{z}} = \hat{\bm{z}}.
+    \end{cases}
+    \end{equation}
+
+\section*{Problem 1.44 Griffiths - Resolu\c{c}\~ao}
+
+A função delta de Dirac unidimensional, \(\delta(x)\), pode ser representada como um pico infinitamente alto e 
+infinitesimalmente estreito, com área igual a 1. Ou seja:
+
+\begin{equation}
+\delta(x) =
+\begin{cases}
+    0, & \text{se } x \neq 0 \\
+    \infty, & \text{se } x = 0
+\end{cases}
+\end{equation}
+
+e
+
+\begin{equation}
+\int_{-\infty}^{\infty} \delta(x) \, dx = 1.
 \end{equation}
 
 
