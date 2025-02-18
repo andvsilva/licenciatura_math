@@ -865,7 +865,7 @@ Multiplicando equação $\hat{\mathbf{r}}$ em  \ref{eq:r-theta-phi} por $\cos\th
 \sin\theta \, \hat{\bm{\theta}} = \cos\theta \cos\phi \sin\theta \hat{\mathbf{x}} + \cos\theta \sin\phi \sin\theta \hat{\mathbf{y}} - \sin^{2}\theta  \hat{\mathbf{z}}
 \end{equation}
 
-Substituir a equa\c{c}\~ao \ref{eq:r_xyz} e da equa\c{c}\~ao \ref{eq:theta_xyz}:
+Subtrair a equa\c{c}\~ao \ref{eq:r_xyz} e da equa\c{c}\~ao \ref{eq:theta_xyz}:
 
 \begin{equation}
 \hat{\mathbf{z}} = \cos\theta \hat{\mathbf{r}} - \sin\theta \hat{\bm{\theta}}
@@ -916,7 +916,7 @@ Agora para $\hat{\mathbf{x}}$, em $\hat{\mathbf{s}}$ e $\hat{\bm{\phi}}$ em \ref
 por $\cos\phi$ e $\sin\phi$, respectivamente:
 
 \begin{equation}
-\mathbf{Substituir}
+\mathbf{Subtrair}
 \begin{cases}
     \cos\phi\hat{\mathbf{s}} = \cos^{2}\phi \hat{\mathbf{x}} + \sin\phi\cos\phi \hat{\mathbf{y}} \\
     \sin\phi\hat{\bm{\phi}} = -\sin^{2}\phi\hat{\mathbf{x}} + \cos\phi \sin\phi \hat{\mathbf{y}} \\
@@ -1019,11 +1019,64 @@ Usamos a propriedade da função delta de Dirac:
 
 \section*{Problema 1.46 Griffiths - Resolu\c{c}\~ao}
 
-(a) $\int_{-\infty}^{\infty} f(x)\left[x \frac{d}{d x} \delta(x)\right] d x=\left.x f(x) \delta(x)\right|_{-\infty} ^{\infty}-\int_{-\infty}^{\infty} \frac{d}{d x}(x f(x)) \delta(x) d x$.
 
-The first term is zero, since $\delta(x)=0$ at $\pm \infty ; \frac{d}{d x}(x f(x))=x \frac{d f}{d x}+\frac{d x}{d x} f=x \frac{d f}{d x}+f$.\\
-So the integral is $-\int_{-\infty}^{\infty}\left(x \frac{d f}{d x}+f\right) \delta(x) d x=0-f(0)=-f(0)=-\int_{-\infty}^{\infty} f(x) \delta(x) d x$.\\
-So, $x \frac{d}{d x} \delta(x)=-\delta(x) . \quad$ qed\\
+(a) Mostre que:
+\begin{equation}
+    x \frac{d}{d x} \delta(x)=-\delta(x)
+\end{equation}
+
+Vamos come\c{c}ar com:
+
+\begin{equation}
+\frac{d}{dx}\left[ xf(x)\delta(x)\right] = \frac{d}{dx}\left( xf(x) \right)\delta(x) + f(x)\left[ x\frac{d}{dx}\delta(x)\right]
+\end{equation}
+
+\begin{equation}
+    f(x)\left[ x\frac{d}{dx}\delta(x)\right] = \frac{d}{dx}\left[ xf(x)\delta(x)\right] - f(x)\left[ x\frac{d}{dx}\delta(x)\right]
+\end{equation}
+
+Integrando ambos os lados sobre o intervalo $[-\infty,\infty]$, temos:
+
+
+\begin{equation}
+    \int_{-\infty}^{\infty} f(x)\left[x \frac{d}{d x} \delta(x)\right] d x=\left.x f(x) \delta(x)\right|_{-\infty} ^{\infty}-\int_{-\infty}^{\infty} \frac{d}{d x}(x f(x)) \delta(x) d x.    
+\end{equation}
+
+\begin{equation}
+    \int_{-\infty}^{\infty} f(x) \delta(x) d x=0
+\end{equation}
+
+\begin{equation}\label{integralderivada}
+    \int_{-\infty}^{\infty} f(x)\left[x \frac{d}{d x} \delta(x)\right] d x= -\int_{-\infty}^{\infty} \frac{d}{d x}(x f(x)) \delta(x) d x.    
+\end{equation}
+
+\begin{equation}\label{derivadapartes}
+    \boxed{
+    \frac{d}{d x}(x f(x))=x \frac{d f}{d x}+\frac{d x}{d x} f=x \frac{d f}{d x}+f.
+    }
+\end{equation}
+
+Usando a equação \ref{derivadapartes} na equação \ref{integralderivada}, temos:
+
+\begin{equation}
+    -\int_{-\infty}^{\infty}\left(x \frac{d f}{d x}+f\right) \delta(x) d x=0-f(0)=-f(0)=-\int_{-\infty}^{\infty} f(x) \delta(x) d x
+\end{equation}
+
+\begin{equation}
+    \int_{-\infty}^{\infty} f(x)\left[x \frac{d}{d x} \delta(x)\right] d x = -\int_{-\infty}^{\infty} f(x) \delta(x) d x
+\end{equation}
+
+\begin{equation}
+    \int_{-\infty}^{\infty} f(x) \textcolor{red}{\left[x \frac{d}{d x} \delta(x)\right]} d x = \int_{-\infty}^{\infty} f(x)\textcolor{red}{\left[- \delta(x)\right]} d x
+\end{equation}
+
+\begin{equation}
+    \boxed{
+    x \frac{d}{d x} \delta(x)=-\delta(x) \quad \mathbf{qed}
+    }
+\end{equation}
+
+
 (b) $\int_{-\infty}^{\infty} f(x) \frac{d \theta}{d x} d x=\left.f(x) \theta(x)\right|_{-\infty} ^{\infty}-\int_{-\infty}^{\infty} \frac{d f}{d x} \theta(x) d x=f(\infty)-\int_{0}^{\infty} \frac{d f}{d x} d x=f(\infty)-(f(\infty)-f(0))$ $=f(0)=\int_{-\infty}^{\infty} f(x) \delta(x) d x$. So $\frac{d \theta}{d x}=\delta(x)$. qed
 
 
