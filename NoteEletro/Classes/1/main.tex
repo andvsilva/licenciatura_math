@@ -69,10 +69,10 @@
     
     \begin{enumerate}
     \item Griffiths \textbf{Seção 1.1} - \colorbox{green}{1.5} 
-    \item Griffiths \textbf{Seção 1.2} - \colorbox{green}{1.13(*)}, \colorbox{green}{1.16(*)}, \colorbox{green}{1.19}, \colorbox{green}{.21}, \colorbox{green}{1.22(a-b)}
+    \item Griffiths \textbf{Seção 1.2} - \colorbox{green}{1.13(*)}, \colorbox{green}{1.16(*)}, \colorbox{green}{1.19}, \colorbox{green}{1.21}, \colorbox{green}{1.22(a-b)}
     \item Griffiths \textbf{Seção 1.3} - \colorbox{green}{1.36}
     \item Griffiths \textbf{Seção 1.4} - \colorbox{green}{1.38(*)}, \colorbox{green}{1.42}
-    \item Griffiths \textbf{Seção 1.5} - \colorbox{green}{1.44}, \colorbox{green}{1.45}, \colorbox{green}{1.46}, \colorbox{green}{1.47}. \colorbox{green}{1.48}, \colorbox{green}{1.49}
+    \item Griffiths \textbf{Seção 1.5} - \colorbox{green}{1.44}, \colorbox{green}{1.45}, \colorbox{green}{1.46}, 1.47. 1.48, 1.49
     \item Griffiths \textbf{Seção 1.6} - 1.51, 1.52
     \item Problemas adicionais - 1.62(*), 1.63(*)
     \end{enumerate}
@@ -106,7 +106,7 @@ Lado esquerdo da equa\c{c}\~ao (1) parte por parte:
 B_x & B_y & B_z \\
 C_x & C_y & C_z
 \end{vmatrix} =
-(B_yC_z - B_zC_y)\mathbf{i} -
+(B_yC_z - B_zC_y)\mathbf{i} +
 (B_zC_x - B_xC_z)\mathbf{j} +
 (B_xC_y - B_yC_x)\mathbf{k}
 \end{equation}
@@ -1077,30 +1077,232 @@ Usando a equação \ref{derivadapartes} na equação \ref{integralderivada}, tem
 \end{equation}
 
 
-(b) $\int_{-\infty}^{\infty} f(x) \frac{d \theta}{d x} d x=\left.f(x) \theta(x)\right|_{-\infty} ^{\infty}-\int_{-\infty}^{\infty} \frac{d f}{d x} \theta(x) d x=f(\infty)-\int_{0}^{\infty} \frac{d f}{d x} d x=f(\infty)-(f(\infty)-f(0))$ $=f(0)=\int_{-\infty}^{\infty} f(x) \delta(x) d x$. So $\frac{d \theta}{d x}=\delta(x)$. qed
+(b) Mostre que:
+\begin{equation}
+    \frac{d\theta}{d x} = \delta(x)
+\end{equation}
 
+Vamos come\c{c}ar com:
+
+\begin{equation}
+\frac{d \theta}{d x}\left[ f(x)\theta(x)\right] = \left[ \frac{d}{dx}f(x)\right]\theta(x) + f(x)\left[ \frac{d \theta}{d x}\right]
+\end{equation}
+
+\begin{equation}
+    f(x)\left[ \frac{d \theta}{d x}\right] = \frac{d \theta}{d x}\left[ f(x)\theta(x)\right] - \left[ \frac{d}{dx}f(x)\right]\theta(x)
+\end{equation}
+
+Integrando ambos os lados sobre o intervalo $[-\infty,\infty]$, temos:
+
+\begin{equation}
+    \int_{-\infty}^{\infty} f(x) \frac{d \theta}{d x} d x=\left.f(x) \theta(x)\right|_{-\infty} ^{\infty}-\int_{-\infty}^{\infty} \frac{d f}{d x} \theta(x) d x
+\end{equation}
+
+
+\begin{equation}
+    f(\infty)-\int_{0}^{\infty} \frac{d f}{d x} d x=f(\infty)-(f(\infty)-f(0))=f(0)=\int_{-\infty}^{\infty} f(x) \delta(x) d x.
+\end{equation}
+
+
+\begin{equation}
+    \int_{-\infty}^{\infty} f(x) \textcolor{red}{\left[\frac{d \theta}{d x}\right]}d x= \int_{-\infty}^{\infty} f(x) \textcolor{red}{\delta(x)} d x.
+\end{equation}
+
+\begin{equation}
+    \boxed{
+    \frac{d \theta}{d x}=\delta(x)
+    }
+\end{equation}
 
 \section*{Problema 1.47 Griffiths - Resolu\c{c}\~ao}
 
-(a) $\rho(\mathbf{r})=q \delta^{3}\left(\mathbf{r}-\mathbf{r}^{\prime}\right)$. Check: $\int \rho(\mathbf{r}) d \tau=q \int \delta^{3}\left(\mathbf{r}-\mathbf{r}^{\prime}\right) d \tau=q$.\\
-(b) $\rho(\mathbf{r})=q \delta^{3}(\mathbf{r}-\mathbf{a})-q \delta^{3}(\mathbf{r})$.\\
-(c) Evidently $\rho(r)=A \delta(r-R)$. To determine the constant $A$, we require
+\begin{enumerate}
+    \item[(a)] Escreva uma expressão para a densidade de carga volumétrica $\rho(\mathbf{r})$ de uma 
+    carga pontual $q$ na posição $\mathbf{r}'$. Certifique-se de que a integral de volume de $\rho$ 
+    resulte em $q$.
 
-$$
-Q=\int \rho d \tau=\int A \delta(r-R) 4 \pi r^{2} d r=A 4 \pi R^{2} . \quad \text { So } A=\frac{Q}{4 \pi R^{2}} . \quad \rho(r)=\frac{Q}{4 \pi R^{2}} \delta(r-R) .
-$$
+    A densidade de carga volumétrica $\rho(\mathbf{r})$ de uma 
+    carga pontual $q$ na posição $\mathbf{r}'$, ou seja, definido
+    atr\'aves da função delta de Dirac:
 
+    \begin{equation}
+        \boxed{\rho(\mathbf{r})=q \delta^{3}\left(\mathbf{r}-\mathbf{r}^{\prime}\right).}
+    \end{equation}
+
+    Com a densidade de carga $\rho(\mathbf{r})$ pode calcular a carga total da regi\~ao de interesse,
+    fazendo a integra\c{c}\~ao de volume sobre todo o espa\c{c}o:
+
+    \begin{equation}
+        \boxed{Q=\int \rho(\mathbf{r}) d \tau=q \int \delta^{3}\left(\mathbf{r}-\mathbf{r}^{\prime}\right) d \tau=q.}
+    \end{equation}
+
+
+    \item[(b)] Qual é a densidade de carga volumétrica de um dipolo elétrico, consistindo em uma 
+    carga pontual $-q$ na origem e uma carga pontual $+q$ na posição $\mathbf{a}$?
+
+    \begin{equation}
+        \rho(\mathbf{r})=q \delta^{3}(\mathbf{r}-\mathbf{a})-q \delta^{3}(\mathbf{r})
+    \end{equation}
+
+    \item[(c)] Qual é a densidade de carga volumétrica (em coordenadas esféricas) de uma casca 
+    esférica uniforme, infinitesimalmente fina, com raio $R$ e carga total $Q$, centrada na origem? 
+    \textit{(Atenção: a integral sobre todo o espaço deve resultar em $Q$.)}
+
+    \begin{figure}[!h]
+    \begin{center}
+        \begin{tikzpicture}
+            % Desenha a esfera
+            \shade[ball color=white!0] (0,0) circle (1);
+            
+            % Contorno da casca esférica
+            \draw[thick] (0,0) circle (1);
+            
+            % Indicação do raio R
+            \draw[->] (0,0) -- (1,0) node[midway, above] {$R$};
+            
+            % Centro da esfera
+            \fill (0,0) circle (1.5pt) node[left] {O};
+        \end{tikzpicture}
+    \end{center}
+    \caption{Casca esférica uniforme com raio $R$ e carga total $Q$.}
+    \end{figure}
+
+    Podemos definir a densidade de carga volumétrica como:
+
+    \begin{equation}
+        \rho(r)=A \delta(r-R)
+    \end{equation}
+
+    Para determinar A precisamos calcular a integra\c{c}\~ao de volume sobre toda a esfera. 
+    Usando a formulação de integral de volume de uma esfera:
+
+    \begin{equation}
+        Q=\int \rho d \tau=\int A \delta(r-R) 4 \pi r^{2} d r=A 4 \pi R^{2}.
+    \end{equation}
+
+    Ent\~ao,
+
+    \begin{equation}
+        A=\frac{Q}{4 \pi R^{2}} \rho(r)=\frac{Q}{4 \pi R^{2}} \delta(r-R) .
+    \end{equation}
+
+    \begin{equation}
+        \boxed{
+        \rho(r)=\frac{Q}{4 \pi R^{2}} \delta(r-R) .
+        }
+    \end{equation}
+
+\end{enumerate}
 
 \section*{Problema 1.48 Griffiths - Resolu\c{c}\~ao}
 
-(a) $a^{2}+\mathbf{a} \cdot \mathbf{a}+a^{2}=3 a^{2}$.\\
-(b) $\int(\mathbf{r}-\mathbf{b})^{2} \frac{1}{5^{3}} \delta^{3}(\mathbf{r}) d \tau=\frac{1}{125} b^{2}=\frac{1}{125}\left(4^{2}+3^{2}\right)=\frac{1}{5}$.\\
-(c) $c^{2}=25+9+4=38>36=6^{2}$, so $\mathbf{c}$ is outside $\mathcal{V}$, so the integral is zero.\\
-(d) $(\mathbf{e}-(2 \hat{\mathbf{x}}+2 \hat{\mathbf{y}}+2 \hat{\mathbf{z}}))^{2}=(1 \hat{\mathbf{x}}+0 \hat{\mathbf{y}}+(-1) \hat{\mathbf{z}})^{2}=1+1=2<(1.5)^{2}=2.25$, so $\mathbf{e}$ is inside $\mathcal{V}$, and hence the integral is $\mathbf{e} \cdot(\mathbf{d}-\mathbf{e})=(3,2,1) \cdot(-2,0,2)=-6+0+2=-4$.
+\begin{enumerate}
+    \item[(a)] A função delta de Dirac satisfaz a propriedade de seleção:
+    \begin{equation}
+    \int f(\mathbf{r}) \delta^3(\mathbf{r} - \mathbf{a}) \, d\tau = f(\mathbf{a}).
+    \end{equation}
+    Aplicando essa propriedade:
+    \begin{equation}
+    \int (r^2 + \mathbf{r} \cdot \mathbf{a} + a^2) \delta^3(\mathbf{r} - \mathbf{a}) \, d\tau = a^2 + \mathbf{a} \cdot \mathbf{a} + a^2 = 3a^2.
+    \end{equation}
+
+    \item[(b)] Dentro do volume $\mathcal{V}$, que é um cubo centrado na origem, a integral da função delta será não nula apenas se o ponto $\mathbf{b} = 4\hat{\mathbf{y}} + 3\hat{\mathbf{z}}$ estiver dentro do cubo de lado $2$ (ou seja, se $-1 \leq x, y, z \leq 1$). Como $\mathbf{b}$ não está dentro desse intervalo, temos:
+    \begin{equation}
+    \int_{\mathcal{V}} |\mathbf{r} - \mathbf{b}|^2 \delta^3(5\mathbf{r}) \, d\tau = 0.
+    \end{equation}
+
+    \item[(c)] Usamos a propriedade de seleção da delta de Dirac:
+    \begin{equation}
+    \int_{\mathcal{V}} \left[ r^4 + r^2 (\mathbf{r} \cdot \mathbf{c}) + c^4 \right] \delta^3(\mathbf{r} - \mathbf{c}) \, d\tau.
+    \end{equation}
+    Como $\mathcal{V}$ é uma esfera de raio $6$ e $\mathbf{c} = 5\hat{\mathbf{x}} + 3\hat{\mathbf{y}} + 2\hat{\mathbf{z}}$, verificamos que o módulo de $\mathbf{c}$ é:
+    \begin{equation}
+    |\mathbf{c}| = \sqrt{5^2 + 3^2 + 2^2} = \sqrt{25 + 9 + 4} = \sqrt{38} \approx 6.16.
+    \end{equation}
+    Como $|\mathbf{c}| > 6$, o ponto $\mathbf{c}$ está fora da esfera, então a integral é \textbf{zero}.
+
+    \item[(d)] Similarmente, aplicamos a propriedade da função delta:
+    \begin{equation}
+    \int_{\mathcal{V}} \mathbf{r} \cdot (\mathbf{d} - \mathbf{r}) \delta^3(\mathbf{e} - \mathbf{r}) \, d\tau.
+    \end{equation}
+    Avaliamos em $\mathbf{e} = (3,2,1)$:
+    \begin{equation}
+    \mathbf{e} \cdot (\mathbf{d} - \mathbf{e}) = (3,2,1) \cdot [(1,2,3) - (3,2,1)].
+    \end{equation}
+    Calculando o vetor diferença:
+    \begin{equation}
+    \mathbf{d} - \mathbf{e} = (1 - 3, 2 - 2, 3 - 1) = (-2,0,2).
+    \end{equation}
+    Produto escalar:
+    \begin{equation}
+    (3,2,1) \cdot (-2,0,2) = 3(-2) + 2(0) + 1(2) = -6 + 0 + 2 = -4.
+    \end{equation}
+    Como a esfera de raio $1.5$ está centrada em $(2,2,2)$, verificamos se $\mathbf{e} = (3,2,1)$ está dentro dela:
+    \begin{equation}
+    \sqrt{(3-2)^2 + (2-2)^2 + (1-2)^2} = \sqrt{1^2 + 0^2 + (-1)^2} = \sqrt{2} \approx 1.41.
+    \end{equation}
+    Como $1.41 < 1.5$, $\mathbf{e}$ está dentro da esfera, então a integral resulta em: -4.
+\end{enumerate}
 
 \section*{Problema 1.49 Griffiths - Resolu\c{c}\~ao}
-First method: use Eq. 1.99 to write $J=\int e^{-r}\left(4 \pi \boldsymbol{\delta}^{3}(\mathbf{r})\right) d \tau=4 \pi e^{-0}=4 \pi$.\\
-Second method: integrating by parts (use Eq. 1.59).
+
+\begin{equation}
+J = \int_{\mathcal{V}} e^{-r} \left( \nabla \cdot \frac{\hat{\mathbf{r}}}{r^2} \right) d\tau
+\end{equation}
+
+onde $\mathcal{V}$ é uma esfera de raio $R$, centrada na origem, utilizando dois métodos diferentes, como no Ex. 16.
+
+Vamos utilizar a equação 1.99 (Griffiths, quarta edição) para calcular a integral:
+\begin{equation}
+    \nabla\cdot \left(\frac{\hat{\mathbf{r}}}{r^2}\right) = 4\pi \delta^{3}(\mathbf{r})
+\end{equation}
+
+\begin{equation}
+    J=\int e^{-r}\left(4 \pi \boldsymbol{\delta}^{3}(\mathbf{r})\right) d \tau=4 \pi e^{-0}=4 \pi \quad \checkmark
+\end{equation}
+
+ou com equação 1.59 para calcular a integra\c{c}\~ao por partes:
+
+\begin{equation}
+\int_{\mathcal{V}} f \left( \nabla \cdot \mathbf{A} \right) d\tau = -\int_{\mathcal{V}}\mathbf{A} \cdot (\nabla f)\, d\tau + \oint_S f \mathbf{A} \cdot d\mathbf{a}.
+\end{equation}
+
+Como isso, temos:
+
+\begin{equation}
+    \int_{\mathcal{V}} e^{-r} \left( \nabla \cdot \frac{\hat{\mathbf{r}}}{r^2} \right) d\tau = -\int_{\mathcal{V}}\frac{\hat{\mathbf{r}}}{r^2} \cdot (\nabla (e^{-r}))\, d\tau + \oint_S (e^{-r}) \frac{\hat{\mathbf{r}}}{r^2} \cdot d\mathbf{a},
+\end{equation}
+
+Logo, a integral da $J$:
+
+\begin{equation}
+    J = \int_{\mathcal{V}} e^{-r} \left( \nabla \cdot \frac{\hat{\mathbf{r}}}{r^2} \right) d\tau = -\int_{\mathcal{V}}\frac{\hat{\mathbf{r}}}{r^2} \cdot (\nabla (e^{-r}))\, d\tau + \oint_S (e^{-r}) \frac{\hat{\mathbf{r}}}{r^2} \cdot d\mathbf{a}.
+\end{equation}
+
+\[
+J = -\int_{\mathcal{V}} \frac{\hat{\mathbf{r}}}{r^2} \cdot \nabla (e^{-r}) \, d\tau + \oint_{\mathcal{S}} e^{-r} \frac{\hat{\mathbf{r}}}{r^2} \cdot d\mathbf{a}.
+\]
+Mas 
+\[
+\nabla (e^{-r}) = \left( \frac{\partial}{\partial r} e^{-r} \right) \hat{\mathbf{r}} = -e^{-r} \hat{\mathbf{r}}.
+\]
+
+\[
+= \int_0^R \frac{1}{r^2} e^{-r} 4\pi r^2 \, dr + \int e^{-R} \frac{\hat{\mathbf{r}}}{r^2} \cdot r^2 \sin\theta \, d\theta \, d\phi \, \hat{\mathbf{r}}
+\]
+
+\[
+= 4\pi \int_0^R e^{-r} \, dr + e^{-R} \int \sin\theta \, d\theta \, d\phi
+\]
+
+\[
+= 4\pi \left( -e^{-r} \right) \Big|_0^R + 4\pi e^{-R} = 4\pi (-e^{-R} + e^{0}) + 4\pi e^{-R} = 4\pi. \quad \checkmark
+\]
+
+\[
+(\text{Aqui } R = \infty, \text{ logo } e^{-R} = 0.)
+\]
+
 
 \section*{Problema 1.51 Griffiths - Resolu\c{c}\~ao}
 
