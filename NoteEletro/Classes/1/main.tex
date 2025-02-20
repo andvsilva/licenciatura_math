@@ -57,7 +57,7 @@
 \maketitle
 
 \begin{center}
-    \textbf{Prof. Bruno Moraes - 2024-2}\\
+    \textbf{Prof. Bruno Moraes - 2024-2}\
     \textbf{Guia de Estudo 1: Revisão Matemática}
     \end{center}
     
@@ -1306,11 +1306,101 @@ Mas
 
 \section*{Problema 1.51 Griffiths - Resolu\c{c}\~ao}
 
+\begin{itemize}
+    \item[(d) $\Rightarrow$ (a):] $\nabla \times \mathbf{F} = \nabla \times (-\nabla U) = 0 \quad (\text{Eq. 1.44 – curl of gradient is always zero}).$
+    \item[(a) $\Rightarrow$ (c):] $\oint \mathbf{F} \cdot d\mathbf{l} = \int (\nabla \times \mathbf{F}) \cdot d\mathbf{a} = 0 \quad (\text{Eq. 1.57 – Stokes’ theorem}).$
+    \item[(c) $\Rightarrow$ (b):] $\int_a^b \mathbf{F} \cdot d\mathbf{l} - \int_a^b \mathbf{F}_{II} \cdot d\mathbf{l} = \int_a^b \mathbf{F} \cdot d\mathbf{l} + \int_b^a \mathbf{F}_{II} \cdot d\mathbf{l} = \oint \mathbf{F} \cdot d\mathbf{l} = 0,$ 
+    so 
+    \[
+    \int_a^b \mathbf{F} \cdot d\mathbf{l} = \int_a^b \mathbf{F}_{II} \cdot d\mathbf{l}.
+    \]
+    \item[(b) $\Rightarrow$ (c):] same as (c) $\Rightarrow$ (b), only in reverse; 
+    \item[(c) $\Rightarrow$ (a):] same as (a) $\Rightarrow$ (c).
+\end{itemize}
+
 \section*{Problema 1.52 Griffiths - Resolu\c{c}\~ao}
+
+\begin{itemize}
+    \item[(d) $\Rightarrow$ (a):] $\nabla \cdot \mathbf{F} = \nabla \cdot (\nabla \times \mathbf{W}) = 0 \quad (\text{Eq. 1.46 – divergence of curl is always zero}).$
+    \item[(a) $\Rightarrow$ (c):] $\oint \mathbf{F} \cdot d\mathbf{a} = \int (\nabla \cdot \mathbf{F}) \, d\tau = 0 \quad (\text{Eq. 1.56 – divergence theorem}).$
+
+    (c) $\Rightarrow$ (b): \(\int_I \mathbf{F} \cdot d\mathbf{a} - \int_{II} \mathbf{F} \cdot d\mathbf{a} = \oint \mathbf{F} \cdot d\mathbf{a} = 0,\) so  
+\[
+\int_I \mathbf{F} \cdot d\mathbf{a} = \int_{II} \mathbf{F} \cdot d\mathbf{a}.
+\]
+
+\textit{(Note: sign change because for} \(\oint \mathbf{F} \cdot d\mathbf{a}\), \textit{da is} \textit{outward}, \textit{whereas for surface II it is} \textit{inward}.)  
+
+(b) $\Rightarrow$ (c): same as (c) $\Rightarrow$ (b), in reverse; (c) $\Rightarrow$ (a): same as (a) $\Rightarrow$ (c).
+
+\end{itemize}
 
 \section*{Problema 1.62 Griffiths - Resolu\c{c}\~ao}
 
+\begin{itemize}
+    \item[(a)] $d\mathbf{a} = R^2 \sin \theta \, d\theta \, d\phi \, \hat{\mathbf{r}}.$ Let the surface be the northern hemisphere. The $\hat{\mathbf{x}}$ and $\hat{\mathbf{y}}$ components clearly integrate to zero, and the $\hat{\mathbf{z}}$ component of $\hat{\mathbf{r}}$ is $\cos \theta$, so  
+    \[
+    \mathbf{a} = \int R^2 \sin \theta \cos \theta \, d\theta \, d\phi \, \hat{\mathbf{z}}
+    = 2\pi R^2 \hat{\mathbf{z}} \int_0^{\pi/2} \sin \theta \cos \theta \, d\theta 
+    = 2\pi R^2 \hat{\mathbf{z}} \left.\frac{\sin^2 \theta}{2}\right|_0^{\pi/2} 
+    = \pi R^2 \hat{\mathbf{z}}.
+    \]
+
+    \item[(b)] Let $T = 1$ in Prob. 1.61(a). Then $\nabla T = 0$, so $\oint d\mathbf{a} = 0.$ \hspace{1cm} qed
+
+    \item[(c)] This follows from (b). For suppose $\mathbf{a}_1 \neq \mathbf{a}_2$; then if you put them together to make a closed surface, 
+    \[
+    \oint d\mathbf{a} = \mathbf{a}_1 - \mathbf{a}_2 \neq 0.
+    \]
+
+    \item[(d)] For one such triangle, $d\mathbf{a} = \frac{1}{2} (\mathbf{r} \times d\mathbf{l})$ (since $\mathbf{r} \times d\mathbf{l}$ is the area of the parallelogram, and the direction is perpendicular to the surface), so for the entire conical surface, 
+    \[
+    \mathbf{a} = \frac{1}{2} \oint \mathbf{r} \times d\mathbf{l}.
+    \]
+
+    \item[(e)] Let $T = \mathbf{c} \cdot \mathbf{r}$, and use product rule \#4: 
+    \[
+    \nabla T = \nabla (\mathbf{c} \cdot \mathbf{r}) = \mathbf{c} \times (\nabla \times \mathbf{r}) + (\mathbf{c} \cdot \nabla)\mathbf{r}.
+    \] 
+    But $\nabla \times \mathbf{r} = 0$, and $(\mathbf{c} \cdot \nabla)\mathbf{r} = (c_x \frac{\partial}{\partial x} + c_y \frac{\partial}{\partial y} + c_z \frac{\partial}{\partial z})(x \hat{\mathbf{x}} + y \hat{\mathbf{y}} + z \hat{\mathbf{z}}) = c_x \hat{\mathbf{x}} + c_y \hat{\mathbf{y}} + c_z \hat{\mathbf{z}} = \mathbf{c}.$  
+    So Prob. 1.61(e) says  
+    \[
+    \oint T \, d\mathbf{l} = \oint (\mathbf{c} \cdot \mathbf{r}) \, d\mathbf{l} = -\int (\nabla T) \times d\mathbf{a} = -\int \mathbf{c} \times d\mathbf{a} = -\mathbf{c} \times \mathbf{a} = \mathbf{a} \times \mathbf{c}.
+    \]
+    \hspace{1cm} qed
+\end{itemize}
+
+
 \section*{Problema 1.63 Griffiths - Resolu\c{c}\~ao}
+
+\begin{equation}
+    \nabla \cdot \mathbf{v}=\frac{1}{r^{2}} \frac{\partial}{\partial r}\left(r^{2} \cdot \frac{1}{r}\right)=\frac{1}{r^{2}} \frac{\partial}{\partial r}(r)=\frac{1}{r^{2}} .
+\end{equation}
+    
+    Para uma esfera de raio $R$ :
+    
+    \begin{equation}
+    \left.\begin{array}{rl}
+    \int \mathbf{v} \cdot d \mathbf{a} & =\int\left(\frac{1}{R} \hat{\mathbf{r}}\right) \cdot\left(R^{2} \sin \theta d \theta d \phi \hat{\mathbf{r}}\right)=R \int \sin \theta d \theta d \phi=4 \pi R . \\\
+    (\nabla \cdot \mathbf{v}) d \tau & =\int\left(\frac{1}{r^{2}}\right)\left(r^{2} \sin \theta d r d \theta d \phi\right)=\left(\int_{0}^{R} d r\right)\left(\int \sin \theta d \theta d \phi\right)=4 \pi R .
+    \end{array}\right\} \begin{aligned}
+    & \text { Portanto, o teorema da divergência } \\\
+    & \text { está verificado. }
+    \end{aligned}
+    \end{equation}
+    
+    Evidentemente, não há uma função delta na origem.
+    
+    \begin{equation}
+    \nabla \times\left(r^{n} \hat{\mathbf{r}}\right)=\frac{1}{r^{2}} \frac{\partial}{\partial r}\left(r^{2} r^{n}\right)=\frac{1}{r^{2}} \frac{\partial}{\partial r}\left(r^{n+2}\right)=\frac{1}{r^{2}}(n+2) r^{n+1}=(n+2) r^{n-1}
+    \end{equation}
+    
+    (exceto para $n=-2$, para o qual já sabemos (Eq. 1.99) que a divergência é $4 \pi \delta^{3}(\mathbf{r})$ ).\
+    (2) Geometricamente, deve ser zero. Da mesma forma, o rotacional em coordenadas esféricas obviamente resulta em zero. 
+    Para garantir que não há uma função delta oculta, integramos sobre uma esfera de raio $R$, usando o Problema 1.61(b): 
+    Se $\nabla \times\left(r^{n} \hat{\mathbf{r}}\right)=\mathbf{0}$, então $\int(\nabla \times \mathbf{v}) d \tau=\mathbf{0}    
+    \stackrel{?}{=}\-∘ \mathbf{v} \times d \mathbf{a} . \quad$ Mas $\mathbf{v}=r^{n} \hat{\mathbf{r}}$ e $d \mathbf{a}=$ $R^{2} 
+    \sin \theta d \theta d \phi \hat{\mathbf{r}}$ estão ambos na direção de $\hat{\mathbf{r}}$, logo $\mathbf{v} \times d \mathbf{a}=\mathbf{0} . \checkmark$
 
 %%%%%%%% Bibliography 
 % Os comandos para incluir as referências bibliográficas
