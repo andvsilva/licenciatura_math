@@ -16,6 +16,8 @@
 \usepackage{cancel}
 \usepackage{tikz}
 \usepackage{newunicodechar}
+\definecolor{ao(english)}{rgb}{0.0, 0.5, 0.0}
+\definecolor{byzantium}{rgb}{0.44, 0.16, 0.39}
 \newunicodechar{∘}{\circ}
 
 \input{commands.tex}
@@ -1024,7 +1026,7 @@ Usamos a propriedade da função delta de Dirac:
 
 (a) Mostre que:
 \begin{equation}
-    x \frac{d}{d x} \delta(x)=-\delta(x)
+\boxed{ x \frac{d}{d x} \delta(x)=-\delta(x)}
 \end{equation}
 
 Vamos come\c{c}ar com:
@@ -1041,28 +1043,33 @@ Integrando ambos os lados sobre o intervalo $[-\infty,\infty]$, temos:
 
 
 \begin{equation}
-    \int_{-\infty}^{\infty} f(x)\left[x \frac{d}{d x} \delta(x)\right] d x=\left.x f(x) \delta(x)\right|_{-\infty} ^{\infty}-\int_{-\infty}^{\infty} \frac{d}{d x}(x f(x)) \delta(x) d x.    
+    \int_{-\infty}^{\infty} f(x)\left[x \frac{d}{d x} \delta(x)\right] d x = \left.x f(x) \delta(x)\right|_{-\infty} ^{\infty}-\int_{-\infty}^{\infty} \frac{d}{d x}(x f(x)) \delta(x) d x.    
 \end{equation}
 
 \begin{equation}
-    \int_{-\infty}^{\infty} f(x) \delta(x) d x=0
+    \int_{-\infty}^{\infty} x f(x) \delta(x) d x = \left.x f(x) \delta(x)\right|_{-\infty} ^{\infty} = 0
 \end{equation}
 
 \begin{equation}\label{integralderivada}
-    \int_{-\infty}^{\infty} f(x)\left[x \frac{d}{d x} \delta(x)\right] d x= -\int_{-\infty}^{\infty} \frac{d}{d x}(x f(x)) \delta(x) d x.    
+    \int_{-\infty}^{\infty} f(x)\left[x \frac{d}{d x} \delta(x)\right] d x= -\int_{-\infty}^{\infty} \textcolor{blue}{\frac{d}{d x}(x f(x))} \delta(x) d x.    
 \end{equation}
 
 \begin{equation}\label{derivadapartes}
     \boxed{
-    \frac{d}{d x}(x f(x))=x \frac{d f}{d x}+\frac{d x}{d x} f=x \frac{d f}{d x}+f.
+        \textcolor{blue}{\frac{d}{d x}(x f(x))} =x \frac{d f}{d x}+\frac{d x}{d x} f=x \frac{d f}{d x}+f.
     }
 \end{equation}
 
 Usando a equação \ref{derivadapartes} na equação \ref{integralderivada}, temos:
 
 \begin{equation}
-    -\int_{-\infty}^{\infty}\left(x \frac{d f}{d x}+f\right) \delta(x) d x=0-f(0)=-f(0)=-\int_{-\infty}^{\infty} f(x) \delta(x) d x
+    -\int_{-\infty}^{\infty}\left(x \frac{d f}{d x}+f\right) \delta(x) d x = \cancelto{0}{\int_{-\infty}^{\infty} x \frac{d f(x)}{d x} \delta(x) d x} + \int_{-\infty}^{\infty} f(x) \delta(x) d x
 \end{equation}
+
+\begin{equation}
+    -\int_{-\infty}^{\infty}\left(x \frac{d f}{d x}+f\right) \delta(x) d x = -\int_{-\infty}^{\infty} f(x) \delta(x) d x
+\end{equation}
+
 
 \begin{equation}
     \int_{-\infty}^{\infty} f(x)\left[x \frac{d}{d x} \delta(x)\right] d x = -\int_{-\infty}^{\infty} f(x) \delta(x) d x
@@ -1081,30 +1088,54 @@ Usando a equação \ref{derivadapartes} na equação \ref{integralderivada}, tem
 
 (b) Mostre que:
 \begin{equation}
-    \frac{d\theta}{d x} = \delta(x)
+\boxed{    \frac{d\theta}{d x} = \delta(x)}
 \end{equation}
 
 Vamos come\c{c}ar com:
 
 \begin{equation}
-\frac{d \theta}{d x}\left[ f(x)\theta(x)\right] = \left[ \frac{d}{dx}f(x)\right]\theta(x) + f(x)\left[ \frac{d \theta}{d x}\right]
+\frac{d}{d x}\left[ f(x)\theta(x)\right] = \left[ \frac{d}{dx}f(x)\right]\theta(x) + f(x)\left[ \frac{d \theta}{d x}\right]
 \end{equation}
 
 \begin{equation}
-    f(x)\left[ \frac{d \theta}{d x}\right] = \frac{d \theta}{d x}\left[ f(x)\theta(x)\right] - \left[ \frac{d}{dx}f(x)\right]\theta(x)
+    f(x)\textcolor{red}{\left[ \frac{d \theta}{d x}\right]} = \frac{d}{d x}\left[ f(x)\theta(x)\right] - \left[ \frac{d}{dx}f(x)\right]\theta(x)
 \end{equation}
 
 Integrando ambos os lados sobre o intervalo $[-\infty,\infty]$, temos:
 
 \begin{equation}
-    \int_{-\infty}^{\infty} f(x) \frac{d \theta}{d x} d x=\left.f(x) \theta(x)\right|_{-\infty} ^{\infty}-\int_{-\infty}^{\infty} \frac{d f}{d x} \theta(x) d x
+    \int_{-\infty}^{\infty} f(x) \textcolor{red}{\left[ \frac{d \theta}{d x}\right]} d x= \textcolor{violet}{\left.f(x) \theta(x)\right|_{-\infty} ^{\infty}}-\textcolor{ao(english)}{\int_{-\infty}^{\infty} \frac{d f}{d x} \theta(x) d x}
+\end{equation}
+
+A \colorbox{yellow}{função $\theta(x)$ é a \textbf{função degrau de Heaviside}}, definida como:
+
+\begin{equation}
+\theta(x) =
+\begin{cases}
+1, & \text{se } x > 0 \\
+0, & \text{se } x < 0
+\end{cases}
 \end{equation}
 
 
 \begin{equation}
-    f(\infty)-\int_{0}^{\infty} \frac{d f}{d x} d x=f(\infty)-(f(\infty)-f(0))=f(0)=\int_{-\infty}^{\infty} f(x) \delta(x) d x.
+    \textcolor{violet}{\left.f(x) \theta(x)\right|_{-\infty} ^{\infty}} = f(\infty)
 \end{equation}
 
+Como a função $\theta(x)$ é zero para $x<0$, temos que a integral de $f(x) \theta(x)$ sobre o intervalo $[-\infty,0]$ resulta em zero.
+Agora, devido a $\theta(x)$ ser zero para $x<0$, temos que integrar sobre o intervalo $[0,\infty]$.
+
+\begin{equation}
+    \textcolor{ao(english)}{\int_{-\infty}^{\infty} \frac{d f}{d x} \theta(x) d x} = \int_{0}^{\infty} \frac{d f(x)}{d x}d x = f(\infty)-f(0)
+\end{equation}
+
+\begin{equation}
+    \textcolor{violet}{\left.f(x) \theta(x)\right|_{-\infty} ^{\infty}}-\textcolor{ao(english)}{\int_{-\infty}^{\infty} \frac{d f}{d x} \theta(x) d x} =f(\infty)-(f(\infty)-f(0))=\textcolor{byzantium}{f(0)}
+\end{equation}
+
+\begin{equation}
+    \textcolor{byzantium}{f(0)}=\int_{-\infty}^{\infty} f(x) \delta(x) d x.
+\end{equation}
 
 \begin{equation}
     \int_{-\infty}^{\infty} f(x) \textcolor{red}{\left[\frac{d \theta}{d x}\right]}d x= \int_{-\infty}^{\infty} f(x) \textcolor{red}{\delta(x)} d x.
@@ -1344,9 +1375,21 @@ Mas
     \[
     \mathbf{a} = \int R^2 \sin \theta \cos \theta \, d\theta \, d\phi \, \hat{\mathbf{z}}
     = 2\pi R^2 \hat{\mathbf{z}} \int_0^{\pi/2} \sin \theta \cos \theta \, d\theta 
-    = 2\pi R^2 \hat{\mathbf{z}} \left.\frac{\sin^2 \theta}{2}\right|_0^{\pi/2} 
+    = 2\pi R^2 \hat{\mathbf{z}} \int_0^{\pi/2} \frac{\sin 2\theta}{2} \, d\theta
+    \]
+
+    \[
+    \mathbf{a} = 2\pi R^2 \hat{\mathbf{z}} \int_0^{\pi/2} \frac{\sin 2\theta}{2} \, d\theta 
+    = 2\pi R^2 \hat{\mathbf{z}} \left.\left[-\frac{\cos 2\theta}{4}\right]\right|_0^{\pi/2}
+    \]
+
+    \[
+    \mathbf{a} = 2\pi R^2 \hat{\mathbf{z}} \left[-\frac{ \cos \pi}{4} + \frac{\cos 0}{4}\right]
+    = 2\pi R^2 \hat{\mathbf{z}} \left[\frac{1}{4} + \frac{1}{4}\right]
+    = 2\pi R^2 \hat{\mathbf{z}} \left[\frac{1}{2}\right]
     = \pi R^2 \hat{\mathbf{z}}.
     \]
+
 
     \item[(b)] Let $T = 1$ in Prob. 1.61(a). Then $\nabla T = 0$, so $\oint d\mathbf{a} = 0.$ \hspace{1cm} qed
 
@@ -1360,7 +1403,11 @@ Mas
     \mathbf{a} = \frac{1}{2} \oint \mathbf{r} \times d\mathbf{l}.
     \]
 
-    \item[(e)] Let $T = \mathbf{c} \cdot \mathbf{r}$, and use product rule \#4: 
+    \item[(e)] Show that 
+
+    \[\oint (\mathbf{c} \cdot \mathbf{r}) \, d\mathbf{l} = \mathbf{a} \times \mathbf{c}\]
+    
+    Let $T = \mathbf{c} \cdot \mathbf{r}$, and use product rule \#4: 
     \[
     \nabla T = \nabla (\mathbf{c} \cdot \mathbf{r}) = \mathbf{c} \times (\nabla \times \mathbf{r}) + (\mathbf{c} \cdot \nabla)\mathbf{r}.
     \] 
@@ -1375,8 +1422,24 @@ Mas
 
 \section*{Problema 1.63 Griffiths - Resolu\c{c}\~ao}
 
+Encontrar o divergente de um campo vetorial $\mathbf{v}$ em coordenadas esfericas. Com $\mathbf{v}$ dado por:
+
 \begin{equation}
-    \nabla \cdot \mathbf{v}=\frac{1}{r^{2}} \frac{\partial}{\partial r}\left(r^{2} \cdot \frac{1}{r}\right)=\frac{1}{r^{2}} \frac{\partial}{\partial r}(r)=\frac{1}{r^{2}} .
+\mathbf{v} = \frac{1}{r} \hat{\mathbf{r}}.
+\end{equation}
+
+O divergente em coordenadas esféricas:
+
+\begin{equation}
+\nabla \cdot \mathbf{v} = 
+\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2 v_r\right) 
++ \frac{1}{r \sin\theta}\frac{\partial}{\partial \theta}\left(\sin\theta \, v_\theta\right)
++ \frac{1}{r \sin\theta}\frac{\partial v_\phi}{\partial \phi}
+\end{equation}
+
+
+\begin{equation}
+    \nabla \cdot \mathbf{v}=\frac{1}{r^{2}} \frac{\partial}{\partial r}\left(r^{2} \cdot \frac{1}{r}\right)=\frac{1}{r^{2}} \frac{\partial}{\partial r}(r)=\frac{1}{r^{2}} . \checkmark
 \end{equation}
     
 Para uma esfera de raio $R$ :
@@ -1395,8 +1458,9 @@ Para uma esfera de raio $R$ :
 
 Evidentemente, não há uma função delta na origem.
 
+
 \begin{equation}
-\nabla \times\left(r^{n} \hat{\mathbf{r}}\right)=\frac{1}{r^{2}} \frac{\partial}{\partial r}\left(r^{2} r^{n}\right)=\frac{1}{r^{2}} \frac{\partial}{\partial r}\left(r^{n+2}\right)=\frac{1}{r^{2}}(n+2) r^{n+1}=(n+2) r^{n-1}
+\nabla \cdot \left(r^{n} \hat{\mathbf{r}}\right)=\frac{1}{r^{2}} \frac{\partial}{\partial r}\left(r^{2} r^{n}\right)=\frac{1}{r^{2}} \frac{\partial}{\partial r}\left(r^{n+2}\right)=\frac{1}{r^{2}}(n+2) r^{n+1}=(n+2) r^{n-1}
 \end{equation}
 
 exceto para $n=-2$, para o qual já sabemos (Eq. 1.99) que a divergência é $4 \pi \delta^{3}(\mathbf{r})$.
@@ -1411,7 +1475,7 @@ Se
 
 então
 \begin{equation} 
-\int(\nabla \times \mathbf{v}) d \tau=\mathbf{0} \stackrel{?}{=} \circ \mathbf{v} \times d \mathbf{a} 
+\int(\nabla \times \mathbf{v}) d \tau=\mathbf{0} \stackrel{?}{=} -\oint \mathbf{v} \times d \mathbf{a} 
 \end{equation}
 
 Mas 
