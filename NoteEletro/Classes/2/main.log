@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  29 MAR 2025 21:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  29 MAR 2025 22:38
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1619,6 +1619,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
+
+Overfull \hbox (4.33705pt too wide) in paragraph at lines 121--123
+[]\T1/lmr/m/n/12 Pelo [][][][][][]
+ []
+
 [2]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 57.
@@ -1640,9 +1645,9 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50059 strings out of 478287
- 1130863 string characters out of 5849289
- 1921004 words of memory out of 5000000
+ 50060 strings out of 478287
+ 1130876 string characters out of 5849289
+ 1924004 words of memory out of 5000000
  67410 multiletter control sequences out of 15000+600000
  531683 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1656,10 +1661,10 @@ f/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi
 s/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb><
 /usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmsy10.pfb>
-Output written on main.pdf (3 pages, 134967 bytes).
+Output written on main.pdf (3 pages, 139761 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 500000)
+ 125 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
