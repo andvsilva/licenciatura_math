@@ -1,0 +1,176 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[brazil, english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{amsmath, amssymb, bm}
+\usepackage{mathtools}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{newunicodechar}
+\usepackage{ragged2e}
+
+\definecolor{ao(english)}{rgb}{0.0, 0.5, 0.0}
+\definecolor{byzantium}{rgb}{0.44, 0.16, 0.39}
+\newunicodechar{∘}{\circ}
+
+\input{commands.tex}
+
+\hypersetup{
+    colorlinks=true,% make the links colored
+    linkcolor=blue
+}
+
+\usepackage{setspace}
+\addbibresource{bibliography.bib}
+
+\newcommand{\printingbibliography}{%
+
+    \pagestyle{myheadings}
+    \markright{}
+    \sloppy
+    \printbibliography[heading=bibintoc, % add to table of contents
+                   title=Refer\^encias % Chapter name
+                  ]
+    \fussy%
+}
+\PassOptionsToPackage{table}{xcolor}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\thepage}
+
+\geometry{a4paper,top=30mm,bottom=20mm,left=30mm,right=20mm}
+
+\titleformat*{\section}{\bfseries\large}
+\titleformat*{\subsection}{\bfseries\normalsize}
+
+\title{ \textbf{\large Eletromagnetismo I }}
+\author{Andr\'e V. Silva}
+\date{\today}
+
+\begin{document}
+
+\noindent\rule{\linewidth}{0.8pt}\\
+\begin{center}
+    \textbf{UNIVERSIDADE FEDERAL DO RIO DE JANEIRO}\\
+    \textbf{INSTITUTO DE FÍSICA}\\
+    \textbf{\textcolor{blue}{Primeira lista complementar de Eletromagnetismo 1}}\\
+    \textbf{Março de 2025}\\
+    \vspace{0.5cm}
+    Prof. João Torres de Mello Neto\\
+    Monitor: Pedro Khan
+\end{center}
+\noindent\rule{\linewidth}{0.8pt}\\
+\maketitle
+
+
+\noindent\rule{\linewidth}{0.4pt}\\
+
+\justifying
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{Problema 1}}\\
+\textbf{a)} Mostre que o rotacional de um gradiente de uma função qualquer é zero:
+$\nabla \times (\nabla f) = 0,$ de duas formas: abrindo em componentes e 
+argumentando pelo teorema de Stokes. 
+\textbf{b)} Mostre que a divergência de um rotacional de um vetor qualquer é nula:
+$\nabla \cdot (\nabla \times \mathbf{A}) = 0,$ de duas formas: calculando as 
+componentes e argumentando pelo teorema de Stokes no limite que a integral de 
+linha tende para zero e usando o teorema da divergência em seguida.
+\end{flushleft}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Em componentes cartesianas, o gradiente de uma função escalar $f$ é:
+\begin{equation}
+    \nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right).
+\end{equation}
+O rotacional é definido como:
+\begin{equation}
+    \nabla \times \mathbf{A} = 
+    \begin{vmatrix} 
+        \hat{i} & \hat{j} & \hat{k} \\
+        \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+        \frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} & \frac{\partial f}{\partial z} 
+    \end{vmatrix}.
+\end{equation}
+
+Expansão do determinante:
+\begin{equation}
+    \nabla \times (\nabla f) = 
+    \left( \frac{\partial^2 f}{\partial y \partial x} - \frac{\partial^2 f}{\partial x \partial y} \right) \hat{i} + 
+    \left( \frac{\partial^2 f}{\partial z \partial y} - \frac{\partial^2 f}{\partial y \partial z} \right) \hat{j} + 
+    \left( \frac{\partial^2 f}{\partial x \partial z} - \frac{\partial^2 f}{\partial z \partial x} \right) \hat{k}.
+\end{equation}
+
+Como as derivadas parciais mistas são comutativas (desde que $f$ seja suave), cada termo é zero:
+\begin{equation}
+    \nabla \times (\nabla f) = 0.
+\end{equation}
+
+Pelo teorema de Stokes, a integral de linha de um gradiente ao longo de um caminho fechado é zero, implicando que seu rotacional é nulo.
+
+\textbf{b)} Mostre que a divergência de um rotacional de um vetor qualquer é nula:
+\begin{equation}
+    \nabla \cdot (\nabla \times \mathbf{A}) = 0
+\end{equation}
+
+de duas formas: calculando as componentes e argumentando pelo teorema de Stokes no limite que a integral de linha tende para zero e usando o teorema da divergência em seguida.
+
+A divergência é definida como:
+
+\begin{equation}
+    \nabla \cdot \mathbf{A} = \frac{\partial A_x}{\partial x} + \frac{\partial A_y}{\partial y} + \frac{\partial A_z}{\partial z}.
+\end{equation}
+
+Aplicando à definição do rotacional:
+\begin{equation}
+    \nabla \times \mathbf{A} = 
+    \begin{vmatrix} 
+        \hat{i} & \hat{j} & \hat{k} \\
+        \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+        A_x & A_y & A_z 
+    \end{vmatrix},
+\end{equation}
+
+resultando em:
+\begin{equation}
+    \nabla \times \mathbf{A} = 
+    \left( \frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z} \right) \hat{i} + 
+    \left( \frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x} \right) \hat{j} + 
+    \left( \frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y} \right) \hat{k}.
+\end{equation}
+
+Tomando a divergência:
+
+\begin{equation}
+    \nabla \cdot (\nabla \times \mathbf{A}) = \frac{\partial}{\partial x} \left( \frac{\partial A_z}{\partial y} - \frac{\partial A_y}{\partial z} \right) + 
+    \frac{\partial}{\partial y} \left( \frac{\partial A_x}{\partial z} - \frac{\partial A_z}{\partial x} \right) + 
+    \frac{\partial}{\partial z} \left( \frac{\partial A_y}{\partial x} - \frac{\partial A_x}{\partial y} \right).
+\end{equation}
+
+Como as derivadas mistas comutam, cada termo se anula, resultando em:
+
+\begin{equation}
+    \nabla \cdot (\nabla \times \mathbf{A}) = 0.
+\end{equation}
+
+Pelo teorema da divergência, a integral de volume da divergência de um rotacional se reduz a uma integral de superfície de um campo tangencial, que desaparece, confirmando o resultado.
+
+
+
+%%%%%%%% Bibliography 
+% Os comandos para incluir as referências bibliográficas
+%\printingbibliography
+
+\end{document}
