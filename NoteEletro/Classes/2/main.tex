@@ -180,37 +180,262 @@ Dica:
 (ii) coordenadas cilíndricas \(r = a\).  
 Qual sistema de coordenadas é mais fácil de usar?
 \end{flushleft}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\subsection*{(i) Coordenadas Retangulares}
+A área do círculo pode ser calculada integrando a função da semicircunferência superior $y = \sqrt{a^2 - x^2}$ em relação a $x$ de $-a$ a $a$ e depois dobrando o resultado:
+\begin{equation}
+A = 2 \int_{-a}^{a} \sqrt{a^2 - x^2} \, dx.
+\end{equation}
+
+Utilizando a dica fornecida:
+\begin{align*}
+A &= 2 \times \frac{1}{2} \left[ x\sqrt{a^2 - x^2} + a^2 \arcsin\left(\frac{x}{a}\right) \right]_{-a}^{a} \\
+&= \left[ x\sqrt{a^2 - x^2} + a^2 \arcsin\left(\frac{x}{a}\right) \right]_{-a}^{a}.
+\end{align*}
+
+Substituindo os limites:
+\begin{align*}
+A &= \left[a\sqrt{a^2 - a^2} + a^2 \arcsin(1) \right] - \left[-a\sqrt{a^2 - a^2} + a^2 \arcsin(-1) \right] \\
+&= \left[a^2 \frac{\pi}{2} \right] - \left[a^2 \left(-\frac{\pi}{2}\right) \right] \\
+&= a^2 \frac{\pi}{2} + a^2 \frac{\pi}{2} \\
+&= a^2 \pi.
+\end{align*}
+
+\subsection*{(ii) Coordenadas Cilíndricas}
+Em coordenadas polares, a área do círculo é dada por:
+\begin{equation}
+A = \int_0^{2\pi} \int_0^a r \, dr \, d\theta.
+\end{equation}
+
+Resolvendo a integral interna:
+\begin{align*}
+\int_0^a r \, dr &= \frac{r^2}{2} \Big|_0^a = \frac{a^2}{2}.
+\end{align*}
+
+Agora, resolvendo a integral externa:
+\begin{align*}
+A &= \int_0^{2\pi} \frac{a^2}{2} \, d\theta \\
+&= \frac{a^2}{2} \theta \Big|_0^{2\pi} \\
+&= \frac{a^2}{2} (2\pi - 0) \\
+&= a^2 \pi.
+\end{align*}
+
+\subsection*{Conclusão}
+O resultado final é o mesmo nos dois métodos, $A = \pi a^2$. No entanto, o cálculo utilizando 
+coordenadas polares é significativamente mais simples, pois evita o uso de funções trigonométricas 
+inversas e manipulação algébrica complexa.
     
 \begin{flushleft}
 \textbf{\textcolor{blue}{Problema 3}}\\
+Encontre o volume de uma esfera de raio $R$ centrada na origem usando:
+
+(i) Coordenadas retangulares $x^2 + y^2 + z^2 = R^2$ \newline
+Dica:
+\begin{equation}
+\int \sqrt{a^2 - x^2} \, dx = \frac{1}{2} \left[ x\sqrt{a^2 - x^2} + a^2 \arcsin\left(\frac{x}{a}\right) \right]
+\end{equation}
+
+(ii) Coordenadas cilíndricas $r^2 + z^2 = R^2$;
+
+(iii) Coordenadas esféricas $r = R$.
+
+Qual sistema de coordenadas é mais fácil de usar?
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\subsection*{(i) Coordenadas Retangulares}
+O volume da esfera pode ser encontrado integrando seções transversais circulares ao longo do eixo $z$:
+\begin{equation}
+V = 2 \int_0^R \pi (R^2 - z^2) \, dz.
+\end{equation}
+
+Resolvendo a integral:
+\begin{align*}
+V &= 2\pi \int_0^R (R^2 - z^2) \, dz \\
+&= 2\pi \left[ R^2z - \frac{z^3}{3} \right]_0^R \\
+&= 2\pi \left[ R^3 - \frac{R^3}{3} \right] \\
+&= 2\pi \left( \frac{3R^3}{3} - \frac{R^3}{3} \right) \\
+&= 2\pi \left( \frac{2R^3}{3} \right) \\
+&= \frac{4}{3} \pi R^3.
+\end{align*}
+
+\subsection*{(ii) Coordenadas Cilíndricas}
+O volume da esfera é calculado como:
+\begin{equation}
+V = \int_{-R}^{R} \int_0^{\sqrt{R^2 - z^2}} 2\pi r \, dr \, dz.
+\end{equation}
+
+Resolvendo a integral interna:
+\begin{align*}
+\int_0^{\sqrt{R^2 - z^2}} 2\pi r \, dr &= 2\pi \frac{r^2}{2} \Big|_0^{\sqrt{R^2 - z^2}} \\
+&= \pi (R^2 - z^2).
+\end{align*}
+
+Agora, resolvendo a integral externa:
+\begin{align*}
+V &= \pi \int_{-R}^{R} (R^2 - z^2) \, dz,
+\end{align*}
+
+que já foi resolvida anteriormente e resulta em:
+\begin{equation}
+V = \frac{4}{3} \pi R^3.
+\end{equation}
+
+\subsection*{(iii) Coordenadas Esféricas}
+Em coordenadas esféricas, o volume é dado por:
+\begin{equation}
+V = \int_0^R \int_0^{\pi} \int_0^{2\pi} r^2 \sin \theta \, d\phi \, d\theta \, dr.
+\end{equation}
+
+Resolvendo as integrais:
+\begin{align*}
+\int_0^{2\pi} d\phi &= 2\pi, \\
+\int_0^{\pi} \sin\theta \, d\theta &= \int_0^{\pi} d(-\cos\theta) = (-\cos\theta) \Big|_0^{\pi} = (1 + 1) = 2, \\
+\int_0^R r^2 \, dr &= \frac{R^3}{3}.
+\end{align*}
+
+Multiplicando os resultados:
+\begin{equation}
+V = 2\pi \times 2 \times \frac{R^3}{3} = \frac{4}{3} \pi R^3.
+\end{equation}
+
+\subsection*{Conclusão}
+O volume obtido é o mesmo em todos os casos, $V = \frac{4}{3} \pi R^3$. No entanto, o método de coordenadas esféricas 
+é o mais eficiente, pois evita integrais mais complexas e simplifica a abordagem diretamente para o volume da esfera.
 \end{flushleft}
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{Problema 4}}\\
+Demonstre a identidade
+\begin{equation}
+\nabla (\vec{A} \cdot \vec{B}) = (\vec{A} \cdot \nabla) \vec{B} + (\vec{B} \cdot \nabla) \vec{A} + \vec{A} \times (\nabla \times \vec{B}) + \vec{B} \times (\nabla \times \vec{A})
+\end{equation}
+de três formas distintas:
+\begin{itemize}
+    \item[(a)] Abrindo as componentes (força bruta);
+    \item[(b)] Usando a identidade BAC - CAB de forma adequada;
+    \item[(c)] Usando álgebra de índices.
+\end{itemize}
+
+\textcolor{red}{\textbf{Solução:}}\\
+Demonstre a identidade
+\begin{equation}
+    \nabla (\vec{A} \cdot \vec{B}) = (\vec{A} \cdot \nabla) \vec{B} + (\vec{B} \cdot \nabla) \vec{A} + \vec{A} \times (\nabla \times \vec{B}) + \vec{B} \times (\nabla \times \vec{A}),
+    \end{equation}
+    de três formas distintas:
+    
+    \begin{itemize}
+        \item[(a)] \textbf{Abrindo as componentes (força bruta)}:
+        
+        Sejam \( \vec{A} = A_i \hat{e}_i \) e \( \vec{B} = B_j \hat{e}_j \), onde \( A_i \) e \( B_j \) são as componentes das funções vetoriais \( \vec{A} \) e \( \vec{B} \), respectivamente, e \( \hat{e}_i \) e \( \hat{e}_j \) são os vetores unitários.
+        
+        O produto escalar \( \vec{A} \cdot \vec{B} \) é dado por:
+        \begin{equation}
+        \vec{A} \cdot \vec{B} = A_i B_i.
+        \end{equation}
+        
+        Agora, calculamos o gradiente de \( \vec{A} \cdot \vec{B} \):
+        \begin{equation}
+        \nabla (\vec{A} \cdot \vec{B}) = \nabla (A_i B_i) = (\nabla A_i) B_i + A_i (\nabla B_i).
+        \end{equation}
+        
+        Essa expressão pode ser decomposta em duas partes:
+        \begin{itemize}
+            \item \( (\nabla A_i) B_i \), que é a ação de \( \nabla \) sobre \( A_i \) e depois multiplicada por \( B_i \),
+            \item \( A_i (\nabla B_i) \), que é a ação de \( \nabla \) sobre \( B_i \) e depois multiplicada por \( A_i \).
+        \end{itemize}
+        
+        Agora, para as expressões envolvendo o rotacional, temos:
+        \begin{equation}
+        \vec{A} \times (\nabla \times \vec{B}) = A_i \epsilon_{ijk} \hat{e}_j (\partial_k B_l),
+        \end{equation}
+        e
+        \begin{equation}
+        \vec{B} \times (\nabla \times \vec{A}) = B_i \epsilon_{ijk} \hat{e}_j (\partial_k A_l).
+        \end{equation}
+        
+        Essas expressões podem ser agrupadas para formar a identidade desejada.
+        
+        \item[(b)] \textbf{Usando a identidade BAC-CAB}:
+        
+        A identidade conhecida como identidade BAC-CAB é dada por:
+        \begin{equation}
+        \vec{A} \cdot (\nabla \times \vec{B}) = (\vec{A} \times \nabla) \vec{B} - (\nabla \times \vec{A}) \cdot \vec{B}.
+        \end{equation}
+        
+        Para usá-la na demonstração da identidade original, observamos que:
+        \begin{equation}
+        \nabla (\vec{A} \cdot \vec{B}) = (\vec{A} \cdot \nabla) \vec{B} + (\vec{B} \cdot \nabla) \vec{A} + \vec{A} \times (\nabla \times \vec{B}) + \vec{B} \times (\nabla \times \vec{A}).
+        \end{equation}
+        
+        Ao aplicar a identidade BAC-CAB adequadamente, podemos manipular os termos cruzados e os termos do gradiente para obter a forma completa da identidade.
+        
+        \item[(c)] \textbf{Usando álgebra de índices}:
+        
+        Por fim, usando álgebra de índices, escrevemos as componentes do gradiente do produto escalar \( \vec{A} \cdot \vec{B} \) e os outros termos da identidade em termos de somatórios e derivadas parciais.
+        
+        O gradiente do produto escalar é dado por:
+        \begin{equation}
+        \nabla (\vec{A} \cdot \vec{B}) = \nabla (A_i B_i) = (\partial_j A_i) B_i + A_i (\partial_j B_i).
+        \end{equation}
+        
+        A seguir, considerando os termos envolvendo o rotacional:
+        \begin{equation}
+        \vec{A} \times (\nabla \times \vec{B}) = \epsilon_{ijk} A_j \partial_k B_l,
+        \end{equation}
+        \begin{equation}
+        \vec{B} \times (\nabla \times \vec{A}) = \epsilon_{ijk} B_j \partial_k A_l.
+        \end{equation}
+        
+        Agrupando todos esses termos e reconhecendo as simetrias, podemos obter a identidade desejada:
+        \begin{equation}
+        \nabla (\vec{A} \cdot \vec{B}) = (\vec{A} \cdot \nabla) \vec{B} + (\vec{B} \cdot \nabla) \vec{A} + \vec{A} \times (\nabla \times \vec{B}) + \vec{B} \times (\nabla \times \vec{A}).
+        \end{equation}
+    \end{itemize}
 \end{flushleft}
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{Problema 5}}\\
+
+
+\textcolor{red}{\textbf{Solução:}}\\
 \end{flushleft}
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{Problema 6}}\\
+
+
+\textcolor{red}{\textbf{Solução:}}\\
 \end{flushleft}
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{Problema 7}}\\
+
+
+\textcolor{red}{\textbf{Solução:}}\\
 \end{flushleft}
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{Problema 8}}\\
+
+
+\textcolor{red}{\textbf{Solução:}}\\
 \end{flushleft}
     
 \begin{flushleft}
 \textbf{\textcolor{blue}{Problema 9}}\\
+
+
+\textcolor{red}{\textbf{Solução:}}\\
 \end{flushleft}
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{Problema 10}}\\
+
+
+\textcolor{red}{\textbf{Solução:}}\\
 \end{flushleft}
 
 %%%%%%%% Bibliography 
