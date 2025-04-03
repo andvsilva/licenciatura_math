@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  1 APR 2025 20:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  2 APR 2025 22:07
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1746,6 +1746,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [15]
 
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[17]
+
 Package caption Warning: Unused \captionsetup[sub] on input line 57.
 See the caption package documentation for explanation.
 
@@ -1757,7 +1775,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16] (./main.aux)
+[18] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C2731CD0405663FDD3C76CC49DE0DC94;686.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1765,11 +1783,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50152 strings out of 478287
- 1131936 string characters out of 5849289
+ 50174 strings out of 478287
+ 1132208 string characters out of 5849289
  1923017 words of memory out of 5000000
- 67421 multiletter control sequences out of 15000+600000
- 537663 words of font info for 97 fonts, out of 8000000 for 9000
+ 67424 multiletter control sequences out of 15000+600000
+ 546497 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,99p,1835b,1759s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
@@ -1783,10 +1801,10 @@ e1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/
 share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (16 pages, 208730 bytes).
+Output written on main.pdf (18 pages, 212066 bytes).
 PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
- 220 compressed objects within 3 object streams
- 94 named destinations out of 1000 (max. 500000)
+ 316 PDF objects out of 1000 (max. 8388607)
+ 245 compressed objects within 3 object streams
+ 111 named destinations out of 1000 (max. 500000)
  181 words of extra memory for PDF output out of 10000 (max. 10000000)
 

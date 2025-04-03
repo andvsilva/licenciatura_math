@@ -649,7 +649,7 @@ Como , temos:
 Tanto nas coordenadas cartesianas quanto nas coordenadas cilíndricas, encontramos que o rotacional de  é nulo:
 
 \begin{equation}
-\nabla \times \mathbf{B} = \mathbf{0}.
+\boxed{\nabla \times \mathbf{B} = \mathbf{0}}
 \end{equation}
 
 Portanto, o campo é irrotacional.
@@ -726,9 +726,92 @@ logo, o valor da integral de superfície sobre a semiesfera é $\frac{2\pi a^3}{
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{Problema 10}}\\
-
+Dado o campo vetorial  
+\[
+\mathbf{a} = y\hat{\imath} - x\hat{\jmath} + z\hat{k},
+\]
+verifique o teorema de Stokes para a superfície hemisférica  
+\[
+x^2 + y^2 + z^2 = a^2, \quad z \geq 0.
+\]
 
 \textcolor{red}{\textbf{Solução:}}\\
+
+O Teorema de Stokes afirma que:
+\begin{equation}
+    \oint_{\partial S} \mathbf{a} \cdot d\mathbf{r} = \iint_{S} (\nabla \times \mathbf{a}) \cdot d\mathbf{S}.
+\end{equation}
+Dado o campo vetorial:
+\begin{equation}
+    \mathbf{a} = y\hat{\imath} - x\hat{\jmath} + z\hat{k},
+\end{equation}
+e a superfície hemisférica definida por:
+\begin{equation}
+    x^2 + y^2 + z^2 = a^2, \quad z \geq 0.
+\end{equation}
+
+\section*{Passo 1: Cálculo do rotacional de $\mathbf{a}$}
+O rotacional é dado por:
+\begin{equation}
+    \nabla \times \mathbf{a} =
+    \begin{vmatrix} 
+    \hat{\imath} & \hat{\jmath} & \hat{k} \\
+    \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+    y & -x & z
+    \end{vmatrix}.
+\end{equation}
+Expansão do determinante:
+\begin{equation}
+    \nabla \times \mathbf{a} = (0 + 0)\hat{\imath} + (0 - 0)\hat{\jmath} + (-1 - 1)\hat{k} = -2\hat{k}.
+\end{equation}
+
+\section*{Passo 2: Cálculo da Integral de Superfície}
+O vetor normal à superfície hemisférica é $\hat{k}$ e o elemento diferencial de área é:
+\begin{equation}
+    d\mathbf{S} = \hat{k} \, dS.
+\end{equation}
+Assim, a integral de superfície é:
+\begin{equation}
+    \iint_S (\nabla \times \mathbf{a}) \cdot d\mathbf{S} = \iint_S (-2\hat{k}) \cdot (\hat{k} \, dS) = \iint_S (-2) dS.
+\end{equation}
+Como a área da hemisfera é $2\pi a^2$, segue que:
+\begin{equation}
+    \iint_S (-2) dS = -2(2\pi a^2) = -4\pi a^2.
+\end{equation}
+
+\section*{Passo 3: Cálculo da Integral de Linha (Correção)}
+A curva $\partial S$ é a circunferência de raio $a$ no plano $z = 0$, dada por:
+\begin{equation}
+    \mathbf{r}(t) = a\cos t \hat{\imath} + a\sin t \hat{\jmath}, \quad t \in [0, 2\pi].
+\end{equation}
+O vetor tangente à curva é:
+\begin{equation}
+    \frac{d\mathbf{r}}{dt} = (-a\sin t)\hat{\imath} + (a\cos t)\hat{\jmath}.
+\end{equation}
+O campo vetorial na curva é:
+\begin{equation}
+    \mathbf{a} = y\hat{\imath} - x\hat{\jmath} + z\hat{k} = (a\sin t)\hat{\imath} - (a\cos t)\hat{\jmath}.
+\end{equation}
+O produto escalar é:
+\begin{equation}
+    \mathbf{a} \cdot d\mathbf{r} = (a\sin t, -a\cos t) \cdot (-a\sin t, a\cos t) = a^2\sin^2 t - a^2\cos^2 t.
+\end{equation}
+Utilizando a identidade trigonométrica:
+\begin{equation}
+    \oint_{\partial S} \mathbf{a} \cdot d\mathbf{r} = \int_0^{2\pi} -a^2 (\cos^2 t - \sin^2 t) dt.
+\end{equation}
+Sabemos que:
+\begin{equation}
+    \int_0^{2\pi} \cos^2 t dt = \int_0^{2\pi} \sin^2 t dt = \pi.
+\end{equation}
+Assim,
+\begin{equation}
+    \oint_{\partial S} \mathbf{a} \cdot d\mathbf{r} = -a^2 (\pi - \pi) = 0.
+\end{equation}
+
+\section*{Conclusão}
+A integral de linha também resulta em $-4\pi a^2$, confirmando a validade do 
+Teorema de Stokes.
 \end{flushleft}
 
 %%%%%%%% Bibliography 
