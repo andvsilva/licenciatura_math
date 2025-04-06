@@ -84,10 +84,10 @@
 \begin{flushleft}
 \textbf{\textcolor{blue}{Problema 1}}\\
 \textbf{a)} Mostre que o rotacional de um gradiente de uma função qualquer é zero:
-$\nabla \times (\nabla f) = 0,$ de duas formas: abrindo em componentes e 
+\colorbox{yellow}{$\nabla \times (\nabla f) = 0,$} de duas formas: abrindo em componentes e 
 argumentando pelo teorema de Stokes. 
 \textbf{b)} Mostre que a divergência de um rotacional de um vetor qualquer é nula:
-$\nabla \cdot (\nabla \times \mathbf{A}) = 0,$ de duas formas: calculando as 
+\colorbox{yellow}{$\nabla \cdot (\nabla \times \mathbf{A}) = 0,$} de duas formas: calculando as 
 componentes e argumentando pelo teorema de Stokes no limite que a integral de 
 linha tende para zero e usando o teorema da divergência em seguida.
 \end{flushleft}
@@ -98,11 +98,12 @@ Em componentes cartesianas, o gradiente de uma função escalar $f$ é:
 \begin{equation}
     \nabla f = \left( \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \right).
 \end{equation}
-O rotacional é definido como:
+O \colorbox{yellow}{rotacional é definido como}:
+
 \begin{equation}
     \nabla \times \mathbf{A} = 
     \begin{vmatrix} 
-        \hat{i} & \hat{j} & \hat{k} \\
+        \hat{\textrm{i}} & \hat{\textrm{j}} & \hat{\textrm{k}} \\
         \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
         \frac{\partial f}{\partial x} & \frac{\partial f}{\partial y} & \frac{\partial f}{\partial z} 
     \end{vmatrix}.
@@ -118,7 +119,7 @@ Expansão do determinante:
 
 Como as derivadas parciais mistas são comutativas (desde que $f$ seja suave), cada termo é zero:
 \begin{equation}
-    \nabla \times (\nabla f) = 0.
+\boxed{\nabla \times (\nabla f) = 0.}
 \end{equation}
 
 Pelo \colorbox{yellow}{teorema de Stokes, a integral de linha de um gradiente ao longo de um caminho} 
@@ -126,24 +127,24 @@ Pelo \colorbox{yellow}{teorema de Stokes, a integral de linha de um gradiente ao
 
 \textbf{b)} Mostre que a divergência de um rotacional de um vetor qualquer é nula:
 \begin{equation}
-    \nabla \cdot (\nabla \times \mathbf{A}) = 0
+\boxed{\nabla \cdot (\nabla \times \mathbf{A}) = 0,}
 \end{equation}
 
 de duas formas: calculando as componentes e argumentando pelo teorema de Stokes no limite que a integral de linha tende para zero e usando o teorema da divergência em seguida.
 
-A divergência é definida como:
+A \colorbox{green}{divergência é definida como}:
 
 \begin{equation}
-    \nabla \cdot \mathbf{A} = \frac{\partial A_x}{\partial x} + \frac{\partial A_y}{\partial y} + \frac{\partial A_z}{\partial z}.
+ \boxed{\nabla \cdot \mathbf{A} = \frac{\partial A_x}{\partial x} + \frac{\partial A_y}{\partial y} + \frac{\partial A_z}{\partial z}.}
 \end{equation}
 
 Aplicando à definição do rotacional:
 \begin{equation}
     \nabla \times \mathbf{A} = 
     \begin{vmatrix} 
-        \hat{i} & \hat{j} & \hat{k} \\
+        \hat{\textrm{i}} & \hat{\textrm{j}} & \hat{\textrm{k}} \\
         \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
-        A_x & A_y & A_z 
+        A_x & A_y & A_z
     \end{vmatrix},
 \end{equation}
 
@@ -166,11 +167,44 @@ Tomando a divergência:
 Como as derivadas mistas comutam, cada termo se anula, resultando em:
 
 \begin{equation}
-    \nabla \cdot (\nabla \times \mathbf{A}) = 0.
+\boxed{\nabla \cdot (\nabla \times \mathbf{A}) = 0.}
 \end{equation}
 
 Pelo teorema da divergência, a integral de volume da divergência de um rotacional se reduz a uma integral de superfície 
 de um campo tangencial, que desaparece, confirmando o resultado.
+
+Seja \(\mathbf{A}\) um campo vetorial suficientemente suave. Sabemos da identidade vetorial:
+
+\[
+\nabla \cdot (\nabla \times \mathbf{A}) = 0
+\]
+
+Aplicando o Teorema da Divergência (também conhecido como Teorema de Gauss), temos:
+
+\[
+\iiint_V \nabla \cdot (\nabla \times \mathbf{A}) \, dV = \iint_{\partial V} (\nabla \times \mathbf{A}) \cdot \hat{n} \, dS
+\]
+
+Como \(\nabla \cdot (\nabla \times \mathbf{A}) = 0\), resulta:
+
+\[
+\iiint_V 0 \, dV = 0
+\quad \Rightarrow \quad
+\iint_{\partial V} (\nabla \times \mathbf{A}) \cdot \hat{n} \, dS = 0
+\]
+
+Ou seja, a integral de superfície do rotacional de um campo vetorial 
+sobre uma superfície fechada é nula.
+
+\bigskip
+
+\textbf{Conclusão:}
+
+A integral de volume da divergência de um rotacional se reduz, via Teorema da Divergência, a uma integral de superfície de um campo que é tangencial à superfície. Como o rotacional não possui componente normal líquida através de uma superfície fechada, essa integral de superfície desaparece, confirmando que:
+
+\[
+\iiint_V \nabla \cdot (\nabla \times \mathbf{A}) \, dV = 0
+\]
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{Problema 2}}\\
@@ -203,7 +237,7 @@ Substituindo os limites:
 A &= \left[a\sqrt{a^2 - a^2} + a^2 \arcsin(1) \right] - \left[-a\sqrt{a^2 - a^2} + a^2 \arcsin(-1) \right] \\
 &= \left[a^2 \frac{\pi}{2} \right] - \left[a^2 \left(-\frac{\pi}{2}\right) \right] \\
 &= a^2 \frac{\pi}{2} + a^2 \frac{\pi}{2} \\
-&= a^2 \pi.
+&= \pi a^2.
 \end{align*}
 
 \subsection*{(ii) Coordenadas Cilíndricas}
@@ -222,11 +256,11 @@ Agora, resolvendo a integral externa:
 A &= \int_0^{2\pi} \frac{a^2}{2} \, d\theta \\
 &= \frac{a^2}{2} \theta \Big|_0^{2\pi} \\
 &= \frac{a^2}{2} (2\pi - 0) \\
-&= a^2 \pi.
+&= \pi a^2.
 \end{align*}
 
 \subsection*{Conclusão}
-O resultado final é o mesmo nos dois métodos, $A = \pi a^2$. No entanto, o cálculo utilizando 
+\colorbox{yellow}{O resultado final é o mesmo nos dois métodos, $A = \pi a^2$.} No entanto, o cálculo utilizando 
 coordenadas polares é significativamente mais simples, pois evita o uso de funções trigonométricas 
 inversas e manipulação algébrica complexa.
     
@@ -305,7 +339,7 @@ V = 2\pi \times 2 \times \frac{R^3}{3} = \frac{4}{3} \pi R^3.
 \end{equation}
 
 \subsection*{Conclusão}
-O volume obtido é o mesmo em todos os casos, $V = \frac{4}{3} \pi R^3$. No entanto, o método de coordenadas esféricas 
+\colorbox{yellow}{O volume obtido é o mesmo em todos os casos, $V = \frac{4}{3} \pi R^3$.} No entanto, o método de coordenadas esféricas 
 é o mais eficiente, pois evita integrais mais complexas e simplifica a abordagem diretamente para o volume da esfera.
 \end{flushleft}
 
@@ -313,7 +347,7 @@ O volume obtido é o mesmo em todos os casos, $V = \frac{4}{3} \pi R^3$. No enta
 \textbf{\textcolor{blue}{Problema 4}}\\
 Demonstre a identidade
 \begin{equation}
-\nabla (\vec{A} \cdot \vec{B}) = (\vec{A} \cdot \nabla) \vec{B} + (\vec{B} \cdot \nabla) \vec{A} + \vec{A} \times (\nabla \times \vec{B}) + \vec{B} \times (\nabla \times \vec{A})
+\nabla (\mathbf{A} \cdot \mathbf{B}) = (\mathbf{A} \cdot \nabla) \mathbf{B} + (\mathbf{B} \cdot \nabla) \mathbf{A} + \mathbf{A} \times (\nabla \times \mathbf{B}) + \mathbf{B} \times (\nabla \times \mathbf{A})
 \end{equation}
 de três formas distintas:
 \begin{itemize}
@@ -325,23 +359,23 @@ de três formas distintas:
 \textcolor{red}{\textbf{Solução:}}\\
 Demonstre a identidade
 \begin{equation}
-    \nabla (\vec{A} \cdot \vec{B}) = (\vec{A} \cdot \nabla) \vec{B} + (\vec{B} \cdot \nabla) \vec{A} + \vec{A} \times (\nabla \times \vec{B}) + \vec{B} \times (\nabla \times \vec{A}),
+    \nabla (\mathbf{A} \cdot \mathbf{B}) = (\mathbf{A} \cdot \nabla) \mathbf{B} + (\mathbf{B} \cdot \nabla) \mathbf{A} + \mathbf{A} \times (\nabla \times \mathbf{B}) + \mathbf{B} \times (\nabla \times \mathbf{A}),
     \end{equation}
     de três formas distintas:
     
     \begin{itemize}
         \item[(a)] \textbf{Abrindo as componentes (força bruta)}:
         
-        Sejam \( \vec{A} = A_i \hat{e}_i \) e \( \vec{B} = B_j \hat{e}_j \), onde \( A_i \) e \( B_j \) são as componentes das funções vetoriais \( \vec{A} \) e \( \vec{B} \), respectivamente, e \( \hat{e}_i \) e \( \hat{e}_j \) são os vetores unitários.
+        Sejam \( \mathbf{A} = A_i \hat{e}_i \) e \( \mathbf{B} = B_j \hat{e}_j \), onde \( A_i \) e \( B_j \) são as componentes das funções vetoriais \( \mathbf{A} \) e \( \mathbf{B} \), respectivamente, e \( \hat{e}_i \) e \( \hat{e}_j \) são os vetores unitários.
         
-        O produto escalar \( \vec{A} \cdot \vec{B} \) é dado por:
+        O produto escalar \( \mathbf{A} \cdot \mathbf{B} \) é dado por:
         \begin{equation}
-        \vec{A} \cdot \vec{B} = A_i B_i.
+        \mathbf{A} \cdot \mathbf{B} = A_i B_i.
         \end{equation}
         
-        Agora, calculamos o gradiente de \( \vec{A} \cdot \vec{B} \):
+        Agora, calculamos o gradiente de \( \mathbf{A} \cdot \mathbf{B} \):
         \begin{equation}
-        \nabla (\vec{A} \cdot \vec{B}) = \nabla (A_i B_i) = (\nabla A_i) B_i + A_i (\nabla B_i).
+        \nabla (\mathbf{A} \cdot \mathbf{B}) = \nabla (A_i B_i) = (\nabla A_i) B_i + A_i (\nabla B_i).
         \end{equation}
         
         Essa expressão pode ser decomposta em duas partes:
@@ -352,11 +386,11 @@ Demonstre a identidade
         
         Agora, para as expressões envolvendo o rotacional, temos:
         \begin{equation}
-        \vec{A} \times (\nabla \times \vec{B}) = A_i \epsilon_{ijk} \hat{e}_j (\partial_k B_l),
+        \mathbf{A} \times (\nabla \times \mathbf{B}) = A_i \epsilon_{ijk} \hat{e}_j (\partial_k B_l),
         \end{equation}
         e
         \begin{equation}
-        \vec{B} \times (\nabla \times \vec{A}) = B_i \epsilon_{ijk} \hat{e}_j (\partial_k A_l).
+        \mathbf{B} \times (\nabla \times \mathbf{A}) = B_i \epsilon_{ijk} \hat{e}_j (\partial_k A_l).
         \end{equation}
         
         Essas expressões podem ser agrupadas para formar a identidade desejada.
@@ -365,36 +399,36 @@ Demonstre a identidade
         
         A identidade conhecida como identidade BAC-CAB é dada por:
         \begin{equation}
-        \vec{A} \cdot (\nabla \times \vec{B}) = (\vec{A} \times \nabla) \vec{B} - (\nabla \times \vec{A}) \cdot \vec{B}.
+        \mathbf{A} \cdot (\nabla \times \mathbf{B}) = (\mathbf{A} \times \nabla) \mathbf{B} - (\nabla \times \mathbf{A}) \cdot \mathbf{B}.
         \end{equation}
         
         Para usá-la na demonstração da identidade original, observamos que:
         \begin{equation}
-        \nabla (\vec{A} \cdot \vec{B}) = (\vec{A} \cdot \nabla) \vec{B} + (\vec{B} \cdot \nabla) \vec{A} + \vec{A} \times (\nabla \times \vec{B}) + \vec{B} \times (\nabla \times \vec{A}).
+        \nabla (\mathbf{A} \cdot \mathbf{B}) = (\mathbf{A} \cdot \nabla) \mathbf{B} + (\mathbf{B} \cdot \nabla) \mathbf{A} + \mathbf{A} \times (\nabla \times \mathbf{B}) + \mathbf{B} \times (\nabla \times \mathbf{A}).
         \end{equation}
         
         Ao aplicar a identidade BAC-CAB adequadamente, podemos manipular os termos cruzados e os termos do gradiente para obter a forma completa da identidade.
         
         \item[(c)] \textbf{Usando álgebra de índices}:
         
-        Por fim, usando álgebra de índices, escrevemos as componentes do gradiente do produto escalar \( \vec{A} \cdot \vec{B} \) e os outros termos da identidade em termos de somatórios e derivadas parciais.
+        Por fim, usando álgebra de índices, escrevemos as componentes do gradiente do produto escalar \( \mathbf{A} \cdot \mathbf{B} \) e os outros termos da identidade em termos de somatórios e derivadas parciais.
         
         O gradiente do produto escalar é dado por:
         \begin{equation}
-        \nabla (\vec{A} \cdot \vec{B}) = \nabla (A_i B_i) = (\partial_j A_i) B_i + A_i (\partial_j B_i).
+        \nabla (\mathbf{A} \cdot \mathbf{B}) = \nabla (A_i B_i) = (\partial_j A_i) B_i + A_i (\partial_j B_i).
         \end{equation}
         
         A seguir, considerando os termos envolvendo o rotacional:
         \begin{equation}
-        \vec{A} \times (\nabla \times \vec{B}) = \epsilon_{ijk} A_j \partial_k B_l,
+        \mathbf{A} \times (\nabla \times \mathbf{B}) = \epsilon_{ijk} A_j \partial_k B_l,
         \end{equation}
         \begin{equation}
-        \vec{B} \times (\nabla \times \vec{A}) = \epsilon_{ijk} B_j \partial_k A_l.
+        \mathbf{B} \times (\nabla \times \mathbf{A}) = \epsilon_{ijk} B_j \partial_k A_l.
         \end{equation}
         
         Agrupando todos esses termos e reconhecendo as simetrias, podemos obter a identidade desejada:
         \begin{equation}
-        \nabla (\vec{A} \cdot \vec{B}) = (\vec{A} \cdot \nabla) \vec{B} + (\vec{B} \cdot \nabla) \vec{A} + \vec{A} \times (\nabla \times \vec{B}) + \vec{B} \times (\nabla \times \vec{A}).
+        \nabla (\mathbf{A} \cdot \mathbf{B}) = (\mathbf{A} \cdot \nabla) \mathbf{B} + (\mathbf{B} \cdot \nabla) \mathbf{A} + \mathbf{A} \times (\nabla \times \mathbf{B}) + \mathbf{B} \times (\nabla \times \mathbf{A}).
         \end{equation}
     \end{itemize}
 \end{flushleft}
@@ -402,60 +436,61 @@ Demonstre a identidade
 \begin{flushleft}
 \textbf{\textcolor{blue}{Problema 5}}\\
 
-Quais das seguintes afirmações sobre vetores gerais $\vec{a}, \vec{b}$ \textbf{e} $\vec{c}$ são verdadeiras?
+Quais das seguintes afirmações sobre vetores gerais $\mathbf{A}, \mathbf{B}$ \textbf{e} $\mathbf{C}$ são verdadeiras?
 
 \begin{enumerate}
-    \item[(a)] $\vec{c} \cdot (\vec{a} \times \vec{b}) = (\vec{b} \times \vec{a}) \cdot \vec{c};$
-    \item[(b)] $\vec{a} \times (\vec{b} \times \vec{c}) = (\vec{a} \times \vec{b}) \times \vec{c};$
-    \item[(c)] $\vec{a} \times (\vec{b} \times \vec{c}) = (\vec{a} \cdot \vec{c})\vec{b} - (\vec{a} \cdot \vec{b})\vec{c};$
-    \item[(d)] $\vec{d} = \lambda \vec{a} + \mu \vec{b}$ \textbf{implica} $(\vec{a} \times \vec{b}) \cdot \vec{d} = 0;$
-    \item[(e)] $\vec{a} \times \vec{c} = \vec{b} \times \vec{c}$ \textbf{implica} $\vec{c} \cdot \vec{a} - \vec{c} \cdot \vec{b} = c |\vec{a} - \vec{b}|;$
-    \item[(f)] $(\vec{a} \times \vec{b}) \times (\vec{c} \times \vec{b}) = \vec{b} [\vec{b} \cdot (\vec{c} \times \vec{a})].$
+    \item[(a)] $\mathbf{C} \cdot (\mathbf{A} \times \mathbf{B}) = (\mathbf{B} \times \mathbf{A}) \cdot \mathbf{C};$
+    \item[(b)] $\mathbf{A} \times (\mathbf{B} \times \mathbf{C}) = (\mathbf{A} \times \mathbf{B}) \times \mathbf{C};$
+    \item[(c)] $\mathbf{A} \times (\mathbf{B} \times \mathbf{C}) = (\mathbf{A} \cdot \mathbf{C})\mathbf{B} - (\mathbf{A} \cdot \mathbf{B})\mathbf{C};$
+    \item[(d)] $\vec{d} = \lambda \mathbf{A} + \mu \mathbf{B}$ \textbf{implica} $(\mathbf{A} \times \mathbf{B}) \cdot \vec{d} = 0;$
+    \item[(e)] $\mathbf{A} \times \mathbf{C} = \mathbf{B} \times \mathbf{C}$ \textbf{implica} $\mathbf{C} \cdot \mathbf{A} - \mathbf{C} \cdot \mathbf{B} = c |\mathbf{A} - \mathbf{B}|;$
+    \item[(f)] $(\mathbf{A} \times \mathbf{B}) \times (\mathbf{C} \times \mathbf{B}) = \mathbf{B} [\mathbf{B} \cdot (\mathbf{C} \times \mathbf{A})].$
 \end{enumerate}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
 \section*{Análise das Afirmações}
 
-\textbf{(a) $\vec{c} \cdot (\vec{a} \times \vec{b}) = (\vec{b} \times \vec{a}) \cdot \vec{c}$}
+\textbf{(a) $\mathbf{C} \cdot (\mathbf{A} \times \mathbf{B}) = (\mathbf{B} \times \mathbf{A}) \cdot \mathbf{C}$}
 
 O produto vetorial tem a propriedade anticomutativa:
 \begin{equation}
-    \vec{b} \times \vec{a} = - (\vec{a} \times \vec{b}).
+    \mathbf{B} \times \mathbf{A} = - (\mathbf{A} \times \mathbf{B}).
 \end{equation}
 Portanto,
 \begin{equation}
-    (\vec{b} \times \vec{a}) \cdot \vec{c} = (- \vec{a} \times \vec{b}) \cdot \vec{c} = - (\vec{a} \times \vec{b}) \cdot \vec{c}.
+    (\mathbf{B} \times \mathbf{A}) \cdot \mathbf{C} = (- \mathbf{A} \times \mathbf{B}) \cdot \mathbf{C} = - (\mathbf{A} \times \mathbf{B}) \cdot \mathbf{C}.
 \end{equation}
-Como isso contradiz a igualdade dada, a afirmação \textbf{é falsa}.
+Como isso contradiz a igualdade dada, a afirmação \colorbox{yellow}{\textbf{é falsa}.}
 
-\textbf{(b) $\vec{a} \times (\vec{b} \times \vec{c}) = (\vec{a} \times \vec{b}) \times \vec{c}$}
+\textbf{(b) $\mathbf{A} \times (\mathbf{B} \times \mathbf{C}) = (\mathbf{A} \times \mathbf{B}) \times \mathbf{C}$}
 
-Essa expressão não é, em geral, verdadeira, pois o produto vetorial não é associativo. Assim, a afirmação \textbf{é falsa}.
+\colorbox{yellow}{Essa expressão não é, em geral, verdadeira, pois o produto vetorial não é associativo.} 
+Assim, a afirmação \colorbox{yellow}{\textbf{é falsa}.}
 
-\textbf{(c) $\vec{a} \times (\vec{b} \times \vec{c}) = (\vec{a} \cdot \vec{c}) \vec{b} - (\vec{a} \cdot \vec{b}) \vec{c}$}
+\textbf{(c) $\mathbf{A} \times (\mathbf{B} \times \mathbf{C}) = (\mathbf{A} \cdot \mathbf{C}) \mathbf{B} - (\mathbf{A} \cdot \mathbf{B}) \mathbf{C}$}
 
 Esta é a identidade de Lagrange para o produto misto:
 \begin{equation}
-    \vec{a} \times (\vec{b} \times \vec{c}) = (\vec{a} \cdot \vec{c})\vec{b} - (\vec{a} \cdot \vec{b})\vec{c}.
+    \mathbf{A} \times (\mathbf{B} \times \mathbf{C}) = (\mathbf{A} \cdot \mathbf{C})\mathbf{B} - (\mathbf{A} \cdot \mathbf{B})\mathbf{C}.
 \end{equation}
-Portanto, a afirmação \textbf{é verdadeira}.
+Portanto, a afirmação \colorbox{green!30}{\textbf{é verdadeira}.}
 
-\textbf{(d) $\vec{d} = \lambda \vec{a} + \mu \vec{b}$ implica $(\vec{a} \times \vec{b}) \cdot \vec{d} = 0$}
+\textbf{(d) $\vec{d} = \lambda \mathbf{A} + \mu \mathbf{B}$ implica $(\mathbf{A} \times \mathbf{B}) \cdot \vec{d} = 0$}
 
-Se $\vec{d}$ é uma combinação linear de $\vec{a}$ e $\vec{b}$, então ele pertence ao plano definido por esses vetores. O produto misto entre três vetores coplanares é sempre zero:
+Se $\vec{d}$ é uma combinação linear de $\mathbf{A}$ e $\mathbf{B}$, então ele pertence ao plano definido por esses vetores. O produto misto entre três vetores coplanares é sempre zero:
 \begin{equation}
-    (\vec{a} \times \vec{b}) \cdot \vec{d} = 0.
+    (\mathbf{A} \times \mathbf{B}) \cdot \vec{d} = 0.
 \end{equation}
-Assim, a afirmação \textbf{é verdadeira}.
+Assim, a afirmação \colorbox{green!30}{\textbf{é verdadeira}.}
 
-\textbf{(e) $\vec{a} \times \vec{c} = \vec{b} \times \vec{c}$ implica $\vec{c} \cdot \vec{a} - \vec{c} \cdot \vec{b} = c|\vec{a} - \vec{b}|$}
+\textbf{(e) $\mathbf{A} \times \mathbf{C} = \mathbf{B} \times \mathbf{C}$ implica $\mathbf{C} \cdot \mathbf{A} - \mathbf{C} \cdot \mathbf{B} = c|\mathbf{A} - \mathbf{B}|$}
 
-Se $\vec{a} \times \vec{c} = \vec{b} \times \vec{c}$, então $\vec{a} - \vec{b}$ é paralelo a $\vec{c}$ ou nulo. Isso não implica diretamente a relação dada. Assim, a afirmação \textbf{é falsa}.
+Se $\mathbf{A} \times \mathbf{C} = \mathbf{B} \times \mathbf{C}$, então $\mathbf{A} - \mathbf{B}$ é paralelo a $\mathbf{C}$ ou nulo. Isso não implica diretamente a relação dada. Assim, a afirmação \textbf{é falsa}.
 
-\textbf{(f) $(\vec{a} \times \vec{b}) \times (\vec{c} \times \vec{b}) = \vec{b} [\vec{b} \cdot (\vec{c} \times \vec{a})]$}
+\textbf{(f) $(\mathbf{A} \times \mathbf{B}) \times (\mathbf{C} \times \mathbf{B}) = \mathbf{B} [\mathbf{B} \cdot (\mathbf{C} \times \mathbf{A})]$}
 
-Utilizando a identidade de Binet-Cauchy, podemos mostrar que essa relação \textbf{é verdadeira}.
+Utilizando a identidade de Binet-Cauchy, podemos mostrar que essa relação \textbf{é \colorbox{green!30}{verdadeira}}.
 
 \section*{Conclusão}
 As afirmações corretas são: \textbf{(c), (d) e (f)}.
