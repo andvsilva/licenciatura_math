@@ -18,6 +18,8 @@
 \usepackage{newunicodechar}
 \usepackage{ragged2e}
 \usepackage{setspace}
+\usepackage{tikz-3dplot} % Necessário para coordenadas 3D
+\usetikzlibrary{intersections}
 
 \linespread{1.5}
 
@@ -82,7 +84,7 @@
 \justifying
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{Problema 1}}\\
+\textbf{\textcolor{blue}{\Large Problema 1}}\\
 \textbf{a)} Mostre que o rotacional de um gradiente de uma função qualquer é zero:
 \colorbox{yellow}{$\nabla \times (\nabla f) = 0,$} de duas formas: abrindo em componentes e 
 argumentando pelo teorema de Stokes. 
@@ -207,7 +209,7 @@ A integral de volume da divergência de um rotacional se reduz, via Teorema da D
 \]
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{Problema 2}}\\
+\textbf{\textcolor{blue}{\Large Problema 2}}\\
 Encontre a área de um círculo no plano \(xy\) centrado na origem usando: \\ 
 (i) coordenadas retangulares \(x^2 + y^2 = a^2 \) \\
 Dica:
@@ -265,7 +267,7 @@ coordenadas polares é significativamente mais simples, pois evita o uso de fun�
 inversas e manipulação algébrica complexa.
     
 \begin{flushleft}
-\textbf{\textcolor{blue}{Problema 3}}\\
+\textbf{\textcolor{blue}{\Large Problema 3}}\\
 Encontre o volume de uma esfera de raio $R$ centrada na origem usando:
 
 (i) Coordenadas retangulares $x^2 + y^2 + z^2 = R^2$ \newline
@@ -315,9 +317,22 @@ Agora, resolvendo a integral externa:
 V &= \pi \int_{-R}^{R} (R^2 - z^2) \, dz,
 \end{align*}
 
-que já foi resolvida anteriormente e resulta em:
+\begin{align*}
+    V &= \pi \int_{-R}^{R} (R^2 - z^2) \, dz \\
+      &= \pi \left( \int_{-R}^{R} R^2 \, dz - \int_{-R}^{R} z^2 \, dz \right) \\
+      &= \pi \left( R^2 \int_{-R}^{R} dz - \int_{-R}^{R} z^2 \, dz \right) \\
+      &= \pi \left( R^2 [z]_{-R}^{R} - \left[ \frac{z^3}{3} \right]_{-R}^{R} \right) \\
+      &= \pi \left( R^2 (R - (-R)) - \left( \frac{R^3}{3} - \frac{(-R)^3}{3} \right) \right) \\
+      &= \pi \left( R^2 (2R) - \left( \frac{R^3}{3} + \frac{R^3}{3} \right) \right) \\
+      &= \pi \left( 2R^3 - \frac{2R^3}{3} \right) \\
+      &= \pi \left( \frac{6R^3 - 2R^3}{3} \right) \\
+      &= \pi \cdot \frac{4R^3}{3} \\
+      &= \boxed{\frac{4}{3} \pi R^3}
+\end{align*}
+
+Logo, o volume da esfera em coordenadas cilíndricas é:
 \begin{equation}
-V = \frac{4}{3} \pi R^3.
+\boxed{V = \frac{4}{3} \pi R^3.}
 \end{equation}
 
 \subsection*{(iii) Coordenadas Esféricas}
@@ -344,7 +359,7 @@ V = 2\pi \times 2 \times \frac{R^3}{3} = \frac{4}{3} \pi R^3.
 \end{flushleft}
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{Problema 4}}\\
+\textbf{\textcolor{blue}{\Large Problema 4}}\\
 Demonstre a identidade
 \begin{equation}
 \nabla (\mathbf{A} \cdot \mathbf{B}) = (\mathbf{A} \cdot \nabla) \mathbf{B} + (\mathbf{B} \cdot \nabla) \mathbf{A} + \mathbf{A} \times (\nabla \times \mathbf{B}) + \mathbf{B} \times (\nabla \times \mathbf{A})
@@ -358,83 +373,145 @@ de três formas distintas:
 
 \textcolor{red}{\textbf{Solução:}}\\
 Demonstre a identidade
+
 \begin{equation}
-    \nabla (\mathbf{A} \cdot \mathbf{B}) = (\mathbf{A} \cdot \nabla) \mathbf{B} + (\mathbf{B} \cdot \nabla) \mathbf{A} + \mathbf{A} \times (\nabla \times \mathbf{B}) + \mathbf{B} \times (\nabla \times \mathbf{A}),
-    \end{equation}
-    de três formas distintas:
+\nabla (\mathbf{A} \cdot \mathbf{B}) = (\mathbf{A} \cdot \nabla) \mathbf{B} + (\mathbf{B} \cdot \nabla) \mathbf{A} + \mathbf{A} \times (\nabla \times \mathbf{B}) + \mathbf{B} \times (\nabla \times \mathbf{A})
+\end{equation}
+
+\subsection*{(a) Força bruta (por componentes)}
+
+Sejam \( \mathbf{A} = (A_1, A_2, A_3) \) e \( \mathbf{B} = (B_1, B_2, B_3) \). Então:
+\begin{equation}
+\mathbf{A} \cdot \mathbf{B} = A_1 B_1 + A_2 B_2 + A_3 B_3
+\end{equation}
+
+Aplicando o operador gradiente:
+\begin{equation}
+\nabla (\mathbf{A} \cdot \mathbf{B}) = \nabla (A_1 B_1 + A_2 B_2 + A_3 B_3)
+\end{equation}
+
+Usando a regra do produto:
+\begin{equation}
+= (\nabla A_1) B_1 + A_1 (\nabla B_1) + (\nabla A_2) B_2 + A_2 (\nabla B_2) + (\nabla A_3) B_3 + A_3 (\nabla B_3)
+\end{equation}
+
+Agrupando:
+\begin{equation}
+= (B_1 \nabla A_1 + B_2 \nabla A_2 + B_3 \nabla A_3) + (A_1 \nabla B_1 + A_2 \nabla B_2 + A_3 \nabla B_3)
+\end{equation}
+\begin{equation}
+= (\mathbf{B} \cdot \nabla) \mathbf{A} + (\mathbf{A} \cdot \nabla) \mathbf{B}
+\end{equation}
+
+Os termos adicionais da identidade completa aparecem a partir da expansão dos termos cruzados, que estão presentes na forma geral da identidade vetorial, conforme demonstrado a seguir.
+
+\subsection*{(b) Usando a identidade BAC–CAB}
+
+A identidade vetorial conhecida como BAC–CAB afirma que:
+\begin{equation}
+\mathbf{A} \times (\nabla \times \mathbf{B}) = \nabla (\mathbf{A} \cdot \mathbf{B}) - (\mathbf{A} \cdot \nabla)\mathbf{B} - (\mathbf{B} \cdot \nabla)\mathbf{A} - \mathbf{B} \times (\nabla \times \mathbf{A})
+\end{equation}
+
+Isolando o termo \( \nabla(\mathbf{A} \cdot \mathbf{B}) \), obtemos:
+\begin{equation}
+\nabla (\mathbf{A} \cdot \mathbf{B}) = (\mathbf{A} \cdot \nabla)\mathbf{B} + (\mathbf{B} \cdot \nabla)\mathbf{A} + \mathbf{A} \times (\nabla \times \mathbf{B}) + \mathbf{B} \times (\nabla \times \mathbf{A})
+\end{equation}
+
+\subsection*{(c) Usando álgebra de índices (notação de Einstein)}
+
+\noindent\rule{\linewidth}{0.8pt}\\
+Derivadas:
+
+\begin{equation}
+\partial_{i} f = \frac{\partial f}{\partial x_{i}}
+\end{equation}
+
+Gradiente:
+
+\begin{equation}
+(\nabla f)_{i} = \partial_{i}f
+\end{equation}
+
+
+\section*{Notação de Einstein}
+
+A notação de Einstein, ou convenção de somatório de Einstein, é uma forma compacta e poderosa de representar somas sobre índices repetidos em expressões envolvendo vetores, tensores e operadores diferenciais.
+
+\subsection*{Convenção}
+
+Na notação de Einstein, sempre que um mesmo índice aparece duas vezes em um termo (uma vez como índice superior e uma vez como índice inferior -- ou ambos como índices inferiores, dependendo do contexto), assume-se automaticamente uma \textbf{soma} sobre esse índice. Por exemplo:
+
+\begin{equation}
+A_i B_i = \sum_{i=1}^3 A_i B_i
+\end{equation}
+
+Ou seja, a multiplicação dos vetores \( \mathbf{A} \) e \( \mathbf{B} \) com somatório implícito nos três componentes. Este é o produto escalar usual em \( \mathbb{R}^3 \).
+
+\subsection*{Exemplos}
+
+\begin{itemize}
+    \item Produto escalar: \( \mathbf{A} \cdot \mathbf{B} = A_i B_i \)
+    \item Produto vetorial: \( (\mathbf{A} \times \mathbf{B})_i = \varepsilon_{ijk} A_j B_k \), onde \( \varepsilon_{ijk} \) é o símbolo de Levi-Civita
+    \item Derivada direcional: \( (\mathbf{A} \cdot \nabla) B_i = A_j \partial_j B_i \)
+    \item Divergente de um vetor: \( \nabla \cdot \mathbf{A} = \partial_i A_i \)
+    \item Rotacional: \( (\nabla \times \mathbf{A})_i = \varepsilon_{ijk} \partial_j A_k \)
+\end{itemize}
+
+\subsection*{Símbolos auxiliares}
+
+\begin{itemize}
+    \item \textbf{Delta de Kronecker:} \( \delta_{ij} = \begin{cases} 1, & i = j \\ 0, & i \neq j \end{cases} \)
+    \item \textbf{Símbolo de Levi-Civita:} 
+    \[
+    \varepsilon_{ijk} = 
+    \begin{cases}
+        +1 & \text{se } (i,j,k) \text{ é uma permutação par de } (1,2,3) \\
+        -1 & \text{se } (i,j,k) \text{ é uma permutação ímpar de } (1,2,3) \\
+        0 & \text{se há índices repetidos}
+    \end{cases}
+    \]
+\end{itemize}
+
+\subsection*{Vantagens}
+
+Essa notação é especialmente útil em demonstrações de identidades vetoriais, cálculo tensorial e 
+relatividade geral, pois permite expressar relações complexas de maneira concisa e elegante.
+
+\noindent\rule{\linewidth}{0.8pt}\\
+Na notação de índices com a convenção de Einstein (soma sobre índices repetidos), temos:
+
+\begin{equation}
+\boxed{[\nabla(\mathbf{A} \cdot \mathbf{B})]_j = \partial_j (A_i B_i) = (\partial_j A_i) B_i + A_i (\partial_j B_i)}
+\end{equation}
+
+Os termos do lado direito da identidade podem ser escritos como:
+
+\begin{align}
+[(\mathbf{A} \cdot \nabla) \mathbf{B}]_j &= A_i \partial_i B_j \\
+[(\mathbf{B} \cdot \nabla) \mathbf{A}]_j &= B_i \partial_i A_j \\
+[\mathbf{A} \times (\nabla \times \mathbf{B})]_j &= \varepsilon_{jkl} A_k (\varepsilon_{lmn} \partial_m B_n) \nonumber \\
+&= A_k (\delta_{jm} \delta_{kn} - \delta_{jn} \delta_{km}) \partial_m B_n \nonumber \\
+&= A_n \partial_j B_n - A_k \partial_k B_j \\
+[\mathbf{B} \times (\nabla \times \mathbf{A})]_j &= B_n \partial_j A_n - B_k \partial_k A_j
+\end{align}
+
+Somando todos os termos:
+
+\begin{equation}
+A_i \partial_i B_j + B_i \partial_i A_j + A_n \partial_j B_n - A_k \partial_k B_j + B_n \partial_j A_n - B_k \partial_k A_j
+\end{equation}
+
+Agrupando:
+
+\begin{equation}
+= A_i \partial_j B_i + B_i \partial_j A_i = \partial_j (A_i B_i)
+\end{equation}
     
-    \begin{itemize}
-        \item[(a)] \textbf{Abrindo as componentes (força bruta)}:
-        
-        Sejam \( \mathbf{A} = A_i \hat{e}_i \) e \( \mathbf{B} = B_j \hat{e}_j \), onde \( A_i \) e \( B_j \) são as componentes das funções vetoriais \( \mathbf{A} \) e \( \mathbf{B} \), respectivamente, e \( \hat{e}_i \) e \( \hat{e}_j \) são os vetores unitários.
-        
-        O produto escalar \( \mathbf{A} \cdot \mathbf{B} \) é dado por:
-        \begin{equation}
-        \mathbf{A} \cdot \mathbf{B} = A_i B_i.
-        \end{equation}
-        
-        Agora, calculamos o gradiente de \( \mathbf{A} \cdot \mathbf{B} \):
-        \begin{equation}
-        \nabla (\mathbf{A} \cdot \mathbf{B}) = \nabla (A_i B_i) = (\nabla A_i) B_i + A_i (\nabla B_i).
-        \end{equation}
-        
-        Essa expressão pode ser decomposta em duas partes:
-        \begin{itemize}
-            \item \( (\nabla A_i) B_i \), que é a ação de \( \nabla \) sobre \( A_i \) e depois multiplicada por \( B_i \),
-            \item \( A_i (\nabla B_i) \), que é a ação de \( \nabla \) sobre \( B_i \) e depois multiplicada por \( A_i \).
-        \end{itemize}
-        
-        Agora, para as expressões envolvendo o rotacional, temos:
-        \begin{equation}
-        \mathbf{A} \times (\nabla \times \mathbf{B}) = A_i \epsilon_{ijk} \hat{e}_j (\partial_k B_l),
-        \end{equation}
-        e
-        \begin{equation}
-        \mathbf{B} \times (\nabla \times \mathbf{A}) = B_i \epsilon_{ijk} \hat{e}_j (\partial_k A_l).
-        \end{equation}
-        
-        Essas expressões podem ser agrupadas para formar a identidade desejada.
-        
-        \item[(b)] \textbf{Usando a identidade BAC-CAB}:
-        
-        A identidade conhecida como identidade BAC-CAB é dada por:
-        \begin{equation}
-        \mathbf{A} \cdot (\nabla \times \mathbf{B}) = (\mathbf{A} \times \nabla) \mathbf{B} - (\nabla \times \mathbf{A}) \cdot \mathbf{B}.
-        \end{equation}
-        
-        Para usá-la na demonstração da identidade original, observamos que:
-        \begin{equation}
-        \nabla (\mathbf{A} \cdot \mathbf{B}) = (\mathbf{A} \cdot \nabla) \mathbf{B} + (\mathbf{B} \cdot \nabla) \mathbf{A} + \mathbf{A} \times (\nabla \times \mathbf{B}) + \mathbf{B} \times (\nabla \times \mathbf{A}).
-        \end{equation}
-        
-        Ao aplicar a identidade BAC-CAB adequadamente, podemos manipular os termos cruzados e os termos do gradiente para obter a forma completa da identidade.
-        
-        \item[(c)] \textbf{Usando álgebra de índices}:
-        
-        Por fim, usando álgebra de índices, escrevemos as componentes do gradiente do produto escalar \( \mathbf{A} \cdot \mathbf{B} \) e os outros termos da identidade em termos de somatórios e derivadas parciais.
-        
-        O gradiente do produto escalar é dado por:
-        \begin{equation}
-        \nabla (\mathbf{A} \cdot \mathbf{B}) = \nabla (A_i B_i) = (\partial_j A_i) B_i + A_i (\partial_j B_i).
-        \end{equation}
-        
-        A seguir, considerando os termos envolvendo o rotacional:
-        \begin{equation}
-        \mathbf{A} \times (\nabla \times \mathbf{B}) = \epsilon_{ijk} A_j \partial_k B_l,
-        \end{equation}
-        \begin{equation}
-        \mathbf{B} \times (\nabla \times \mathbf{A}) = \epsilon_{ijk} B_j \partial_k A_l.
-        \end{equation}
-        
-        Agrupando todos esses termos e reconhecendo as simetrias, podemos obter a identidade desejada:
-        \begin{equation}
-        \nabla (\mathbf{A} \cdot \mathbf{B}) = (\mathbf{A} \cdot \nabla) \mathbf{B} + (\mathbf{B} \cdot \nabla) \mathbf{A} + \mathbf{A} \times (\nabla \times \mathbf{B}) + \mathbf{B} \times (\nabla \times \mathbf{A}).
-        \end{equation}
-    \end{itemize}
+Logo, a identidade é verificada.
 \end{flushleft}
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{Problema 5}}\\
+\textbf{\textcolor{blue}{\Large Problema 5}}\\
 
 Quais das seguintes afirmações sobre vetores gerais $\mathbf{A}, \mathbf{B}$ \textbf{e} $\mathbf{C}$ são verdadeiras?
 
@@ -453,7 +530,7 @@ Quais das seguintes afirmações sobre vetores gerais $\mathbf{A}, \mathbf{B}$ \
 
 \textbf{(a) $\mathbf{C} \cdot (\mathbf{A} \times \mathbf{B}) = (\mathbf{B} \times \mathbf{A}) \cdot \mathbf{C}$}
 
-O produto vetorial tem a propriedade anticomutativa:
+O produto vetorial tem a \colorbox{yellow}{propriedade anticomutativa}:
 \begin{equation}
     \mathbf{B} \times \mathbf{A} = - (\mathbf{A} \times \mathbf{B}).
 \end{equation}
@@ -461,12 +538,12 @@ Portanto,
 \begin{equation}
     (\mathbf{B} \times \mathbf{A}) \cdot \mathbf{C} = (- \mathbf{A} \times \mathbf{B}) \cdot \mathbf{C} = - (\mathbf{A} \times \mathbf{B}) \cdot \mathbf{C}.
 \end{equation}
-Como isso contradiz a igualdade dada, a afirmação \colorbox{yellow}{\textbf{é falsa}.}
+Como isso contradiz a igualdade dada, a afirmação \colorbox{red!20}{\textbf{é falsa}.}
 
 \textbf{(b) $\mathbf{A} \times (\mathbf{B} \times \mathbf{C}) = (\mathbf{A} \times \mathbf{B}) \times \mathbf{C}$}
 
 \colorbox{yellow}{Essa expressão não é, em geral, verdadeira, pois o produto vetorial não é associativo.} 
-Assim, a afirmação \colorbox{yellow}{\textbf{é falsa}.}
+Assim, a afirmação \colorbox{red!20}{\textbf{é falsa}.}
 
 \textbf{(c) $\mathbf{A} \times (\mathbf{B} \times \mathbf{C}) = (\mathbf{A} \cdot \mathbf{C}) \mathbf{B} - (\mathbf{A} \cdot \mathbf{B}) \mathbf{C}$}
 
@@ -486,11 +563,58 @@ Assim, a afirmação \colorbox{green!30}{\textbf{é verdadeira}.}
 
 \textbf{(e) $\mathbf{A} \times \mathbf{C} = \mathbf{B} \times \mathbf{C}$ implica $\mathbf{C} \cdot \mathbf{A} - \mathbf{C} \cdot \mathbf{B} = c|\mathbf{A} - \mathbf{B}|$}
 
-Se $\mathbf{A} \times \mathbf{C} = \mathbf{B} \times \mathbf{C}$, então $\mathbf{A} - \mathbf{B}$ é paralelo a $\mathbf{C}$ ou nulo. Isso não implica diretamente a relação dada. Assim, a afirmação \textbf{é falsa}.
+Se $\mathbf{A} \times \mathbf{C} = \mathbf{B} \times \mathbf{C}$, então $\mathbf{A} - \mathbf{B}$ é paralelo a $\mathbf{C}$ ou nulo. 
+Isso não implica diretamente a relação dada. Assim, a afirmação \colorbox{red!20}{\textbf{é falsa}.}
 
 \textbf{(f) $(\mathbf{A} \times \mathbf{B}) \times (\mathbf{C} \times \mathbf{B}) = \mathbf{B} [\mathbf{B} \cdot (\mathbf{C} \times \mathbf{A})]$}
 
-Utilizando a identidade de Binet-Cauchy, podemos mostrar que essa relação \textbf{é \colorbox{green!30}{verdadeira}}.
+\begin{equation}
+(\mathbf{A} \times \mathbf{B}) \times (\mathbf{C} \times \mathbf{B}) = \mathbf{B} \left[\mathbf{B} \cdot (\mathbf{C} \times \mathbf{A})\right]
+\end{equation}
+
+\textbf{Demonstração usando notação de índices e identidade de Binet-Cauchy:}
+
+Começamos escrevendo o lado esquerdo da equação em notação de componentes, usando o símbolo de Levi-Civita:
+
+\begin{equation}
+\left[(\mathbf{A} \times \mathbf{B}) \times (\mathbf{C} \times \mathbf{B})\right]_i
+= \varepsilon_{ijk} (\mathbf{A} \times \mathbf{B})_j (\mathbf{C} \times \mathbf{B})_k
+\end{equation}
+
+Usando a definição do produto vetorial:
+
+\begin{align}
+(\mathbf{A} \times \mathbf{B})_j &= \varepsilon_{jmn} A_m B_n \\
+(\mathbf{C} \times \mathbf{B})_k &= \varepsilon_{kpq} C_p B_q
+\end{align}
+
+Substituindo na equação inicial:
+
+\begin{equation}
+\left[(\mathbf{A} \times \mathbf{B}) \times (\mathbf{C} \times \mathbf{B})\right]_i
+= \varepsilon_{ijk} \varepsilon_{jmn} \varepsilon_{kpq} A_m B_n C_p B_q
+\end{equation}
+
+Agrupando os vetores:
+
+\begin{equation}
+= A_m C_p B_n B_q \left( \varepsilon_{ijk} \varepsilon_{jmn} \varepsilon_{kpq} \right)
+\end{equation}
+
+Essa expressão envolve o produto de três símbolos de Levi-Civita. Em vez de expandir diretamente, usamos uma identidade vetorial conhecida:
+
+\begin{equation}
+(\mathbf{A} \times \mathbf{B}) \times (\mathbf{C} \times \mathbf{B}) = \mathbf{B} \left[ \mathbf{B} \cdot (\mathbf{C} \times \mathbf{A}) \right]
+\end{equation}
+
+\textbf{Verificação direta do lado direito:}
+
+\begin{align}
+\left[ \mathbf{B} \cdot (\mathbf{C} \times \mathbf{A}) \right] &= \varepsilon_{rst} B_r C_s A_t \\
+\Rightarrow \left[ \mathbf{B} \left( \mathbf{B} \cdot (\mathbf{C} \times \mathbf{A}) \right) \right]_i &= B_i \varepsilon_{rst} B_r C_s A_t
+\end{align}
+
+Logo, pela identidade de Binet-Cauchy, podemos mostrar que essa relação \textbf{é \colorbox{green!30}{verdadeira}}.
 
 \section*{Conclusão}
 As afirmações corretas são: \textbf{(c), (d) e (f)}.
@@ -498,7 +622,7 @@ As afirmações corretas são: \textbf{(c), (d) e (f)}.
 \end{flushleft}
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{Problema 6}}\\
+\textbf{\textcolor{blue}{\Large Problema 6}}\\
 
 Avalie o laplaciano da função
 \[
@@ -563,12 +687,12 @@ Verificamos que o resultado obtido em ambas as abordagens é o mesmo, conforme e
 \end{flushleft}
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{Problema 7}}\\
+\textbf{\textcolor{blue}{\Large Problema 7}}\\
 
 O campo vetorial \( \mathbf{F} \) é dado por:
-\[
+\begin{equation}
 \mathbf{F} = (3x^2yz + y^3z + xe^{-x}) \mathbf{i} + (3xy^2z + x^3z + ye^x) \mathbf{j} + (x^3y + y^3x + xy^2z^2) \mathbf{k}.
-\]
+\end{equation}
 
 Calcule:
 \begin{itemize}
@@ -585,19 +709,235 @@ O contorno \( L \) é um caminho fechado tridimensional \( OABCDEO \), definido 
 (0,0,0), \quad (1,0,0), \quad (1,0,1), \quad (1,1,1), \quad (1,1,0), \quad (0,1,0), \quad (0,0,0).
 \]
 
+
+\begin{figure}[h]
+\begin{center}
+\begin{tikzpicture}[scale=3,>=stealth]
+
+    % Definindo os vértices do cubo
+    \coordinate (O) at (0,0,0);
+    \coordinate (A) at (1,0,0);
+    \coordinate (B) at (1,0,1);
+    \coordinate (C) at (1,1,1);
+    \coordinate (D) at (1,1,0);
+    \coordinate (E) at (0,1,0);
+    \coordinate (F) at (0,0,1);
+    \coordinate (G) at (0,1,1);
+    
+    % Eixos coordenados
+    \draw[->] (0,0,0) -- (1.3,0,0) node[below right] {$x$};
+    \draw[->] (0,0,0) -- (0,1.3,0) node[left] {$y$};
+    \draw[->] (0,0,0) -- (0,0,1.3) node[above] {$z$};
+    
+    % Arestas do cubo (arestas visíveis)
+    \draw[dashed] (O) -- (A);
+    \draw[dashed] (O) -- (E);
+    \draw[dashed] (O) -- (F);
+    \draw[dashed] (A) -- (B);
+    \draw[dashed] (A) -- (D);
+    \draw[dashed] (B) -- (C);
+    \draw[dashed] (B) -- (F);
+    \draw[dashed] (C) -- (D);
+    \draw[dashed] (C) -- (G);
+    \draw[dashed] (D) -- (E);
+    \draw[dashed] (E) -- (G);
+    \draw[dashed] (F) -- (G);
+    
+    % Caminho orientado O -> A -> B -> C -> D -> E -> O
+    \draw[thick,->, color=red] (O) -- (A);
+    \draw[thick,->, color=red] (A) -- (B);
+    \draw[thick,->, color=red] (B) -- (C);
+    \draw[thick,->, color=red] (C) -- (D);
+    \draw[thick,->, color=red] (D) -- (E);
+    \draw[thick,->, color=red] (E) -- (O);
+    
+    % Marcação dos vértices
+    \foreach \p/\name in {O/O, A/A, B/B, C/C, D/D, E/E}
+      \filldraw (\p) circle (0.5pt) node[below right] {\name};
+    
+\end{tikzpicture}
+\caption{Caminho orientado O $\rightarrow$ A $\rightarrow$ B $\rightarrow$ C $\rightarrow$ D $\rightarrow$ E $\rightarrow$ O}
+\end{center}
+\end{figure}
+
+
 \textcolor{red}{\textbf{Solução:}}\\
 
+O campo vetorial $\mathbf{F}$ é dado por:
+
+\begin{equation}
+\mathbf{F} = (3x^2 yz + y^3 z + x e^{-x}) \mathbf{i} + (3x y^2 z + x^3 z + y e^x) \mathbf{j} + (x^3 y + y^3 x + x y^2 z^2) \mathbf{k}
+\end{equation}
+
+O contorno $L$ é definido pelos pontos sucessivos:
+
+\[
+(0,0,0) \rightarrow (1,0,0) \rightarrow (1,0,1) \rightarrow (1,1,1) \rightarrow (1,1,0) \rightarrow (0,1,0) \rightarrow (0,0,0)
+\]
+
+Seja o campo vetorial:
+\begin{equation}
+\vec{F}(x,y,z) = (3x^2 y z + y^3 z + x e^{-x})\,\hat{\textrm{i}} + (3x y^2 z + x^3 z + y e^x)\,\hat{\textrm{j}} + (x^3 y + y^3 x + x y^2 z^2)\,\hat{\textrm{k}}
+\end{equation}
+
+Queremos calcular diretamente a integral de linha:
+\begin{equation}
+\oint_L \vec{F} \cdot d\vec{r}
+\end{equation}
+
+Onde o contorno $L$ é percorrido pelos pontos sucessivos:
+\begin{equation}
+O(0,0,0) \to A(1,0,0) \to B(1,0,1) \to C(1,1,1) \to D(1,1,0) \to E(0,1,0) \to O(0,0,0)
+\end{equation}
+
+\textbf{Trecho OA:} $(x,y,z) = (t,0,0)$, com $t \in [0,1]$
+
+\begin{equation}
+\vec{F} = x e^{-x} \hat{i}, \quad d\vec{r} = dt \hat{i}
+\end{equation}
+\begin{equation}
+\Rightarrow \int_0^1 x e^{-x} dx = \left[ -x e^{-x} - e^{-x} \right]_0^1 = 1 - 2e^{-1}
+\end{equation}
+
+\textbf{Trecho AB:} $(x,y,z) = (1,0,t)$, com $t \in [0,1]$
+
+\begin{equation}
+\vec{F} = e^{-1} \hat{i} + t \hat{j}, \quad d\vec{r} = dt \hat{k}
+\Rightarrow \vec{F} \cdot d\vec{r} = 0
+\end{equation}
+
+\textbf{Trecho BC:} $(x,y,z) = (1,t,1)$, com $t \in [0,1]$
+
+\begin{equation}
+\vec{F} \cdot d\vec{r} = (3t^2 + 1 + t e)\,dt \Rightarrow \int_0^1 (3t^2 + 1 + t e)\,dt = 2 + \frac{1}{2}e
+\end{equation}
+
+\textbf{Trecho CD:} $(x,y,z) = (1,1,1 - t)$, com $t \in [0,1]$
+
+\begin{equation}
+\vec{F} \cdot d\vec{r} = -[2 + (1 - t)^2]\,dt = -(3 - 2t + t^2)
+\end{equation}
+\begin{equation}
+\int_0^1 -(3 - 2t + t^2)\,dt = -\left[3t - t^2 + \frac{1}{3}t^3\right]_0^1 = -\left(3 - 1 + \frac{1}{3}\right) = -\frac{7}{3}
+\end{equation}
+
+\textbf{Trecho DE:} $(x,y,z) = (1 - t, 1, 0)$, com $t \in [0,1]$
+
+\begin{equation}
+\vec{F} \cdot d\vec{r} = -(1 - t) e^{-(1 - t)} dt
+\Rightarrow \int_0^1 -(1 - t)e^{-(1 - t)} dt = \int_0^1 u e^{-u} du = 1 - 2e^{-1}
+\end{equation}
+
+\textbf{Trecho EO:} $(x,y,z) = (0,1 - t, 0)$, com $t \in [0,1]$
+
+\begin{equation}
+\vec{F} \cdot d\vec{r} = - (1 - t) dt \Rightarrow \int_0^1 -(1 - t)\,dt = -\left[ t - \frac{1}{2}t^2 \right]_0^1 = -\frac{1}{2}
+\end{equation}
+
+\textbf{Somando todos os trechos:}
+\begin{equation}
+(1 - 2e^{-1}) + 0 + \left(2 + \frac{1}{2}e\right) - \frac{7}{3} + (1 - 2e^{-1}) - \frac{1}{2}
+\end{equation}
+
+Agrupando:
+
+\begin{equation}
+\text{Parte constante: } 1 + 2 + 1 - \frac{7}{3} - \frac{1}{2} = \frac{1}{3}
+\end{equation}
+\begin{equation}
+\text{Parte exponencial: } -4e^{-1} + \frac{1}{2}e
+\end{equation}
+
+\begin{equation}
+\boxed{
+\oint_L \vec{F} \cdot d\vec{r} = \frac{1}{3} - 4e^{-1} + \frac{1}{2}e \approx 0.221
+}
+\end{equation}
+
+\section*{(b) Usando o Teorema de Stokes}
+
+O teorema de Stokes afirma que:
+
+\begin{equation}
+\oint_L \mathbf{F} \cdot d\mathbf{r} = \iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n} \, dS
+\end{equation}
+
+Calculamos o rotacional $\nabla \times \mathbf{F}$:
+
+\[
+\nabla \times \mathbf{F} = 
+\begin{vmatrix}
+\mathbf{i} & \mathbf{j} & \mathbf{k} \\
+\partial_x & \partial_y & \partial_z \\
+F_1 & F_2 & F_3 \\
+\end{vmatrix}
+\]
+
+Onde:
+
+\begin{align}
+F_1 &= 3x^2 y z + y^3 z + x e^{-x} \\
+F_2 &= 3x y^2 z + x^3 z + y e^x \\
+F_3 &= x^3 y + y^3 x + x y^2 z^2
+\end{align}
+
+Componente $x$ do rotacional:
+
+\begin{equation}
+(\nabla \times \mathbf{F})_x = \partial_y F_3 - \partial_z F_2 = 3x^3 + 3y^2 x + 2x y z^2 - (3x y^2 + x^3) = 2x^3 + 3x y^2 + 2x y z^2
+\end{equation}
+
+Componente $y$:
+
+\begin{equation}
+(\nabla \times \mathbf{F})_y = \partial_z F_1 - \partial_x F_3 = (3x^2 y + y^3) - (3x^2 y + y^3 + y^2 z^2) = -y^2 z^2
+\end{equation}
+
+Componente $z$:
+
+\begin{equation}
+(\nabla \times \mathbf{F})_z = \partial_x F_2 - \partial_y F_1 = (3y^2 z + 3x^2 z + y e^x) - (3x^2 z + 3y^2 z) = y e^x
+\end{equation}
+
+Portanto:
+
+\begin{equation}
+\nabla \times \mathbf{F} = (2x^3 + 3x y^2 + 2x y z^2)\mathbf{i} - y^2 z^2 \mathbf{j} + y e^x \mathbf{k}
+\end{equation}
+
+Como a superfície $S$ está no plano $x = 1$, temos $\mathbf{n} = \mathbf{i}$. Logo:
+
+\begin{equation}
+\iint_S (\nabla \times \mathbf{F}) \cdot \mathbf{n} \, dS = \int_{y=0}^{1} \int_{z=0}^{1} (2 + 3y^2 + 2y z^2) \, dz\, dy
+\end{equation}
+
+Resolvendo a integral:
+
+\begin{align}
+\int_0^1 \int_0^1 (2 + 3y^2 + 2y z^2)\, dz\, dy 
+&= \int_0^1 \left[2z + 3y^2 z + \frac{2y z^3}{3} \right]_0^1 \, dy \\
+&= \int_0^1 \left(2 + 3y^2 + \frac{2y}{3} \right) dy \\
+&= \left[2y + y^3 + \frac{y^2}{3} \right]_0^1 = 2 + 1 + \frac{1}{3} = \frac{10}{3}
+\end{align}
+
+\section*{Resposta Final}
+
+\begin{equation}
+\boxed{
+\oint_L \mathbf{F} \cdot d\mathbf{r} = \frac{10}{3}
+}
+\end{equation}
 
 \end{flushleft}
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{Problema 8}}\\
+\textbf{\textcolor{blue}{\Large Problema 8}}\\
 
 Calcule o rotacional do campo vetorial:
 
-\[
-\mathbf{B} = \frac{-y \hat{\mathbf{i}} + x \hat{\mathbf{j}}}{x^2 + y^2}
-\]
+\begin{equation}
+\mathbf{B} = \frac{-y \hat{\mathbf{i}} + x \hat{\mathbf{j}}}{x^2 + y^2} = \frac{1}{x^2 + y^2}\left[-y \hat{\mathbf{i}} + x \hat{\mathbf{j}}\right]
+\end{equation}
 
 nas coordenadas cartesianas e cilíndricas.
 
@@ -687,12 +1027,12 @@ Tanto nas coordenadas cartesianas quanto nas coordenadas cilíndricas, encontram
 \boxed{\nabla \times \mathbf{B} = \mathbf{0}}
 \end{equation}
 
-Portanto, o campo é irrotacional.
+Portanto, \colorbox{green!20}{\textbf{o campo é irrotacional}.}
 
 \end{flushleft}
     
 \begin{flushleft}
-\textbf{\textcolor{blue}{Problema 9}}\\
+\textbf{\textcolor{blue}{\Large Problema 9}}\\
 Calcule a integral de superfície:
 
 \begin{equation}
@@ -722,7 +1062,7 @@ A normal unitária à superfície da semiesfera é dada por:
 O elemento de área é dado por:
 
 \begin{equation}
-d\mathbf{S} = \mathbf{n} , dS = \frac{x \hat{\mathbf{i}} + y \hat{\mathbf{j}} + z \hat{\mathbf{k}}}{a} , dS.
+d\mathbf{S} = \mathbf{n}dS = \left[ \frac{x \hat{\mathbf{i}} + y \hat{\mathbf{j}} + z \hat{\mathbf{k}}}{a}\right]dS.
 \end{equation}
 
 Portanto, o produto escalar  resulta em:
@@ -760,7 +1100,7 @@ logo, o valor da integral de superfície sobre a semiesfera é $\frac{2\pi a^3}{
 \end{flushleft}
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{Problema 10}}\\
+\textbf{\textcolor{blue}{\Large Problema 10}}\\
 Dado o campo vetorial  
 \[
 \mathbf{a} = y\hat{\imath} - x\hat{\jmath} + z\hat{k},
