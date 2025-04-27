@@ -468,10 +468,152 @@ Imagine que a Terra tenha densidade uniforme e que um túnel seja escavado ao lo
 \end{enumerate}
 
 \textcolor{red}{\textbf{Solução:}}\\
+
+\textbf{(a) Movimento do objeto no túnel}
+
+A força gravitacional sentida a uma distância \( r \) do centro é devida apenas à massa dentro da esfera de raio \( r \), e é dada por:
+
+\begin{equation}
+M_{\text{interna}} = M \left( \frac{r^3}{R^3} \right)
+\end{equation}
+
+Assim, a força gravitacional é:
+
+\begin{equation}
+F = - G \frac{M_{\text{interna}} m}{r^2} = -G \frac{M \left( \frac{r^3}{R^3} \right) m}{r^2}
+\end{equation}
+
+Simplificando:
+
+\begin{equation}
+F = -G \frac{M m}{R^3} r
+\end{equation}
+
+Esta força é proporcional a \( r \) e dirigida para o centro, característica típica de um \textit{movimento harmônico simples} (MHS).
+
+A equação do movimento é:
+
+\begin{equation}
+m \frac{d^2r}{dt^2} = -G \frac{M m}{R^3} r
+\end{equation}
+
+Dividindo por \( m \):
+
+\begin{equation}
+\frac{d^2r}{dt^2} = -\left( G \frac{M}{R^3} \right) r
+\end{equation}
+
+Portanto, a frequência angular \( \omega \) do movimento é:
+
+\begin{equation}
+\omega^2 = G \frac{M}{R^3}
+\end{equation}
+
+e o período \( P \) é:
+
+\begin{equation}
+P = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{R^3}{G M}}
+\end{equation}
+
+\vspace{0.5cm}
+
+Para um satélite em órbita na superfície da Terra, o período também é dado por:
+
+\begin{equation}
+P = 2\pi \sqrt{\frac{r^3}{G M}}
+\end{equation}
+
+com \( r = R \), portanto:
+
+\begin{equation}
+P = 2\pi \sqrt{\frac{R^3}{G M}}
+\end{equation}
+
+Assim, o período do objeto no túnel é \textbf{igual} ao período do satélite em órbita rasante.
+
+\vspace{0.5cm}
+
+\textbf{(b) Cálculo do período}
+
+Sabemos que:
+
+\begin{equation}
+g = \frac{G M}{R^2}
+\quad \Rightarrow \quad G M = g R^2
+\end{equation}
+
+Substituindo:
+
+\begin{equation}
+P = 2\pi \sqrt{ \frac{R^3}{g R^2} } = 2\pi \sqrt{ \frac{R}{g} }
+\end{equation}
+
+Substituindo os valores:
+
+\begin{equation}
+R = 6{,}37 \times 10^6 \, \text{m}, \quad g = 9{,}8 \, \text{m/s}^2
+\end{equation}
+
+\begin{equation}
+P = 2\pi \sqrt{ \frac{6{,}37 \times 10^6}{9{,}8} }
+\end{equation}
+
+\begin{equation}
+P = 2\pi \sqrt{650000}
+\end{equation}
+
+\begin{equation}
+P = 2\pi \times 806{,}2
+\end{equation}
+
+\begin{equation}
+P \approx 5065 \, \text{segundos}
+\end{equation}
+
+Convertendo para minutos:
+
+\begin{equation}
+P \approx \frac{5065}{60} \approx 84{,}4 \, \text{minutos}
+\end{equation}
+
+\vspace{0.5cm}
+
+\textbf{Resposta final:}
+
+\begin{equation}
+\boxed{P \approx 84{,}4 \, \text{minutos}}
+\end{equation}
+
 \end{flushleft}
+
+
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Problema 6}}\\
+
+Dois cilindros condutores longos e concêntricos são isolados entre si e carregados. Longe das extremidades, 
+o cilindro interno possui densidade de carga linear \( +\lambda_1 \), e o cilindro externo possui densidade de 
+carga linear \( +\lambda_2 \).
+
+O cilindro interno apresenta raios interno \( r_1 \) e externo \( r_2 \), enquanto o cilindro externo apresenta raios interno \( r_3 \) e externo \( r_4 \).
+
+\begin{enumerate}
+    \item[(a)] Encontre o campo elétrico \( E(r) \):
+    \begin{enumerate}
+        \item[(1)] Em um ponto próximo ao meio dos cilindros (desprezando efeitos de borda).
+        \item[(2)] Logo fora do cilindro externo.
+    \end{enumerate}
+
+    \item[(b)] Encontre a diferença de potencial $\Delta\phi$ entre os dois cilindros.
+
+    \item[(c)] Descreva qualitativamente as mudanças nos campos elétricos e nos potenciais se:
+    \begin{enumerate}
+        \item[(1)] O raio interno \( r_1 \) do cilindro interno for diminuído.
+        \item[(2)] O raio externo \( r_2 \) do cilindro interno for aumentado.
+        \item[(3)] A seção transversal externa do cilindro interno for transformada em
+                   quadrado de lado \( 2r_2 \) (assumindo \( 2r_2 < r_3 \) ).
+    \end{enumerate}
+\end{enumerate}
 
 \textcolor{red}{\textbf{Solução:}}\\
 \end{flushleft}
