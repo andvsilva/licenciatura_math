@@ -86,14 +86,427 @@
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Problema 1}}\\
 Uma esfera inicialmente carregada com uma carga total Q e colocada em
-contato momentaneo com uma esfera id\^entica inicialmente descarregada. \\
+contato moment\^aneo com uma esfera id\^entica inicialmente descarregada. \\
 \textbf{a)} Qual \'e a carga em cada esfera ap\'os o contato?\\
 \textbf{b)} Esse processo \'e repetido com N esferas identicas inicialmente descarregadas. 
 Qual \'e a carga em cada uma das N + 1 esferas, incluindo a esfera que originalmente possuia a carga?\\
 \textbf{c)} Qual \'e a carga total no sistema ap\'os N contatos?
-\end{flushleft}
 
 \textcolor{red}{\textbf{Solução:}}\\
+\end{flushleft}
+
+\textbf{a)} Quando duas esferas idênticas entram em contato, a carga total se redistribui igualmente 
+entre elas. Assim, a carga em cada esfera será:
+\begin{equation}
+q = \frac{Q}{2}
+\end{equation}
+
+\textbf{b)} O processo se repete: a esfera originalmente carregada (agora com carga \(\frac{Q}{2}\)) 
+entra em contato com uma nova esfera descarregada, dividindo novamente sua carga por dois. 
+
+Após cada contato, a carga da esfera carregada será dividida pela metade. Assim, após \( N \) contatos, 
+a carga da esfera original será:
+
+\begin{equation}
+q_N = \frac{Q}{2^N}
+\end{equation}
+
+Cada nova esfera tocada recebe metade da carga da esfera carregada no momento do contato. Portanto:
+\begin{itemize}
+    \item 1ª esfera tocada: \( \frac{Q}{2} \)
+    \item 2ª esfera tocada: \( \frac{Q}{4} \)
+    \item 3ª esfera tocada: \( \frac{Q}{8} \)
+    \item \(\vdots\)
+    \item \( N \)-ésima esfera tocada: \( \frac{Q}{2^N} \)
+    \item original: \( \frac{Q}{2^N} \)
+\end{itemize}
+
+\textbf{c)}
+A carga total do sistema após os \( N \) contatos será a soma das cargas de todas as esferas:
+
+\begin{equation}
+Q_{\text{total}} = \left( \frac{Q}{2} + \frac{Q}{4} + \frac{Q}{8} + \cdots + \frac{Q}{2^N} \right) + \frac{Q}{2^N}
+\end{equation}
+
+O somatório \(\frac{Q}{2} + \frac{Q}{4} + \frac{Q}{8} + \cdots + \frac{Q}{2^N}\) é uma progressão geométrica 
+de razão \( r = \frac{1}{2} \).
+
+A soma dos \( N \) primeiros termos é:
+
+\begin{equation}
+S = \frac{\frac{Q}{2} \left(1 - \left( \frac{1}{2} \right)^N\right)}{1 - \frac{1}{2}}
+= Q\left(1 - \left( \frac{1}{2} \right)^N\right)
+\end{equation}
+
+Somando com a carga restante na esfera original:
+
+\begin{equation}
+Q_{\text{total}} = Q\left(1 - \left( \frac{1}{2} \right)^N\right) + \frac{Q}{2^N}
+\end{equation}
+
+\begin{equation}
+Q_{\text{total}} = Q
+\end{equation}
+
+Portanto, a carga total do sistema permanece constante e igual a \( Q \), respeitando a 
+da carga elétrica.
+
+
+\newpage 
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 2}}\\
+Uma placa infinita nos eixos \(x\) e \(y\) possui a seguinte distribuição superficial de carga:
+\begin{equation}
+\sigma(x,y) = \frac{\sigma_0 e^{-|x|/a}}{1 + (y/b)^2}
+\end{equation}
+onde \(a\) e \(b\) são constantes. \\
+
+\textcolor{red}{\textbf{Solução:}}\\
+\end{flushleft}
+
+
+
+A carga total \(Q\) na placa é dada pela integral da densidade superficial de carga \(\sigma(x, y)\) sobre toda a área da placa:
+\begin{equation}
+Q = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \sigma(x, y) \, dx \, dy
+\end{equation}
+
+Substituindo a expressão de \(\sigma(x, y)\), temos:
+\begin{equation}
+Q = \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} \frac{\sigma_0 e^{-|x|/a}}{1 + (y/b)^2} \, dx \, dy
+\end{equation}
+
+\section*{Passo 1: Integral sobre \(x\)}
+
+Calculamos a integral sobre \(x\):
+\begin{equation}
+\int_{-\infty}^{\infty} e^{-|x|/a} \, dx
+\end{equation}
+Dividindo a integral em duas partes (por causa da função \(|x|\)), temos:
+\begin{equation}
+\int_{-\infty}^{\infty} e^{-|x|/a} \, dx = 2 \int_0^{\infty} e^{-x/a} \, dx
+\end{equation}
+A integral da exponencial é dada por:
+\begin{equation}
+\int_0^{\infty} e^{-x/a} \, dx = a
+\end{equation}
+Portanto, temos:
+\begin{equation}
+\int_{-\infty}^{\infty} e^{-|x|/a} \, dx = 2a
+\end{equation}
+
+\section*{Passo 2: Integral sobre \(y\)}
+
+Agora, calculamos a integral sobre \(y\):
+\begin{equation}
+\int_{-\infty}^{\infty} \frac{1}{1 + (y/b)^2} \, dy
+\end{equation}
+Essa é uma integral padrão, conhecida como a integral de Cauchy, que resulta em:
+\begin{equation}
+\int_{-\infty}^{\infty} \frac{1}{1 + (y/b)^2} \, dy = \pi b
+\end{equation}
+
+\section*{Passo 3: Cálculo da carga total}
+
+Agora que temos as integrais sobre \(x\) e \(y\), podemos calcular a carga total:
+\begin{equation}
+Q = \sigma_0 \cdot 2a \cdot \pi b
+\end{equation}
+Portanto, a carga total na placa é:
+\begin{equation}
+\boxed{Q = \sigma_0 2\pi a b }
+\end{equation}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 3}}\\
+Considere uma linha de carga com densidade linear uniforme \( \lambda_0 \), de comprimento 
+total \( 2L \), centrada no eixo \( z \). Calcule o potencial elétrico em um ponto de campo 
+localizado a uma distância \( r \) do eixo \( z \) (por exemplo, no plano \( xy \)) e a uma 
+altura \( z \). Calcule o campo elétrico no mesmo ponto a partir do potencial. Calcule os limites 
+quando \( L \gg r \) e calcule também o limite quando \( r \gg L \).
+
+\textcolor{red}{\textbf{Solução:}}\\
+\end{flushleft}
+
+Considere uma linha de carga com densidade linear uniforme \( \lambda_0 \), de comprimento total \( 2L \), 
+centrada no eixo \( z \).
+
+\begin{figure}[h!]
+\begin{center}
+    \begin{tikzpicture}[scale=1.2]
+    
+    % Eixo z
+    \draw[->] (0,-3) -- (0,3) node[above] {$z$};
+    
+    % Linha de carga de -L a L
+    \draw[very thick, red] (0,-2) -- (0,2);
+    \node[left] at (0,2) {$L$};
+    \node[left] at (0,-2) {$-L$};
+    
+    % Ponto P
+    \filldraw (2,1) circle (1.5pt) node[right] {$P(r,z)$};
+    
+    % Distância r
+    \draw[dashed] (-0.2,1) -- (2,1);
+    \draw[<->] (0,1.2) -- (2,1.2);
+    \node[above] at (1,1.1) {$r$};
+    
+    % Distância z
+    \draw[dashed] (0,0) -- (0,1);
+    \draw[<->] (-0.2,0) -- (-0.2,1);
+    \node[left] at (-0.2,0.5) {$z$};
+    
+    % Elemento dz'
+    \draw[fill=black] (0,0.5) circle (1pt);
+    \node[left] at (0.7,0.4) {$z'$};
+    \draw[<->] (0.2,0) -- (0.2,0.5);
+    \draw[dashed] (0,0.5) -- (0.4,0.5);
+    
+    % Indicação do eixo x para orientar
+    \draw[->] (0,0) -- (2.5,0) node[right] {$x$};
+    
+    % Indicação do eixo y para orientar (para fora do plano)
+    \draw[->] (0,0) -- (-0.7,-0.7) node[below] {$y$};
+    
+\end{tikzpicture}
+\end{center}
+\caption{Linha de carga com densidade linear uniforme \( \lambda_0 \), de comprimento total \( 2L \), 
+centrada no eixo \( z \).}
+\end{figure}
+
+\subsection*{Potencial Elétrico}
+
+Um elemento infinitesimal de carga é dado por:
+\begin{equation}
+dq = \lambda_0 \, dz'
+\end{equation}
+O potencial devido a esse elemento no ponto \( (r, z) \) é:
+\begin{equation}
+dV = \frac{1}{4\pi\varepsilon_0} \frac{dq}{\sqrt{r^2 + (z - z')^2}}
+\end{equation}
+Substituindo \( dq \):
+\begin{equation}
+dV = \frac{\lambda_0}{4\pi\varepsilon_0} \frac{dz'}{\sqrt{r^2 + (z - z')^2}}
+\end{equation}
+O potencial total é a integral de \( dV \) de \( z' = -L \) até \( z' = L \):
+\begin{equation}
+V(r,z) = \frac{\lambda_0}{4\pi\varepsilon_0} \int_{-L}^{L} \frac{dz'}{\sqrt{r^2 + (z - z')^2}}
+\end{equation}
+
+Fazendo a substituição \( u = z - z' \), com \( du = -dz' \), temos:
+\begin{equation}
+V(r,z) = \frac{\lambda_0}{4\pi\varepsilon_0} \int_{z+L}^{z-L} \frac{-du}{\sqrt{r^2 + u^2}} = \frac{\lambda_0}{4\pi\varepsilon_0} \int_{z-L}^{z+L} \frac{du}{\sqrt{r^2 + u^2}}
+\end{equation}
+
+Integrando:
+\begin{equation}
+\int \frac{du}{\sqrt{r^2 + u^2}} = \ln\left(u + \sqrt{r^2 + u^2}\right) + C
+\end{equation}
+
+Aplicando os limites:
+\begin{equation}
+V(r,z) = \frac{\lambda_0}{4\pi\varepsilon_0} \left[ \ln\left(z+L + \sqrt{r^2 + (z+L)^2}\right) - \ln\left(z-L + \sqrt{r^2 + (z-L)^2}\right) \right]
+\end{equation}
+\begin{equation}
+V(r,z) = \frac{\lambda_0}{4\pi\varepsilon_0} \ln\left( \frac{z+L + \sqrt{r^2 + (z+L)^2}}{z-L + \sqrt{r^2 + (z-L)^2}} \right)
+\end{equation}
+
+\subsection*{Campo Elétrico}
+
+O campo elétrico é dado por:
+\begin{equation}
+\vec{E} = -\nabla V
+\end{equation}
+Em coordenadas cilíndricas (\( r, \theta, z \)) e considerando a simetria do problema:
+\begin{equation}
+E_r = -\frac{\partial V}{\partial r}, \quad E_z = -\frac{\partial V}{\partial z}, \quad E_\theta = 0
+\end{equation}
+
+\subsection*{Limites}
+
+\subsubsection*{1. Quando \( L \gg r \)}
+
+Neste caso, a linha de carga se comporta como um fio infinito. Aproximadamente:
+\begin{equation}
+V(r) \sim \frac{\lambda_0}{2\pi\varepsilon_0} \ln\left(\frac{2L}{r}\right)
+\end{equation}
+\begin{equation}
+E_r \sim \frac{\lambda_0}{2\pi\varepsilon_0 r}, \quad E_z \sim 0
+\end{equation}
+
+\subsubsection*{2. Quando \( r \gg L \)}
+
+Aqui, o sistema se comporta como uma carga pontual de carga total \( Q = 2L\lambda_0 \). Portanto:
+\begin{equation}
+V(r) \sim \frac{Q}{4\pi\varepsilon_0 r} = \frac{2L\lambda_0}{4\pi\varepsilon_0 r}
+\end{equation}
+\begin{equation}
+\vec{E} \sim \frac{Q}{4\pi\varepsilon_0 r^2} \hat{r}
+\end{equation}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 4}}\\
+
+Considere um elétron em um átomo de hidrogênio a uma distância de \( 0{,}53 \times 10^{-10} \, \text{m} \) do próton. 
+Sabendo que o próton tem carga \( +e \) e o elétron \( -e \), resolva:
+
+\begin{enumerate}
+    \item[a)] Calcule a energia potencial eletrostática do elétron em eV.
+    \item[b)] Sabendo que a velocidade do elétron é \( v = 2{,}189 \times 10^6 \, \text{m/s} \), 
+    calcule a energia total do elétron no átomo de hidrogênio em eV.
+\end{enumerate}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\subsection*{Letra (a): Energia Potencial Eletrostática}
+
+A fórmula da energia potencial eletrostática \( U \) entre duas cargas \( q_1 \) e \( q_2 \) separadas por uma distância \( r \) é dada por:
+
+\begin{equation}
+U = \frac{k \cdot q_1 \cdot q_2}{r}
+\end{equation}
+
+onde:
+\begin{equation}
+k = 8,99 \times 10^9 \, \text{N} \cdot \text{m}^2 / \text{C}^2 \quad \text{(constante eletrostática)},
+\end{equation}
+\begin{equation}
+q_1 = e = 1,6 \times 10^{-19} \, \text{C} \quad \text{(carga do próton)},
+\end{equation}
+\begin{equation}
+q_2 = -e = -1,6 \times 10^{-19} \, \text{C} \quad \text{(carga do elétron)},
+\end{equation}
+\begin{equation}
+r = 0,53 \times 10^{-10} \, \text{m} \quad \text{(distância entre as cargas)}.
+\end{equation}
+
+Substituindo os valores na fórmula:
+
+\begin{equation}
+U = \frac{(8,99 \times 10^9) \cdot (1,6 \times 10^{-19}) \cdot (-1,6 \times 10^{-19})}{0,53 \times 10^{-10}}
+\end{equation}
+
+Calculando:
+
+\begin{equation}
+U \approx \frac{(8,99 \times 10^9) \cdot (-2,56 \times 10^{-38})}{0,53 \times 10^{-10}} \approx -4,32 \times 10^{-18} \, \text{J}
+\end{equation}
+
+Convertendo para eV, usando \( 1 \, \text{eV} = 1,602 \times 10^{-19} \, \text{J} \):
+
+\begin{equation}
+U \approx \frac{-4,32 \times 10^{-18}}{1,602 \times 10^{-19}} \approx -27 \, \text{eV}
+\end{equation}
+
+Portanto, a energia potencial eletrostática é:
+
+\begin{equation}
+\boxed{ U \approx -27 \, \text{eV}}
+\end{equation}
+
+\subsection*{Letra (b): Energia Total do Elétron}
+
+A energia total \( E \) do elétron é a soma da energia cinética \( E_{\text{cinet}} \) e da energia potencial \( U \). A energia cinética é dada por:
+
+\begin{equation}
+E_{\text{cinet}} = \frac{1}{2} m v^2
+\end{equation}
+
+onde:
+\begin{equation}
+m = 9,11 \times 10^{-31} \, \text{kg} \quad \text{(massa do elétron)},
+\end{equation}
+\begin{equation}
+v = 2,189 \times 10^6 \, \text{m/s} \quad \text{(velocidade do elétron)}.
+\end{equation}
+
+Substituindo os valores:
+
+\begin{equation}
+E_{\text{cinet}} = \frac{1}{2} \cdot (9,11 \times 10^{-31}) \cdot (2,189 \times 10^6)^2
+\end{equation}
+
+Calculando:
+
+\begin{equation}
+E_{\text{cinet}} \approx \frac{1}{2} \cdot 9,11 \times 10^{-31} \cdot 4,79 \times 10^{12} \approx 2,18 \times 10^{-18} \, \text{J}
+\end{equation}
+
+Convertendo para eV:
+
+\begin{equation}
+E_{\text{cinet}} \approx \frac{2,18 \times 10^{-18}}{1,602 \times 10^{-19}} \approx 13,6 \, \text{eV}
+\end{equation}
+
+Agora, a energia total do elétron é a soma da energia cinética e da energia potencial:
+
+\begin{equation}
+E = E_{\text{cinet}} + U
+\end{equation}
+
+\begin{equation}
+E = 13,6 \, \text{eV} + (-27 \, \text{eV}) \approx -13,6 \, \text{eV}
+\end{equation}
+
+Portanto, a energia total do elétron no átomo de hidrogênio é:
+
+\begin{equation}
+\boxed{E \approx -13,6 \, \text{eV}}
+\end{equation}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 5}}\\
+
+Imagine que a Terra tenha densidade uniforme e que um túnel seja escavado ao longo de um diâmetro.
+
+\begin{enumerate}
+    \item[a)] Se um objeto for solto no túnel, mostre que ele oscilaria com um período \( P \) igual ao 
+    período de um satélite em órbita na superfície da Terra.
+    \item[b)] Calcule \( P \).
+\end{enumerate}
+
+\textcolor{red}{\textbf{Solução:}}\\
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 6}}\\
+
+\textcolor{red}{\textbf{Solução:}}\\
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 7}}\\
+
+\textcolor{red}{\textbf{Solução:}}\\
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 8}}\\
+
+\textcolor{red}{\textbf{Solução:}}\\
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 9}}\\
+
+\textcolor{red}{\textbf{Solução:}}\\
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 10}}\\
+
+\textcolor{red}{\textbf{Solução:}}\\
+\end{flushleft}
+
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 11}}\\
+
+\textcolor{red}{\textbf{Solução:}}\\
+\end{flushleft}
+
 
 
 %%%%%%%% Bibliography 
