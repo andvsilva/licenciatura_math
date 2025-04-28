@@ -616,10 +616,124 @@ O cilindro interno apresenta raios interno \( r_1 \) e externo \( r_2 \), enquan
 \end{enumerate}
 
 \textcolor{red}{\textbf{Solução:}}\\
+
+Dois cilindros condutores longos e concêntricos possuem densidades lineares de carga $\lambda_1$ (interno) e $\lambda_2$ (externo). Vamos resolver as questões:
+
+\begin{itemize}
+    \item[(a)] Encontrar $E(r)$:
+
+    \begin{itemize}
+        \item[(1)] \textbf{Em um ponto próximo ao meio (entre $r_2 < r < r_3$)}:
+
+        Aplicando a Lei de Gauss:
+
+        \[
+        \oint \vec{E} \cdot d\vec{A} = \frac{Q_{\text{interna}}}{\varepsilon_0}
+        \]
+
+        Como o sistema é cilíndrico:
+
+        \[
+        E(2\pi r L) = \frac{\lambda_{\text{enc}} L}{\varepsilon_0}
+        \]
+        
+        Logo:
+
+        \[
+        E(r) = \frac{\lambda_{\text{enc}}}{2\pi\varepsilon_0 r}
+        \]
+
+        Onde $\lambda_{\text{enc}}$ é a carga linear total até o raio $r$.
+
+        Para $r_2 < r < r_3$, somente o cilindro interno contribui, logo:
+
+        \[
+        \lambda_{\text{enc}} = \lambda_1
+        \]
+
+        Assim:
+
+        \[
+        E(r) = \frac{\lambda_1}{2\pi\varepsilon_0 r}
+        \]
+
+        \item[(2)] \textbf{Logo fora do cilindro externo ($r > r_4$)}:
+
+        Agora, as cargas dos dois cilindros contribuem:
+
+        \[
+        \lambda_{\text{enc}} = \lambda_1 + \lambda_2
+        \]
+
+        Portanto:
+
+        \[
+        E(r) = \frac{\lambda_1 + \lambda_2}{2\pi\varepsilon_0 r}
+        \]
+    \end{itemize}
+
+    \item[(b)] Encontrar a diferença de potencial $\Delta\phi$ entre os dois cilindros:
+
+    O potencial $\phi(r)$ é dado por:
+
+    \[
+    \phi(r) = -\int E(r) \, dr
+    \]
+
+    Logo, a diferença de potencial entre $r_2$ e $r_3$ é:
+
+    \[
+    \Delta \phi = \phi(r_3) - \phi(r_2)
+    \]
+
+    Integrando:
+
+    \[
+    \Delta \phi = -\int_{r_2}^{r_3} \frac{\lambda_1}{2\pi\varepsilon_0 r} \, dr
+    \]
+
+    \[
+    \Delta \phi = -\frac{\lambda_1}{2\pi\varepsilon_0} \ln\left(\frac{r_3}{r_2}\right)
+    \]
+
+    \item[(c)] Descrever qualitativamente:
+
+    \begin{itemize}
+        \item[(1)] Se $r_1$ for diminuído:
+
+        A distribuição de carga no cilindro interno se concentra mais, mas, fora dele ($r > r_2$), o campo não muda, pois depende apenas da carga linear total $\lambda_1$.
+
+        \item[(2)] Se $r_2$ for aumentado:
+
+        O cilindro interno se torna mais largo. A distância até o cilindro externo diminui, o que pode alterar a diferença de potencial $\Delta \phi$ (diminuindo a magnitude do potencial).
+
+        \item[(3)] Se a seção transversal externa do cilindro interno for transformada em um quadrado de lado $2r_2$:
+
+        A simetria cilíndrica se perde. Assim, o campo elétrico deixa de ser puramente radial e passa a variar conforme a direção, especialmente próximo às bordas do quadrado. No entanto, se $\sqrt{2} r_2 < r_3$, ainda há uma região entre o quadrado e o cilindro externo onde o campo pode ser aproximadamente radial.
+    \end{itemize}
+
+\end{itemize}
+
 \end{flushleft}
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Problema 7}}\\
+A partícula 1 tem massa \( m_1 = 3{,}6 \times 10^{-6} \, \text{kg} \), enquanto a partícula 2 tem 
+massa \( m_2 = 6{,}2 \times 10^{-6} \, \text{kg} \). Ambas possuem a mesma carga elétrica. As partículas 
+estão inicialmente em repouso, e o sistema de duas partículas possui uma energia potencial elétrica 
+inicial de \( 0{,}150 \, \text{J} \).
+
+As partículas são então liberadas e se repelem devido à força elétrica. Efeitos gravitacionais 
+são desprezados, e nenhuma outra força atua sobre as partículas. Em um instante após a liberação, a 
+velocidade da partícula 1 é medida como \( v_1 = 170 \, \text{m/s} \).
+
+\begin{enumerate}
+    \item[(a)] Qual é a energia potencial elétrica do sistema de duas partículas nesse instante?
+    \item[(b)] Que tipos de energia o sistema tinha inicialmente?
+    \item[(c)] Que tipos de energia o sistema tem no instante posterior?
+    \item[(d)] O princípio da conservação de energia se aplica? Justifique.
+    \item[(e)] O princípio da conservação do momento linear se aplica? Justifique.
+\end{enumerate}
 
 \textcolor{red}{\textbf{Solução:}}\\
 \end{flushleft}
@@ -627,26 +741,473 @@ O cilindro interno apresenta raios interno \( r_1 \) e externo \( r_2 \), enquan
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Problema 8}}\\
 
+Duas cargas puntiformes idênticas \( q_A = q_B = +2{,}4 \times 10^{-9} \, \text{C} \) estão 
+fixas no espaço e separadas por \( 0{,}50 \, \text{m} \). Determine o campo elétrico e o potencial 
+elétrico no ponto médio da linha entre as cargas \( q_A \) e \( q_B \).
+
+\begin{enumerate}
+    \item[(a)] Quais são as direções das contribuições individuais do campo elétrico de \( q_A \) e \( q_B \) no ponto médio?
+    \item[(b)] O campo elétrico líquido no ponto médio tem módulo maior, menor ou igual a zero?
+    \item[(c)] O potencial elétrico total no ponto médio é positivo, negativo ou zero?
+    \item[(d)] O potencial elétrico total tem direção associada?
+    \item[(e)] Calcule o valor do campo e do potencial elétrico no ponto médio.
+\end{enumerate}
+
 \textcolor{red}{\textbf{Solução:}}\\
+
+\section*{Dados do problema}
+
+\begin{itemize}
+    \item Massa da partícula 1: \( m_1 = 3{,}6 \times 10^{-6} \, \text{kg} \)
+    \item Massa da partícula 2: \( m_2 = 6{,}2 \times 10^{-6} \, \text{kg} \)
+    \item Velocidade da partícula 1: \( v_1 = 170 \, \text{m/s} \)
+    \item Energia potencial inicial: \( U_i = 0{,}150 \, \text{J} \)
+\end{itemize}
+
+Efeitos gravitacionais são desprezados, e apenas forças elétricas atuam.
+
+\section*{(a) Energia potencial elétrica do sistema nesse instante}
+
+Pela conservação da energia:
+
+\[
+E_{\text{inicial}} = E_{\text{final}}
+\]
+\[
+U_i = U_f + K
+\]
+
+Onde \( K \) é a energia cinética total:
+
+\[
+K = \frac{1}{2} m_1 v_1^2 + \frac{1}{2} m_2 v_2^2
+\]
+
+Utilizando a conservação do momento linear:
+
+\[
+m_1 v_1 + m_2 v_2 = 0
+\quad \Rightarrow \quad
+v_2 = -\frac{m_1}{m_2} v_1
+\]
+
+Substituindo os valores:
+
+\[
+v_2 = -\frac{3{,}6 \times 10^{-6}}{6{,}2 \times 10^{-6}} \times 170
+\quad \Rightarrow \quad
+v_2 \approx -98{,}7 \, \text{m/s}
+\]
+
+Calculando a energia cinética:
+
+\[
+K = \frac{1}{2} (3{,}6 \times 10^{-6}) (170)^2 + \frac{1}{2} (6{,}2 \times 10^{-6}) (98{,}7)^2
+\]
+\[
+K = (1{,}8 \times 10^{-6})(28900) + (3{,}1 \times 10^{-6})(9746{,}69)
+\]
+\[
+K = 0{,}05202 + 0{,}03031 = 0{,}08233 \, \text{J}
+\]
+
+Agora, determinamos \( U_f \):
+
+\[
+U_f = U_i - K
+\]
+\[
+U_f = 0{,}150 - 0{,}08233
+\]
+\[
+\boxed{U_f = 0{,}0677 \, \text{J}}
+\]
+
+\section*{(b) Tipos de energia inicialmente}
+
+Inicialmente, as partículas estavam em repouso, logo:
+
+\[
+\text{Energia inicial} = \text{energia potencial elétrica}
+\]
+
+\textbf{Resposta:} Apenas energia potencial elétrica.
+
+\section*{(c) Tipos de energia no instante posterior}
+
+Após serem liberadas, as partículas possuem:
+
+\[
+\text{Energia posterior} = \text{energia cinética} + \text{energia potencial elétrica}
+\]
+
+\textbf{Resposta:} Energia cinética e energia potencial elétrica.
+
+\section*{(d) Conservação da energia}
+
+Sim, a conservação da energia se aplica, pois:
+
+\begin{itemize}
+    \item O sistema é isolado (sem forças externas realizando trabalho).
+    \item Apenas forças internas (elétricas) atuam.
+\end{itemize}
+
+\textbf{Resposta:} O princípio da conservação da energia se aplica.
+
+\section*{(e) Conservação do momento linear}
+
+Sim, a conservação do momento linear se aplica, pois:
+
+\begin{itemize}
+    \item O sistema está isolado (sem forças externas).
+\end{itemize}
+
+\textbf{Resposta:} O princípio da conservação do momento linear se aplica.
 \end{flushleft}
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Problema 9}}\\
 
+Uma região esférica de raio \( R \) está preenchida com carga de tal forma que o campo elétrico no 
+interior da região é dado por:
+\[
+\mathbf{E} = \frac{E_0}{R^2} \, \mathbf{r}
+\]
+onde \( \mathbf{r} \) é o vetor posição a partir do centro da esfera, e \( E_0 \) é uma constante.\\
+
+Determine a densidade de carga na região.
+
 \textcolor{red}{\textbf{Solução:}}\\
+
+Uma região esférica de raio \( R \) está preenchida com carga de tal forma que o campo elétrico no interior da região é dado por:
+
+\begin{equation}
+\mathbf{E} = \frac{E_0}{R^2} \, \mathbf{r}
+\end{equation}
+
+onde \( \mathbf{r} \) é o vetor posição a partir do centro da esfera, e \( E_0 \) é uma constante. Determine a densidade de carga na região.
+
+\section*{Solução}
+
+Para determinar a densidade de carga, usamos a Lei de Gauss na forma diferencial:
+
+\begin{equation}
+\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}
+\end{equation}
+
+onde \( \rho \) é a densidade de carga e \( \varepsilon_0 \) é a permissividade do vácuo.
+
+O campo elétrico no interior da esfera é dado por:
+
+\begin{equation}
+\mathbf{E} = \frac{E_0}{R^2} \, \mathbf{r}
+\end{equation}
+
+Agora, vamos calcular o divergente do campo elétrico.
+
+\subsection*{Cálculo do Divergente de \( \mathbf{E} \)}
+
+O campo elétrico tem a forma:
+
+\begin{equation}
+\mathbf{E} = \frac{E_0}{R^2} (x \hat{i} + y \hat{j} + z \hat{k})
+\end{equation}
+
+Onde \( \mathbf{r} = x \hat{i} + y \hat{j} + z \hat{k} \) é o vetor posição.
+
+O divergente em coordenadas cartesianas é dado por:
+
+\begin{equation}
+\nabla \cdot \mathbf{E} = \frac{\partial E_x}{\partial x} + \frac{\partial E_y}{\partial y} + \frac{\partial E_z}{\partial z}
+\end{equation}
+
+Com:
+
+\begin{equation}
+E_x = \frac{E_0}{R^2} x, \quad E_y = \frac{E_0}{R^2} y, \quad E_z = \frac{E_0}{R^2} z
+\end{equation}
+
+Calculando as derivadas parciais:
+
+\begin{equation}
+\frac{\partial E_x}{\partial x} = \frac{E_0}{R^2}, \quad \frac{\partial E_y}{\partial y} = \frac{E_0}{R^2}, \quad \frac{\partial E_z}{\partial z} = \frac{E_0}{R^2}
+\end{equation}
+
+Somando as derivadas:
+
+\begin{equation}
+\nabla \cdot \mathbf{E} = 3 \times \frac{E_0}{R^2} = \frac{3 E_0}{R^2}
+\end{equation}
+
+\subsection*{Aplicando a Lei de Gauss}
+
+De acordo com a Lei de Gauss, temos:
+
+\begin{equation}
+\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}
+\end{equation}
+
+Substituindo o valor do divergente:
+
+\begin{equation}
+\frac{3 E_0}{R^2} = \frac{\rho}{\varepsilon_0}
+\end{equation}
+
+Isolando \( \rho \):
+
+\begin{equation}
+\rho = \varepsilon_0 \frac{3 E_0}{R^2}
+\end{equation}
+
+\section*{Resultado Final}
+
+A densidade de carga na região é:
+
+\begin{equation}
+\boxed{\rho = \frac{3 \varepsilon_0 E_0}{R^2}}
+\end{equation}
+
 \end{flushleft}
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Problema 10}}\\
 
+Determine o campo elétrico \( \vec{E} \) e a densidade volumétrica de carga \( \rho \) para as 
+seguintes distribuições de potencial elétrico:
+
+\begin{itemize}
+    \item[(a)] \( V = A x^2 \)
+    \item[(b)] \( V = A x y z \)
+\end{itemize}
+
 \textcolor{red}{\textbf{Solução:}}\\
+
+(a) \( V = A x^2 \)
+
+1. Calcular o campo elétrico \( \vec{E} \)
+
+O campo elétrico é dado por:
+
+\begin{equation}
+\vec{E} = -\nabla V
+\end{equation}
+
+Para \( V = A x^2 \), calculamos o gradiente em coordenadas cartesianas. Como \(V\) depende apenas de \(x\), temos:
+
+\begin{equation}
+\nabla V = \frac{\partial V}{\partial x} \hat{i} + \frac{\partial V}{\partial y} \hat{j} + \frac{\partial V}{\partial z} \hat{k}
+\end{equation}
+
+Logo:
+
+\begin{equation}
+\frac{\partial V}{\partial x} = 2 A x, \quad \frac{\partial V}{\partial y} = 0, \quad \frac{\partial V}{\partial z} = 0
+\end{equation}
+
+Portanto, o gradiente de \(V\) é:
+
+\begin{equation}
+\nabla V = 2 A x \hat{i}
+\end{equation}
+
+O campo elétrico será:
+
+\begin{equation}
+\vec{E} = -\nabla V = - 2 A x \hat{i}
+\end{equation}
+
+2. Calcular a densidade de carga \( \rho \)
+
+Agora, aplicamos a Lei de Gauss:
+
+\begin{equation}
+\nabla \cdot \vec{E} = \frac{\rho}{\varepsilon_0}
+\end{equation}
+
+Primeiro, calculamos o divergente do campo elétrico \( \vec{E} \):
+
+\begin{equation}
+\nabla \cdot \vec{E} = \frac{\partial}{\partial x} (-2 A x) + 0 + 0 = -2 A
+\end{equation}
+
+Portanto:
+
+\begin{equation}
+\frac{\rho}{\varepsilon_0} = -2 A
+\end{equation}
+
+Logo, a densidade de carga é:
+
+\begin{equation}
+\rho = -2 A \varepsilon_0
+\end{equation}
+
+(b) \( V = A x y z \)
+
+1. Calcular o campo elétrico \( \vec{E} \)
+
+O campo elétrico é dado por:
+
+\begin{equation}
+\vec{E} = -\nabla V
+\end{equation}
+
+Para \( V = A x y z \), calculamos o gradiente:
+
+\begin{equation}
+\nabla V = \frac{\partial V}{\partial x} \hat{i} + \frac{\partial V}{\partial y} \hat{j} + \frac{\partial V}{\partial z} \hat{k}
+\end{equation}
+
+Logo:
+
+\begin{equation}
+\frac{\partial V}{\partial x} = A y z, \quad \frac{\partial V}{\partial y} = A x z, \quad \frac{\partial V}{\partial z} = A x y
+\end{equation}
+
+Portanto, o gradiente de \( V \) é:
+
+\begin{equation}
+\nabla V = A y z \hat{i} + A x z \hat{j} + A x y \hat{k}
+\end{equation}
+
+O campo elétrico será:
+
+\begin{equation}
+\vec{E} = -\nabla V = - A y z \hat{i} - A x z \hat{j} - A x y \hat{k}
+\end{equation}
+
+2. Calcular a densidade de carga \( \rho \)
+
+Agora, aplicamos a Lei de Gauss:
+
+\begin{equation}
+\nabla \cdot \vec{E} = \frac{\rho}{\varepsilon_0}
+\end{equation}
+
+Calculando o divergente de \( \vec{E} \):
+
+\begin{equation}
+\nabla \cdot \vec{E} = \frac{\partial}{\partial x} (- A y z) + \frac{\partial}{\partial y} (- A x z) + \frac{\partial}{\partial z} (- A x y)
+\end{equation}
+
+\begin{equation}
+\nabla \cdot \vec{E} = 0 + 0 + 0 = 0
+\end{equation}
+
+Logo, a densidade de carga é:
+
+\begin{equation}
+\rho = 0
+\end{equation}
+
+\section*{Resultado Final}
+
+Para o potencial \( V = A x^2 \):
+\begin{itemize}
+\item Campo elétrico: \( \vec{E} = - 2 A x \hat{i} \)
+\item Densidade de carga: \( \rho = - 2 A \varepsilon_0 \)
+\end{itemize}
+
+Para o potencial \( V = A x y z \):
+
+\begin{itemize}
+\item Campo elétrico: \( \vec{E} = - A y z \hat{i} - A x z \hat{j} - A x y \hat{k} \)
+\item Densidade de carga: \( \rho = 0 \)
+\end{itemize}
+
 \end{flushleft}
 
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Problema 11}}\\
 
+Quais dos seguintes vetores podem ser um campo elétrico? Se forem, qual é a densidade 
+volumétrica de carga associada?
+
+\begin{itemize}
+    \item[(a)] \( \vec{E} = a x^2 y^2 \, \hat{x} \)
+    \item[(b)] \( \vec{E} = a ( \hat{r} \cos \theta - \hat{\theta} \sin \theta ) \)
+\end{itemize}
+
 \textcolor{red}{\textbf{Solução:}}\\
+
+\subsection*{(a) \( \vec{E} = a x^2 y^2 \, \hat{x} \)}
+
+Para verificar se o vetor \( \vec{E} = a x^2 y^2 \hat{x} \) pode ser um campo elétrico, devemos calcular seu divergente.
+
+Em coordenadas cartesianas, o divergente de \( \vec{E} \) é dado por:
+
+\begin{equation}
+\nabla \cdot \vec{E} = \frac{\partial}{\partial x}(a x^2 y^2) + \frac{\partial}{\partial y}(0) + \frac{\partial}{\partial z}(0)
+\end{equation}
+
+Como \( \vec{E} \) não depende de \( y \) nem de \( z \), temos:
+
+\begin{equation}
+\nabla \cdot \vec{E} = \frac{\partial}{\partial x}(a x^2 y^2) = 2a x y^2
+\end{equation}
+
+Portanto, a densidade de carga associada é:
+
+\begin{equation}
+\rho = \varepsilon_0 \nabla \cdot \vec{E} = \varepsilon_0 (2a x y^2)
+\end{equation}
+
+Este resultado indica que o campo elétrico pode ser gerado por uma distribuição de carga 
+não uniforme, logo, \( \vec{E} = a x^2 y^2 \hat{x} \) pode representar um campo elétrico.
+
+\subsection*{(b) \( \vec{E} = a ( \hat{r} \cos \theta - \hat{\theta} \sin \theta ) \)}
+
+Agora, temos o campo elétrico \( \vec{E} = a ( \hat{r} \cos \theta - \hat{\theta} \sin \theta ) \) em 
+coordenadas cilíndricas. Para verificar se esse vetor pode ser um campo elétrico, devemos calcular o seu divergente.
+
+Em coordenadas cilíndricas, o divergente de um vetor \( \vec{E} = E_r \hat{r} + E_\theta \hat{\theta} \) é dado por:
+
+\begin{equation}
+\nabla \cdot \vec{E} = \frac{1}{r} \frac{\partial}{\partial r}(r E_r) + \frac{1}{r} \frac{\partial}{\partial \theta}(E_\theta) + \frac{\partial}{\partial z}(E_z)
+\end{equation}
+
+Para o campo \( \vec{E} = a ( \hat{r} \cos \theta - \hat{\theta} \sin \theta ) \), temos:
+
+\begin{equation}
+E_r = a \cos \theta, \quad E_\theta = -a \sin \theta, \quad E_z = 0
+\end{equation}
+
+Logo, o divergente de \( \vec{E} \) em coordenadas cilíndricas é:
+
+\begin{equation}
+\nabla \cdot \vec{E} = \frac{1}{r} \frac{\partial}{\partial r}(r a \cos \theta) + \frac{1}{r} \frac{\partial}{\partial \theta}(-a \sin \theta)
+\end{equation}
+
+A primeira derivada em \( r \) é zero, pois \( E_r \) não depende de \( r \). A segunda derivada em \( \theta \) é:
+
+\begin{equation}
+\frac{\partial}{\partial \theta}(-a \sin \theta) = -a \cos \theta
+\end{equation}
+
+Portanto:
+
+\begin{equation}
+\nabla \cdot \vec{E} = \frac{-a \cos \theta}{r}
+\end{equation}
+
+Então, a densidade de carga associada é:
+
+\begin{equation}
+\rho = \varepsilon_0 \nabla \cdot \vec{E} = -\frac{a \varepsilon_0 \cos \theta}{r}
+\end{equation}
+
+Este resultado indica que o campo elétrico pode ser gerado por uma distribuição de carga que depende 
+de \( \theta \) e \( r \). Logo, \( \vec{E} = a ( \hat{r} \cos \theta - \hat{\theta} \sin \theta ) \) também 
+pode representar um campo elétrico.
+
+\section*{Resultado Final}
+
+- Para o campo \( \vec{E} = a x^2 y^2 \hat{x} \), o divergente é \( \nabla \cdot \vec{E} = 2a x y^2 \), e a 
+densidade de carga associada é \( \rho = \varepsilon_0 (2a x y^2) \).
+- Para o campo \( \vec{E} = a ( \hat{r} \cos \theta - \hat{\theta} \sin \theta ) \), o divergente 
+é \( \nabla \cdot \vec{E} = \frac{-a \cos \theta}{r} \), e a densidade de carga associada 
+é \( \rho = -\frac{a \varepsilon_0 \cos \theta}{r} \).
 \end{flushleft}
 
 
