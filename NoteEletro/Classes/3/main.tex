@@ -20,6 +20,8 @@
 \usepackage{setspace}
 \usepackage{tikz-3dplot} % Necessário para coordenadas 3D
 \usetikzlibrary{intersections}
+\usepackage{siunitx}
+
 
 \linespread{1.5}
 
@@ -148,7 +150,7 @@ Q_{\text{total}} = Q\left(1 - \left( \frac{1}{2} \right)^N\right) + \frac{Q}{2^N
 Q_{\text{total}} = Q
 \end{equation}
 
-Portanto, a carga total do sistema permanece constante e igual a \( Q \), respeitando a 
+Portanto, \colorbox{yellow}{a carga total do sistema permanece constante e igual a \( Q \)}, respeitando a conservação
 da carga elétrica.
 
 
@@ -213,7 +215,7 @@ Agora que temos as integrais sobre \(x\) e \(y\), podemos calcular a carga total
 \begin{equation}
 Q = \sigma_0 \cdot 2a \cdot \pi b
 \end{equation}
-Portanto, a carga total na placa é:
+Portanto, \colorbox{yellow}{a carga total na placa é}:
 \begin{equation}
 \boxed{Q = \sigma_0 2\pi a b }
 \end{equation}
@@ -245,7 +247,9 @@ centrada no eixo \( z \).
     \node[left] at (0,-2) {$-L$};
     
     % Ponto P
-    \filldraw (2,1) circle (1.5pt) node[right] {$P(r,z)$};
+    \filldraw (2,1) circle (1.5pt) node[below] {};
+    \node[left] at (3,0.7) {$P(r,z)$};
+    \draw[->, red] (2,1) -- (2.7,1) node[right] {$E_{r}$};
     
     % Distância r
     \draw[dashed] (-0.2,1) -- (2,1);
@@ -258,10 +262,11 @@ centrada no eixo \( z \).
     \node[left] at (-0.2,0.5) {$z$};
     
     % Elemento dz'
-    \draw[fill=black] (0,0.5) circle (1pt);
+    \draw[fill=blue] (0,0.5) circle (1pt);
     \node[left] at (0.7,0.4) {$z'$};
     \draw[<->] (0.2,0) -- (0.2,0.5);
     \draw[dashed] (0,0.5) -- (0.4,0.5);
+    \draw[->, blue!80] (0,0.5) -- (2,1);
     
     % Indicação do eixo x para orientar
     \draw[->] (0,0) -- (2.5,0) node[right] {$x$};
@@ -279,7 +284,7 @@ centrada no eixo \( z \).}
 
 Um elemento infinitesimal de carga é dado por:
 \begin{equation}
-dq = \lambda_0 \, dz'
+\textcolor{blue!80}{dq} = \lambda_0 \, dz'
 \end{equation}
 O potencial devido a esse elemento no ponto \( (r, z) \) é:
 \begin{equation}
@@ -309,7 +314,9 @@ Aplicando os limites:
 V(r,z) = \frac{\lambda_0}{4\pi\varepsilon_0} \left[ \ln\left(z+L + \sqrt{r^2 + (z+L)^2}\right) - \ln\left(z-L + \sqrt{r^2 + (z-L)^2}\right) \right]
 \end{equation}
 \begin{equation}
+\boxed{
 V(r,z) = \frac{\lambda_0}{4\pi\varepsilon_0} \ln\left( \frac{z+L + \sqrt{r^2 + (z+L)^2}}{z-L + \sqrt{r^2 + (z-L)^2}} \right)
+}
 \end{equation}
 
 \subsection*{Campo Elétrico}
@@ -329,27 +336,68 @@ E_r = -\frac{\partial V}{\partial r}, \quad E_z = -\frac{\partial V}{\partial z}
 
 Neste caso, a linha de carga se comporta como um fio infinito. Aproximadamente:
 \begin{equation}
+\boxed{
 V(r) \sim \frac{\lambda_0}{2\pi\varepsilon_0} \ln\left(\frac{2L}{r}\right)
+}
 \end{equation}
+
 \begin{equation}
+\boxed{
 E_r \sim \frac{\lambda_0}{2\pi\varepsilon_0 r}, \quad E_z \sim 0
+}
 \end{equation}
 
 \subsubsection*{2. Quando \( r \gg L \)}
 
 Aqui, o sistema se comporta como uma carga pontual de carga total \( Q = 2L\lambda_0 \). Portanto:
 \begin{equation}
+\boxed{
 V(r) \sim \frac{Q}{4\pi\varepsilon_0 r} = \frac{2L\lambda_0}{4\pi\varepsilon_0 r}
+}
 \end{equation}
 \begin{equation}
+\boxed{
 \vec{E} \sim \frac{Q}{4\pi\varepsilon_0 r^2} \hat{r}
+}
 \end{equation}
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Problema 4}}\\
 
 Considere um elétron em um átomo de hidrogênio a uma distância de \( 0{,}53 \times 10^{-10} \, \text{m} \) do próton. 
-Sabendo que o próton tem carga \( +e \) e o elétron \( -e \), resolva:
+Sabendo que o próton tem carga \( +e \) e o elétron \( -e \), 
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[scale=3]
+    
+    % Desenhar o círculo da órbita
+    \draw[dashed, blue] (0,0) circle (1);
+    
+    % Próton no centro
+    \filldraw[red] (0,0) circle (0.05);
+    \node at (0.2,0.15) {\( (+e)\)};
+    
+    % Elétron na órbita
+    \filldraw[blue] (1,0) circle (0.05);
+    \node at (1.2,0.1) {\((-e)\)};
+    
+    % Vetor de força ou campo
+    \draw[->, thick] (1,0) -- (0.5,0);
+    \node at (0.75,0.1) {\(\vec{F}\)};
+    
+    % Distância
+    \draw[<->] (0,1.2) -- (1,1.2);
+    \node at (0.7,1.35) {\( r = 0{,}53 \times 10^{-10} \, \text{m} \)};
+    \draw[->, dashed] (0,0) -- (0,1.2);
+    \draw[->, dashed] (1,0) -- (1,1.2);
+    
+    \end{tikzpicture}
+    \caption{Esquema do elétron orbitando o próton em um átomo de hidrogênio.}
+\end{figure}
+
+
+resolva:
 
 \begin{enumerate}
     \item[a)] Calcule a energia potencial eletrostática do elétron em eV.
@@ -399,7 +447,7 @@ Convertendo para eV, usando \( 1 \, \text{eV} = 1,602 \times 10^{-19} \, \text{J
 U \approx \frac{-4,32 \times 10^{-18}}{1,602 \times 10^{-19}} \approx -27 \, \text{eV}
 \end{equation}
 
-Portanto, a energia potencial eletrostática é:
+Portanto, \colorbox{yellow}{a energia energia potencial eletrostática é}:
 
 \begin{equation}
 \boxed{ U \approx -27 \, \text{eV}}
@@ -439,7 +487,7 @@ Convertendo para eV:
 E_{\text{cinet}} \approx \frac{2,18 \times 10^{-18}}{1,602 \times 10^{-19}} \approx 13,6 \, \text{eV}
 \end{equation}
 
-Agora, a energia total do elétron é a soma da energia cinética e da energia potencial:
+Agora, \colorbox{yellow}{a energia total do elétron é a soma da energia cinética e da energia potencial}:
 
 \begin{equation}
 E = E_{\text{cinet}} + U
@@ -449,7 +497,7 @@ E = E_{\text{cinet}} + U
 E = 13,6 \, \text{eV} + (-27 \, \text{eV}) \approx -13,6 \, \text{eV}
 \end{equation}
 
-Portanto, a energia total do elétron no átomo de hidrogênio é:
+Portanto, \colorbox{yellow}{a energia total do elétron no átomo de hidrogênio é}:
 
 \begin{equation}
 \boxed{E \approx -13,6 \, \text{eV}}
@@ -466,6 +514,37 @@ Imagine que a Terra tenha densidade uniforme e que um túnel seja escavado ao lo
     período de um satélite em órbita na superfície da Terra.
     \item[b)] Calcule \( P \).
 \end{enumerate}
+
+\begin{center}
+\begin{tikzpicture}[scale=2]
+
+    % Terra (círculo)
+    \draw[fill=blue!10] (0,0) circle (1);
+  
+    % Túnel (linha pelo diâmetro)
+    \draw[very thick, red] (-1,0) -- (1,0);
+  
+    % Centro da Terra
+    \fill (0,0) circle (0.02);
+    \node[below right] at (0,0) {Centro};
+  
+    % Objeto dentro do túnel
+    \filldraw[black] (-0.5,0) circle (0.03);
+    \node[above] at (-0.5,0) {Objeto};
+  
+    % Raio da Terra
+    \draw[->, thick] (0,0) -- (0.707,0.707);
+    \node[right] at (0.707,0.707) {$R$};
+  
+    % Eixos
+    \draw[dashed] (0,-1.2) -- (0,1.2);
+    \node at (0,1.3) {Eixo vertical};
+  
+    % Legenda
+    \node[below] at (0,-1.2) {Túnel escavado ao longo do diâmetro da Terra};
+  
+\end{tikzpicture}
+\end{center}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
@@ -494,7 +573,9 @@ Esta força é proporcional a \( r \) e dirigida para o centro, característica 
 A equação do movimento é:
 
 \begin{equation}
+\boxed{
 m \frac{d^2r}{dt^2} = -G \frac{M m}{R^3} r
+}
 \end{equation}
 
 Dividindo por \( m \):
@@ -597,6 +678,48 @@ carga linear \( +\lambda_2 \).
 
 O cilindro interno apresenta raios interno \( r_1 \) e externo \( r_2 \), enquanto o cilindro externo apresenta raios interno \( r_3 \) e externo \( r_4 \).
 
+\begin{center}
+    \begin{tikzpicture}[scale=1.5]
+    
+      % Cores dos cilindros
+      \fill[red!30] (0,0) circle (2.0);   % cilindro externo completo (r4)
+      \fill[white] (0,0) circle (1.5);   % interior do cilindro externo (r3)
+
+      \fill[blue!20] (0,0) circle (0.8);  % cilindro interno completo (r2)
+      \fill[white] (0,0) circle (0.4);  % interior do cilindro interno (r1)
+    
+      % Linhas de contorno
+      \draw[thick] (0,0) circle (0.4);   % r1
+      \draw[thick] (0,0) circle (0.8);   % r2
+      \draw[thick] (0,0) circle (1.5);   % r3
+      \draw[thick] (0,0) circle (2.0);   % r4
+
+      % superficie de gauss
+      \draw[dashed, red] (0,0) circle (1.3); %S1
+      \draw[dashed, red] (0,0) circle (2.5); %S2
+    
+      % Raio r1
+      \draw[->] (0,0) -- (0.4,0) node[midway, below] {$r_1$};
+    
+      % Raio r2
+      \draw[->] (0,0) -- (0.56,0.56) node[midway, above] {$r_2$};
+    
+      % Raio r3
+      \draw[->] (0,0) -- (-1.07,-1.07) node[midway, above] {$r_3$};
+    
+      % Raio r4
+      \draw[->] (0,0) -- (-1.95,0.5) node[midway, above] {$r_4$};
+    
+      % Cargas
+      \node at (0.9,0.5) {$+\lambda_1$};
+      \node at (1.9,1.2) {$+\lambda_2$};
+    
+      % Eixo vertical central (opcional)
+      %\draw[dashed] (0,-2.2) -- (0,2.2);  
+    
+    \end{tikzpicture}
+\end{center}
+
 \begin{enumerate}
     \item[(a)] Encontre o campo elétrico \( E(r) \):
     \begin{enumerate}
@@ -627,74 +750,74 @@ Dois cilindros condutores longos e concêntricos possuem densidades lineares de 
 
         Aplicando a Lei de Gauss:
 
-        \[
+        \begin{equation}
         \oint \vec{E} \cdot d\vec{A} = \frac{Q_{\text{interna}}}{\varepsilon_0}
-        \]
+        \end{equation}
 
         Como o sistema é cilíndrico:
 
-        \[
+        \begin{equation}
         E(2\pi r L) = \frac{\lambda_{\text{enc}} L}{\varepsilon_0}
-        \]
+        \end{equation}
         
         Logo:
 
-        \[
+        \begin{equation}
         E(r) = \frac{\lambda_{\text{enc}}}{2\pi\varepsilon_0 r}
-        \]
+        \end{equation}
 
         Onde $\lambda_{\text{enc}}$ é a carga linear total até o raio $r$.
 
         Para $r_2 < r < r_3$, somente o cilindro interno contribui, logo:
 
-        \[
+        \begin{equation}
         \lambda_{\text{enc}} = \lambda_1
-        \]
+        \end{equation}
 
         Assim:
 
-        \[
+        \begin{equation}
         E(r) = \frac{\lambda_1}{2\pi\varepsilon_0 r}
-        \]
+        \end{equation}
 
         \item[(2)] \textbf{Logo fora do cilindro externo ($r > r_4$)}:
 
         Agora, as cargas dos dois cilindros contribuem:
 
-        \[
+        \begin{equation}
         \lambda_{\text{enc}} = \lambda_1 + \lambda_2
-        \]
+        \end{equation}
 
         Portanto:
 
-        \[
+        \begin{equation}
         E(r) = \frac{\lambda_1 + \lambda_2}{2\pi\varepsilon_0 r}
-        \]
+        \end{equation}
     \end{itemize}
 
     \item[(b)] Encontrar a diferença de potencial $\Delta\phi$ entre os dois cilindros:
 
     O potencial $\phi(r)$ é dado por:
 
-    \[
+    \begin{equation}
     \phi(r) = -\int E(r) \, dr
-    \]
+    \end{equation}
 
     Logo, a diferença de potencial entre $r_2$ e $r_3$ é:
 
-    \[
+    \begin{equation}
     \Delta \phi = \phi(r_3) - \phi(r_2)
-    \]
+    \end{equation}
 
     Integrando:
 
-    \[
+    \begin{equation}
     \Delta \phi = -\int_{r_2}^{r_3} \frac{\lambda_1}{2\pi\varepsilon_0 r} \, dr
-    \]
+    \end{equation}
 
-    \[
+    \begin{equation}
     \Delta \phi = -\frac{\lambda_1}{2\pi\varepsilon_0} \ln\left(\frac{r_3}{r_2}\right)
-    \]
+    \end{equation}
 
     \item[(c)] Descrever qualitativamente:
 
@@ -727,30 +850,60 @@ As partículas são então liberadas e se repelem devido à força elétrica. Ef
 são desprezados, e nenhuma outra força atua sobre as partículas. Em um instante após a liberação, a 
 velocidade da partícula 1 é medida como \( v_1 = 170 \, \text{m/s} \).
 
+\begin{center}
+    \begin{tikzpicture}[scale=1.1]
+    
+      % --- Situação Inicial ---
+      \node at (-3.2,1.5) {\textbf{Antes da liberação}};
+      
+      % Partícula 1
+      \fill[blue!30] (-4,0) circle (0.3);
+      \node at (-4,0) {\scriptsize $m_1$};
+      \node at (-4,-0.5) {\scriptsize $+q$};
+    
+      % Partícula 2
+      \fill[red!30] (-2,0) circle (0.35);
+      \node at (-2,0) {\scriptsize $m_2$};
+      \node at (-2,-0.5) {\scriptsize $+q$};
+    
+      % Linha entre as partículas
+      \draw[thick] (-3.7,0) -- (-2.35,0);
+      \node at (-3,0.3) {\scriptsize $U_i = 0{,}150\,\text{J}$};
+      \node at (-3,-1) {\scriptsize sistema em repouso};
+    
+      % --- Situação Após a liberação ---
+      \node at (2.8,1.5) {\textbf{Após a liberação}};
+    
+      % Partícula 1 indo para a esquerda
+      \fill[blue!30] (1,0) circle (0.3);
+      \node at (1,0) {\scriptsize $m_1$};
+      \node at (1,-0.5) {\scriptsize $+q$};
+      \draw[->, thick] (0.7,0) -- (0,0);
+      \node at (0.05,0.3) {\scriptsize $v_1 = 170\,\text{m/s}$};
+    
+      % Partícula 2 indo para a direita
+      \fill[red!30] (4,0) circle (0.35);
+      \node at (4,0) {\scriptsize $m_2$};
+      \node at (4,-0.5) {\scriptsize $+q$};
+      \draw[->, thick] (4.35,0) -- (5,0);
+      \node at (4.5,0.3) {\scriptsize $v_2$};
+    
+      % Linha pontilhada entre as posições finais
+      \draw[dashed] (1.3,0) -- (3.65,0);
+    
+      % Notas
+      \node at (2.5,-1) {\scriptsize $E_c = \frac{1}{2}m_1v_1^2 + \frac{1}{2}m_2v_2^2$};
+      \node at (2.5,-1.5) {\scriptsize $p = m_1v_1 = m_2v_2$};
+    
+    \end{tikzpicture}
+\end{center}
+
 \begin{enumerate}
     \item[(a)] Qual é a energia potencial elétrica do sistema de duas partículas nesse instante?
     \item[(b)] Que tipos de energia o sistema tinha inicialmente?
     \item[(c)] Que tipos de energia o sistema tem no instante posterior?
     \item[(d)] O princípio da conservação de energia se aplica? Justifique.
     \item[(e)] O princípio da conservação do momento linear se aplica? Justifique.
-\end{enumerate}
-
-\textcolor{red}{\textbf{Solução:}}\\
-\end{flushleft}
-
-\begin{flushleft}
-\textbf{\textcolor{blue}{\Large Problema 8}}\\
-
-Duas cargas puntiformes idênticas \( q_A = q_B = +2{,}4 \times 10^{-9} \, \text{C} \) estão 
-fixas no espaço e separadas por \( 0{,}50 \, \text{m} \). Determine o campo elétrico e o potencial 
-elétrico no ponto médio da linha entre as cargas \( q_A \) e \( q_B \).
-
-\begin{enumerate}
-    \item[(a)] Quais são as direções das contribuições individuais do campo elétrico de \( q_A \) e \( q_B \) no ponto médio?
-    \item[(b)] O campo elétrico líquido no ponto médio tem módulo maior, menor ou igual a zero?
-    \item[(c)] O potencial elétrico total no ponto médio é positivo, negativo ou zero?
-    \item[(d)] O potencial elétrico total tem direção associada?
-    \item[(e)] Calcule o valor do campo e do potencial elétrico no ponto médio.
 \end{enumerate}
 
 \textcolor{red}{\textbf{Solução:}}\\
@@ -770,66 +923,66 @@ Efeitos gravitacionais são desprezados, e apenas forças elétricas atuam.
 
 Pela conservação da energia:
 
-\[
+\begin{equation}
 E_{\text{inicial}} = E_{\text{final}}
-\]
-\[
+\end{equation}
+\begin{equation}
 U_i = U_f + K
-\]
+\end{equation}
 
 Onde \( K \) é a energia cinética total:
 
-\[
+\begin{equation}
 K = \frac{1}{2} m_1 v_1^2 + \frac{1}{2} m_2 v_2^2
-\]
+\end{equation}
 
 Utilizando a conservação do momento linear:
 
-\[
+\begin{equation}
 m_1 v_1 + m_2 v_2 = 0
 \quad \Rightarrow \quad
 v_2 = -\frac{m_1}{m_2} v_1
-\]
+\end{equation}
 
 Substituindo os valores:
 
-\[
+\begin{equation}
 v_2 = -\frac{3{,}6 \times 10^{-6}}{6{,}2 \times 10^{-6}} \times 170
 \quad \Rightarrow \quad
 v_2 \approx -98{,}7 \, \text{m/s}
-\]
+\end{equation}
 
 Calculando a energia cinética:
 
-\[
+\begin{equation}
 K = \frac{1}{2} (3{,}6 \times 10^{-6}) (170)^2 + \frac{1}{2} (6{,}2 \times 10^{-6}) (98{,}7)^2
-\]
-\[
+\end{equation}
+\begin{equation}
 K = (1{,}8 \times 10^{-6})(28900) + (3{,}1 \times 10^{-6})(9746{,}69)
-\]
-\[
+\end{equation}
+\begin{equation}
 K = 0{,}05202 + 0{,}03031 = 0{,}08233 \, \text{J}
-\]
+\end{equation}
 
 Agora, determinamos \( U_f \):
 
-\[
+\begin{equation}
 U_f = U_i - K
-\]
-\[
+\end{equation}
+\begin{equation}
 U_f = 0{,}150 - 0{,}08233
-\]
-\[
+\end{equation}
+\begin{equation}
 \boxed{U_f = 0{,}0677 \, \text{J}}
-\]
+\end{equation}
 
 \section*{(b) Tipos de energia inicialmente}
 
 Inicialmente, as partículas estavam em repouso, logo:
 
-\[
+\begin{equation}
 \text{Energia inicial} = \text{energia potencial elétrica}
-\]
+\end{equation}
 
 \textbf{Resposta:} Apenas energia potencial elétrica.
 
@@ -837,9 +990,9 @@ Inicialmente, as partículas estavam em repouso, logo:
 
 Após serem liberadas, as partículas possuem:
 
-\[
+\begin{equation}
 \text{Energia posterior} = \text{energia cinética} + \text{energia potencial elétrica}
-\]
+\end{equation}
 
 \textbf{Resposta:} Energia cinética e energia potencial elétrica.
 
@@ -866,13 +1019,116 @@ Sim, a conservação do momento linear se aplica, pois:
 \end{flushleft}
 
 \begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 8}}\\
+
+Duas cargas puntiformes idênticas \( q_A = q_B = +2{,}4 \times 10^{-9} \, \text{C} \) estão 
+fixas no espaço e separadas por \( 0{,}50 \, \text{m} \). Determine o campo elétrico e o potencial 
+elétrico no ponto médio da linha entre as cargas \( q_A \) e \( q_B \).
+
+\begin{enumerate}
+    \item[(a)] Quais são as direções das contribuições individuais do campo elétrico de \( q_A \) e \( q_B \) no ponto médio (PM)?
+    \item[(b)] O campo elétrico líquido no ponto médio tem módulo maior, menor ou igual a zero?
+    \item[(c)] O potencial elétrico total no ponto médio é positivo, negativo ou zero?
+    \item[(d)] O potencial elétrico total tem direção associada?
+    \item[(e)] Calcule o valor do campo e do potencial elétrico no ponto médio.
+\end{enumerate}
+
+\begin{center}
+    \begin{tikzpicture}[scale=1.5, >=stealth]
+    
+      % Cargas
+      \draw[fill=red!50] (0,0) circle (2pt) node[above=6pt] {$q_A$};
+      \draw[fill=red!50] (4,0) circle (2pt) node[above=6pt] {$q_B$};
+    
+      % Linha entre as cargas
+      \draw[thick] (0,0) -- (4,0);
+    
+      % Ponto médio
+      \draw[fill=blue!60] (2,0) circle (2pt) node[above=6pt] {PM};
+    
+      % Campo elétrico no ponto médio
+      \draw[->, thick, blue] (2,0) -- (2.7,0) node[above right] {$\vec{E}_A$};
+      \draw[->, thick, blue] (2,0) -- (1.3,0) node[above left] {$\vec{E}_B$};
+    
+      % Distâncias
+      \draw[<->] (0,-0.5) -- (2,-0.5) node[midway, below] {\SI{0.25}{m}};
+      \draw[<->] (2,-0.5) -- (4,-0.5) node[midway, below] {\SI{0.25}{m}};
+      \draw[<->, thick] (0,-1.0) -- (4,-1.0) node[midway, below] {\SI{0.50}{m}};
+
+      \draw[dashed] (0,0) -- (0,-1.2);
+      \draw[dashed] (2,0) -- (2,-0.6);
+      \draw[dashed] (4,0) -- (4,-1.2);
+    
+    \end{tikzpicture}
+\end{center}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\begin{enumerate}
+    \item \textbf{Quais são as direções das contribuições individuais do campo elétrico de \( q_A \) e \( q_B \) no ponto médio?}
+    
+    Como as duas cargas são positivas, o campo elétrico gerado por cada uma delas no ponto médio aponta para fora da carga, ou seja:
+    \begin{itemize}
+        \item O campo de \( q_A \) aponta para a direita.
+        \item O campo de \( q_B \) aponta para a esquerda.
+    \end{itemize}
+    
+    \item \textbf{O campo elétrico líquido no ponto médio tem módulo maior, menor ou igual a zero?}
+    
+    Como os campos têm mesma intensidade e direções opostas, eles se anulam.
+    \begin{equation}
+    \boxed{E_{\text{total}} = 0}
+    \end{equation}
+    
+    \item \textbf{O potencial elétrico total no ponto médio é positivo, negativo ou zero?}
+    
+    O potencial elétrico é escalar e soma-se algébrica e positivamente no ponto médio, já que ambas as cargas são positivas.
+    \begin{equation}
+    \boxed{V_{\text{total}} > 0}
+    \end{equation}
+    
+    \item \textbf{O potencial elétrico total tem direção associada?}
+    
+    Não. O potencial elétrico é uma grandeza escalar, portanto:
+    \begin{equation}
+    \boxed{\text{O potencial não possui direção associada.}}
+    \end{equation}
+    
+    \item \textbf{Calcule o valor do campo e do potencial elétrico no ponto médio.}
+    
+    Distância de cada carga ao ponto médio: \( r = \frac{0{,}50}{2} = 0{,}25 \, \text{m} \)
+
+    \begin{itemize}
+        \item \textbf{Campo elétrico (contribuição de uma carga):}
+        \begin{equation}
+        E = k \frac{q}{r^2} = 9{,}0 \times 10^9 \cdot \frac{2{,}4 \times 10^{-9}}{(0{,}25)^2} 
+        = \frac{21{,}6}{0{,}0625} = 345{,}6 \, \text{N/C}
+        \end{equation}
+        Como os campos se anulam:
+        \begin{equation}
+        \boxed{E_{\text{total}} = 0 \, \text{N/C}}
+        \end{equation}
+        
+        \item \textbf{Potencial elétrico total:}
+        \begin{equation}
+        V = 2 \cdot k \frac{q}{r} = 2 \cdot 9{,}0 \times 10^9 \cdot \frac{2{,}4 \times 10^{-9}}{0{,}25}
+        = 2 \cdot \frac{21{,}6}{0{,}25} = 172{,}8 \, \text{V}
+        \end{equation}
+        \begin{equation}
+        \boxed{V_{\text{total}} = 172{,}8 \, \text{V}}
+        \end{equation}
+    \end{itemize}
+\end{enumerate}
+\end{flushleft}
+
+\begin{flushleft}
 \textbf{\textcolor{blue}{\Large Problema 9}}\\
 
 Uma região esférica de raio \( R \) está preenchida com carga de tal forma que o campo elétrico no 
 interior da região é dado por:
-\[
+\begin{equation}
 \mathbf{E} = \frac{E_0}{R^2} \, \mathbf{r}
-\]
+\end{equation}
 onde \( \mathbf{r} \) é o vetor posição a partir do centro da esfera, e \( E_0 \) é uma constante.\\
 
 Determine a densidade de carga na região.
@@ -1203,11 +1459,15 @@ pode representar um campo elétrico.
 
 \section*{Resultado Final}
 
-- Para o campo \( \vec{E} = a x^2 y^2 \hat{x} \), o divergente é \( \nabla \cdot \vec{E} = 2a x y^2 \), e a 
+\begin{itemize}
+\item Para o campo \( \vec{E} = a x^2 y^2 \hat{x} \), o divergente é \( \nabla \cdot \vec{E} = 2a x y^2 \), e a 
 densidade de carga associada é \( \rho = \varepsilon_0 (2a x y^2) \).
-- Para o campo \( \vec{E} = a ( \hat{r} \cos \theta - \hat{\theta} \sin \theta ) \), o divergente 
+
+\item Para o campo \( \vec{E} = a ( \hat{r} \cos \theta - \hat{\theta} \sin \theta ) \), o divergente 
 é \( \nabla \cdot \vec{E} = \frac{-a \cos \theta}{r} \), e a densidade de carga associada 
 é \( \rho = -\frac{a \varepsilon_0 \cos \theta}{r} \).
+\end{itemize}
+
 \end{flushleft}
 
 
