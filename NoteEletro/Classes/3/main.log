@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  1 MAY 2025 13:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  1 MAY 2025 17:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -785,7 +785,15 @@ Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \extratabsurround=\skip82
 \backup@length=\skip83
 \ar@cellbox=\box74
-)) (./commands.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.
+code.tex
+File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowinset=\dimen299
+\pgfarrowlength=\dimen300
+\pgfarrowwidth=\dimen301
+\pgfarrowlinewidth=\dimen302
+) (./commands.tex
 (/usr/share/texlive/texmf-dist/tex/latex/was/upgreek.sty
 Package: upgreek 2003/02/12 v2.0 (WaS)
 Package upgreek Info: Using Euler Roman for upright Greek on input line 31.
@@ -798,7 +806,7 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip84
 \multirow@cntb=\count327
 \multirow@dima=\skip85
-\bigstrutjot=\dimen299
+\bigstrutjot=\dimen303
 )
 (/usr/share/texlive/texmf-dist/tex/latex/datetime/datetime.sty
 Package: datetime 2015/03/20 v2.60 Date Time Package
@@ -1133,8 +1141,8 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 43.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
-\epsfxsize=\dimen300
-\epsfysize=\dimen301
+\epsfxsize=\dimen304
+\epsfysize=\dimen305
 )
 (/usr/share/texmf/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
@@ -1192,7 +1200,7 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 \t@pgfplots@toka=\toks43
 \t@pgfplots@tokb=\toks44
 \t@pgfplots@tokc=\toks45
-\pgfplots@tmpa=\dimen302
+\pgfplots@tmpa=\dimen306
 \c@pgfplots@coordindex=\count483
 \c@pgfplots@scanlineindex=\count484
 
@@ -1255,14 +1263,14 @@ e.tex)
 zlibrarydecorations.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
 e.tex
-\pgfdecoratedcompleteddistance=\dimen303
-\pgfdecoratedremainingdistance=\dimen304
-\pgfdecoratedinputsegmentcompleteddistance=\dimen305
-\pgfdecoratedinputsegmentremainingdistance=\dimen306
-\pgf@decorate@distancetomove=\dimen307
+\pgfdecoratedcompleteddistance=\dimen307
+\pgfdecoratedremainingdistance=\dimen308
+\pgfdecoratedinputsegmentcompleteddistance=\dimen309
+\pgfdecoratedinputsegmentremainingdistance=\dimen310
+\pgf@decorate@distancetomove=\dimen311
 \pgf@decorate@repeatstate=\count488
-\pgfdecorationsegmentamplitude=\dimen308
-\pgfdecorationsegmentlength=\dimen309
+\pgfdecorationsegmentamplitude=\dimen312
+\pgfdecorationsegmentlength=\dimen313
 )
 \tikz@lib@dec@box=\box75
 )
@@ -1277,12 +1285,12 @@ decorations.pathreplacing.code.tex))
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.co
 ntourlua.code.tex)
 \pgfplots@numplots=\count489
-\pgfplots@xmin@reg=\dimen310
-\pgfplots@xmax@reg=\dimen311
-\pgfplots@ymin@reg=\dimen312
-\pgfplots@ymax@reg=\dimen313
-\pgfplots@zmin@reg=\dimen314
-\pgfplots@zmax@reg=\dimen315
+\pgfplots@xmin@reg=\dimen314
+\pgfplots@xmax@reg=\dimen315
+\pgfplots@ymin@reg=\dimen316
+\pgfplots@ymax@reg=\dimen317
+\pgfplots@zmin@reg=\dimen318
+\pgfplots@zmax@reg=\dimen319
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryplotmarks.code.tex
@@ -1301,12 +1309,12 @@ Package: pdfpages 2022/01/29 v0.5u Insert pages of external PDF documents (AM)
 
 (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
-\ESO@tempdima=\dimen316
-\ESO@tempdimb=\dimen317
+\ESO@tempdima=\dimen320
+\ESO@tempdimb=\dimen321
 )
-\AM@pagewidth=\dimen318
-\AM@pageheight=\dimen319
-\AM@fboxrule=\dimen320
+\AM@pagewidth=\dimen322
+\AM@pageheight=\dimen323
+\AM@fboxrule=\dimen324
 
 (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2022/01/29 v0.5u Pdfpages driver for pdfTeX (AM)
@@ -1373,9 +1381,9 @@ Library (tcolorbox): 'tcbhooks.code.tex' version '5.0.2'
 Library (tcolorbox): 'tcbtheorems.code.tex' version '5.0.2'
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
 Library (tcolorbox): 'tcbfitting.code.tex' version '5.0.2'
-\tcbfitdim=\dimen321
-\tcb@lowerfitdim=\dimen322
-\tcb@upperfitdim=\dimen323
+\tcbfitdim=\dimen325
+\tcb@lowerfitdim=\dimen326
+\tcb@upperfitdim=\dimen327
 \tcb@cur@hbadness=\count500
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
 Library (tcolorbox): 'tcbxparse.code.tex' version '5.0.2'
@@ -1388,14 +1396,14 @@ Library (tcolorbox): 'tcblistings.code.tex' version '5.0.2'
 \lst@gtempboxa=\box90
 \lst@token=\toks51
 \lst@length=\count502
-\lst@currlwidth=\dimen324
+\lst@currlwidth=\dimen328
 \lst@column=\count503
 \lst@pos=\count504
-\lst@lostspace=\dimen325
-\lst@width=\dimen326
+\lst@lostspace=\dimen329
+\lst@width=\dimen330
 \lst@newlines=\count505
 \lst@lineno=\count506
-\lst@maxwidth=\dimen327
+\lst@maxwidth=\dimen331
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
@@ -1442,7 +1450,7 @@ File: pgflibraryfadings.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
 Library (tcolorbox): 'tcbposter.code.tex' version '5.0.2'
 )))
-Package hyperref Info: Option `colorlinks' set `true' on input line 37.
+Package hyperref Info: Option `colorlinks' set `true' on input line 38.
 
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
@@ -1450,31 +1458,31 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count510
 \@quotereset=\count511
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 68
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 69
 .
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1510,7 +1518,7 @@ LaTeX Font Info:    ... okay on input line 68.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 68.
+Package hyperref Info: Link coloring ON on input line 69.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1522,9 +1530,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count512
 )
-LaTeX Info: Redefining \ref on input line 68.
-LaTeX Info: Redefining \pageref on input line 68.
-LaTeX Info: Redefining \nameref on input line 68.
+LaTeX Info: Redefining \ref on input line 69.
+LaTeX Info: Redefining \pageref on input line 69.
+LaTeX Info: Redefining \nameref on input line 69.
 
 (./main.out) (./main.out)
 \@outlinefile=\write5
@@ -1534,13 +1542,13 @@ LaTeX Info: Redefining \nameref on input line 68.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count513
-\scratchdimen=\dimen328
+\scratchdimen=\dimen332
 \scratchbox=\box92
 \nofMPsegments=\count514
 \nofMParguments=\count515
 \everyMPshowfont=\toks52
 \MPscratchCnt=\count516
-\MPscratchDim=\dimen329
+\MPscratchDim=\dimen333
 \MPnumerator=\count517
 \makeMPintoPDFobject=\count518
 \everyMPtoPDFconversion=\toks53
@@ -1563,7 +1571,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 68.
+or `english'. on input line 69.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictio
 nary-brazil.trsl
@@ -1571,7 +1579,7 @@ File: translations-basic-dictionary-brazil.trsl (brazil translation file `trans
 lations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `brazil'. on input line 68.
+or `brazil'. on input line 69.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -1607,8 +1615,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
 (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 68.
-Package biblatex Info: Reference segment=0 on input line 68.
+Package biblatex Info: Reference section=0 on input line 69.
+Package biblatex Info: Reference segment=0 on input line 69.
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
@@ -1623,12 +1631,12 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 \c@lstlisting=\count519
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--82
+Underfull \hbox (badness 10000) in paragraph at lines 81--83
 
  []
 
@@ -1644,60 +1652,60 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
-2.
+3.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
-2.
+3.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-82.
+83.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-82.
+83.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 82.
+(Font)              <14.4> on input line 83.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 82.
+(Font)              <10> on input line 83.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 82.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 82.
+(Font)              <7> on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 82.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 102.
+(Font)              <12> on input line 103.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 102.
+(Font)              <8> on input line 103.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 102.
+(Font)              <6> on input line 103.
 [2]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-18.
+19.
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1822,7 +1830,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [15]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 861.
+(Font)              <5> on input line 864.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1943,29 +1951,30 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55093 strings out of 478287
- 1280231 string characters out of 5849289
- 2027424 words of memory out of 5000000
- 72225 multiletter control sequences out of 15000+600000
- 553477 words of font info for 110 fonts, out of 8000000 for 9000
+ 55483 strings out of 478287
+ 1290424 string characters out of 5849289
+ 2039724 words of memory out of 5000000
+ 72608 multiletter control sequences out of 15000+600000
+ 565244 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,99p,1835b,1759s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share
-/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
--mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf/f
+ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf/f
 onts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/pu
-blic/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lm
-ri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (27 pages, 254971 bytes).
+pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.p
+fb>
+Output written on main.pdf (27 pages, 263460 bytes).
 PDF statistics:
- 421 PDF objects out of 1000 (max. 8388607)
- 336 compressed objects within 4 object streams
+ 431 PDF objects out of 1000 (max. 8388607)
+ 342 compressed objects within 4 object streams
  173 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 
