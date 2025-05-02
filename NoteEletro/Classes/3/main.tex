@@ -336,6 +336,82 @@ E_r = -\frac{\partial V}{\partial r}, \quad E_z = -\frac{\partial V}{\partial z}
 \subsubsection*{1. Quando \( L \gg r \)}
 
 Neste caso, a linha de carga se comporta como um fio infinito. Aproximadamente:
+
+Considere o potencial elétrico gerado por uma linha de carga de densidade linear constante $\lambda_0$, com comprimento total $2L$, centrada na origem ao longo do eixo $z$:
+
+\begin{equation}
+V(r,z) = \frac{\lambda_0}{4\pi \varepsilon_0} \ln \left( \frac{z + L + \sqrt{r^2 + (z + L)^2}}{z - L + \sqrt{r^2 + (z - L)^2}} \right)
+\end{equation}
+
+Para obter uma aproximação no caso em que o ponto de observação está no plano médio da linha de carga (\textit{i.e.}, $z = 0$), temos:
+
+\begin{equation}
+V(r) = \frac{\lambda_0}{4\pi \varepsilon_0} \ln \left( \frac{L + \sqrt{r^2 + L^2}}{-L + \sqrt{r^2 + L^2}} \right)
+\end{equation}
+
+Note que:
+\begin{equation}
+\frac{L + \sqrt{r^2 + L^2}}{-L + \sqrt{r^2 + L^2}} = \frac{\sqrt{r^2 + L^2} + L}{\sqrt{r^2 + L^2} - L}
+\end{equation}
+
+Logo, temos:
+\begin{equation}
+\boxed{V(r) = \frac{\lambda_0}{4\pi \varepsilon_0} \ln \left( \frac{\sqrt{r^2 + L^2} + L}{\sqrt{r^2 + L^2} - L} \right)}
+\end{equation}
+
+\begin{equation}
+V(r) = \frac{\lambda_0}{4\pi \varepsilon_0} \ln \left( \frac{1 + \frac{L}{\sqrt{r^2 + L^2}}}{1 - \frac{L}{\sqrt{r^2 + L^2}}} \right)
+\end{equation}
+
+Utilizando a identidade:
+\begin{equation}
+\ln \left( \frac{1 + x}{1 - x} \right) = 2 \tanh^{-1}(x)
+\end{equation}
+obtemos:
+\begin{equation}
+V(r) = \frac{\lambda_0}{2\pi \varepsilon_0} \tanh^{-1} \left( \frac{L}{\sqrt{r^2 + L^2}} \right)
+\end{equation}
+
+Agora, assumimos que $L \gg r$. Expandimos a raiz utilizando binômio de Newton:
+
+\begin{equation}
+\sqrt{r^2 + L^2} = L \sqrt{1 + \frac{r^2}{L^2}} \approx L \left( 1 + \frac{r^2}{2L^2} \right)
+\end{equation}
+
+Então:
+
+\begin{equation}
+\frac{L}{\sqrt{r^2 + L^2}} \approx \frac{1}{1 + \frac{r^2}{2L^2}} \approx 1 - \frac{r^2}{2L^2}
+\end{equation}
+
+E, portanto:
+
+\begin{equation}
+\tanh^{-1} \left( \frac{L}{\sqrt{r^2 + L^2}} \right) \approx \tanh^{-1} \left( 1 - \frac{r^2}{2L^2} \right)
+\end{equation}
+
+Sabemos que para $x \approx 1$, vale:
+
+\begin{equation}
+\tanh^{-1}(x) \approx \ln \left( \frac{2}{1 - x} \right)
+\end{equation}
+
+Logo:
+
+\begin{equation}
+\tanh^{-1} \left( 1 - \frac{r^2}{2L^2} \right) \approx \ln \left( \frac{4L^2}{r^2} \right) = 2 \ln \left( \frac{2L}{r} \right)
+\end{equation}
+
+Substituindo no potencial:
+
+\begin{equation}
+V(r) \approx \frac{\lambda_0}{2\pi \varepsilon_0} \ln \left( \frac{2L}{r} \right)
+\end{equation}
+
+ou seja, quando $L \gg r$, o potencial elétrico no plano médio da linha de carga se aproxima de 
+um fio carregado com densidade linear $\lambda_0$ e comprimento muito grande, o que nos leva 
+ao caso idealizado de um \textbf{fio infinito}.
+
 \begin{equation}
 \boxed{
 V(r) \sim \frac{\lambda_0}{2\pi\varepsilon_0} \ln\left(\frac{2L}{r}\right)
