@@ -10,6 +10,8 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\addtolength{\topmargin}{-2.5pt}
 \usepackage{xcolor}
 \usepackage{amsmath, amssymb, bm}
 \usepackage{mathtools}
@@ -23,6 +25,59 @@
 \usepackage{siunitx}
 \usetikzlibrary{3d, arrows.meta}
 
+\usepackage{color}
+\definecolor{myblue}{rgb}{.8, .8, 1}
+
+\usepackage{amsmath}
+\usepackage{empheq}
+
+\newlength\mytemplen
+\newsavebox\mytempbox
+
+\makeatletter
+\newcommand\mybluebox{%
+    \@ifnextchar[%]
+       {\@mybluebox}%
+       {\@mybluebox[0pt]}}
+
+\def\@mybluebox[#1]{%
+    \@ifnextchar[%]
+       {\@@mybluebox[#1]}%
+       {\@@mybluebox[#1][0pt]}}
+
+\def\@@mybluebox[#1][#2]#3{
+    \sbox\mytempbox{#3}%
+    \mytemplen\ht\mytempbox
+    \advance\mytemplen #1\relax
+    \ht\mytempbox\mytemplen
+    \mytemplen\dp\mytempbox
+    \advance\mytemplen #2\relax
+    \dp\mytempbox\mytemplen
+    \colorbox{myblue}{\hspace{1em}\usebox{\mytempbox}\hspace{1em}}}
+\makeatother
+
+\usepackage[most]{tcolorbox}
+
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base,
+    enhanced, colframe=blue!30!black,
+    colback=blue!30, boxrule=1pt,
+    #1}
+
+\tcbset{
+    highlight math style={
+        enhanced,
+        colframe=red!60!black,
+        colback=yellow!50,
+        arc=4pt,
+        boxrule=1pt,
+        drop fuzzy shadow
+    }
+    }
+
+\usepackage{physics}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
 
 \linespread{1.5}
 
@@ -110,8 +165,11 @@ entra em contato com uma nova esfera descarregada, dividindo novamente sua carga
 Após cada contato, a carga da esfera carregada será dividida pela metade. Assim, após \( N \) contatos, 
 a carga da esfera original será:
 
+\tcbset{highlight math style={boxsep=5mm,colback=blue!30!red!30!white}}
+
 \begin{equation}
-q_N = \frac{Q}{2^N}
+    \tcbhighmath[boxrule=1pt,arc=1pt,colback=green!10!white,colframe=black,
+      drop fuzzy shadow=red]{ q_N = \frac{Q}{2^N} }
 \end{equation}
 
 Cada nova esfera tocada recebe metade da carga da esfera carregada no momento do contato. Portanto:
@@ -148,7 +206,8 @@ Q_{\text{total}} = Q\left(1 - \left( \frac{1}{2} \right)^N\right) + \frac{Q}{2^N
 \end{equation}
 
 \begin{equation}
-Q_{\text{total}} = Q
+    \tcbhighmath[boxrule=1pt,arc=1pt,colback=green!10!white,colframe=black,
+      drop fuzzy shadow=red]{Q_{\text{total}} = Q}
 \end{equation}
 
 Portanto, \colorbox{yellow}{a carga total do sistema permanece constante e igual a \( Q \)}, respeitando a conservação
@@ -161,9 +220,36 @@ da carga elétrica.
 \textbf{\textcolor{blue}{\Large Problema 2}}\\
 Uma placa infinita nos eixos \(x\) e \(y\) possui a seguinte distribuição superficial de carga:
 \begin{equation}
-\sigma(x,y) = \frac{\sigma_0 e^{-|x|/a}}{1 + (y/b)^2}
+    \tcbhighmath[boxrule=1pt,arc=1pt,colback=blue!10!white,colframe=black,
+      drop fuzzy shadow=red]{\sigma(x,y) = \frac{\sigma_0 e^{-|x|/a}}{1 + (y/b)^2}}
 \end{equation}
 onde \(a\) e \(b\) são constantes. \\
+
+\sloppy
+\begin{center}
+    \begin{tikzpicture}
+    \begin{axis}[
+        view={60}{30},
+        xlabel={$x$},
+        ylabel={$y$},
+        zlabel={$\sigma(x,y)$},
+        domain=-5:5,
+        y domain=-3:3,
+        samples=40,
+        samples y=40,
+        mesh/ordering=y varies,
+        colormap/cool,
+        z buffer=sort,
+        title={$\boxed{ \sigma(x,y) = \dfrac{\sigma_0 e^{-|x|/a}}{1 + (y/b)^2} }$},
+    ]
+    \addplot3 [
+        mesh,
+        shader=interp,
+    ]
+    {exp(-abs(x)/1.5)/(1 + (y/1.2)^2)};
+    \end{axis}
+    \end{tikzpicture}
+    \end{center}
 
 \textcolor{red}{\textbf{Solução:}}\\
 \end{flushleft}
@@ -217,8 +303,10 @@ Agora que temos as integrais sobre \(x\) e \(y\), podemos calcular a carga total
 Q = \sigma_0 \cdot 2a \cdot \pi b
 \end{equation}
 Portanto, \colorbox{yellow}{a carga total na placa é}:
+
 \begin{equation}
-\boxed{Q = \sigma_0 2\pi a b }
+\tcbhighmath[boxrule=1pt,arc=1pt,colback=blue!10!white,colframe=black,
+drop fuzzy shadow=red]{Q = \sigma_0 2\pi a b }
 \end{equation}
 
 \begin{flushleft}
@@ -413,13 +501,15 @@ um fio carregado com densidade linear $\lambda_0$ e comprimento muito grande, o 
 ao caso idealizado de um \textbf{fio infinito}.
 
 \begin{equation}
-\boxed{
+    \tcbhighmath[boxrule=1pt,arc=0.5pt,colback=red!10!white,colframe=black,
+      drop fuzzy shadow=red]{
 V(r) \sim \frac{\lambda_0}{2\pi\varepsilon_0} \ln\left(\frac{2L}{r}\right)
 }
 \end{equation}
 
 \begin{equation}
-\boxed{
+    \tcbhighmath[boxrule=1pt,arc=0.5pt,colback=red!10!white,colframe=black,
+      drop fuzzy shadow=red]{
 E_r \sim \frac{\lambda_0}{2\pi\varepsilon_0 r}, \quad E_z \sim 0
 }
 \end{equation}
@@ -428,12 +518,15 @@ E_r \sim \frac{\lambda_0}{2\pi\varepsilon_0 r}, \quad E_z \sim 0
 
 Aqui, o sistema se comporta como uma carga pontual de carga total \( Q = 2L\lambda_0 \). Portanto:
 \begin{equation}
-\boxed{
+    \tcbhighmath[boxrule=1pt,arc=0.5pt,colback=red!10!white,colframe=black,
+      drop fuzzy shadow=red]{
 V(r) \sim \frac{Q}{4\pi\varepsilon_0 r} = \frac{2L\lambda_0}{4\pi\varepsilon_0 r}
 }
 \end{equation}
+
 \begin{equation}
-\boxed{
+    \tcbhighmath[boxrule=1pt,arc=0.5pt,colback=red!10!white,colframe=black,
+      drop fuzzy shadow=red]{
 \vec{E} \sim \frac{Q}{4\pi\varepsilon_0 r^2} \hat{r}
 }
 \end{equation}
@@ -489,7 +582,8 @@ resolva:
 A fórmula da energia potencial eletrostática \( U \) entre duas cargas \( q_1 \) e \( q_2 \) separadas por uma distância \( r \) é dada por:
 
 \begin{equation}
-U = \frac{k \cdot q_1 \cdot q_2}{r}
+    \tcbhighmath[boxrule=1pt,arc=0.5pt,colback=blue!10!white,colframe=black,
+      drop fuzzy shadow=red]{U = \frac{k \cdot q_1 \cdot q_2}{r}}
 \end{equation}
 
 onde:
@@ -535,7 +629,8 @@ Portanto, \colorbox{yellow}{a energia energia potencial eletrostática é}:
 A energia total \( E \) do elétron é a soma da energia cinética \( E_{\text{cinet}} \) e da energia potencial \( U \). A energia cinética é dada por:
 
 \begin{equation}
-E_{\text{cinet}} = \frac{1}{2} m v^2
+    \tcbhighmath[boxrule=1pt,arc=0.5pt,colback=blue!10!white,colframe=black,
+      drop fuzzy shadow=red]{E_{\text{cinet}} = \frac{1}{2} m v^2}
 \end{equation}
 
 onde:
@@ -577,7 +672,8 @@ E = 13,6 \, \text{eV} + (-27 \, \text{eV}) \approx -13,6 \, \text{eV}
 Portanto, \colorbox{yellow}{a energia total do elétron no átomo de hidrogênio é}:
 
 \begin{equation}
-\boxed{E \approx -13,6 \, \text{eV}}
+    \tcbhighmath[boxrule=1pt,arc=0.5pt,colback=green!10!white,colframe=black,
+      drop fuzzy shadow=red]{E \approx -13,6 \, \text{eV}}
 \end{equation}
 \end{flushleft}
 
@@ -639,7 +735,7 @@ Imagine que a Terra tenha densidade uniforme e que um túnel seja escavado ao lo
 A força gravitacional sentida a uma distância \( r \) do centro é devida apenas à massa dentro da esfera de raio \( r \), e é dada por:
 
 \begin{equation}
-M_{\text{interna}} = M \left( \frac{r^3}{R^3} \right)
+\boxed{M_{\text{interna}} = M \left( \frac{r^3}{R^3} \right)}
 \end{equation}
 
 Assim, a força gravitacional é:
@@ -651,7 +747,7 @@ F = - G \frac{M_{\text{interna}} m}{r^2} = -G \frac{M \left( \frac{r^3}{R^3} \ri
 Simplificando:
 
 \begin{equation}
-F = -G \frac{M m}{R^3} r
+\boxed{F = -G \frac{M m}{R^3} r}
 \end{equation}
 
 Esta força é proporcional a \( r \) e dirigida para o centro, característica típica de um \textit{movimento harmônico simples} (MHS).
@@ -748,7 +844,8 @@ P \approx \frac{5065}{60} \approx 84{,}4 \, \text{minutos}
 \textbf{Resposta final:}
 
 \begin{equation}
-\boxed{P \approx 84{,}4 \, \text{minutos}}
+    \tcbhighmath[boxrule=1pt,arc=0.5pt,colback=green!10!white,colframe=black,
+      drop fuzzy shadow=red]{P \approx 84{,}4 \, \text{minutos} = 1{,}406 \, \text{horas}}
 \end{equation}
 
 \end{flushleft}
