@@ -1,0 +1,158 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[brazil, english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\addtolength{\topmargin}{-2.5pt}
+\usepackage{xcolor}
+\usepackage{amsmath, amssymb, bm}
+\usepackage{mathtools}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{newunicodechar}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{tikz-3dplot} % Necessário para coordenadas 3D
+\usetikzlibrary{intersections}
+\usepackage{siunitx}
+\usetikzlibrary{3d, arrows.meta}
+
+\usepackage{color}
+\definecolor{myblue}{rgb}{.8, .8, 1}
+
+\usepackage{amsmath}
+\usepackage{empheq}
+
+\newlength\mytemplen
+\newsavebox\mytempbox
+
+\makeatletter
+\newcommand\mybluebox{%
+    \@ifnextchar[%]
+       {\@mybluebox}%
+       {\@mybluebox[0pt]}}
+
+\def\@mybluebox[#1]{%
+    \@ifnextchar[%]
+       {\@@mybluebox[#1]}%
+       {\@@mybluebox[#1][0pt]}}
+
+\def\@@mybluebox[#1][#2]#3{
+    \sbox\mytempbox{#3}%
+    \mytemplen\ht\mytempbox
+    \advance\mytemplen #1\relax
+    \ht\mytempbox\mytemplen
+    \mytemplen\dp\mytempbox
+    \advance\mytemplen #2\relax
+    \dp\mytempbox\mytemplen
+    \colorbox{myblue}{\hspace{1em}\usebox{\mytempbox}\hspace{1em}}}
+\makeatother
+
+\usepackage[most]{tcolorbox}
+
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base,
+    enhanced, colframe=blue!30!black,
+    colback=blue!30, boxrule=1pt,
+    #1}
+
+\tcbset{
+    highlight math style={
+        enhanced,
+        colframe=red!60!black,
+        colback=yellow!50,
+        arc=4pt,
+        boxrule=1pt,
+        drop fuzzy shadow
+    }
+    }
+
+\usepackage{physics}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+\linespread{1.5}
+
+\definecolor{ao(english)}{rgb}{0.0, 0.5, 0.0}
+\definecolor{byzantium}{rgb}{0.44, 0.16, 0.39}
+\newunicodechar{∘}{\circ}
+
+\input{commands.tex}
+
+\hypersetup{
+    colorlinks=true,% make the links colored
+    linkcolor=blue
+}
+
+\usepackage{setspace}
+\addbibresource{bibliography.bib}
+
+\newcommand{\printingbibliography}{%
+
+    \pagestyle{myheadings}
+    \markright{}
+    \sloppy
+    \printbibliography[heading=bibintoc, % add to table of contents
+                   title=Refer\^encias % Chapter name
+                  ]
+    \fussy%
+}
+\PassOptionsToPackage{table}{xcolor}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\thepage}
+
+\geometry{a4paper,top=30mm,bottom=20mm,left=30mm,right=20mm}
+
+\titleformat*{\section}{\bfseries\large}
+\titleformat*{\subsection}{\bfseries\normalsize}
+
+\title{ \textbf{\large Eletromagnetismo I }}
+\author{Andr\'e V. Silva}
+\date{\today}
+
+\begin{document}
+
+\noindent\rule{\linewidth}{0.8pt}\\
+\begin{center}
+    \textbf{UNIVERSIDADE FEDERAL DO RIO DE JANEIRO}\\
+    \textbf{INSTITUTO DE FÍSICA}\\
+    \textbf{\textcolor{blue}{Segunda lista complementar de Eletromagnetismo 1}}\\
+    \textbf{Maio de 2025}\\
+    \vspace{0.5cm}
+    Prof. João Torres de Mello Neto\\
+    Monitor: Pedro Khan
+\end{center}
+\noindent\rule{\linewidth}{0.8pt}\\
+\maketitle
+
+
+\noindent\rule{\linewidth}{0.4pt}\\
+
+\justifying
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 1}}\\
+
+
+\textcolor{red}{\textbf{Solução:}}\\
+\end{flushleft}
+
+
+
+
+%%%%%%%% Bibliography 
+% Os comandos para incluir as referências bibliográficas
+%\printingbibliography
+
+\end{document}
