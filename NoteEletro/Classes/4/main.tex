@@ -144,12 +144,323 @@
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Problema 1}}\\
 
+Dois planos condutores aterrados ao longo dos eixos \(x\) e \(y\) se 
+interceptam na origem, conforme mostrado na figura. Uma carga \(q\) 
+é colocada a uma distância \(b\) acima do eixo \(x\) e a uma distância 
+\(a\) à direita do eixo \(y\). Determine a força sobre a carga.\\
+
+\noindent
+\textbf{Sugestão:} as cargas imagens devem fazer com que as condições de 
+contorno sejam mantidas nos dois planos simultaneamente.
+
+\vspace{0.5cm}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+  % Eixos
+  \draw[->, thick] (0,0) -- (4,0) node[below right] {\(x\)};
+  \draw[->, thick] (0,0) -- (0,4) node[above left] {\(y\)};
+
+  % Carga q
+  \filldraw[red] (3,3) circle (2pt) node[right] {\(q\)};
+  
+  % Linhas tracejadas para indicar a e b
+  \draw[dashed] (3,0) -- (3,3);
+  \draw[dashed] (0,3) -- (3,3);
+
+  % Setas para indicar a e b
+  \draw[<->] (0,-0.5) -- (3,-0.5) node[midway, below] {\(a\)};
+  \draw[<->] (-0.5,0) -- (-0.5,3) node[midway, left] {\(b\)};
+\end{tikzpicture}
+\end{center}
 
 \textcolor{red}{\textbf{Solução:}}\\
+
+Como os planos condutores estão aterrados, o potencial ao longo dos eixos \(x = 0\) e \(y = 0\) deve ser nulo. Para satisfazer essa condição, usaremos o \textbf{método das cargas imagem}.
+
+A carga real \(q\) está localizada no ponto \((a, b)\), com \(a > 0\) e \(b > 0\), no primeiro quadrante. Para que o potencial seja nulo nos eixos coordenados, inserimos três cargas imagem:
+
+\begin{itemize}
+  \item Uma carga imagem \(-q\) em \((-a, b)\), que anula o potencial no plano \(x = 0\),
+  \item Uma carga imagem \(-q\) em \((a, -b)\), que anula o potencial no plano \(y = 0\),
+  \item Uma carga imagem \(+q\) em \((-a, -b)\), que garante simultaneamente que o potencial seja zero nos dois planos.
+\end{itemize}
+
+\bigskip
+
+\begin{center}
+\begin{tikzpicture}[scale=1.0]
+  % Eixos
+  \draw[->, thick] (-4,0) -- (4,0) node[below right] {\(x\)};
+  \draw[->, thick] (0,-4) -- (0,4) node[above left] {\(y\)};
+
+  % Carga real q
+  \filldraw[red] (3,3) circle (2pt) node[above right] {\(q\)};
+
+  % Carga imagem 1: (-q) em (-3,3)
+  \filldraw[blue] (-3,3) circle (2pt) node[above left] {\(-q\)};
+
+  % Carga imagem 2: (-q) em (3,-3)
+  \filldraw[blue] (3,-3) circle (2pt) node[below right] {\(-q\)};
+
+  % Carga imagem 3: (+q) em (-3,-3)
+  \filldraw[blue] (-3,-3) circle (2pt) node[below left] {\(q\)};
+
+  % Linhas tracejadas para indicar a e b
+  \draw[dashed] (3,0) -- (3,3);
+  \draw[dashed] (0,3) -- (3,3);
+
+  % Setas para indicar a e b
+  \draw[<->] (0,-0.8) -- (3,-0.8) node[midway, below] {\(a\)};
+  \draw[<->] (-0.8,0) -- (-0.8,3) node[midway, left] {\(b\)};
+\end{tikzpicture}
+\end{center}
+
+\subsection*{Cálculo da força}
+
+A força total sobre a carga real \(q\) é a soma das forças de Coulomb exercidas pelas cargas imagem.
+
+\subsubsection*{Força devido a \(-q\) em \((-a, b)\):}
+\begin{equation}
+\vec{F}_1 = \frac{1}{4\pi\varepsilon_0} \cdot \frac{q(-q)}{(2a)^2} \hat{i} = -\frac{q^2}{16\pi\varepsilon_0 a^2} \hat{i}
+\end{equation}
+
+\subsubsection*{Força devido a \(-q\) em \((a, -b)\):}
+\begin{equation}
+\vec{F}_2 = \frac{1}{4\pi\varepsilon_0} \cdot \frac{q(-q)}{(2b)^2} \hat{j} = -\frac{q^2}{16\pi\varepsilon_0 b^2} \hat{j}
+\end{equation}
+
+\subsubsection*{Força devido a \(+q\) em \((-a, -b)\):}
+
+A distância até a carga real é \(2\sqrt{a^2 + b^2}\). O vetor deslocamento é \((2a, 2b)\), portanto:
+
+\begin{equation}
+\vec{F}_3 = \frac{1}{4\pi\varepsilon_0} \cdot \frac{q^2}{(2\sqrt{a^2 + b^2})^2} \cdot \frac{(2a, 2b)}{2\sqrt{a^2 + b^2}} 
+= \frac{q^2}{16\pi\varepsilon_0 (a^2 + b^2)^{3/2}} (a\hat{i} + b\hat{j})
+\end{equation}
+
+\subsection*{Resultado final}
+
+Somando os três termos:
+
+\begin{equation}
+\vec{F} = \vec{F}_1 + \vec{F}_2 + \vec{F}_3
+\end{equation}
+
+\begin{equation}
+\boxed{
+\vec{F} = \frac{q^2}{16\pi \varepsilon_0} \left[
+\left( -\frac{1}{a^2} + \frac{a}{(a^2 + b^2)^{3/2}} \right) \hat{i} +
+\left( -\frac{1}{b^2} + \frac{b}{(a^2 + b^2)^{3/2}} \right) \hat{j}
+\right]
+}
+\end{equation}
+
 \end{flushleft}
 
 
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 2}}\\
 
+Uma distribuição de carga elétrica produz o campo elétrico
+\begin{equation}
+\mathbf{E} = c \left( 1 - e^{-\alpha r} \right) \frac{\hat{\mathbf{r}}}{r^2}
+\end{equation}
+onde \(c\) e \(\alpha\) são constantes. Encontre a carga total dentro do raio \(r = \frac{1}{\alpha}\).
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Utilizaremos o \textbf{teorema de Gauss}, que relaciona o fluxo do campo elétrico com a carga total no interior de uma superfície fechada:
+
+\begin{equation}
+\oint_{\text{superfície}} \mathbf{E} \cdot d\mathbf{A} = \frac{Q_{\text{int}}}{\varepsilon_0}
+\end{equation}
+
+Como o campo é radial e depende apenas de \(r\), escolhemos uma superfície gaussiana esférica de raio \(r = \frac{1}{\alpha}\). O campo elétrico sobre essa superfície tem módulo:
+\begin{equation}
+|\mathbf{E}(r)| = c \left( 1 - e^{-\alpha r} \right) \frac{1}{r^2}
+\end{equation}
+
+O vetor de área é \(d\mathbf{A} = \hat{\mathbf{r}}\, r^2 \sin\theta\, d\theta\, d\phi\), portanto:
+\begin{equation}
+\Phi_E = \oint \mathbf{E} \cdot d\mathbf{A} = |\mathbf{E}(r)| \cdot 4\pi r^2
+\end{equation}
+
+Substituindo:
+\begin{align}
+\Phi_E &= c \left(1 - e^{-\alpha r} \right) \cdot \frac{1}{r^2} \cdot 4\pi r^2 \\
+&= 4\pi c \left(1 - e^{-\alpha r} \right)
+\end{align}
+
+Aplicando o teorema de Gauss:
+\begin{equation}
+Q_{\text{int}} = \varepsilon_0 \Phi_E = 4\pi \varepsilon_0 c \left(1 - e^{-\alpha r} \right)
+\end{equation}
+
+Finalmente, substituímos \(r = \frac{1}{\alpha}\):
+\begin{equation}
+Q = 4\pi \varepsilon_0 c \left(1 - e^{-1} \right)
+\end{equation}
+
+\section*{Resposta final}
+
+\begin{equation}
+\boxed{Q = 4\pi \varepsilon_0 c \left(1 - \frac{1}{e} \right)}
+\end{equation}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 3}}\\
+
+Uma haste fina e não condutora de comprimento \( l \) carrega uma carga 
+\( Q \) uniformemente distribuída e está orientada conforme mostrado na figura:
+
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+  % Eixos coordenados
+  \draw[->, thick] (0,0) -- (1.8,0) node[below] {\(y\)};
+  \draw[->, thick] (0,0) -- (0,2.2) node[above] {\(z\)};
+  \draw[->, thick] (0,0) -- (-1.5,-1.0) node[left] {\(x\)};
+
+  % Haste carregada (em vermelho)
+  \draw[very thick, red] (0,-1) -- (0,1);
+  \node[left] at (0,0) {\(Q\)};
+
+  % Parte não carregada dos eixos z
+  \draw[thick] (0,-1.5) -- (0,-1); % abaixo da haste
+  \draw[thick] (0,1) -- (0,1.5);   % acima da haste
+
+  % Marcas para +l/2 e -l/2
+  \node[right] at (0,1) {\(\frac{l}{2}\)};
+  \node[right] at (0,-1) {\(-\frac{l}{2}\)};
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+    \item[(a)] Determine o potencial \( V \) devido à haste carregada para qualquer 
+    ponto sobre o eixo \( z \), com \( z > l/2 \).
+
+    \item[(b)] Encontre \( V(r, \theta, \varphi) \) para todos os pontos com \( |\mathbf{r}| > l/2 \), 
+    onde \( r, \theta, \varphi \) são as coordenadas esféricas usuais.
+\end{enumerate}
+
+\textbf{Sugestão para a parte b:} A solução geral da equação de Laplace em coordenadas esféricas 
+com simetria azimutal é dada por
+\begin{equation}
+V(r, \theta) = \sum_{l=0}^{\infty} \left( A_l r^l + \frac{B_l}{r^{l+1}} \right) P_l(\cos\theta)
+\qquad \text{Griffiths, 3.65}
+\end{equation}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+% Solution Here
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 4}}\\
+
+Considere uma esfera de raio \( a \) contendo uma densidade de carga uniforme \( \rho \) no 
+seu interior, e sem carga no exterior. Deseja-se determinar o potencial eletrostático \( V(r) \) 
+e o campo elétrico \( \mathbf{E}(r) \) em todo o espaço, assumindo que \( V \rightarrow 0 \) 
+quando \( r \rightarrow \infty \). 
+
+Determine o campo elétrico dentro e fora da esfera. Resolva a equação de Poisson para dentro 
+e fora da esfera.
+
+\textbf{Obs:} esse problema foi resolvido muitas vezes desde Física 3 por meio da lei 
+de Gauss na formulação integral.
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+% Solution Here
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 5}}\\
+
+Considere um tubo retangular de dimensões \( 0 \leq x \leq b \) e \( 0 \leq y \leq a \), infinito na direção \( z \).  
+As fronteiras em \( x = 0 \), \( x = b \) e \( y = a \) estão mantidas a potencial nulo (\( V = 0 \)), enquanto  
+a fronteira em \( y = 0 \) está mantida a um potencial constante \( V_0 \).  
+Determinar o potencial eletrostático \( V(x, y) \) dentro do tubo.
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+% Solution Here
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 6}}\\
+
+Em um dispositivo unidimensional, a densidade volumétrica de carga é dada por
+\begin{equation}
+\rho_v(x) = \rho_0 \frac{x}{a}
+\end{equation}
+
+\noindent
+Sabendo que o campo elétrico \( E = 0 \) em \( x = 0 \) e o potencial \( V = 0 \) em \( x = a \), 
+determinar as expressões para \( V(x) \) e \( \mathbf{E}(x) \).
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+% Solution Here
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 7}}\\
+
+Considere duas cargas pontuais iguais e opostas, \( +q \) e \( -q \), localizadas nos vetores 
+de posição \( \mathbf{r}_+ \) e \( \mathbf{r}_- \), conforme mostra a figura. Mostre que, em geral, 
+o termo de quadrupolo é diferente de zero. Mostre que, para um dipolo “puro” na origem, o termo de 
+quadrupolo se anula.
+
+\begin{center}
+\begin{tikzpicture}[scale=2.5, >=stealth]
+
+  % Ponto de origem
+  \coordinate (O) at (0,0);
+
+  % Coordenadas dos vetores
+  \coordinate (rp) at (1,1.2); % r_+
+  \coordinate (rm) at (1.5,0.4); % r_-
+
+  % Vetores
+  \draw[->, thick] (O) -- (rp) node[midway, left] {$\mathbf{r}_+$};
+  \draw[->, thick] (O) -- (rm) node[midway, below right] {$\mathbf{r}_-$};
+
+  % Cargas
+  \filldraw[red] (rp) circle (0.5pt) node[above right] {\small $+q$};
+  \filldraw[red] (rm) circle (0.5pt) node[right] {\small $-q$};
+
+  % Linha entre as cargas (opcional)
+  \draw[thick] (rp) -- (rm);
+
+  % Origem
+  \node at (-0.1,-0.05) {\small $O$};
+
+\end{tikzpicture}
+\end{center}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+% Solution Here
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 8}}\\
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+% Solution Here
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Problema 9}}\\
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+% Solution Here
+\end{flushleft}
 
 %%%%%%%% Bibliography 
 % Os comandos para incluir as referências bibliográficas
