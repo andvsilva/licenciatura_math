@@ -405,7 +405,22 @@ Os coeficientes \( B_l \) são dados por:
 B_l = \frac{1}{\varepsilon_0 (2l+1)} \int \rho(\vec{r}') \, (r')^l \, P_l(\cos\theta') \, d\tau'
 \end{equation}
 
-Como a carga está ao longo do eixo \( z \), temos:
+Como \colorbox{green!25}{a carga está ao longo do eixo \( z \)}, temos:
+
+\[
+r' = |\bm{r}'| = |z'|, \qquad \cos\theta' = \frac{z'}{|z'|}.
+\]
+
+Portanto, \colorbox{green!25}{o polinômio de Legendre avaliado no ângulo $\theta'$} é:
+
+\[
+P_l(\cos\theta') = P_l\left( \frac{z'}{|z'|} \right) =
+\begin{cases}
+\boxed{P_l(1) = 1}, & \text{se } z' > 0, \\
+P_l(-1) = (-1)^l, & \text{se } z' < 0.
+\end{cases}
+\]
+
 \begin{equation}
 \rho(\vec{r'}) = \lambda \, \delta(x') \delta(y') \Rightarrow dq = \lambda \, dz'
 \quad \text{e} \quad \cos\theta' = \frac{z'}{|z'|}
@@ -414,7 +429,12 @@ Como a carga está ao longo do eixo \( z \), temos:
 Então:
 \begin{equation}
 \boxed{
-B_l = \frac{\lambda}{\varepsilon_0(2l+1)} \int_{-l/2}^{l/2} z'^l \, dz'
+B_l = \frac{\lambda}{\varepsilon_0(2l+1)} \int_{-l/2}^{l/2} (z')^l P_l(1)\, dz'}
+\end{equation}
+
+\begin{equation}
+\boxed{
+B_l = \frac{\lambda}{\varepsilon_0(2l+1)} \int_{-l/2}^{l/2} (z')^l \, dz'
 } \hspace{0.3cm} \checkmark
 \end{equation}
 
@@ -437,9 +457,10 @@ V_0(r) = \frac{1}{4\pi\varepsilon_0} \cdot \frac{Q}{r}
 
 \vspace{0.3cm}
 \noindent
-\colorbox{green!15}{\textbf{Termo quadrupolar (\( l = 2 \)):}}
+\colorbox{blue!15}{\textbf{Termo quadrupolar (\( l = 2 \)):}}
+
 \begin{equation}
-B_2 = \frac{\lambda}{5\varepsilon_0} \int_{-l/2}^{l/2} z'^2 \, dz' = \frac{\lambda}{5\varepsilon_0} \cdot \frac{l^3}{12}
+B_2 = \frac{\lambda}{5\varepsilon_0} \int_{-l/2}^{l/2} (z')^2 \, dz' = \frac{\lambda}{5\varepsilon_0} \cdot \frac{l^3}{12}
 = \frac{\lambda l^3}{60\varepsilon_0}
 \end{equation}
 
@@ -449,15 +470,31 @@ V_2(r, \theta) = \frac{1}{4\pi\varepsilon_0} \cdot \frac{\lambda l^3}{60 r^3} \c
 
 \vspace{0.3cm}
 \noindent
+\colorbox{red!15}{\textbf{Termo octopolo (\( l = 4 \)):}}
+
+\begin{equation}
+B_4 = \frac{\lambda}{9\varepsilon_0} \int_{-l/2}^{l/2} (z')^4 \, dz' = \frac{\lambda}{9\varepsilon_0} \cdot \frac{l^5}{80}
+= \frac{\lambda l^5}{720\varepsilon_0}
+\end{equation}
+
+\begin{equation}
+V_2(r, \theta) = \frac{1}{4\pi\varepsilon_0} \cdot \frac{\lambda l^5}{720 r^5} \cdot \left( \frac{35\cos^4\theta - 30\cos^2\theta + 3}{8} \right)
+\end{equation}
+
+
+\vspace{0.3cm}
+\noindent
 \textbf{Resposta da parte (b):}
+
 \begin{equation}
 \boxed{
 V(r, \theta) \approx \frac{1}{4\pi\varepsilon_0} \left[
-\frac{Q}{r} +
-\frac{\lambda l^3}{60 r^3} \left( \frac{3\cos^2\theta - 1}{2} \right)
+\textcolor{green}{\frac{Q}{r}} +
+\textcolor{blue}{\frac{\lambda l^3}{60 r^3} \left( \frac{3\cos^2\theta - 1}{2} \right)}
++ \textcolor{red}{\frac{\lambda l^5}{720 r^5} \cdot \left( \frac{35\cos^4\theta - 30\cos^2\theta + 3}{8} \right)}
 + \cdots
 \right]
-\quad \text{para } r > \frac{l}{2}
+,\quad r > \frac{l}{2}
 }
 \end{equation}
 
@@ -469,8 +506,8 @@ V(r, \theta) \approx \frac{1}{4\pi\varepsilon_0} \left[
 
 Considere uma esfera de raio \( a \) contendo uma densidade de carga uniforme \( \rho \) no 
 seu interior, e sem carga no exterior. Deseja-se determinar o potencial eletrostático \( V(r) \) 
-e o campo elétrico \( \mathbf{E}(r) \) em todo o espaço, assumindo que \( V \rightarrow 0 \) 
-quando \( r \rightarrow \infty \). 
+e o campo elétrico \( \mathbf{E}(r) \) em todo o espaço, \colorbox{red!20}{assumindo que \( V \rightarrow 0 \) 
+quando \( r \rightarrow \infty \)}. 
 
 Determine o campo elétrico dentro e fora da esfera. Resolva a equação de Poisson para dentro 
 e fora da esfera.
@@ -489,7 +526,7 @@ Pela simetria esférica, o campo elétrico é radial, ou seja, \( \mathbf{E}(r) 
 \boxed{\oint \mathbf{E} \cdot d\mathbf{A} = \frac{Q_{\text{int}}}{\varepsilon_0}}
 \end{equation}
 
-\subsection*{Para \( r < a \) (interior da esfera):}
+\subsection*{\colorbox{green!15}{Para \( r < a \) (interior da esfera):}}
 
 \begin{equation}
 Q_{\text{int}} = \rho \cdot \frac{4}{3}\pi r^3
@@ -497,7 +534,7 @@ Q_{\text{int}} = \rho \cdot \frac{4}{3}\pi r^3
 \Rightarrow \boxed{E(r) = \frac{\rho r}{3\varepsilon_0}}
 \end{equation}
 
-\subsection*{Para \( r > a \) (exterior da esfera):}
+\subsection*{\colorbox{red!15}{Para \( r > a \) (exterior da esfera):}}
 
 \begin{equation}
 Q = \rho \cdot \frac{4}{3} \pi a^3
@@ -521,7 +558,7 @@ A \colorbox{green!15}{equação de Poisson para simetria esférica é:}
 \frac{1}{r^2} \dv{r} \left( r^2 \dv{V}{r} \right) = -\frac{\rho(r)}{\varepsilon_0}
 \end{equation}
 
-\subsection*{Para \( r < a \) (com \( \rho = \text{constante} \))}
+\subsection*{\colorbox{green!15}{Para \( r < a \) (com \( \rho = \text{constante} \))}}
 
 \begin{equation}
 \frac{1}{r^2} \dv{r} \left( r^2 \dv{V}{r} \right) = -\frac{\rho}{\varepsilon_0}
@@ -535,13 +572,15 @@ r^2 \dv{V}{r} = -\frac{\rho}{\varepsilon_0} \cdot \frac{r^3}{3} + C_1
 \Rightarrow \dv{V}{r} = -\frac{\rho r}{3\varepsilon_0} + \frac{C_1}{r^2}
 \end{equation}
 
-Impondo regularidade em \( r = 0 \), temos \( C_1 = 0 \). Integrando novamente:
+Impondo "regularidade" significa que a solução (neste caso, 
+o potencial \( V(r) \) deve ser finita e bem-comportada em todos os pontos 
+do domínio físico, incluindo no centro da esfera \( r=0) \), temos \( C_1 = 0 \). Integrando novamente:
 
 \begin{equation}
 V(r) = -\frac{\rho}{6\varepsilon_0} r^2 + C_2
 \end{equation}
 
-\subsection*{Para \( r > a \) (região sem carga)}
+\subsection*{\colorbox{red!15}{Para \( r > a \) (região sem carga)}}
 
 \begin{equation}
 \frac{1}{r^2} \dv{r} \left( r^2 \dv{V}{r} \right) = 0
@@ -554,15 +593,15 @@ V(r) = -\frac{\rho}{6\varepsilon_0} r^2 + C_2
 \section*{3. Condições de Contorno}
 
 \begin{itemize}
-    \item Continuidade do potencial em \( r = a \):
+    \item \colorbox{green!15}{Continuidade do potencial em \( r = a \)}:
     \begin{equation}
     V_{\text{int}}(a) = V_{\text{ext}}(a)
     \end{equation}
-    \item Continuidade da derivada do potencial (campo elétrico) em \( r = a \):
+    \item \colorbox{green!15}{Continuidade da derivada do potencial (campo elétrico) em \( r = a \)}:
     \begin{equation}
     \left. \dv{V}{r} \right|_{r=a^-} = \left. \dv{V}{r} \right|_{r=a^+}
     \end{equation}
-    \item Condição no infinito: \( V(r) \rightarrow 0 \Rightarrow C_4 = 0 \)
+    \item \colorbox{green!15}{Condição no infinito: \( V(r) \rightarrow 0 \Rightarrow C_4 = 0 \)}
 \end{itemize}
 
 Derivadas:
@@ -570,14 +609,14 @@ Derivadas:
 \begin{equation}
 \left. \dv{V}{r} \right|_{r=a^-} = -\frac{\rho a}{3\varepsilon_0}, \quad
 \left. \dv{V}{r} \right|_{r=a^+} = \frac{C_3}{a^2}
-\Rightarrow C_3 = -\frac{\rho a^3}{3\varepsilon_0}
+\Rightarrow \boxed{C_3 = -\frac{\rho a^3}{3\varepsilon_0}}
 \end{equation}
 
 Potencial contínuo em \( r = a \):
 
 \begin{equation}
 -\frac{\rho}{6\varepsilon_0} a^2 + C_2 = \frac{\rho a^2}{3\varepsilon_0}
-\Rightarrow C_2 = \frac{\rho a^2}{2\varepsilon_0}
+\Rightarrow \boxed{C_2 = \frac{\rho a^2}{2\varepsilon_0}}
 \end{equation}
 
 \section*{4. Resultados Finais}
@@ -632,7 +671,7 @@ V(b, y) &= 0, \\
 V(x, 0) &= V_0.
 \end{align*}
 
-Utilizando o método de separação de variáveis, assumimos uma solução do tipo:
+Utilizando o \colorbox{yellow!25}{método de separação de variáveis}, assumimos uma solução do tipo:
 
 \begin{equation}
 V(x, y) = X(x)Y(y)
@@ -660,7 +699,8 @@ Y_n(y) = \sinh\left( \frac{n\pi (a - y)}{b} \right)
 Assim, a solução geral do potencial é:
 
 \begin{equation}
-V(x, y) = \sum_{n=1}^{\infty} C_n \sin\left( \frac{n\pi x}{b} \right) \sinh\left( \frac{n\pi (a - y)}{b} \right)
+\boxed{
+V(x, y) = \sum_{n=1}^{\infty} C_n \sin\left( \frac{n\pi x}{b} \right) \sinh\left( \frac{n\pi (a - y)}{b} \right)}
 \end{equation}
 
 Impondo a condição \( V(x, 0) = V_0 \), obtemos a série de Fourier da função constante \( V_0 \):
@@ -730,7 +770,7 @@ E(x) &= -\frac{dV}{dx} = \frac{\rho_0}{2\varepsilon_0 a} x^2 - C_1
 Usando a condição \( E(0) = 0 \), obtemos:
 
 \begin{equation}
-C_1 = 0 \quad \Rightarrow \quad E(x) = \frac{\rho_0}{2\varepsilon_0 a} x^2
+C_1 = 0 \quad \Rightarrow \quad \boxed{E(x) = \frac{\rho_0}{2\varepsilon_0 a} x^2}
 \end{equation}
 
 Agora integramos para obter \( V(x) \):
@@ -743,13 +783,13 @@ V(x) &= -\int E(x)\, dx = -\int \frac{\rho_0}{2\varepsilon_0 a} x^2 \, dx \\
 Aplicando a condição \( V(a) = 0 \):
 
 \begin{align}
-V(a) = 0 &\Rightarrow 0 = -\frac{\rho_0}{6\varepsilon_0 a} a^3 + C_2 \Rightarrow C_2 = \frac{\rho_0 a^2}{6\varepsilon_0}
+V(a) = 0 &\Rightarrow 0 = -\frac{\rho_0}{6\varepsilon_0 a} a^3 + C_2 \Rightarrow \boxed{C_2 = \frac{\rho_0 a^2}{6\varepsilon_0}}
 \end{align}
 
 Portanto, a expressão para o potencial é:
 
 \begin{equation}
-V(x) = \frac{\rho_0}{6\varepsilon_0 a} \left( a^3 - x^3 \right)
+\boxed{V(x) = \frac{\rho_0}{6\varepsilon_0 a} \left( a^3 - x^3 \right)}
 \end{equation}
 
 \bigskip
@@ -819,7 +859,7 @@ Em seguida apresentaremos a análise matemática desses dois casos.
 
 \section*{1. Tensor de Quadrupolo Elétrico}
 
-O tensor de quadrupolo \( Q_{ij} \) para um sistema discreto de cargas é dado por:
+O \colorbox{pink!35}{tensor de quadrupolo \( Q_{ij} \) para um sistema discreto de cargas} é dado por:
 
 \begin{equation}
 \boxed{
@@ -839,7 +879,7 @@ Ou seja,
 \boxed{Q_{ij} = q \left[ 3(x_{+,i} x_{+,j} - x_{-,i} x_{-,j}) - (r_+^2 - r_-^2)\delta_{ij} \right]}
 \end{equation}
 
-Esse \colorbox{green!15}{tensor não é nulo em geral} porque:
+Esse \colorbox{yellow!35}{tensor não é nulo em geral} porque:
 
 \begin{itemize}
     \item \( x_{+,i} x_{+,j} \neq x_{-,i} x_{-,j} \) se \( \mathbf{r}_+ \neq \mathbf{r}_- \),
