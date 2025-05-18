@@ -1,0 +1,1286 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[brazil, english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\addtolength{\topmargin}{-2.5pt}
+\usepackage{xcolor}
+\usepackage{amsmath, amssymb, bm}
+\usepackage{mathtools}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{newunicodechar}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{tikz-3dplot} % Necessário para coordenadas 3D
+\usetikzlibrary{intersections}
+\usepackage{siunitx}
+\usetikzlibrary{3d, arrows.meta}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+\usepackage{color}
+\definecolor{myblue}{rgb}{.8, .8, 1}
+
+\usepackage{amsmath}
+\usepackage{empheq}
+
+\newlength\mytemplen
+\newsavebox\mytempbox
+
+\makeatletter
+\newcommand\mybluebox{%
+    \@ifnextchar[%]
+       {\@mybluebox}%
+       {\@mybluebox[0pt]}}
+
+\def\@mybluebox[#1]{%
+    \@ifnextchar[%]
+       {\@@mybluebox[#1]}%
+       {\@@mybluebox[#1][0pt]}}
+
+\def\@@mybluebox[#1][#2]#3{
+    \sbox\mytempbox{#3}%
+    \mytemplen\ht\mytempbox
+    \advance\mytemplen #1\relax
+    \ht\mytempbox\mytemplen
+    \mytemplen\dp\mytempbox
+    \advance\mytemplen #2\relax
+    \dp\mytempbox\mytemplen
+    \colorbox{myblue}{\hspace{1em}\usebox{\mytempbox}\hspace{1em}}}
+\makeatother
+
+\usepackage[most]{tcolorbox}
+
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base,
+    enhanced, colframe=blue!30!black,
+    colback=blue!30, boxrule=1pt,
+    #1}
+
+\tcbset{
+    highlight math style={
+        enhanced,
+        colframe=red!60!black,
+        colback=yellow!50,
+        arc=4pt,
+        boxrule=1pt,
+        drop fuzzy shadow
+    }
+    }
+
+\usepackage{physics}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+\linespread{1}
+
+\definecolor{ao(english)}{rgb}{0.0, 0.5, 0.0}
+\definecolor{byzantium}{rgb}{0.44, 0.16, 0.39}
+\newunicodechar{∘}{\circ}
+
+\input{commands.tex}
+
+\hypersetup{
+    colorlinks=true,% make the links colored
+    linkcolor=blue
+}
+
+\usepackage{setspace}
+\addbibresource{bibliography.bib}
+
+\newcommand{\printingbibliography}{%
+
+    \pagestyle{myheadings}
+    \markright{}
+    \sloppy
+    \printbibliography[heading=bibintoc, % add to table of contents
+                   title=Refer\^encias % Chapter name
+                  ]
+    \fussy%
+}
+\PassOptionsToPackage{table}{xcolor}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\thepage}
+
+\geometry{a4paper,top=30mm,bottom=20mm,left=30mm,right=20mm}
+
+\titleformat*{\section}{\bfseries\large}
+\titleformat*{\subsection}{\bfseries\normalsize}
+
+\title{ \textbf{\large Note - Physics}}
+\author{Andr\'e V. Silva}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+
+\noindent\rule{\linewidth}{0.4pt}\\
+
+\justifying
+
+\begin{multicols}{2}
+
+\section{Cinemática Escalar e Vetorial}
+
+\section{Conceitos Fundamentais}
+\begin{itemize}
+  \item \textbf{Movimento}: variação da posição no tempo em relação a um referencial.
+  \item \textbf{Repouso}: posição constante em relação ao referencial.
+  \item \textbf{Referencial}: sistema usado como base para descrever o movimento.
+\end{itemize}
+
+\section{Cinemática Escalar (1D)}
+\begin{itemize}
+  \item \textbf{Posição}: $s$
+  \item \textbf{Deslocamento}: $\Delta s = s_f - s_0$
+  \item \textbf{Velocidade média}: $v_m = \frac{\Delta s}{\Delta t}$
+  \item \textbf{Aceleração média}: $a_m = \frac{\Delta v}{\Delta t}$
+\end{itemize}
+
+\section{Movimento Retilíneo Uniforme (MRU)}
+\begin{itemize}
+  \item Velocidade constante: $a = 0$
+  \item Equação horária: $s = s_0 + v t$
+\end{itemize}
+
+\section{Movimento Retilíneo Uniformemente Variado (MRUV)}
+\begin{itemize}
+  \item Aceleração constante.
+  \item $s = s_0 + v_0 t + \frac{1}{2} a t^2$
+  \item $v = v_0 + a t$
+  \item $v^2 = v_0^2 + 2a(s - s_0)$
+  \item $\Delta s = \frac{(v + v_0)}{2} \cdot t$
+\end{itemize}
+
+\section{Cinemática Vetorial (2D e 3D)}
+\begin{itemize}
+  \item Vetor posição: $\vec{r}(t) = x(t)\hat{i} + y(t)\hat{j} + z(t)\hat{k}$
+  \item Deslocamento vetorial: $\Delta \vec{r} = \vec{r}_f - \vec{r}_0$
+  \item Velocidade vetorial: $\vec{v}(t) = \frac{d\vec{r}}{dt}$
+  \item Aceleração vetorial: $\vec{a}(t) = \frac{d\vec{v}}{dt}$
+\end{itemize}
+
+\section{Lançamento Oblíquo}
+\textbf{Separação dos movimentos:}
+\begin{itemize}
+  \item Horizontal (MRU): $x(t) = x_0 + v_{0x} t$
+  \item Vertical (MRUV): $y(t) = y_0 + v_{0y} t - \frac{1}{2} g t^2$
+\end{itemize}
+
+\textbf{Outras fórmulas:}
+\begin{itemize}
+  \item Velocidade inicial: $\vec{v}_0 = v_0 \cos\theta\,\hat{i} + v_0 \sin\theta\,\hat{j}$
+  \item Alcance: $A = \frac{v_0^2 \sin(2\theta)}{g}$
+  \item Altura máxima: $H = \frac{v_0^2 \sin^2\theta}{2g}$
+  \item Tempo de subida: $t_s = \frac{v_0 \sin\theta}{g}$
+  \item Tempo total: $t = \frac{2 v_0 \sin\theta}{g}$
+\end{itemize}
+
+\section{Gráficos}
+\begin{itemize}
+  \item $s \times t$: inclinação = velocidade.
+  \item $v \times t$: área = deslocamento; inclinação = aceleração.
+  \item $a \times t$: área = variação da velocidade.
+\end{itemize}
+
+\section{Tipos de Movimento}
+\begin{itemize}
+  \item MRU:
+    \begin{itemize}
+      \item[$\rightarrow$] $v > 0$: progressivo
+      \item[$\rightarrow$] $v < 0$: retrógrado
+    \end{itemize}
+  \item MRUV:
+    \begin{itemize}
+      \item[$\rightarrow$] $v \cdot a > 0$: acelerado
+      \item[$\rightarrow$] $v \cdot a < 0$: retardado
+    \end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent\rule{\linewidth}{1pt}\\
+\section{Estática e Dinâmica}
+
+\section{Conceitos Fundamentais}
+
+\begin{itemize}
+  \item \textbf{Grandezas escalares}: possuem apenas módulo (ex: massa, tempo).
+  \item \textbf{Grandezas vetoriais}: possuem módulo, direção e sentido (ex: força, aceleração).
+  \item \textbf{Força resultante}: vetor que representa o efeito combinado de todas as forças aplicadas.
+  \item \textbf{Diagrama de corpo livre}: representação de todas as forças atuantes sobre um corpo.
+\end{itemize}
+
+\section{Equilíbrio do Corpo Rígido e da Partícula}
+
+\textbf{Condições de equilíbrio:}
+\begin{align*}
+  \sum \vec{F} &= 0 \quad \text{(equilíbrio translacional)} \\
+  \sum \vec{\tau} &= 0 \quad \text{(equilíbrio rotacional)}
+\end{align*}
+
+\textbf{Torque (momento de uma força):}
+\begin{equation*}
+  \tau = r F \sin \theta
+\end{equation*}
+
+\begin{equation*}
+  \vec{\tau} = \frac{d\vec{L}}{dt}, \quad \vec{L} = \vec{r} \times \vec{F} 
+\end{equation*}
+
+
+
+\section{3. Leis Fundamentais da Dinâmica (Leis de Newton)}
+
+\begin{itemize}
+  \item \textbf{1ª Lei (Inércia)}: um corpo em repouso ou em MRU permanece assim se a força resultante for nula.
+  \item \textbf{2ª Lei}: Princ\'ipio Fundamental da Din\^amica:
+  \begin{equation*}
+    \vec{F}_{\text{resultante}} = m \vec{a}
+  \end{equation*}
+  \item \textbf{3ª Lei (Ação e Reação)}: forças trocadas entre dois corpos são iguais em módulo, mesma direção e sentidos opostos.
+\end{itemize}
+
+\section{Gravitação Universal}
+
+\textbf{Lei da Gravitação Universal:}
+\begin{equation*}
+  F = G \frac{m_1 m_2}{r^2}
+\end{equation*}
+
+\textbf{Campo gravitacional:}
+\begin{equation*}
+  g = \frac{G M}{r^2}
+\end{equation*}
+
+\textbf{Energia potencial gravitacional:}
+\begin{equation*}
+  E_p = -\frac{G M m}{r}
+\end{equation*}
+
+\section{Forças no Movimento Circular}
+
+\begin{align*}
+  F_c &= \frac{m v^2}{r} \quad \text{(força centrípeta)} \\
+  v &= \omega r \quad \text{(velocidade tangencial)} \\
+  a_c &= \frac{v^2}{r} \quad \text{(aceleração centrípeta)}
+\end{align*}
+
+\section{Impulso e Quantidade de Movimento}
+
+\textbf{Quantidade de movimento:}
+\begin{equation*}
+  \vec{p} = m \vec{v}
+\end{equation*}
+
+\textbf{Impulso:}
+\begin{equation*}
+  \vec{I} = \vec{F} \Delta t
+\end{equation*}
+
+\textbf{Teorema do impulso:}
+\begin{equation*}
+  \vec{I} = \Delta \vec{p}
+\end{equation*}
+
+\section{Trabalho e Energia Cinética}
+
+\textbf{Trabalho de uma força constante:}
+\begin{equation*}
+  W = F d \cos \theta
+\end{equation*}
+
+\textbf{Energia cinética:}
+\begin{equation*}
+  E_c = \frac{1}{2} m v^2
+\end{equation*}
+
+\textbf{Teorema da energia cinética:}
+\begin{equation*}
+  W_{\text{resultante}} = \Delta E_c
+\end{equation*}
+
+\section{Força de Atrito}
+
+\textbf{Atrito estático:}
+\begin{equation*}
+  f_e \leq \mu_e N
+\end{equation*}
+
+\textbf{Atrito cinético:}
+\begin{equation*}
+  f_c = \mu_c N
+\end{equation*}
+
+\section{9. Energia Potencial}
+
+\textbf{Potencial gravitacional:}
+\begin{equation*}
+  E_p = m g h
+\end{equation*}
+
+\textbf{Potencial elástica:}
+\begin{equation*}
+  E_{p,\text{el}} = \frac{1}{2} k x^2
+\end{equation*}
+
+\section{Conservação da Energia Mecânica}
+
+\textbf{Em sistemas conservativos:}
+\begin{equation*}
+  E_m = E_c + E_p = \text{constante}
+\end{equation*}
+
+\section{Lei de Hooke}
+
+\textbf{Força elástica:}
+\begin{equation*}
+  F = -k x
+\end{equation*}
+
+\textbf{Energia potencial armazenada:}
+\begin{equation*}
+  E_{p,\text{el}} = \frac{1}{2} k x^2
+\end{equation*}
+
+\subsection{Leis de Kepler}
+
+\begin{itemize}
+  \item \textbf{1ª Lei:} Órbitas elípticas, com o Sol em um dos focos.
+  \item \textbf{2ª Lei:} Áreas iguais em tempos iguais. \textit{Consequência direta da 
+  conservação do momento angular:}
+        \[
+        \vec{L} = \vec{r} \times \vec{p} = \text{constante}
+        \]
+
+        \[ \frac{dA}{dt} = \frac{1}{2} |\vec{r} \times \vec{v}| = \text{constante} \]
+
+  \item \textbf{3ª Lei:} \( \frac{T^2}{R^3} = \frac{4 \pi^2}{GM}  \)
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent\rule{\linewidth}{1pt}\\
+\section{Hidrostática}
+
+\section{Fluido em Equilíbrio}
+Fluido em repouso está sujeito apenas a forças normais e pressões. A pressão se transmite igualmente em todas as direções no interior do fluido.
+
+\section{Conceito de Pressão}
+\[
+P = \frac{F}{A}
+\]
+Unidade: Pascal (Pa), onde \(1\, \text{Pa} = 1\, \text{N/m}^2\).
+
+\section{Densidade}
+\[
+\rho = \frac{m}{V}
+\]
+Unidade: \(\text{kg/m}^3\). Densidade da água: \(\rho_{\text{água}} = 10^3\, \text{kg/m}^3\).
+
+\section{Pressão de uma Coluna de Líquido}
+\[
+P = \rho g h
+\]
+Onde: \(\rho\) é a densidade, \(g\) a gravidade, \(h\) a profundidade.
+
+\section{Princípio de Pascal}
+Uma variação de pressão aplicada a um fluido incompressível em equilíbrio transmite-se integralmente a todos os pontos do fluido e às paredes do recipiente.
+
+\section{Pressão Atmosférica}
+Pressão exercida pelo ar ao nível do mar:
+\[
+P_{\text{atm}} \approx 1{,}0 \times 10^5\, \text{Pa} = 1\, \text{atm}
+\]
+
+\section{Experiência de Torricelli}
+\[
+P_{\text{atm}} = \rho g h \quad \text{com } h = 0{,}76\, \text{m (coluna de mercúrio)}
+\]
+
+\section{Lei de Stevin}
+\[
+\Delta P = \rho g \Delta h
+\]
+Válida para qualquer ponto de um mesmo fluido em equilíbrio.
+
+\section{Vasos Comunicantes}
+Se o fluido for o mesmo, os níveis de líquido se igualam:
+\[
+h_1 = h_2
+\quad \text{(para } \rho_1 = \rho_2)
+\]
+
+\section{Prensa Hidráulica}
+Aplicação do Princípio de Pascal:
+\[
+\frac{F_1}{A_1} = \frac{F_2}{A_2}
+\]
+Permite multiplicar força aplicando pressão a um fluido entre dois êmbolos de áreas diferentes.
+
+\section{Equilíbrio térmico e temperatura}
+\begin{itemize}
+    \item Temperatura é uma medida da energia cinética média das partículas.
+    \item Dois corpos estão em \textbf{equilíbrio térmico} quando não trocam mais calor entre si.
+    \item \textbf{Lei Zero da Termodinâmica}: Se $A$ está em equilíbrio com $B$, e $B$ com $C$, então $A$ está em equilíbrio com $C$.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent\rule{\linewidth}{1pt}\\
+
+\section{Escalas termométricas}
+
+\begin{itemize}
+    \item Principais escalas: Celsius $(^\circ C)$, Fahrenheit $(^\circ F)$, Kelvin $(K)$.
+    \item Conversões:
+    \begin{align*}
+        T(K) &= T(^\circ C) + 273{,}15 \\
+        T(^\circ F) &= \frac{9}{5}T(^\circ C) + 32
+    \end{align*}
+\end{itemize}
+
+\section{Dilatação dos sólidos e líquidos}
+\begin{itemize}
+    \item Dilatação linear: $\Delta L = L_0 \alpha \Delta T$
+    \item Dilatação superficial: $\Delta A = A_0 \cdot 2\alpha \cdot \Delta T$
+    \item Dilatação volumétrica: $\Delta V = V_0 \beta \Delta T$, com $\beta = 3\alpha$
+    \item Dilatação aparente dos líquidos: $\Delta V_{ap}$  = $V_0 (\gamma_{\text{líq}} -\beta_{rec}) \Delta T$
+\end{itemize}
+
+\section{Estudo térmico dos gases}
+\begin{itemize}
+    \item Gases ideais obedecem à equação de estado e ignoram interações intermoleculares.
+    \item Variáveis de estado: $P$, $V$, $T$, $n$.
+    \item Hipóteses: moléculas puntiformes, colisões elásticas, movimento aleatório.
+\end{itemize}
+
+\section{Lei geral dos gases perfeitos}
+\begin{equation}
+    PV = nRT
+\end{equation}
+Onde:
+\begin{itemize}
+    \item $R = 8{,}31 \, \text{J/mol·K}$ (constante dos gases)
+\end{itemize}
+
+\section{Equação de Clapeyron}
+\begin{equation}
+    \frac{P_1V_1}{T_1} = \frac{P_2V_2}{T_2}
+\end{equation}
+
+\section{Transformações gasosas}
+\begin{itemize}
+    \item \textbf{Isotérmica} ($\Delta T = 0$): $PV = \text{constante}$ \hfill (Lei de Boyle)
+    \item \textbf{Isobárica} ($\Delta P = 0$): $\frac{V}{T} = \text{constante}$ \hfill (Lei de Charles)
+    \item \textbf{Isocórica} ($\Delta V = 0$): $\frac{P}{T} = \text{constante}$ \hfill (Lei de Gay-Lussac)
+\end{itemize}
+
+\section{Princípio da conservação da energia}
+\begin{itemize}
+    \item Energia interna se conserva em sistemas isolados.
+    \item Base do \textbf{Primeiro Princípio da Termodinâmica}.
+\end{itemize}
+
+\section{Mudanças de estado físico}
+\begin{itemize}
+    \item Fusão, vaporização, solidificação, condensação, sublimação.
+    \item Ocorrem à temperatura constante.
+    \item Energia envolvida depende da massa e do calor latente.
+\end{itemize}
+
+\section{Quantidade de calor}
+\begin{itemize}
+    \item Calor sensível: $Q = mc\Delta T$
+    \item Calor latente: $Q = mL$
+    \item Unidade no SI: Joule (J)
+\end{itemize}
+
+\section{Propagação do calor}
+\subsection{Condução térmica -  Lei de Fourier da Condução de Calor}
+\begin{equation}
+\boxed{Q = -kA\frac{dT}{dx}}
+\end{equation}
+
+\subsection{Convecção}
+\begin{itemize}
+    \item Transferência por movimentação de massa em fluidos.
+\end{itemize}
+
+\subsection{Radiação}
+\begin{equation}
+    P = \sigma A T^4
+\end{equation}
+Onde $\sigma = 5{,}67 \times 10^{-8} \, \text{W/m}^2\text{K}^4$
+
+\section{Princ\'ipios da Termodinâmica}
+
+\subsection{Primeiro Princípio}
+\begin{equation}
+    \Delta U = Q - W   \hspace{0.5cm} \longrightarrow \hspace{0.5cm} Q = W + \Delta U
+\end{equation}
+\subsection{Segundo Princípio}
+\begin{itemize}
+    \item O calor não flui espontaneamente de um corpo frio para um corpo quente.
+    \item Entropia tende a aumentar.
+\end{itemize}
+\subsection{Terceiro Princípio}
+\begin{itemize}
+    \item A entropia de um cristal perfeito é zero no zero absoluto $(0\,K)$.
+\end{itemize}
+
+\section{Equivalente mecânico do calor}
+\begin{itemize}
+    \item Experiência de Joule:
+    \begin{equation}
+        1 \, \text{cal} = 4{,}186 \, \text{J}
+    \end{equation}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent\rule{\linewidth}{1pt}\\
+
+\section{Movimento Vibratório e Ondulatório}
+
+\subsection{Movimento Periódico}
+\begin{itemize}
+    \item \textbf{Amplitude} $(A)$: valor máximo da oscilação.
+    \item \textbf{Período} $(T)$: tempo para uma oscilação completa.
+    \item \textbf{Frequência} $(f)$: número de oscilações por segundo, $f = \dfrac{1}{T}$.
+    \item Unidade de frequência: hertz $(\text{Hz})$.
+\end{itemize}
+
+\section{Movimento Harmônico Simples (MHS)}
+
+\begin{itemize}
+    \item Posição em função do tempo:
+    \[
+        x(t) = A \cos(\omega t + \varphi)
+    \]
+    \item $\omega$: frequência angular, $\omega = 2\pi f$
+    \item $\varphi$: fase inicial
+    \item Velocidade: $v(t) = -A\omega \sin(\omega t + \varphi)$
+    \item Aceleração: $a(t) = -A\omega^2 \cos(\omega t + \varphi) = -\omega^2 x(t)$
+\end{itemize}
+
+\section{Oscilador Harmônico}
+\begin{itemize}
+    \item Sistema massa-mola:
+    \[
+        F = -kx \quad \Rightarrow \quad m\ddot{x} = -kx
+    \]
+    \item Solução: MHS com:
+    \[
+        \omega = \sqrt{\frac{k}{m}}, \quad T = 2\pi\sqrt{\frac{m}{k}}, \quad f = \frac{1}{2\pi}\sqrt{\frac{k}{m}}
+    \]
+\end{itemize}
+
+\section{Pêndulo Simples}
+\begin{itemize}
+    \item Para pequenos ângulos $(\theta < 10^\circ)$, o movimento é aproximadamente harmônico:
+    \[
+        T = 2\pi \sqrt{\frac{L}{g}}
+    \]
+    \item Onde $L$ é o comprimento e $g$ a aceleração da gravidade.
+\end{itemize}
+
+\section{Classificação das Ondas}
+\begin{itemize}
+    \item \textbf{Quanto à natureza:}
+    \begin{itemize}
+        \item Mecânicas (necessitam meio): som, ondas em corda.
+        \item Eletromagnéticas (propagam no vácuo): luz, micro-ondas.
+    \end{itemize}
+    \item \textbf{Quanto à direção da vibração:}
+    \begin{itemize}
+        \item Transversais: vibração $\bot$ propagação (ex: luz).
+        \item Longitudinais: vibração $\|$ propagação (ex: som).
+    \end{itemize}
+\end{itemize}
+
+\section{Velocidade de propagação de uma onda unidimensional}
+\[
+    v = \lambda f
+\]
+Onde:
+\begin{itemize}
+    \item $\lambda$ é o comprimento de onda.
+    \item $f$ é a frequência.
+\end{itemize}
+
+\section{Ondas Periódicas}
+\[
+    y(x, t) = A \cos(kx - \omega t + \varphi)
+\]
+\begin{itemize}
+    \item $k = \dfrac{2\pi}{\lambda}$: número de onda
+    \item $\omega = 2\pi f$: frequência angular
+\end{itemize}
+
+\section{Reflexão e refração de um pulso numa corda}
+\begin{itemize}
+    \item Reflexão em extremidade fixa: inversão de fase.
+    \item Reflexão em extremidade livre: sem inversão.
+    \item Refração: mudança de meio altera velocidade e comprimento de onda.
+\end{itemize}
+
+\section{Frente de onda}
+\begin{itemize}
+    \item Superfície formada por pontos que vibram em fase.
+    \item Representa a forma da propagação (plana, esférica, etc).
+\end{itemize}
+
+\section{Fenômenos Ondulatórios}
+\subsection{Reflexão}
+\begin{itemize}
+    \item Onda retorna ao encontrar um obstáculo.
+    \item Lei da reflexão: ângulo de incidência = ângulo de reflexão.
+\end{itemize}
+
+\subsection{Refração}
+\begin{itemize}
+    \item Mudança de direção ao passar de um meio para outro com velocidade diferente.
+    \item A frequência permanece constante.
+\end{itemize}
+
+\subsection{Difração}
+\begin{itemize}
+    \item Capacidade de contornar obstáculos e atravessar fendas.
+    \item Mais evidente quando $\lambda \sim$ dimensão da fenda.
+\end{itemize}
+
+\subsection{Polarização}
+\begin{itemize}
+    \item Ocorre apenas com ondas transversais.
+    \item Restrição da direção de oscilação.
+\end{itemize}
+
+\subsection{Superposição}
+\begin{itemize}
+    \item Ondas que se encontram somam-se ponto a ponto.
+    \item Pode ser construtiva (reforço) ou destrutiva (cancelamento).
+\end{itemize}
+
+\subsection{Ondas estacionárias}
+\begin{itemize}
+    \item Resultam da superposição de duas ondas idênticas que se propagam em sentidos opostos.
+    \item Formam nós (amplitude nula) e ventres (amplitude máxima).
+\end{itemize}
+
+\subsection{Interferência de ondas bidimensionais}
+\begin{itemize}
+    \item Padrões de interferência gerados por duas fontes coerentes.
+    \item Franja de interferência depende da diferença de caminho óptico:
+    \[
+        \Delta s = n\lambda \quad (\text{interferência construtiva})
+    \]
+    \[
+        \Delta s = \left(n + \frac{1}{2}\right)\lambda \quad (\text{interferência destrutiva})
+    \]
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent\rule{\linewidth}{1pt}\\
+
+\section{Acústica: Natureza e características do som}
+
+\section{Natureza do Som}
+\begin{itemize}
+    \item O som é uma \textbf{onda mecânica longitudinal} que se propaga em meios materiais (sólidos, líquidos e gases).
+    \item É gerado por um corpo em vibração e necessita de um meio material para se propagar (não se propaga no vácuo).
+    \item A propagação ocorre devido à compressão e rarefação das partículas do meio.
+    \item A velocidade do som depende do meio e da sua temperatura. No ar, a $\approx 340\,\text{m/s}$ (a $20^\circ$C).
+\end{itemize}
+
+\section{Características Físicas do Som}
+\begin{itemize}
+    \item \textbf{Frequência} $(f)$: número de vibrações por segundo. Está relacionada à altura do som (grave ou agudo).
+    \begin{itemize}
+        \item Sons audíveis: $20\,\text{Hz} \leq f \leq 20\,000\,\text{Hz}$
+        \item Infrassons: $f < 20\,\text{Hz}$ \quad Ultrassons: $f > 20\,000\,\text{Hz}$
+    \end{itemize}
+    
+    \item \textbf{Intensidade} $(I)$: quantidade de energia transportada pela onda sonora por unidade de área. Relaciona-se com o volume (forte ou fraco).
+    \[
+        I = \frac{P}{A}
+    \]
+    Onde $P$ é a potência da fonte sonora e $A$ é a área.
+    
+    \item \textbf{Nível Sonoro} $(\beta)$: medido em decibéis (dB).
+    \[
+        \beta = 10 \log \left( \frac{I}{I_0} \right)
+    \]
+    Onde $I_0 = 10^{-12}\,\text{W/m}^2$ é a intensidade de referência.
+    
+    \item \textbf{Timbre}: característica que permite distinguir sons de mesma frequência e intensidade produzidos por fontes diferentes. Está relacionado com a forma da onda sonora e os harmônicos presentes.
+    
+    \item \textbf{Velocidade do som} $(v)$: depende da densidade e da rigidez do meio. É maior em sólidos, intermediária em líquidos e menor em gases.
+    \[
+        v = \sqrt{\frac{E}{\rho}} \quad \text{(em sólidos)} \qquad
+    \]
+
+    \[
+        v = \sqrt{\frac{\gamma R T}{M}} \quad \text{(em gases ideais)}
+    \]
+    Onde $E$ é o módulo de elasticidade, $\rho$ é a densidade, $\gamma$ é o coeficiente adiabático, $R$ é a constante universal dos gases, $T$ é a temperatura e $M$ a massa molar.
+\end{itemize}
+
+\section{Fenômenos Acústicos}
+\begin{itemize}
+    \item \textbf{Reflexão do som}: retorno do som ao encontrar obstáculos (eco).
+    \item \textbf{Refração}: mudança de direção ao passar de um meio para outro com velocidade distinta.
+    \item \textbf{Difração}: contorno de obstáculos e passagem por frestas.
+    \item \textbf{Interferência}: superposição de ondas sonoras, gerando reforço ou cancelamento.
+    \item \textbf{Ressonância}: amplificação das vibrações quando a frequência natural de um sistema coincide com a frequência da fonte sonora.
+    \item \textbf{Efeito Doppler}: variação aparente da frequência sonora devido ao movimento relativo entre fonte e observador.
+\end{itemize}
+
+\section{Aplicações e Limites da Audição Humana}
+\begin{itemize}
+    \item A audição humana é sensível a frequências entre aproximadamente $20\,\text{Hz}$ e $20\,\text{kHz}$.
+    \item Sons com intensidade acima de $120\,\text{dB}$ podem causar dor (limiar da dor).
+    \item Utilizações práticas: ultrassonografia, sonar, acústica de ambientes, isolamento acústico.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent\rule{\linewidth}{1pt}\\
+
+\section{Óptica e Ondulatória}
+
+\section{Óptica Geométrica}
+
+\subsection{Propagação da Luz}
+\begin{itemize}
+    \item A luz propaga-se em linha reta em meios homogêneos e transparentes.
+    \item Três princípios fundamentais: propagação retilínea, reversibilidade e independência dos raios de luz.
+\end{itemize}
+
+\subsection{Espelhos Planos}
+\begin{itemize}
+    \item A imagem formada é virtual, direita e do mesmo tamanho do objeto.
+    \item Propriedades: simetria em relação ao plano do espelho, conservação do ângulo de incidência.
+\end{itemize}
+
+\subsection{Refração da Luz e Índice de Refração}
+\begin{itemize}
+    \item Refração: mudança de direção da luz ao passar de um meio para outro.
+    \item Lei de Snell-Descartes:
+    \[
+        n_1 \sin \theta_1 = n_2 \sin \theta_2
+    \]
+    \item Índice de refração:
+    \[
+        n = \frac{c}{v}
+    \]
+    Onde $c$ é a velocidade da luz no vácuo e $v$ no meio.
+\end{itemize}
+
+\subsection{Reflexão Total}
+\begin{itemize}
+    \item Ocorre quando a luz passa de um meio mais refringente para um menos refringente com ângulo maior que o ângulo crítico.
+    \item Aplicação: fibras ópticas.
+    \item $n_{1}.\sin(\theta_{1}) = n_{2}.\sin(90^{\circ})$
+\end{itemize}
+
+\subsection{Lâminas e Prismas}
+\begin{itemize}
+    \item Lâminas planas provocam apenas deslocamento lateral do feixe de luz.
+    \item Prismas desviam e dispersam a luz branca em seus componentes (dispersão).
+\end{itemize}
+
+\subsection{Dispersão da Luz}
+\begin{itemize}
+    \item A velocidade da luz depende do comprimento de onda no meio material.
+    \item Cada cor sofre um desvio diferente ao atravessar prismas, formando o espectro visível.
+\end{itemize}
+
+\subsection{Lentes Esféricas}
+\begin{itemize}
+    \item Podem ser convergentes ou divergentes.
+    \item Equação de Gauss para lentes delgadas:
+    \[
+        \frac{1}{f} = \frac{1}{p} + \frac{1}{p'}
+    \]
+    Onde $f$ é a distância focal, $p$ a distância do objeto e $p'$ da imagem.
+\end{itemize}
+
+\subsection{Associação de Lentes Delgadas}
+\begin{itemize}
+    \item Potência de associação:
+    \[
+        P_{\text{eq}} = P_1 + P_2 + \cdots + P_n
+    \]
+    Onde $P = \frac{1}{f}$ (com $f$ em metros e $P$ em dioptrias).
+\end{itemize}
+
+\subsection{Formação de Imagens}
+\begin{itemize}
+    \item Utiliza-se construção geométrica com raios notáveis.
+    \item A natureza da imagem (real ou virtual, direita ou invertida, aumentada ou reduzida) depende da posição do objeto em relação ao foco e ao centro óptico.
+\end{itemize}
+
+\subsection{Instrumentos Ópticos}
+\begin{itemize}
+    \item \textbf{Lupa}: lente convergente que aumenta o tamanho angular do objeto observado.
+    \item \textbf{Microscópio simples}: uma única lente convergente usada como lupa.
+    \item \textbf{Luneta astronômica}: utiliza duas lentes — objetiva (imagem real e invertida) e ocular (amplia a imagem).
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent\rule{\linewidth}{1pt}\\
+
+\section{Óptica Física e Ondulatória}
+
+\subsection{Natureza da Luz}
+\begin{itemize}
+    \item A luz possui natureza dual: comporta-se como onda (fenômenos de interferência, difração e polarização) e como partícula (efeito fotoelétrico).
+    \item Como onda, é uma onda eletromagnética transversal.
+\end{itemize}
+
+\subsection{Fenômenos de Interferência}
+\begin{itemize}
+    \item Superposição de ondas que resulta em reforço (interferência construtiva) ou cancelamento (destrutiva).
+\end{itemize}
+
+\subsection{Experiência de Young}
+\begin{itemize}
+    \item Demonstra a natureza ondulatória da luz.
+    \item Fenda dupla produz padrões de interferência em um anteparo.
+    \item Distância entre franjas:
+    \[
+        \Delta y = \frac{\lambda L}{d}
+    \]
+    Onde $\lambda$ é o comprimento de onda da luz, $L$ a distância até o anteparo e $d$ a distância entre fendas.
+\end{itemize}
+
+\subsection{Polarização da Luz}
+\begin{itemize}
+    \item Luz natural é não polarizada (os vetores do campo elétrico vibram em todos os planos perpendiculares à direção de propagação).
+    \item Polarização restringe a vibração da luz a um plano.
+    \item Evidência da natureza transversal da luz.
+\end{itemize}
+
+\section{Síntese}
+\begin{itemize}
+    \item A óptica estuda tanto a propagação da luz (geométrica) quanto seus aspectos ondulatórios (física).
+    \item Instrumentos ópticos e fenômenos ondulatórios da luz são essenciais para tecnologias modernas (óptica oftálmica, telescópios, interferômetros, fibras ópticas).
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent\rule{\linewidth}{1pt}\\
+
+\section{Eletricidade e Magnetismo}
+
+\section{Eletrostática}
+
+\subsection{Eletrização}
+\begin{itemize}
+    \item Métodos: atrito, contato e indução.
+    \item Cargas elétricas: positivas e negativas, quantizadas e conservadas.
+\end{itemize}
+
+\subsection{Lei de Coulomb}
+\begin{equation}
+    F = k \frac{|q_1 q_2|}{r^2}
+\end{equation}
+\begin{itemize}
+    \item Força de interação entre duas cargas puntiformes no vácuo.
+\end{itemize}
+
+\subsection{Potencial Elétrico}
+O potencial elétrico gerado por uma distribuição contínua de carga é dado por:
+
+\begin{equation}
+V(\vec{r}) = \frac{1}{4\pi \varepsilon_0} \int \frac{dq}{|\vec{r} - \vec{r'}|}
+\end{equation}
+
+Onde:
+\begin{itemize}
+  \item \( \vec{r} \): ponto onde se calcula o potencial,
+  \item \( \vec{r'} \): ponto onde está o elemento de carga \( dq \),
+  \item \( \varepsilon_0 \): permissividade do vácuo.
+\end{itemize}
+
+\section{Tipos de Distribuição}
+
+\subsection{Distribuição Linear de Carga (fio)}
+
+Densidade linear: \( \lambda = \frac{dq}{dl} \)
+
+\[
+V(\vec{r}) = \frac{1}{4\pi \varepsilon_0} \int \frac{\lambda \, dl'}{|\vec{r} - \vec{r'}|}
+\]
+
+\subsection{Distribuição Superficial de Carga (superfície)}
+
+Densidade superficial: \( \sigma = \frac{dq}{dA} \)
+
+\[
+V(\vec{r}) = \frac{1}{4\pi \varepsilon_0} \int \frac{\sigma \, dA'}{|\vec{r} - \vec{r'}|}
+\]
+
+\subsection{Distribuição Volumétrica de Carga (volume)}
+
+Densidade volumétrica: \( \rho = \frac{dq}{dV} \)
+
+\[
+V(\vec{r}) = \frac{1}{4\pi \varepsilon_0} \int \frac{\rho \, dV'}{|\vec{r} - \vec{r'}|}
+\]
+
+\section{Observações}
+
+\begin{itemize}
+  \item O potencial elétrico é uma grandeza escalar.
+  \item A simetria do sistema pode facilitar os cálculos.
+  \item Para pontos distantes, pode-se usar aproximações (ex: dipolo).
+\end{itemize}
+
+\subsection{Campo de Forças Coulombianas e Campo Elétrico}
+\begin{equation}
+    \vec{E} = \frac{\vec{F}}{q} = k \frac{Q}{r^2} \hat{r}
+\end{equation}
+\begin{itemize}
+    \item Campo elétrico gerado por uma carga pontual.
+    \item $\vec{E} = - \nabla V$
+\end{itemize}
+
+\subsection{Linhas de Força}
+\begin{itemize}
+    \item Representação gráfica da direção e sentido do campo elétrico.
+    \item Saem de cargas positivas e entram em cargas negativas.
+\end{itemize}
+
+\subsection{Trabalho e Potencial Eletrostático}
+\begin{itemize}
+    \item Potencial elétrico: 
+    \[
+        V = k \frac{Q}{r}
+    \]
+    \item Energia potencial elétrica: 
+    \[
+        U = qV
+    \]
+    \item Trabalho da força elétrica:
+    \[
+        W = -\Delta U
+    \]
+\end{itemize}
+
+\section{Corrente Contínua e Resistência}
+
+\subsection{Corrente Elétrica}
+\begin{itemize}
+    \item Corrente: 
+    \[
+        I = \frac{\Delta Q}{\Delta t}
+    \]
+    \item Sentido convencional: do positivo para o negativo.
+\end{itemize}
+
+\subsection{Resistência Elétrica e Lei de Ohm}
+\[
+    U = R I
+\]
+
+\[ 
+P = Ri^{2} = R.\left(\frac{U}{R}\right)^{2} = \frac{U^{2}}{R} = U.i
+\]
+
+
+\subsection{Associação de Resistores}
+\begin{itemize}
+    \item Série: $R_{eq} = R_1 + R_2 + \dots$
+    \item Paralelo: $\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots$
+\end{itemize}
+
+\subsection{Resistividade e Temperatura}
+\[
+    R = \rho \frac{L}{A}, \quad \rho(T) = \rho_0[1 + \alpha(T - T_0)]
+\]
+
+\subsection{Efeito Joule}
+\[
+    Q = R I^2 t
+\]
+
+\subsection{Geradores e Receptores}
+\begin{itemize}
+    \item Geradores fornecem energia elétrica (ex: baterias).
+    \item Receptores consomem energia elétrica (ex: motores).
+    \item Equação geral do gerador:
+    \[
+        U = \mathcal{E} - r I
+    \]
+    \item Para receptores:
+    \[
+        U = \mathcal{E} + r I
+    \]
+\end{itemize}
+
+\subsection{Pilhas em Série e Paralelo}
+\begin{itemize}
+    \item Série: $ \mathcal{E}_{eq} = \mathcal{E}_1 + \mathcal{E}_2 + \dots$
+    \item Paralelo: mesma $ \mathcal{E}$, menor resistência interna.
+\end{itemize}
+
+\subsection{Leis de Kirchhoff}
+\begin{itemize}
+    \item Lei das malhas (tensões): soma das ddps em um circuito fechado é zero.
+    \item Lei dos nós (correntes): soma das correntes que entram num nó é igual à soma das que saem.
+\end{itemize}
+
+\subsection{Instrumentos de Medida}
+\begin{itemize}
+    \item \textbf{Amperímetro}: mede corrente — ligado em série.
+    \item \textbf{Voltímetro}: mede tensão — ligado em paralelo.
+    \item \textbf{Multímetro}: mede corrente, tensão e resistência.
+    \item \textbf{Ponte de Wheatstone}: circuito para medir resistências desconhecidas com alta precisão.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent\rule{\linewidth}{1pt}\\
+
+\section{Magnetismo e Indução}
+
+\subsection{Campo Magnético Gerado por Corrente Elétrica}
+\begin{itemize}
+    \item Fio retilíneo:
+    \[
+        \oint \vec{B}.d\vec{l} = \mu_{0}I_{eng}, \rightarrow B = \frac{\mu_0 I}{2\pi r}
+    \]
+    \item Espira circular:
+    \[
+        B = \frac{\mu_0 I}{2R}
+    \]
+    \item Solenóide (interior):
+    \[
+        B = \mu_0 n I
+    \]
+    Onde $n$ é o número de espiras por unidade de comprimento.
+\end{itemize}
+
+\subsection{Força Magn\'etica e Força El\'etrica}
+
+\begin{itemize}
+    \item For\c{c}a de Lorentz:
+    \[
+        \vec{F} = q\vec{E} + q \vec{v} \times \vec{B}
+    \]
+
+    \item Regra/M\~ao Direita: $ F = |q| v B \sin\theta$
+\end{itemize}
+
+Se a partícula tem massa $m$ e entra perpendicularmente no campo magnético:
+
+\begin{itemize}
+    \item Raio da trajetória:
+    \begin{equation}
+        R = \frac{m \cdot v}{|q| \cdot B}
+    \end{equation}
+
+    \item Período do movimento:
+    \begin{equation}
+        T = \frac{2\pi m}{|q| \cdot B}
+    \end{equation}
+\end{itemize}
+
+\subsection{Trabalho realizado pela força magnética}
+\begin{equation}
+    W = \vec{F} \cdot \vec{d} = 0
+\end{equation}
+
+\section{Força Magnética sobre um Fio com Corrente}
+
+\begin{equation}
+    \vec{F} = I \cdot \vec{L} \times \vec{B}
+\end{equation}
+
+\begin{equation}
+    F = I \cdot L \cdot B \cdot \sin\theta.
+\end{equation}
+Regra da M\~ao Esquerda
+
+\subsection{Eletroímã}
+\begin{itemize}
+    \item Solenóide com núcleo ferromagnético, que se magnetiza quando a corrente circula.
+\end{itemize}
+
+\subsection{Indução Eletromagnética}
+\begin{itemize}
+    \item Lei de Faraday:
+    \[
+        \mathcal{E} = -\frac{d\Phi_B}{dt}
+    \]
+    Onde $\Phi_B = B \cdot A \cdot \cos\theta$ é o fluxo magnético.
+\end{itemize}
+
+\subsection{Lei de Lenz}
+\begin{itemize}
+    \item O sentido da corrente induzida é tal que seu campo magnético se opõe à variação do fluxo que a gerou.
+\end{itemize}
+
+\subsection{Campo Elétrico Induzido}
+\begin{itemize}
+    \item Um campo elétrico pode ser gerado por variação de campo magnético:
+    \[
+        \nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}
+    \]
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent\rule{\linewidth}{1pt}\\
+
+\section{Física Moderna}
+
+\section{Radiação do Corpo Negro e Constante de Planck}
+\begin{itemize}
+    \item Um corpo negro ideal absorve toda radiação incidente.
+    \item A distribuição espectral da energia emitida depende da temperatura.
+    \item Planck introduziu a quantização da energia:
+    \[
+        E = h\nu
+    \]
+    onde $h \approx 6{,}626 \times 10^{-34} \, \text{J} \cdot \text{s}$ é a constante de Planck.
+\end{itemize}
+
+\section{Efeito Fotoelétrico}
+\begin{itemize}
+    \item A luz incide sobre um metal e ejeta elétrons.
+    \item Einstein explicou usando fótons com energia $E = h\nu$.
+    \item Equação do efeito fotoelétrico:
+    \[
+        K_{\text{máx}} = h\nu - \phi
+    \]
+    onde $\phi$ é a função trabalho do material.
+\end{itemize}
+
+\section{Efeito Compton}
+\begin{itemize}
+    \item Espalhamento de fótons por elétrons livres.
+    \item Mostra o comportamento corpuscular da radiação:
+    \[
+        \Delta \lambda = \lambda' - \lambda = \frac{h}{m_e c} (1 - \cos \theta)
+    \]
+\end{itemize}
+
+\section{Dualidade Onda-Partícula}
+\begin{itemize}
+    \item Toda partícula possui propriedades ondulatórias:
+    \[
+        \lambda = \frac{h}{p}
+    \]
+    (relação de De Broglie).
+    \item Confirmada por experimentos de difração de elétrons.
+\end{itemize}
+
+\section{Teoria da Relatividade Restrita}
+\subsection{Postulados}
+\begin{enumerate}
+    \item As leis da Física são as mesmas em todos os referenciais inerciais.
+    \item A velocidade da luz no vácuo é a mesma para todos os observadores inerciais.
+\end{enumerate}
+
+\subsection{Consequências}
+\begin{itemize}
+    \item Dilatação do tempo:
+    \[
+        \Delta t = \frac{\Delta t_0}{\sqrt{1 - \frac{v^2}{c^2}}}
+    \]
+    \item Contração do comprimento:
+    \[
+        L = L_0 \sqrt{1 - \frac{v^2}{c^2}}
+    \]
+\end{itemize}
+
+\subsection{Energia Relativística}
+\begin{itemize}
+    \item Energia total:
+    \[
+        E = \gamma m c^2
+    \quad \text{com } \gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}
+    \]
+    \item Energia em repouso:
+    \[
+        E_0 = m c^2
+    \]
+    \item Relação energia-momento:
+    \[
+        E^2 = (pc)^2 + (m c^2)^2
+    \]
+\end{itemize}
+
+\section{Modelos Atômicos}
+\subsection{Rutherford}
+\begin{itemize}
+    \item Descoberta do núcleo atômico.
+    \item Átomo com núcleo positivo e elétrons ao redor.
+    \item Instável segundo a eletrodinâmica clássica.
+\end{itemize}
+
+\subsection{Bohr}
+\begin{itemize}
+    \item Níveis de energia quantizados:
+    \[
+        E_n = -\frac{13{,}6}{n^2} \, \text{eV}
+    \]
+    \item Transições entre níveis explicam linhas espectrais do hidrogênio.
+\end{itemize}
+
+\section{Princípio da Incerteza de Heisenberg}
+\begin{itemize}
+    \item É impossível conhecer simultaneamente posição e momento com precisão arbitrária:
+    \[
+        \Delta x \cdot \Delta p \geq \frac{\hbar}{2}
+    \]
+    onde $\hbar = \frac{h}{2\pi}$.
+\end{itemize}
+
+\section{Radioatividade}
+\begin{itemize}
+    \item Decaimento espontâneo de núcleos instáveis.
+    \item Três tipos principais:
+    \begin{itemize}
+        \item \textbf{Alfa} ($\alpha$): emissão de núcleo de hélio.
+        \item \textbf{Beta} ($\beta^-$): emissão de elétron (ou pósitron em $\beta^+$).
+        \item \textbf{Gama} ($\gamma$): radiação eletromagnética de alta energia.
+    \end{itemize}
+    \item Lei do decaimento:
+    \[
+        N(t) = N_0 e^{-\lambda t}
+    \]
+    \item Meia-vida:
+    \[
+        t_{1/2} = \frac{\ln 2}{\lambda}
+    \]
+\end{itemize}
+
+\section{Energia Nuclear}
+\begin{itemize}
+    \item Baseada na equivalência massa-energia de Einstein.
+    \item Fissão nuclear: divisão de núcleos pesados (ex: $^{235}$U).
+    \item Fusão nuclear: união de núcleos leves (ex: deuterônio + trítio).
+    \item Liberação de energia:
+    \[
+        \Delta E = \Delta m \cdot c^2
+    \]
+    \item Aplicações: reatores nucleares, armas, medicina.
+\end{itemize}
+
+\end{multicols}
+
+%%%%%%%% Bibliography 
+% Os comandos para incluir as referências bibliográficas
+%\printingbibliography
+
+\end{document}
