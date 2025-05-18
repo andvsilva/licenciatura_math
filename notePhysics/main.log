@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  18 MAY 2025 14:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  18 MAY 2025 20:53
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1722,284 +1722,285 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-29.
+33.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-29.
+33.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-129.
+133.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-129.
+133.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 129.
+(Font)              <14.4> on input line 133.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 129.
+(Font)              <10> on input line 133.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 129.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 129
+(Font)              <7> on input line 133.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 133
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 129
+LaTeX Font Info:    Trying to load font information for U+msb on input line 133
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-41.
+39.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 148.
+(Font)              <12> on input line 146.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 148.
+(Font)              <8> on input line 146.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 148.
+(Font)              <6> on input line 146.
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 158--158
 |[]\T1/lmr/bx/n/14.4 Movimento Retilí-neo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
+Underfull \hbox (badness 10000) in paragraph at lines 158--158
 \T1/lmr/bx/n/14.4 Uni-forme-mente Vari-ado
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--227
+Underfull \hbox (badness 10000) in paragraph at lines 225--225
 |[]\T1/lmr/bx/n/14.4 Equilíbrio do Corpo
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 288--288
 |[]\T1/lmr/bx/n/14.4 Forças no Movi-mento
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 299--299
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--313
 |[]\T1/lmr/bx/n/14.4 Trabalho e En-er-gia
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 375--376
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
 
  []
 
-[3]
-Overfull \hbox (46.7813pt too wide) detected at line 411
+
+Overfull \hbox (46.7813pt too wide) detected at line 425
 \OML/lmm/m/it/12 P[] \OT1/lmr/m/n/12 = \OML/lmm/m/it/12 ^^Zgh []h \OT1/lmr/m/n/
 12 = 0[]76 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--432
+Underfull \hbox (badness 10000) in paragraph at lines 444--446
 \T1/lmr/m/n/12 Permite mul-ti-plicar força apli-cando
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 441--442
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
 
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 466--467
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--481
 \T1/lmr/m/n/12 col-isões elás-ti-cas, movi-mento
  []
 
 [5]
-Underfull \hbox (badness 6808) in paragraph at lines 527--527
+Underfull \hbox (badness 6808) in paragraph at lines 541--541
 |[]\T1/lmr/bx/n/14.4 Princípios da Ter-mod-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 552--553
+Underfull \hbox (badness 10000) in paragraph at lines 566--567
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 564--564
+Underfull \hbox (badness 10000) in paragraph at lines 578--578
 |[]\T1/lmr/bx/n/14.4 Movimento Har-mônico
  []
 
 
-Overfull \hbox (18.13628pt too wide) in paragraph at lines 574--575
+Overfull \hbox (18.13628pt too wide) in paragraph at lines 588--589
 []\T1/lmr/m/n/12 Aceleração: $\OML/lmm/m/it/12 a\OT1/lmr/m/n/12 (\OML/lmm/m/it/
 12 t\OT1/lmr/m/n/12 ) = \OMS/lmsy/m/n/12 ^^@\OML/lmm/m/it/12 A![] [][][] \OT1/l
 mr/m/n/12 =
  []
 
 
-Overfull \hbox (17.13625pt too wide) detected at line 586
+Overfull \hbox (17.13625pt too wide) detected at line 600
 \OML/lmm/m/it/12 ! \OT1/lmr/m/n/12 = []\OML/lmm/m/it/12 ;  T \OT1/lmr/m/n/12 = 
 2\OML/lmm/m/it/12 ^^Y[];  f \OT1/lmr/m/n/12 = [][]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 603--604
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 617--618
 []\T1/lmr/m/n/12 Eletromagnéticas (propagam
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 607--608
+
+Underfull \hbox (badness 10000) in paragraph at lines 621--622
 []\T1/lmr/m/n/12 Transversais: vi-bração $\OMS/lmsy/m/n/12 ?$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 608--609
+Underfull \hbox (badness 10000) in paragraph at lines 622--623
 []\T1/lmr/m/n/12 Longitudinais: vi-bração $\OMS/lmsy/m/n/12 k$
  []
 
 [7]
-Overfull \hbox (6.28632pt too wide) detected at line 687
+Overfull \hbox (6.28632pt too wide) detected at line 701
 \OT1/lmr/m/n/12 ^^A\OML/lmm/m/it/12 s \OT1/lmr/m/n/12 = \OML/lmm/m/it/12 n^^U \
 OT1/lmr/m/n/12 ([])
  []
 
 
-Overfull \hbox (39.88083pt too wide) detected at line 690
+Overfull \hbox (39.88083pt too wide) detected at line 704
 \OT1/lmr/m/n/12 ^^A\OML/lmm/m/it/12 s \OT1/lmr/m/n/12 = [] \OML/lmm/m/it/12 ^^U
  \OT1/lmr/m/n/12 ([])
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 694--695
+Underfull \hbox (badness 10000) in paragraph at lines 708--709
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 757--758
+Underfull \hbox (badness 10000) in paragraph at lines 771--772
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 766--767
+Underfull \hbox (badness 10000) in paragraph at lines 780--781
 []\T1/lmr/m/n/12 Três princí-pios fun-da-men-tais:
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 829--830
+Underfull \hbox (badness 10000) in paragraph at lines 843--844
 []\T1/lmr/m/n/12 Utiliza-se con-strução ge-ométrica
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 841--842
+Underfull \hbox (badness 10000) in paragraph at lines 855--856
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 847--848
+Underfull \hbox (badness 10000) in paragraph at lines 861--862
 []\T1/lmr/m/n/12 A luz pos-sui na-tureza dual:
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 881--882
+Underfull \hbox (badness 10000) in paragraph at lines 895--896
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 883--883
+Underfull \hbox (badness 10000) in paragraph at lines 897--897
 |[]\T1/lmr/bx/n/14.4 Eletricidade e Mag-
  []
 
-
-Underfull \hbox (badness 7667) in paragraph at lines 925--925
+[11]
+Underfull \hbox (badness 7667) in paragraph at lines 939--939
 |[]\T1/lmr/bx/n/12 Distribuição Su-per-fi-cial de
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 1020--1021
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 1034--1035
 []\T1/lmr/m/n/12 Receptores con-somem en-er-gia
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 1052--1053
+
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1067
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1056--1056
+Underfull \hbox (badness 10000) in paragraph at lines 1070--1070
 |[]\T1/lmr/bx/n/12 Campo Mag-nético Ger-ado
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1073--1073
+Underfull \hbox (badness 10000) in paragraph at lines 1087--1087
 |[]\T1/lmr/bx/n/12 Força Mag-nética e Força
  []
 
 
-Underfull \hbox (badness 5431) in paragraph at lines 1103--1103
+Underfull \hbox (badness 5431) in paragraph at lines 1117--1117
 |[]\T1/lmr/bx/n/14.4 Força Mag-nética so-bre
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 1142--1143
+Underfull \hbox (badness 10000) in paragraph at lines 1156--1157
 
  []
 
 
-Overfull \hbox (2.08739pt too wide) in paragraph at lines 1177--1177
+Overfull \hbox (2.08739pt too wide) in paragraph at lines 1191--1191
 |[]\T1/lmr/bx/n/14.4 Dualidade Onda-Partícula| 
  []
 
 
-Underfull \hbox (badness 5036) in paragraph at lines 1187--1187
+Underfull \hbox (badness 5036) in paragraph at lines 1201--1201
 |[]\T1/lmr/bx/n/14.4 Teoria da Rel-a-tivi-dade
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 1227--1228
+Underfull \hbox (badness 10000) in paragraph at lines 1241--1242
 []\T1/lmr/m/n/12 Átomo com nú-cleo pos-i-tivo e
  []
 
+[15]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 57.
 See the caption package documentation for explanation.
 
-[15] (./main.aux)
+[16] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 83FFA6A0F6ED679A1C29AA343E2477AE;24712.
+(rerunfilecheck)             Checksum: EFF06B6DF7CCDEE76BDDED7B9F096E27;25158.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56399 strings out of 478287
- 1301465 string characters out of 5849289
- 2073381 words of memory out of 5000000
- 73529 multiletter control sequences out of 15000+600000
+ 56406 strings out of 478287
+ 1301564 string characters out of 5849289
+ 2078384 words of memory out of 5000000
+ 73531 multiletter control sequences out of 15000+600000
  534589 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,96p,1835b,1817s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,12n,96p,1835b,1855s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
 c/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
@@ -2013,10 +2014,10 @@ texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 ri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/f
 onts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (15 pages, 264829 bytes).
+Output written on main.pdf (16 pages, 266497 bytes).
 PDF statistics:
- 812 PDF objects out of 1000 (max. 8388607)
- 733 compressed objects within 8 object streams
- 172 named destinations out of 1000 (max. 500000)
- 1277 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 827 PDF objects out of 1000 (max. 8388607)
+ 747 compressed objects within 8 object streams
+ 177 named destinations out of 1000 (max. 500000)
+ 1293 words of extra memory for PDF output out of 10000 (max. 10000000)
 

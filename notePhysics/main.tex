@@ -125,15 +125,13 @@
 
 \begin{document}
 
-\maketitle
-
-
-\noindent\rule{\linewidth}{0.4pt}\\
-
 \justifying
 
 \begin{multicols}{2}
 
+\maketitle
+
+\noindent\rule{\linewidth}{0.4pt}\\
 \section{Cinemática Escalar e Vetorial}
 
 \section{Conceitos Fundamentais}
@@ -237,10 +235,26 @@
   \tau = r F \sin \theta
 \end{equation*}
 
+\begin{equation}
+  \vec{\tau} = \frac{d\vec{L}}{dt}
+\end{equation}
+
+\begin{equation}
+  \tau = I.\alpha
+\end{equation}
+
+\subsection{Rota\c{c}\~ao de um Corpo R\'igido}
 \begin{equation*}
-  \vec{\tau} = \frac{d\vec{L}}{dt}, \quad \vec{L} = \vec{r} \times \vec{F} 
+  \omega = \frac{d\theta}{dt}, \quad \alpha = \frac{d\omega}{dt}
 \end{equation*}
 
+\subsection{Relação entre coroas e catracas}
+
+Como a corrente impõe a mesma velocidade linear na periferia das duas engrenagens:
+
+\begin{equation*}
+  v_{\text{coroa}} = v_{\text{catraca}} = R_c \cdot \omega_c = R_k \cdot \omega_k
+\end{equation*}
 
 
 \section{3. Leis Fundamentais da Dinâmica (Leis de Newton)}
@@ -625,7 +639,7 @@ Onde:
 \]
 \begin{itemize}
     \item $k = \dfrac{2\pi}{\lambda}$: número de onda
-    \item $\omega = 2\pi f$: frequência angular
+    \item $\omega = 2\pi f $: frequência angular
 \end{itemize}
 
 \section{Reflexão e refração de um pulso numa corda}
