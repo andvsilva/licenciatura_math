@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  18 MAY 2025 20:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  19 MAY 2025 22:15
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1800,115 +1800,115 @@ Underfull \hbox (badness 10000) in paragraph at lines 225--225
 |[]\T1/lmr/bx/n/14.4 Equilíbrio do Corpo
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
+|[]\T1/lmr/bx/n/14.4 Leis Fun-da-men-tais da
+ []
+
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 288--288
+Underfull \hbox (badness 10000) in paragraph at lines 300--300
 |[]\T1/lmr/bx/n/14.4 Forças no Movi-mento
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--313
+Underfull \hbox (badness 10000) in paragraph at lines 325--325
 |[]\T1/lmr/bx/n/14.4 Trabalho e En-er-gia
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
 
  []
 
 
-Overfull \hbox (46.7813pt too wide) detected at line 425
+Underfull \hbox (badness 6316) in paragraph at lines 440--440
+|[]\T1/lmr/bx/n/14.4 Conservação da Massa
+ []
+
+[4]
+Overfull \hbox (46.7813pt too wide) detected at line 482
 \OML/lmm/m/it/12 P[] \OT1/lmr/m/n/12 = \OML/lmm/m/it/12 ^^Zgh []h \OT1/lmr/m/n/
 12 = 0[]76 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--446
+Underfull \hbox (badness 10000) in paragraph at lines 501--503
 \T1/lmr/m/n/12 Permite mul-ti-plicar força apli-cando
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 455--456
+
+Underfull \hbox (badness 10000) in paragraph at lines 512--513
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 480--481
+Underfull \hbox (badness 10000) in paragraph at lines 537--538
 \T1/lmr/m/n/12 col-isões elás-ti-cas, movi-mento
  []
 
 [5]
-Underfull \hbox (badness 6808) in paragraph at lines 541--541
+Underfull \hbox (badness 6808) in paragraph at lines 611--611
 |[]\T1/lmr/bx/n/14.4 Princípios da Ter-mod-
  []
 
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 639--639
+|\T1/lmr/bx/n/14.4 Segunda Lei da Ter-mod-
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--567
+
+Underfull \hbox (badness 5607) in paragraph at lines 650--650
+|\T1/lmr/bx/n/14.4 Entropia es-tatís-tica (Boltz-
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 713--714
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 578--578
+Underfull \hbox (badness 10000) in paragraph at lines 725--725
 |[]\T1/lmr/bx/n/14.4 Movimento Har-mônico
  []
 
 
-Overfull \hbox (18.13628pt too wide) in paragraph at lines 588--589
+Overfull \hbox (18.13628pt too wide) in paragraph at lines 735--736
 []\T1/lmr/m/n/12 Aceleração: $\OML/lmm/m/it/12 a\OT1/lmr/m/n/12 (\OML/lmm/m/it/
 12 t\OT1/lmr/m/n/12 ) = \OMS/lmsy/m/n/12 ^^@\OML/lmm/m/it/12 A![] [][][] \OT1/l
 mr/m/n/12 =
  []
 
 
-Overfull \hbox (17.13625pt too wide) detected at line 600
+Overfull \hbox (17.13625pt too wide) detected at line 747
 \OML/lmm/m/it/12 ! \OT1/lmr/m/n/12 = []\OML/lmm/m/it/12 ;  T \OT1/lmr/m/n/12 = 
 2\OML/lmm/m/it/12 ^^Y[];  f \OT1/lmr/m/n/12 = [][]
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 617--618
+
+Underfull \hbox (badness 10000) in paragraph at lines 764--765
 []\T1/lmr/m/n/12 Eletromagnéticas (propagam
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 621--622
+Underfull \hbox (badness 10000) in paragraph at lines 768--769
 []\T1/lmr/m/n/12 Transversais: vi-bração $\OMS/lmsy/m/n/12 ?$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 622--623
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
 []\T1/lmr/m/n/12 Longitudinais: vi-bração $\OMS/lmsy/m/n/12 k$
  []
 
-[7]
-Overfull \hbox (6.28632pt too wide) detected at line 701
+[8]
+Overfull \hbox (6.28632pt too wide) detected at line 848
 \OT1/lmr/m/n/12 ^^A\OML/lmm/m/it/12 s \OT1/lmr/m/n/12 = \OML/lmm/m/it/12 n^^U \
 OT1/lmr/m/n/12 ([])
  []
 
 
-Overfull \hbox (39.88083pt too wide) detected at line 704
+Overfull \hbox (39.88083pt too wide) detected at line 851
 \OT1/lmr/m/n/12 ^^A\OML/lmm/m/it/12 s \OT1/lmr/m/n/12 = [] \OML/lmm/m/it/12 ^^U
  \OT1/lmr/m/n/12 ([])
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 708--709
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 771--772
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 780--781
-[]\T1/lmr/m/n/12 Três princí-pios fun-da-men-tais:
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 843--844
-[]\T1/lmr/m/n/12 Utiliza-se con-strução ge-ométrica
  []
 
 
@@ -1916,93 +1916,118 @@ Underfull \hbox (badness 10000) in paragraph at lines 855--856
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 861--862
-[]\T1/lmr/m/n/12 A luz pos-sui na-tureza dual:
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 895--896
+[9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 918--919
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 897--897
-|[]\T1/lmr/bx/n/14.4 Eletricidade e Mag-
+Underfull \hbox (badness 10000) in paragraph at lines 927--928
+[]\T1/lmr/m/n/12 Três princí-pios fun-da-men-tais:
  []
 
 [11]
-Underfull \hbox (badness 7667) in paragraph at lines 939--939
-|[]\T1/lmr/bx/n/12 Distribuição Su-per-fi-cial de
+Underfull \hbox (badness 6608) in paragraph at lines 979--980
+[]\T1/lmr/m/n/12 côncavo: con-ver-gente (im-agem:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 998--999
+[]\T1/lmr/m/n/12 Utiliza-se con-strução ge-ométrica
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1010--1011
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1016--1017
+[]\T1/lmr/m/n/12 A luz pos-sui na-tureza dual:
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 1034--1035
+Underfull \hbox (badness 10000) in paragraph at lines 1050--1051
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1052--1052
+|[]\T1/lmr/bx/n/14.4 Eletricidade e Mag-
+ []
+
+
+Underfull \hbox (badness 7667) in paragraph at lines 1094--1094
+|[]\T1/lmr/bx/n/12 Distribuição Su-per-fi-cial de
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 1189--1190
 []\T1/lmr/m/n/12 Receptores con-somem en-er-gia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1066--1067
+Underfull \hbox (badness 10000) in paragraph at lines 1221--1222
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1070--1070
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 1225--1225
 |[]\T1/lmr/bx/n/12 Campo Mag-nético Ger-ado
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1087--1087
+Underfull \hbox (badness 10000) in paragraph at lines 1242--1242
 |[]\T1/lmr/bx/n/12 Força Mag-nética e Força
  []
 
 
-Underfull \hbox (badness 5431) in paragraph at lines 1117--1117
+Underfull \hbox (badness 5431) in paragraph at lines 1272--1272
 |[]\T1/lmr/bx/n/14.4 Força Mag-nética so-bre
  []
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 1156--1157
+
+Underfull \hbox (badness 10000) in paragraph at lines 1311--1312
 
  []
 
-
-Overfull \hbox (2.08739pt too wide) in paragraph at lines 1191--1191
+[15]
+Overfull \hbox (2.08739pt too wide) in paragraph at lines 1346--1346
 |[]\T1/lmr/bx/n/14.4 Dualidade Onda-Partícula| 
  []
 
 
-Underfull \hbox (badness 5036) in paragraph at lines 1201--1201
+Underfull \hbox (badness 5036) in paragraph at lines 1356--1356
 |[]\T1/lmr/bx/n/14.4 Teoria da Rel-a-tivi-dade
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 1241--1242
+
+Underfull \hbox (badness 10000) in paragraph at lines 1396--1397
 []\T1/lmr/m/n/12 Átomo com nú-cleo pos-i-tivo e
  []
 
-[15]
+[16]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 57.
 See the caption package documentation for explanation.
 
-[16] (./main.aux)
+[17] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EFF06B6DF7CCDEE76BDDED7B9F096E27;25158.
+(rerunfilecheck)             Checksum: C09E6128D9A5073A560825CCEFF7A9D6;25990.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56406 strings out of 478287
- 1301564 string characters out of 5849289
+ 56423 strings out of 478287
+ 1301754 string characters out of 5849289
  2078384 words of memory out of 5000000
- 73531 multiletter control sequences out of 15000+600000
+ 73539 multiletter control sequences out of 15000+600000
  534589 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,96p,1835b,1855s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/s
+ 84i,12n,96p,1835b,1861s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
 m-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/f
 onts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.
@@ -2012,12 +2037,13 @@ sr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/
 texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 ri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (16 pages, 266497 bytes).
+onts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+>
+Output written on main.pdf (17 pages, 279434 bytes).
 PDF statistics:
- 827 PDF objects out of 1000 (max. 8388607)
- 747 compressed objects within 8 object streams
- 177 named destinations out of 1000 (max. 500000)
- 1293 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 861 PDF objects out of 1000 (max. 8388607)
+ 778 compressed objects within 8 object streams
+ 186 named destinations out of 1000 (max. 500000)
+ 1333 words of extra memory for PDF output out of 10000 (max. 10000000)
 
