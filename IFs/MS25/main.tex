@@ -1,0 +1,230 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[brazil, english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\addtolength{\topmargin}{-2.5pt}
+\usepackage{xcolor}
+\usepackage{amsmath, amssymb, bm}
+\usepackage{mathtools}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{newunicodechar}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{tikz-3dplot} % Necessário para coordenadas 3D
+\usetikzlibrary{intersections}
+\usepackage{siunitx}
+\usetikzlibrary{3d, arrows.meta}
+
+\usepackage{color}
+\definecolor{myblue}{rgb}{.8, .8, 1}
+
+\usepackage{amsmath}
+\usepackage{empheq}
+
+\newlength\mytemplen
+\newsavebox\mytempbox
+
+\makeatletter
+\newcommand\mybluebox{%
+    \@ifnextchar[%]
+       {\@mybluebox}%
+       {\@mybluebox[0pt]}}
+
+\def\@mybluebox[#1]{%
+    \@ifnextchar[%]
+       {\@@mybluebox[#1]}%
+       {\@@mybluebox[#1][0pt]}}
+
+\def\@@mybluebox[#1][#2]#3{
+    \sbox\mytempbox{#3}%
+    \mytemplen\ht\mytempbox
+    \advance\mytemplen #1\relax
+    \ht\mytempbox\mytemplen
+    \mytemplen\dp\mytempbox
+    \advance\mytemplen #2\relax
+    \dp\mytempbox\mytemplen
+    \colorbox{myblue}{\hspace{1em}\usebox{\mytempbox}\hspace{1em}}}
+\makeatother
+
+\usepackage[most]{tcolorbox}
+
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base,
+    enhanced, colframe=blue!30!black,
+    colback=blue!30, boxrule=1pt,
+    #1}
+
+\tcbset{
+    highlight math style={
+        enhanced,
+        colframe=red!60!black,
+        colback=yellow!50,
+        arc=4pt,
+        boxrule=1pt,
+        drop fuzzy shadow
+    }
+    }
+
+\usepackage{physics}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+\linespread{1.5}
+
+\definecolor{ao(english)}{rgb}{0.0, 0.5, 0.0}
+\definecolor{byzantium}{rgb}{0.44, 0.16, 0.39}
+\newunicodechar{∘}{\circ}
+
+\input{commands.tex}
+
+\hypersetup{
+    colorlinks=true,% make the links colored
+    linkcolor=blue
+}
+
+\usepackage{setspace}
+\addbibresource{bibliography.bib}
+
+\newcommand{\printingbibliography}{%
+
+    \pagestyle{myheadings}
+    \markright{}
+    \sloppy
+    \printbibliography[heading=bibintoc, % add to table of contents
+                   title=Refer\^encias % Chapter name
+                  ]
+    \fussy%
+}
+\PassOptionsToPackage{table}{xcolor}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\thepage}
+
+\geometry{a4paper,top=30mm,bottom=20mm,left=30mm,right=20mm}
+
+\titleformat*{\section}{\bfseries\large}
+\titleformat*{\subsection}{\bfseries\normalsize}
+
+\title{ \textbf{\large IFMS 2025 - Concurso N$^{\circ}$ 20/2025 - EBTT - F\'isica}}
+\author{Andr\'e V. Silva \\ \texttt{\url{www.andrevsilva.com}}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\noindent\rule{\linewidth}{0.4pt}\\
+
+\justifying
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Q11}}\\
+\noindent
+Uma usina termelétrica opera um ciclo de Carnot entre dois reservatórios térmicos: um a 
+\SI{800}{\kelvin} e outro a \SI{300}{\kelvin}. A usina recebe \SI{500}{\mega\joule} de calor da 
+fonte quente por ciclo e realiza trabalho sobre um gerador elétrico. No entanto, devido a perdas 
+operacionais e imperfeições no sistema, a eficiência real da usina é 60\% da eficiência teórica do ciclo 
+de Carnot. Com base nessas informações, qual é o trabalho efetivo realizado pela usina em cada ciclo?
+
+\begin{itemize}
+\item[(A)] 90 MJ.
+\item[(B)] 25 MJ.
+\item[(C)] 300 MJ.
+\item[(D)] 312,5 MJ.
+\item[(E)] 187,5 MJ.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\begin{itemize}
+    \item Temperatura da fonte quente: \( T_q = \SI{800}{\kelvin} \)
+    \item Temperatura da fonte fria: \( T_f = \SI{300}{\kelvin} \)
+    \item Calor recebido por ciclo: \( Q_q = \SI{500}{\mega\joule} \)
+    \item Eficiência real: \( \eta_{\text{real}} = 0{,}60 \cdot \eta_{\text{Carnot}} \)
+\end{itemize}
+
+\vspace{1em}
+A eficiência teórica do ciclo de Carnot é dada por:
+
+\[
+\eta_{\text{Carnot}} = 1 - \frac{T_f}{T_q} = 1 - \frac{300}{800} = 1 - 0{,}375 = 0{,}625
+\]
+
+Eficiência real da usina:
+
+\[
+\eta_{\text{real}} = 0{,}60 \cdot 0{,}625 = 0{,}375
+\]
+
+O trabalho efetivo realizado por ciclo é:
+
+\[
+W = \eta_{\text{real}} \cdot Q_q = 0{,}375 \cdot \SI{500}{\mega\joule} = \SI{187.5}{\mega\joule}
+\]
+
+\[
+\boxed{W = \SI{187.5}{\mega\joule}}
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{E}}.
+
+\end{flushleft}
+\noindent\rule{\linewidth}{0.4pt}\\
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Q12}}\\
+Teoria da Relatividade Restrita de Einstein
+trouxe mudanças profundas na compreensão do
+espaço e do tempo. Um dos conceitos
+fundamentais é a dilatação temporal, que implica
+que o tempo não é absoluto e depende do
+referencial do observador.
+Tendo isso em vista, considere que dois
+observadores, A e B, estejam analisando o
+movimento de uma partícula. O observador A está
+em repouso em um laboratório na Terra, enquanto
+o observador B viaja em uma nave a uma
+velocidade relativística v em relação a A. Com
+base nas previsões da Relatividade Restrita, é
+correto afirmar 
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\textbf{(A)} o tempo medido pelo observador B será sempre15
+menor do que o tempo medido pelo observador
+A, independentemente da velocidade da nave.\\
+\colorbox{green!50}{\textbf{(B)}} a dilatação do tempo significa que um relógio em
+movimento em relação a um referencial inercial
+sempre parecerá atrasado em relação a um
+relógio em repouso nesse referencial.\\
+\textbf{(C)} se a nave de B viajar a uma velocidade maior do
+que a velocidade da luz no vácuo, o fator de
+Lorentz se tornaria negativo, implicando a
+possibilidade de viajar para o passado.\\
+\textbf{(D)} o efeito da dilatação do tempo desaparece
+completamente quando a velocidade relativa
+entre A e B é menor do que a metade da
+velocidade da luz no vácuo.\\
+\textbf{(E)} a dilatação temporal ocorre apenas quando a
+velocidade relativa entre dois referenciais é
+superior a 80\% da velocidade da luz no vácuo.
+
+\end{flushleft}
+
+%%%%%%%% Bibliography 
+% Os comandos para incluir as referências bibliográficas
+%\printingbibliography
+
+\end{document}

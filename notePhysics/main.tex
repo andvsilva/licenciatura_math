@@ -125,9 +125,9 @@
 
 \begin{document}
 
-\justifying
-
 \begin{multicols}{2}
+
+\justifying
 
 %\noindent\rule{\linewidth}{0.4pt}\\
 \section{Cinemática Escalar/Vetorial}
@@ -299,6 +299,36 @@ Como a corrente impõe a mesma velocidade linear na periferia das duas engrenage
   E_p = -\frac{G M m}{r}
 \end{equation*}
 
+\section{Demonstração da Velocidade de Escape}
+
+A velocidade de escape é a mínima velocidade necessária para um corpo escapar da gravidade de um planeta, sem considerar resistência do ar.
+
+\subsection{Conservação de Energia}
+
+Considerando um corpo de massa $m$ lançado da superfície de um planeta de massa $M$ e raio $R$:
+
+\begin{itemize}
+  \item Energia mecânica inicial:
+  \[
+  E_{\text{inicial}} = \frac{1}{2}mv^2 - \frac{GMm}{R}
+  \]
+  \item Energia mecânica final (no infinito): 
+  \[
+  E_{\text{final}} = 0
+  \]
+\end{itemize}
+
+Aplicando a conservação da energia:
+
+\[
+\frac{1}{2}mv^2 - \frac{GMm}{R} = 0
+\Rightarrow \frac{1}{2}v^2 = \frac{GM}{R}
+\Rightarrow v = \sqrt{\frac{2GM}{R}}
+\]
+
+\noindent
+\textbf{Conclusão:} A velocidade de escape depende apenas da massa e do raio do corpo celeste, e não da massa do objeto lançado.
+
 \section{Forças no Movimento Circular}
 
 \begin{align*}
@@ -409,7 +439,7 @@ I = I_{cm} + M d^2
 
 \subsection*{Referencial Inercial}
 
-\textbf{Definição:} Um referencial é dito \textbf{inercial}\footnote{Um referencial em repouso relativo às estrelas fixas distantes.} se nele a \textbf{Primeira Lei de Newton} é válida:
+\textbf{Definição:} Um referencial é dito \textbf{inercial}, quando em repouso relativo às estrelas fixas distantes. se nele a \textbf{Primeira Lei de Newton} é válida:
 
 \[
 \text{Se } \vec{F}_{\text{resultante}} = 0 \Rightarrow \vec{v} = \text{constante}
@@ -448,10 +478,10 @@ I = I_{cm} + M d^2
     \item Força inercial (associada à aceleração do referencial)
   \end{itemize}
   \item Exemplo: Interior of a carro that freia/brusca mudança de direço, Terra (com rotaço), elevador em aceleraço.
-  \item A terra não é uma referencial inercial: $$a_{cp} = \frac{g}{290} = 0.03369 m/s^2$$, com boa aproximação podemos assumir a terra uma referencial inercial.
+  \item A terra não é uma referencial inercial: $$a_{cp} = \frac{g}{290} = 0.03369 m/s^2$$, com boa aproximação podemos assumir a terra um referencial inercial.
 \end{itemize}
 
-\subsection*{Observação:}
+\subsection{Observação:}
 Essa força só aparece em referenciais acelerados (não inerciais) e é essencial para descrever corretamente movimentos na superfície da Terra.
 
 
@@ -1980,6 +2010,47 @@ Onde:
         E_n = -\frac{13{,}6}{n^2} \, \text{eV}
     \]
     \item Transições entre níveis explicam linhas espectrais do hidrogênio.
+    \item As órbitas estáveis(estacionárias) ao redor do núcleo sem emitir radiação.
+    \item Mudar de órbita $\rightarrow$ \textbf{Absorção} ou \textbf{Emissão}.
+\end{itemize}
+
+\subsection{Modelo Atômico de Bohr}
+
+No modelo de Bohr, a luz é emitida quando um elétron salta de um nível mais externo ($n_i$) para um mais interno ($n_f$), liberando um fóton com energia específica:
+
+\[
+E = h \nu = \frac{hc}{\lambda}
+\]
+
+\noindent A fórmula de Rydberg permite calcular o comprimento de onda emitido:
+
+\[
+\frac{1}{\lambda} = R \left( \frac{1}{n_f^2} - \frac{1}{n_i^2} \right)
+\]
+
+\noindent Onde:
+\begin{itemize}
+  \item $\lambda$ é o comprimento de onda (m),
+  \item $R$ é a constante de Rydberg ($R \approx 1{,}097 \times 10^7 \, \text{m}^{-1}$),
+  \item $n_i$ é o nível inicial (mais energético),
+  \item $n_f$ é o nível final (menos energético).
+\end{itemize}
+
+\subsubsection{Séries Espectrais do Hidrogênio}
+
+\begin{itemize}
+  \item \textbf{Lyman}: região ultravioleta (UV), com transições para $n_f = 1$ e $n_i > 1$.
+  \item \textbf{Balmer}: região visível, com transições para $n_f = 2$ e $n_i > 2$.
+  \item \textbf{Paschen}: região do infravermelho, com transições para $n_f = 3$ e $n_i > 3$.
+  \item \textbf{Brackett}: região do infravermelho, com transições para $n_f = 4$ e $n_i > 4$.
+  \item \textbf{Pfund}: região do infravermelho, com transições para $n_f = 5$ e $n_i > 5$.
+\end{itemize}
+
+\subsubsection{Observações}
+\begin{itemize}
+    \item A série de Balmer é a única cujas linhas estão no espectro visível.
+    \item As outras séries estão em faixas não visíveis (UV e infravermelho).
+    \item Cada transição corresponde a uma linha espectral com comprimento de onda específico.
 \end{itemize}
 
 \section{Princípio da Incerteza de Heisenberg}
