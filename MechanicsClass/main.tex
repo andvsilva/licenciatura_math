@@ -1,0 +1,507 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[brazil, english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\addtolength{\topmargin}{-2.5pt}
+\usepackage{xcolor}
+\usepackage{amsmath, amssymb, bm}
+\usepackage{mathtools}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{newunicodechar}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{tikz-3dplot} % Necessário para coordenadas 3D
+\usetikzlibrary{intersections}
+\usepackage{siunitx}
+\usetikzlibrary{3d, arrows.meta}
+
+\usepackage{color}
+\definecolor{myblue}{rgb}{.8, .8, 1}
+
+\usepackage{amsmath}
+\usepackage{empheq}
+
+\newlength\mytemplen
+\newsavebox\mytempbox
+
+\makeatletter
+\newcommand\mybluebox{%
+    \@ifnextchar[%]
+       {\@mybluebox}%
+       {\@mybluebox[0pt]}}
+
+\def\@mybluebox[#1]{%
+    \@ifnextchar[%]
+       {\@@mybluebox[#1]}%
+       {\@@mybluebox[#1][0pt]}}
+
+\def\@@mybluebox[#1][#2]#3{
+    \sbox\mytempbox{#3}%
+    \mytemplen\ht\mytempbox
+    \advance\mytemplen #1\relax
+    \ht\mytempbox\mytemplen
+    \mytemplen\dp\mytempbox
+    \advance\mytemplen #2\relax
+    \dp\mytempbox\mytemplen
+    \colorbox{myblue}{\hspace{1em}\usebox{\mytempbox}\hspace{1em}}}
+\makeatother
+
+\usepackage[most]{tcolorbox}
+
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base,
+    enhanced, colframe=blue!30!black,
+    colback=blue!30, boxrule=1pt,
+    #1}
+
+\tcbset{
+    highlight math style={
+        enhanced,
+        colframe=red!60!black,
+        colback=yellow!50,
+        arc=4pt,
+        boxrule=1pt,
+        drop fuzzy shadow
+    }
+    }
+
+\usepackage{physics}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+\linespread{1.5}
+
+\definecolor{ao(english)}{rgb}{0.0, 0.5, 0.0}
+\definecolor{byzantium}{rgb}{0.44, 0.16, 0.39}
+\newunicodechar{∘}{\circ}
+
+\input{commands.tex}
+
+\hypersetup{
+    colorlinks=true,% make the links colored
+    linkcolor=blue
+}
+
+\usepackage{setspace}
+\addbibresource{bibliography.bib}
+
+\newcommand{\printingbibliography}{%
+
+    \pagestyle{myheadings}
+    \markright{}
+    \sloppy
+    \printbibliography[heading=bibintoc, % add to table of contents
+                   title=Refer\^encias % Chapter name
+                  ]
+    \fussy%
+}
+\PassOptionsToPackage{table}{xcolor}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\thepage}
+
+\geometry{a4paper,top=30mm,bottom=20mm,left=30mm,right=20mm}
+
+\titleformat*{\section}{\bfseries\large}
+\titleformat*{\subsection}{\bfseries\normalsize}
+
+\title{ \textbf{\large } }
+\author{}
+\date{ter 03 jun 2025 19:09:14}
+
+\begin{document}
+
+\maketitle
+\noindent\rule{\linewidth}{0.4pt}\\
+
+\justifying
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large \textbf{1.}}}\\
+\noindent
+Um estudante chuta um bloco sem atrito com uma velocidade inicial \(v_0\), de modo que ele desliza reto para cima ao longo de um plano que está inclinado com um ângulo \(\theta\) acima da horizontal. 
+
+\begin{itemize}
+    \item[(a)] Escreva a segunda lei de Newton para o bloco e resolva-a para obter a posição do bloco como uma função do tempo.
+    \item[(b)] Quanto tempo o bloco levará até retornar à sua posição original?
+\end{itemize}
+
+\vspace{0.5cm}
+\section*{Solução}
+
+\subsection*{(a) \colorbox{yellow!20}{Segunda Lei de Newton e Posição em função do tempo}}
+
+Como o plano está \textbf{sem atrito}, a única força atuando sobre o bloco ao longo do plano inclinado é a componente do peso. Projetando o peso na direção do plano, temos:
+
+\[
+F = -mg\sin\theta
+\]
+
+Aplicando a segunda lei de Newton:
+
+\[
+F = ma \Rightarrow -mg\sin\theta = ma \Rightarrow a = -g\sin\theta
+\]
+
+A aceleração é constante, então usamos a equação horária do movimento uniformemente acelerado (MRUA):
+
+\[
+x(t) = x_0 + v_0 t + \frac{1}{2} a t^2
+\]
+
+Supondo que a posição inicial seja \(x_0 = 0\), temos:
+
+\[
+x(t) = v_0 t - \frac{1}{2} g \sin\theta \cdot t^2
+\]
+
+\textbf{Portanto, a posição do bloco em função do tempo é:}
+
+\[
+\boxed{x(t) = v_0 t - \frac{1}{2} g \sin\theta \cdot t^2}
+\]
+
+\vspace{0.5cm}
+\subsection*{(b) \colorbox{yellow!20}{Tempo para retornar à posição original}}
+
+O bloco retorna à posição original quando \(x(t) = 0\). Usamos a equação obtida:
+
+\[
+v_0 t - \frac{1}{2} g \sin\theta \cdot t^2 = 0
+\]
+
+Colocando \(t\) em evidência:
+
+\[
+t \left(v_0 - \frac{1}{2} g \sin\theta \cdot t\right) = 0
+\]
+
+As soluções são:
+\[
+t = 0 \quad \text{(instante inicial)}, \quad t = \frac{2v_0}{g \sin\theta}
+\]
+
+\textbf{Portanto, o tempo total até o bloco retornar à posição inicial é:}
+
+\[
+\boxed{t = \frac{2v_0}{g \sin\theta}}
+\]
+
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.4pt}\\
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large \textbf{2.}}}\\
+\noindent
+Considere uma esfera (diâmetro \( D \), densidade \( \rho_{\text{esf}} \)) caindo no ar (densidade \( \rho_{\text{ar}} \)) e assuma que a força de arrasto é puramente quadrática.
+
+\begin{enumerate}
+    \item[(a)] Use a equação (1) (com \( \kappa = 1/4 \) para a esfera) para mostrar que a velocidade limite será dada pela equação (2).
+    \[
+    f_{\text{quad}} = \kappa \rho_{\text{ar}} A v^2 \tag{1}
+    \]
+    \[
+    v_{\text{lim}} = \sqrt{ \frac{8}{3} D g \cdot \frac{\rho_{\text{esf}}}{\rho_{\text{ar}}} } \tag{2}
+    \]
+
+    \item[(b)] Use esse resultado para mostrar que em duas esferas do mesmo tamanho, a mais densa irá eventualmente cair mais rápido.
+
+    \item[(c)] Para duas esferas do mesmo material, mostre que a maior irá eventualmente cair mais rapidamente.
+\end{enumerate}
+
+\vspace{0.5cm}
+\section*{Solução}
+
+\subsection*{(a) \colorbox{yellow!20}{Derivação da velocidade limite}}
+
+No regime de queda com velocidade constante (velocidade limite), a força peso é equilibrada pela força de arrasto quadrática:
+
+\[
+\boxed{
+P = f_{\text{quad}}
+}
+\]
+
+A força peso de uma esfera de densidade \( \rho_{\text{esf}} \), volume \( V \), e aceleração gravitacional \( g \) é:
+
+\[
+P = m g = \rho_{\text{esf}} V g = \rho_{\text{esf}} \cdot \frac{\pi D^3}{6} \cdot g
+\]
+
+A área de seção transversal da esfera é:
+
+\[
+A = \frac{\pi D^2}{4}
+\]
+
+A força de arrasto é:
+
+\[
+f_{\text{quad}} = \kappa \rho_{\text{ar}} A v_{\text{lim}}^2 = \kappa \rho_{\text{ar}} \cdot \frac{\pi D^2}{4} \cdot v_{\text{lim}}^2
+\]
+
+Igualando as forças:
+
+\[
+\rho_{\text{esf}} \cdot \frac{\pi D^3}{6} \cdot g = \kappa \rho_{\text{ar}} \cdot \frac{\pi D^2}{4} \cdot v_{\text{lim}}^2
+\]
+
+Cancelando \( \pi \) dos dois lados e isolando \( v_{\text{lim}}^2 \):
+
+\[
+\rho_{\text{esf}} \cdot \frac{D^3}{6} \cdot g = \kappa \rho_{\text{ar}} \cdot \frac{D^2}{4} \cdot v_{\text{lim}}^2
+\]
+
+\[
+v_{\text{lim}}^2 = \frac{ \rho_{\text{esf}} \cdot D^3 \cdot g }{6 \kappa \rho_{\text{ar}} \cdot D^2 / 4 } = \frac{4 \rho_{\text{esf}} D g}{6 \kappa \rho_{\text{ar}}}
+\]
+
+Substituindo \( \kappa = \frac{1}{4} \):
+
+\[
+v_{\text{lim}}^2 = \frac{4 \rho_{\text{esf}} D g}{6 \cdot \frac{1}{4} \rho_{\text{ar}} } = \frac{16}{6} \cdot \frac{\rho_{\text{esf}} D g}{\rho_{\text{ar}} } = \frac{8}{3} \cdot \frac{\rho_{\text{esf}} D g}{\rho_{\text{ar}} }
+\]
+
+Logo,
+
+\[
+\boxed{
+v_{\text{lim}} = \sqrt{ \frac{8}{3} D g \cdot \frac{\rho_{\text{esf}}}{\rho_{\text{ar}}} }} \quad \checkmark
+\]
+
+\subsection*{(b) Comparando densidades com mesmo diâmetro}
+
+\colorbox{yellow!20}{Se duas esferas têm o mesmo diâmetro \( D \)}, então:
+
+\[
+v_{\text{lim}} \propto \sqrt{ \rho_{\text{esf}} }
+\]
+
+Ou seja, quanto maior for \( \rho_{\text{esf}} \), maior será \( v_{\text{lim}} \). \colorbox{red!15}{Logo, a esfera mais densa cai mais} 
+\colorbox{red!15}{rapidamente.}
+
+\subsection*{(c) Comparando tamanhos com mesmo material}
+
+Se duas esferas são do mesmo material, então \( \rho_{\text{esf}} \) é constante. Logo:
+
+\[
+v_{\text{lim}} \propto \sqrt{D}
+\]
+
+Ou seja, \colorbox{red!15}{quanto maior o diâmetro \( D \), maior a velocidade limite.} Assim, a esfera maior cairá mais rapidamente.
+
+
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.4pt}\\
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large \textbf{3.}}}\\
+Uma partícula de massa \( m \) está se movendo sobre uma mesa sem atrito e está presa a uma mola de massa 
+desprezível, cujo lado oposto passa através de um orifício sobre a mesa, onde ela é fixada. 
+Inicialmente, a partícula está se movendo em um círculo de raio \( r_0 \) com velocidade angular \( \omega_0 \), 
+mas agora puxamos a mola na direção do orifício até um comprimento \( r \) ser formado entre o orifício e a partícula. 
+Qual é a velocidade angular da partícula nesse momento?
+
+
+\vspace{0.5cm}
+\section*{Solução}
+
+\colorbox{yellow!20}{Como não há torques externos, o \textbf{momento angular} da partícula em relação ao orifício} 
+\colorbox{yellow!20}{é conservado.}
+
+\subsection*{Momento Angular Inicial}
+
+\[
+L_0 = I_0 \omega_0 = m r_0^2 \omega_0
+\]
+
+\subsection*{Momento Angular Final}
+
+\[
+L = I \omega = m r^2 \omega
+\]
+
+\subsection*{Conservação do Momento Angular}
+
+\[
+L_0 = L \Rightarrow m r_0^2 \omega_0 = m r^2 \omega
+\]
+
+Cancelando a massa \( m \) dos dois lados:
+
+\[
+r_0^2 \omega_0 = r^2 \omega
+\]
+
+Resolvendo para \( \omega \):
+
+\[
+\boxed{\omega = \frac{r_0^2}{r^2} \omega_0}
+\]
+
+\section*{\colorbox{green!15}{Interpretação Física}}
+
+Como \( r < r_0 \), segue que \( \omega > \omega_0 \). Isso significa que a velocidade angular da partícula aumenta 
+à medida que ela se aproxima do orifício. Esse efeito é análogo ao de uma patinadora que recolhe os braços para girar 
+mais rápido: \colorbox{yellow!20}{ao reduzir o momento de} \colorbox{yellow!20}{inércia, a velocidade angular aumenta 
+para conservar o momento angular total.}
+
+\end{flushleft}
+
+
+\noindent\rule{\linewidth}{0.4pt}\\
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large \textbf{4.}}}\\
+
+Considere um foguete sujeito a uma força de resistência linear, \( f = -bv \), e mais nenhuma outra força externa. 
+Use a equação (3) para mostrar que, se o foguete parte do repouso e expele a massa a uma constante \( k = -\dot{m} \), então, 
+a sua velocidade será dada pela equação (4).
+
+\begin{equation}
+    m \dot{v} = -\dot{m} v_{\text{ex}} + F^{\text{ext}} \tag{3}
+\end{equation}
+
+\begin{equation}
+    v = \frac{k}{b} v_{\text{ex}} \left[ 1 - \left( \frac{m}{m_0} \right)^{b/k} \right] \tag{4}
+\end{equation}
+
+\vspace{0.5cm}
+\section*{Solução}
+
+A equação (3) pode ser escrita como:
+
+\[
+m \dot{v} = -\dot{m} v_{\text{ex}} - bv
+\]
+
+Como \( \dot{m} = -k \), temos \( -\dot{m} = k \), logo:
+
+\[
+m \dot{v} = k v_{\text{ex}} - bv
+\]
+
+Dividindo ambos os lados por \( m \):
+
+\[
+\dot{v} = \frac{k}{m} v_{\text{ex}} - \frac{b}{m} v \tag{5}
+\]
+
+Agora, usamos a relação entre massa e tempo. Como \( \dot{m} = -k \), temos:
+
+\[
+m(t) = m_0 - kt
+\]
+
+Queremos eliminar \( t \) e resolver em função de \( m \). Escrevemos \( \dot{v} \) como derivada em relação à massa \( m \) usando a regra da cadeia:
+
+\[
+\frac{dv}{dt} = \frac{dv}{dm} \cdot \frac{dm}{dt} = -k \frac{dv}{dm}
+\]
+
+Substituindo isso na equação (5):
+
+\[
+-k \frac{dv}{dm} = \frac{k}{m} v_{\text{ex}} - \frac{b}{m} v
+\]
+
+Multiplicando ambos os lados por \( m \):
+
+\[
+-k m \frac{dv}{dm} = k v_{\text{ex}} - b v
+\]
+
+Multiplicando ambos os lados por \( \frac{1}{k} \):
+
+\[
+- m \frac{dv}{dm} = v_{\text{ex}} - \frac{b}{k} v
+\]
+
+Reorganizando:
+
+\[
+\frac{dv}{dm} + \frac{b}{k m} v = \frac{v_{\text{ex}}}{m}
+\]
+
+Essa é uma equação linear de primeira ordem para \( v(m) \). O fator integrante é:
+
+\[
+\mu(m) = \exp\left( \int \frac{b}{k m} \, dm \right) = m^{b/k}
+\]
+
+Multiplicando ambos os lados da equação por \( \mu(m) \):
+
+\[
+m^{b/k} \frac{dv}{dm} + \frac{b}{k} m^{b/k - 1} v = v_{\text{ex}} m^{b/k - 1}
+\]
+
+O lado esquerdo é a derivada do produto:
+
+\[
+\frac{d}{dm} \left( m^{b/k} v \right) = v_{\text{ex}} m^{b/k - 1}
+\]
+
+Integrando ambos os lados:
+
+\[
+\int \frac{d}{dm} \left( m^{b/k} v \right) \, dm = \int v_{\text{ex}} m^{b/k - 1} \, dm
+\]
+
+\[
+m^{b/k} v = v_{\text{ex}} \cdot \frac{m^{b/k}}{b/k} + C
+\]
+
+\[
+m^{b/k} v = \frac{k}{b} v_{\text{ex}} m^{b/k} + C
+\]
+
+Dividindo ambos os lados por \( m^{b/k} \):
+
+\[
+v = \frac{k}{b} v_{\text{ex}} + \frac{C}{m^{b/k}}
+\]
+
+Para encontrar a constante \( C \), \colorbox{yellow!20}{usamos a condição inicial: no instante em que \( m = m_0 \),} 
+\colorbox{yellow!20}{\( v = 0 \):}
+
+\[
+0 = \frac{k}{b} v_{\text{ex}} + \frac{C}{m_0^{b/k}} \Rightarrow \boxed{C = - \frac{k}{b} v_{\text{ex}} m_0^{b/k}}
+\]
+
+Substituindo \( C \) na equação da velocidade:
+
+\[
+v = \frac{k}{b} v_{\text{ex}} - \frac{k}{b} v_{\text{ex}} \left( \frac{m_0}{m} \right)^{b/k}
+\]
+
+\[
+v = \frac{k}{b} v_{\text{ex}} \left[ 1 - \left( \frac{m_0}{m} \right)^{b/k} \right]
+\]
+
+Finalmente, reescrevendo como na equação (4):
+
+\[
+\boxed{v = \frac{k}{b} v_{\text{ex}} \left[ 1 - \left( \frac{m}{m_0} \right)^{b/k} \right]} \quad \checkmark
+\]
+
+\end{flushleft}
+
+%%%%%%%% Bibliography 
+% Os comandos para incluir as referências bibliográficas
+%\printingbibliography
+
+\end{document}
