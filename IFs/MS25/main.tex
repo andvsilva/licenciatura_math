@@ -153,7 +153,7 @@ de Carnot. Com base nessas informações, qual é o trabalho efetivo realizado p
     \item Temperatura da fonte quente: \( T_q = \SI{800}{\kelvin} \)
     \item Temperatura da fonte fria: \( T_f = \SI{300}{\kelvin} \)
     \item Calor recebido por ciclo: \( Q_q = \SI{500}{\mega\joule} \)
-    \item Eficiência real: \( \eta_{\text{real}} = 0{,}60 \cdot \eta_{\text{Carnot}} \)
+    \item Eficiência real: \( \eta_{\text{real}} = 60\% \cdot \eta_{\text{Carnot}} \)
 \end{itemize}
 
 \vspace{1em}
@@ -166,7 +166,7 @@ A eficiência teórica do ciclo de Carnot é dada por:
 Eficiência real da usina:
 
 \[
-\eta_{\text{real}} = 0{,}60 \cdot 0{,}625 = 0{,}375
+\eta_{\text{real}} = 60\% \cdot 0{,}625 = 0{,}60 \cdot 0{,}625 = 0{,}375
 \]
 
 O trabalho efetivo realizado por ciclo é:
@@ -830,66 +830,391 @@ d = \sqrt{x^2 + y^2} = \sqrt{(0{,}1)^2 + (0{,}1)^2} = \sqrt{2 \cdot 0{,}01} = 0{
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Q22}}\\
 
+Um sistema é constituído de duas lentes esféricas delgadas convergentes de distâncias focais F e
+2F. As lentes estão dispostas de maneira que seus eixos principais sejam coincidentes. Um
+feixe de luz cilíndrico incide paralelamente ao eixo central do sistema sobre a lente de maior foco e
+emerge do sistema a partir da lente de menor foco, sem perder o paralelismo. Determine a
+relação entre o diâmetro do feixe que incide e o diâmetro do feixe de luz que emerge do sistema e
+assinale a alternativa correta.
+
 
 \begin{itemize}
-\item[(A)] 
-\item[(B)]   
-\item[(C)] 
-\item[(D)] 
-\item[(E)] 
+\item[(A)] 0,5
+\item[(B)] 1,0
+\item[(C)] 1,5
+\item[(D)] 2,0
+\item[(E)] 2,5
 \end{itemize}
 
 \vspace{0.5cm}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-\textbf{Resposta correta: \colorbox{green!50}{(...)}}
+\subsection*{Configuração do sistema}
+
+O sistema óptico é composto por:
+
+\begin{itemize}
+    \item Primeira lente: distância focal \( f_1 = 2F \)
+    \item Segunda lente: distância focal \( f_2 = F \)
+\end{itemize}
+
+O feixe incidente é \textbf{paralelo ao eixo óptico}, com diâmetro \( D_i \), e incide primeiramente na lente de maior foco (\( f_1 = 2F \)).
+
+\subsection*{Imagem formada pela primeira lente}
+
+Como o feixe é paralelo ao eixo, a primeira lente irá convergir os raios para o seu \textbf{foco imagem}, situado a uma distância \( 2F \) da lente.
+
+\begin{equation}
+d_{\text{imagem 1}} = f_1 = 2F
+\end{equation}
+
+\subsection*{Posicionamento da segunda lente}
+
+Para que o feixe emergente da segunda lente volte a ser \textbf{paralelo ao eixo óptico}, a \textbf{imagem formada pela primeira lente deve estar no foco objeto da segunda lente}.
+
+Ou seja, a distância entre as lentes deve ser:
+
+\begin{equation}
+d = 2F
+\end{equation}
+
+Assim, a imagem da primeira lente coincide com o foco objeto da segunda lente.
+
+\subsection*{Comportamento do feixe}
+
+A sequência é:
+
+\begin{itemize}
+    \item Feixe incidente: paralelo com diâmetro \( D_i \).
+    \item Após a primeira lente: feixe converge para um ponto (o foco, a \( 2F \) de distância).
+    \item Após a segunda lente: o feixe diverge novamente e sai paralelo ao eixo óptico, com novo diâmetro \( D_f \).
+\end{itemize}
+
+\subsection*{Relação entre os diâmetros}
+
+O comportamento do diâmetro do feixe pode ser analisado por \textbf{semelhança de triângulos}:
+
+\begin{itemize}
+    \item A redução do diâmetro de \( D_i \) até zero no foco da primeira lente ocorre ao longo da distância \( 2F \).
+    \item A abertura de zero até \( D_f \) após a segunda lente também ocorre ao longo de \( F \), pois a distância focal da segunda lente é \( F \).
+\end{itemize}
+
+Pela proporcionalidade entre as distâncias e os diâmetros:
+
+\begin{equation}
+\frac{D_f}{D_i} = \frac{F}{2F} = \frac{1}{2}
+\end{equation}
+
+\subsection*{Resposta final}
+
+Queremos a razão entre o diâmetro inicial e o final:
+
+\begin{equation}
+\frac{D_i}{D_f} = 2,0
+\end{equation}
+
+\section*{Esquema Óptico (opcional)}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+% Eixo principal
+\draw[->] (-1,0) -- (7,0) node[right] {Eixo óptico};
+
+% Primeira lente
+\draw[thick] (1,-1.2) -- (1,1.2);
+\node[above] at (1,1.2) {Lente 1};
+
+% Segunda lente
+\draw[thick] (5,-1.2) -- (5,1.2);
+\node[above] at (5,1.2) {Lente 2};
+
+% Feixe incidente
+\draw[->,red] (-0.5,0.6) -- (1,0.6);
+\draw[->,red] (-0.5,0) -- (1,0);
+\draw[->,red] (-0.5,-0.6) -- (1,-0.6);
+
+% Feixe convergindo
+\draw[red] (1,0.6) -- (3,0);
+\draw[red] (1,0) -- (3,0);
+\draw[red] (1,-0.6) -- (3,0);
+
+% Feixe emergente paralelo
+\draw[->,blue] (5,0.4) -- (6.5,0.4);
+\draw[->,blue] (5,0) -- (6.5,0);
+\draw[->,blue] (5,-0.4) -- (6.5,-0.4);
+
+% Distâncias focais
+\draw[<->] (1,-1) -- (3,-1) node[midway, below] {$2F$};
+\draw[<->] (3,-1) -- (5,-1) node[midway, below] {$F$};
+
+\end{tikzpicture}
+\end{center}
+
+Portanto, a alternativa correta é: \textbf{\colorbox{green!50}{(D)}}
 
 \end{flushleft}
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{\Large Q22}}\\
+\textbf{\textcolor{blue}{\Large Q23}}\\
+
+Uma bola de aço de \(2\,\text{kg}\) se desloca horizontalmente a \(10\,\text{m/s}\) sobre uma 
+superfície sem atrito e colide frontalmente com uma segunda bola de \(3\,\text{kg}\), que se move 
+no mesmo sentido a \(4\,\text{m/s}\). A colisão entre as bolas é perfeitamente elástica. Com base nessas 
+informações, qual será a velocidade da bola de \(2\,\text{kg}\) após a colisão?
 
 
 \begin{itemize}
-\item[(A)] 
-\item[(B)]   
-\item[(C)] 
-\item[(D)] 
-\item[(E)] 
+\item[(A)] -2 m/s.
+\item[(B)]  2 m/s.
+\item[(C)]  2,8 m/s.
+\item[(D)]  8,8 m/s.
+\item[(E)]  10 m/s.
 \end{itemize}
 
 \vspace{0.5cm}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-\textbf{Resposta correta: \colorbox{green!50}{(...)}}
+\begin{itemize}
+    \item Massa da primeira bola: \(m_1 = 2\,\text{kg}\)
+    \item Velocidade inicial da primeira bola: \(v_{1i} = 10\,\text{m/s}\)
+    \item Massa da segunda bola: \(m_2 = 3\,\text{kg}\)
+    \item Velocidade inicial da segunda bola: \(v_{2i} = 4\,\text{m/s}\)
+\end{itemize}
+
+Uma colisão perfeitamente elástica obedece simultaneamente à:
+
+\begin{itemize}
+    \item \textbf{Conservação da quantidade de movimento:}
+    \[
+    m_1v_{1i} + m_2v_{2i} = m_1v_{1f} + m_2v_{2f}
+    \]
+    \item \textbf{Conservação da energia cinética:}
+    \[
+    \frac{1}{2}m_1v_{1i}^2 + \frac{1}{2}m_2v_{2i}^2 = \frac{1}{2}m_1v_{1f}^2 + \frac{1}{2}m_2v_{2f}^2
+    \]
+\end{itemize}
+
+Onde:
+\begin{itemize}
+    \item \(v_{1i}\) e \(v_{2i}\): velocidades iniciais das massas \(m_1\) e \(m_2\)
+    \item \(v_{1f}\) e \(v_{2f}\): velocidades finais das massas \(m_1\) e \(m_2\)
+\end{itemize}
+
+\subsection*{Dedução da Fórmula Direta}
+
+Para facilitar a resolução sem precisar resolver um sistema de duas equações, aplicamos uma transformação clássica: a equação das velocidades relativas.
+
+Em colisões perfeitamente elásticas em uma dimensão:
+
+\[
+v_{1i} - v_{2i} = -(v_{1f} - v_{2f})
+\]
+
+Ou seja:
+
+\[
+v_{1i} - v_{2i} = v_{2f} - v_{1f}
+\]
+
+Agora temos duas equações:
+
+\begin{equation}
+m_1v_{1i} + m_2v_{2i} = m_1v_{1f} + m_2v_{2f} \tag{1}
+\end{equation}
+
+\begin{equation}
+v_{1i} - v_{2i} = v_{2f} - v_{1f} \tag{2}
+\end{equation}
+
+\subsection*{Resolvendo o Sistema}
+
+Da equação (2):
+
+\[
+v_{2f} = v_{1i} - v_{2i} + v_{1f}
+\]
+
+Substituindo isso na equação (1):
+
+\[
+m_1v_{1i} + m_2v_{2i} = m_1v_{1f} + m_2(v_{1i} - v_{2i} + v_{1f})
+\]
+
+Distribuindo:
+
+\[
+m_1v_{1i} + m_2v_{2i} = m_1v_{1f} + m_2v_{1i} - m_2v_{2i} + m_2v_{1f}
+\]
+
+Agrupando os termos:
+
+\[
+m_1v_{1i} - m_2v_{1i} + m_2v_{2i} + m_2v_{2i} = (m_1 + m_2)v_{1f}
+\]
+
+\[
+(m_1 - m_2)v_{1i} + 2m_2v_{2i} = (m_1 + m_2)v_{1f}
+\]
+
+Finalmente, isolando \(v_{1f}\):
+
+\[
+v_{1f} = \frac{(m_1 - m_2)v_{1i} + 2m_2v_{2i}}{m_1 + m_2}
+\]
+
+\subsection*{Cálculo Numérico}
+
+Substituindo os valores fornecidos:
+
+\[
+v_{1f} = \frac{(2\,\text{kg} - 3\,\text{kg}) \times 10\,\text{m/s} + 2 \times 3\,\text{kg} \times 4\,\text{m/s}}{2\,\text{kg} + 3\,\text{kg}}
+\]
+
+\[
+v_{1f} = \frac{(-1)\times10 + 24}{5}
+\]
+
+\[
+v_{1f} = \frac{-10 + 24}{5}
+\]
+
+\[
+v_{1f} = \frac{14}{5}
+\]
+
+\[
+\boxed{v_{1f} = 2,8\,\text{m/s}}
+\]
+
+no mesmo sentido original do movimento.
+
+A velocidade da bola de \(2\,\text{kg}\) após a colisão será \(2,8\,\text{m/s}\). \textbf{Resposta: \colorbox{green!50}{(C)}}. 
 
 \end{flushleft}
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{\Large Q22}}\\
+\textbf{\textcolor{blue}{\Large Q24}}\\
 
+Uma sonda espacial é enviada para estudar um exoplaneta orbitando uma estrela semelhante ao
+Sol. Durante as medições, os cientistas descobrem que a órbita do exoplaneta é
+ligeiramente elíptica, com semieixo maior de 2 UA e excentricidade de 0,3. Sabendo que a massa da
+estrela central é aproximadamente 1 massa solar, assinale a alternativa que apresenta o valor
+aproximado do período orbital do exoplaneta em anos terrestres.
 
 \begin{itemize}
-\item[(A)] 
-\item[(B)]   
-\item[(C)] 
-\item[(D)] 
-\item[(E)] 
+\item[(A)] 1,8 anos.
+\item[(B)] 2,0 anos.  
+\item[(C)] 2,5 anos.
+\item[(D)] 2,8 anos.
+\item[(E)] 3,2 anos.
 \end{itemize}
 
 \vspace{0.5cm}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-\textbf{Resposta correta: \colorbox{green!50}{(...)}}
+\subsection*{Terceira Lei de Kepler}
+
+A Terceira Lei de Kepler estabelece que o quadrado do período orbital (\(T^2\)) de um planeta é proporcional ao cubo do 
+semieixo maior (\(a^3\)) de sua órbita, quando o corpo central tem uma massa \(M\):
+
+\[
+F_{cp} = F_{grav}
+\]
+
+\[
+m\omega^2 r = \frac{GMm}{r^2}
+\]
+
+\[
+\left(\frac{2\pi}{T}\right)^2 a = \frac{G M}{a^2} \Rightarrow \frac{4\pi^4}{T^{2}} = \frac{GM}{a^3}
+\]
+
+\[
+\boxed{
+T^2 = \frac{4\pi^2 a^3}{G M}
+}
+\]
+
+Onde:
+
+\begin{itemize}
+    \item \( T \) = período orbital
+    \item \( a \) = semieixo maior da órbita
+    \item \( G \) = constante gravitacional universal
+    \item \( M \) = massa da estrela central
+\end{itemize}
+
+\subsection*{Unidades Astronômicas}
+
+Ao trabalhar com:
+
+\begin{itemize}
+    \item \( a \) em Unidades Astronômicas (UA),
+    \item \( M \) em massas solares (\( M_{\odot} \)),
+    \item \( T \) em anos terrestres,
+\end{itemize}
+
+\subsection*{Ajuste da Constante}
+
+Ao adotar essas unidades, os valores de \(G\), \(M_{\odot}\), \(a\) e \(T\) são escolhidos de forma que, para a órbita da Terra ao redor do Sol, tenhamos:
+
+\[
+a = 1\,\text{UA}, \quad M = 1\,M_{\odot}, \quad T = 1\,\text{ano}
+\]
+
+Substituindo esses valores na equação da Terceira Lei de Kepler, obtemos:
+
+\[
+(1\,\text{ano})^2 = \frac{4\pi^2 (1\,\text{UA})^3}{G M_{\odot}}
+\]
+
+Para que essa igualdade seja verdadeira, a constante \(\frac{4\pi^2}{G M_{\odot}}\) precisa ser numericamente igual a 1 nas novas unidades escolhidas,
+a fórmula se simplifica para:
+
+\[
+T^2 = a^3
+\]
+
+Essa simplificação é válida apenas para sistemas estelares cuja massa central seja igual a \(1\,M_{\odot}\), como no caso do nosso Sol.
+
+\subsection*{Cálculo do Período}
+
+Substituindo o valor de \(a = 2\,\text{UA}\):
+
+\[
+T^2 = (2)^3 = 8
+\]
+
+\[
+T = \sqrt{8}
+\]
+
+\[
+T \approx 2,83\,\text{anos terrestres}
+\]
+
+\subsection*{Observação sobre a Excentricidade}
+
+Vale lembrar que a excentricidade \(e = 0,3\) afeta o formato da órbita (tornando-a uma elipse mais alongada), mas não altera o cálculo do período segundo a Terceira Lei de Kepler. O período depende apenas do semieixo maior e da massa da estrela central.
+
+\section*{Resposta Final}
+
+O período orbital aproximado do exoplaneta é:
+
+\[
+\boxed{T \approx 2,8\,\text{anos terrestres}}
+\]
+
+\textbf{Resposta correta: \colorbox{green!50}{(D)}}
 
 \end{flushleft}
 
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{\Large Q22}}\\
+\textbf{\textcolor{blue}{\Large Q25}}\\
 
 
 \begin{itemize}

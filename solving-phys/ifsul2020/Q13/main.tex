@@ -1,0 +1,78 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancyhf{} % Limpa cabeçalhos e rodapés
+\fancyhead[L]{\small Estudos -Concurso.}
+\fancyhead[C]{Provas - Física}
+\fancyhead[R]{Página \thepage}
+
+\input{commands.tex}
+
+\hypersetup{
+    colorlinks=true,% make the links colored
+    linkcolor=blue
+}
+
+\usepackage{setspace}
+\addbibresource{bibliography.bib}
+
+\newcommand{\printingbibliography}{%
+
+    \pagestyle{myheadings}
+    \markright{}
+    \sloppy
+    \printbibliography[heading=bibintoc, % add to table of contents
+                   title=Refer\^encias % Chapter name
+                  ]
+    \fussy%
+}
+\PassOptionsToPackage{table}{xcolor}
+\renewcommand{\baselinestretch}{1.5}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\thepage}
+
+\geometry{a4paper,top=30mm,bottom=20mm,left=30mm,right=20mm}
+
+\titleformat*{\section}{\bfseries\large}
+\titleformat*{\subsection}{\bfseries\normalsize}
+
+\title{Resolu\c{c}\~ao de Prova de F\'isica - Inst\'itutos Federais.\\
+Áreas 15 e 28 – Física – EDITAL 049/2020}
+\author{Andr\'e V. Silva \\
+\href{https://andrevsilva.com/}{\texttt{https://andrevsilva.com/}}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+\url{https://arq.pciconcursos.com.br/provas/31060128/e7b804f2e08b/fisica.pdf}
+\end{center}
+
+\textbf{13.} \textbf{[IFSul2020 - EDITAL 049/2020]} 
+
+\section*{Solução}
+
+
+%%%%%%%% Bibliography 
+% Os comandos para incluir as referências bibliográficas
+%\printingbibliography
+
+\end{document}

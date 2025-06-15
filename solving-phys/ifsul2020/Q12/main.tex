@@ -1,0 +1,167 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancyhf{} % Limpa cabeçalhos e rodapés
+\fancyhead[L]{\small Estudos -Concurso.}
+\fancyhead[C]{Provas - Física}
+\fancyhead[R]{Página \thepage}
+
+\input{commands.tex}
+
+\hypersetup{
+    colorlinks=true,% make the links colored
+    linkcolor=blue
+}
+
+\usepackage{setspace}
+\addbibresource{bibliography.bib}
+
+\newcommand{\printingbibliography}{%
+
+    \pagestyle{myheadings}
+    \markright{}
+    \sloppy
+    \printbibliography[heading=bibintoc, % add to table of contents
+                   title=Refer\^encias % Chapter name
+                  ]
+    \fussy%
+}
+\PassOptionsToPackage{table}{xcolor}
+\renewcommand{\baselinestretch}{1.5}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\thepage}
+
+\geometry{a4paper,top=30mm,bottom=20mm,left=30mm,right=20mm}
+
+\titleformat*{\section}{\bfseries\large}
+\titleformat*{\subsection}{\bfseries\normalsize}
+
+\title{Resolu\c{c}\~ao de Prova de F\'isica - Inst\'itutos Federais.\\
+Áreas 15 e 28 – Física – EDITAL 049/2020}
+\author{Andr\'e V. Silva \\
+\href{https://andrevsilva.com/}{\texttt{https://andrevsilva.com/}}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+\url{https://arq.pciconcursos.com.br/provas/31060128/e7b804f2e08b/fisica.pdf}
+\end{center}
+
+\begin{minipage}{0.6\textwidth}
+\textbf{12.} \textbf{[IFSul2020 - EDITAL 049/2020]}  Uma luminária cuja massa é de 20 kg precisa ser 
+fixada a uma distância de 1,5 m do teto por meio de três cabos de 2 m (inextensíveis e de massa desprezível), 
+conforme a figura ao lado. Para que seja feita a escolha do material do cabo, faz-se necessário determinar a tensão a que o cabo será submetido.
+
+Sabendo que o valor da aceleração da gravidade no local de instalação da luminária é de \(9,8 \, \mathrm{m/s}^2\), qual o valor da tensão em cada um dos cabos?
+
+\begin{itemize}
+    \item[a)] 261,33 N.
+    \item[b)] 147 N.
+    \item[c)] 87,11 N.
+    \item[d)] 49 N.
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\textwidth}
+\centering
+\includegraphics[width=\linewidth]{images/luminaria.png} % substitua pelo nome correto da imagem
+\end{minipage}
+
+\section*{Solução}
+
+Passo 1: Determinar o peso da luminária.
+
+\[
+P = m \cdot g = 20 \cdot 9,8 = 196 \, \mathrm{N}
+\]
+
+Como a luminária é sustentada por três cabos, cada cabo contribui igualmente para sustentar o peso. Assim, a força vertical em cada cabo é:
+
+\[
+\frac{196}{3} \approx 65,33 \, \mathrm{N}
+\]
+
+\bigskip
+Passo 2: Determinar o ângulo formado pelos cabos.
+
+Os cabos possuem comprimento de \(2,0 \, \mathrm{m}\) e a luminária está a \(1,5 \, \mathrm{m}\) do teto. O ângulo de inclinação \(\theta\) pode ser obtido a partir do cosseno:
+
+\begin{tikzpicture}
+    % Eixos principais (em verde, como no seu exemplo)
+    \draw[->,thick,black] (0,0) -- (1,0) node[right] {$x$};
+    \draw[->,thick,black] (0,0) -- (0,1) node[above] {$y$};
+
+    % Outro sistema de eixos em azul
+    \draw[->,thick,blue] (5,0) -- (7,0);
+    \draw[->,thick,blue] (5,0) -- (5,2);
+
+    % Vetor vermelho
+    \draw[->,thick,red] (5,0) -- (6,1.5);
+
+    % Ângulo em amarelo
+    \draw[thick,black] (5.65,1) arc[start angle=45, end angle=90, radius=0.9];
+
+    % Nome do ângulo
+    \node[black] at (5.4,1.5) {$\theta$};
+
+\end{tikzpicture}
+
+\[
+\cos \theta = \frac{1,5}{2} = 0,75
+\]
+
+\bigskip
+Passo 3: Relacionar a componente vertical com a tensão total.
+
+A componente vertical da força em cada cabo é:
+
+\[
+T_y = T \cdot \cos \theta
+\]
+
+Logo:
+
+\[
+65,33 = T \cdot 0,75
+\]
+
+\[
+T = \frac{65,33}{0,75} \approx 87,11 \, \mathrm{N}
+\]
+
+\bigskip
+\noindent
+Portanto, a tensão em cada cabo é:
+
+\[
+\boxed{87,11 \, \mathrm{N}}
+\]
+
+\bigskip
+\noindent
+Alternativa correta: \textbf{(c)}.
+
+%%%%%%%% Bibliography 
+% Os comandos para incluir as referências bibliográficas
+%\printingbibliography
+
+\end{document}
