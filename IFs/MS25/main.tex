@@ -1775,19 +1775,88 @@ P_4 = 3{,}0 \cdot P_1 = 3{,}0 \cdot 4{,}8 = 14{,}4 \ \text{atm}
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Q29}}\\
 
+Um bloco de massa 0,5 kg está preso a uma mola
+ideal de constante elástica k = 200 N/m, oscilando
+sem atrito sobre uma superfície horizontal. O
+bloco é deslocado 20 cm da posição de equilíbrio
+e solto a partir do repouso. Sabendo que o
+sistema executa um movimento harmônico
+simples (MHS), determine a velocidade do bloco
+ao passar pela posição 10 cm e assinale a
+alternativa correta.
+
 \begin{itemize}
-\item[(A)] 
-\item[(B)]   
-\item[(C)] 
-\item[(D)] 
-\item[(E)] 
+\item[(A)] 1,0 m/s.
+\item[(B)] 2,0 m/s.
+\item[(C)] 2.$\sqrt{3}$ m/s.
+\item[(D)] 3,0 m/s.
+\item[(E)] 3,5 m/s.
 \end{itemize}
 
 \vspace{0.5cm}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-\textbf{Resposta correta: \colorbox{green!50}{(...)}}
+O sistema realiza um movimento harmônico simples (MHS), portanto podemos usar a conservação da energia mecânica.
+
+\begin{itemize}
+\item Energia potencial elástica: $U = \frac{1}{2} k x^2$
+\item Energia cinética: $K = \frac{1}{2} m v^2$
+\item Energia mecânica total: $E = U + K = \text{constante}$
+\end{itemize}
+
+Como o bloco é solto do repouso a partir de $x_0 = 0,20\, \text{m}$:
+
+\[
+E = \frac{1}{2} k x_0^2
+\]
+
+\[
+E = \frac{1}{2} \times 200 \times (0,20)^2
+\]
+
+\[
+E = 0,5 \times 200 \times 0,04
+\]
+
+\[
+E = 4\, \text{J}
+\]
+
+Quando o bloco passa por $x = 0,10\, \text{m}$:
+
+\[
+E = \frac{1}{2} k x^2 + \frac{1}{2} m v^2
+\]
+
+Substituindo os valores:
+
+\[
+4 = \frac{1}{2} \times 200 \times (0,10)^2 + \frac{1}{2} \times 0,5 \times v^2
+\]
+
+\[
+4 = 0,5 \times 200 \times 0,01 + 0,25 v^2
+\]
+
+\[
+4 = 1 + 0,25 v^2
+\]
+
+\[
+0,25 v^2 = 3
+\]
+
+\[
+v^2 = 12
+\]
+
+\[
+\boxed{v = \sqrt{12} = 2\sqrt{3} \hspace{0.15cm} \text{m/s}}
+\]
+
+
+\textbf{Resposta correta: \colorbox{green!50}{(C)}}
 
 \end{flushleft}
 
@@ -1796,19 +1865,111 @@ P_4 = 3{,}0 \cdot P_1 = 3{,}0 \cdot 4{,}8 = 14{,}4 \ \text{atm}
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Q30}}\\
 
+Os painéis solares são projetados para absorver a maior quantidade possível de energia da luz solar e convertê-la em eletricidade. 
+No entanto, parte da energia absorvida aquece o painel, que então emite radiação térmica de acordo com o comportamento de um corpo 
+negro ideal. Considere um painel solar de área $A = 2,0 \, \text{m}^2$ com emissividade $\varepsilon = 0,85$, operando a uma 
+temperatura de $27^\circ \text{C}$. Sabendo que a constante de Stefan-Boltzmann é $\sigma = 5,6 \times 10^{-8} \, \text{W/m}^2 \text{K}^4$, 
+qual é o valor aproximado da potência térmica total irradiada pelo painel para o ambiente?
+
+
 \begin{itemize}
-\item[(A)] 
-\item[(B)]   
-\item[(C)] 
-\item[(D)] 
-\item[(E)] 
+\item[(A)] 257 W.
+\item[(B)] 285 W. 
+\item[(C)] 526 W.
+\item[(D)] 770 W.
+\item[(E)] 856 W.
 \end{itemize}
 
 \vspace{0.5cm}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-\textbf{Resposta correta: \colorbox{green!50}{...}}
+\textbf{Dados do problema:}
+
+\begin{itemize}
+    \item Área do painel: $A = 2,0 \, \text{m}^2$
+    \item Emissividade: $\varepsilon = 0,85$
+    \item Temperatura: $T = 27^\circ \text{C}$
+    \item Constante de Stefan-Boltzmann: $\sigma = 5,6 \times 10^{-8} \, \text{W/m}^2\text{K}^4$
+\end{itemize}
+
+Primeiramente, devemos converter a temperatura de graus Celsius para Kelvin:
+
+\[
+T(K) = 27 + 273 = 300 \, \text{K}
+\]
+
+\bigskip
+
+A potência térmica irradiada por um corpo, de acordo com a \textbf{Lei de Stefan-Boltzmann}, é dada por:
+
+\[
+\boxed{
+P = \varepsilon \cdot \sigma \cdot A \cdot T^4
+}
+\]
+
+\bigskip
+
+Substituindo os valores conhecidos:
+
+\[
+P = 0,85 \times 5,6 \times 10^{-8} \times 2,0 \times (300)^4
+\]
+
+\bigskip
+
+Calculando $T^4$:
+
+\[
+(300)^4 = 300 \times 300 \times 300 \times 300 = 9 \times 10^4 \times 9 \times 10^4 = 8,1 \times 10^9
+\]
+
+\bigskip
+
+Agora, substituindo:
+
+\[
+P = 0,85 \times 5,6 \times 10^{-8} \times 2,0 \times 8,1 \times 10^9
+\]
+
+\bigskip
+
+Calculando os fatores numéricos:
+
+\[
+0,85 \times 5,6 = 4,76
+\]
+
+\[
+4,76 \times 2,0 = 9,52
+\]
+
+\[
+9,52 \times 8,1 = 77,112
+\]
+
+\[
+77,112 \times 10^1 = 771,12
+\]
+
+\bigskip
+
+Assim, a potência total irradiada é aproximadamente:
+
+\[
+P \approx 770 \, \text{W}
+\]
+
+\bigskip
+
+\textbf{Resposta final:}
+
+\[
+\boxed{770 \, \text{W}}
+\]
+
+\textbf{Resposta correta: \colorbox{green!50}{D}}
 
 \end{flushleft}
 \noindent\rule{\linewidth}{0.6pt}\\
@@ -1816,19 +1977,116 @@ P_4 = 3{,}0 \cdot P_1 = 3{,}0 \cdot 4{,}8 = 14{,}4 \ \text{atm}
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Q31}}\\
 
+Em um circuito elétrico, cinco resistores são conectados em série, formando uma progressão aritmética (PA) 
+de razão \( r = 4 \, \Omega \). O menor resistor da sequência tem resistência de \( R \). Esse conjunto de 
+resistores em série é então conectado em paralelo com outro resistor de \( 70 \, \Omega \), formando um circuito 
+alimentado por uma fonte de \( 140 \, V \). Assim, a corrente fornecida pela fonte é de \( 4 \, A \). Com base 
+nessas informações, determine o valor da resistência \( R \) e assinale a alternativa correta.
+
+
 \begin{itemize}
-\item[(A)] 
-\item[(B)]   
-\item[(C)] 
-\item[(D)] 
-\item[(E)] 
+\item[(A)] 6 $\Omega$
+\item[(B)] 10 $\Omega$  
+\item[(C)] 14 $\Omega$
+\item[(D)] 20 $\Omega$
+\item[(E)] 24 $\Omega$
 \end{itemize}
 
 \vspace{0.5cm}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-\textbf{Resposta correta: \colorbox{green!50}{(...)}}
+Sabemos que os cinco resistores estão conectados em série, e suas resistências formam uma progressão aritmética (PA) de razão \( r = 4 \, \Omega \), com o menor resistor valendo \( R \).
+
+\bigskip
+
+\textbf{1) Resistência equivalente dos cinco resistores em série:}
+
+Os valores das resistências são:
+
+\[
+R, \quad R + 4, \quad R + 8, \quad R + 12, \quad R + 16
+\]
+
+Somando todas, temos:
+
+\[
+R_{\text{série}} = R + (R + 4) + (R + 8) + (R + 12) + (R + 16)
+\]
+
+\[
+R_{\text{série}} = 5R + 40
+\]
+
+\bigskip
+
+\textbf{2) Associação em paralelo com o resistor de \( 70 \, \Omega \):}
+
+A resistência equivalente total \( R_{\text{eq}} \) será:
+
+\[
+\frac{1}{R_{\text{eq}}} = \frac{1}{R_{\text{série}}} + \frac{1}{70}
+\]
+
+\bigskip
+
+\textbf{3) Determinação da resistência equivalente total:}
+
+A fonte tem tensão \( V = 140 \, V \) e a corrente total fornecida pela fonte é \( I = 4 \, A \).
+
+Pela Lei de Ohm:
+
+\[
+R_{\text{eq}} = \frac{V}{I} = \frac{140}{4} = 35 \, \Omega
+\]
+
+\bigskip
+
+\textbf{4) Montando a equação do paralelo:}
+
+Substituindo \( R_{\text{eq}} = 35 \, \Omega \):
+
+\[
+\frac{1}{35} = \frac{1}{5R + 40} + \frac{1}{70}
+\]
+
+Multiplicando ambos os lados por 70:
+
+\[
+\frac{70}{35} = \frac{70}{5R + 40} + 1
+\]
+
+\[
+2 = \frac{70}{5R + 40} + 1
+\]
+
+\[
+\frac{70}{5R + 40} = 1
+\]
+
+\[
+70 = 5R + 40
+\]
+
+\[
+5R = 30
+\]
+
+\[
+R = 6 \, \Omega
+\]
+
+\bigskip
+
+\textbf{5) Resposta final:}
+
+O valor da resistência \( R \) é:
+
+\[
+\boxed{6 \, \Omega}
+\]
+
+\textbf{Resposta correta: \colorbox{green!50}{(A)}}
 
 \end{flushleft}
 \noindent\rule{\linewidth}{0.6pt}\\
@@ -1836,19 +2094,98 @@ P_4 = 3{,}0 \cdot P_1 = 3{,}0 \cdot 4{,}8 = 14{,}4 \ \text{atm}
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Q32}}\\
 
+Um objeto está a uma distância \( p \) da face refletora de um espelho esférico côncavo de 
+distância focal \( f \), produzindo uma imagem real de tamanho \( i \). Para que a imagem torne-se 
+virtual e de tamanho \( 2i \), o objeto deve se aproximar do espelho e se posicionar a uma distância do vértice igual a:
+
+
 \begin{itemize}
-\item[(A)] 
-\item[(B)]   
-\item[(C)] 
-\item[(D)] 
-\item[(E)] 
+\item[(A)] $\dfrac{f-p}{2}$
+\item[(B)] $\dfrac{f+p}{3}$   
+\item[(C)] $\dfrac{3f-p}{2}$
+\item[(D)] $\dfrac{f+p}{4}$
+\item[(E)] $\dfrac{2f+p}{2}$
+
 \end{itemize}
 
 \vspace{0.5cm}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-\textbf{Resposta correta: \colorbox{green!50}{(...)}}
+\textbf{Passo 1: Condição para a nova posição do objeto}
+
+Queremos que a nova imagem seja \textbf{virtual} e com o \textbf{dobro do tamanho da imagem inicial}. 
+
+O aumento linear é:
+
+\begin{equation}
+A = -\frac{p'}{p}
+\end{equation}
+
+Como a nova imagem é virtual e duas vezes maior que a imagem inicial, o aumento será:
+
+\begin{equation}
+A_{\text{novo}} = +2
+\end{equation}
+
+(Imagem virtual implica que $p'_{\text{novo}}$ será negativo, e o aumento é positivo pois imagem virtual é direita.)
+
+Assim:
+
+\begin{equation}
+p'_{\text{novo}} = -2p_{\text{novo}}
+\end{equation}
+
+\textbf{Passo 2: Aplicando a equação dos espelhos}
+
+A equação dos espelhos é:
+
+\begin{equation}
+\frac{1}{f} = \frac{1}{p_{\text{novo}}} + \frac{1}{p'_{\text{novo}}}
+\end{equation}
+
+Substituindo $p'_{\text{novo}} = -2p_{\text{novo}}$:
+
+\begin{equation}
+\frac{1}{f} = \frac{1}{p_{\text{novo}}} - \frac{1}{2p_{\text{novo}}} = \frac{1}{2p_{\text{novo}}}
+\end{equation}
+
+Então:
+
+\begin{equation}
+p_{\text{novo}} = \frac{f}{2}
+\end{equation}
+
+\textbf{Passo 3: Determinando o valor de $p$}
+
+Na posição inicial $p$, a imagem era real. Isso significa que:
+
+\begin{equation}
+\frac{1}{f} = \frac{1}{p} + \frac{1}{p'}
+\end{equation}
+
+E o aumento inicial era:
+
+\begin{equation}
+A_{\text{inicial}} = -\frac{p'}{p}
+\end{equation}
+
+Considerando um caso típico onde a imagem inicial tinha o mesmo tamanho do objeto ($i=o$), então $p = 2f$ (posição do centro de curvatura).
+
+Se substituirmos $p=2f$ na alternativa (C):
+
+\begin{equation}
+p_{\text{novo}} = \frac{3f-p}{2} = \frac{3f-2f}{2} = \frac{f}{2}
+\end{equation}
+
+Que corresponde exatamente ao valor calculado anteriormente.
+
+\[
+\boxed{\text{(C)} \quad \dfrac{3f-p}{2}}.
+\]
+
+
+\textbf{Resposta correta: \colorbox{green!50}{(C)}}
 
 \end{flushleft}
 \noindent\rule{\linewidth}{0.6pt}\\
@@ -1856,19 +2193,101 @@ P_4 = 3{,}0 \cdot P_1 = 3{,}0 \cdot 4{,}8 = 14{,}4 \ \text{atm}
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Q33}}\\
 
+Um pêndulo simples é composto por um fio de comprimento $L_0$ e uma esfera presa ao final do fio. À temperatura inicial, o período do 
+pêndulo é $T_0$. Ao sofrer uma variação de temperatura $\Delta \theta$, seu comprimento passa a ser $L_F$ e o período passa a ser $T_F$. 
+Considerando $\alpha$ o coeficiente de dilatação do material constituinte do fio e $g$ a aceleração da gravidade local, determine a 
+expressão para a variação de temperatura $\Delta \theta$ e assinale a alternativa correta.
+
+
 \begin{itemize}
-\item[(A)] 
-\item[(B)]   
-\item[(C)] 
-\item[(D)] 
-\item[(E)] 
+\item[(A)] $\left[\left( \dfrac{T_F}{T_0} \right)^2 + 1 \right] \cdot \alpha$
+\item[(B)] $\left[ \left( \dfrac{T_F}{T_0} \right) - 1 \right] \cdot \alpha$
+\item[(C)] $\left[ \left( \dfrac{T_F}{T_0} \right)^2 - 1 \right] \cdot \alpha^{-1}$
+\item[(D)] $\left(\dfrac{g}{4\pi^2} \right) \cdot \left( T_F^2 - T_0^2 \right) \cdot \alpha^{-1}$
+\item[(E)] $\left(\dfrac{g}{2\pi^2} \right) \cdot \left( T_F^2 - T_0^2 \right) \cdot \alpha^{-1}$
 \end{itemize}
 
 \vspace{0.5cm}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-\textbf{Resposta correta: \colorbox{green!50}{(...)}}
+O período de um pêndulo simples é dado por:
+
+\begin{equation}
+T = 2\pi \sqrt{\frac{L}{g}}
+\end{equation}
+
+Onde:
+\begin{itemize}
+    \item $T$ é o período do pêndulo,
+    \item $L$ é o comprimento do fio,
+    \item $g$ é a aceleração da gravidade local.
+\end{itemize}
+
+\subsection*{Passo 1: Relação entre os períodos inicial e final}
+
+Para o período inicial $T_0$, temos:
+
+\begin{equation}
+T_0 = 2\pi \sqrt{\frac{L_0}{g}}
+\end{equation}
+
+Após a variação de temperatura $\Delta \theta$, o comprimento passa a ser $L_F$, e o novo período $T_F$ é:
+
+\begin{equation}
+T_F = 2\pi \sqrt{\frac{L_F}{g}}
+\end{equation}
+
+Dividindo as duas equações:
+
+\begin{equation}
+\frac{T_F}{T_0} = \sqrt{\frac{L_F}{L_0}}
+\end{equation}
+
+Elevando ao quadrado ambos os lados:
+
+\begin{equation}
+\left(\frac{T_F}{T_0}\right)^2 = \frac{L_F}{L_0}
+\end{equation}
+
+\subsection*{Passo 2: Relação entre os comprimentos}
+
+Sabemos que o comprimento final do fio, devido à dilatação térmica linear, é dado por:
+
+\begin{equation}
+L_F = L_0 \left( 1 + \alpha \Delta \theta \right)
+\end{equation}
+
+Substituindo essa expressão na equação anterior:
+
+\begin{equation}
+\left(\frac{T_F}{T_0}\right)^2 = 1 + \alpha \Delta \theta
+\end{equation}
+
+\subsection*{Passo 3: Isolando $\Delta \theta$}
+
+Isolando a variação de temperatura:
+
+\begin{equation}
+\alpha \Delta \theta = \left(\frac{T_F}{T_0}\right)^2 - 1
+\end{equation}
+
+\begin{equation}
+\Delta \theta = \frac{\left(\dfrac{T_F}{T_0}\right)^2 - 1}{\alpha}
+\end{equation}
+
+\subsection*{Passo 4: Conclusão}
+
+Portanto, a expressão correta para a variação de temperatura $\Delta \theta$ é:
+
+\[
+\Delta \theta = \frac{\left(\dfrac{T_F}{T_0}\right)^2 - 1}{\alpha}
+\]
+
+\bigskip
+
+
+\textbf{Resposta correta: \colorbox{green!50}{(C)}}
 
 \end{flushleft}
 \noindent\rule{\linewidth}{0.6pt}\\

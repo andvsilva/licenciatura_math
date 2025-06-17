@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  16 JUN 2025 22:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  17 JUN 2025 20:13
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1826,72 +1826,71 @@ Underfull \hbox (badness 10000) in paragraph at lines 1773--1774
 
  []
 
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 1794--1795
+[33] [34]
+Underfull \hbox (badness 10000) in paragraph at lines 1863--1864
+
+ []
+
+[35] [36]
+Underfull \hbox (badness 10000) in paragraph at lines 1975--1976
+
+ []
+
+[37] [38]
+Underfull \hbox (badness 10000) in paragraph at lines 2092--2093
+
+ []
+
+[39] [40]
+Underfull \hbox (badness 10000) in paragraph at lines 2191--2192
+
+ []
+
+[41] [42]
+Underfull \hbox (badness 10000) in paragraph at lines 2293--2294
+
+ []
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 2313--2314
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1814--1815
+Underfull \hbox (badness 10000) in paragraph at lines 2333--2334
+
+ []
+
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 2353--2354
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1834--1835
-
- []
-
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 1854--1855
+Underfull \hbox (badness 10000) in paragraph at lines 2373--2374
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1874--1875
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2394
 
  []
 
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 1894--1895
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1914--1915
-
- []
-
-[36]
-Underfull \hbox (badness 10000) in paragraph at lines 1934--1935
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 2413--2414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1954--1955
+Underfull \hbox (badness 10000) in paragraph at lines 2433--2434
 
  []
 
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 1974--1975
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1994--1995
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2014--2015
-
- []
-
-[38]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 57.
 See the caption package documentation for explanation.
 
-[39] (./main.aux)
+[46] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1899,8 +1898,8 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56185 strings out of 478287
- 1299594 string characters out of 5849289
+ 56210 strings out of 478287
+ 1299877 string characters out of 5849289
  2057410 words of memory out of 5000000
  73425 multiletter control sequences out of 15000+600000
  532526 words of font info for 97 fonts, out of 8000000 for 9000
@@ -1918,10 +1917,10 @@ blic/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/t
 exmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/l
 msy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (39 pages, 262459 bytes).
+Output written on main.pdf (46 pages, 279897 bytes).
 PDF statistics:
- 329 PDF objects out of 1000 (max. 8388607)
- 234 compressed objects within 3 object streams
- 65 named destinations out of 1000 (max. 500000)
+ 381 PDF objects out of 1000 (max. 8388607)
+ 279 compressed objects within 3 object streams
+ 90 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
