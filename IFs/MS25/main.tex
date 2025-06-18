@@ -2884,9 +2884,169 @@ Use \( g \) para a aceleração gravitacional.
 
 \vspace{0.5cm}
 
+\begin{tikzpicture}[scale=3]
+
+% Desenhar a superfície inclinada (estrada)
+\draw[thick] (0,0) -- (2,0.8);
+
+% Ângulo theta na base
+\draw (0.3,0) arc (0:21.8:0.3);
+\node at (0.5,0.12) {\(\theta\)};
+
+% Posição do carro (um retângulo simplificado)
+\coordinate (car) at (1.3,0.52);
+\draw[fill=gray!30] (car) rectangle ++(0.2,0.1);
+
+% Vetor peso (vertical para baixo)
+\draw[->, thick, red] ($(car)+(0.1,0.1)$) -- ++(0,-0.7) node[left] {\(\vec{P} = mg\)};
+
+% Força normal (perpendicular à superfície)
+% A reta da estrada tem inclinação theta, então a normal tem ângulo 90° + theta
+\draw[->, thick, blue] ($(car)+(0.1,0.05)$) -- ++({-0.8*cos(21.8)},{0.8*sin(21.8)}) node[above left] {\(\vec{N}\)};
+
+% Força de atrito (na direção da superfície, horizontal ao longo da pista)
+% Vamos desenhar para dentro da curva (direção radial)
+\draw[->, thick, green] ($(car)+(0.1,0.05)$) -- ++(0.6,0) node[right] {\(\vec{f}\)};
+
+% Curva de raio R (apenas sugestão)
+\draw[thick, dashed] (0,0) arc (180:210:2.5);
+
+% Centro da curva (centro do arco)
+\coordinate (center) at (-2.5,0);
+\draw (center) node[left] {Centro da curva};
+
+% Raio R
+\draw[->] (center) -- (car) node[midway, below left] {\(R\)};
+
+\end{tikzpicture}
+
 \textcolor{red}{\textbf{Solução:}}\\
 
-\textbf{Resposta correta: \colorbox{green!50}{(...)}}
+\subsection*{Análise das forças atuantes}
+
+Consideremos um carro de massa \( m \) trafegando em uma curva sobrelevada de raio \( R \), com ângulo de inclinação \(\theta\) em relação à horizontal. O coeficiente de atrito estático entre os pneus e o asfalto é \(\mu\).
+
+As forças que atuam sobre o carro são:
+
+\begin{itemize}
+  \item O peso: \( \vec{P} = m\vec{g} \), atuando verticalmente para baixo.
+  \item A força normal: \( \vec{N} \), perpendicular à superfície da estrada.
+  \item A força de atrito estático máxima: \( \vec{f} \), que pode atuar tanto para dentro da curva (auxiliando a manter o carro na trajetória) quanto para fora (impedindo que o carro escorregue para fora da curva).
+\end{itemize}
+
+\subsection*{Escolha do sistema de coordenadas}
+
+Vamos adotar um sistema de coordenadas com os seguintes eixos:
+
+\begin{itemize}
+  \item Eixo \( x' \): paralelo à superfície da pista, apontando horizontalmente para o centro da curva.
+  \item Eixo \( y' \): perpendicular à superfície da pista, apontando para cima, normal à pista.
+\end{itemize}
+
+\subsection*{Equilíbrio na direção perpendicular à pista (\( y' \))}
+
+O carro não se desloca perpendicularmente à pista, portanto, a soma das forças nessa direção é zero:
+
+\begin{equation}
+N \cos\theta + f \sin\theta = mg
+\label{eq:equilibrio_y}
+\end{equation}
+
+Aqui:
+
+\begin{itemize}
+  \item \( N \cos\theta \): componente vertical da força normal.
+  \item \( f \sin\theta \): componente vertical da força de atrito (que pode ajudar ou prejudicar o equilíbrio vertical dependendo da direção).
+\end{itemize}
+
+\subsection*{Equilíbrio na direção horizontal ao longo da curva (\( x' \))}
+
+A resultante das forças na direção horizontal fornece a força centrípeta necessária para manter o carro na curva:
+
+\begin{equation}
+N \sin\theta - f \cos\theta = \frac{mv^2}{R}
+\label{eq:equilibrio_x}
+\end{equation}
+
+Onde:
+
+\begin{itemize}
+  \item \( N \sin\theta \): componente horizontal da força normal.
+  \item \( f \cos\theta \): componente horizontal da força de atrito (na direção radial da curva).
+  \item \( \frac{mv^2}{R} \): força centrípeta exigida.
+\end{itemize}
+
+\subsection*{Condição de atrito máximo}
+
+Para encontrar a velocidade máxima antes de derrapar, assumimos que o módulo da força de atrito estático está no seu valor máximo:
+
+\begin{equation}
+f = \mu N
+\label{eq:atrito}
+\end{equation}
+
+Como queremos a velocidade máxima (limite antes de derrapar para fora da curva), o atrito atua para dentro da curva, ajudando a manter a trajetória.
+
+\subsection*{Substituindo \( f \) nas equações de equilíbrio}
+
+Substituindo a Equação \eqref{eq:atrito} nas Equações \eqref{eq:equilibrio_y} e \eqref{eq:equilibrio_x}:
+
+\begin{equation}
+N \cos\theta + \mu N \sin\theta = mg
+\end{equation}
+
+\begin{equation}
+N \sin\theta - \mu N \cos\theta = \frac{mv^2}{R}
+\end{equation}
+
+\subsection*{Isolando \( N \)}
+
+Da primeira equação:
+
+\begin{equation}
+N \left( \cos\theta + \mu \sin\theta \right) = mg
+\end{equation}
+
+\begin{equation}
+N = \frac{mg}{\cos\theta + \mu \sin\theta}
+\label{eq:N}
+\end{equation}
+
+\subsection*{Determinando a velocidade máxima \( v_{\text{máx}} \)}
+
+Agora, substituímos o valor de \( N \) na equação da força centrípeta:
+
+\begin{equation}
+\left( \frac{mg}{\cos\theta + \mu \sin\theta} \right) \left( \sin\theta - \mu \cos\theta \right) = \frac{mv^2}{R}
+\end{equation}
+
+Cancelando \( m \) de ambos os lados:
+
+\begin{equation}
+\frac{g \left( \sin\theta - \mu \cos\theta \right)}{\cos\theta + \mu \sin\theta} = \frac{v^2}{R}
+\end{equation}
+
+Multiplicando ambos os lados por \( R \):
+
+\begin{equation}
+v^2 = gR \left( \frac{ \sin\theta - \mu \cos\theta }{ \cos\theta + \mu \sin\theta } \right)
+\end{equation}
+
+Por fim, a velocidade máxima é:
+
+\begin{equation}
+v_{\text{máx}} = \sqrt{ gR \left( \frac{ \sin\theta - \mu \cos\theta }{ \cos\theta + \mu \sin\theta } \right) }
+\end{equation}
+
+\subsection*{Observação importante}
+
+Esta expressão é válida apenas se o denominador \( \left( \cos\theta + \mu \sin\theta \right) \) for positivo (o que é geralmente 
+o caso para valores usuais de \(\theta\) e \(\mu\)), e a força de atrito estiver atuando para dentro da curva.
+
+Se fosse para calcular a \textbf{velocidade mínima} antes de escorregar para dentro da curva, a análise seria similar, 
+mas o sinal de \(\mu\) nas equações se inverteria.
+
+\textbf{Resposta correta: \colorbox{green!50}{(A)}}
 
 \end{flushleft}
 \noindent\rule{\linewidth}{0.6pt}\\
