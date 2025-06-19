@@ -2884,41 +2884,46 @@ Use \( g \) para a aceleração gravitacional.
 
 \vspace{0.5cm}
 
-\begin{tikzpicture}[scale=3]
+\begin{center}
+\begin{tikzpicture}[scale=2]
 
-% Desenhar a superfície inclinada (estrada)
-\draw[thick] (0,0) -- (2,0.8);
+% Indicação do Centro da curva
+\draw[dashed] (-2,0) -- (1,0);
+\draw[dashed] (0,0) -- (-0.8,1.4);
+\draw[dashed] (0,-1.5) -- (0,1);
+%\node[left] at (-2,0.5) {Centro};
+\filldraw (-2,0) circle (0.8pt) node[below] {C};
 
-% Ângulo theta na base
-\draw (0.3,0) arc (0:21.8:0.3);
-\node at (0.5,0.12) {\(\theta\)};
+% Definindo o ângulo da pista
+\def\angle{30}
 
-% Posição do carro (um retângulo simplificado)
-\coordinate (car) at (1.3,0.52);
-\draw[fill=gray!30] (car) rectangle ++(0.2,0.1);
+% Pista inclinada
+\draw[thick] (-1.3,-0.75) -- (1.5,-0.75);
+\draw[thick,rotate=\angle] (-1.5,0) -- (1.5,0);
 
-% Vetor peso (vertical para baixo)
-\draw[->, thick, red] ($(car)+(0.1,0.1)$) -- ++(0,-0.7) node[left] {\(\vec{P} = mg\)};
+% Carro (um pequeno retângulo cinza sobre a pista)
+\begin{scope}[rotate=\angle]
+    \filldraw[gray!70] (-0.15,0) rectangle (0.15,0.12);
+\end{scope}
 
-% Força normal (perpendicular à superfície)
-% A reta da estrada tem inclinação theta, então a normal tem ângulo 90° + theta
-\draw[->, thick, blue] ($(car)+(0.1,0.05)$) -- ++({-0.8*cos(21.8)},{0.8*sin(21.8)}) node[above left] {\(\vec{N}\)};
+% Vetor Peso (P), vertical para baixo
+\draw[->,red,thick] (0,0) -- (0,-1.2) node[right] {\(\vec{P}\)};
 
-% Força de atrito (na direção da superfície, horizontal ao longo da pista)
-% Vamos desenhar para dentro da curva (direção radial)
-\draw[->, thick, green] ($(car)+(0.1,0.05)$) -- ++(0.6,0) node[right] {\(\vec{f}\)};
+% force - atrito
+\draw[->,orange,thick] (0,0) -- (0.7,0.42) node[right] {\(\vec{f_{at}}\)};
 
-% Curva de raio R (apenas sugestão)
-\draw[thick, dashed] (0,0) arc (180:210:2.5);
+% Vetor Normal (N), perpendicular à pista
+\draw[->,blue,thick] (0,0) -- ++(90+\angle:1.0) node[right] {\(\vec{N}\)};
 
-% Centro da curva (centro do arco)
-\coordinate (center) at (-2.5,0);
-\draw (center) node[left] {Centro da curva};
+% Força centrípeta (Fc), horizontal para o centro
+\draw[->,magenta,thick] (0,0) -- (-1,0) node[below left] {\(\vec{F_c}\)};
 
-% Raio R
-\draw[->] (center) -- (car) node[midway, below left] {\(R\)};
+% Indicação do ângulo theta entre pista e horizontal
+\draw[->] (-0.9,-0.75) arc[start angle=0, end angle=\angle, radius=0.4];
+\node at (-0.72,-0.6) {\(\theta\)};
 
 \end{tikzpicture}
+\end{center}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
@@ -3121,7 +3126,91 @@ trajeto, e assinale a alternativa correta.
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-\textbf{Resposta correta: \colorbox{green!50}{(...)}}
+\textbf{Parte 1: Movimento Uniformemente Variado (MUV) nos primeiros 10 segundos}
+
+O carro parte do repouso, então a velocidade inicial é:
+
+\[
+v_0 = 0 \, \text{m/s}
+\]
+
+A aceleração é:
+
+\[
+a = 2 \, \text{m/s}^2
+\]
+
+O tempo de aceleração é:
+
+\[
+t_1 = 10 \, \text{s}
+\]
+
+A velocidade final após os 10 segundos de aceleração é:
+
+\[
+v_f = v_0 + a \cdot t_1
+\]
+\[
+v_f = 0 + 2 \cdot 10 = 20 \, \text{m/s}
+\]
+
+A distância percorrida durante os primeiros 10 segundos é:
+
+\[
+\Delta s_1 = v_0 \cdot t_1 + \frac{1}{2} a \cdot t_1^2
+\]
+\[
+\Delta s_1 = 0 + \frac{1}{2} \cdot 2 \cdot 10^2 = 100 \, \text{m}
+\]
+
+\vspace{0.5cm}
+
+\textbf{Parte 2: Movimento Uniforme após os 10 segundos}
+
+Após os primeiros 10 segundos, o carro passa a se mover com velocidade constante:
+
+\[
+v = 20 \, \text{m/s}
+\]
+
+A distância restante para atingir os \(400 \, \text{m}\) totais é:
+
+\[
+\Delta s_2 = 400 \, \text{m} - 100 \, \text{m} = 300 \, \text{m}
+\]
+
+O tempo necessário para percorrer essa distância com velocidade constante é:
+
+\[
+t_2 = \frac{\Delta s_2}{v}
+\]
+\[
+t_2 = \frac{300}{20} = 15 \, \text{s}
+\]
+
+\vspace{0.5cm}
+
+\textbf{Parte 3: Tempo total}
+
+O tempo total gasto no percurso é a soma do tempo de aceleração com o tempo de movimento uniforme:
+
+\[
+t_{\text{total}} = t_1 + t_2
+\]
+\[
+t_{\text{total}} = 10 \, \text{s} + 15 \, \text{s} = 25 \, \text{s}
+\]
+
+\vspace{0.5cm}
+
+\textbf{Resposta final:}
+
+\[
+\boxed{t_{\text{total}} = 25 \, \text{s}}
+\]
+
+\textbf{Resposta correta: \colorbox{green!50}{(A)}}
 
 \end{flushleft}
 \noindent\rule{\linewidth}{0.6pt}\\
