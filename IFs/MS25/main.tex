@@ -2890,7 +2890,12 @@ Use \( g \) para a aceleração gravitacional.
 % Indicação do Centro da curva
 \draw[dashed] (-2,0) -- (1,0);
 \draw[dashed] (0,0) -- (-0.8,1.4);
-\draw[dashed] (0,-1.5) -- (0,1);
+\draw[dashed] (0,-1.5) -- (0,1.5);
+\draw[dashed] (-2,0) -- (-2,1.5);
+
+\fill (-1.2,1.2) circle (0.2pt) node[above right] {$\textcolor{red}{R}$};
+\draw[<->,red,thick] (-2,1.2) -- (0,1.2) ;
+
 %\node[left] at (-2,0.5) {Centro};
 \filldraw (-2,0) circle (0.8pt) node[below] {C};
 
@@ -2909,21 +2914,41 @@ Use \( g \) para a aceleração gravitacional.
 % Vetor Peso (P), vertical para baixo
 \draw[->,red,thick] (0,0) -- (0,-1.2) node[right] {\(\vec{P}\)};
 
+
 % force - atrito
-\draw[->,orange,thick] (0,0) -- (0.7,0.42) node[right] {\(\vec{f_{at}}\)};
+\draw[->,orange,thick] (0,0) -- (-0.7,-0.42) node[right] {\(\vec{f_{at}}\)};
 
 % Vetor Normal (N), perpendicular à pista
 \draw[->,blue,thick] (0,0) -- ++(90+\angle:1.0) node[right] {\(\vec{N}\)};
 
 % Força centrípeta (Fc), horizontal para o centro
-\draw[->,magenta,thick] (0,0) -- (-1,0) node[below left] {\(\vec{F_c}\)};
+\draw[->,magenta,thick] (0,0) -- (-1.2,0) node[below left] {\(\vec{F_c}\)};
 
 % Indicação do ângulo theta entre pista e horizontal
 \draw[->] (-0.9,-0.75) arc[start angle=0, end angle=\angle, radius=0.4];
 \node at (-0.72,-0.6) {\(\theta\)};
 
+%componente vertical da forca normal y
+\draw[->,gray!90,thick] (0,0) -- (0,0.85) node[right] {\(\vec{N}_{y}\)};
+
+%componente horizontal da forca normal x
+\draw[->,gray!90,thick] (0,0) -- (-0.55,0) node[above right] {\(\vec{N}_{x}\)};
+
+%componente horizontal da forca atrito x
+\draw[->,gray!90,thick] (0,0) -- (-0.7,0) node[below right] {\(\vec{f}_{at_{x}}\)};
+
+%componente vertical da forca normal y
+\draw[->,gray!90,thick] (0,0) -- (0,-0.5) node[right] {\(\vec{f}_{at_{y}}\)};
+
 \end{tikzpicture}
 \end{center}
+
+\begin{align}
+    N_y &= N \cos \theta \\
+    N_x &= N \sin \theta \\
+    f_{at_y} &= f_{at} \sin \theta \\
+    f_{fat_x} &= f_{at} \cos \theta
+\end{align}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
@@ -2937,6 +2962,7 @@ As forças que atuam sobre o carro são:
   \item O peso: \( \vec{P} = m\vec{g} \), atuando verticalmente para baixo.
   \item A força normal: \( \vec{N} \), perpendicular à superfície da estrada.
   \item A força de atrito estático máxima: \( \vec{f} \), que pode atuar tanto para dentro da curva (auxiliando a manter o carro na trajetória) quanto para fora (impedindo que o carro escorregue para fora da curva).
+  ou seja \( \vec{f_{at}} \) \'e sempre contr\'aria a tend\^encia de movimento de deslizar para fora da curva.
 \end{itemize}
 
 \subsection*{Escolha do sistema de coordenadas}
@@ -2953,7 +2979,7 @@ Vamos adotar um sistema de coordenadas com os seguintes eixos:
 O carro não se desloca perpendicularmente à pista, portanto, a soma das forças nessa direção é zero:
 
 \begin{equation}
-N \cos\theta + f \sin\theta = mg
+N \cos\theta = f \sin\theta + mg
 \label{eq:equilibrio_y}
 \end{equation}
 
@@ -2969,7 +2995,7 @@ Aqui:
 A resultante das forças na direção horizontal fornece a força centrípeta necessária para manter o carro na curva:
 
 \begin{equation}
-N \sin\theta - f \cos\theta = \frac{mv^2}{R}
+N \sin\theta + f_{at} \cos\theta = \frac{mv^2}{R}
 \label{eq:equilibrio_x}
 \end{equation}
 
@@ -2997,11 +3023,11 @@ Como queremos a velocidade máxima (limite antes de derrapar para fora da curva)
 Substituindo a Equação \eqref{eq:atrito} nas Equações \eqref{eq:equilibrio_y} e \eqref{eq:equilibrio_x}:
 
 \begin{equation}
-N \cos\theta + \mu N \sin\theta = mg
+N \cos\theta - \mu N \sin\theta = mg
 \end{equation}
 
 \begin{equation}
-N \sin\theta - \mu N \cos\theta = \frac{mv^2}{R}
+N \sin\theta + \mu N \cos\theta = \frac{mv^2}{R}
 \end{equation}
 
 \subsection*{Isolando \( N \)}
@@ -3009,11 +3035,11 @@ N \sin\theta - \mu N \cos\theta = \frac{mv^2}{R}
 Da primeira equação:
 
 \begin{equation}
-N \left( \cos\theta + \mu \sin\theta \right) = mg
+N \left( \cos\theta - \mu \sin\theta \right) = mg
 \end{equation}
 
 \begin{equation}
-N = \frac{mg}{\cos\theta + \mu \sin\theta}
+N = \frac{mg}{\cos\theta - \mu \sin\theta}
 \label{eq:N}
 \end{equation}
 
@@ -3022,7 +3048,7 @@ N = \frac{mg}{\cos\theta + \mu \sin\theta}
 Agora, substituímos o valor de \( N \) na equação da força centrípeta:
 
 \begin{equation}
-\left( \frac{mg}{\cos\theta + \mu \sin\theta} \right) \left( \sin\theta - \mu \cos\theta \right) = \frac{mv^2}{R}
+\left( \frac{mg}{\cos\theta - \mu \sin\theta} \right) \left( \sin\theta + \mu \cos\theta \right) = \frac{mv^2}{R}
 \end{equation}
 
 Cancelando \( m \) de ambos os lados:
@@ -3034,13 +3060,19 @@ Cancelando \( m \) de ambos os lados:
 Multiplicando ambos os lados por \( R \):
 
 \begin{equation}
-v^2 = gR \left( \frac{ \sin\theta - \mu \cos\theta }{ \cos\theta + \mu \sin\theta } \right)
+v^2 = gR \left( \frac{ \sin\theta + \mu \cos\theta }{ \cos\theta - \mu \sin\theta } \right)
 \end{equation}
 
 Por fim, a velocidade máxima é:
 
 \begin{equation}
-v_{\text{máx}} = \sqrt{ gR \left( \frac{ \sin\theta - \mu \cos\theta }{ \cos\theta + \mu \sin\theta } \right) }
+v_{\text{máx}} = \sqrt{ gR \left( \frac{ \sin\theta + \mu \cos\theta }{ \cos\theta - \mu \sin\theta } \right) }
+\end{equation}
+
+\begin{equation}
+\boxed{
+v_{\text{máx}} = \sqrt{ \frac{gR\left( \sin\theta + \mu \cos\theta \right)}{ \cos\theta - \mu \sin\theta } }
+}
 \end{equation}
 
 \subsection*{Observação importante}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  18 JUN 2025 23:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  19 JUN 2025 11:56
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1866,23 +1866,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 2865--2866
 
  []
 
-[56] [57] [58]
-Underfull \hbox (badness 10000) in paragraph at lines 3057--3058
+[56] [57] [58] [59]
+Underfull \hbox (badness 10000) in paragraph at lines 3089--3090
 
  []
 
-[59]
-Underfull \hbox (badness 10000) in paragraph at lines 3100--3101
+
+Underfull \hbox (badness 10000) in paragraph at lines 3132--3133
 
  []
 
 [60] [61]
-Underfull \hbox (badness 10000) in paragraph at lines 3216--3217
+Underfull \hbox (badness 10000) in paragraph at lines 3248--3249
 
  []
 
 [62] [63]
-Underfull \hbox (badness 10000) in paragraph at lines 3310--3311
+Underfull \hbox (badness 10000) in paragraph at lines 3342--3343
 
  []
 
@@ -1898,15 +1898,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56280 strings out of 478287
- 1300823 string characters out of 5849289
- 2057526 words of memory out of 5000000
- 73460 multiletter control sequences out of 15000+600000
+ 56291 strings out of 478287
+ 1300989 string characters out of 5849289
+ 2062526 words of memory out of 5000000
+ 73466 multiletter control sequences out of 15000+600000
  538512 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,96p,1835b,1763s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
 -mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf/f
 onts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.p
@@ -1918,10 +1918,10 @@ blic/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share
 mr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb
 ></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (64 pages, 345702 bytes).
+Output written on main.pdf (64 pages, 347478 bytes).
 PDF statistics:
- 492 PDF objects out of 1000 (max. 8388607)
- 367 compressed objects within 4 object streams
- 123 named destinations out of 1000 (max. 500000)
+ 498 PDF objects out of 1000 (max. 8388607)
+ 373 compressed objects within 4 object streams
+ 128 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
