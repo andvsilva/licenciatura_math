@@ -353,7 +353,8 @@ A densidade final da mistura é aproximadamente \( \boxed{1{,}01\,\text{g/cm}^3}
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Q15}}\\
-Duas cargas puntiformes \( q_1 = +4\,\mu\text{C} \) e \( q_2 = -2\,\mu\text{C} \) estão fixas no vácuo a uma distância de \( 0{,}6\,\text{m} \) uma da outra. Um ponto \( P \) está localizado no ponto médio entre as duas cargas.
+Duas cargas puntiformes \( q_1 = +4\,\mu\text{C} \) e \( q_2 = -2\,\mu\text{C} \) estão fixas no vácuo a uma distância de \( 0{,}6\,\text{m} \) 
+uma da outra. Um ponto \( P \) está localizado no ponto médio entre as duas cargas.
 
 Sabendo que a constante eletrostática no vácuo é \( k = 9{,}0 \times 10^9\,\text{N} \cdot \text{m}^2/\text{C}^2 \), determine:
 
@@ -370,6 +371,45 @@ Assinale a alternativa correta.
 \item[(D)] 6,0.10$^{5}$ N/C, 6,0.10$^{4}$V.
 \item[(E)] 6,0.10$^{5}$ N/C, -6,0.10$^{4}$V.
 \end{itemize}
+
+\begin{center}
+\begin{tikzpicture}
+
+% Eixo horizontal
+\draw[->] (-2,0) -- (4,0) node[right] {};
+
+% Posições das cargas e do ponto P
+\coordinate (Q1) at (0,0);
+\coordinate (P) at (1.5,0);
+\coordinate (Q2) at (3,0);
+
+% Carga q1
+\draw[fill=red!40] (Q1) circle (0.07);
+\node at (0,0.5) {\( q_1 \)};
+
+% Carga q2
+\draw[fill=blue!40] (Q2) circle (0.07);
+\node at (3,0.5) {\( q_2 \)};
+
+% Ponto P
+\draw[fill=green!40] (P) circle (0.05);
+\node at (1.5,-0.4) {\( P \)};
+
+% Distâncias
+%\draw[<->] (Q1)++(0,-1) -- node[below]{\( 0{,}3\,\text{m} \)} (P)++(0,-1);
+%\draw[<->] (P)++(0,-1) -- node[below]{\( 0{,}3\,\text{m} \)} (Q2)++(0,-1);
+
+% Campo elétrico E1 em P (direção de q1 para q2)
+\draw[->,red,thick] (P)++(0,0.2) -- ++(0.8,0) node[above] {\( \vec{E}_1 \)};
+
+% Campo elétrico E2 em P (também para direita)
+\draw[->,blue,thick] (P)++(0,-0.2) -- ++(0.8,0) node[below] {\( \vec{E}_2 \)};
+
+% Campo resultante
+\draw[->,black,thick,dashed] (P) -- ++(1.2,0) node[below right] {\( \vec{E}_{\text{res}} \)};
+
+\end{tikzpicture}
+\end{center}
 
 \vspace{0.5cm}
 
@@ -454,6 +494,14 @@ determine a intensidade do campo magnético no interior do solenoide e assinale 
 
 \vspace{0.5cm}
 
+\begin{center}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.55\textwidth]{figures/solenoide.png}
+    \caption{Campo magnético gerado por um solenoide longo com corrente \( I \).}
+\end{figure}
+\end{center}
+
 \textcolor{red}{\textbf{Solução:}}\\
 
 \colorbox{green!20}{O campo magnético \( B \) no interior de um solenoide ideal (longo) é dado por:}
@@ -469,14 +517,14 @@ onde:
     \item \( \mu_0 = 12 \times 10^{-7}\,\text{T} \cdot \text{m/A} \) (permeabilidade magnética do vácuo),
     \item \( n = \dfrac{N}{L} \) é a densidade linear de espiras (número de espiras por metro),
     \item \( N = 500 \) é o número total de espiras,
-    \item \( L = 25\,\text{cm} = 0{,}25\,\text{m} \) é o comprimento do solenoide,
+    \item \( l = 25\,\text{cm} = 0{,}25\,\text{m} \) é o comprimento do solenoide,
     \item \( I = 2{,}0\,\text{A} \) é a corrente que percorre o solenoide.
 \end{itemize}
 
 Calculando \colorbox{green!20}{a densidade linear de espiras:}
 
 \[
-n = \frac{N}{L} = \frac{500}{0{,}25} = 2000\,\text{espiras/m}
+n = \frac{N}{l} = \frac{500}{0{,}25} = 2000\,\text{espiras/m}
 \]
 
 Substituindo os valores na fórmula do campo magnético:
@@ -780,6 +828,38 @@ e despreze a ação da gravidade.
 
 \vspace{0.5cm}
 
+\begin{center}
+\begin{tikzpicture}[scale=3]
+
+% Eixos coordenados
+\draw[->] (-0.1,0) -- (1.2,0) node[right] {\( x \)};
+\draw[->] (0,-0.1) -- (0,1.0) node[above] {\( y \)};
+
+\draw[->,black, dashed] (0,0) -- (1,1);
+
+% Campo elétrico (E) apontando para cima
+\draw[->,blue,thick] (0.2,0.2) -- (0.2,0.6) node[right] {\( \vec{E} \)};
+%\draw[->,blue,thick] (0.6,0.2) -- (0.6,0.6);
+
+% Trajetória da carga (parábola)
+\draw[red,dashed,->,domain=0:1,smooth,variable=\x] plot ({\x},{1*\x*\x});
+
+% Ponto inicial
+\filldraw[red] (0,0) circle (0.02) node[below left] {\( t_1 = 0 \, \text{s} \)};
+
+% Ponto final
+\filldraw[red] (1,1) circle (0.02) node[above right] {\( t_2 = 10\,\text{ns} \)};
+
+% Velocidade inicial
+\draw[->,purple,thick] (0,0) -- (0.4,0) node[below] {\( \vec{v}_0 \)};
+
+% Indicação da força elétrica
+\draw[->,orange,thick] (0.4,0.2) -- (0.4,0.5) node[right] {\( \vec{F} = q \vec{E} \)};
+
+\end{tikzpicture}
+
+\end{center}
+
 \textcolor{red}{\textbf{Solução:}}\\
 
 \textbf{Dados do problema:}
@@ -860,6 +940,43 @@ assinale a alternativa correta.
 
 \vspace{0.5cm}
 
+\section*{Esquema Óptico (opcional)}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+% Eixo principal
+\draw[->] (-1,0) -- (7,0) node[right] {Eixo óptico};
+
+% Primeira lente
+\draw[thick] (1,-1.2) -- (1,1.2);
+\node[above] at (1,1.2) {Lente 1};
+
+% Segunda lente
+\draw[thick] (5,-1.2) -- (5,1.2);
+\node[above] at (5,1.2) {Lente 2};
+
+% Feixe incidente
+\draw[->,red] (-0.5,0.6) -- (1,0.6);
+\draw[->,red] (-0.5,0) -- (1,0);
+\draw[->,red] (-0.5,-0.6) -- (1,-0.6);
+
+% Feixe convergindo
+\draw[red] (1,0.6) -- (3,0);
+\draw[red] (1,0) -- (3,0);
+\draw[red] (1,-0.6) -- (3,0);
+
+% Feixe emergente paralelo
+\draw[->,blue] (5,0.4) -- (6.5,0.4);
+\draw[->,blue] (5,0) -- (6.5,0);
+\draw[->,blue] (5,-0.4) -- (6.5,-0.4);
+
+% Distâncias focais
+\draw[<->] (1,-1) -- (3,-1) node[midway, below] {$2F$};
+\draw[<->] (3,-1) -- (5,-1) node[midway, below] {$F$};
+
+\end{tikzpicture}
+\end{center}
+
 \textcolor{red}{\textbf{Solução:}}\\
 
 \subsection*{Configuração do sistema}
@@ -926,43 +1043,6 @@ Queremos a razão entre o diâmetro inicial e o final:
 \frac{D_i}{D_f} = 2,0
 \end{equation}
 
-\section*{Esquema Óptico (opcional)}
-
-\begin{center}
-\begin{tikzpicture}[scale=1.2]
-% Eixo principal
-\draw[->] (-1,0) -- (7,0) node[right] {Eixo óptico};
-
-% Primeira lente
-\draw[thick] (1,-1.2) -- (1,1.2);
-\node[above] at (1,1.2) {Lente 1};
-
-% Segunda lente
-\draw[thick] (5,-1.2) -- (5,1.2);
-\node[above] at (5,1.2) {Lente 2};
-
-% Feixe incidente
-\draw[->,red] (-0.5,0.6) -- (1,0.6);
-\draw[->,red] (-0.5,0) -- (1,0);
-\draw[->,red] (-0.5,-0.6) -- (1,-0.6);
-
-% Feixe convergindo
-\draw[red] (1,0.6) -- (3,0);
-\draw[red] (1,0) -- (3,0);
-\draw[red] (1,-0.6) -- (3,0);
-
-% Feixe emergente paralelo
-\draw[->,blue] (5,0.4) -- (6.5,0.4);
-\draw[->,blue] (5,0) -- (6.5,0);
-\draw[->,blue] (5,-0.4) -- (6.5,-0.4);
-
-% Distâncias focais
-\draw[<->] (1,-1) -- (3,-1) node[midway, below] {$2F$};
-\draw[<->] (3,-1) -- (5,-1) node[midway, below] {$F$};
-
-\end{tikzpicture}
-\end{center}
-
 Portanto, a alternativa correta é: \textbf{\colorbox{green!50}{(D)}}
 
 \end{flushleft}
@@ -987,6 +1067,47 @@ informações, qual será a velocidade da bola de \(2\,\text{kg}\) após a colis
 \end{itemize}
 
 \vspace{0.5cm}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+
+% Antes da colisão
+\node at (7,2.5) {\textbf{Antes da colisão}};
+% Bola 1
+\shade[ball color=gray!70] (0,2) circle (0.5);
+\node at (0,2) {\large 2 kg};
+% Velocidade bola 1
+\draw[->, thick] (0,2.5) -- (1.5,2.5) node[midway, above] {\(v_{1i}=10\,\mathrm{m/s}\)};
+
+% Bola 2
+\shade[ball color=gray!40] (3,2) circle (0.5);
+\node at (3,2) {\large 3 kg};
+% Velocidade bola 2
+\draw[->, thick] (3,2.5) -- (4.3,2.5) node[midway, above] {\(v_{2i}=4\,\mathrm{m/s}\)};
+
+\node at (4,1.3) {\colorbox{yellow!50}{\textbf{Colisão Perfeitamente Elástica}}};
+% Linha base
+\draw[thick] (-0.5,1.5) -- (5,1.5);
+
+% Depois da colisão
+\node at (7,0.5) {\textbf{Depois da colisão}};
+% Bola 1
+\shade[ball color=gray!70] (0,0) circle (0.5);
+\node at (0,0) {\large 2 kg};
+% Velocidade bola 1 final
+\draw[->, thick] (0,0.5) -- (0.9,0.5) node[midway, above] {\(v_{1f}=?\)};
+
+% Bola 2
+\shade[ball color=gray!40] (3,0) circle (0.5);
+\node at (3,0) {\large 3 kg};
+% Velocidade bola 2 final
+\draw[->, thick] (3,0.5) -- (4.9,0.5) node[midway, above] {\(v_{2f}=?\)};
+
+% Linha base
+\draw[thick] (-0.5,-0.5) -- (5,-0.5);
+
+\end{tikzpicture}
+\end{center}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
@@ -1099,12 +1220,12 @@ v_{1f} = \frac{14}{5}
 \]
 
 \[
-\boxed{v_{1f} = 2,8\,\text{m/s}}
+\boxed{v_{1f} = 2{,}8\,\text{m/s}}
 \]
 
 no mesmo sentido original do movimento.
 
-A velocidade da bola de \(2\,\text{kg}\) após a colisão será \(2,8\,\text{m/s}\). \textbf{Resposta: \colorbox{green!50}{(C)}}. 
+A velocidade da bola de \(2\,\text{kg}\) após a colisão será \(2{,}8\,\text{m/s}\). \textbf{Resposta: \colorbox{green!50}{(C)}}. 
 
 \end{flushleft}
 
@@ -1209,19 +1330,20 @@ T = \sqrt{8}
 \]
 
 \[
-T \approx 2,83\,\text{anos terrestres}
+T \approx 2{,}83\,\text{anos terrestres}
 \]
 
 \subsection*{Observação sobre a Excentricidade}
 
-Vale lembrar que a excentricidade \(e = 0{,}3\) afeta o formato da órbita (tornando-a uma elipse mais alongada), mas não altera o cálculo do período segundo a Terceira Lei de Kepler. O período depende apenas do semieixo maior e da massa da estrela central.
+Vale lembrar que a excentricidade \(e = 0{,}3\) afeta o formato da órbita (tornando-a uma elipse mais alongada), mas não altera 
+o cálculo do período segundo a Terceira Lei de Kepler. O período depende apenas do semieixo maior e da massa da estrela central.
 
 \section*{Resposta Final}
 
 O período orbital aproximado do exoplaneta é:
 
 \[
-\boxed{T \approx 2,8\,\text{anos terrestres}}
+\boxed{T \approx 2{,}8\,\text{anos terrestres}}
 \]
 
 \textbf{Resposta correta: \colorbox{green!50}{(D)}}
@@ -1788,6 +1910,110 @@ alternativa correta.
 \end{itemize}
 
 \vspace{0.5cm}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+
+\node[below] at (2,2) {\textcolor{black}{MHS}};
+
+% Parede de apoio
+\draw[fill=gray!50] (-0.5,0) rectangle (0,1);
+
+% Superfície
+\draw[thick] (-0.5,0) -- (4,0);
+
+% Linha tracejada da posição de equilíbrio
+\draw[dashed, blue] (1,0) -- (1,1.5);
+\node[below] at (1,0) {\textcolor{blue}{Equilíbrio}};
+
+% Mola esticada até a posição inicial (20 cm)
+\draw[thick,decorate,decoration={coil,aspect=0.5,segment length=3mm,amplitude=3mm}] (0,0.5) -- (1,0.5);
+
+% Bloco na posição inicial (20 cm)
+\draw[fill=red!30] (1,0.3) rectangle (1.4,0.7);
+%node[above] at (1.2,0.7) {$x = 20\,\text{cm}$};
+
+% Bloco na posição de 10 cm
+%\draw[fill=gray!10] (0.5,0.3) rectangle (0.9,0.7);
+%\node[above] at (0.7,0.7) {$x = 10\,\text{cm}$};
+
+% Setas de posição
+%\draw[->,thick] (1,1.2) -- (1.4,1.2);
+%\node[above] at (1.2,1.2) {20 cm};
+
+%\draw[->,thick] (0.5,1) -- (0.9,1);
+%\node[above] at (0.7,1) {10 cm};
+
+\end{tikzpicture}
+
+\vspace{0.5cm}
+
+
+\begin{tikzpicture}[scale=1.2]
+
+%\node[below] at (2,2) {\textcolor{red}{Movimento Harmônico Simples}};
+
+% Parede de apoio
+\draw[fill=gray!50] (-0.5,0) rectangle (0,1);
+
+% Superfície
+\draw[thick] (-0.5,0) -- (4,0);
+
+% Linha tracejada da posição de equilíbrio
+\draw[dashed, blue] (1,0) -- (1,1.5);
+\node[below] at (1,0) {\textcolor{blue}{Equilíbrio}};
+
+% Mola esticada até a posição inicial (20 cm)
+\draw[thick,decorate,decoration={coil,aspect=0.5,segment length=3mm,amplitude=3mm}] (0,0.5) -- (3,0.5);
+
+% Bloco na posição inicial (20 cm)
+\draw[fill=red!30] (3,0.3) rectangle (3.4,0.7);
+\draw[dashed, blue] (3,0) -- (3,1.5);
+%\node[above] at (1.2,0.7) {$x = 20\,\text{cm}$};
+
+% Bloco na posição de 10 cm
+%\draw[fill=gray!10] (0.5,0.3) rectangle (0.9,0.7);
+%\node[above] at (0.7,0.7) {$x = 10\,\text{cm}$};
+
+% Setas de posição
+\draw[->,thick] (1,1.2) -- (3,1.2);
+\node[above] at (2,1.2) {20 cm};
+
+%\draw[->,thick] (0.5,1) -- (0.9,1);
+%\node[above] at (0.7,1) {10 cm};
+
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1.2]
+
+% Parede de apoio
+\draw[fill=gray!50] (-0.5,0) rectangle (0,1);
+
+% Superfície
+\draw[thick] (-0.5,0) -- (4,0);
+
+% Linha tracejada da posição de equilíbrio
+\draw[dashed, blue] (1,0) -- (1,1.5);
+\node[below] at (1,0) {\textcolor{blue}{Equilíbrio}};
+
+% Mola esticada até a posição inicial (20 cm)
+\draw[thick,decorate,decoration={coil,aspect=0.5,segment length=3mm,amplitude=3mm}] (0,0.5) -- (2,0.5);
+
+% Bloco na posição inicial (20 cm)
+\draw[fill=red!30] (2,0.3) rectangle (2.4,0.7);
+\draw[dashed, blue] (2,0) -- (2,1.5);
+%\node[above] at (1.2,0.7) {$x = 20\,\text{cm}$};
+
+% Bloco na posição de 10 cm
+%\draw[fill=gray!10] (0.5,0.3) rectangle (0.9,0.7);
+%\node[above] at (0.7,0.7) {$x = 10\,\text{cm}$};
+
+% Setas de posição
+\draw[->,thick] (1,1.2) -- (2,1.2);
+\node[above] at (1.5,1.2) {10 cm};
+
+\end{tikzpicture}
+\end{center}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
@@ -2568,6 +2794,39 @@ velocidade do bloco de 100 g antes da colisão.
 \end{itemize}
 
 \vspace{0.5cm}
+
+\begin{tikzpicture}
+
+% Eixo horizontal (superfície sem atrito)
+\draw[thick] (-1,-1) -- (10,-1);
+
+% Parede
+\draw[fill=gray!30] (-1,-1) rectangle (0,1);
+
+% Mola
+\draw[thick,decorate,decoration={coil,aspect=0.5, segment length=5pt, amplitude=5pt}] (0,-0.5) -- (4,-0.5);
+
+% Bloco de 400g
+\draw[fill=blue!30] (4,-1) rectangle (5,0);
+\node at (4.5,-0.5) {\small $400\,\mathrm{g}$};
+
+% Bloco de 100g
+\draw[fill=red!30] (8,-1) rectangle (9,0);
+\node at (8.5,-0.5) {\small $100\,\mathrm{g}$};
+
+% Vetor velocidade do bloco de 100g
+\draw[<-,thick,red] (7.5,-0.5) -- (8,-0.5);
+\node[red] at (7.5,-0.1) {\small $\vec{v}$};
+
+% Indicação da colisão
+\draw[->,thick] (6.5,1) -- (5.2,1);
+\node at (6,1.3) {\small Colisão};
+
+% Indicação do sistema oscilando
+\draw[<->,thick,blue] (2,0.2) -- (4,0.2);
+\node[blue] at (3,0.4) {\small MHS};
+
+\end{tikzpicture}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
