@@ -2795,6 +2795,7 @@ velocidade do bloco de 100 g antes da colisão.
 
 \vspace{0.5cm}
 
+\begin{center}
 \begin{tikzpicture}
 
 % Eixo horizontal (superfície sem atrito)
@@ -2819,30 +2820,102 @@ velocidade do bloco de 100 g antes da colisão.
 \node[red] at (7.5,-0.1) {\small $\vec{v}$};
 
 % Indicação da colisão
-\draw[->,thick] (6.5,1) -- (5.2,1);
-\node at (6,1.3) {\small Colisão};
+%\draw[->,thick] (6.5,1) -- (5.2,1);
+%\node at (6,1.3) {\small Colisão};
 
 % Indicação do sistema oscilando
-\draw[<->,thick,blue] (2,0.2) -- (4,0.2);
-\node[blue] at (3,0.4) {\small MHS};
+%\draw[<->,thick,blue] (3.5,0.2) -- (5.5,0.2);
+%\node[blue] at (4.5,0.5) {\small MHS};
 
 \end{tikzpicture}
+%---------------------------------------------------
+\begin{tikzpicture}
+
+% Eixo horizontal (superfície sem atrito)
+\draw[thick] (-1,-1) -- (10,-1);
+
+% Parede
+\draw[fill=gray!30] (-1,-1) rectangle (0,1);
+
+% Mola
+\draw[thick,decorate,decoration={coil,aspect=0.5, segment length=5pt, amplitude=5pt}] (0,-0.5) -- (4,-0.5);
+
+% Bloco de 400g
+\draw[fill=blue!30] (4,-1) rectangle (5,0);
+\node at (4.5,-0.5) {\small $400\,\mathrm{g}$};
+
+% Bloco de 100g
+\draw[fill=red!30] (5,-1) rectangle (6,0);
+\node at (5.5,-0.5) {\small $100\,\mathrm{g}$};
+
+\draw[fill=white!0, fill opacity=0.0, dashed] (3.8,-1.2) rectangle (6.2,0.2);
+
+% Vetor velocidade do bloco de 100g
+\draw[<-,thick,red] (4.7,0.5) -- (5.2,0.5);
+\node[red] at (5,0.85) {\small $\vec{v'}$};
+
+% Indicação da colisão
+%\draw[->,thick] (6.5,1) -- (5.2,1);
+\node at (5,-1.5) {\small Colisão};
+
+% Indicação do sistema oscilando
+%\draw[<->,thick,blue] (3.5,0.2) -- (5.5,0.2);
+\node[blue] at (7,0.88) {\small MHS};
+
+\end{tikzpicture}
+\end{center}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
 \textbf{1) Determinação da amplitude da oscilação após a colisão:}
 
-Sabemos que a aceleração máxima em um Movimento Harmônico Simples (MHS) é dada por:
+Sabemos que a aceleração máxima em um Movimento Harmônico Simples (MHS) é derivada 
+da segunda lei de Newton aplicada ao sistema massa-mola:
 
-\[
-a_{\text{máx}} = \omega^2 A
-\]
+\begin{equation}
+m \cdot a(t) = -k \cdot x(t)
+\end{equation}
 
 Onde:
 
-\[
+\begin{itemize}
+  \item $m$ = massa do corpo (kg)
+  \item $a(t)$ = aceleração no instante $t$ (m/s²)
+  \item $k$ = constante elástica da mola (N/m)
+  \item $x(t)$ = deslocamento em relação à posição de equilíbrio (m)
+\end{itemize}
+
+Dividindo ambos os lados por $m$, obtemos:
+
+\begin{equation}
+a(t) = -\frac{k}{m} \cdot x(t)
+\end{equation}
+
+A \colorbox{yellow!30}{equação característica do Movimento Harmônico Simples (MHS) é}:
+
+\begin{equation}
+a(t) = -\omega^2 \cdot x(t)
+\end{equation}
+
+Comparando as duas expressões, identificamos:
+
+\begin{equation}
+\omega^2 = \frac{k}{m}
+\end{equation}
+
+Ou seja:
+
+\begin{equation}
 \omega = \sqrt{\frac{k}{m}}
-\]
+\end{equation}
+
+Sabemos que a aceleração máxima ocorre quando o módulo do deslocamento é máximo, isto é, quando $x(t) = A$, sendo $A$ a amplitude da oscilação.
+
+Portanto, a aceleração máxima será:
+
+\begin{equation}
+a_{\text{máx}} = \omega^2 \cdot A
+\end{equation}
 
 Dados:
 
@@ -2850,7 +2923,7 @@ Dados:
 k = 200\,\mathrm{N/m}
 \]
 \[
-m_{\text{total}} = 400\,\mathrm{g} + 100\,\mathrm{g} = 500\,\mathrm{g} = 0,5\,\mathrm{kg}
+m_{\text{total}} = 400\,\mathrm{g} + 100\,\mathrm{g} = 500\,\mathrm{g} = 0{{,}}5\,\mathrm{kg}
 \]
 \[
 a_{\text{máx}} = 10\,\mathrm{m/s^2}
@@ -2873,7 +2946,7 @@ Agora, usando a expressão da aceleração máxima:
 \]
 
 \[
-A = \frac{10}{400} = 0,025\,\mathrm{m} = 2,5\,\mathrm{cm}
+A = \frac{10}{400} = 0{,}025\,\mathrm{m} = 2{,}5\,\mathrm{cm}
 \]
 
 \textbf{2) Determinação da velocidade imediatamente após a colisão:}
@@ -2913,11 +2986,11 @@ E_{\text{cinética}} = \frac{1}{2} m_{\text{total}} v_{\text{f}}^2
 \]
 
 \[
-v_{\text{f}}^2 = \frac{0,0625}{0,25} = 0,25
+v_{\text{f}}^2 = \frac{0{,}0625}{0{,}25} = 0{,}25
 \]
 
 \[
-v_{\text{f}} = 0,5\,\mathrm{m/s}
+v_{\text{f}} = 0{,}5\,\mathrm{m/s}
 \]
 
 \textbf{3) Aplicando a conservação da quantidade de movimento na colisão:}
@@ -2951,10 +3024,10 @@ Substituindo:
 \]
 
 \[
-v_1 = \frac{0,25}{0,1} = 2,5\,\mathrm{m/s}
+v_1 = \frac{0{,}25}{0{,}1} = 2{,}5\,\mathrm{m/s}
 \]
 
-A velocidade do bloco de $100\,\mathrm{g}$ antes da colisão era $2,5\,\mathrm{m/s}$.
+A velocidade do bloco de $100\,\mathrm{g}$ antes da colisão era $2{,}5\,\mathrm{m/s}$.
 
 \textbf{Resposta correta: \colorbox{green!50}{(E)}}
 
