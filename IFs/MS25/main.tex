@@ -186,6 +186,43 @@ A resposta correta é alternativa \colorbox{green!50}{\textbf{E}}.
 \end{flushleft}
 \noindent\rule{\linewidth}{0.6pt}\\
 
+\section*{Teoria da Relatividade Restrita}
+\subsection*{Postulados}
+\begin{enumerate}
+    \item As leis da Física são as mesmas em todos os referenciais inerciais.
+    \item A velocidade da luz no vácuo é a mesma para todos os observadores inerciais.
+\end{enumerate}
+
+\subsection*{Consequências}
+\begin{itemize}
+    \item Dilatação do tempo:
+    \[
+        \Delta t = \frac{\Delta t_0}{\sqrt{1 - \frac{v^2}{c^2}}}
+    \]
+    \item Contração do comprimento:
+    \[
+        L = L_0 \sqrt{1 - \frac{v^2}{c^2}}
+    \]
+\end{itemize}
+
+\subsection*{Energia Relativística}
+\begin{itemize}
+    \item Energia total:
+    \[
+        E = \gamma m c^2
+    \quad \text{com } \gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}
+    \]
+    \item Energia em repouso:
+    \[
+        E_0 = m c^2
+    \]
+    \item Relação energia-momento:
+    \[
+        E^2 = (pc)^2 + (m c^2)^2
+    \]
+\end{itemize}
+\noindent\rule{\linewidth}{0.6pt}\\
+
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Q12}}\\
 \colorbox{yellow!50}{Teoria da Relatividade Restrita de Einstein} trouxe mudanças profundas na compreensão
@@ -218,6 +255,63 @@ superior a 80\% da velocidade da luz no vácuo.
 
 \end{flushleft}
 
+\noindent\rule{\linewidth}{0.6pt}\\
+
+O \textbf{Efeito Doppler} é o fenômeno em que há uma variação na \textbf{frequência aparente} de uma onda sonora percebida por um observador, devido ao \textbf{movimento relativo} entre a \textbf{fonte sonora} e o \textbf{observador}.
+
+\bigskip
+
+\textit{Exemplo cotidiano:} o som de uma sirene de ambulância soa mais \textbf{agudo} quando se aproxima e mais \textbf{grave} quando se afasta.
+
+\section{Fórmulas do Efeito Doppler}
+
+\subsection{Fonte em movimento e observador em repouso}
+
+\[
+f' = f \cdot \frac{v}{v \mp v_f}
+\]
+
+\begin{itemize}
+  \item \( f' \): frequência percebida
+  \item \( f \): frequência emitida pela fonte
+  \item \( v \): velocidade do som no meio (ex.: \(340 \, \text{m/s}\) no ar, temperatura do ar de aproximadamente 15$^{\circ}$C (em 
+  condições normais de pressão e ar seco ao nível do mar)).
+  \item \( v_f \): velocidade da fonte sonora
+  \item Use o sinal \(-\) se a fonte se aproxima e \(+\) se a fonte se afasta
+\end{itemize}
+
+\subsection{2. Fonte em repouso e observador em movimento}
+
+\[
+f' = f \cdot \frac{v \pm v_o}{v}
+\]
+
+\begin{itemize}
+  \item \( v_o \): velocidade do observador
+  \item Use \(+\) se o observador se aproxima da fonte e \(-\) se se afasta
+\end{itemize}
+
+\subsection{3. Fonte e observador em movimento}
+
+\[
+f' = f \cdot \frac{v \pm v_o}{v \mp v_f}
+\]
+
+\begin{itemize}
+  \item Sinais escolhidos conforme o movimento: aproximação ou afastamento
+\end{itemize}
+
+\section{Exemplo numérico}
+
+\textit{Uma ambulância se aproxima de um pedestre com velocidade de \(30 \, \text{m/s}\), emitindo uma sirene de \(800\,\text{Hz}\). Qual a frequência percebida pelo pedestre? (Considere \(v = 340\,\text{m/s}\))}
+
+\[
+f' = 800 \cdot \frac{340}{340 - 30} = 800 \cdot \frac{340}{310} \approx 877\,\text{Hz}
+\]
+
+\textbf{Conclusão:} o som é percebido mais agudo.
+
+\noindent\rule{\linewidth}{0.6pt}\\
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Q13}}\\
@@ -353,6 +447,105 @@ A densidade final da mistura é aproximadamente \( \boxed{1{,}01\,\text{g/cm}^3}
 
 \noindent\rule{\linewidth}{0.6pt}\\
 
+\section{Eletricidade e Magnetismo}
+
+\section{Eletrostática}
+
+\subsection{Eletrização}
+\begin{itemize}
+    \item Métodos: atrito, contato e indução.
+    \item Cargas elétricas: positivas e negativas, quantizadas e conservadas.
+\end{itemize}
+
+\subsection{Lei de Coulomb}
+\begin{equation*}
+    F = k \frac{|q_1 q_2|}{r^2}
+\end{equation*}
+\begin{itemize}
+    \item Força de interação entre duas cargas puntiformes no vácuo.
+\end{itemize}
+
+\subsection{Potencial Elétrico}
+O potencial elétrico gerado por uma distribuição contínua de carga é dado por:
+
+\begin{equation*}
+V(\vec{r}) = \frac{1}{4\pi \varepsilon_0} \int \frac{dq}{|\vec{r} - \vec{r'}|}
+\end{equation*}
+
+Onde:
+\begin{itemize}
+  \item \( \vec{r} \): ponto onde se calcula o potencial,
+  \item \( \vec{r'} \): ponto onde está o elemento de carga \( dq \),
+  \item \( \varepsilon_0 \): permissividade do vácuo.
+\end{itemize}
+
+\section{Tipos de Distribuição}
+
+\subsection{Distribuição Linear de Carga (fio)}
+
+Densidade linear: \( \lambda = \frac{dq}{dl} \)
+
+\[
+V(\vec{r}) = \frac{1}{4\pi \varepsilon_0} \int \frac{\lambda \, dl'}{|\vec{r} - \vec{r'}|}
+\]
+
+\subsection{Distribuição Superficial de Carga (superfície)}
+
+Densidade superficial: \( \sigma = \frac{dq}{dA} \)
+
+\[
+V(\vec{r}) = \frac{1}{4\pi \varepsilon_0} \int \frac{\sigma \, dA'}{|\vec{r} - \vec{r'}|}
+\]
+
+\subsection{Distribuição Volumétrica de Carga (volume)}
+
+Densidade volumétrica: \( \rho = \frac{dq}{dV} \)
+
+\[
+V(\vec{r}) = \frac{1}{4\pi \varepsilon_0} \int \frac{\rho \, dV'}{|\vec{r} - \vec{r'}|}
+\]
+
+\section{Observações}
+
+\begin{itemize}
+  \item O potencial elétrico é uma grandeza escalar.
+  \item A simetria do sistema pode facilitar os cálculos.
+  \item Para pontos distantes, pode-se usar aproximações (ex: dipolo).
+\end{itemize}
+
+\subsection{Campo de Forças Coulombianas e Campo Elétrico}
+\begin{equation*}
+    \vec{E} = \frac{\vec{F}}{q} = k \frac{Q}{r^2} \hat{r}
+\end{equation*}
+\begin{itemize}
+    \item Campo elétrico gerado por uma carga pontual.
+    \item $\vec{E} = - \nabla V$
+\end{itemize}
+
+\subsection{Linhas de Força}
+\begin{itemize}
+    \item Representação gráfica da direção e sentido do campo elétrico.
+    \item Saem de cargas positivas e entram em cargas negativas.
+\end{itemize}
+
+\subsection{Trabalho e Potencial Eletrostático}
+\begin{itemize}
+    \item Potencial elétrico: 
+    \[
+        V = k \frac{Q}{r}
+    \]
+    \item Energia potencial elétrica: 
+    \[
+        U = qV
+    \]
+    \item Trabalho da força elétrica:
+    \[
+        W = -\Delta U
+    \]
+\end{itemize}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Q15}}\\
 Duas cargas puntiformes \( q_1 = +4\,\mu\text{C} \) e \( q_2 = -2\,\mu\text{C} \) estão fixas no vácuo a uma distância de \( 0{,}6\,\text{m} \) 
@@ -474,6 +667,27 @@ V = 9{,}0 \times 10^9 \cdot \frac{(4 - 2) \times 10^{-6}}{0{,}3}
 Alternativa correta: \colorbox{green!50}{\textbf{D)}}
 
 \end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\section{Magnetismo e Indução}
+
+\subsection{Campo Magnético Gerado por Corrente Elétrica}
+\begin{itemize}
+    \item Fio retilíneo:
+    \[
+        \oint \vec{B}.d\vec{l} = \mu_{0}I_{eng} \rightarrow B = \frac{\mu_0 I}{2\pi r}
+    \]
+    \item Espira circular:
+    \[
+        B = \frac{\mu_0 I}{2R}
+    \]
+    \item Solenóide (interior):
+    \[
+        B = \mu_0 n I
+    \]
+    Onde $n$ é o número de espiras por unidade de comprimento.
+\end{itemize}
 
 \noindent\rule{\linewidth}{0.6pt}\\
 
@@ -1150,8 +1364,12 @@ Onde:
 \subsection*{Dedução da Fórmula Direta}
 
 Para facilitar a resolução sem precisar resolver um sistema de duas equações, aplicamos uma transformação clássica: a equação das velocidades relativas.
-Em colisões perfeitamente elásticas em uma dimensão, podemos usar o coeficiente de restituição (\(e\)) e a massa das massas para encontrar 
-a velocidade relativa entre as duas massas, dado por:
+Em colisões perfeitamente elásticas em uma dimensão, podemos usar o coeficiente de restituição (\(e\)) \'e definido pela raz\~ao entre a velocidade relativas de afastamento
+e aproximação:
+
+\[
+e = \frac{v_{afastamento}}{v_{aproximada\c{c}\~ao}}
+\]
 
 \[
 e = \frac{v_{2f} - v_{1f}}{v_{1i} - v_{2i}} = 1
@@ -1182,7 +1400,9 @@ v_{1i} - v_{2i} = v_{2f} - v_{1f} \tag{2}
 Da equação (2):
 
 \[
+\boxed{
 v_{2f} = v_{1i} - v_{2i} + v_{1f}
+}
 \]
 
 Substituindo isso na equação (1):
@@ -1210,7 +1430,9 @@ m_1v_{1i} - m_2v_{1i} + m_2v_{2i} + m_2v_{2i} = (m_1 + m_2)v_{1f}
 Finalmente, isolando \(v_{1f}\):
 
 \[
+\boxed{
 v_{1f} = \frac{(m_1 - m_2)v_{1i} + 2m_2v_{2i}}{m_1 + m_2}
+}
 \]
 
 \subsection*{Cálculo Numérico}
@@ -2427,6 +2649,75 @@ Que corresponde exatamente ao valor calculado anteriormente.
 \textbf{Resposta correta: \colorbox{green!50}{(C)}}
 
 \end{flushleft}
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\section*{Demonstração do Período de um Pêndulo Simples}
+
+Um pêndulo simples consiste em uma massa \( m \) presa a um fio ideal de comprimento \( L \), oscilando sob a ação da gravidade em um plano vertical. Supondo pequenas oscilações, podemos aproximar o movimento como harmônico simples.
+
+\subsection*{1. Equação do Movimento}
+
+A força restauradora sobre o corpo é a componente tangencial do peso:
+
+\[
+F_t = -mg \sin\theta
+\]
+
+Como o movimento é circular, usamos a aceleração angular:
+
+\[
+a_t = L \cdot \frac{d^2\theta}{dt^2}
+\]
+
+Aplicando a segunda lei de Newton na direção tangencial:
+
+\[
+mL \cdot \frac{d^2\theta}{dt^2} = -mg \sin\theta
+\]
+
+Cancelando \( m \) em ambos os lados:
+
+\[
+L \cdot \frac{d^2\theta}{dt^2} = -g \sin\theta
+\quad \Rightarrow \quad
+\frac{d^2\theta}{dt^2} + \frac{g}{L} \sin\theta = 0
+\]
+
+\subsection*{2. Aproximação para Pequenos Ângulos}
+
+Para pequenos valores de \( \theta \) (em radianos), podemos usar:
+
+\[
+\sin\theta \approx \theta
+\]
+
+Substituindo:
+
+\[
+\frac{d^2\theta}{dt^2} + \frac{g}{L} \theta = 0
+\]
+
+\subsection*{3. Solução: Movimento Harmônico Simples}
+
+A equação acima é a forma padrão da equação do movimento harmônico simples (MHS):
+
+\[
+\frac{d^2\theta}{dt^2} + \omega^2 \theta = 0
+\quad \text{com} \quad \omega = \sqrt{\frac{g}{L}}
+\]
+
+O período \( T \) do MHS é dado por:
+
+\[
+T = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{L}{g}}
+\]
+
+\subsection*{4. Resultado Final}
+
+\[
+\boxed{T = 2\pi \sqrt{\frac{L}{g}}}
+\]
+
 \noindent\rule{\linewidth}{0.6pt}\\
 
 \begin{flushleft}
