@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  5 JUL 2025 13:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  15 JUN 2025 15:09
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -812,8 +812,77 @@ Package: empheq 2017/03/31 v2.15 Emphasizing equations
 \EQ_tag_box=\box76
 \g_EQ_temprow_int=\count330
 )
-\mytemplen=\skip84
-\mytempbox=\box77
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
+\c@tracingmulticols=\count331
+\mult@box=\box77
+\multicol@leftmargin=\dimen313
+\c@unbalance=\count332
+\c@collectmore=\count333
+\doublecol@number=\count334
+\multicoltolerance=\count335
+\multicolpretolerance=\count336
+\full@width=\dimen314
+\page@free=\dimen315
+\premulticols=\dimen316
+\postmulticols=\dimen317
+\multicolsep=\skip84
+\multicolbaselineskip=\skip85
+\partial@page=\box78
+\last@line=\box79
+\maxbalancingoverflow=\dimen318
+\mult@rightbox=\box80
+\mult@grightbox=\box81
+\mult@firstbox=\box82
+\mult@gfirstbox=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\c@minrows=\count337
+\c@columnbadness=\count338
+\c@finalcolumnbadness=\count339
+\last@try=\dimen319
+\multicolovershoot=\dimen320
+\multicolundershoot=\dimen321
+\mult@nat@firstbox=\box120
+\colbreak@box=\box121
+\mc@col@check@num=\count340
+)
+\mytemplen=\skip86
+\mytempbox=\box122
 
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2022/01/07 version 5.0.2 text color boxes
@@ -830,27 +899,27 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box78
-\tcb@upperbox=\box79
-\tcb@lowerbox=\box80
-\tcb@phantombox=\box81
-\c@tcbbreakpart=\count331
-\c@tcblayer=\count332
-\c@tcolorbox@number=\count333
-\tcb@temp=\box82
-\tcb@temp=\box83
-\tcb@temp=\box84
-\tcb@temp=\box85
+\tcb@titlebox=\box123
+\tcb@upperbox=\box124
+\tcb@lowerbox=\box125
+\tcb@phantombox=\box126
+\c@tcbbreakpart=\count341
+\c@tcblayer=\count342
+\c@tcolorbox@number=\count343
+\tcb@temp=\box127
+\tcb@temp=\box128
+\tcb@temp=\box129
+\tcb@temp=\box130
 
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
 Library (tcolorbox): 'tcbraster.code.tex' version '5.0.2'
-\c@tcbrastercolumn=\count334
-\c@tcbrasterrow=\count335
-\c@tcbrasternum=\count336
-\c@tcbraster=\count337
+\c@tcbrastercolumn=\count344
+\c@tcbrasterrow=\count345
+\c@tcbrasternum=\count346
+\c@tcbraster=\count347
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '5.0.2'
-\tcb@waterbox=\box86
+\tcb@waterbox=\box131
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '5.0.2'
 )) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
@@ -859,9 +928,9 @@ Library (tcolorbox): 'tcbbreakable.code.tex' version '5.0.2'
 Package: pdfcol 2019/12/29 v1.6 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
-\tcb@testbox=\box87
-\tcb@totalupperbox=\box88
-\tcb@totallowerbox=\box89
+\tcb@testbox=\box132
+\tcb@totalupperbox=\box133
+\tcb@totallowerbox=\box134
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
 Library (tcolorbox): 'tcbhooks.code.tex' version '5.0.2'
@@ -869,10 +938,10 @@ Library (tcolorbox): 'tcbhooks.code.tex' version '5.0.2'
 Library (tcolorbox): 'tcbtheorems.code.tex' version '5.0.2'
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
 Library (tcolorbox): 'tcbfitting.code.tex' version '5.0.2'
-\tcbfitdim=\dimen313
-\tcb@lowerfitdim=\dimen314
-\tcb@upperfitdim=\dimen315
-\tcb@cur@hbadness=\count338
+\tcbfitdim=\dimen322
+\tcb@lowerfitdim=\dimen323
+\tcb@upperfitdim=\dimen324
+\tcb@cur@hbadness=\count348
 ) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
 Library (tcolorbox): 'tcbxparse.code.tex' version '5.0.2'
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
@@ -883,24 +952,24 @@ Library (tcolorbox): 'tcblistingsutf8.code.tex' version '5.0.2'
 (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
 Library (tcolorbox): 'tcblistings.code.tex' version '5.0.2'
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count339
-\lst@gtempboxa=\box90
+\lst@mode=\count349
+\lst@gtempboxa=\box135
 \lst@token=\toks41
-\lst@length=\count340
-\lst@currlwidth=\dimen316
-\lst@column=\count341
-\lst@pos=\count342
-\lst@lostspace=\dimen317
-\lst@width=\dimen318
-\lst@newlines=\count343
-\lst@lineno=\count344
-\lst@maxwidth=\dimen319
+\lst@length=\count350
+\lst@currlwidth=\dimen325
+\lst@column=\count351
+\lst@pos=\count352
+\lst@lostspace=\dimen326
+\lst@width=\dimen327
+\lst@newlines=\count353
+\lst@lineno=\count354
+\lst@maxwidth=\dimen328
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count345
-\lst@skipnumbers=\count346
-\lst@framebox=\box91
+\c@lstnumber=\count355
+\lst@skipnumbers=\count356
+\lst@framebox=\box136
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -915,7 +984,7 @@ Library (tcolorbox): 'tcbprocessing.code.tex' version '5.0.2'
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 ))
-\c@tcblisting=\count347
+\c@tcblisting=\count357
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/listingsutf8/listingsutf8.sty
 Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
@@ -952,9 +1021,9 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 \t@pgfplots@toka=\toks42
 \t@pgfplots@tokb=\toks43
 \t@pgfplots@tokc=\toks44
-\pgfplots@tmpa=\dimen320
-\c@pgfplots@coordindex=\count348
-\c@pgfplots@scanlineindex=\count349
+\pgfplots@tmpa=\dimen329
+\c@pgfplots@coordindex=\count358
+\c@pgfplots@scanlineindex=\count359
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
 .tex))
@@ -969,13 +1038,13 @@ tructure.code.tex)
 tructureext.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
 .code.tex
-\c@pgfplotsarray@tmp=\count350
+\c@pgfplotsarray@tmp=\count360
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
 x.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
 d.code.tex
-\c@pgfplotstable@counta=\count351
+\c@pgfplotstable@counta=\count361
 \t@pgfplotstable@a=\toks45
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
@@ -988,7 +1057,7 @@ de.tex))
 .tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
 fshading.code.tex
-\c@pgfplotslibrarysurf@no=\count352
+\c@pgfplotslibrarysurf@no=\count362
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
 shading.pgfsys-pdftex.def)))
@@ -1015,16 +1084,16 @@ e.tex)
 zlibrarydecorations.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
 e.tex
-\pgfdecoratedcompleteddistance=\dimen321
-\pgfdecoratedremainingdistance=\dimen322
-\pgfdecoratedinputsegmentcompleteddistance=\dimen323
-\pgfdecoratedinputsegmentremainingdistance=\dimen324
-\pgf@decorate@distancetomove=\dimen325
-\pgf@decorate@repeatstate=\count353
-\pgfdecorationsegmentamplitude=\dimen326
-\pgfdecorationsegmentlength=\dimen327
+\pgfdecoratedcompleteddistance=\dimen330
+\pgfdecoratedremainingdistance=\dimen331
+\pgfdecoratedinputsegmentcompleteddistance=\dimen332
+\pgfdecoratedinputsegmentremainingdistance=\dimen333
+\pgf@decorate@distancetomove=\dimen334
+\pgf@decorate@repeatstate=\count363
+\pgfdecorationsegmentamplitude=\dimen335
+\pgfdecorationsegmentlength=\dimen336
 )
-\tikz@lib@dec@box=\box92
+\tikz@lib@dec@box=\box137
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarydecorations.pathmorphing.code.tex
@@ -1036,13 +1105,13 @@ zlibrarydecorations.pathreplacing.code.tex
 decorations.pathreplacing.code.tex))
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.co
 ntourlua.code.tex)
-\pgfplots@numplots=\count354
-\pgfplots@xmin@reg=\dimen328
-\pgfplots@xmax@reg=\dimen329
-\pgfplots@ymin@reg=\dimen330
-\pgfplots@ymax@reg=\dimen331
-\pgfplots@zmin@reg=\dimen332
-\pgfplots@zmax@reg=\dimen333
+\pgfplots@numplots=\count364
+\pgfplots@xmin@reg=\dimen337
+\pgfplots@xmax@reg=\dimen338
+\pgfplots@ymin@reg=\dimen339
+\pgfplots@ymax@reg=\dimen340
+\pgfplots@zmin@reg=\dimen341
+\pgfplots@zmax@reg=\dimen342
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryplotmarks.code.tex
@@ -1061,10 +1130,10 @@ LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip85
-\multirow@cntb=\count355
-\multirow@dima=\skip86
-\bigstrutjot=\dimen334
+\multirow@colwidth=\skip87
+\multirow@cntb=\count365
+\multirow@dima=\skip88
+\bigstrutjot=\dimen343
 )
 (/usr/share/texlive/texmf-dist/tex/latex/datetime/datetime.sty
 Package: datetime 2015/03/20 v2.60 Date Time Package
@@ -1080,7 +1149,7 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 \XKV@toks=\toks46
 \XKV@tempa@toks=\toks47
 )
-\XKV@depth=\count356
+\XKV@depth=\count366
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcprefix.sty
@@ -1088,10 +1157,10 @@ Package: fcprefix 2012/09/28
 
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
 Package: fcnumparser 2017/06/15
-\fc@digit@counter=\count357
+\fc@digit@counter=\count367
 ))
-\c@padzeroesN=\count358
-\fc@tmpcatcode=\count359
+\c@padzeroesN=\count368
+\fc@tmpcatcode=\count369
 
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
@@ -1099,34 +1168,34 @@ File: fc-english.def 2016/01/12
 (/usr/share/texlive/texmf-dist/tex/latex/fmtcount/fc-portuges.def
 File: fc-portuges.def 2017/12/26
 )
-\@DT@modctr=\count360
-\@ordinalctr=\count361
-\@orgargctr=\count362
-\@strctr=\count363
-\@tmpstrctr=\count364
-\@DT@loopN=\count365
-\@DT@X=\count366
+\@DT@modctr=\count370
+\@ordinalctr=\count371
+\@orgargctr=\count372
+\@strctr=\count373
+\@tmpstrctr=\count374
+\@DT@loopN=\count375
+\@DT@X=\count376
 )
 (/usr/share/texlive/texmf-dist/tex/latex/datetime/datetime-defaults.sty
 Package: datetime-defaults 2013/09/10
 )
-\@day=\count367
-\@month=\count368
-\@year=\count369
-\c@HOUR=\count370
-\c@HOURXII=\count371
-\c@MINUTE=\count372
-\c@TOHOUR=\count373
-\c@TOMINUTE=\count374
-\c@SECOND=\count375
-\currenthour=\count376
-\currentminute=\count377
-\currentsecond=\count378
+\@day=\count377
+\@month=\count378
+\@year=\count379
+\c@HOUR=\count380
+\c@HOURXII=\count381
+\c@MINUTE=\count382
+\c@TOHOUR=\count383
+\c@TOMINUTE=\count384
+\c@SECOND=\count385
+\currenthour=\count386
+\currentminute=\count387
+\currentsecond=\count388
 Package datetime Info: No datetime.cfg file found, using default settings on in
 put line 308.
-\@dtctr=\count379
-\dayofyear=\count380
-\dayofweek=\count381
+\@dtctr=\count389
+\dayofyear=\count390
+\dayofweek=\count391
 LaTeX Info: Redefining \today on input line 736.
 \dt@a=\toks48
 \dt@b=\toks49
@@ -1136,67 +1205,67 @@ Package: biblatex 2022/02/02 v3.17 programmable bibliographies (PK/MW)
 
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count382
+\lrq@indent=\count392
 
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count383
-\c@listtotal=\count384
-\c@listcount=\count385
-\c@liststart=\count386
-\c@liststop=\count387
-\c@citecount=\count388
-\c@citetotal=\count389
-\c@multicitecount=\count390
-\c@multicitetotal=\count391
-\c@instcount=\count392
-\c@maxnames=\count393
-\c@minnames=\count394
-\c@maxitems=\count395
-\c@minitems=\count396
-\c@citecounter=\count397
-\c@maxcitecounter=\count398
-\c@savedcitecounter=\count399
-\c@uniquelist=\count400
-\c@uniquename=\count401
-\c@refsection=\count402
-\c@refsegment=\count403
-\c@maxextratitle=\count404
-\c@maxextratitleyear=\count405
-\c@maxextraname=\count406
-\c@maxextradate=\count407
-\c@maxextraalpha=\count408
-\c@abbrvpenalty=\count409
-\c@highnamepenalty=\count410
-\c@lownamepenalty=\count411
-\c@maxparens=\count412
-\c@parenlevel=\count413
-\blx@tempcnta=\count414
-\blx@tempcntb=\count415
-\blx@tempcntc=\count416
-\c@blx@maxsection=\count417
-\c@blx@maxsegment@0=\count418
-\blx@notetype=\count419
-\blx@parenlevel@text=\count420
-\blx@parenlevel@foot=\count421
-\c@blx@sectionciteorder@0=\count422
-\blx@entrysetcounter=\count423
-\blx@biblioinstance=\count424
-\labelnumberwidth=\skip87
-\labelalphawidth=\skip88
-\biblabelsep=\skip89
-\bibitemsep=\skip90
-\bibnamesep=\skip91
-\bibinitsep=\skip92
-\bibparsep=\skip93
-\bibhang=\skip94
+\c@tabx@nest=\count393
+\c@listtotal=\count394
+\c@listcount=\count395
+\c@liststart=\count396
+\c@liststop=\count397
+\c@citecount=\count398
+\c@citetotal=\count399
+\c@multicitecount=\count400
+\c@multicitetotal=\count401
+\c@instcount=\count402
+\c@maxnames=\count403
+\c@minnames=\count404
+\c@maxitems=\count405
+\c@minitems=\count406
+\c@citecounter=\count407
+\c@maxcitecounter=\count408
+\c@savedcitecounter=\count409
+\c@uniquelist=\count410
+\c@uniquename=\count411
+\c@refsection=\count412
+\c@refsegment=\count413
+\c@maxextratitle=\count414
+\c@maxextratitleyear=\count415
+\c@maxextraname=\count416
+\c@maxextradate=\count417
+\c@maxextraalpha=\count418
+\c@abbrvpenalty=\count419
+\c@highnamepenalty=\count420
+\c@lownamepenalty=\count421
+\c@maxparens=\count422
+\c@parenlevel=\count423
+\blx@tempcnta=\count424
+\blx@tempcntb=\count425
+\blx@tempcntc=\count426
+\c@blx@maxsection=\count427
+\c@blx@maxsegment@0=\count428
+\blx@notetype=\count429
+\blx@parenlevel@text=\count430
+\blx@parenlevel@foot=\count431
+\c@blx@sectionciteorder@0=\count432
+\blx@entrysetcounter=\count433
+\blx@biblioinstance=\count434
+\labelnumberwidth=\skip89
+\labelalphawidth=\skip90
+\biblabelsep=\skip91
+\bibitemsep=\skip92
+\bibnamesep=\skip93
+\bibinitsep=\skip94
+\bibparsep=\skip95
+\bibhang=\skip96
 \blx@bcfin=\read5
 \blx@bcfout=\write4
 \blx@langwohyphens=\language88
-\c@mincomprange=\count425
-\c@maxcomprange=\count426
-\c@mincompwidth=\count427
+\c@mincomprange=\count435
+\c@maxcomprange=\count436
+\c@mincompwidth=\count437
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1207,88 +1276,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'nature.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count428
-\c@savedafterword=\count429
-\c@annotator=\count430
-\c@savedannotator=\count431
-\c@author=\count432
-\c@savedauthor=\count433
-\c@bookauthor=\count434
-\c@savedbookauthor=\count435
-\c@commentator=\count436
-\c@savedcommentator=\count437
-\c@editor=\count438
-\c@savededitor=\count439
-\c@editora=\count440
-\c@savededitora=\count441
-\c@editorb=\count442
-\c@savededitorb=\count443
-\c@editorc=\count444
-\c@savededitorc=\count445
-\c@foreword=\count446
-\c@savedforeword=\count447
-\c@holder=\count448
-\c@savedholder=\count449
-\c@introduction=\count450
-\c@savedintroduction=\count451
-\c@namea=\count452
-\c@savednamea=\count453
-\c@nameb=\count454
-\c@savednameb=\count455
-\c@namec=\count456
-\c@savednamec=\count457
-\c@translator=\count458
-\c@savedtranslator=\count459
-\c@shortauthor=\count460
-\c@savedshortauthor=\count461
-\c@shorteditor=\count462
-\c@savedshorteditor=\count463
-\c@labelname=\count464
-\c@savedlabelname=\count465
-\c@institution=\count466
-\c@savedinstitution=\count467
-\c@lista=\count468
-\c@savedlista=\count469
-\c@listb=\count470
-\c@savedlistb=\count471
-\c@listc=\count472
-\c@savedlistc=\count473
-\c@listd=\count474
-\c@savedlistd=\count475
-\c@liste=\count476
-\c@savedliste=\count477
-\c@listf=\count478
-\c@savedlistf=\count479
-\c@location=\count480
-\c@savedlocation=\count481
-\c@organization=\count482
-\c@savedorganization=\count483
-\c@origlocation=\count484
-\c@savedoriglocation=\count485
-\c@origpublisher=\count486
-\c@savedorigpublisher=\count487
-\c@publisher=\count488
-\c@savedpublisher=\count489
-\c@language=\count490
-\c@savedlanguage=\count491
-\c@origlanguage=\count492
-\c@savedoriglanguage=\count493
-\c@pageref=\count494
-\c@savedpageref=\count495
-\shorthandwidth=\skip95
-\shortjournalwidth=\skip96
-\shortserieswidth=\skip97
-\shorttitlewidth=\skip98
-\shortauthorwidth=\skip99
-\shorteditorwidth=\skip100
-\locallabelnumberwidth=\skip101
-\locallabelalphawidth=\skip102
-\localshorthandwidth=\skip103
-\localshortjournalwidth=\skip104
-\localshortserieswidth=\skip105
-\localshorttitlewidth=\skip106
-\localshortauthorwidth=\skip107
-\localshorteditorwidth=\skip108
+\c@afterword=\count438
+\c@savedafterword=\count439
+\c@annotator=\count440
+\c@savedannotator=\count441
+\c@author=\count442
+\c@savedauthor=\count443
+\c@bookauthor=\count444
+\c@savedbookauthor=\count445
+\c@commentator=\count446
+\c@savedcommentator=\count447
+\c@editor=\count448
+\c@savededitor=\count449
+\c@editora=\count450
+\c@savededitora=\count451
+\c@editorb=\count452
+\c@savededitorb=\count453
+\c@editorc=\count454
+\c@savededitorc=\count455
+\c@foreword=\count456
+\c@savedforeword=\count457
+\c@holder=\count458
+\c@savedholder=\count459
+\c@introduction=\count460
+\c@savedintroduction=\count461
+\c@namea=\count462
+\c@savednamea=\count463
+\c@nameb=\count464
+\c@savednameb=\count465
+\c@namec=\count466
+\c@savednamec=\count467
+\c@translator=\count468
+\c@savedtranslator=\count469
+\c@shortauthor=\count470
+\c@savedshortauthor=\count471
+\c@shorteditor=\count472
+\c@savedshorteditor=\count473
+\c@labelname=\count474
+\c@savedlabelname=\count475
+\c@institution=\count476
+\c@savedinstitution=\count477
+\c@lista=\count478
+\c@savedlista=\count479
+\c@listb=\count480
+\c@savedlistb=\count481
+\c@listc=\count482
+\c@savedlistc=\count483
+\c@listd=\count484
+\c@savedlistd=\count485
+\c@liste=\count486
+\c@savedliste=\count487
+\c@listf=\count488
+\c@savedlistf=\count489
+\c@location=\count490
+\c@savedlocation=\count491
+\c@organization=\count492
+\c@savedorganization=\count493
+\c@origlocation=\count494
+\c@savedoriglocation=\count495
+\c@origpublisher=\count496
+\c@savedorigpublisher=\count497
+\c@publisher=\count498
+\c@savedpublisher=\count499
+\c@language=\count500
+\c@savedlanguage=\count501
+\c@origlanguage=\count502
+\c@savedoriglanguage=\count503
+\c@pageref=\count504
+\c@savedpageref=\count505
+\shorthandwidth=\skip97
+\shortjournalwidth=\skip98
+\shortserieswidth=\skip99
+\shorttitlewidth=\skip100
+\shortauthorwidth=\skip101
+\shorteditorwidth=\skip102
+\locallabelnumberwidth=\skip103
+\locallabelalphawidth=\skip104
+\localshorthandwidth=\skip105
+\localshortjournalwidth=\skip106
+\localshortserieswidth=\skip107
+\localshorttitlewidth=\skip108
+\localshortauthorwidth=\skip109
+\localshorteditorwidth=\skip110
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -1310,19 +1379,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2022/02/02 v3.17 biblatex compatibility (PK/MW)
-\c@textcitecount=\count496
-\c@textcitetotal=\count497
-\c@textcitemaxnames=\count498
-\c@biburlbigbreakpenalty=\count499
-\c@biburlbreakpenalty=\count500
-\c@biburlnumpenalty=\count501
-\c@biburlucpenalty=\count502
-\c@biburllcpenalty=\count503
+\c@textcitecount=\count506
+\c@textcitetotal=\count507
+\c@textcitemaxnames=\count508
+\c@biburlbigbreakpenalty=\count509
+\c@biburlbreakpenalty=\count510
+\c@biburlnumpenalty=\count511
+\c@biburlucpenalty=\count512
+\c@biburllcpenalty=\count513
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count504
+\c@smartand=\count514
 )
 Package biblatex Info: Trying to load bibliography style 'nature'...
 Package biblatex Info: ... file 'nature.bbx' found.
@@ -1344,8 +1413,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2022/02/02 v3.17 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count505
-\c@bbx:relatedtotal=\count506
+\c@bbx:relatedcount=\count515
+\c@bbx:relatedtotal=\count516
 ))))
 Package biblatex Info: Trying to load citation style 'nature'...
 Package biblatex Info: ... file 'nature.cbx' found.
@@ -1357,10 +1426,10 @@ Package biblatex Info: ... file 'numeric-comp.cbx' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
 File: numeric-comp.cbx 2022/02/02 v3.17 biblatex citation style (PK/MW)
-\c@cbx@tempcnta=\count507
-\c@cbx@tempcntb=\count508
-\c@cbx@tempcntc=\count509
-\c@cbx@tempcntd=\count510
+\c@cbx@tempcnta=\count517
+\c@cbx@tempcntb=\count518
+\c@cbx@tempcntc=\count519
+\c@cbx@tempcntd=\count520
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -1396,8 +1465,8 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 43.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
-\epsfxsize=\dimen335
-\epsfysize=\dimen336
+\epsfxsize=\dimen344
+\epsfysize=\dimen345
 )
 (/usr/share/texmf/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
@@ -1455,57 +1524,57 @@ Package: pdfpages 2022/01/29 v0.5u Insert pages of external PDF documents (AM)
 
 (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
-\ESO@tempdima=\dimen337
-\ESO@tempdimb=\dimen338
+\ESO@tempdima=\dimen346
+\ESO@tempdimb=\dimen347
 )
-\AM@pagewidth=\dimen339
-\AM@pageheight=\dimen340
-\AM@fboxrule=\dimen341
+\AM@pagewidth=\dimen348
+\AM@pageheight=\dimen349
+\AM@fboxrule=\dimen350
 
 (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2022/01/29 v0.5u Pdfpages driver for pdfTeX (AM)
 )
-\pdfpages@includegraphics@status=\count511
-\AM@pagebox=\box93
+\pdfpages@includegraphics@status=\count521
+\AM@pagebox=\box138
 \AM@global@opts=\toks50
-\AM@pagecnt=\count512
+\AM@pagecnt=\count522
 \AM@toc@title=\toks51
-\c@AM@survey=\count513
-\AM@templatesizebox=\box94
+\c@AM@survey=\count523
+\AM@templatesizebox=\box139
 ))
-Package hyperref Info: Option `colorlinks' set `true' on input line 95.
+Package hyperref Info: Option `colorlinks' set `true' on input line 94.
 
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count514
-\@quotereset=\count515
+\@quotelevel=\count524
+\@quotereset=\count525
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 12
-6.
+3.
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 126.
-LaTeX Font Info:    ... okay on input line 126.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1541,7 +1610,7 @@ LaTeX Font Info:    ... okay on input line 126.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 126.
+Package hyperref Info: Link coloring ON on input line 123.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1551,11 +1620,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count516
+\c@section@level=\count526
 )
-LaTeX Info: Redefining \ref on input line 126.
-LaTeX Info: Redefining \pageref on input line 126.
-LaTeX Info: Redefining \nameref on input line 126.
+LaTeX Info: Redefining \ref on input line 123.
+LaTeX Info: Redefining \pageref on input line 123.
+LaTeX Info: Redefining \nameref on input line 123.
 
 (./main.out) (./main.out)
 \@outlinefile=\write5
@@ -1564,16 +1633,16 @@ LaTeX Info: Redefining \nameref on input line 126.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count517
-\scratchdimen=\dimen342
-\scratchbox=\box95
-\nofMPsegments=\count518
-\nofMParguments=\count519
+\scratchcounter=\count527
+\scratchdimen=\dimen351
+\scratchbox=\box140
+\nofMPsegments=\count528
+\nofMParguments=\count529
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count520
-\MPscratchDim=\dimen343
-\MPnumerator=\count521
-\makeMPintoPDFobject=\count522
+\MPscratchCnt=\count530
+\MPscratchDim=\dimen352
+\MPnumerator=\count531
+\makeMPintoPDFobject=\count532
 \everyMPtoPDFconversion=\toks53
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1594,7 +1663,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 126.
+or `english'. on input line 123.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictio
 nary-brazil.trsl
@@ -1602,8 +1671,8 @@ File: translations-basic-dictionary-brazil.trsl (brazil translation file `trans
 lations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `brazil'. on input line 126.
-\c@lstlisting=\count523
+or `brazil'. on input line 123.
+\c@lstlisting=\count533
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
@@ -1642,8 +1711,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
 (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 126.
-Package biblatex Info: Reference segment=0 on input line 126.
+Package biblatex Info: Reference section=0 on input line 123.
+Package biblatex Info: Reference segment=0 on input line 123.
  (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
 
@@ -1653,341 +1722,90 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-29.
+26.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-29.
+26.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-129.
+126.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-129.
+126.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 129.
+(Font)              <14.4> on input line 126.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 129.
+(Font)              <10> on input line 126.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 129.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 129
+(Font)              <7> on input line 126.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 126
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 129
+LaTeX Font Info:    Trying to load font information for U+msb on input line 126
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-29.
 
-(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+LaTeX Warning: No \author given.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 137.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 137.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 137.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-55.
+33.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
-
- []
-
-[2]
-<figures/teoria_relatividade.png, id=148, 822.07124pt x 397.485pt>
-File: figures/teoria_relatividade.png Graphic file (type png)
-<use figures/teoria_relatividade.png>
-Package pdftex.def Info: figures/teoria_relatividade.png  used on input line 22
-8.
-(pdftex.def)             Requested size: 455.24411pt x 220.11551pt.
-<figures/teoria_relatividade_1.png, id=149, 758.835pt x 342.5297pt>
-File: figures/teoria_relatividade_1.png Graphic file (type png)
-<use figures/teoria_relatividade_1.png>
-Package pdftex.def Info: figures/teoria_relatividade_1.png  used on input line 
-236.
-(pdftex.def)             Requested size: 455.24411pt x 205.49326pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
-
- []
-
-[3 <./figures/teoria_relatividade.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 276--277
-
- []
-
-[4 <./figures/teoria_relatividade_1.png (PNG copy)>] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 332--333
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 392--393
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 466--467
-
- []
-
-[8] [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 565--566
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 689--690
-
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 710--711
-
- []
-
-<figures/solenoide.png, id=199, 561.59813pt x 325.215pt>
-File: figures/solenoide.png Graphic file (type png)
-<use figures/solenoide.png>
-Package pdftex.def Info: figures/solenoide.png  used on input line 734.
-(pdftex.def)             Requested size: 250.38564pt x 144.99562pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[13] [14 <./figures/solenoide.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 787--788
-
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 847--848
-
- []
-
-[16] [17]
-Underfull \hbox (badness 10000) in paragraph at lines 938--939
-
- []
-
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 1016--1017
-
- []
-
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 1044--1045
-
- []
-
-[20] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1156--1157
-
- []
-
-[22] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 1288--1289
-
- []
-
-[24] [25]
-
-LaTeX Warning: Command \c invalid in math mode on input line 1389.
-
-
-LaTeX Warning: Command \~ invalid in math mode on input line 1389.
-
-[26pdfTeX warning (ext4): destination with the same identifier (name{equation.7
-.8}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1420 \[
-         ] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 1486--1487
-
- []
-
-[28] [29]
-Underfull \hbox (badness 10000) in paragraph at lines 1607--1608
-
- []
-
-[30] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 1692--1693
-
- []
-
-[32] [33] [34]
-Underfull \hbox (badness 10000) in paragraph at lines 1855--1856
-
- []
-
-[35] [36]
-Underfull \hbox (badness 10000) in paragraph at lines 1980--1981
-
- []
-
-[37]pdfTeX warning (ext4): destination with the same identifier (name{equation.
-7.8}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2020 \begin{equation}
-                       pdfTeX warning (ext4): destination with the same identif
-ier (name{equation.7.8}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2020 \begin{equation}
-                       pdfTeX warning (ext4): destination with the same identif
-ier (name{equation.7.8}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2020 \begin{equation}
-                       pdfTeX warning (ext4): destination with the same identif
-ier (name{equation.7.8}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.2020 \begin{equation}
-                        [38] [39]
-Underfull \hbox (badness 10000) in paragraph at lines 2148--2149
-
- []
-
-[40] [41]
-Underfull \hbox (badness 10000) in paragraph at lines 2342--2343
-
- []
-
-[42] [43] [44]
-Underfull \hbox (badness 10000) in paragraph at lines 2454--2455
-
- []
-
-[45] [46]
-Underfull \hbox (badness 10000) in paragraph at lines 2571--2572
-
- []
-
-[47] [48]
-Underfull \hbox (badness 10000) in paragraph at lines 2670--2671
-
- []
-
-[49]
-Underfull \hbox (badness 10000) in paragraph at lines 2739--2740
-
- []
-
-[50] [51]
-Underfull \hbox (badness 10000) in paragraph at lines 2843--2844
-
- []
-
-[52] [53] [54] [55] [56] [57]
-Underfull \hbox (badness 10000) in paragraph at lines 3106--3107
-
- []
-
-[58]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 3142.
- [59] [60] [61]
-Underfull \hbox (badness 10000) in paragraph at lines 3369--3370
-
- []
-
-[62] [63] [64]
-Underfull \hbox (badness 10000) in paragraph at lines 3525--3526
-
- []
-
-[65] [66] [67] [68] [69]
-Underfull \hbox (badness 10000) in paragraph at lines 3749--3750
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3792--3793
-
- []
-
-[70] [71]
-Underfull \hbox (badness 10000) in paragraph at lines 3908--3909
-
- []
-
-[72] [73]
-Underfull \hbox (badness 10000) in paragraph at lines 4002--4003
-
- []
-
 
 Package caption Warning: Unused \captionsetup[sub] on input line 57.
 See the caption package documentation for explanation.
 
-[74] (./main.aux)
+(./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B008A61113506F52B60721FCD17DF295;4106.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56578 strings out of 478287
- 1306504 string characters out of 5849289
- 2061547 words of memory out of 5000000
- 73704 multiletter control sequences out of 15000+600000
- 559513 words of font info for 112 fonts, out of 8000000 for 9000
+ 56023 strings out of 478287
+ 1296762 string characters out of 5849289
+ 2064366 words of memory out of 5000000
+ 73341 multiletter control sequences out of 15000+600000
+ 504578 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,96p,1835b,1763s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
-/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
--mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf/f
-onts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fo
-nts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (74 pages, 694933 bytes).
+ 84i,6n,96p,1835b,1759s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
+vips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/shar
+e/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf
+/fonts/type1/public/lm/lmsy10.pfb>
+Output written on main.pdf (1 page, 82859 bytes).
 PDF statistics:
- 663 PDF objects out of 1000 (max. 8388607)
- 516 compressed objects within 6 object streams
- 169 named destinations out of 1000 (max. 500000)
- 344 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 78 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
+ 2 named destinations out of 1000 (max. 500000)
+ 157 words of extra memory for PDF output out of 10000 (max. 10000000)
 
