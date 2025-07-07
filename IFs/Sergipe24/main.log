@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  6 JUL 2025 18:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  7 JUL 2025 14:53
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1863,42 +1863,95 @@ Underfull \hbox (badness 10000) in paragraph at lines 1443--1444
  []
 
 [29]
-Underfull \hbox (badness 10000) in paragraph at lines 1469--1470
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 1471.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 1473.
+
+[30] [31]
+Underfull \hbox (badness 10000) in paragraph at lines 1573--1574
+
+ []
+
+[32] [33]
+Underfull \hbox (badness 10000) in paragraph at lines 1649--1650
+
+ []
+
+[34] [35]
+Underfull \hbox (badness 10000) in paragraph at lines 1760--1761
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1492--1493
+Underfull \hbox (badness 10000) in paragraph at lines 1787--1788
 
  []
 
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 1513--1514
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 1838--1839
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1534--1535
-
- []
-
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 1574--1575
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 1862--1863
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1594--1595
+Underfull \hbox (badness 10000) in paragraph at lines 1885--1886
 
  []
 
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 1615--1616
+<figures/radiacaocorponegro.png, id=222, 758.835pt x 478.78876pt>
+File: figures/radiacaocorponegro.png Graphic file (type png)
+<use figures/radiacaocorponegro.png>
+Package pdftex.def Info: figures/radiacaocorponegro.png  used on input line 189
+4.
+(pdftex.def)             Requested size: 379.41658pt x 239.39378pt.
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 1919--1920
+
+ []
+
+[39 <./figures/radiacaocorponegro.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 1943--1944
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1635--1636
+Underfull \hbox (badness 10000) in paragraph at lines 1967--1968
+
+ []
+
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 1993--1994
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2017--2018
+
+ []
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 2040--2041
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2064--2065
+
+ []
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 2089--2090
+
+ []
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 2113--2114
 
  []
 
@@ -1906,7 +1959,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1635--1636
 Package caption Warning: Unused \captionsetup[sub] on input line 57.
 See the caption package documentation for explanation.
 
-[33] (./main.aux)
+[44] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1914,10 +1967,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56127 strings out of 478287
- 1297861 string characters out of 5849289
+ 56146 strings out of 478287
+ 1298187 string characters out of 5849289
  2058257 words of memory out of 5000000
- 73387 multiletter control sequences out of 15000+600000
+ 73393 multiletter control sequences out of 15000+600000
  551381 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,96p,1835b,1759s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1936,10 +1989,10 @@ nts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.p
 fb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb>
-Output written on main.pdf (33 pages, 386575 bytes).
+Output written on main.pdf (44 pages, 526870 bytes).
 PDF statistics:
- 294 PDF objects out of 1000 (max. 8388607)
- 196 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 349 PDF objects out of 1000 (max. 8388607)
+ 238 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 167 words of extra memory for PDF output out of 10000 (max. 10000000)
 

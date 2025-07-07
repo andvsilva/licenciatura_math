@@ -1442,6 +1442,45 @@ A resposta correta é alternativa \colorbox{green!50}{\textbf{C}}.
 
 \noindent\rule{\linewidth}{0.6pt}\\
 
+\section*{Intervalo válido para o comprimento de onda de um laser}
+
+O comprimento de onda (\( \lambda \)) de um laser depende do material ativo utilizado no laser e pode abranger diferentes regiões do espectro eletromagnético. Abaixo estão os intervalos típicos para lasers comuns:
+
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Tipo de laser} & \textbf{Comprimento de onda (\( \lambda \))} \\
+\hline
+Laser ultravioleta (UV) & \(180\,\mathrm{nm} \text{ a } 400\,\mathrm{nm}\) \\
+\hline
+Laser visível (vermelho–violeta) & \(400\,\mathrm{nm} \text{ a } 700\,\mathrm{nm}\) \\
+\hline
+Laser infravermelho próximo (NIR) & \(700\,\mathrm{nm} \text{ a } 1400\,\mathrm{nm}\) \\
+\hline
+Laser infravermelho médio & \(1400\,\mathrm{nm} \text{ a } 3000\,\mathrm{nm}\) \\
+\hline
+Laser infravermelho distante & \(>3000\,\mathrm{nm}\) \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+
+\subsection*{Exemplos comuns de lasers visíveis:}
+\begin{itemize}
+    \item Laser vermelho (He-Ne ou diodo): \(630\,\mathrm{nm} – 680\,\mathrm{nm}\)
+    \item Laser verde (Nd:YAG com dobro da frequência): \(532\,\mathrm{nm}\)
+    \item Laser azul: \(405\,\mathrm{nm} – 488\,\mathrm{nm}\)
+    \item Laser violeta: \( \sim 400\,\mathrm{nm} \)
+\end{itemize}
+
+\vspace{0.5cm}
+
+Para lasers visíveis, o intervalo típico de comprimento de onda válido é aproximadamente:
+\[
+\boxed{400\,\mathrm{nm} \leq \lambda \leq 700\,\mathrm{nm}}
+\]
+
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Q44}}\\
 \noindent
@@ -1462,23 +1501,279 @@ do máximo central é de 20 mm. Qual é a largura da fenda?
 
 \textcolor{red}{\textbf{Solução:}}\\
 
+\subsection*{Passo 1: Condição para os mínimos}
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+Para uma fenda simples, os mínimos ocorrem em ângulos \(\theta\) tais que:
+\[
+a \cdot \sin\theta = m\lambda
+\]
+Para o primeiro mínimo (\(m=1\)):
+\[
+\sin\theta_1 = \frac{\lambda}{a}
+\]
+
+\vspace{0.5cm}
+
+\subsection*{Passo 2: Relação geométrica na tela}
+
+Na tela, a distância vertical entre o máximo central e o primeiro mínimo é aproximadamente:
+\[
+y_1 = L \cdot \tan\theta_1 \approx L \cdot \sin\theta_1
+\]
+
+A distância total entre o primeiro mínimo acima e o primeiro mínimo abaixo é:
+\[
+\Delta y = 2y_1
+\]
+
+Substituindo \(y_1\):
+\[
+\Delta y = 2L \cdot \sin\theta_1
+\]
+
+E como \(\sin\theta_1 = \lambda/a\):
+\[
+\Delta y = 2L \cdot \frac{\lambda}{a}
+\]
+
+\vspace{0.5cm}
+
+\subsection*{Passo 3: Resolvendo para \(a\)}
+
+Isolando \(a\):
+\[
+a = 2L \cdot \frac{\lambda}{\Delta y}
+\]
+
+Substituindo os valores numéricos:
+\[
+a = 2 \cdot 5{,}0 \cdot \frac{6{,}5 \times 10^{-7}}{0{,}020}
+\]
+
+\[
+a = 10{,}0 \cdot 3{,}25 \times 10^{-5} = 3{,}25 \times 10^{-4}\,m
+\]
+
+Convertendo para milímetros:
+\[
+a = 0{,}325\,mm
+\]
+
+\vspace{0.5cm}
+
+\subsection*{Resposta final:}
+
+\[
+\boxed{a \approx 0{,}325\,mm}
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{A}}.
 \end{flushleft}
 
 \noindent\rule{\linewidth}{0.6pt}\\
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{\Large Questao}}\\
+\textbf{\textcolor{blue}{\Large Q45 }}\\
 \noindent
+Uma rede de difração possui \( 1{,}25 \times 10^{4} \) fendas uniformemente espaçadas, de forma que a largura total da rede é \( 25,0\,\mathrm{mm} \).  
+Determine o ângulo \( \theta \) correspondente ao máximo de primeira ordem.
+
+\begin{itemize}
+\item[(A)] $4{,}35 \times 10^{-4} \textrm{ rad/nm}$.
+\item[(B)] $5{,}26 \times 10^{-4} \textrm{ rad/nm}$.
+\item[(C)] $3{,}87 \times 10^{-4} \textrm{ rad/nm}$.
+\item[(D)] $2{,}19 \times 10^{-4} \textrm{ rad/nm}$.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\subsection*{Dados:}
+\begin{itemize}
+    \item Número de fendas: \( N = 1{,}25 \times 10^4 \)
+    \item Largura da rede: \( L = \SI{25,0}{mm} = 25,0 \times 10^{-3}\,\mathrm{m} \)
+    \item Ordem do máximo: \( m = 1 \)
+\end{itemize}
+
+\subsection*{Passo 1: Condição para o máximo de difração}
+
+Para um máximo de ordem \(m\), a condição de difração é:
+\[
+d \, \sin\theta = m\lambda
+\]
+
+Para \(m=1\) e pequenos ângulos (\( \sin\theta \approx \theta \)):
+\[
+\theta \approx \frac{\lambda}{d}
+\]
+
+Logo, a razão \( \theta/\lambda \) é:
+\[
+\frac{\theta}{\lambda} \approx \frac{1}{d}
+\]
+
+\subsection*{Passo 2: Espaçamento entre as fendas}
+
+O espaçamento \(d\) entre fendas é dado por:
+\[
+d = \frac{L}{N}
+\]
+
+Substituindo os valores:
+\[
+d = \frac{25,0 \times 10^{-3}}{1,25 \times 10^4} = 2,0 \times 10^{-6}\,\mathrm{m}
+\]
+
+\subsection*{Passo 3: Calculando \( \theta/\lambda \)}
+
+Em \(\mathrm{m}^{-1}\):
+\[
+\frac{\theta}{\lambda} = \frac{1}{2,0 \times 10^{-6}} = 5,0 \times 10^{5}\,\mathrm{m}^{-1}
+\]
+
+Convertendo para \(\mathrm{nm}^{-1}\), sabendo que \(1\,\mathrm{m} = 10^{9}\,\mathrm{nm}\):
+\[
+\frac{\theta}{\lambda} = 5,0 \times 10^{5} \times 10^{-9} = 5,0 \times 10^{-4}\,\mathrm{rad/nm}
+\]
+
+O valor mais próximo entre as alternativas é:
+\[
+\boxed{\frac{\theta}{\lambda} = 5,26 \times 10^{-4}\,\mathrm{rad/nm}}
+\]
+
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{B}}.
+\end{flushleft}
 
 \noindent\rule{\linewidth}{0.6pt}\\
 
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Q46}}\\
+\noindent
+Um pesquisador que está estudando a propagação de ondas em uma corda observa a seguinte situação: uma
+onda estacionária se forma na corda, com nós (pontos de amplitude zero) a cada 0,5 m, amplitude de 2,0 m e
+velocidade de propagação de 2,0 m/s. A equação que o pesquisador obtém para descrever a onda estacionária é
+
 \begin{itemize}
-\item[(A)] 
-\item[(B)] 
-\item[(C)] 
-\item[(D)] 
+\item[(A)] $y(x,t) = 2\sin(\pi x)\cos(4\pi t)$
+\item[(B)] $y(x,t) = 2\sin(2\pi x)\cos(4\pi t)$
+\item[(C)] $y(x,t) = 2\sin(2\pi x)\cos(\pi t)$
+\item[(D)] $y(x,t) = 2\sin(\pi x)\cos(\pi t)$
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\textbf{Resolução:}
+
+\bigskip
+
+\textbf{Dados do problema:}
+\begin{itemize}
+    \item Distância entre nós consecutivos: \(0{,}5\,m\)
+    \item Amplitude máxima: \(A = 2,0\,m\)
+    \item Velocidade de propagação: \(v = 2,0\,m/s\)
+\end{itemize}
+
+Queremos encontrar a equação da onda estacionária no formato:
+\[
+y(x,t) = 2A \sin(kx) \cos(\omega t)
+\]
+
+Sabemos que o fator \(2A\) já é dado como \(2,0\), então apenas precisamos determinar \(k\) e \(\omega\).
+
+\bigskip
+
+\textbf{Passo 1: distância entre nós}
+
+Em uma onda estacionária, a distância entre dois nós consecutivos é igual a \(\lambda/2\).  
+Como o problema informa que essa distância é \(0{,}5\,m\), temos:
+\[
+\frac{\lambda}{2} = 0{,}5 \quad \Longrightarrow \quad \lambda = 1,0\,m
+\]
+
+\bigskip
+
+\textbf{Passo 2: número de onda \(k\)}
+
+O número de onda é dado por:
+\[
+k = \frac{2\pi}{\lambda} = \frac{2\pi}{1,0} = 2\pi
+\]
+
+Portanto, o fator espacial da solução é \(\sin(2\pi x)\).
+
+\bigskip
+
+\textbf{Passo 3: frequência angular \(\omega\)}
+
+Usamos a relação entre velocidade, frequência e comprimento de onda:
+\[
+v = \lambda f \quad \Longrightarrow \quad f = \frac{v}{\lambda} = \frac{2,0}{1,0} = 2,0\,Hz
+\]
+
+E como \(\omega = 2\pi f\), temos:
+\[
+\omega = 2\pi \cdot 2 = 4\pi
+\]
+
+\bigskip
+
+\textbf{Passo 4: equação final}
+
+Substituindo os valores encontrados:
+\[
+y(x,t) = 2 \sin(2\pi x) \cos(4\pi t)
+\]
+
+\bigskip
+
+\textbf{Resposta correta:}
+\[
+\boxed{y(x,t) = 2 \sin(2\pi x) \cos(4\pi t)}
+\]
+
+Essa equação possui duas partes principais:
+
+\bigskip
+
+\textbf{Parte espacial:} \(\sin(kx)\)
+\begin{itemize}
+    \item Determina o padrão fixo de \textbf{nós} (onde a amplitude é sempre zero) e \textbf{ventres} (onde a amplitude é máxima).
+    \item Define a forma da onda ao longo do espaço.
+\end{itemize}
+
+\bigskip
+
+\textbf{Parte temporal:} \(\cos(\omega t)\)
+\begin{itemize}
+    \item Descreve a oscilação harmônica no tempo.
+    \item Cada ponto vibra com a frequência angular \(\omega\), mas com amplitude espacialmente determinada.
+\end{itemize}
+
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{B}}.
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Q47}}\\
+\noindent
+
+Duas fontes de ondas sonoras idênticas emitem ondas com
+comprimento de onda de 0,5 m em fase. As fontes estão
+separadas por uma distância de 1,5 m. Haverá interferência
+construtiva ao longo da linha que liga as duas fontes nas
+posições:
+
+\begin{itemize}
+\item[(A)] 0,25 m, 0,75 m, 1,25 m.
+\item[(B)] 0,5 m, 1,0 m, 1,25 m.
+\item[(C)] 0,5 m, 1,0 m, 1,5 m.
+\item[(D)] 0,25 m, 0,5 m, 1,25 m.
 \end{itemize}
 
 \vspace{0.5cm}
@@ -1492,14 +1787,44 @@ A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
 \noindent\rule{\linewidth}{0.6pt}\\
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{\Large Questao}}\\
+\textbf{\textcolor{blue}{\Large Q48}}\\
 \noindent
+Um pêndulo simples de comprimento \( L = 10\,m \) oscila com um ângulo máximo de oito graus (\( 0,14\,rad \)).  
+Considere a aceleração da gravidade \( g = 10\,\frac{m}{s^2} \).  
+A equação diferencial que descreve o movimento do pêndulo para pequenos ângulos é dada por:
+$\frac{d^2\theta}{dt^2} + \omega^2 \theta = 0$ sendo \( \omega \) a frequência angular do pêndulo e \( \theta \) o ângulo de deslocamento em função do tempo \( t \).  
+Considerando as condições iniciais \( \theta(0) = \theta_0 \) e \( \frac{d\theta}{dt}(0) = 0 \), a solução geral da equação diferencial para o pêndulo é:
 
 \begin{itemize}
-\item[(A)] 
-\item[(B)] 
-\item[(C)] 
-\item[(D)] 
+\item[(A)] \( \theta(t) = 0{,}14\cos(0{,}1t) \).
+\item[(B)] \( \theta(t) = 0{,}14\cos(0{,}4t) \).
+\item[(C)] \( \theta(t) = 0{,}14\cos(0{,}8t) \).
+\item[(D)] \( \theta(t) = 0{,}14\cos(t) \).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Q49}}\\
+\noindent
+Considere uma região no espaço onde existe um campo elétrico variável no tempo, dado por $\vec{E} = E_0 \sin(\omega t) \, \hat{z},$
+sendo \(E_0\) a amplitude do campo elétrico, \(\omega\) a frequência angular e \(t\) o tempo. De acordo com as equações de Maxwell, 
+esse campo elétrico variável irá induzir um campo magnético também variável, dando origem a uma onda eletromagnética. Supondo que a 
+onda eletromagnética se propague na direção \(+y\) e que não haja cargas livres ou correntes na região, a expressão que descreve o 
+campo magnético \(B\) induzido nessa região é:
+
+
+\begin{itemize}
+\item[(A)] $B = \frac{E_0}{c} \sin(\omega t) \, \hat{x}.$
+\item[(B)] $B = -\frac{E_0}{c} \sin(\omega t) \, \hat{x}.$
+\item[(C)] $B = \frac{E_0}{c} \cos(\omega t) \, \hat{x}.$
+\item[(D)] $B = -\frac{E_0}{c} \cos(\omega t) \, \hat{x}.$
 \end{itemize}
 
 \vspace{0.5cm}
@@ -1513,14 +1838,40 @@ A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
 \noindent\rule{\linewidth}{0.6pt}\\
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{\Large Questao}}\\
+\textbf{\textcolor{blue}{\Large Q50}}\\
 \noindent
+Considere uma esfera de raio \( R \) feita de um material dielétrico linear e homogêneo com permissividade elétrica \( \varepsilon \).  
+Uma carga total \( +Q \) está uniformemente distribuída no volume da esfera. De acordo com a lei de Gauss, o campo elétrico \( E \) 
+dentro (\( r < R \)) e fora (\( r \geq R \)) da esfera é:
+
 
 \begin{itemize}
-\item[(A)] 
-\item[(B)] 
-\item[(C)] 
-\item[(D)] 
+\item[(A)] $\frac{Q}{4\pi\varepsilon R^3} \, \hat{\textrm{r}} \quad \text{se} \quad r < R \quad e \quad \frac{Q}{4\pi\varepsilon_0 r^2} \, \hat{\textrm{r}} \quad \text{se} \quad r \geq R. $
+\item[(B)] $\frac{Q r^2}{4\pi\varepsilon R^2} \, \hat{\textrm{r}} \quad \text{se} \quad r < R \quad e \quad \frac{Q}{4\pi\varepsilon_0 r^2} \, \hat{\textrm{r}}  \quad \text{se} \quad r \geq R.$
+\item[(C)] $\frac{Q r}{4\pi\varepsilon R^3} \, \hat{\textrm{r}} \quad \text{se} \quad r < R \quad e \quad \frac{Q}{4\pi\varepsilon_0 r^2} \, \hat{\textrm{r}} \quad \text{se} \quad r \geq R.$
+\item[(D)] $\frac{Q r}{4\pi\varepsilon R^2} \, \hat{\textrm{r}} \quad \text{se} \quad r < R \quad e \quad \frac{Q}{4\pi\varepsilon_0 r^2} \, \hat{\textrm{r}} \quad \text{se} \quad r \geq R.$
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Q51}}\\
+\noindent
+Se a temperatura de um corpo negro dobra, a potência total
+irradiada por unidade de área
+
+\begin{itemize}
+\item[(A)] aumenta por um fator 2.
+\item[(B)] aumenta por um fator 4.
+\item[(C)] aumenta por um fator 8.
+\item[(D)] aumenta por um fator 16.
 \end{itemize}
 
 \vspace{0.5cm}
@@ -1534,54 +1885,28 @@ A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
 \noindent\rule{\linewidth}{0.6pt}\\
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{\Large Questao}}\\
+\textbf{\textcolor{blue}{\Large Q52}}\\
 \noindent
+Observe o gráfico a seguir.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.5]{figures/radiacaocorponegro.png}
+\end{figure}
+
+O gráfico acima mostra a curva de radiância espectral de um
+corpo negro, com o pico da emissão ocorrendo em 966 nm.
+Utilizando a Lei de Wien, que relaciona o comprimento de
+onda de pico da emissão de um corpo negro com a sua
+temperatura, selecione a resposta que mais se aproxima do
+resultado calculado para a temperatura desse corpo negro.
+(Dados: Constante de deslocamento de Wien $b = 2,897 \times 10^{-3}\,\mathrm{m}\,.\mathrm{K}.)$
 
 \begin{itemize}
-\item[(A)] 
-\item[(B)] 
-\item[(C)] 
-\item[(D)] 
-\end{itemize}
-
-\vspace{0.5cm}
-
-\textcolor{red}{\textbf{Solução:}}\\
-
-
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
-\end{flushleft}
-
-\begin{flushleft}
-\textbf{\textcolor{blue}{\Large Questao}}\\
-\noindent
-
-\begin{itemize}
-\item[(A)] 
-\item[(B)] 
-\item[(C)] 
-\item[(D)] 
-\end{itemize}
-
-\vspace{0.5cm}
-
-\textcolor{red}{\textbf{Solução:}}\\
-
-
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
-\end{flushleft}
-
-\noindent\rule{\linewidth}{0.6pt}\\
-
-\begin{flushleft}
-\textbf{\textcolor{blue}{\Large Questao}}\\
-\noindent
-
-\begin{itemize}
-\item[(A)] 
-\item[(B)] 
-\item[(C)] 
-\item[(D)] 
+\item[(A)] 3000 K.
+\item[(B)] 3100 K.
+\item[(C)] 3300 K.
+\item[(D)] 3900 K.
 \end{itemize}
 
 \vspace{0.5cm}
@@ -1594,20 +1919,23 @@ A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
 \noindent\rule{\linewidth}{0.6pt}\\
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{\Large Questao}}\\
+\textbf{\textcolor{blue}{\Large Q53}}\\
 \noindent
+Uma superfície metálica é exposta a luz de comprimento de onda de 400 nm para induzir o efeito fotoelétrico. A função
+trabalho do metal é de 2,0 eV. São dadas a Constante de Planck $h = 6{,}626 \times 10^{-34} J.s$, a velocidade da luz 
+$c = 3{,}0 \times 10^8 m/s$ e $e = 1{,}602 \times 10^{-19} J$. Utilizando a equação do efeito fotoelétrico podemos 
+determinar a energia cinética máxima dos elétrons ejetados da superfície metálica, que
 
 \begin{itemize}
-\item[(A)] 
-\item[(B)] 
-\item[(C)] 
-\item[(D)] 
+\item[(A)] 0,95 eV.
+\item[(B)] 1,10 eV.
+\item[(C)] 1,25 eV.
+\item[(D)] 1,50 eV.
 \end{itemize}
 
 \vspace{0.5cm}
 
 \textcolor{red}{\textbf{Solução:}}\\
-
 
 A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
 \end{flushleft}
@@ -1615,14 +1943,18 @@ A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
 \noindent\rule{\linewidth}{0.6pt}\\
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{\Large Questao}}\\
+\textbf{\textcolor{blue}{\Large Q54}}\\
 \noindent
+No efeito fotoelétrico ocorre a emissão de elétrons de uma
+superfície metálica quando radiação incide sobre essa
+superfície. A radiação mais eficaz para que o efeito
+fotoelétrico ocorra é a
 
 \begin{itemize}
-\item[(A)] 
-\item[(B)] 
-\item[(C)] 
-\item[(D)] 
+\item[(A)] radiação de raios X.
+\item[(B)] radiação infravermelha.
+\item[(C)] radiação ultravioleta.
+\item[(D)] radiação de micro-ondas.
 \end{itemize}
 
 \vspace{0.5cm}
@@ -1633,6 +1965,174 @@ A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
 \end{flushleft}
 
 \noindent\rule{\linewidth}{0.6pt}\\
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Q55}}\\
+\noindent
+Um fóton com um comprimento de onda inicial de \(0,10\,\text{nm}\) colide com um elétron inicialmente em repouso.  
+Após a colisão, o fóton é espalhado com um ângulo de \(60^\circ\) em relação à sua direção original.  
+Sabendo que \(\cos 60^\circ = 0,5\), dada a constante de Compton \(2,43 \times 10^{-12}\,m\) e usando a fórmula do 
+efeito Compton para calcular a mudança no comprimento de onda do fóton espalhado, podemos determinar o novo comprimento 
+de onda do fóton após o espalhamento, que é de:
+
+
+\begin{itemize}
+\item[(A)] 0{,}102 nm.
+\item[(B)] 0{,}222 nm.
+\item[(C)] 0{,}220 nm.
+\item[(D)] 0{,}232 nm.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Q56}}\\
+\noindent
+No efeito Compton, um fóton incide sobre um elétron inicialmente em repouso e é espalhado, fazendo com que o elétron recue.  
+Quando o ângulo de espalhamento \( \varphi \) varia de \(0^\circ\) a \(90^\circ\), o ângulo de recuo do elétron \( \theta \) 
+varia no intervalo:
+
+
+\begin{itemize}
+\item[(A)] $0^{\circ} \leq \theta \leq 180^{\circ}$.
+\item[(B)] $0^{\circ} \leq \theta < 90^{\circ}$.
+\item[(C)] $0^{\circ} \leq \theta < 120^{\circ}$.
+\item[(D)] $90^{\circ} \leq \theta < 120^{\circ}$.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Q57}}\\
+\noindent
+Sabendo que a massa do elétron é \( 9,11 \times 10^{-31}\, \mathrm{kg} \), a velocidade da luz é 
+\( 3 \times 10^8\, \mathrm{m/s} \) e \( 1\,\mathrm{eV} = 1{,}602 \times 10^{-19}\, \mathrm{J} \), 
+a energia total de um elétron movendo-se com uma velocidade de \( \left( \frac{\sqrt{3}}{2} \right) c \) é de:
+
+\begin{itemize}
+\item[(A)] $0{,}510$ MeV.
+\item[(B)] $0{,}723$ MeV.
+\item[(C)] $1{,}024$ MeV.
+\item[(D)] $1{,}105$ MeV.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Q58}}\\
+\noindent
+Uma nave espacial viaja a uma velocidade de \(0{,}85c\) em relação à Terra, sendo \(c = 3 \times 10^8\, \mathrm{m/s}\) 
+a velocidade da luz no vácuo. Um relógio a bordo da nave marca 1 hora. Aproximando \( \sqrt{0{,}2775} = 0{,}53 \), 
+durante esse tempo a distância percorrida e o tempo decorrido para um observador na Terra são, respectivamente:
+
+
+\begin{itemize}
+\item[(A)] Distância: \(1{,}7 \times 10^9\, km\), Tempo: \(1{,}9\) horas.
+\item[(B)] Distância: \(1{,}7 \times 10^9\, km\), Tempo: \(3{,}8\) horas.
+\item[(C)] Distância: \(3{,}1 \times 10^8\, km\), Tempo: \(2{,}9\) horas.
+\item[(D)] Distância: \(3{,}1 \times 10^8\, km\), Tempo: \(3{,}9\) horas.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Q59}}\\
+\noindent
+Um hospital utiliza o isótopo radioativo Tecnécio-99m (\(^{99m}\mathrm{Tc}\)) para exames de diagnóstico por imagem.  
+O Tecnécio-99m tem uma meia-vida de aproximadamente \(6\) horas. Se uma dose inicial de \(120\,\mathrm{mg}\) de Tecnécio-99m é 
+administrada a um paciente, quanto tempo será necessário para que a quantidade de isótopo no corpo do paciente caia para \(15\,\mathrm{mg}\)?
+(Dados: \(\ln 2 = 0{,}693\) e \(\ln(0{,}125) = -2{,}079\).)
+
+\begin{itemize}
+\item[(A)] 10 horas.
+\item[(B)] 12 horas.
+\item[(C)] 14 horas.
+\item[(D)] 18 horas.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Q60}}\\
+\noindent
+Durante uma escavação arqueológica, um arqueólogo encontra restos de uma antiga fogueira contendo pedaços de madeira.  
+A atividade do carbono-14 na amostra de madeira é medida e encontrada como sendo \(12{,}5\%\) da atividade do carbono-14 em organismos vivos.  
+Sabendo que a meia-vida do carbono-14 é de aproximadamente \(5730\) anos, a idade da amostra de madeira pode ser determinada e vale:  
+(Dados: \(\ln 2 = 0{,}693\) e \(\ln(0{,}125) = -2{,}079\).)
+
+\begin{itemize}
+\item[(A)] 5.730 anos.
+\item[(B)] 8.585 anos.
+\item[(C)] 11.460 anos.
+\item[(D)] 17.190 anos.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+
+%\begin{flushleft}
+%\textbf{\textcolor{blue}{\Large Q52}}\\
+%\noindent
+%
+%\begin{itemize}
+%\item[(A)] 
+%\item[(B)] 
+%\item[(C)] 
+%\item[(D)] 
+%\end{itemize}
+%
+%\vspace{0.5cm}
+%
+%\textcolor{red}{\textbf{Solução:}}\\
+%
+%A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+%\end{flushleft}
+%
+%\noindent\rule{\linewidth}{0.6pt}\\
+
 
 %%%%%%%% Bibliography 
 % Os comandos para incluir as referências bibliográficas
