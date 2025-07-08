@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  7 JUL 2025 14:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  7 JUL 2025 23:32
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1493,7 +1493,7 @@ File: pppdftex.def 2022/01/29 v0.5u Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count517
 \AM@templatesizebox=\box94
 ))
-Package hyperref Info: Option `colorlinks' set `true' on input line 96.
+Package hyperref Info: Option `colorlinks' set `true' on input line 97.
 
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
@@ -1502,30 +1502,30 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 \@quotelevel=\count518
 \@quotereset=\count519
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 12
-8.
+9.
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1561,7 +1561,7 @@ LaTeX Font Info:    ... okay on input line 128.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 128.
+Package hyperref Info: Link coloring ON on input line 129.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1573,9 +1573,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count520
 )
-LaTeX Info: Redefining \ref on input line 128.
-LaTeX Info: Redefining \pageref on input line 128.
-LaTeX Info: Redefining \nameref on input line 128.
+LaTeX Info: Redefining \ref on input line 129.
+LaTeX Info: Redefining \pageref on input line 129.
+LaTeX Info: Redefining \nameref on input line 129.
 
 (./main.out) (./main.out)
 \@outlinefile=\write5
@@ -1614,7 +1614,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 128.
+or `english'. on input line 129.
 
 (/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictio
 nary-brazil.trsl
@@ -1622,7 +1622,7 @@ File: translations-basic-dictionary-brazil.trsl (brazil translation file `trans
 lations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `brazil'. on input line 128.
+or `brazil'. on input line 129.
 \c@lstlisting=\count527
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
@@ -1662,8 +1662,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
 (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 128.
-Package biblatex Info: Reference segment=0 on input line 128.
+Package biblatex Info: Reference section=0 on input line 129.
+Package biblatex Info: Reference segment=0 on input line 129.
  (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
 
@@ -1673,118 +1673,115 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-31.
+32.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-31.
+32.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-131.
+132.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-131.
+132.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 131.
+(Font)              <14.4> on input line 132.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 131.
+(Font)              <10> on input line 132.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 131.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 131
+(Font)              <7> on input line 132.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 132
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 131
+LaTeX Font Info:    Trying to load font information for U+msb on input line 132
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-31.
+32.
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
 
-Overfull \hbox (1.55807pt too wide) in paragraph at lines 134--136
+Overfull \hbox (1.55807pt too wide) in paragraph at lines 135--137
 [][][][][][][]\T1/lmr/m/n/12 , como a
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-40.
+41.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 140.
+(Font)              <12> on input line 141.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 140.
+(Font)              <8> on input line 141.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 140.
+(Font)              <6> on input line 141.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
 [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
 
 [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
 
  []
 
 [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 455--456
+Underfull \hbox (badness 10000) in paragraph at lines 456--457
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 513--514
+Underfull \hbox (badness 10000) in paragraph at lines 514--515
 
  []
 
 [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 611--612
+Underfull \hbox (badness 10000) in paragraph at lines 612--613
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 654--655
+Underfull \hbox (badness 10000) in paragraph at lines 655--656
 
  []
 
 <figures/momento_angular.png, id=107, 538.26094pt x 290.58563pt>
 File: figures/momento_angular.png Graphic file (type png)
 <use figures/momento_angular.png>
-Package pdftex.def Info: figures/momento_angular.png  used on input line 663.
+Package pdftex.def Info: figures/momento_angular.png  used on input line 664.
 (pdftex.def)             Requested size: 364.19667pt x 196.61569pt.
-
-LaTeX Font Warning: Command \huge invalid in math mode on input line 675.
-
 
 LaTeX Font Warning: Command \huge invalid in math mode on input line 676.
 
@@ -1794,164 +1791,183 @@ LaTeX Font Warning: Command \huge invalid in math mode on input line 677.
 
 LaTeX Font Warning: Command \huge invalid in math mode on input line 678.
 
+
+LaTeX Font Warning: Command \huge invalid in math mode on input line 679.
+
 [12 <./figures/momento_angular.png (PNG copy)>] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 741--742
+Underfull \hbox (badness 10000) in paragraph at lines 742--743
 
  []
 
 
-Overfull \hbox (16.18637pt too wide) in paragraph at lines 745--749
+Overfull \hbox (16.18637pt too wide) in paragraph at lines 746--750
 [][][][][][] 
  []
 
 [14]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 802.
+(Font)              <10.95> on input line 803.
 
-Overfull \hbox (23.51222pt too wide) in paragraph at lines 802--815
+Overfull \hbox (23.51222pt too wide) in paragraph at lines 803--816
  [] 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 821--822
+Underfull \hbox (badness 10000) in paragraph at lines 822--823
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 871--872
+Underfull \hbox (badness 10000) in paragraph at lines 872--873
 
  []
 
 [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 976--977
+Underfull \hbox (badness 10000) in paragraph at lines 977--978
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 1034--1035
+Underfull \hbox (badness 10000) in paragraph at lines 1035--1036
 
  []
 
 [20] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1095--1096
+Underfull \hbox (badness 10000) in paragraph at lines 1096--1097
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 1154--1155
+Underfull \hbox (badness 10000) in paragraph at lines 1155--1156
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 1221--1222
+Underfull \hbox (badness 10000) in paragraph at lines 1222--1223
 
  []
 
 [24] [25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 1319--1320
+Underfull \hbox (badness 10000) in paragraph at lines 1320--1321
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 1368--1369
+Underfull \hbox (badness 10000) in paragraph at lines 1369--1370
 
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 1443--1444
+Underfull \hbox (badness 10000) in paragraph at lines 1444--1445
 
  []
 
 [29]
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 1471.
+LaTeX Warning: Command \textendash invalid in math mode on input line 1472.
 
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 1473.
+LaTeX Warning: Command \textendash invalid in math mode on input line 1474.
 
 [30] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 1573--1574
+Underfull \hbox (badness 10000) in paragraph at lines 1574--1575
 
  []
 
 [32] [33]
-Underfull \hbox (badness 10000) in paragraph at lines 1649--1650
+Underfull \hbox (badness 10000) in paragraph at lines 1650--1651
 
  []
 
 [34] [35]
-Underfull \hbox (badness 10000) in paragraph at lines 1760--1761
+Underfull \hbox (badness 10000) in paragraph at lines 1761--1762
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1787--1788
-
+Overfull \hbox (4.6283pt too wide) in paragraph at lines 1784--1786
+[][][][][][][] 
  []
 
 [36]
-Underfull \hbox (badness 10000) in paragraph at lines 1838--1839
+Underfull \hbox (badness 10000) in paragraph at lines 1824--1825
 
  []
 
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 1862--1863
+[37] [38] [39] [40] [41] [42]
+Underfull \hbox (badness 10000) in paragraph at lines 2132--2133
+
+ []
+
+[43] [44] [45]
+Underfull \hbox (badness 10000) in paragraph at lines 2315--2316
+
+ []
+
+[46] [47]
+Underfull \hbox (badness 10000) in paragraph at lines 2367--2368
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1885--1886
-
+Overfull \hbox (15.17776pt too wide) in paragraph at lines 2388--2389
+[]\T1/lmr/m/n/12 Estimar a cor de um corpo aque-cido (por ex-em-plo, metais in-
+can-des-centes em fundições). 
  []
 
-<figures/radiacaocorponegro.png, id=222, 758.835pt x 478.78876pt>
+[48]
+<figures/radiacaocorponegro.png, id=267, 758.835pt x 478.78876pt>
 File: figures/radiacaocorponegro.png Graphic file (type png)
 <use figures/radiacaocorponegro.png>
-Package pdftex.def Info: figures/radiacaocorponegro.png  used on input line 189
-4.
+Package pdftex.def Info: figures/radiacaocorponegro.png  used on input line 243
+0.
 (pdftex.def)             Requested size: 379.41658pt x 239.39378pt.
-[38]
-Underfull \hbox (badness 10000) in paragraph at lines 1919--1920
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[49] [50 <./figures/radiacaocorponegro.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 2503--2504
 
  []
 
-[39 <./figures/radiacaocorponegro.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 1943--1944
+[51] [52]
+Underfull \hbox (badness 10000) in paragraph at lines 2604--2605
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1967--1968
-
- []
-
-[40]
-Underfull \hbox (badness 10000) in paragraph at lines 1993--1994
+[53] [54]
+Underfull \hbox (badness 10000) in paragraph at lines 2701--2702
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 2017--2018
-
- []
-
-[41]
-Underfull \hbox (badness 10000) in paragraph at lines 2040--2041
+[55] [56]
+Underfull \hbox (badness 10000) in paragraph at lines 2794--2795
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 2064--2065
-
- []
-
-[42]
-Underfull \hbox (badness 10000) in paragraph at lines 2089--2090
+[57] [58] [59] [60]
+Underfull \hbox (badness 10000) in paragraph at lines 2965--2966
 
  []
 
-[43]
-Underfull \hbox (badness 10000) in paragraph at lines 2113--2114
+[61] [62]
+Underfull \hbox (badness 10000) in paragraph at lines 3066--3067
+
+ []
+
+[63]
+Underfull \hbox (badness 10000) in paragraph at lines 3164--3165
+
+ []
+
+[64] [65]
+Underfull \hbox (badness 10000) in paragraph at lines 3242--3243
+
+ []
+
+[66]
+Underfull \hbox (badness 10000) in paragraph at lines 3315--3316
 
  []
 
@@ -1959,7 +1975,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2113--2114
 Package caption Warning: Unused \captionsetup[sub] on input line 57.
 See the caption package documentation for explanation.
 
-[44] (./main.aux)
+[67] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1967,32 +1983,33 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56146 strings out of 478287
- 1298187 string characters out of 5849289
- 2058257 words of memory out of 5000000
- 73393 multiletter control sequences out of 15000+600000
- 551381 words of font info for 111 fonts, out of 8000000 for 9000
+ 56648 strings out of 478287
+ 1311688 string characters out of 5849289
+ 2059257 words of memory out of 5000000
+ 73862 multiletter control sequences out of 15000+600000
+ 575029 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,96p,1835b,1759s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
-/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ma
-thex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/f
+ 84i,12n,96p,1835b,2021s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/f
 onts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fo
-nts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/symbols/msbm10.pfb>
-Output written on main.pdf (44 pages, 526870 bytes).
+pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pf
+b></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (67 pages, 603856 bytes).
 PDF statistics:
- 349 PDF objects out of 1000 (max. 8388607)
- 238 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
+ 468 PDF objects out of 1000 (max. 8388607)
+ 328 compressed objects within 4 object streams
+ 73 named destinations out of 1000 (max. 500000)
  167 words of extra memory for PDF output out of 10000 (max. 10000000)
 

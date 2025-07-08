@@ -26,6 +26,7 @@
 \usetikzlibrary{3d, arrows.meta}
 \usepackage{booktabs}
 
+
 \usepackage{color}
 \definecolor{myblue}{rgb}{.8, .8, 1}
 
@@ -1622,24 +1623,24 @@ d = \frac{L}{N}
 
 Substituindo os valores:
 \[
-d = \frac{25,0 \times 10^{-3}}{1,25 \times 10^4} = 2,0 \times 10^{-6}\,\mathrm{m}
+d = \frac{25{,}0 \times 10^{-3}}{1{,}25 \times 10^4} = 2{,}0 \times 10^{-6}\,\mathrm{m}
 \]
 
 \subsection*{Passo 3: Calculando \( \theta/\lambda \)}
 
 Em \(\mathrm{m}^{-1}\):
 \[
-\frac{\theta}{\lambda} = \frac{1}{2,0 \times 10^{-6}} = 5,0 \times 10^{5}\,\mathrm{m}^{-1}
+\frac{\theta}{\lambda} = \frac{1}{2{,}0 \times 10^{-6}} = 5{,}0 \times 10^{5}\,\mathrm{m}^{-1}
 \]
 
 Convertendo para \(\mathrm{nm}^{-1}\), sabendo que \(1\,\mathrm{m} = 10^{9}\,\mathrm{nm}\):
 \[
-\frac{\theta}{\lambda} = 5,0 \times 10^{5} \times 10^{-9} = 5,0 \times 10^{-4}\,\mathrm{rad/nm}
+\frac{\theta}{\lambda} = 5{,}0 \times 10^{5} \times 10^{-9} = 5{,}0 \times 10^{-4}\,\mathrm{rad/nm}
 \]
 
 O valor mais próximo entre as alternativas é:
 \[
-\boxed{\frac{\theta}{\lambda} = 5,26 \times 10^{-4}\,\mathrm{rad/nm}}
+\boxed{\frac{\theta}{\lambda} = 5{,}26 \times 10^{-4}\,\mathrm{rad/nm}}
 \]
 
 
@@ -1780,18 +1781,96 @@ posições:
 
 \textcolor{red}{\textbf{Solução:}}\\
 
+\colorbox{yellow!30}{A diferença de caminhos entre as ondas emitidas pelas duas fontes deve ser um múltiplo} 
+\colorbox{yellow!30}{inteiro de \( \lambda \) para que ocorra \textbf{interferência construtiva}:}
+\[
+\Delta r = m\lambda, \quad m = 0, \pm1, \pm2, \dots
+\]
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+Colocando as fontes nos pontos \( x=0 \) e \( x=d \), ao longo do eixo \( x \), temos para um ponto \( x \):
+\[
+\Delta r = |x - (d-x)| = |2x - d|
+\]
+
+Para interferência construtiva:
+\[
+2x - d = m\lambda
+\]
+
+Resolvendo para \( x \):
+\[
+x = \frac{d + m\lambda}{2}
+\]
+
+Substituindo \( d = 1{,}5 \) e \( \lambda = 0{,}5 \):
+\[
+x = \frac{1{,}5 + 0{,}5m}{2} = 0{,}75 + 0{,}25m
+\]
+
+Para que \( x \) esteja entre \( 0 \) e \( 1{,}5 \), os valores possíveis de \( m \) são \( m = -3, -2, -1, 0, 1, 2, 3 \), o que resulta nas posições:
+\[
+x = 0{,}0;\ 0{,}25;\ 0{,}5;\ 0{,}75;\ 1{,}0;\ 1{,}25;\ 1{,}5 \ \mathrm{m}
+\]
+
+Entre as alternativas dadas, a correta é:
+\[
+\boxed{\text{(A) } 0{,}25\,m,\ 0{,}75\,m,\ 1{,}25\,m}
+\]
+
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{A}}.
 \end{flushleft}
 
 \noindent\rule{\linewidth}{0.6pt}\\
 
+\section*{Equilíbrio do Corpo Rígido e da Partícula}
+
+\textbf{Condições de equilíbrio:}
+\begin{align*}
+  \sum \vec{F} &= 0 \quad \text{(equilíbrio translacional)} \\
+  \sum \vec{\tau} &= 0 \quad \text{(equilíbrio rotacional)}
+\end{align*}
+
+\textbf{Torque (momento de uma força):}
+\begin{equation*}
+  \tau = r F \sin \theta
+\end{equation*}
+
+\begin{equation*}
+  \vec{\tau} = \frac{d\vec{L}}{dt}
+\end{equation*}
+
+\begin{equation*}
+  \tau = I.\alpha
+\end{equation*}
+
+\begin{equation*}
+  \alpha = \frac{d^{2}\theta}{dt^{2}}
+\end{equation*}
+
+\begin{equation*}
+  \frac{d^{2}\theta}{dt^{2}} + \frac{g}{L}\sin\theta = 0 \quad \textrm{MHS}
+\end{equation*}
+
+\begin{equation*}
+  \frac{d^{2}\theta}{dt^{2}} + \omega^{2}\sin\theta = 0 \quad \textrm{MHS}
+\end{equation*}
+
+Solução geral EDO:
+\begin{equation*}
+  \theta(t) = \theta_{0} \cos(\omega t + \varphi)
+\end{equation*}
+
+\subsection*{Rota\c{c}\~ao de um Corpo R\'igido}
+\begin{equation*}
+  \omega = \frac{d\theta}{dt}, \quad \alpha = \frac{d\omega}{dt}
+\end{equation*}
+
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Q48}}\\
 \noindent
-Um pêndulo simples de comprimento \( L = 10\,m \) oscila com um ângulo máximo de oito graus (\( 0,14\,rad \)).  
-Considere a aceleração da gravidade \( g = 10\,\frac{m}{s^2} \).  
-A equação diferencial que descreve o movimento do pêndulo para pequenos ângulos é dada por:
+Um pêndulo simples de comprimento \( L = 10\,m \) oscila com um ângulo máximo de oito graus \( 0{,}14\,\) rad.  
+Considere a aceleração da gravidade \( g = 10\,\)m/s\(^2\). A equação diferencial que descreve o movimento do pêndulo para pequenos ângulos é dada por:
 $\frac{d^2\theta}{dt^2} + \omega^2 \theta = 0$ sendo \( \omega \) a frequência angular do pêndulo e \( \theta \) o ângulo de deslocamento em função do tempo \( t \).  
 Considerando as condições iniciais \( \theta(0) = \theta_0 \) e \( \frac{d\theta}{dt}(0) = 0 \), a solução geral da equação diferencial para o pêndulo é:
 
@@ -1806,8 +1885,119 @@ Considerando as condições iniciais \( \theta(0) = \theta_0 \) e \( \frac{d\the
 
 \textcolor{red}{\textbf{Solução:}}\\
 
+\section*{Demonstração da equação do movimento do pêndulo simples a partir do torque}
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+Considere um pêndulo simples com comprimento \(L\) e massa \(m\), oscilando em torno do ponto de suspensão com um ângulo \(\theta(t)\) em relação à posição de equilíbrio vertical.
+
+\bigskip
+
+\textbf{1. Torque devido à força peso}
+
+A força peso atua verticalmente para baixo com intensidade \(mg\). O torque em relação ao ponto de suspensão é:
+
+\[
+\boxed{\tau = - m g L \sin\theta,}
+\]
+
+onde o sinal negativo indica que o torque tende a restaurar o pêndulo para a posição de equilíbrio (\(\theta = 0\)).
+
+\bigskip
+
+\textbf{2. Momento de inércia do pêndulo simples}
+
+Como o pêndulo é uma massa pontual no final de um fio de massa desprezível, o momento de inércia em relação ao ponto de suspensão é:
+
+\[
+\boxed{I = m L^2.}
+\]
+
+\bigskip
+
+\textbf{3. Equação do movimento rotacional}
+
+Aplicando a segunda lei de Newton para rotações, temos:
+
+\[
+\boxed{\tau = I \alpha,}
+\]
+
+onde \(\alpha = \frac{d^2 \theta}{dt^2}\) é a aceleração angular. Substituindo,
+
+\[
+- m g L \sin\theta = m L^2 \frac{d^2 \theta}{dt^2}.
+\]
+
+Dividindo ambos os lados por \(m L^2\):
+
+\[
+\boxed{\frac{d^2 \theta}{dt^2} + \frac{g}{L} \sin\theta = 0.}
+\]
+
+\bigskip
+
+\textbf{4. Aproximação para pequenos ângulos}
+
+Para pequenas oscilações, onde \(\theta \ll 1\) (rad), podemos aproximar \(\sin\theta \approx \theta\), obtendo a equação linearizada:
+
+\[
+\boxed{\frac{d^2 \theta}{dt^2} + \frac{g}{L} \theta = 0.}
+\]
+
+Definindo
+
+\[
+\omega = \sqrt{\frac{g}{L}},
+\]
+
+a equação diferencial torna-se
+
+\[
+\boxed{\frac{d^2 \theta}{dt^2} + \omega^2 \theta = 0.}
+\]
+
+\bigskip
+
+\textbf{5. Solução da equação diferencial}
+
+A solução geral da equação é
+
+\[
+\boxed{\theta(t) = A \cos(\omega t) + B \sin(\omega t),}
+\]
+
+onde as \colorbox{green!30}{constantes \(A\) e \(B\) são determinadas pelas condições iniciais.}
+
+Dadas as condições:
+
+\[
+\theta(0) = \theta_0, \quad \frac{d\theta}{dt}(0) = 0,
+\]
+
+temos:
+
+\[
+\theta(0) = A = \theta_0,
+\]
+
+e
+
+\[
+\frac{d\theta}{dt} = - A \omega \sin(\omega t) + B \omega \cos(\omega t) \implies \frac{d\theta}{dt}(0) = B \omega = 0 \Rightarrow B = 0.
+\]
+
+Assim, a solução final é
+
+\[
+\theta(t) = \theta_0 \cos(\omega t) = \theta_0 \cos\left(\sqrt{\frac{g}{L}} \, t \right).
+\]
+
+\[
+\boxed{
+\theta(t) = \theta_0 \cos\left(\sqrt{\frac{10}{10}} \, t \right) = \theta_0 \cos\left(t \right).
+}
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{D}}.
 \end{flushleft}
 
 \begin{flushleft}
@@ -1821,7 +2011,7 @@ campo magnético \(B\) induzido nessa região é:
 
 
 \begin{itemize}
-\item[(A)] $B = \frac{E_0}{c} \sin(\omega t) \, \hat{x}.$
+\item[(A)] $B = \frac{ E_0}{c} \sin(\omega t) \, \hat{x}.$
 \item[(B)] $B = -\frac{E_0}{c} \sin(\omega t) \, \hat{x}.$
 \item[(C)] $B = \frac{E_0}{c} \cos(\omega t) \, \hat{x}.$
 \item[(D)] $B = -\frac{E_0}{c} \cos(\omega t) \, \hat{x}.$
@@ -1832,7 +2022,111 @@ campo magnético \(B\) induzido nessa região é:
 \textcolor{red}{\textbf{Solução:}}\\
 
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+
+\section*{1. Forma geral da onda eletromagnética no vácuo}
+
+No vácuo, uma onda plana que se propaga na direção \(+\hat{y}\) tem os campos elétrico e magnético na forma:
+\[
+\vec{E}(y,t) = E_0 \sin(k y - \omega t) \, \hat{z},
+\]
+\[
+\vec{B}(y,t) = B_0 \sin(k y - \omega t) \, \hat{x}.
+\]
+
+A relação entre as amplitudes \(E_0\) e \(B_0\) é dada por:
+\[
+B_0 = \frac{E_0}{c}.
+\]
+
+Considere a região do espaço onde o campo elétrico é dado por:
+\[
+\vec{E}(y,t) = E_0 \sin(k y - \omega t) \, \hat{z}.
+\]
+
+Queremos determinar o campo magnético associado \(\vec{B}(y,t)\), calculando o rotacional de \(\vec{E}\) e usando a \textbf{lei de Faraday}:
+\[
+\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}.
+\]
+
+\section*{2. Cálculo do rotacional de \(\vec{E}\)}
+
+O campo elétrico tem apenas a componente \(z\), que depende apenas de \(y\) e \(t\).  
+Em coordenadas cartesianas:
+\[
+\nabla \times \vec{E} =
+\begin{vmatrix}
+\hat{x} & \hat{y} & \hat{z} \\[4pt]
+\partial_x & \partial_y & \partial_z \\[4pt]
+0 & 0 & E_z
+\end{vmatrix}
+=
+\left( \frac{\partial E_z}{\partial y} \right) \hat{x} - \left( \frac{\partial E_z}{\partial x} \right) \hat{y} + 0 \, \hat{z}.
+\]
+
+Como \(E_z = E_0 \sin(k y - \omega t)\), temos:
+\[
+\frac{\partial E_z}{\partial y} = k E_0 \cos(k y - \omega t),
+\quad
+\frac{\partial E_z}{\partial x} = 0.
+\]
+
+Assim:
+\[
+\nabla \times \vec{E} = k E_0 \cos(k y - \omega t) \, \hat{x}.
+\]
+
+\section*{3. Lei de Faraday}
+
+Pela lei de Faraday:
+\[
+\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}.
+\]
+
+Logo:
+\[
+\frac{\partial \vec{B}}{\partial t} = -\nabla \times \vec{E} = -k E_0 \cos(k y - \omega t) \, \hat{x}.
+\]
+
+\section*{4. Integração no tempo}
+
+Para encontrar \(\vec{B}(y,t)\), integramos no tempo:
+\[
+\vec{B}(y,t) = \int \frac{\partial \vec{B}}{\partial t} \, dt = -k E_0 \int \cos(k y - \omega t) \, dt \, \hat{x}.
+\]
+
+Como \(y\) é constante na derivada temporal, podemos integrar diretamente:
+\[
+\int \cos(k y - \omega t) \, dt = -\frac{1}{\omega} \sin(k y - \omega t).
+\]
+
+Portanto:
+\[
+\vec{B}(y,t) = \frac{k E_0}{\omega} \sin(k y - \omega t) \, \hat{x}.
+\]
+
+\section*{5. Relação entre \(k\), \(\omega\) e \(c\)}
+
+No vácuo, sabemos que:
+\[
+c = \frac{\omega}{k} \quad \text{ou equivalentemente} \quad \frac{k}{\omega} = \frac{1}{c}.
+\]
+
+Substituindo:
+\[
+\vec{B}(y,t) = \frac{E_0}{c} \sin(k y - \omega t) \, \hat{x}.
+\]
+
+\section*{6. Resposta final}
+
+Portanto, a expressão para o campo magnético induzido é:
+\[
+\boxed{
+\vec{B}(y,t) = \frac{E_0}{c} \sin(k y - \omega t) \, \hat{x}
+}
+\]
+
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{A}}.
 \end{flushleft}
 
 \noindent\rule{\linewidth}{0.6pt}\\
@@ -1854,10 +2148,169 @@ dentro (\( r < R \)) e fora (\( r \geq R \)) da esfera é:
 
 \vspace{0.5cm}
 
+\begin{center}
+\textbf{Superfícies gaussianas para os casos \(r<R\) e \(r\geq R\)}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[scale=2]
+
+% Esfera carregada
+\fill[gray!10] (0,0) circle (1.2);
+\draw[thick] (0,0) circle (1.2);
+%\node at (0,0) {\( +Q \) uniformemente distribuído};
+
+% Superfície gaussiana interna (r<R)
+\draw[dashed, blue, thick] (0,0) circle (0.5);
+%\node[blue] at (0.75,0.2) {\( r<R \)};
+
+% Superfície gaussiana externa (r>R)
+\draw[dashed, red, thick] (0,0) circle (1.5);
+%\node[red] at (1.7,0.2) {\( r\geq R \)};
+
+% Marcas de raio R
+\draw[thick,->] (0,0) -- (0.85,-0.85) node[below] {\(R\)};
+
+% Raio interno
+\draw[thick,->,blue] (0,0) -- (0.35,0.35) node[above right] {\(r<R\)};
+
+% Raio externo
+\draw[thick,->,red] (0,0) -- (1.5,0) node[below right] {\(r\geq R\)};
+
+\end{tikzpicture}
+\end{center}
+
 \textcolor{red}{\textbf{Solução:}}\\
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\section*{1. Densidade de carga volumétrica}
+
+A carga está uniformemente distribuída no volume da esfera:
+\[
+\rho = \frac{Q}{\frac{4}{3} \pi R^3} = \frac{3Q}{4\pi R^3}.
+\]
+
+\section*{2. Lei de Gauss para dielétricos}
+
+No material dielétrico, o campo elétrico \( \vec{E} \) está relacionado ao deslocamento elétrico \( \vec{D} \) por:
+\[
+\vec{D} = \varepsilon \vec{E}.
+\]
+
+A lei de Gauss para \( \vec{D} \) em forma integral:
+\[
+\oint_{S} \vec{D} \cdot d\vec{A} = Q_{\text{int}}.
+\]
+
+Para simetria esférica, escolhemos uma superfície gaussiana esférica de raio \( r \).  
+
+---
+
+\section*{3. Campo dentro da esfera (\( r < R \))}
+
+A carga contida em uma esfera de raio \( r < R \) é:
+\[
+Q_{\text{int}}(r) = \rho \cdot \frac{4}{3} \pi r^3.
+\]
+
+Aplicando a lei de Gauss para \( D_r \):
+\[
+D_r \cdot 4\pi r^2 = Q_{\text{int}}(r) \quad \Rightarrow \quad D_r = \frac{\rho r}{3}.
+\]
+
+Como \( \vec{E} = \vec{D}/\varepsilon \), temos:
+\[
+E_r(r<R) = \frac{D_r}{\varepsilon} = \frac{\rho r}{3\varepsilon}.
+\]
+
+Substituindo \(\rho\):
+\[
+E_r(r<R) =
+\frac{1}{3\varepsilon} \cdot \frac{3Q}{4\pi R^3} \cdot r =
+\frac{Q r}{4\pi \varepsilon R^3}.
+\]
+
+---
+
+\section*{4. Campo fora da esfera (\( r \geq R \))}
+
+Para \( r \geq R \), toda a carga \( Q \) está contida:
+\[
+D_r \cdot 4\pi r^2 = Q \quad \Rightarrow \quad D_r = \frac{Q}{4\pi r^2}.
+\]
+
+Logo:
+\[
+E_r(r \geq R) =
+\frac{D_r}{\varepsilon} =
+\frac{Q}{4\pi \varepsilon r^2}.
+\]
+
+---
+
+\section*{5. Resposta final}
+
+O campo elétrico \( E_r \) em todos os pontos do espaço é dado por:
+\[
+\boxed{
+E_r(r) =
+\begin{cases}
+\dfrac{Q r}{4\pi \varepsilon R^3}, & r < R \\[12pt]
+\dfrac{Q}{4\pi \varepsilon r^2}, & r \geq R
+\end{cases}
+}
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{C}}.
 \end{flushleft}
+
+\begin{center}
+\textbf{Campo elétrico \(E(r)\) em função de \(r\)}
+\end{center}
+
+O campo elétrico radial \(E(r)\) em uma esfera uniformemente carregada com raio \(R\) é dado por:
+\[
+E(r) =
+\begin{cases}
+\displaystyle \frac{Q r}{4\pi \varepsilon R^3}, & r < R \\[12pt]
+\displaystyle \frac{Q}{4\pi \varepsilon r^2}, & r \geq R
+\end{cases}
+\]
+
+O gráfico abaixo mostra qualitativamente o comportamento de \(E(r)\) em função de \(r\).
+
+\bigskip
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = left,
+    xlabel = {$r$},
+    ylabel = {$E(r)$},
+    xmin=0, xmax=2,
+    ymin=0, ymax=1.2,
+    xtick={0.5,1,1.5},
+    xticklabels={$0.5R$,$R$,$1.5R$},
+    ytick=\empty,
+    domain=0:2,
+    samples=100,
+    width=12cm,
+    height=8cm
+]
+
+% Dentro da esfera: E ~ r
+\addplot[blue, thick, domain=0:1] {x};
+% Fora da esfera: E ~ 1/r^2
+\addplot[blue, thick, domain=1:2] {1/(x*x)};
+
+% Linha pontilhada em r=R
+\draw[dashed] (axis cs:1,0) -- (axis cs:1,1);
+
+% Marca R no eixo x
+\node[below] at (axis cs:1,0) {$R$};
+
+\end{axis}
+\end{tikzpicture}
+\end{center}
 
 \noindent\rule{\linewidth}{0.6pt}\\
 
@@ -1877,12 +2330,95 @@ irradiada por unidade de área
 \vspace{0.5cm}
 
 \textcolor{red}{\textbf{Solução:}}\\
+\section*{Variação da potência irradiada por um corpo negro ao dobrar a temperatura}
 
+De acordo com a \textbf{lei de Stefan--Boltzmann}, a potência irradiada por unidade de área \( P/A \) de um corpo negro é dada por:
+\[
+\frac{P}{A} = \sigma T^4,
+\]
+onde:
+\begin{itemize}
+    \item \( \sigma \approx 5,67 \times 10^{-8} \, \text{W/m}^2\cdot\text{K}^4 \) é a constante de Stefan--Boltzmann;
+    \item \( T \) é a temperatura absoluta do corpo em kelvins.
+\end{itemize}
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+Suponha que a temperatura inicial do corpo seja \( T_0 \), e a potência inicial irradiada por unidade de área seja:
+\[
+\left( \frac{P}{A} \right)_0 = \sigma T_0^4.
+\]
+
+Quando a temperatura dobra (\( T = 2T_0 \)), a nova potência irradiada por unidade de área é:
+\[
+\frac{P}{A} = \sigma (2T_0)^4 = \sigma \cdot 2^4 T_0^4 = 16 \cdot \sigma T_0^4.
+\]
+
+Ou seja:
+\[
+\frac{P}{A} = 16 \cdot \left( \frac{P}{A} \right)_0
+\]
+
+\section*{Resposta final}
+
+Se a temperatura de um corpo negro dobra, a potência irradiada por unidade de área aumenta 16 vezes.
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{D}}.
 \end{flushleft}
 
 \noindent\rule{\linewidth}{0.6pt}\\
+
+\section*{Aplicação da Lei do Deslocamento de Wien}
+
+A \textbf{Lei do Deslocamento de Wien} estabelece uma relação inversa entre o comprimento de onda no qual a emissão de radiação de um corpo negro é máxima e a sua temperatura absoluta. Matematicamente:
+\[
+\lambda_{\text{pico}} \cdot T = b
+\]
+
+onde:
+\begin{itemize}
+    \item \( \lambda_{\text{pico}} \) é o comprimento de onda de pico (em metros),
+    \item \( T \) é a temperatura absoluta (em kelvins),
+    \item \( b = 2,897 \times 10^{-3} \, \mathrm{m \cdot K} \) é a constante de Wien.
+\end{itemize}
+
+\subsection*{Importância e aplicações}
+
+A Lei de Wien é amplamente utilizada para:
+\begin{itemize}
+    \item Determinar a temperatura de estrelas, planetas e outros corpos celestes a partir de suas curvas espectrais.
+    \item Estimar a cor de um corpo aquecido (por exemplo, metais incandescentes em fundições).
+    \item Diagnóstico em processos industriais de aquecimento, fornos e lâmpadas.
+    \item Prever a emissão dominante de radiação térmica em diferentes temperaturas.
+\end{itemize}
+
+\subsection*{Exemplos práticos}
+
+\begin{enumerate}
+    \item \textbf{O Sol:}  
+    O pico de emissão do Sol está em aproximadamente \( \lambda_{\text{pico}} = 500\,\mathrm{nm} \) (luz verde). Aplicando a Lei de Wien:
+    \[
+    T = \frac{b}{\lambda_{\text{pico}}} = \frac{2,897 \times 10^{-3}}{500 \times 10^{-9}} \approx 5794\,\mathrm{K}.
+    \]
+    Portanto, a temperatura superficial do Sol é cerca de \( 5800\,\mathrm{K} \).
+
+    \item \textbf{Uma lâmpada incandescente:}  
+    Para uma lâmpada cujo filamento brilha com pico em \( \lambda_{\text{pico}} = 1000\,\mathrm{nm} \) (infravermelho próximo):
+    \[
+    T = \frac{2,897 \times 10^{-3}}{1000 \times 10^{-9}} \approx 2897\,\mathrm{K}.
+    \]
+    Essa é uma temperatura típica do filamento de tungstênio.
+
+    \item \textbf{Uma estrela fria:}  
+    Uma estrela com temperatura superficial \( T = 3000\,\mathrm{K} \) emite radiação de pico em:
+    \[
+    \lambda_{\text{pico}} = \frac{b}{T} = \frac{2,897 \times 10^{-3}}{3000} \approx 966\,\mathrm{nm}.
+    \]
+    O que está no infravermelho próximo.
+\end{enumerate}
+
+\subsection*{Resumo}
+
+A Lei de Wien é uma ferramenta fundamental para relacionar a cor aparente ou o comprimento de onda dominante da radiação emitida por 
+um corpo negro à sua temperatura, permitindo medições indiretas de temperatura em muitas áreas da ciência e tecnologia.
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Q52}}\\
@@ -1900,7 +2436,7 @@ Utilizando a Lei de Wien, que relaciona o comprimento de
 onda de pico da emissão de um corpo negro com a sua
 temperatura, selecione a resposta que mais se aproxima do
 resultado calculado para a temperatura desse corpo negro.
-(Dados: Constante de deslocamento de Wien $b = 2,897 \times 10^{-3}\,\mathrm{m}\,.\mathrm{K}.)$
+(Dados: Constante de deslocamento de Wien $b = 2{,}897 \times 10^{-3}\,\mathrm{m}\,.\mathrm{K}.)$
 
 \begin{itemize}
 \item[(A)] 3000 K.
@@ -1913,7 +2449,55 @@ resultado calculado para a temperatura desse corpo negro.
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\section*{Determinação da temperatura de um corpo negro usando a lei de Wien}
+
+A \textbf{lei do deslocamento de Wien} estabelece que:
+\[
+\lambda_{\text{pico}} \cdot T = b
+\]
+
+onde:
+\begin{itemize}
+    \item \( \lambda_{\text{pico}} \) é o comprimento de onda no qual a radiância espectral é máxima (em metros),
+    \item \( T \) é a temperatura absoluta do corpo negro (em kelvins),
+    \item \( b = 2,897 \times 10^{-3} \, \mathrm{m\cdot K} \) é a constante de deslocamento de Wien.
+\end{itemize}
+
+\section*{Dados do problema:}
+
+O pico da emissão ocorre em:
+\[
+\lambda_{\text{pico}} = 966 \, \mathrm{nm} = 966 \times 10^{-9} \, \mathrm{m} = 9,66 \times 10^{-7} \, \mathrm{m}.
+\]
+
+\section*{Cálculo da temperatura:}
+
+A temperatura é dada por:
+\[
+T = \frac{b}{\lambda_{\text{pico}}}
+\]
+
+Substituindo os valores:
+\[
+T = \frac{2,897 \times 10^{-3}}{9,66 \times 10^{-7}}.
+\]
+
+Efetuando a divisão:
+\[
+T \approx 2998 \, \mathrm{K}.
+\]
+
+\section*{Resposta final:}
+
+\[
+\boxed{
+T \approx 3000 \, \mathrm{K}
+}
+\]
+
+Portanto, a temperatura do corpo negro é aproximadamente \( \mathbf{3000\,K} \).
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{A}}.
 \end{flushleft}
 
 \noindent\rule{\linewidth}{0.6pt}\\
@@ -1937,7 +2521,84 @@ determinar a energia cinética máxima dos elétrons ejetados da superfície met
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\section*{Efeito Fotoelétrico: Cálculo da energia cinética máxima}
+
+Uma superfície metálica é iluminada com luz de comprimento de onda \( \lambda = 400\,\mathrm{nm} \), e sua função trabalho é:
+\[
+W_0 = 2{,}0\,\mathrm{eV}.
+\]
+
+Queremos calcular a energia cinética máxima \( K_{\text{máx}} \) dos elétrons ejetados.
+
+\section*{Equação do efeito fotoelétrico}
+
+A equação do efeito fotoelétrico é:
+\[
+E_f = W_0 + K_{\text{máx}},
+\]
+onde \(E_f\) é a energia do fóton incidente:
+\[
+E_f = h\nu = \frac{hc}{\lambda}.
+\]
+
+\section*{Conversão de unidades}
+
+O comprimento de onda em metros:
+\[
+\lambda = 400\,\mathrm{nm} = 400 \times 10^{-9}\,\mathrm{m}.
+\]
+
+A constante de Planck:
+\[
+h = 6{,}626 \times 10^{-34}\, \mathrm{J\cdot s}.
+\]
+
+Velocidade da luz:
+\[
+c = 3{,}0 \times 10^{8}\, \mathrm{m/s}.
+\]
+
+\section*{Energia do fóton}
+
+Calculamos \(E_f\) em joules:
+\[
+E_f = \frac{hc}{\lambda} =
+\frac{6{,}626 \times 10^{-34} \cdot 3{,}0 \times 10^{8}}{400 \times 10^{-9}}.
+\]
+
+Efetuando a conta:
+\[
+E_f \approx 4{,}97 \times 10^{-19}\, \mathrm{J}.
+\]
+
+Convertendo para elétron-volts (\(1\,\mathrm{eV} = 1{,}602 \times 10^{-19}\,\mathrm{J}\)):
+\[
+E_f = \frac{4{,}97 \times 10^{-19}}{1{,}602 \times 10^{-19}} \approx 3,1\,\mathrm{eV}.
+\]
+
+\section*{Energia cinética máxima}
+
+Usamos:
+\[
+K_{\text{máx}} = E_f - W_0.
+\]
+
+Substituindo os valores:
+\[
+K_{\text{máx}} = 3{,}1\,\mathrm{eV} - 2{,}0\,\mathrm{eV} = 1{,}1\,\mathrm{eV}.
+\]
+
+\section*{Resposta final}
+
+\[
+\boxed{
+K_{\text{máx}} \approx 1{,}1\,\mathrm{eV}
+}
+\]
+
+A energia cinética máxima dos elétrons ejetados é aproximadamente \(1{,}1\,\mathrm{eV}\).
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{B}}.
 \end{flushleft}
 
 \noindent\rule{\linewidth}{0.6pt}\\
@@ -1961,7 +2622,80 @@ fotoelétrico ocorra é a
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\section*{Efeito Fotoelétrico: Resolução e valores típicos da função trabalho}
+
+Quando luz incide sobre a superfície de um metal, elétrons podem ser ejetados se a energia do fóton \( E_f \) for maior ou igual à função trabalho \( W_0 \) do metal:
+\[
+E_f = W_0 + K_{\text{máx}}
+\]
+
+onde:
+\begin{itemize}
+    \item \( E_f = \frac{hc}{\lambda} \) é a energia do fóton;
+    \item \( W_0 \) é a função trabalho do metal;
+    \item \( K_{\text{máx}} \) é a energia cinética máxima dos elétrons.
+\end{itemize}
+
+\section*{Resolução do problema:}
+
+\textbf{Dados:}
+\[
+\lambda = 400\,\mathrm{nm}, \quad W_0 = 2{,}0\,\mathrm{eV}, \quad hc = 1240\,\mathrm{eV\cdot nm}.
+\]
+
+Energia do fóton:
+\[
+E_f = \frac{1240}{400} = 3{,}1\,\mathrm{eV}.
+\]
+
+Energia cinética máxima:
+\[
+K_{\text{máx}} = E_f - W_0 = 3{,}1 - 2{,}0 = 1{,}1\,\mathrm{eV}.
+\]
+
+\textbf{Resposta:}
+\[
+\boxed{
+K_{\text{máx}} \approx 1{,}1\,\mathrm{eV}
+}
+\]
+
+\section*{Função trabalho de alguns metais e comprimentos de onda limites:}
+
+A função trabalho \( W_0 \) está relacionada ao comprimento de onda máximo \( \lambda_{\text{lim}} \) para que o efeito fotoelétrico ocorra:
+\[
+\lambda_{\text{lim}} = \frac{hc}{W_0}
+\]
+
+com \( hc = 1240\,\mathrm{eV\cdot nm} \).
+
+\bigskip
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Metal} & \textbf{Função trabalho \( W_0~(\mathrm{eV}) \)} & \textbf{\( \lambda_{\text{lim}}~(\mathrm{nm}) \)} \\
+\hline
+Césio (Cs)     & 1,9 & 653 \\ \hline
+Potássio (K)   & 2,3 & 539 \\ \hline
+Sódio (Na)     & 2,7 & 459 \\ \hline
+Cálcio (Ca)    & 3,2 & 388 \\ \hline
+Cobre (Cu)     & 4,7 & 264 \\ \hline
+Prata (Ag)     & 4,3 & 288 \\ \hline
+Ouro (Au)      & 5,1 & 243 \\ \hline
+\hline
+\end{tabular}
+\end{center}
+
+\section*{Resumo:}
+\begin{itemize}
+    \item A energia cinética máxima dos elétrons ejetados é a diferença entre a energia do fóton incidente e a função trabalho.
+    \item Quanto menor a função trabalho, maior o comprimento de onda limite para o efeito fotoelétrico.
+    \item Metais alcalinos (como césio e potássio) são mais fáceis de ionizar.
+\end{itemize}
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{C}}.
 \end{flushleft}
 
 \noindent\rule{\linewidth}{0.6pt}\\
@@ -1987,7 +2721,74 @@ de onda do fóton após o espalhamento, que é de:
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\section*{Efeito Compton: Cálculo do novo comprimento de onda do fóton}
+
+Um fóton com comprimento de onda inicial:
+\[
+\lambda_0 = 0{,}10\,\mathrm{nm} = 1{,}0 \times 10^{-10}\,\mathrm{m}
+\]
+
+é espalhado por um elétron inicialmente em repouso, formando um ângulo de:
+\[
+\theta = 60^\circ.
+\]
+
+Sabemos que:
+\[
+\cos 60^\circ = 0{,}5
+\]
+
+e a \textbf{constante de Compton} do elétron é:
+\[
+\lambda_C = 2{,}43 \times 10^{-12}\,\mathrm{m}.
+\]
+
+\section*{Fórmula do efeito Compton}
+
+A variação no comprimento de onda do fóton é dada por:
+\[
+\Delta \lambda = \lambda_C (1 - \cos\theta)
+\]
+
+Substituindo os valores:
+\[
+\Delta \lambda =
+2{,}43 \times 10^{-12} \cdot (1 - 0{,}5) =
+2{,}43 \times 10^{-12} \cdot 0{,}5 =
+1{,}215 \times 10^{-12}\,\mathrm{m}.
+\]
+
+\section*{Novo comprimento de onda}
+
+O novo comprimento de onda do fóton é:
+\[
+\lambda = \lambda_0 + \Delta\lambda
+\]
+
+Substituindo:
+\[
+\lambda =
+1{,}0 \times 10^{-10} + 1{,}215 \times 10^{-12} =
+1{,}01215 \times 10^{-10}\,\mathrm{m}.
+\]
+
+Convertendo para nanômetros (\(1\,\mathrm{nm} = 10^{-9}\,\mathrm{m}\)):
+\[
+\lambda =
+0{,}101215\,\mathrm{nm}.
+\]
+
+\section*{Resposta final}
+
+\[
+\boxed{
+\lambda \approx 0{,}1012\,\mathrm{nm}
+}
+\]
+
+O novo comprimento de onda do fóton espalhado é aproximadamente \(0{,}1012\,\mathrm{nm}\).
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{A}}.
 \end{flushleft}
 
 \noindent\rule{\linewidth}{0.6pt}\\
@@ -2011,7 +2812,154 @@ varia no intervalo:
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\section*{Demonstração da relação entre os ângulos no efeito Compton}
+
+No efeito Compton, um fóton incide com momento \( \vec{p}_\gamma \) e energia \( E_\gamma = h\nu \) sobre um elétron em repouso.  
+Após a colisão:
+\begin{itemize}
+    \item o fóton é espalhado com ângulo \( \varphi \) e comprimento de onda aumentado (\( \lambda' \)),
+    \item o elétron recua com ângulo \( \theta \) e energia cinética \( K \).
+\end{itemize}
+
+\subsection*{Conservação da quantidade de movimento}
+
+No sistema de coordenadas onde o fóton inicial se propaga ao longo do eixo \(x\), temos:
+\[
+\vec{p}_\gamma = p_\gamma \hat{x}
+\]
+
+e após a colisão:
+\[
+\vec{p}_\gamma' = p_\gamma' \bigl( \cos\varphi\,\hat{x} + \sin\varphi\,\hat{y} \bigr)
+\]
+\[
+\vec{p}_e = p_e \bigl( \cos\theta\,\hat{x} + \sin\theta\,\hat{y} \bigr)
+\]
+
+\subsection*{Componentes no eixo \(x\)}
+
+\[
+p_\gamma = p_\gamma' \cos\varphi + p_e \cos\theta
+\]
+
+\subsection*{Componentes no eixo \(y\)}
+
+\[
+0 = p_\gamma' \sin\varphi - p_e \sin\theta
+\]
+
+Da segunda equação, obtemos:
+\[
+p_e \sin\theta = p_\gamma' \sin\varphi
+\]
+
+Da primeira equação, isolamos \( p_e \cos\theta \):
+\[
+p_e \cos\theta = p_\gamma - p_\gamma' \cos\varphi
+\]
+
+\subsection*{Tangente do ângulo \( \theta \)}
+
+Dividindo as componentes \(y/x\), temos:
+\[
+\tan\theta = \frac{p_e \sin\theta}{p_e \cos\theta} =
+\frac{p_\gamma' \sin\varphi}{p_\gamma - p_\gamma' \cos\varphi}
+\]
+
+\subsection*{Expressando em termos de energias}
+
+Sabemos que \( p_\gamma = \frac{E_\gamma}{c} \) e \( p_\gamma' = \frac{E_\gamma'}{c} \), onde \( E_\gamma' \) é a energia do fóton espalhado:
+\[
+E_\gamma' = \frac{E_\gamma}{1 + \frac{E_\gamma}{m_e c^2}(1 - \cos\varphi)}
+\]
+
+Substituímos \( p_\gamma' \) na equação anterior para obter \( \tan\theta \) em função de \( \varphi \) e \( E_\gamma \).
+
+\section*{Resultado final:}
+
+A relação geral é:
+\[
+\tan\theta =
+\frac{\sin\varphi}{\displaystyle \frac{E_\gamma}{E_\gamma'} - \cos\varphi}
+\]
+
+ou ainda, substituindo \( E_\gamma' \):
+\[
+\tan\theta =
+\frac{\sin\varphi}{\displaystyle \left( 1 + \frac{E_\gamma}{m_e c^2}(1 - \cos\varphi) \right) - \cos\varphi}
+\]
+
+Essa é a relação entre o ângulo de espalhamento do fóton \( \varphi \) e o ângulo de recuo do elétron \( \theta \) no efeito Compton.
+
+O \(E_\gamma\) é a energia inicial do fóton, e definimos a razão adimensional:
+
+\[
+\alpha =
+\frac{E_\gamma}{m_e c^2}.
+\]
+
+Substituindo \(\alpha\), a expressão fica:
+
+\[
+\tan\theta =
+\frac{\sin\varphi}{
+\big(1 + \alpha(1-\cos\varphi)\big) - \cos\varphi}.
+\]
+
+\section*{Limite quando \(\varphi \to 0^\circ\)}
+
+Para \(\varphi \to 0^\circ\), temos:
+\[
+\sin\varphi \to 0, \quad \cos\varphi \to 1.
+\]
+
+No denominador:
+\[
+\big(1 + \alpha(1-\cos\varphi)\big) - \cos\varphi 
+\to (1 + 0) - 1 = 0.
+\]
+
+Portanto:
+\[
+\tan\theta \to 0 \quad \implies \quad \theta \to 0.
+\]
+
+\section*{Limite quando \(\varphi = 90^\circ\)}
+
+Para \(\varphi = 90^\circ\), temos:
+\[
+\sin\varphi = 1, \quad \cos\varphi = 0.
+\]
+
+No denominador:
+\[
+\big(1 + \alpha(1-0)\big) - 0 =
+1 + \alpha.
+\]
+
+Logo:
+\[
+\tan\theta =
+\frac{1}{1+\alpha}.
+\]
+
+Observações:
+\begin{itemize}
+    \item Para fótons de baixa energia (\(\alpha \ll 1\)): \(1+\alpha \approx1\), então \(\tan\theta\approx1\), ou seja, \(\theta\approx45^\circ\).
+    \item Para fótons de alta energia (\(\alpha\gg1\)): \(1+\alpha\) é grande, então \(\tan\theta\approx0\), ou seja, \(\theta\) pequeno.
+\end{itemize}
+
+Portanto, mesmo para \(\varphi=90^\circ\), o ângulo \(\theta\) permanece \textbf{menor que \(90^\circ\)}.
+
+\section*{Conclusão}
+
+O ângulo de recuo do elétron \(\theta\) varia no intervalo:
+\[
+\boxed{0^\circ \leq \theta < 90^\circ}
+\]
+
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{B}}.
 \end{flushleft}
 
 \noindent\rule{\linewidth}{0.6pt}\\
@@ -2034,7 +2982,85 @@ a energia total de um elétron movendo-se com uma velocidade de \( \left( \frac{
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\section*{Cálculo da energia total relativística do elétron}
+
+\textbf{Dados:}
+\begin{itemize}
+    \item Massa do elétron: \(m_e = 9{,}11 \times 10^{-31}\, \mathrm{kg}\)
+    \item Velocidade da luz: \(c = 3{,}0 \times 10^8\, \mathrm{m/s}\)
+    \item \(1\,\mathrm{eV} = 1{,}602 \times 10^{-19}\, \mathrm{J}\)
+    \item Velocidade do elétron: \(v = \frac{\sqrt{3}}{2} c\)
+\end{itemize}
+
+\subsection*{Fator de Lorentz}
+
+A energia total relativística do elétron é dada por:
+\[
+E = \gamma m_e c^2
+\]
+
+com o fator de Lorentz:
+\[
+\gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}}
+\]
+
+Sabemos que:
+\[
+\frac{v}{c} = \frac{\sqrt{3}}{2} \quad \implies \quad \left( \frac{v}{c} \right)^2 = \frac{3}{4}
+\]
+
+Portanto:
+\[
+\gamma = \frac{1}{\sqrt{1 - \frac{3}{4}}} =
+\frac{1}{\sqrt{\frac{1}{4}}} =
+2
+\]
+
+\subsection*{Energia de repouso do elétron}
+
+A energia de repouso do elétron é:
+\[
+E_0 = m_e c^2
+\]
+
+Substituindo os valores:
+\[
+E_0 =
+\left( 9{,}11 \times 10^{-31} \right) \cdot
+\left( 3{,}0 \times 10^8 \right)^2 =
+9{,}11 \times 10^{-31} \cdot 9{,}0 \times 10^{16} =
+8{,}199 \times 10^{-14}\, \mathrm{J}
+\]
+
+\subsection*{Energia total do elétron}
+
+\[
+E = \gamma E_0 =
+2 \cdot 8{,}199 \times 10^{-14} =
+1{,}6398 \times 10^{-13}\, \mathrm{J}
+\]
+
+\subsection*{Conversão para eV}
+
+Sabemos que \(1\,\mathrm{eV} = 1{,}602 \times 10^{-19}\, \mathrm{J}\), então:
+\[
+E =
+\frac{1{,}6398 \times 10^{-13}}{1{,}602 \times 10^{-19}} \approx
+1{,}024 \times 10^6\, \mathrm{eV} =
+1{,}024\,\mathrm{MeV}
+\]
+
+\subsection*{Resposta final:}
+
+\[
+\boxed{
+E \approx 1{,}02\, \mathrm{MeV}
+}
+\]
+
+\textbf{A energia total do elétron em movimento com velocidade \( \frac{\sqrt{3}}{2}c \) é aproximadamente: \(1{,}02\,\mathrm{MeV}\).}
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{C}}.
 \end{flushleft}
 
 \noindent\rule{\linewidth}{0.6pt}\\
@@ -2058,7 +3084,81 @@ durante esse tempo a distância percorrida e o tempo decorrido para um observado
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\section*{Problema: nave viajando a \(0{,}85c\)}
+
+Uma nave espacial viaja a uma velocidade \(v = 0{,}85c\), com \(c = 3{,}0 \times 10^8\, \mathrm{m/s}\).  
+O relógio a bordo da nave marca um tempo próprio \(t_0 = 1\,\mathrm{h}\).  
+Sabendo que \(\sqrt{0{,}2775} = 0{,}53\), queremos calcular:
+
+\begin{itemize}
+    \item A distância percorrida para um observador na Terra.
+    \item O tempo decorrido para um observador na Terra.
+\end{itemize}
+
+\subsection*{Fator de Lorentz}
+
+O tempo medido na Terra é dilatado:
+\[
+t = \gamma t_0
+\]
+
+com:
+\[
+\gamma = \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}
+\]
+
+Calculamos:
+\[
+\left( \frac{v}{c} \right) = 0{,}85 \quad \implies \quad \left( \frac{v}{c} \right)^2 = 0{,}7225
+\]
+
+Logo:
+\[
+1 - \frac{v^2}{c^2} = 1 - 0{,}7225 = 0{,}2775
+\]
+
+Como \(\sqrt{0{,}2775} = 0{,}53\), temos:
+\[
+\gamma = \frac{1}{0{,}53} \approx 1{,}89
+\]
+
+Assim:
+\[
+t = \gamma t_0 = 1{,}89 \cdot 1 = 1{,}89\,\mathrm{h} \approx 1{,}9\,\mathrm{h}
+\]
+
+\subsection*{Distância percorrida na Terra}
+
+Na Terra, a distância percorrida é:
+\[
+d = v t
+\]
+
+com:
+\[
+v = 0{,}85 \cdot 3{,}0 \times 10^8 = 2{,}55 \times 10^8\, \mathrm{m/s}
+\]
+
+Convertendo \(t = 1{,}9\,\mathrm{h}\) para segundos:
+\[
+t = 1{,}9 \cdot 3600 = 6840\,\mathrm{s}
+\]
+
+Então:
+\[
+d = 2{,}55 \times 10^8 \cdot 6840 \approx 1{,}744 \times 10^{12}\,\mathrm{m} = 1{,}744 \times 10^9\,\mathrm{km} \approx 1{,}7 \times 10^9\,\mathrm{km}
+\]
+
+\subsection*{Resposta final:}
+
+\[
+\boxed{
+\text{Distância: } 1{,}7 \times 10^9\,\mathrm{km} \quad \text{Tempo: } 1{,}9\,\mathrm{h}
+}
+\]
+
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{A}}.
 \end{flushleft}
 
 \noindent\rule{\linewidth}{0.6pt}\\
@@ -2083,7 +3183,60 @@ administrada a um paciente, quanto tempo será necessário para que a quantidade
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\text{Dados:}
+
+\begin{itemize}
+    \item Meia-vida do Tecnécio-99m: \( T_{1/2} = 6 \) horas
+    \item Dose inicial: \( N_0 = 120\,\mathrm{mg} \)
+    \item Dose final desejada: \( N = 15\,\mathrm{mg} \)
+    \item \(\ln 2 = 0{,}693\)
+    \item \(\ln(0{,}125) = -2{,}079\)
+\end{itemize}
+
+\vspace{0.3cm}
+
+\text{A quantidade de isótopo após um tempo \(t\) é dada por:}
+
+\[
+N = N_0 e^{-\lambda t}
+\]
+
+\text{onde \(\lambda\) é a constante de decaimento.}
+
+\vspace{0.3cm}
+
+\text{A constante \(\lambda\) está relacionada à meia-vida por:}
+
+\[
+T_{1/2} = \frac{\ln 2}{\lambda} \implies \lambda = \frac{\ln 2}{T_{1/2}} = \frac{0{,}693}{6} = 0{,}1155\,\mathrm{h}^{-1}
+\]
+
+\vspace{0.3cm}
+
+\text{Queremos o tempo \(t\) para que a quantidade caia para \(15\,\mathrm{mg}\), ou seja:}
+
+\[
+\frac{N}{N_0} = e^{-\lambda t} \implies \ln\left(\frac{N}{N_0}\right) = -\lambda t \implies t = -\frac{1}{\lambda} \ln\left(\frac{N}{N_0}\right)
+\]
+
+\vspace{0.3cm}
+
+\text{Calculando:}
+
+\[
+\frac{N}{N_0} = \frac{15}{120} = 0{,}125
+\]
+
+\[
+t = -\frac{1}{0{,}1155} \ln(0{,}125) = -\frac{1}{0{,}1155} \times (-2{,}079) = \frac{2{,}079}{0{,}1155} \approx 18 \text{ horas}
+\]
+
+\vspace{0.3cm}
+
+\boxed{
+\text{Resposta: } t \approx 18 \text{ horas}}
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{D}}.
 \end{flushleft}
 
 \noindent\rule{\linewidth}{0.6pt}\\
@@ -2107,7 +3260,56 @@ Sabendo que a meia-vida do carbono-14 é de aproximadamente \(5730\) anos, a ida
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\text{Dados:}
+
+\begin{itemize}
+    \item Fração da atividade atual em relação à original: \(\frac{N}{N_0} = 12{,}5\% = 0{,}125\)
+    \item Meia-vida do carbono-14: \(T_{1/2} = 5730 \text{ anos}\)
+    \item \(\ln 2 = 0{,}693\)
+    \item \(\ln(0{,}125) = -2{,}079\)
+\end{itemize}
+
+\vspace{0.3cm}
+
+\text{A atividade após um tempo \(t\) é dada por:}
+
+\[
+N = N_0 e^{-\lambda t}
+\]
+
+\text{onde \(\lambda\) é a constante de decaimento.}
+
+\vspace{0.3cm}
+
+\text{Calculando \(\lambda\):}
+
+\[
+\lambda = \frac{\ln 2}{T_{1/2}} = \frac{0{,}693}{5730} \approx 1{,}21 \times 10^{-4}\, \text{ano}^{-1}
+\]
+
+\vspace{0.3cm}
+
+\text{Determinando o tempo \(t\):}
+
+\[
+\frac{N}{N_0} = e^{-\lambda t} \implies \ln\left(\frac{N}{N_0}\right) = -\lambda t \implies t = -\frac{1}{\lambda} \ln\left(\frac{N}{N_0}\right)
+\]
+
+\vspace{0.3cm}
+
+\text{Substituindo os valores:}
+
+\[
+t = -\frac{1}{1{,}21 \times 10^{-4}} \times \ln(0{,}125) = \frac{2{,}079}{1{,}21 \times 10^{-4}} \approx 17\,190 \text{ anos}
+\]
+
+\vspace{0.3cm}
+
+\boxed{
+\text{Resposta: } t \approx 17\,190 \text{ anos}
+}
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{D}}.
 \end{flushleft}
 
 \noindent\rule{\linewidth}{0.6pt}\\
