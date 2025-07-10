@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  6 JUL 2025 20:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  8 JUL 2025 23:28
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1711,229 +1711,245 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
 \openout6 = `main.toc'.
 
  [2]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 142.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 142.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 142.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-60.
+Overfull \hbox (4.15015pt too wide) in paragraph at lines 141--142
+\T1/lmr/m/n/12 Um [][][][][][] re-al-iza-dos por
+ []
 
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 143.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 143.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 143.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+54.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [3]
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 222.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4] [5] [6]
+Overfull \hbox (4.56436pt too wide) in paragraph at lines 324--325
+[][][][][][][] \T1/lmr/m/n/12 e trans-fer-ên-cia de calor
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
 
  []
 
-<figures/teoria_relatividade.png, id=249, 822.07124pt x 397.485pt>
+[8]
+<figures/teoria_relatividade.png, id=299, 822.07124pt x 397.485pt>
 File: figures/teoria_relatividade.png Graphic file (type png)
 <use figures/teoria_relatividade.png>
-Package pdftex.def Info: figures/teoria_relatividade.png  used on input line 23
-3.
+Package pdftex.def Info: figures/teoria_relatividade.png  used on input line 42
+4.
 (pdftex.def)             Requested size: 455.24411pt x 220.11551pt.
-[4]
-<figures/teoria_relatividade_1.png, id=259, 758.835pt x 342.5297pt>
+<figures/teoria_relatividade_1.png, id=300, 758.835pt x 342.5297pt>
 File: figures/teoria_relatividade_1.png Graphic file (type png)
 <use figures/teoria_relatividade_1.png>
 Package pdftex.def Info: figures/teoria_relatividade_1.png  used on input line 
-241.
+432.
 (pdftex.def)             Requested size: 455.24411pt x 205.49326pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--247
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
 
  []
 
-[5 <./figures/teoria_relatividade.png (PNG copy)> <./figures/teoria_relatividad
-e_1.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 282--283
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 338--339
-
- []
-
-[7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 399--400
-
- []
-
-[9]
+[9 <./figures/teoria_relatividade.png (PNG copy)>] [10 <./figures/teoria_relati
+vidade_1.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 473--474
 
  []
 
-[10] [11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 572--573
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 529--530
 
  []
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 697--698
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 590--591
 
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 718--719
+[13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 664--665
 
  []
 
-[15]
-<figures/solenoide.png, id=313, 561.59813pt x 325.215pt>
+[15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 763--764
+
+ []
+
+[17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 888--889
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 909--910
+
+ []
+
+[19]
+<figures/solenoide.png, id=354, 561.59813pt x 325.215pt>
 File: figures/solenoide.png Graphic file (type png)
 <use figures/solenoide.png>
-Package pdftex.def Info: figures/solenoide.png  used on input line 743.
+Package pdftex.def Info: figures/solenoide.png  used on input line 934.
 (pdftex.def)             Requested size: 250.38564pt x 144.99562pt.
- [16 <./figures/solenoide.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 796--797
+ [20 <./figures/solenoide.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 987--988
 
  []
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 857--858
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 1048--1049
 
  []
 
-[18] [19]
-Underfull \hbox (badness 10000) in paragraph at lines 949--950
+[22] [23]
+Underfull \hbox (badness 10000) in paragraph at lines 1140--1141
 
  []
 
-[20] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 1028--1029
+[24] [25]
+Underfull \hbox (badness 10000) in paragraph at lines 1219--1220
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1056--1057
-
- []
-
-[22] [23] [24]
-Underfull \hbox (badness 10000) in paragraph at lines 1168--1169
-
- []
-
-[25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 1300--1301
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 1247--1248
 
  []
 
 [27] [28]
+Underfull \hbox (badness 10000) in paragraph at lines 1359--1360
 
-LaTeX Warning: Command \c invalid in math mode on input line 1401.
+ []
+
+[29] [30]
+Underfull \hbox (badness 10000) in paragraph at lines 1491--1492
+
+ []
+
+[31] [32]
+
+LaTeX Warning: Command \c invalid in math mode on input line 1592.
 
 
-LaTeX Warning: Command \~ invalid in math mode on input line 1401.
+LaTeX Warning: Command \~ invalid in math mode on input line 1592.
 
-[29] [30pdfTeX warning (ext4): destination with the same identifier (name{equat
+[33] [34pdfTeX warning (ext4): destination with the same identifier (name{equat
 ion.13.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1478 \]
+l.1669 \]
          ]
-Underfull \hbox (badness 10000) in paragraph at lines 1498--1499
+Underfull \hbox (badness 10000) in paragraph at lines 1689--1690
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1515--1516
+Underfull \hbox (badness 10000) in paragraph at lines 1706--1707
 
  []
 
-[31] [32] [33]
-Underfull \hbox (badness 10000) in paragraph at lines 1636--1637
+[35] [36] [37]
+Underfull \hbox (badness 10000) in paragraph at lines 1827--1828
 
  []
 
-[34] [35]
-Underfull \hbox (badness 10000) in paragraph at lines 1721--1722
+[38] [39]
+Underfull \hbox (badness 10000) in paragraph at lines 1912--1913
 
  []
 
-[36] [37] [38]
-Underfull \hbox (badness 10000) in paragraph at lines 1884--1885
+[40] [41] [42]
+Underfull \hbox (badness 10000) in paragraph at lines 2075--2076
 
  []
 
-[39] [40]
-Underfull \hbox (badness 10000) in paragraph at lines 2009--2010
+[43] [44]
+Underfull \hbox (badness 10000) in paragraph at lines 2200--2201
 
  []
 
-[41] [42] [43]
-Underfull \hbox (badness 10000) in paragraph at lines 2177--2178
+[45] [46] [47]
+Underfull \hbox (badness 10000) in paragraph at lines 2368--2369
 
  []
 
-[44] [45]
-Underfull \hbox (badness 10000) in paragraph at lines 2371--2372
+[48] [49]
+Underfull \hbox (badness 10000) in paragraph at lines 2562--2563
 
  []
 
-[46] [47] [48]
-Underfull \hbox (badness 10000) in paragraph at lines 2483--2484
+[50] [51] [52]
+Underfull \hbox (badness 10000) in paragraph at lines 2674--2675
 
  []
 
-[49] [50]
-Underfull \hbox (badness 10000) in paragraph at lines 2599--2600
+[53] [54]
+Underfull \hbox (badness 10000) in paragraph at lines 2790--2791
 
  []
 
-[51] [52]
-Underfull \hbox (badness 10000) in paragraph at lines 2698--2699
+[55] [56]
+Underfull \hbox (badness 10000) in paragraph at lines 2889--2890
 
  []
 
-[53]
-Underfull \hbox (badness 10000) in paragraph at lines 2767--2768
+[57]
+Underfull \hbox (badness 10000) in paragraph at lines 2958--2959
 
  []
 
-[54] [55]
-Underfull \hbox (badness 10000) in paragraph at lines 2872--2873
+[58] [59]
+Underfull \hbox (badness 10000) in paragraph at lines 3063--3064
 
  []
 
-[56] [57] [58] [59] [60] [61]
-Underfull \hbox (badness 10000) in paragraph at lines 3135--3136
-
- []
-
-[62]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 3171.
- [63] [64] [65]
-Underfull \hbox (badness 10000) in paragraph at lines 3398--3399
+[60] [61] [62] [63] [64] [65]
+Underfull \hbox (badness 10000) in paragraph at lines 3326--3327
 
  []
 
 [66] [67] [68] [69]
-Underfull \hbox (badness 10000) in paragraph at lines 3554--3555
+Underfull \hbox (badness 10000) in paragraph at lines 3589--3590
 
  []
 
 [70] [71] [72] [73]
-Underfull \hbox (badness 10000) in paragraph at lines 3778--3779
+Underfull \hbox (badness 10000) in paragraph at lines 3745--3746
 
  []
 
-[74]
-Underfull \hbox (badness 10000) in paragraph at lines 3821--3822
+[74] [75] [76] [77]
+Underfull \hbox (badness 10000) in paragraph at lines 3969--3970
 
  []
 
-[75] [76]
-Underfull \hbox (badness 10000) in paragraph at lines 3937--3938
+[78]
+Underfull \hbox (badness 10000) in paragraph at lines 4012--4013
 
  []
 
-[77] [78]
-Underfull \hbox (badness 10000) in paragraph at lines 4031--4032
+[79] [80]
+Underfull \hbox (badness 10000) in paragraph at lines 4128--4129
+
+ []
+
+[81] [82]
+Underfull \hbox (badness 10000) in paragraph at lines 4222--4223
 
  []
 
@@ -1941,7 +1957,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4031--4032
 Package caption Warning: Unused \captionsetup[sub] on input line 57.
 See the caption package documentation for explanation.
 
-[79] (./main.aux)
+[83] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 485E63C3D689B1C1D7D585933C4FCB7B;7920.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1949,31 +1965,32 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56610 strings out of 478287
- 1306769 string characters out of 5849289
+ 56641 strings out of 478287
+ 1307044 string characters out of 5849289
  2062652 words of memory out of 5000000
- 73716 multiletter control sequences out of 15000+600000
- 559889 words of font info for 113 fonts, out of 8000000 for 9000
+ 73721 multiletter control sequences out of 15000+600000
+ 562884 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,96p,1835b,2513s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
 -ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/f
-onts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fo
-nts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (79 pages, 707637 bytes).
+onts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/l
+m/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on main.pdf (83 pages, 750328 bytes).
 PDF statistics:
- 793 PDF objects out of 1000 (max. 8388607)
- 639 compressed objects within 7 object streams
- 185 named destinations out of 1000 (max. 500000)
+ 839 PDF objects out of 1000 (max. 8388607)
+ 679 compressed objects within 7 object streams
+ 210 named destinations out of 1000 (max. 500000)
  424 words of extra memory for PDF output out of 10000 (max. 10000000)
 

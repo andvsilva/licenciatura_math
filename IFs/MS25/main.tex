@@ -134,6 +134,197 @@
 
 \justifying
 
+\section*{Ciclos Termodinâmicos — Descrição Detalhada}
+
+\subsection*{O que é um ciclo termodinâmico?}
+
+Um \colorbox{yellow!40}{\textbf{ciclo termodinâmico} é uma sequência de processos termodinâmicos} realizados por um sistema (geralmente um fluido de trabalho), que retorna ao seu estado inicial ao final do ciclo.
+
+O sistema troca calor \(Q\) com o meio externo e realiza trabalho \(W\), obedecendo à Primeira Lei da Termodinâmica:
+\[
+\Delta U = Q - W
+\]
+
+Como o \colorbox{yellow!40}{sistema retorna ao estado inicial (\(\Delta U = 0\))}, temos:
+\[
+Q_{\text{líquido}} = W_{\text{líquido}}
+\]
+
+\begin{itemize}
+  \item Se \colorbox{yellow!40}{o ciclo for \textbf{motor}: transforma calor em trabalho (\(W_{\text{líquido}} > 0\)).}
+  \item Se for \textbf{refrigerador/bomba de calor}: consome trabalho para transferir calor de um reservatório frio para um quente.
+\end{itemize}
+
+\subsection*{Ciclos Motores (Máquinas Térmicas)}
+
+\subsubsection*{\colorbox{yellow!40}{Ciclo de Carnot}}
+
+Ciclo ideal com a máxima eficiência possível entre duas temperaturas \(T_q\) (quente) e \(T_f\) (fria).
+
+\begin{enumerate}
+  \item \colorbox{green!30}{Isotérmica a \(T_q\) (expansão com entrada de calor \(Q_q\))}
+  \item \colorbox{green!30}{Adiabática (expansão até \(T_f\))}
+  \item \colorbox{green!30}{Isotérmica a \(T_f\) (compressão com rejeição de calor \(Q_f\))}
+  \item \colorbox{green!30}{Adiabática (compressão até \(T_q\))}
+\end{enumerate}
+
+Eficiência ideal:
+\[
+\boxed{
+\eta_C = 1 - \frac{T_f}{T_q}
+}
+\]
+
+\section*{O Ciclo de Carnot é Irreversível?}
+
+\textbf{Resposta curta:} \textbf{Não. O ciclo de Carnot é, por definição, completamente reversível.}
+
+\subsection*{Por quê?}
+
+O ciclo de Carnot é um modelo teórico ideal que estabelece o limite máximo de eficiência entre duas temperaturas \( T_q \) (quente) e \( T_f \) (fria). Ele é composto por quatro transformações \textbf{reversíveis}:
+\begin{itemize}
+  \item Duas isotérmicas reversíveis:
+    \begin{itemize}
+      \item Expansão isotérmica a \( T_q \) (absorve calor \( Q_q \))
+      \item Compressão isotérmica a \( T_f \) (rejeita calor \( Q_f \))
+    \end{itemize}
+  \item Duas adiabáticas reversíveis:
+    \begin{itemize}
+      \item Expansão adiabática (sem troca de calor)
+      \item Compressão adiabática (sem troca de calor)
+    \end{itemize}
+\end{itemize}
+
+Cada processo ocorre de modo infinitamente lento, mantendo o sistema em equilíbrio e sem produção de entropia:
+\[
+\oint \frac{\delta Q}{T} = 0
+\]
+
+\subsection*{Na prática}
+
+Nenhuma máquina real pode executar um ciclo de Carnot, pois:
+\begin{itemize}
+  \item As trocas infinitesimais de calor requerem tempo infinito.
+  \item Sempre há atrito, dissipação e gradientes de temperatura.
+\end{itemize}
+
+Portanto:
+\begin{center}
+
+\textbf{Ciclo de Carnot ideal: reversível e eficiência máxima.}\\
+\textbf{Máquinas reais: irreversíveis e menos eficientes.}
+\end{center}
+
+\begin{table}[h!]
+\centering
+\small
+\caption{Comparação entre o Ciclo de Carnot e Ciclo Real}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Característica} & \textbf{Ciclo de Carnot (Ideal)} & \textbf{Ciclo Real} \\ \hline
+\textbf{Reversibilidade} 
+& Totalmente reversível & Irreversível (perdas) \\ \hline
+\textbf{Produção/entropia} 
+& Zero & Maior que zero \\ \hline
+\textbf{Eficiência} 
+& Máxima teórica & Menor que Carnot \\ \hline
+\textbf{Processos} 
+& Isotérmicos/adiabáticos & Processos com dissipação\\ \hline
+\textbf{Velocidade/operação} 
+& Infinitamente lenta & Finita \\ \hline
+\textbf{Aplicabilidade} 
+& Apenas modelo teórico & Realizado em motores/máquinas \\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsubsection*{Ciclo Otto}
+
+Modelo ideal para motores a gasolina (ignição por centelha).
+
+\begin{enumerate}
+  \item Compressão adiabática
+  \item Aquecimento a volume constante (explosão da mistura combustível-ar)
+  \item Expansão adiabática
+  \item Resfriamento a volume constante (descarga dos gases)
+\end{enumerate}
+
+Eficiência ideal:
+\[
+\eta_O = 1 - \frac{1}{r^{\gamma-1}}, \quad r = \frac{V_{\text{máx}}}{V_{\text{mín}}}, \quad \gamma = \frac{c_p}{c_v}
+\]
+
+\subsubsection*{Ciclo Diesel}
+
+Modelo para motores diesel (ignição por compressão). Difere do Otto: calor adicionado a pressão constante.
+
+\begin{enumerate}
+  \item Compressão adiabática
+  \item Aquecimento a pressão constante
+  \item Expansão adiabática
+  \item Resfriamento a volume constante
+\end{enumerate}
+
+\subsubsection*{Ciclo de Brayton (ou Joule)}
+
+Usado em turbinas a gás e motores a jato.
+
+\begin{enumerate}
+  \item Compressão adiabática
+  \item Aquecimento a pressão constante
+  \item Expansão adiabática
+  \item Resfriamento a pressão constante
+\end{enumerate}
+
+\subsection*{Ciclos de Refrigeração e Bombas de Calor}
+
+\subsubsection*{Ciclo inverso de Carnot}
+
+Mesmo princípio do Carnot, mas “ao contrário”. Usa trabalho para transferir calor de \(T_f\) para \(T_q\).
+
+Coeficiente de performance (COP):
+\begin{itemize}
+  \item Refrigerador: 
+  \[
+  COP_R = \frac{T_f}{T_q - T_f}
+  \]
+  \item Bomba de calor: 
+  \[
+  COP_B = \frac{T_q}{T_q - T_f}
+  \]
+\end{itemize}
+
+\subsubsection*{Ciclo de Compressão de Vapor}
+
+Usado em geladeiras e ar-condicionado.
+
+\begin{enumerate}
+  \item Compressão adiabática (fluido é comprimido e aquecido)
+  \item Condensação a pressão constante (rejeita calor para o ambiente)
+  \item Expansão isentrópica (queda de \(P\) e \(T\))
+  \item Vaporização a pressão constante (absorve calor do ambiente interno)
+\end{enumerate}
+
+\subsection*{Resumo das Grandezas Importantes}
+
+Eficiência térmica de uma máquina térmica:
+\[
+\eta = \frac{W_{\text{líquido}}}{Q_{\text{quente}}}
+\]
+
+COP para refrigeradores e bombas:
+\begin{itemize}
+  \item Refrigerador: \(COP_R = \frac{Q_f}{W}\)
+  \item Bomba de calor: \(COP_B = \frac{Q_q}{W}\)
+\end{itemize}
+
+\subsection*{Observação Prática}
+
+\begin{itemize}
+  \item \colorbox{green!30}{Ciclos reais sempre têm perdas por atrito, irreversibilidades} e transferência de calor fora do equilíbrio — por isso a eficiência real é menor que a teórica.
+  \item O \colorbox{green!30}{\textbf{Ciclo de Carnot} é um limite superior (ideal), mas impraticável na prática.}
+\end{itemize}
+
 \begin{flushleft}
 \section{Quest\~ao 11 - Termodinâmica - Ciclo de Carnot}
 \textbf{\textcolor{blue}{\Large Quest\~ao 11}}\\
