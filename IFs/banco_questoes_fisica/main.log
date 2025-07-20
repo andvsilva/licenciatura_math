@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  9 JUL 2025 12:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  20 JUL 2025 10:23
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1719,60 +1719,160 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
 
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) (./main.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 3.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 139.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 139.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 139.
-<figures/ciclo_refrigerador.png, id=44, 572.1375pt x 356.0803pt>
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+48.
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [2] [3] [4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
+
+ []
+
+[7] [8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 627--628
+
+ []
+
+[11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 721--722
+
+ []
+
+[13] [14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 884--885
+
+ []
+
+
+Overfull \hbox (1.55807pt too wide) in paragraph at lines 886--888
+[][][][][][][]\T1/lmr/m/n/12 , como a
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 942--943
+
+ []
+
+[17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 1010--1011
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1015.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 1015.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\circ' on input line 1015.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1015.
+
+[19] [20]
+Underfull \hbox (badness 10000) in paragraph at lines 1129--1130
+
+ []
+
+[21] [22]
+Underfull \hbox (badness 10000) in paragraph at lines 1209--1210
+
+ []
+
+[23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 1312--1313
+
+ []
+
+[25] [26]
+Underfull \hbox (badness 10000) in paragraph at lines 1376--1377
+
+ []
+
+<figures/colisao_impulso.png, id=279, 706.89093pt x 300.3722pt>
+File: figures/colisao_impulso.png Graphic file (type png)
+<use figures/colisao_impulso.png>
+Package pdftex.def Info: figures/colisao_impulso.png  used on input line 1391.
+(pdftex.def)             Requested size: 364.19667pt x 154.75526pt.
+[27 <./figures/colisao_impulso.png (PNG copy)>] [28]
+Underfull \hbox (badness 10000) in paragraph at lines 1476--1477
+
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 1500--1501
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1524--1525
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1548--1549
+
+ []
+
+[30]
+<figures/ciclo_refrigerador.png, id=296, 572.1375pt x 356.0803pt>
 File: figures/ciclo_refrigerador.png Graphic file (type png)
 <use figures/ciclo_refrigerador.png>
-Package pdftex.def Info: figures/ciclo_refrigerador.png  used on input line 142
-.
+Package pdftex.def Info: figures/ciclo_refrigerador.png  used on input line 155
+9.
 (pdftex.def)             Requested size: 273.14923pt x 169.99837pt.
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures/ciclo_refrigerad
-or.png (PNG copy)>]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-78.
- (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [2]
-Underfull \hbox (badness 10000) in paragraph at lines 210--211
+ [31 <./figures/ciclo_refrigerador.png (PNG copy)>] [32]
+Underfull \hbox (badness 10000) in paragraph at lines 1627--1628
 
  []
 
 
-Overfull \hbox (10.39877pt too wide) in paragraph at lines 214--215
+Overfull \hbox (10.39877pt too wide) in paragraph at lines 1631--1632
 \T1/lmr/m/n/12 O [][][][][][], uti-
  []
 
-[3]
-Overfull \hbox (2.0176pt too wide) in paragraph at lines 223--224
+[33]
+Overfull \hbox (2.0176pt too wide) in paragraph at lines 1640--1641
 [][][][][][][]\T1/lmr/m/n/12 : o gás é com-prim-ido a tem-per-atura con-stante,
 
  []
 
-<figures/ciclo_stirling.png.png, id=71, 331.99031pt x 284.56313pt>
+<figures/ciclo_stirling.png.png, id=315, 331.99031pt x 284.56313pt>
 File: figures/ciclo_stirling.png.png Graphic file (type png)
 <use figures/ciclo_stirling.png.png>
-Package pdftex.def Info: figures/ciclo_stirling.png.png  used on input line 240
-.
+Package pdftex.def Info: figures/ciclo_stirling.png.png  used on input line 165
+7.
 (pdftex.def)             Requested size: 227.62206pt x 195.10692pt.
-[4] [5 <./figures/ciclo_stirling.png.png (PNG copy)>] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 320--321
+[34 <./figures/ciclo_stirling.png.png (PNG copy)>] [35]
+Underfull \hbox (badness 10000) in paragraph at lines 1737--1738
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 342--343
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 1759--1760
 
  []
 
@@ -1780,34 +1880,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 342--343
 Package caption Warning: Unused \captionsetup[sub] on input line 57.
 See the caption package documentation for explanation.
 
-[7] (./main.aux)
+[37] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 8232C0483B94111DDA1FB25F3CAB3A5B;3099.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56100 strings out of 478287
- 1297791 string characters out of 5849289
- 2056240 words of memory out of 5000000
- 73376 multiletter control sequences out of 15000+600000
- 531184 words of font info for 97 fonts, out of 8000000 for 9000
+ 56384 strings out of 478287
+ 1303148 string characters out of 5849289
+ 2064361 words of memory out of 5000000
+ 73589 multiletter control sequences out of 15000+600000
+ 543150 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,96p,1835b,1759s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/te
-xmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ma
-thit.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (7 pages, 237633 bytes).
+ 84i,12n,96p,1835b,1852s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/te
+xmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ma
+thex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/f
+onts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pf
+b></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmtt12.pfb>
+Output written on main.pdf (37 pages, 414369 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 99 compressed objects within 1 object stream
- 20 named destinations out of 1000 (max. 500000)
- 167 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 441 PDF objects out of 1000 (max. 8388607)
+ 337 compressed objects within 4 object streams
+ 83 named destinations out of 1000 (max. 500000)
+ 284 words of extra memory for PDF output out of 10000 (max. 10000000)
 
