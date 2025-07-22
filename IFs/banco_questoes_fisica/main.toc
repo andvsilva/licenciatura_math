@@ -10,6 +10,6 @@
 \contentsline {subsection}{\numberline {1.8}Quest\~ao 23 - Cinemática - For\c {c}a resultante - IFC 2023}{23}{subsection.1.8}%
 \contentsline {subsection}{\numberline {1.9}Quest\~ao 24 - Mecânica - IFC 2023}{25}{subsection.1.9}%
 \contentsline {subsection}{\numberline {1.10}Quest\~ao 25 - Impulso - IFC 2023}{27}{subsection.1.10}%
-\contentsline {subsection}{\numberline {1.11}Quest\~ao }{29}{subsection.1.11}%
-\contentsline {subsection}{\numberline {1.12}Quest\~ao }{30}{subsection.1.12}%
-\contentsline {subsection}{\numberline {1.13}Quest\~ao }{30}{subsection.1.13}%
+\contentsline {subsection}{\numberline {1.11}Quest\~ao 36 Leis de Conserva\c {c}\~ao - IFFAR 2023}{29}{subsection.1.11}%
+\contentsline {subsection}{\numberline {1.12}Quest\~ao 25 - Momento de In\'ercia - IFFAR 2023}{32}{subsection.1.12}%
+\contentsline {subsection}{\numberline {1.13}Quest\~ao }{34}{subsection.1.13}%

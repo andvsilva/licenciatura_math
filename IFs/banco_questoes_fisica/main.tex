@@ -592,7 +592,7 @@ Agora, substituímos o valor de \( N \) na equação da força centrípeta:
 Cancelando \( m \) de ambos os lados:
 
 \begin{equation}
-\frac{g \left( \sin\theta - \mu \cos\theta \right)}{\cos\theta + \mu \sin\theta} = \frac{v^2}{R}
+\frac{g \left( \sin\theta + \mu \cos\theta \right)}{\cos\theta - \mu \sin\theta} = \frac{v^2}{R}
 \end{equation}
 
 Multiplicando ambos os lados por \( R \):
@@ -1477,23 +1477,116 @@ A resposta correta é alternativa \colorbox{green!50}{\textbf{C}}.
 
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{\Large Quest\~ao }}\\
+\textbf{\textcolor{blue}{\Large Quest\~ao 36}}\\
 \noindent
-\subsection{Quest\~ao }
+\subsection{Quest\~ao 36 Leis de Conserva\c{c}\~ao - IFFAR 2023}
+Um corpo de massa $m$ é abandonado sobre um plano inclinado com um ângulo 
+$\theta = 60^\circ$ em relação à horizontal, como mostrado na Figura 5 abaixo, 
+com um coeficiente de atrito cinético $\mu = 0{,}3$. Seu centro de massa está 
+a uma altura $h$ acima da base do plano inclinado. Após descer o plano inclinado, 
+o corpo entra em um loop de raio $R = 2\,m$, onde a força de atrito é desprezível. 
+Considere a aceleração da gravidade $g = 10\,m/s^2$ e desconsidere a resistência do ar.
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{figures/loop.png} \\[0.3cm]
+\end{center}
+
+Qual é, aproximadamente, a menor altura $h$ para que o corpo atinja o ponto mais 
+alto do loop sem perder contato com ele?
 
 \begin{itemize}
-\item[(A)] 
-\item[(B)] 
-\item[(C)] 
-\item[(D)] 
-\item[(E)] 
+\item[A)] $h = 3{,}63\,m$
+\item[B)] $h = 4{,}15\,m$
+\item[C)] $h = 4{,}85\,m$
+\item[D)] $h = 5{,}15\,m$
+\item[E)] $h = 6{,}05\,m$
 \end{itemize}
 
 \vspace{0.5cm}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+Para que o corpo atinja o ponto mais alto do loop sem perder contato com a superfície, a força centrípeta mínima necessária no topo do loop deve ser igual ao peso do corpo:
+\[
+m g = m \frac{v_{\text{topo}}^2}{R} \implies v_{\text{topo}}^2 = gR
+\]
+
+A energia inicial do corpo no topo do plano inclinado é:
+\[
+E_i = m g h
+\]
+
+Ao descer o plano, há uma perda de energia devido ao atrito. Quando o corpo atinge o topo do loop, ele deve ter energia suficiente para estar a uma altura de $2R$ com velocidade $v_{\text{topo}}$ calculada acima. Assim, a energia final no topo do loop é:
+\[
+E_f = m g (2R) + \frac{1}{2} m v_{\text{topo}}^2
+\]
+
+Substituindo $v_{\text{topo}}^2 = gR$, temos:
+\[
+E_f = m g (2R) + \frac{1}{2} m g R = m g \left( 2R + \frac{R}{2} \right) = m g \cdot \frac{5R}{2}
+\]
+
+O trabalho da força de atrito ao longo do plano inclinado é dado por:
+\[
+W_{\text{atrito}} = f_{\text{at}} \cdot L
+\]
+
+Onde $L$ é a distância percorrida no plano inclinado e $f_{\text{at}}$ é a força de atrito:
+\[
+f_{\text{at}} = \mu m g \cos\theta
+\]
+
+Pela geometria do plano inclinado:
+\[
+\sin\theta = \frac{h}{L} \implies L = \frac{h}{\sin\theta}
+\]
+
+Logo:
+\[
+W_{\text{atrito}} = \mu m g \cos\theta \cdot \frac{h}{\sin\theta} = \mu m g h \cot\theta
+\]
+
+Aplicando a conservação de energia, temos:
+\[
+m g h - W_{\text{atrito}} = E_f
+\]
+
+Substituindo $E_f$:
+\[
+m g h - \mu m g h \cot\theta = m g \cdot \frac{5R}{2}
+\]
+
+Cancelando $m g$:
+\[
+h - \mu h \cot\theta = \frac{5R}{2}
+\]
+
+Fatorando $h$:
+\[
+h \left( 1 - \mu \cot\theta \right) = \frac{5R}{2}
+\]
+
+Portanto:
+\[
+h = \frac{\frac{5R}{2}}{1 - \mu \cot\theta}
+\]
+
+Substituindo os valores fornecidos:
+\[
+R = 2\,m, \quad \mu = 0{,}3, \quad \theta = 60^\circ, \quad \cot 60^\circ = \frac{1}{\sqrt{3}} \approx 0{,}577
+\]
+
+\[
+h = \frac{5 \cdot 2 /2}{1 - 0{,}3 \cdot 0{,}577} = \frac{5}{1 - 0{,}173} = \frac{5}{0{,}827} \approx 6{,}05\,m
+\]
+
+\subsection*{Resposta:}
+
+\[
+\boxed{h \approx 6{,}05\,m}
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{E}}.
 
 \end{flushleft}
 
@@ -1501,23 +1594,104 @@ A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
 
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{\Large Quest\~ao }}\\
+\textbf{\textcolor{blue}{\Large Quest\~ao 25 }}\\
 \noindent
-\subsection{Quest\~ao }
+\subsection{Quest\~ao 25 - Momento de In\'ercia - IFFAR 2023}
+Uma barra fina e homogênea de massa $M$ e comprimento $L$ está apoiada perpendicularmente
+à sua maior dimensão, de forma que seu centro de massa está a uma distância $L/3$ do 
+ponto de apoio. Uma única força $F$, de módulo constante e perpendicular ao eixo da 
+barra, é aplicada em uma das extremidades da barra, provocando sua rotação em torno 
+do ponto de apoio, como mostra a Figura~1.
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{figures/barra_momento_de_inercia.png} \\[0.3cm]
+\end{center}
+
+A aceleração angular adquirida pela barra, devido à aplicação da força $F$, é de:
 
 \begin{itemize}
-\item[(A)] 
-\item[(B)] 
-\item[(C)] 
-\item[(D)] 
-\item[(E)] 
+\item[A)] $\alpha = \dfrac{30F}{7ML}$
+\item[B)] $\alpha = \dfrac{10F}{ML}$
+\item[C)] $\alpha = \dfrac{15F}{3ML}$
+\item[D)] $\alpha = \dfrac{18F}{7ML}$
+\item[E)] $\alpha = \dfrac{12F}{7ML}$
 \end{itemize}
 
 \vspace{0.5cm}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+Queremos calcular a aceleração angular $\alpha$ adquirida pela barra homogênea, sabendo que uma força $F$ é aplicada perpendicularmente em sua extremidade, provocando rotação em torno do ponto de apoio.
+
+\subsection*{1. Momento de inércia em torno do ponto de apoio}
+
+Para uma barra homogênea de comprimento $L$ e massa $M$, o momento de inércia em torno de um eixo perpendicular à barra passando pelo centro de massa é:
+\[
+I_{\text{cm}} = \frac{1}{12} M L^2
+\]
+
+Como a barra gira em torno de um ponto que está a uma distância $d$ do centro de massa, pelo Teorema de Steiner (ou dos eixos paralelos):
+\[
+I_O = I_{\text{cm}} + M d^2
+\]
+
+O centro de massa da barra está a $L/3$ do ponto de apoio. Logo, $d = L/3$:
+\[
+I_O = \frac{1}{12} M L^2 + M \left( \frac{L}{3} \right)^2
+\]
+
+Calculando:
+\[
+\left( \frac{L}{3} \right)^2 = \frac{L^2}{9}
+\]
+
+Então:
+\[
+I_O = \frac{1}{12} M L^2 + M \cdot \frac{L^2}{9} = M L^2 \left( \frac{1}{12} + \frac{1}{9} \right)
+\]
+
+Somamos as frações:
+\[
+\frac{1}{12} + \frac{1}{9} = \frac{3}{36} + \frac{4}{36} = \frac{7}{36}
+\]
+
+Portanto:
+\[
+I_O = \frac{7}{36} M L^2
+\]
+
+\subsection*{2. Torque da força $F$}
+
+A força $F$ é aplicada perpendicularmente à barra em sua extremidade, a uma distância de $L$ do ponto de apoio. O torque é dado por:
+\[
+\tau = F \cdot L
+\]
+
+\subsection*{3. Segunda Lei de Newton para rotações}
+
+Sabemos que:
+\[
+\tau = I_O \alpha
+\]
+
+Substituindo os valores de $\tau$ e $I_O$:
+\[
+F \left(L - \frac{L}{6} \right) = \left( \frac{7}{36} M L^2 \right) \alpha
+\]
+
+Resolvendo para $\alpha$:
+\[
+\alpha = \frac{5.36FL}{6.7M L^2}
+\]
+
+Ou seja:
+\[
+\boxed{
+\alpha = \frac{30 F}{7ML}
+}
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{A}}.
 
 \end{flushleft}
 
