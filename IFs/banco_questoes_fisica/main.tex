@@ -1699,30 +1699,187 @@ A resposta correta é alternativa \colorbox{green!50}{\textbf{A}}.
 
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{\Large Quest\~ao }}\\
+\textbf{\textcolor{blue}{\Large Quest\~ao 30 IFRN 2025}}\\
 \noindent
-\subsection{Quest\~ao }
+\subsection{Quest\~ao 30 IFRN 2025 - Mecânica - For\c{c}a Vari\'avel}
+
+Uma esfera r\'igida e maci\c{c}a de massa \( m \) se movimenta no espa\c{c}o com 
+velocidade constante \( \vec{v} \), cujo m\'odulo \'e \( v \). No instante \( t = 0 \), 
+passa a agir sobre a esfera uma for\c{c}a vari\'avel de intensidade \( F = kv \) e em 
+sentido oposto \`a velocidade \( \vec{v} \). Considerando \( k \) uma constante, 
+pode-se afirmar que, a partir do instante supracitado, a esfera percorre uma dist\^ancia 
+\( d \) at\'e atingir o repouso.
+
+A express\~ao que melhor representa o valor de \( d \) \'e:
 
 \begin{itemize}
-\item[(A)] 
-\item[(B)] 
-\item[(C)] 
-\item[(D)] 
-\item[(E)] 
+    \item[(A)] \( d = \dfrac{mk}{v} \)
+    \item[(B)] \( d = \dfrac{2mv}{k} \)
+    \item[(C)] \( d = \dfrac{mv}{2k} \)
+    \item[(D)] \( d = \dfrac{mv}{k} \)
 \end{itemize}
 
 \vspace{0.5cm}
 
 \textcolor{red}{\textbf{Solução:}}\\
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+A for\c{c}a que atua sobre a esfera \'e proporcional e oposta \`a sua velocidade:
+
+\[
+F = -kv
+\]
+
+Aplicando a Segunda Lei de Newton:
+
+\[
+F = m \frac{dv}{dt} \Rightarrow m \frac{dv}{dt} = -kv
+\Rightarrow \frac{dv}{dt} = -\frac{k}{m} v
+\]
+
+Temos uma equa\c{c}\~ao diferencial do tipo separ\'avel. Separando as vari\'aveis:
+
+\[
+\frac{dv}{v} = -\frac{k}{m} dt
+\]
+
+Integrando ambos os lados:
+
+\[
+\int \frac{dv}{v} = -\frac{k}{m} \int dt
+\Rightarrow \ln v = -\frac{k}{m}t + C
+\]
+
+Aplicando a condi\c{c}\~ao inicial \( v(0) = v \), obtemos \( C = \ln v \). Assim:
+
+\[
+\ln v(t) = \ln v - \frac{k}{m}t \Rightarrow v(t) = v e^{-\frac{k}{m}t}
+\]
+
+Como a velocidade \'e a derivada da posi\c{c}\~ao, temos:
+
+\[
+v(t) = \frac{dx}{dt} = v e^{-\frac{k}{m}t}
+\Rightarrow dx = v e^{-\frac{k}{m}t} dt
+\]
+
+Integrando a posi\c{c}\~ao desde \( t = 0 \) at\'e \( t = \infty \), temos a dist\^ancia total percorrida at\'e parar:
+
+\[
+d = \int_0^{\infty} v e^{-\frac{k}{m}t} dt
+\]
+
+\[
+d = v \int_0^{\infty} e^{-\frac{k}{m}t} dt = v \left[ -\frac{m}{k} e^{-\frac{k}{m}t} \right]_0^{\infty}
+\]
+
+\[
+d = v \left( 0 + \frac{m}{k} \cdot 1 \right) = \frac{mv}{k}
+\]
+
+\textbf{Resposta correta:} \(\boxed{d = \dfrac{mv}{k}}\). A resposta correta é alternativa \colorbox{green!50}{\textbf{D}}.
 
 \end{flushleft}
 
 \noindent\rule{\linewidth}{0.6pt}\\
 
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 21 IFRN 2025}}\\
+\noindent
+\subsection{Quest\~ao 21 IFRN 2025 - Colisão}
+A figura a seguir apresenta uma partícula A, de massa $m$ e velocidade $\vec{v}$, 
+colidindo frontalmente com uma partícula B de massa $2m$, que se encontra 
+inicialmente em repouso. Considerando que, durante a colisão, o coeficiente de 
+restituição foi de $0{,}8$, pode-se afirmar que a perda de energia cinética, durante a 
+colisão, foi de:
+
+\begin{center}
+\includegraphics[width=0.6\textwidth]{figures/colisao.png}
+\end{center}  
+
+\begin{itemize}
+\item[A)] 32\%.
+\item[B)] 20\%.
+\item[C)] 28\%.
+\item[D)] 24\%.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Seja:
+\begin{itemize}
+  \item Massa da partícula A: $m$
+  \item Velocidade inicial de A: $v$
+  \item Massa da partícula B: $2m$
+  \item Velocidade inicial de B: $0$
+  \item Coeficiente de restituição: $e = 0{,}8$
+\end{itemize}
+
+Sejam $v_1'$ e $v_2'$ as velocidades finais das partículas A e B, respectivamente.
+
+\textbf{1) Conservação da quantidade de movimento:}
+\[
+mv = mv_1' + 2mv_2' \Rightarrow v = v_1' + 2v_2' \tag{1}
+\]
+
+\textbf{2) Coeficiente de restituição:}
+\[
+e = \frac{v_2' - v_1'}{v - 0} = \frac{v_2' - v_1'}{v} = 0{,}8 \tag{2}
+\]
+
+Multiplicando (2) por $v$:
+\[
+v_2' - v_1' = 0{,}8v \Rightarrow v_2' = v_1' + 0{,}8v \tag{3}
+\]
+
+Substituindo (3) em (1):
+\[
+v = v_1' + 2(v_1' + 0{,}8v) = v_1' + 2v_1' + 1{,}6v = 3v_1' + 1{,}6v
+\Rightarrow 3v_1' = v - 1{,}6v = -0{,}6v
+\Rightarrow v_1' = -0{,}2v
+\]
+
+Substituindo em (3):
+\[
+v_2' = -0{,}2v + 0{,}8v = 0{,}6v
+\]
+
+\textbf{3) Energia cinética antes da colisão:}
+\[
+E_i = \frac{1}{2}mv^2
+\]
+
+\textbf{4) Energia cinética após a colisão:}
+\[
+E_f = \frac{1}{2}m(v_1')^2 + \frac{1}{2}(2m)(v_2')^2 
+= \frac{1}{2}m(-0{,}2v)^2 + m(0{,}6v)^2 
+\]
+
+\[
+E_f = \frac{1}{2}m(0{,}04v^2) + m(0{,}36v^2) 
+= 0{,}02mv^2 + 0{,}36mv^2 = 0{,}38mv^2
+\]
 
 
+\textbf{5) Perda de energia:}
+\[
+\Delta E = E_i - E_f = \frac{1}{2}mv^2 - 0{,}38mv^2 = 0{,}12mv^2
+\]
+
+\textbf{6) Porcentagem de perda:}
+\[
+\frac{\Delta E}{E_i} \times 100 = \frac{0{,}12mv^2}{0{,}5mv^2} \times 100 
+= \frac{0{,}12}{0{,}5} \times 100 = 24\%
+\]
+
+\textbf{Resposta:} \textbf{D) 24\%}
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{D}}.
+
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Q30 - IFC 2023 - As leis da Termodinâmica.}}\\
@@ -1931,6 +2088,195 @@ A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
 \end{flushleft}
 
 \noindent\rule{\linewidth}{0.6pt}\\
+
+\section{\large \textcolor{blue}{Circito El\'etrico}}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Q15 - IFSP 2015 - Teorema da Máxima Transferência de Potência}}\\
+\noindent
+
+\subsection{Quest\~ao 15 - IFSP 2015 - Teorema da Máxima Transferência de Potência}
+Para uma bateria com uma força eletromotriz (fem) \( \varepsilon \) e resistência 
+interna \( r \), qual o valor da resistência externa \( R \) a ser conectada aos 
+seus terminais para se obter a potência máxima dissipada pelo resistor?
+
+\begin{itemize}
+\item[(A)] 0
+\item[(B)] r
+\item[(C)] 2r
+\item[(D)] R
+\item[(E)] 2R
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+A corrente no circuito é dada por:
+\[
+I = \frac{\varepsilon}{R + r}
+\]
+
+A potência dissipada no resistor externo \( R \) é:
+\[
+P = I^2 R = \left( \frac{\varepsilon}{R + r} \right)^2 R = \frac{\varepsilon^2 R}{(R + r)^2}
+\]
+
+Para encontrar o valor de \( R \) que maximiza a potência \( P \), derivamos \( P \) em relação a \( R \):
+
+\[
+\frac{dP}{dR} = \varepsilon^2 \cdot \frac{(R + r)^2 - 2R(R + r)}{(R + r)^4}
+\]
+
+\[
+= \varepsilon^2 \cdot \frac{(R + r)[(R + r) - 2R]}{(R + r)^4}
+= \varepsilon^2 \cdot \frac{(R + r)(r - R)}{(R + r)^4}
+\]
+
+A derivada se anula quando:
+\[
+r - R = 0 \Rightarrow R = r
+\]
+
+Portanto, a potência dissipada no resistor é máxima 
+quando a resistência externa é igual à resistência interna da fonte.
+
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{B}}.
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\section{\large \textcolor{blue}{F\'isica Moderna}}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Q18 - IFSP 2015 - Efeito Doppler da Luz}}\\
+\noindent
+
+\subsection{Quest\~ao 18 - IFSP 2015 - Efeito Doppler da Luz}
+Um astrônomo, ao investigar uma galáxia distante, concluiu que ela se afastava 
+da Terra com velocidade aproximada de \( V = 0{,}5c \), onde \( c \) é a velocidade 
+da luz no vácuo. Esta conclusão foi possível através da análise das linhas espectrais 
+de emissão do hidrogênio. O cálculo da velocidade foi feito a partir do Efeito Doppler.\\
+
+\begin{itemize}
+\item[(A)] 385 nm
+\item[(B)] 378 nm
+\item[(C)] 803 nm
+\item[(D)] 918 nm
+\item[(E)] 1115 nm
+\end{itemize}
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Como a galáxia está se afastando, aplicamos a fórmula relativística do efeito Doppler para a luz:
+
+\[
+\lambda = \lambda_0 \cdot \sqrt{\frac{1 + \beta}{1 - \beta}} \quad \text{RED SHIFT} 
+\]
+
+Onde:
+
+\begin{itemize}
+    \item \( \lambda_0 = 656\,\text{nm} \) é o comprimento de onda emitido,
+    \item \( \beta = \frac{v}{c} = 0{,}5 \)
+\end{itemize}
+
+Substituindo:
+
+\[
+\lambda = 656 \cdot \sqrt{\frac{1 + 0{,}5}{1 - 0{,}5}} = 656 \cdot \sqrt{\frac{1{,}5}{0{,}5}} = 656 \cdot \sqrt{3}
+\]
+
+Sabendo que \( \sqrt{3} \approx 1{,}732 \):
+
+\[
+\lambda \approx 656 \cdot 1{,}732 \approx 1136{,}6\,\text{nm}
+\]
+
+\section*{Resposta}
+
+A alternativa mais próxima é:
+
+\[
+\boxed{\text{e) } 1115\,\text{nm}}
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{E}}.
+
+
+EXTRA:
+
+\section*{Efeito Doppler Relativístico para a Luz – \textit{Blue Shift}}
+
+Quando uma fonte de luz se aproxima do observador, ocorre o \textbf{desvio para o azul} (\textit{blue shift}). O comprimento de onda observado diminui, e a fórmula relativística do efeito Doppler é:
+
+\begin{equation}
+\lambda = \lambda_0 \cdot \sqrt{\frac{1 - \beta}{1 + \beta}} \quad \text{com} \quad \beta = \frac{v}{c}
+\end{equation}
+
+\subsection*{Exemplo}
+
+Considere a linha de emissão do hidrogênio com comprimento de onda:
+
+\[
+\lambda_0 = \SI{656}{\nano\meter}
+\]
+
+Se a galáxia estiver se aproximando da Terra com velocidade \( v = 0{,}5c \), temos:
+
+\[
+\beta = \frac{v}{c} = 0{,}5
+\]
+
+Aplicando na fórmula:
+
+\begin{align*}
+\lambda &= 656 \cdot \sqrt{\frac{1 - 0{,}5}{1 + 0{,}5}} \\
+        &= 656 \cdot \sqrt{\frac{0{,}5}{1{,}5}} \\
+        &= 656 \cdot \sqrt{\frac{1}{3}} \\
+        &\approx 656 \cdot 0{,}577 \\
+        &\approx \SI{378{,}7}{\nano\meter}
+\end{align*}
+
+\subsection*{Conclusão}
+
+O comprimento de onda observado é:
+
+\[
+\boxed{\lambda \approx \SI{378{,}7}{\nano\meter}}
+\]
+
+Isso indica um deslocamento para o azul, característico de uma aproximação da fonte luminosa.
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Q}}\\
+\noindent
+
+\subsection{Quest\~ao }
+
+\begin{itemize}
+\item[(A)] 
+\item[(B)] 
+\item[(C)] 
+\item[(D)] 
+\item[(E)] 
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+
 
 
 %%%%%%%% Bibliography 

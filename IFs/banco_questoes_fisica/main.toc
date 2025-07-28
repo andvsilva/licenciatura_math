@@ -1,15 +1,21 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {1}\large \leavevmode {\color {blue} As leis de Newton do Movimento}}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Quest\~ao 34 - Mecânica}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Quest\~ao 37 - Leis de Newton}{8}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Quest\~ao 40 - Mecânica - Trabalho/Força Vari\'avel}{12}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Quest\~ao 26 - Leis de Newton}{14}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Quest\~ao 31 - Lei da In\'ercia}{17}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Quest\~ao 32 - 2$^{\circ }$ Lei de Newton}{19}{subsection.1.6}%
-\contentsline {subsection}{\numberline {1.7}Quest\~ao 33 - For\c {c}a de atrito no plano inclinado com atrito}{21}{subsection.1.7}%
-\contentsline {subsection}{\numberline {1.8}Quest\~ao 23 - Cinemática - For\c {c}a resultante - IFC 2023}{23}{subsection.1.8}%
-\contentsline {subsection}{\numberline {1.9}Quest\~ao 24 - Mecânica - IFC 2023}{25}{subsection.1.9}%
-\contentsline {subsection}{\numberline {1.10}Quest\~ao 25 - Impulso - IFC 2023}{27}{subsection.1.10}%
-\contentsline {subsection}{\numberline {1.11}Quest\~ao 36 Leis de Conserva\c {c}\~ao - IFFAR 2023}{29}{subsection.1.11}%
-\contentsline {subsection}{\numberline {1.12}Quest\~ao 25 - Momento de In\'ercia - IFFAR 2023}{32}{subsection.1.12}%
-\contentsline {subsection}{\numberline {1.13}Quest\~ao }{34}{subsection.1.13}%
+\contentsline {section}{\numberline {1}\large \leavevmode {\color {blue} As leis de Newton do Movimento}}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Quest\~ao 34 - Mecânica}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Quest\~ao 37 - Leis de Newton}{9}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Quest\~ao 40 - Mecânica - Trabalho/Força Vari\'avel}{13}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Quest\~ao 26 - Leis de Newton}{15}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Quest\~ao 31 - Lei da In\'ercia}{18}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Quest\~ao 32 - 2$^{\circ }$ Lei de Newton}{20}{subsection.1.6}%
+\contentsline {subsection}{\numberline {1.7}Quest\~ao 33 - For\c {c}a de atrito no plano inclinado com atrito}{22}{subsection.1.7}%
+\contentsline {subsection}{\numberline {1.8}Quest\~ao 23 - Cinemática - For\c {c}a resultante - IFC 2023}{24}{subsection.1.8}%
+\contentsline {subsection}{\numberline {1.9}Quest\~ao 24 - Mecânica - IFC 2023}{26}{subsection.1.9}%
+\contentsline {subsection}{\numberline {1.10}Quest\~ao 25 - Impulso - IFC 2023}{28}{subsection.1.10}%
+\contentsline {subsection}{\numberline {1.11}Quest\~ao 36 Leis de Conserva\c {c}\~ao - IFFAR 2023}{30}{subsection.1.11}%
+\contentsline {subsection}{\numberline {1.12}Quest\~ao 25 - Momento de In\'ercia - IFFAR 2023}{33}{subsection.1.12}%
+\contentsline {subsection}{\numberline {1.13}Quest\~ao 30 IFRN 2025 - Mecânica - For\c {c}a Vari\'avel}{35}{subsection.1.13}%
+\contentsline {subsection}{\numberline {1.14}Quest\~ao 21 IFRN 2025 - Colisão}{37}{subsection.1.14}%
+\contentsline {section}{\numberline {2}\large \leavevmode {\color {blue}Circito El\'etrico}}{45}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Quest\~ao 15 - IFSP 2015 - Teorema da Máxima Transferência de Potência}{46}{subsection.2.1}%
+\contentsline {section}{\numberline {3}\large \leavevmode {\color {blue}F\'isica Moderna}}{47}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Quest\~ao 18 - IFSP 2015 - Efeito Doppler da Luz}{47}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Quest\~ao }{49}{subsection.3.2}%
