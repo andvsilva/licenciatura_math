@@ -14,8 +14,25 @@
 \contentsline {subsection}{\numberline {1.12}Quest\~ao 25 - Momento de In\'ercia - IFFAR 2023}{33}{subsection.1.12}%
 \contentsline {subsection}{\numberline {1.13}Quest\~ao 30 IFRN 2025 - Mecânica - For\c {c}a Vari\'avel}{35}{subsection.1.13}%
 \contentsline {subsection}{\numberline {1.14}Quest\~ao 21 IFRN 2025 - Colisão}{37}{subsection.1.14}%
-\contentsline {section}{\numberline {2}\large \leavevmode {\color {blue}Circito El\'etrico}}{45}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Quest\~ao 15 - IFSP 2015 - Teorema da Máxima Transferência de Potência}{46}{subsection.2.1}%
-\contentsline {section}{\numberline {3}\large \leavevmode {\color {blue}F\'isica Moderna}}{47}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Quest\~ao 18 - IFSP 2015 - Efeito Doppler da Luz}{47}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Quest\~ao }{49}{subsection.3.2}%
+\contentsline {subsection}{\numberline {1.15}Quest\~ao Q51 - IFSP 2015 - Polia com Momento de Inércia}{39}{subsection.1.15}%
+\contentsline {section}{\numberline {2}\large \leavevmode {\color {blue}As leis de conservação na Mecânica Clássica}}{42}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Quest\~ao - Medidor de Vazão (Tubo de Venturi)}{42}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Quest\~ao }{43}{subsection.2.2}%
+\contentsline {section}{\numberline {3}\large \leavevmode {\color {blue}Oscilações e ondas}}{43}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Quest\~ao }{43}{subsection.3.1}%
+\contentsline {section}{\numberline {4}\large \leavevmode {\color {blue}As leis da Termodinâmica}}{44}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Quest\~ao IFSP 2015 - Lei de Fourier da Condu\c {c}\~ao de Calor}{44}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Quest\~ao }{45}{subsection.4.2}%
+\contentsline {section}{\numberline {5}\large \leavevmode {\color {blue}As equações de Maxwell}}{46}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Quest\~ao 38 IFSP 2015 - Solenoide}{46}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Quest\~ao 39 - IFSP 2015 - Corrente de deslocamento de Maxwell}{47}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Quest\~ao }{49}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Quest\~ao }{50}{subsection.5.4}%
+\contentsline {section}{\numberline {6}\large \leavevmode {\color {blue}Óptica geométrica}}{50}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Quest\~ao }{50}{subsection.6.1}%
+\contentsline {section}{\numberline {7}\large \leavevmode {\color {blue}Interferência e difração}}{50}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Quest\~ao }{51}{subsection.7.1}%
+\contentsline {section}{\numberline {8}\large \leavevmode {\color {blue}Relatividade restrita}}{51}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Quest\~ao }{51}{subsection.8.1}%
+\contentsline {section}{\numberline {9}\large \leavevmode {\color {blue}Mecânica quântica em 3D e átomo de Hidrogênio}}{51}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Quest\~ao }{52}{subsection.9.1}%
