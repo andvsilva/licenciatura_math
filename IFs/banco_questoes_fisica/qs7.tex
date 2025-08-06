@@ -1,6 +1,111 @@
 \section{\large \textcolor{blue}{Óptica geométrica}}
 
 \begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao - Entrada da Fibra Óptica — Lei de Snell}}\\
+\noindent
+
+\subsection{Quest\~ao Entrada da Fibra Óptica — Lei de Snell}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\section*{Índices de Refração}
+
+\begin{itemize}
+    \item $n_1 = 1$
+    \item $n_2 = 1{,}6$
+    \item $n_3 = 1{,}5$
+\end{itemize}
+
+\section*{Entrada da Fibra Óptica (Raio de Luz)}
+
+Utilizando a \textbf{Lei de Snell}, temos:
+
+\subsection*{1. Incidência do meio $n_1$ para o meio $n_2$ (ponto 1):}
+\[
+n_1 \cdot \sin \theta = n_2 \cdot \sin \phi
+\Rightarrow \sin \theta = 1{,}6 \cdot \sin \phi
+\]
+
+\subsection*{2. Reflexão Total Interna no ponto (2):}
+\[
+n_2 \cdot \sin \alpha = n_3 \cdot \sin 90^\circ
+\Rightarrow 1{,}6 \cdot \sin \alpha = 1{,}5 \cdot 1 = 1{,}5
+\Rightarrow \sin \alpha = \frac{1{,}5}{1{,}6}
+\]
+
+\subsection*{3. Substituindo na equação de Snell:}
+\[
+\sin \theta = 1{,}6 \cdot \sin \phi
+\qquad
+\text{e}
+\qquad
+\sin \alpha = \frac{1{,}5}{1{,}6} = \frac{15}{16}
+\]
+
+\subsection*{4. Cálculo de $\sin \theta$:}
+\[
+\sin \theta = 1{,}6 \cdot \sin \phi = \frac{15}{10} = \frac{3{,}5}{4{,}4}
+\]
+
+\section*{Identidade Trigonométrica (para reflexão total):}
+
+Sabemos que:
+\[
+\phi + \alpha = 90^\circ
+\Rightarrow \alpha = 90^\circ - \phi
+\]
+
+Portanto:
+\[
+\sin (90^\circ - \phi) = \cos \phi
+\quad \Rightarrow \quad
+\sin \alpha = \cos \phi
+\]
+
+Logo:
+\[
+\sin(90^\circ - \phi) = \sin 90^\circ \cdot \cos \phi - \cos 90^\circ \cdot \sin \phi = \cos \phi
+\]
+
+Sabemos que:
+
+\[
+\cos \phi = \frac{15}{16}
+\]
+
+Pelo fato de que:
+\[
+\sin^2 \phi + \cos^2 \phi = 1
+\Rightarrow \sin^2 \phi = 1 - \left(\frac{15}{16}\right)^2
+= \frac{256 - 225}{256} = \frac{31}{256}
+\]
+
+\[
+\Rightarrow \sin \phi = \sqrt{\frac{31}{256}}
+\]
+
+Agora, usando a equação:
+\[
+\sin \theta = 1{,}6 \cdot \sin \phi
+\Rightarrow \sin \theta = 1{,}6 \cdot \sqrt{\frac{31}{256}}
+= \frac{16}{10} \cdot \sqrt{\frac{31}{256}}
+= \frac{16}{10} \cdot \frac{\sqrt{31}}{16}
+= \frac{\sqrt{31}}{10}
+\]
+
+Portanto, o ângulo de incidência máximo é:
+
+\[
+\boxed{
+\theta = \sin^{-1} \left( \frac{\sqrt{31}}{10} \right)
+}
+\]
+
+\end{flushleft}
+
+\begin{flushleft}
 \textbf{\textcolor{blue}{\Large Quest\~ao - }}\\
 \noindent
 
@@ -22,3 +127,7 @@
 A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
 
 \end{flushleft}
+
+
+
+

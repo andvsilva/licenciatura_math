@@ -1,6 +1,288 @@
 \section{\large \textcolor{blue}{Interferência e difração}}
 
 \begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 43}}\\
+\noindent
+\subsection{Quest\~ao 43 - Filmes Finos}
+Luz com 650 nm de comprimento de onda incide
+perpendicularmente em um filme fino de sabão, que tem
+índice de refração igual a 1,30. Sabendo que esse filme está
+suspenso no ar, qual a menor espessura que esse filme
+deve ter para que as ondas refletidas por ele sofram
+interferência construtiva?
+
+\begin{itemize}
+\item[(A)] 320 nm.
+\item[(B)] 242 nm.
+\item[(C)] 125 nm.
+\item[(D)] 117 nm.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\section*{Interferência construtiva em um filme de sabão}
+
+\textbf{Dados:}
+\begin{itemize}
+    \item Comprimento de onda no ar: \( \lambda_0 = 650\,\mathrm{nm} \)
+    \item Índice de refração do filme: \( n_f = 1{,}30 \)
+    \item Índice de refração do ar: \( n_{ar} \approx 1 \)
+\end{itemize}
+
+O filme está suspenso no ar. Queremos a menor espessura \(e\) para que a luz refletida tenha interferência construtiva.
+
+\subsection*{Condição de fase}
+
+Quando a luz incide sobre a superfície do filme:
+\begin{itemize}
+    \item Na interface ar–sabão (\(n_\text{ar} < n_\text{sabão}\)), ocorre inversão de fase de \(\pi\) (equivalente a \(\lambda/2\)).
+    \item Na interface sabão–ar (\(n_\text{sabão} > n_\text{ar}\)), não ocorre inversão.
+\end{itemize}
+
+Como há uma inversão de fase, a condição para \textbf{interferência construtiva} é:
+\[
+2e = \left(m + \frac{1}{2}\right) \lambda_f
+\]
+
+Para a menor espessura (\(m = 0\)):
+\[
+2e = \frac{\lambda_f}{2} \quad \implies \quad e = \frac{\lambda_f}{4}
+\]
+
+\subsection*{Comprimento de onda no filme}
+
+No interior do filme, o comprimento de onda é menor:
+\[
+\lambda_f = \frac{\lambda_0}{n_f} = \frac{650}{1{,}30} \approx 500\,\mathrm{nm}
+\]
+
+\subsection*{Espessura mínima}
+
+Substituindo:
+\[
+e_\text{mín} = \frac{\lambda_f}{4} = \frac{500}{4} = 125\,\mathrm{nm}
+\]
+
+\subsection*{Resposta final:}
+\[
+\boxed{e_\text{mín} = 125\,\mathrm{nm}}
+\]
+
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{C}}.
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\section*{Intervalo válido para o comprimento de onda de um laser}
+
+O comprimento de onda (\( \lambda \)) de um laser depende do material ativo utilizado no laser e pode abranger diferentes regiões do espectro eletromagnético. Abaixo estão os intervalos típicos para lasers comuns:
+
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Tipo de laser} & \textbf{Comprimento de onda (\( \lambda \))} \\
+\hline
+Laser ultravioleta (UV) & \(180\,\mathrm{nm} \text{ a } 400\,\mathrm{nm}\) \\
+\hline
+Laser visível (vermelho–violeta) & \(400\,\mathrm{nm} \text{ a } 700\,\mathrm{nm}\) \\
+\hline
+Laser infravermelho próximo (NIR) & \(700\,\mathrm{nm} \text{ a } 1400\,\mathrm{nm}\) \\
+\hline
+Laser infravermelho médio & \(1400\,\mathrm{nm} \text{ a } 3000\,\mathrm{nm}\) \\
+\hline
+Laser infravermelho distante & \(>3000\,\mathrm{nm}\) \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+
+\subsection*{Exemplos comuns de lasers visíveis:}
+\begin{itemize}
+    \item Laser vermelho (He-Ne ou diodo): \(630\,\mathrm{nm} – 680\,\mathrm{nm}\)
+    \item Laser verde (Nd:YAG com dobro da frequência): \(532\,\mathrm{nm}\)
+    \item Laser azul: \(405\,\mathrm{nm} – 488\,\mathrm{nm}\)
+    \item Laser violeta: \( \sim 400\,\mathrm{nm} \)
+\end{itemize}
+
+\vspace{0.5cm}
+
+Para lasers visíveis, o intervalo típico de comprimento de onda válido é aproximadamente:
+\[
+\boxed{400\,\mathrm{nm} \leq \lambda \leq 700\,\mathrm{nm}}
+\]
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 44}}\\
+\noindent
+\subsection{Quest\~ao 44 - Difração de um feixe de luz laser}
+Um feixe de luz laser incide sobre uma fenda estreita, e uma
+figura de difração é observada sobre uma tela localizada a 5,0 m
+da fenda. A distância vertical entre o centro do primeiro mínimo
+acima do máximo central e o centro do primeiro mínimo abaixo
+do máximo central é de 20 mm. Qual é a largura da fenda?
+
+\begin{itemize}
+\item[(A)] 0,30 mm.
+\item[(B)] 0,45 mm.
+\item[(C)] 0,55 mm.
+\item[(D)] 0,65 mm.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\subsection*{Passo 1: Condição para os mínimos}
+
+Para uma fenda simples, os mínimos ocorrem em ângulos \(\theta\) tais que:
+\[
+a \cdot \sin\theta = m\lambda
+\]
+Para o primeiro mínimo (\(m=1\)):
+\[
+\sin\theta_1 = \frac{\lambda}{a}
+\]
+
+\vspace{0.5cm}
+
+\subsection*{Passo 2: Relação geométrica na tela}
+
+Na tela, a distância vertical entre o máximo central e o primeiro mínimo é aproximadamente:
+\[
+y_1 = L \cdot \tan\theta_1 \approx L \cdot \sin\theta_1
+\]
+
+A distância total entre o primeiro mínimo acima e o primeiro mínimo abaixo é:
+\[
+\Delta y = 2y_1
+\]
+
+Substituindo \(y_1\):
+\[
+\Delta y = 2L \cdot \sin\theta_1
+\]
+
+E como \(\sin\theta_1 = \lambda/a\):
+\[
+\Delta y = 2L \cdot \frac{\lambda}{a}
+\]
+
+\vspace{0.5cm}
+
+\subsection*{Passo 3: Resolvendo para \(a\)}
+
+Isolando \(a\):
+\[
+a = 2L \cdot \frac{\lambda}{\Delta y}
+\]
+
+Substituindo os valores numéricos:
+\[
+a = 2 \cdot 5{,}0 \cdot \frac{6{,}5 \times 10^{-7}}{0{,}020}
+\]
+
+\[
+a = 10{,}0 \cdot 3{,}25 \times 10^{-5} = 3{,}25 \times 10^{-4}\,m
+\]
+
+Convertendo para milímetros:
+\[
+a = 0{,}325\,mm
+\]
+
+\vspace{0.5cm}
+
+\subsection*{Resposta final:}
+
+\[
+\boxed{a \approx 0{,}325\,mm}
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{A}}.
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 45 }}\\
+\noindent
+\subsection{Quest\~ao 42 - Rede de Difração}
+Uma rede de difração possui \( 1{,}25 \times 10^{4} \) fendas uniformemente espaçadas, de forma que a largura total da rede é \( 25,0\,\mathrm{mm} \).  
+Determine o ângulo \( \theta \) correspondente ao máximo de primeira ordem.
+
+\begin{itemize}
+\item[(A)] $4{,}35 \times 10^{-4} \textrm{ rad/nm}$.
+\item[(B)] $5{,}26 \times 10^{-4} \textrm{ rad/nm}$.
+\item[(C)] $3{,}87 \times 10^{-4} \textrm{ rad/nm}$.
+\item[(D)] $2{,}19 \times 10^{-4} \textrm{ rad/nm}$.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\subsection*{Dados:}
+\begin{itemize}
+    \item Número de fendas: \( N = 1{,}25 \times 10^4 \)
+    \item Largura da rede: \( L = \SI{25,0}{mm} = 25,0 \times 10^{-3}\,\mathrm{m} \)
+    \item Ordem do máximo: \( m = 1 \)
+\end{itemize}
+
+\subsection*{Passo 1: Condição para o máximo de difração}
+
+Para um máximo de ordem \(m\), a condição de difração é:
+\[
+d \, \sin\theta = m\lambda
+\]
+
+Para \(m=1\) e pequenos ângulos (\( \sin\theta \approx \theta \)):
+\[
+\theta \approx \frac{\lambda}{d}
+\]
+
+Logo, a razão \( \theta/\lambda \) é:
+\[
+\frac{\theta}{\lambda} \approx \frac{1}{d}
+\]
+
+\subsection*{Passo 2: Espaçamento entre as fendas}
+
+O espaçamento \(d\) entre fendas é dado por:
+\[
+d = \frac{L}{N}
+\]
+
+Substituindo os valores:
+\[
+d = \frac{25{,}0 \times 10^{-3}}{1{,}25 \times 10^4} = 2{,}0 \times 10^{-6}\,\mathrm{m}
+\]
+
+\subsection*{Passo 3: Calculando \( \theta/\lambda \)}
+
+Em \(\mathrm{m}^{-1}\):
+\[
+\frac{\theta}{\lambda} = \frac{1}{2{,}0 \times 10^{-6}} = 5{,}0 \times 10^{5}\,\mathrm{m}^{-1}
+\]
+
+Convertendo para \(\mathrm{nm}^{-1}\), sabendo que \(1\,\mathrm{m} = 10^{9}\,\mathrm{nm}\):
+\[
+\frac{\theta}{\lambda} = 5{,}0 \times 10^{5} \times 10^{-9} = 5{,}0 \times 10^{-4}\,\mathrm{rad/nm}
+\]
+
+O valor mais próximo entre as alternativas é:
+\[
+\boxed{\frac{\theta}{\lambda} = 5{,}26 \times 10^{-4}\,\mathrm{rad/nm}}
+\]
+
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{B}}.
+\end{flushleft}
+
+\begin{flushleft}
 \textbf{\textcolor{blue}{\Large Quest\~ao - }}\\
 \noindent
 

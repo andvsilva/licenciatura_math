@@ -1,6 +1,361 @@
 \section{\large \textcolor{blue}{Oscilações e ondas}}
 
 \begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 48 - IFS2024 - P\^endulo Simples}}\\
+\noindent
+\subsection{Quest\~ao 48 - IFS2024 - P\^endulo Simples}
+Um pêndulo simples de comprimento \( L = 10\,m \) oscila com um ângulo máximo de oito graus \( 0{,}14\,\) rad.  
+Considere a aceleração da gravidade \( g = 10\,\)m/s\(^2\). A equação diferencial que descreve o movimento do pêndulo para pequenos ângulos é dada por:
+$\frac{d^2\theta}{dt^2} + \omega^2 \theta = 0$ sendo \( \omega \) a frequência angular do pêndulo e \( \theta \) o ângulo de deslocamento em função do tempo \( t \).  
+Considerando as condições iniciais \( \theta(0) = \theta_0 \) e \( \frac{d\theta}{dt}(0) = 0 \), a solução geral da equação diferencial para o pêndulo é:
+
+\begin{itemize}
+\item[(A)] \( \theta(t) = 0{,}14\cos(0{,}1t) \).
+\item[(B)] \( \theta(t) = 0{,}14\cos(0{,}4t) \).
+\item[(C)] \( \theta(t) = 0{,}14\cos(0{,}8t) \).
+\item[(D)] \( \theta(t) = 0{,}14\cos(t) \).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\section*{Demonstração da equação do movimento do pêndulo simples a partir do torque}
+
+Considere um pêndulo simples com comprimento \(L\) e massa \(m\), oscilando em torno do ponto de suspensão com um ângulo \(\theta(t)\) em relação à posição de equilíbrio vertical.
+
+\bigskip
+
+\textbf{1. Torque devido à força peso}
+
+A força peso atua verticalmente para baixo com intensidade \(mg\). O torque em relação ao ponto de suspensão é:
+
+\[
+\boxed{\tau = - m g L \sin\theta,}
+\]
+
+onde o sinal negativo indica que o torque tende a restaurar o pêndulo para a posição de equilíbrio (\(\theta = 0\)).
+
+\bigskip
+
+\textbf{2. Momento de inércia do pêndulo simples}
+
+Como o pêndulo é uma massa pontual no final de um fio de massa desprezível, o momento de inércia em relação ao ponto de suspensão é:
+
+\[
+\boxed{I = m L^2.}
+\]
+
+\bigskip
+
+\textbf{3. Equação do movimento rotacional}
+
+Aplicando a segunda lei de Newton para rotações, temos:
+
+\[
+\boxed{\tau = I \alpha,}
+\]
+
+onde \(\alpha = \frac{d^2 \theta}{dt^2}\) é a aceleração angular. Substituindo,
+
+\[
+- m g L \sin\theta = m L^2 \frac{d^2 \theta}{dt^2}.
+\]
+
+Dividindo ambos os lados por \(m L^2\):
+
+\[
+\boxed{\frac{d^2 \theta}{dt^2} + \frac{g}{L} \sin\theta = 0.}
+\]
+
+\bigskip
+
+\textbf{4. Aproximação para pequenos ângulos}
+
+Para pequenas oscilações, onde \(\theta \ll 1\) (rad), podemos aproximar \(\sin\theta \approx \theta\), obtendo a equação linearizada:
+
+\[
+\boxed{\frac{d^2 \theta}{dt^2} + \frac{g}{L} \theta = 0.}
+\]
+
+Definindo
+
+\[
+\omega = \sqrt{\frac{g}{L}},
+\]
+
+a equação diferencial torna-se
+
+\[
+\boxed{\frac{d^2 \theta}{dt^2} + \omega^2 \theta = 0.}
+\]
+
+\bigskip
+
+\textbf{5. Solução da equação diferencial}
+
+A solução geral da equação é
+
+\[
+\boxed{\theta(t) = A \cos(\omega t) + B \sin(\omega t),}
+\]
+
+onde as \colorbox{green!30}{constantes \(A\) e \(B\) são determinadas pelas condições iniciais.}
+
+Dadas as condições:
+
+\[
+\theta(0) = \theta_0, \quad \frac{d\theta}{dt}(0) = 0,
+\]
+
+temos:
+
+\[
+\theta(0) = A = \theta_0,
+\]
+
+e
+
+\[
+\frac{d\theta}{dt} = - A \omega \sin(\omega t) + B \omega \cos(\omega t) \implies \frac{d\theta}{dt}(0) = B \omega = 0 \Rightarrow B = 0.
+\]
+
+Assim, a solução final é
+
+\[
+\theta(t) = \theta_0 \cos(\omega t) = \theta_0 \cos\left(\sqrt{\frac{g}{L}} \, t \right).
+\]
+
+\[
+\boxed{
+\theta(t) = \theta_0 \cos\left(\sqrt{\frac{10}{10}} \, t \right) = \theta_0 \cos\left(t \right).
+}
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{D}}.
+\end{flushleft}
+
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 46}}\\
+\noindent
+\subsection{Quest\~ao 46 - Ondas Estacionária}
+Um pesquisador que está estudando a propagação de ondas em uma corda observa a seguinte situação: uma
+onda estacionária se forma na corda, com nós (pontos de amplitude zero) a cada 0,5 m, amplitude de 2,0 m e
+velocidade de propagação de 2,0 m/s. A equação que o pesquisador obtém para descrever a onda estacionária é
+
+\begin{itemize}
+\item[(A)] $y(x,t) = 2\sin(\pi x)\cos(4\pi t)$
+\item[(B)] $y(x,t) = 2\sin(2\pi x)\cos(4\pi t)$
+\item[(C)] $y(x,t) = 2\sin(2\pi x)\cos(\pi t)$
+\item[(D)] $y(x,t) = 2\sin(\pi x)\cos(\pi t)$
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\textbf{Resolução:}
+
+\bigskip
+
+\textbf{Dados do problema:}
+\begin{itemize}
+    \item Distância entre nós consecutivos: \(0{,}5\,m\)
+    \item Amplitude máxima: \(A = 2,0\,m\)
+    \item Velocidade de propagação: \(v = 2,0\,m/s\)
+\end{itemize}
+
+Queremos encontrar a equação da onda estacionária no formato:
+\[
+y(x,t) = 2A \sin(kx) \cos(\omega t)
+\]
+
+Sabemos que o fator \(2A\) já é dado como \(2,0\), então apenas precisamos determinar \(k\) e \(\omega\).
+
+\bigskip
+
+\textbf{Passo 1: distância entre nós}
+
+Em uma onda estacionária, a distância entre dois nós consecutivos é igual a \(\lambda/2\).  
+Como o problema informa que essa distância é \(0{,}5\,m\), temos:
+\[
+\frac{\lambda}{2} = 0{,}5 \quad \Longrightarrow \quad \lambda = 1,0\,m
+\]
+
+\bigskip
+
+\textbf{Passo 2: número de onda \(k\)}
+
+O número de onda é dado por:
+\[
+k = \frac{2\pi}{\lambda} = \frac{2\pi}{1,0} = 2\pi
+\]
+
+Portanto, o fator espacial da solução é \(\sin(2\pi x)\).
+
+\bigskip
+
+\textbf{Passo 3: frequência angular \(\omega\)}
+
+Usamos a relação entre velocidade, frequência e comprimento de onda:
+\[
+v = \lambda f \quad \Longrightarrow \quad f = \frac{v}{\lambda} = \frac{2,0}{1,0} = 2,0\,Hz
+\]
+
+E como \(\omega = 2\pi f\), temos:
+\[
+\omega = 2\pi \cdot 2 = 4\pi
+\]
+
+\bigskip
+
+\textbf{Passo 4: equação final}
+
+Substituindo os valores encontrados:
+\[
+y(x,t) = 2 \sin(2\pi x) \cos(4\pi t)
+\]
+
+\bigskip
+
+\textbf{Resposta correta:}
+\[
+\boxed{y(x,t) = 2 \sin(2\pi x) \cos(4\pi t)}
+\]
+
+Essa equação possui duas partes principais:
+
+\bigskip
+
+\textbf{Parte espacial:} \(\sin(kx)\)
+\begin{itemize}
+    \item Determina o padrão fixo de \textbf{nós} (onde a amplitude é sempre zero) e \textbf{ventres} (onde a amplitude é máxima).
+    \item Define a forma da onda ao longo do espaço.
+\end{itemize}
+
+\bigskip
+
+\textbf{Parte temporal:} \(\cos(\omega t)\)
+\begin{itemize}
+    \item Descreve a oscilação harmônica no tempo.
+    \item Cada ponto vibra com a frequência angular \(\omega\), mas com amplitude espacialmente determinada.
+\end{itemize}
+
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{B}}.
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 47}}\\
+\noindent
+\subsection{Quest\~ao 47 - Ondas Sonoras}
+Duas fontes de ondas sonoras idênticas emitem ondas com
+comprimento de onda de 0,5 m em fase. As fontes estão
+separadas por uma distância de 1,5 m. Haverá interferência
+construtiva ao longo da linha que liga as duas fontes nas
+posições:
+
+\begin{itemize}
+\item[(A)] 0,25 m, 0,75 m, 1,25 m.
+\item[(B)] 0,5 m, 1,0 m, 1,25 m.
+\item[(C)] 0,5 m, 1,0 m, 1,5 m.
+\item[(D)] 0,25 m, 0,5 m, 1,25 m.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\colorbox{yellow!30}{A diferença de caminhos entre as ondas emitidas pelas duas fontes deve ser um múltiplo} 
+\colorbox{yellow!30}{inteiro de \( \lambda \) para que ocorra \textbf{interferência construtiva}:}
+\[
+\Delta r = m\lambda, \quad m = 0, \pm1, \pm2, \dots
+\]
+
+Colocando as fontes nos pontos \( x=0 \) e \( x=d \), ao longo do eixo \( x \), temos para um ponto \( x \):
+\[
+\Delta r = |x - (d-x)| = |2x - d|
+\]
+
+Para interferência construtiva:
+\[
+2x - d = m\lambda
+\]
+
+Resolvendo para \( x \):
+\[
+x = \frac{d + m\lambda}{2}
+\]
+
+Substituindo \( d = 1{,}5 \) e \( \lambda = 0{,}5 \):
+\[
+x = \frac{1{,}5 + 0{,}5m}{2} = 0{,}75 + 0{,}25m
+\]
+
+Para que \( x \) esteja entre \( 0 \) e \( 1{,}5 \), os valores possíveis de \( m \) são \( m = -3, -2, -1, 0, 1, 2, 3 \), o que resulta nas posições:
+\[
+x = 0{,}0;\ 0{,}25;\ 0{,}5;\ 0{,}75;\ 1{,}0;\ 1{,}25;\ 1{,}5 \ \mathrm{m}
+\]
+
+Entre as alternativas dadas, a correta é:
+\[
+\boxed{\text{(A) } 0{,}25\,m,\ 0{,}75\,m,\ 1{,}25\,m}
+\]
+
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{A}}.
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\section*{Equilíbrio do Corpo Rígido e da Partícula}
+
+\textbf{Condições de equilíbrio:}
+\begin{align*}
+  \sum \vec{F} &= 0 \quad \text{(equilíbrio translacional)} \\
+  \sum \vec{\tau} &= 0 \quad \text{(equilíbrio rotacional)}
+\end{align*}
+
+\textbf{Torque (momento de uma força):}
+\begin{equation*}
+  \tau = r F \sin \theta
+\end{equation*}
+
+\begin{equation*}
+  \vec{\tau} = \frac{d\vec{L}}{dt}
+\end{equation*}
+
+\begin{equation*}
+  \tau = I.\alpha
+\end{equation*}
+
+\begin{equation*}
+  \alpha = \frac{d^{2}\theta}{dt^{2}}
+\end{equation*}
+
+\begin{equation*}
+  \frac{d^{2}\theta}{dt^{2}} + \frac{g}{L}\sin\theta = 0 \quad \textrm{MHS}
+\end{equation*}
+
+\begin{equation*}
+  \frac{d^{2}\theta}{dt^{2}} + \omega^{2}\sin\theta = 0 \quad \textrm{MHS}
+\end{equation*}
+
+Solução geral EDO:
+\begin{equation*}
+  \theta(t) = \theta_{0} \cos(\omega t + \varphi)
+\end{equation*}
+
+\subsection*{Rota\c{c}\~ao de um Corpo R\'igido}
+\begin{equation*}
+  \omega = \frac{d\theta}{dt}, \quad \alpha = \frac{d\omega}{dt}
+\end{equation*}
+
+
+\begin{flushleft}
 \textbf{\textcolor{blue}{\Large Quest\~ao - }}\\
 \noindent
 
@@ -20,5 +375,74 @@
 
 
 A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao - }}\\
+\noindent
+
+\subsection{Quest\~ao }
+
+\begin{itemize}
+\item[(A)] 
+\item[(B)] 
+\item[(C)]
+\item[(D)] 
+\item[(E)] 
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao - }}\\
+\noindent
+
+\subsection{Quest\~ao }
+
+\begin{itemize}
+\item[(A)] 
+\item[(B)] 
+\item[(C)]
+\item[(D)] 
+\item[(E)] 
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+
+\end{flushleft}
+
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao - }}\\
+\noindent
+
+\subsection{Quest\~ao }
+
+\begin{itemize}
+\item[(A)] 
+\item[(B)] 
+\item[(C)]
+\item[(D)] 
+\item[(E)] 
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+
 
 \end{flushleft}
