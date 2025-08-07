@@ -105,6 +105,114 @@ Portanto, o ângulo de incidência máximo é:
 
 \end{flushleft}
 
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 23 - IFFAR 2023 - Associa\c{c}\~ao de Lentes Delgadas}}\\
+\noindent
+
+\subsection{Quest\~ao 23 - IFFAR 2023 - Associa\c{c}\~ao de Lentes Delgadas}
+
+Sistemas \'opticos compostos por associa\c{c}\~ao de lentes desempenham um papel fundamental no ensino de f\'isica no campo da \'optica geom\'etrica. Eles s\~ao utilizados para produzir imagens com caracter\'isticas especiais, assim como aquelas obtidas por microsc\'opios compostos ou lunetas astron\^omicas.
+
+Nesse contexto, considere um caso te\'orico em que duas lentes delgadas, sendo elas coaxiais, s\~ao associadas com uma dist\^ancia $d = 15\,cm$ entre elas. As lentes t\^em dist\^ancias focais $f_1 = 10\,cm$ e $f_2 = 2\,cm$.
+
+Qual \'e a verg\^encia equivalente da associa\c{c}\~ao das lentes?
+
+\begin{itemize}
+\item[(A)] $-0{,}07\,di$
+\item[(B)] $-15\,di$
+\item[(C)] $0{,}02\,di$
+\item[(D)] $12\,di$
+\item[(E)] $60\,di$
+\end{itemize}
+
+\vspace{0.5cm}
+
+\begin{center}
+\begin{tikzpicture}[scale=1]
+
+% Eixo principal
+\draw[->] (-2,0) -- (7,0) node[below right] {Eixo Óptico};
+
+% Lentes
+\draw[thick] (0,-1.5) -- (0,1.5);
+\draw[thick] (6,-1.5) -- (6,1.5);
+
+% Rótulos das lentes
+\node[above] at (0,1.5) {Lente 1};
+\node[above] at (6,1.5) {Lente 2};
+
+% Distância entre lentes
+\draw[<->] (0,-1.8) -- (6,-1.8);
+\node at (3,-2.1) {$d = 15\,cm$};
+
+% Foco da lente 1 (esquerda)
+\draw[|-|] (0,0.3) -- (1,0.3);
+\node[above] at (0.5,0.3) {$f_1 = 10\,cm$};
+
+% Foco da lente 2 (direita)
+\draw[|-|] (6,0.3) -- (6.4,0.3);
+\node[above] at (6.2,0.3) {$f_2 = 2\,cm$};
+
+% Objeto
+\draw[->, thick] (-1.2,0) -- (-1.2,1);
+\node[above] at (-1.2,1) {Objeto};
+
+% Imagem final (só referência)
+\draw[->, thick] (7,0) -- (7,-1);
+\node[below] at (7,-1) {Imagem};
+
+\end{tikzpicture}
+\end{center}
+
+\textcolor{red}{\textbf{Solu\c{c}\~ao:}}\\
+
+Quando duas lentes delgadas s\~ao associadas a uma certa dist\^ancia $d$ entre si, a verg\^encia equivalente do sistema \'optico \'{e} dada por:
+
+\[
+\boxed{
+V = V_1 + V_2 - d \cdot V_1 \cdot V_2
+}
+\]
+
+Onde:
+\begin{itemize}
+    \item $V_1 = \dfrac{100}{f_1}$, com $f_1$ em cm
+    \item $V_2 = \dfrac{100}{f_2}$, com $f_2$ em cm
+    \item $d$ \'e a dist\^ancia entre as lentes, em metros
+\end{itemize}
+
+Calculamos as verg\^encias individuais:
+
+\[
+V_1 = \frac{100}{10} = 10\,di
+\qquad
+V_2 = \frac{100}{2} = 50\,di
+\]
+
+Convertendo a dist\^ancia $d$ para metros:
+
+\[
+d = 15\,cm = 0{,}15\,m
+\]
+
+Substituindo na f\'ormula da verg\^encia equivalente:
+
+\[
+V = 10 + 50 - 0{,}15 \cdot 10 \cdot 50
+\]
+
+\[
+V = 60 - 0{,}15 \cdot 500 = 60 - 75 = -15\,di
+\]
+
+\vspace{0.3cm}
+
+Portanto, a resposta correta \'e a alternativa \colorbox{green!50}{\textbf{B)}}.
+
+\end{flushleft}
+
+
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Quest\~ao - }}\\
 \noindent
