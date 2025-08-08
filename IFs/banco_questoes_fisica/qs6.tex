@@ -774,6 +774,207 @@ Portanto, a resposta correta \'e a alternativa \colorbox{green!50}{\textbf{B)}}.
 
 
 \begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 27 - IFFAR 2023 - Lei de Amp\`ere}}\\
+
+\subsection{Quest\~ao 27 - IFFAR 2023 - Lei de Amp\`ere}
+
+Considere um cilindro condutor maci\c{c}o, cujo raio \'e $R = 5\,\text{mm}$. Uma corrente el\'etrica percorre esse 
+cilindro ao longo de seu comprimento, com densidade de corrente cujo m\'odulo \'e dado por:
+
+\[
+J = \frac{2 \times 10^2}{r},
+\]
+
+onde $r$ \'e a dist\^ancia radial a partir do centro do cilindro. Utilize a constante de permeabilidade magn\'etica 
+do meio como sendo $\mu = 4\pi \times 10^{-7} \, \text{T} \cdot \text{m/A}$ para realizar o c\'alculo. Qual \'e o 
+m\'odulo do campo magn\'etico gerado pelo cilindro a uma dist\^ancia $r = 3\,\text{mm}$?
+
+\begin{itemize}
+\item[(A)] $8\pi \times 10^{-2} \, \text{T}$
+\item[(B)] $\dfrac{8}{3} \pi \times 10^1 \, \text{T}$
+\item[(C)] $24\pi \times 10^{-5} \, \text{T}$
+\item[(D)] $\dfrac{1}{3} \pi \times 10^1 \, \text{T}$
+\item[(E)] $\dfrac{16\pi^2}{3} \times 10^{-2} \, \text{T}$
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Considere um cilindro condutor maci\c{c}o, cujo raio \'e $R = 5\,\text{mm}$. Uma corrente el\'etrica percorre esse cilindro ao longo de seu comprimento, com densidade de corrente cujo m\'odulo \'e dado por:
+
+\[
+J(r) = \frac{2 \times 10^2}{r} \quad (\text{A/m}^2)
+\]
+
+onde $r$ \'e a dist\^ancia radial a partir do centro do cilindro. Deseja-se determinar o campo magn\'etico no ponto a uma dist\^ancia $r = 3\,\text{mm}$.
+
+\vspace{0.4cm}
+\textbf{Solução:}
+
+\vspace{0.3cm}
+Aplicamos a Lei de Amp\`ere:
+
+\[
+\oint \vec{B} \cdot d\vec{\ell} = \mu I_{\text{int}} \Rightarrow B(2\pi r) = \mu I_{\text{int}} \Rightarrow B = \frac{\mu I_{\text{int}}}{2\pi r}
+\]
+
+Precisamos determinar \( I_{\text{int}} \), a corrente que atravessa a área de raio \( r = 3\,\text{mm} \).
+
+\vspace{0.3cm}
+Sabemos que:
+
+\[
+I_{\text{int}} = \int_{\text{área}} J(r') \, dA = \int_0^r J(r') \cdot 2\pi r'\, dr'
+\]
+
+Substituindo \( J(r') = \frac{2 \times 10^2}{r'} \):
+
+\[
+I_{\text{int}} = \int_0^r \frac{2 \times 10^2}{r'} \cdot 2\pi r'\, dr' = 4\pi \times 10^2 \int_0^r dr' = 4\pi \times 10^2 \cdot r
+\]
+
+Substituindo \( r = 3\,\text{mm} = 3 \times 10^{-3}\,\text{m} \):
+
+\[
+I_{\text{int}} = 4\pi \times 10^2 \cdot 3 \times 10^{-3} = 12\pi \times 10^{-1} = 1.2\pi\,\text{A}
+\]
+
+\vspace{0.3cm}
+Agora, calculamos o campo magnético:
+
+\[
+B = \frac{\mu I_{\text{int}}}{2\pi r} = \frac{4\pi \times 10^{-7} \cdot 1.2\pi}{2\pi \cdot 3 \times 10^{-3}}
+\]
+
+Cancelando os \(\pi\):
+
+\[
+B = \frac{4 \times 10^{-7} \cdot 1.2\pi}{2 \cdot 3 \times 10^{-3}} = \frac{4.8 \pi \times 10^{-7}}{6 \times 10^{-3}} = \frac{0.8\pi \times 10^{-4}}{10^{-3}} = 8\pi \times 10^{-2}\,\text{T}
+\]
+
+\vspace{0.5cm}
+\textcolor{red}{\textbf{Resposta correta:}} \colorbox{green!30}{\textbf{(A) $8\pi \times 10^{-2} \, \text{T}$}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 40 - IFFAR 2024 - Lei de Amp\`ere}}\\
+\noindent
+
+\subsection{Quest\~ao 40 - IFFAR 2024 - Lei de Amp\`ere}
+Uma casca cilíndrica de raio interno \( R_i = 0{,}8\,\text{cm} \) e raio externo \( R_e = 5\,\text{cm} \), infinitamente longa, 
+é percorrida por uma corrente elétrica ao longo de seu comprimento, com densidade de corrente cujo módulo é dado por:
+
+\begin{itemize}
+\item[(A)] $61{,}7 \, \text{A/m}$
+\item[(B)] $\dfrac{61{,}7}{\pi} \, \text{A/m}$
+\item[(C)] $1{,}2 \times 10^2 \, \text{A/m}$
+\item[(D)] $\dfrac{1{,}2 \times 10^4}{\pi} \, \text{A/m}$
+\item[(E)] $61{,}7 \times 10^{-2} \, \text{A/m}$
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Utilizamos a Lei de Ampère:
+
+\[
+\oint \vec{B} \cdot d\vec{\ell} = \mu_0 I_{\text{int}} \Rightarrow B(2\pi r) = \mu_0 I_{\text{int}} \Rightarrow \frac{B}{\mu_0} = H = \frac{I_{\text{int}}}{2\pi r}
+\]
+
+Precisamos calcular a corrente que atravessa a área interna até \( r = 2{,}7\,\text{cm} \), ou seja, \( I_{\text{int}} \):
+
+\[
+I_{\text{int}} = \int_{R_i}^{r} J(r') \cdot 2\pi r' \, dr' = 2\pi \int_{R_i}^{r} \frac{r'}{3 r'^{7/3}} \, dr' = \frac{2\pi}{3} \int_{R_i}^{r} r'^{-4/3} \, dr'
+\]
+
+Calculando a integral:
+
+\[
+\int r'^{-4/3} \, dr' = \frac{r'^{-1/3}}{-1/3} = -3 r'^{-1/3}
+\]
+
+Portanto:
+
+\[
+I_{\text{int}} = \frac{2\pi}{3} \cdot \left[-3 r'^{-1/3} \right]_{R_i}^{r}
+= -2\pi \left( r^{-1/3} - R_i^{-1/3} \right)
+= 2\pi \left( R_i^{-1/3} - r^{-1/3} \right)
+\]
+
+Substituímos os valores numéricos:
+
+\[
+R_i = 8 \times 10^{-3}\,\text{m} \quad \Rightarrow \quad R_i^{-1/3} \approx 5
+\]
+\[
+r = 2{,}7 \times 10^{-2}\,\text{m} \quad \Rightarrow \quad r^{-1/3} \approx 3{,}3
+\]
+
+\[
+I_{\text{int}} \approx 2\pi (5 - 3{,}3) = 2\pi \cdot 1{,}7 \approx 10{,}68\, \text{A}
+\]
+
+Agora, calculamos \( H \):
+
+\[
+H = \frac{I_{\text{int}}}{2\pi r} = \frac{10{,}68}{2\pi \cdot 2{,}7 \times 10^{-2}} = \frac{10{,}68}{0{,}1696} \approx 62{,}95\, \text{A/m}
+\]
+
+\[
+\boxed{H \approx 61{,}7\, \text{A/m}}
+\]
+
+\vspace{0.4cm}
+\textcolor{red}{\textbf{Resposta correta:}} \colorbox{green!30}{\textbf{(A) 61,7 A/m}}
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Q}}\\
+\noindent
+
+\subsection{Quest\~ao }
+
+\begin{itemize}
+\item[(A)] 
+\item[(B)] 
+\item[(C)] 
+\item[(D)] 
+\item[(E)] 
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\end{flushleft}
+
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Q}}\\
+\noindent
+
+\subsection{Quest\~ao }
+
+\begin{itemize}
+\item[(A)] 
+\item[(B)] 
+\item[(C)] 
+\item[(D)] 
+\item[(E)] 
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+\end{flushleft}
+
+
+\begin{flushleft}
 \textbf{\textcolor{blue}{\Large Q}}\\
 \noindent
 
