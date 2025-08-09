@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  8 AUG 2025 21:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  9 AUG 2025 10:44
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1876,7 +1876,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1239--1240
 
  []
 
-<figures/colisao_impulso.png, id=662, 706.89093pt x 300.3722pt>
+<figures/colisao_impulso.png, id=656, 706.89093pt x 300.3722pt>
 File: figures/colisao_impulso.png Graphic file (type png)
 <use figures/colisao_impulso.png>
 Package pdftex.def Info: figures/colisao_impulso.png  used on input line 1254.
@@ -1886,7 +1886,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1339--1340
 
  []
 
-<figures/loop.png, id=671, 499.8675pt x 274.02374pt>
+<figures/loop.png, id=665, 499.8675pt x 274.02374pt>
 File: figures/loop.png Graphic file (type png)
 <use figures/loop.png>
 Package pdftex.def Info: figures/loop.png  used on input line 1354.
@@ -1896,7 +1896,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1456--1457
 
  []
 
-<figures/barra_momento_de_inercia.png, id=685, 523.20468pt x 300.3722pt>
+<figures/barra_momento_de_inercia.png, id=679, 523.20468pt x 300.3722pt>
 File: figures/barra_momento_de_inercia.png Graphic file (type png)
 <use figures/barra_momento_de_inercia.png>
 Package pdftex.def Info: figures/barra_momento_de_inercia.png  used on input li
@@ -1912,13 +1912,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 1646--1647
 
  []
 
-<figures/colisao.png, id=703, 355.3275pt x 171.64125pt>
+<figures/colisao.png, id=697, 355.3275pt x 171.64125pt>
 File: figures/colisao.png Graphic file (type png)
 <use figures/colisao.png>
 Package pdftex.def Info: figures/colisao.png  used on input line 1659.
 (pdftex.def)             Requested size: 273.14923pt x 131.94939pt.
 [38 <./figures/colisao.png (PNG copy)>] [39]
-<figures/polia_com_massa.png, id=712, 221.32687pt x 349.305pt>
+<figures/polia_com_massa.png, id=706, 221.32687pt x 349.305pt>
 File: figures/polia_com_massa.png Graphic file (type png)
 <use figures/polia_com_massa.png>
 Package pdftex.def Info: figures/polia_com_massa.png  used on input line 1755.
@@ -1946,7 +1946,7 @@ ion.2.17}) has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.222 \]
         ]
-<figures/momento_angular.png, id=749, 538.26094pt x 290.58563pt>
+<figures/momento_angular.png, id=742, 538.26094pt x 290.58563pt>
 File: figures/momento_angular.png Graphic file (type png)
 <use figures/momento_angular.png>
 Package pdftex.def Info: figures/momento_angular.png  used on input line 254.
@@ -2013,7 +2013,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 238--239
  []
 
 [64]) (./qs5.tex
-<figures/barra_termica.png, id=827, 469.755pt x 160.34906pt>
+<figures/barra_termica.png, id=821, 469.755pt x 160.34906pt>
 File: figures/barra_termica.png Graphic file (type png)
 <use figures/barra_termica.png>
 Package pdftex.def Info: figures/barra_termica.png  used on input line 13.
@@ -2028,7 +2028,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
 
-<figures/capacitor.png, id=849, 296.60812pt x 355.3275pt>
+<figures/capacitor.png, id=843, 296.60812pt x 355.3275pt>
 File: figures/capacitor.png Graphic file (type png)
 <use figures/capacitor.png>
 Package pdftex.def Info: figures/capacitor.png  used on input line 84.
@@ -2049,97 +2049,98 @@ Underfull \hbox (badness 10000) in paragraph at lines 398--399
  []
 
 [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86]) (./qs7.tex [87]
-[88] [89] [90]) (./qs8.tex [91] [92]
+[88] [89]) (./qs8.tex [90] [91]
 Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
+[92]
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 105.
 
-[93]
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 107.
 
-[94]
+[93] [94]
 Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
 
-[95] [96] [97]) (./qs9.tex [98]
+[95] [96]) (./qs9.tex [97]
 Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
-[99]
+[98]
 Overfull \hbox (15.17776pt too wide) in paragraph at lines 75--76
 []\T1/lmr/m/n/12 Estimar a cor de um corpo aque-cido (por ex-em-plo, metais in-
 can-des-centes em fundições). 
  []
 
-<figures/radiacaocorponegro.png, id=979, 758.835pt x 478.78876pt>
+[99]
+<figures/radiacaocorponegro.png, id=975, 758.835pt x 478.78876pt>
 File: figures/radiacaocorponegro.png Graphic file (type png)
 <use figures/radiacaocorponegro.png>
 Package pdftex.def Info: figures/radiacaocorponegro.png  used on input line 117
 .
 (pdftex.def)             Requested size: 379.41658pt x 239.39378pt.
-[100] [101 <./figures/radiacaocorponegro.png (PNG copy)>] [102]
+ [100 <./figures/radiacaocorponegro.png (PNG copy)>] [101]
 Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
-[103] [104]
+[102] [103]
 Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
 
-[105] [106]
+[104] [105]
 Underfull \hbox (badness 10000) in paragraph at lines 390--391
 
  []
 
-[107] [108]
+[106] [107]
 Underfull \hbox (badness 10000) in paragraph at lines 484--485
 
  []
 
-[109] [110] [111] [112]
+[108] [109] [110] [111]
 Underfull \hbox (badness 10000) in paragraph at lines 656--657
 
  []
 
-[113] [114]
+[112] [113]
 Underfull \hbox (badness 10000) in paragraph at lines 758--759
 
  []
 
-[115] [116]
+[114] [115]
 Underfull \hbox (badness 10000) in paragraph at lines 857--858
 
  []
 
-[117]
+[116]
 Underfull \hbox (badness 10000) in paragraph at lines 936--937
 
  []
 
-[118] [119] [120] [121]) (./qs10.tex [122] [123] [124] [125])
+[117] [118] [119] [120]) (./qs10.tex [121] [122] [123] [124])
 
 Package caption Warning: Unused \captionsetup[sub] on input line 57.
 See the caption package documentation for explanation.
 
-[126] (./main.aux)
+[125] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A0FF94BD61C73D1D98ACAB3DE1F14C14;18051.
+(rerunfilecheck)             Checksum: 3A910D07F49DFB28983C636F57F7C482;18117.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 71048 strings out of 478287
- 1746533 string characters out of 5849289
+ 71045 strings out of 478287
+ 1746493 string characters out of 5849289
  2718276 words of memory out of 5000000
- 88002 multiletter control sequences out of 15000+600000
+ 88001 multiletter control sequences out of 15000+600000
  575029 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,96p,1835b,2532s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2159,10 +2160,10 @@ b></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr
 /share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (126 pages, 1067563 bytes).
+Output written on main.pdf (125 pages, 1067269 bytes).
 PDF statistics:
- 1253 PDF objects out of 1440 (max. 8388607)
- 1038 compressed objects within 11 object streams
- 235 named destinations out of 1000 (max. 500000)
- 822 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1242 PDF objects out of 1440 (max. 8388607)
+ 1028 compressed objects within 11 object streams
+ 233 named destinations out of 1000 (max. 500000)
+ 814 words of extra memory for PDF output out of 10000 (max. 10000000)
 
