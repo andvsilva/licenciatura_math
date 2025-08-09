@@ -72,4 +72,6 @@
 \contentsline {subsection}{\numberline {9.11}Quest\~ao - IFFAR 2023 - Exploração Espacial e Relatividade}{120}{subsection.9.11}%
 \contentsline {subsection}{\numberline {9.12}Quest\~ao }{121}{subsection.9.12}%
 \contentsline {section}{\numberline {10}\large \leavevmode {\color {blue}Mecânica quântica em 3D e átomo de Hidrogênio}}{122}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Quest\~ao }{122}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.1}uest\~ao 25 -IFSC 2023 - Mecânica Quântica}{122}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Questão 27 - IFSC 2023 - Mecânica Quântica - Probabilidade}{124}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Quest\~ao }{126}{subsection.10.3}%
