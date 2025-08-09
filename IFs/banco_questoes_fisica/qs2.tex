@@ -330,6 +330,91 @@ A resposta correta é alternativa \colorbox{green!50}{\textbf{B}}.
 \end{flushleft}
 
 \begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao - IFSC 2023 - Eqs Continuidade/Bernoulli }}\\
+\noindent
+
+\subsection{Quest\~ao 33 - IFSC 2023 - Eqs Continuidade/Bernoulli }
+Considere um sistema em que um fluido incompressível atravessa uma tubulação, representada na figura, da esquerda para a direita. O escoamento é linear, em regime estacionário e a viscosidade do fluido é desprezível. Na região superior do tubo, à esquerda, a seção reta corresponde ao dobro da seção reta do tubo na região inferior, à direita (ou seja \(A_1=2A_2\)). A vazão é constante ao longo da tubulação. Além disso, a região superior encontra-se a uma altura \(4h\) em relação a um referencial estabelecido e a região inferior a uma altura \(h\). Considere \(h = 3{,}5\ \mathrm{m}\), \(v_1 = 2\ \mathrm{m/s}\), \(\rho = 10^3\ \mathrm{kg/m^3}\) e \(p_1 = 10^5\ \mathrm{Pa}\).
+
+Com base nessas informações, qual é a correta relação, aproximada, entre as pressões \(p_1\) (à esquerda) e \(p_2\) (à direita)?
+
+\begin{itemize}
+\item[(A)] \(p_{1} = \dfrac{p_{2}}{2}\)
+\item[(B)] \(p_{1} = 4p_{2}\)
+\item[(C)] \(p_{1} = 2p_{2}\)
+\item[(D)] \(p_{1} = \dfrac{p_{2}}{4}\)
+\item[(E)] \(p_{1} = p_{2}\)
+\end{itemize}
+
+\begin{figure}[!h]
+    \centering
+\includegraphics[scale=0.3]{figures/fluido_tubo_eqs_massa_bernoulli.png}
+\end{figure}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\textbf{1) Continuidade:}
+\[
+A_1 v_1 = A_2 v_2,\qquad A_1 = 2A_2 \Rightarrow 2A_2 v_1 = A_2 v_2 \Rightarrow v_2 = 2v_1.
+\]
+Como \(v_1 = 2\ \mathrm{m/s}\),
+\[
+v_2 = 2\times 2 = 4\ \mathrm{m/s}.
+\]
+
+\textbf{2) Bernoulli:}
+\[
+p_1 + \frac{1}{2}\rho v_1^2 + \rho g z_1
+= p_2 + \frac{1}{2}\rho v_2^2 + \rho g z_2.
+\]
+Rearranjando:
+\[
+p_1 - p_2 = \frac{1}{2}\rho\left(v_2^2 - v_1^2\right) + \rho g (z_2 - z_1).
+\]
+
+Velocidades:
+\[
+v_1^2 = 4,\quad v_2^2 = 16 \quad\Rightarrow\quad v_2^2 - v_1^2 = 12.
+\]
+Termo dinâmico:
+\[
+\frac{1}{2}\rho (v_2^2 - v_1^2) = \frac{1}{2}\times 1000 \times 12 = 6000\ \mathrm{Pa}.
+\]
+
+Alturas:
+\[
+z_1 = 4h = 14{,}0\ \mathrm{m},\quad z_2 = h = 3{,}5\ \mathrm{m} \quad\Rightarrow\quad z_2 - z_1 = -10{,}5\ \mathrm{m}.
+\]
+Termo gravitacional:
+\[
+\rho g (z_2 - z_1) = 1000 \times 9{,}8 \times (-10{,}5) = -102900\ \mathrm{Pa}.
+\]
+
+Somando:
+\[
+p_1 - p_2 = 6000 - 102900 = -96900\ \mathrm{Pa}.
+\]
+Portanto:
+\[
+p_2 = p_1 + 96900.
+\]
+Com \(p_1=10^5\ \mathrm{Pa}\):
+\[
+p_2 \approx 196900\ \mathrm{Pa} \approx 2p_1.
+\]
+Assim:
+\[
+p_1 \approx \frac{p_2}{2}.
+\]
+
+A resposta correta é a alternativa \colorbox{green!50}{\textbf{(A)}}.
+
+\end{flushleft}
+
+
+\begin{flushleft}
 \textbf{\textcolor{blue}{\Large Quest\~ao - }}\\
 \noindent
 

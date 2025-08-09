@@ -934,6 +934,280 @@ E(r) = \frac{\sigma_1 + \sigma_2}{2\pi \varepsilon_0 r}
 A resposta correta é alternativa \colorbox{green!50}{\textbf{A}}.
 \end{flushleft}
 
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 32 - IFSC 2023 - Associação de capacitores}}\\
+\noindent
+
+\subsection{Quest\~ao 32 - IFSC 2023 - Associação de Capacitores}
+Considere uma associa\c{c}\~ao de capacitores formada por tr\^es capacitores: \(C_1 = 4\,\mu\text{F}\), \(C_2 = 12\,\mu\text{F}\) e \(C_3 = 32\,\mu\text{F}\). Os capacitores est\~ao associados da seguinte forma: \(C_1\) e \(C_2\) est\~ao em s\'erie, e \(C_3\) est\'a em paralelo com essa associa\c{c}\~ao. Inicialmente, os capacitores est\~ao descarregados. Um gerador de tens\~ao \(V = 150\ \text{V}\) \'e conectado \`a associa\c{c}\~ao, carregando-os at\'e a tens\~ao de equil\'ibrio. A partir dessa configura\c{c}\~ao, deseja-se calcular a energia total acumulada nos capacitores. Qual o valor aproximado da energia acumulada \(U\) na associa\c{c}\~ao de capacitores?
+
+\begin{itemize}
+\item[(A)] \(U = 787{,}5\ \text{mJ}\)
+\item[(B)] \(U = 240{,}0\ \text{mJ}\)
+\item[(C)] \(U = 120{,}0\ \text{mJ}\)
+\item[(D)] \(U = 393{,}8\ \text{mJ}\)
+\item[(E)] \(U = 262{,}5\ \text{mJ}\)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\textbf{1. Associação em série:} Para \(C_1\) e \(C_2\) em série:
+\[
+\frac{1}{C_s} = \frac{1}{C_1} + \frac{1}{C_2} 
+= \frac{1}{4} + \frac{1}{12} 
+= \frac{3 + 1}{12} 
+= \frac{4}{12} 
+= \frac{1}{3}
+\]
+\[
+\Rightarrow\quad C_s = 3\,\mu\text{F}.
+\]
+
+\textbf{2. Associação em paralelo:} \(C_s\) está em paralelo com \(C_3\), logo:
+\[
+C_{\text{eq}} = C_s + C_3 = 3\,\mu\text{F} + 32\,\mu\text{F} = 35\,\mu\text{F}.
+\]
+
+\textbf{3. Energia Total Armazenada:}
+\[
+\boxed{
+U = \frac{1}{2} C_{\text{eq}} V^2
+}
+\]
+\[
+U = \frac{1}{2} \cdot 35 \times 10^{-6}\ \text{F} \cdot (150\ \text{V})^2
+\]
+\[
+U = \frac{1}{2} \cdot 35 \times 10^{-6} \cdot 22500
+\]
+\[
+U = \frac{1}{2} \cdot 0{,}7875\ \text{J}
+\]
+\[
+U = 0{,}39375\ \text{J} \approx 393{,}8\ \text{mJ}.
+\]
+
+\textbf{Resposta:} \colorbox{green!50}{\textbf{(D) \(U = 393{,}8\ \text{mJ}\)}}.
+
+\end{flushleft}
+
+
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 34 - IFSC 2023 - Lei de Ampère}}\\
+\noindent
+Considere um cabo coaxial infinito no qual se estabelecem duas correntes elétricas distribuídas de maneira uniforme. 
+O cabo coaxial é composto por um condutor interno cilíndrico de raio "$a$" e um condutor externo anelar concêntrico ao 
+condutor interno, com raio interno "$b$" e raio externo "$c$". As correntes elétricas estabelecidas no condutor interno 
+e externo têm o mesmo módulo igual a $I$, porém, apresentam sentidos contrários. Deseja-se calcular o campo magnético no 
+interior do condutor externo utilizando a Lei de Ampère. Assinale a alternativa que descreve corretamente o módulo do campo 
+magnético ($H$) no interior do condutor externo em função da distância "$r$" do eixo do cabo coaxial.
+
+
+\subsection{Quest\~ao 34 - IFSC 2023 - Lei de Ampère }
+
+\begin{itemize}
+\item[A)] \( H = \frac{I}{2 \pi r} \quad \text{para } r < a \)
+\item[B)] \( H = 0 \quad \text{para } a < r < b \)
+\item[C)] \( H = \frac{I r}{2 \pi a^2} \quad \text{para } a < r < b \)
+\item[D)] \( H = \frac{I}{2 \pi r} \quad \text{para } r < a \)
+\item[E)] \( H = \frac{I}{2 \pi r} \left( 1 - \frac{r^2 - b^2}{c^2 - b^2} \right) \quad \text{para } b < r < c \)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+A Lei de Ampère em forma integral é dada por:
+
+\[
+\oint \vec{H} \cdot d\vec{l} = I_{\text{enc}},
+\]
+
+onde \(I_{\text{enc}}\) é a corrente líquida total envolvida pela trajetória de integração. Devido à simetria cilíndrica do problema, o campo magnético \(\vec{H}\) será tangencial à circunferência de raio \(r\) e terá módulo constante nesta trajetória.
+
+Assim, podemos escrever:
+
+\[
+H (2 \pi r) = I_{\text{enc}} \implies H = \frac{I_{\text{enc}}}{2 \pi r}.
+\]
+
+Vamos analisar \(I_{\text{enc}}\) para as diferentes regiões de \(r\):
+
+\vspace{0.3cm}
+\textbf{1. Região \(r < a\) (dentro do condutor interno):}
+
+A corrente \(I\) está distribuída uniformemente na seção circular do condutor interno, de área \(\pi a^2\).
+
+A área do círculo de raio \(r\) é \(\pi r^2\), logo a corrente dentro de \(r\) é proporcional a essa área:
+
+\[
+I_{\text{enc}} = I \times \frac{\pi r^2}{\pi a^2} = I \frac{r^2}{a^2}.
+\]
+
+Aplicando Ampère:
+
+\[
+H (2 \pi r) = I \frac{r^2}{a^2} \implies H = \frac{I r}{2 \pi a^2}, \quad r < a.
+\]
+
+\vspace{0.3cm}
+\textbf{2. Região \(a < r < b\) (espaço entre os condutores):}
+
+Nesta região, já foi totalmente envolvida a corrente \(+I\) do condutor interno e não há corrente do condutor externo ainda, pois este começa no raio \(b\).
+
+Logo,
+
+\[
+I_{\text{enc}} = I.
+\]
+
+Assim,
+
+\[
+H (2 \pi r) = I \implies H = \frac{I}{2 \pi r}, \textrm{\quad \(a < r < b\)}.
+\]
+
+\vspace{0.3cm}
+\textbf{3. Região \(b < r < c\) (dentro do condutor externo):}
+
+O condutor externo é um anel com corrente \(I\) uniformemente distribuída e no sentido oposto ao do condutor interno. 
+
+A área total do anel é:
+
+\[
+A_{\text{anel}} = \pi (c^2 - b^2).
+\]
+
+A área da seção do condutor externo até o raio \(r\) é:
+
+\[
+A_r = \pi (r^2 - b^2).
+\]
+
+Assim, a corrente do condutor externo dentro do raio \(r\) é proporcional a esta área:
+
+\[
+I_{\text{ext, enc}} = I \times \frac{r^2 - b^2}{c^2 - b^2}.
+\]
+
+Porém, esta corrente tem sentido contrário, logo, a corrente líquida envolvida até o raio \(r\) é:
+
+\[
+I_{\text{enc}} = I - I_{\text{ext, enc}} = I \left(1 - \frac{r^2 - b^2}{c^2 - b^2}\right).
+\]
+
+Aplicando a Lei de Ampère:
+
+\[
+H (2 \pi r) = I \left(1 - \frac{r^2 - b^2}{c^2 - b^2}\right) \implies H = \frac{I}{2 \pi r} \left(1 - \frac{r^2 - b^2}{c^2 - b^2}\right).
+\]
+
+\vspace{0.3cm}
+\textbf{4. Região \(r > c\) (fora do cabo coaxial):}
+
+Neste caso, a corrente total envolvida é:
+
+\[
+I_{\text{enc}} = I - I = 0,
+\]
+
+pois as correntes dos condutores interno e externo se cancelam.
+
+Assim,
+
+\[
+H = 0.
+\]
+
+\vspace{0.5cm}
+
+\textbf{Resumo final:}
+
+\[
+H(r) = 
+\begin{cases}
+\displaystyle \frac{I r}{2 \pi a^2}, & r < a, \\
+\\
+\displaystyle \frac{I}{2 \pi r}, & a < r < b, \\
+\\
+\displaystyle \frac{I}{2 \pi r} \left(1 - \frac{r^2 - b^2}{c^2 - b^2}\right), & b < r < c, \\
+\\
+0, & r > c.
+\end{cases}
+\]
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Resposta:}} A alternativa correta para o campo magnético \(\vec{H}\) no interior do condutor externo, isto é para \(b < r < c\), é a alternativa
+
+\[
+\boxed{
+H = \frac{I}{2 \pi r} \left( 1 - \frac{r^2 - b^2}{c^2 - b^2},  \right), \textrm{\(b < r < c\)}.
+}
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{E}}.
+
+\vspace{0.3cm}
+\section*{Outra solução}
+\textbf{Região \(b < r < c\) (dentro do condutor externo):}
+
+Usando a Lei de Ampère:
+
+\[
+\int B dl = \mu_{0}I_{eng}
+\]
+
+Para o campo magnético \(B\) dentro do condutor externo \'e necess\'ario 
+calcular a corrente englobada pela seção do condutor externo. A corrente englobada pela seção do 
+condutor externo ate o raio \(r\) usando a densidade de corrente no condutor externo:
+
+\[
+J = \frac{I}{\pi(c^{2} - b^{2})}
+\]
+
+\[
+I_{\text{ext, enc}} = I \textcolor{red}{- \int_{b}^{r} (J) rdrd\phi}
+\]
+
+O termo destacado em vermelho \'e devido ao sentido contrário da corrente no condutor externo.
+
+\[
+I_{\text{ext, enc}} = I - \frac{I}{\pi(c^{2} - b^{2})}\int_{b}^{r} rdrd\phi
+\]
+
+\[
+I_{\text{ext, enc}} = I - \frac{I.2\pi}{\pi(c^{2} - b^{2})}\left[\frac{r^2}{2}\right]\Big|_{b}^{c}
+\]
+
+\[
+I_{\text{ext, enc}} = I - \frac{I.\cancel{2\pi}}{\cancel{2\pi}(c^{2} - b^{2})}\left(r^{2} - b^{2}\right)
+\]
+
+\[
+I_{\text{ext, enc}} = I - \frac{I.\left(r^{2} - b^{2}\right)}{(c^{2} - b^{2})}
+\]
+
+Lei de Ampère
+
+\[
+\int \frac{B}{\mu_{0}} dl = I_{eng}
+\]
+
+\[
+H 2\pi r = \left[I - \frac{I.\left(r^{2} - b^{2}\right)}{(c^{2} - b^{2})}\right]
+\]
+
+\[
+\boxed{
+H  = \frac{I}{2\pi r}\left[1 - \frac{\left(r^{2} - b^{2}\right)}{(c^{2} - b^{2})}\right], \quad \textrm{\(b < r < c\)}
+}
+\]
+
+\end{flushleft}
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Q}}\\
