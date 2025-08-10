@@ -38,44 +38,51 @@
 \contentsline {section}{\numberline {5}\large \leavevmode {\color {blue}As leis da Termodinâmica}}{69}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Quest\~ao IFSP 2015 - Lei de Fourier da Condu\c {c}\~ao de Calor}{69}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Quest\~ao 34 - IFSP 2017 - Entropia}{71}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Quest\~ao }{72}{subsection.5.3}%
-\contentsline {section}{\numberline {6}\large \leavevmode {\color {blue}As equações de Maxwell}}{72}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Quest\~ao 38 IFSP 2015 - Solenoide}{72}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Quest\~ao 39 - IFSP 2015 - Corrente de deslocamento de Maxwell}{74}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Quest\~ao 35 - IFSP 2017 - Carga no capacitor}{76}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Quest\~ao 49 - Campo elétrico induzido por uma onda eletromagnética}{78}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Quest\~ao 50 - Lei de Gauss para dielétricos homogêneos}{81}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Quest\~ao 27 - Lei de Faraday/Lei de Ohm}{84}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}Quest\~ao 27 - IFFAR 2023 - Lei de Amp\`ere}{86}{subsection.6.7}%
-\contentsline {subsection}{\numberline {6.8}Quest\~ao 40 - IFFAR 2024 - Lei de Amp\`ere}{87}{subsection.6.8}%
-\contentsline {subsection}{\numberline {6.9}Quest\~ao 31 - IFSC 2023 - Lei de Gauss}{89}{subsection.6.9}%
-\contentsline {subsection}{\numberline {6.10}Quest\~ao 32 - IFSC 2023 - Associação de Capacitores}{90}{subsection.6.10}%
-\contentsline {subsection}{\numberline {6.11}Quest\~ao 34 - IFSC 2023 - Lei de Ampère }{92}{subsection.6.11}%
-\contentsline {subsection}{\numberline {6.12}Quest\~ao }{96}{subsection.6.12}%
-\contentsline {section}{\numberline {7}\large \leavevmode {\color {blue}Óptica geométrica}}{96}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Quest\~ao Entrada da Fibra Óptica — Lei de Snell}{96}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Quest\~ao 23 - IFFAR 2023 - Associa\c {c}\~ao de Lentes Delgadas}{98}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Quest\~ao }{100}{subsection.7.3}%
-\contentsline {section}{\numberline {8}\large \leavevmode {\color {blue}Interferência e difração}}{100}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Quest\~ao 43 - Filmes Finos}{100}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Quest\~ao 44 - Difração de um feixe de luz laser}{103}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Quest\~ao 42 - Rede de Difração}{104}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Quest\~ao }{106}{subsection.8.4}%
-\contentsline {section}{\numberline {9}\large \leavevmode {\color {blue}Relatividade restrita}}{106}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Quest\~ao 51 - Lei de Stefan--Boltzmann}{107}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Quest\~ao 52 - Temperatura de um corpo negro usando a lei de Wien}{109}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Quest\~ao 53 - Efeito fotoelétrico}{111}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}Quest\~ao 54 - Efeito fotoelétrico}{114}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}Quest\~ao 55 - Efeito Compton}{116}{subsection.9.5}%
-\contentsline {subsection}{\numberline {9.6}Quest\~ao 56 - Efeito Compton}{118}{subsection.9.6}%
-\contentsline {subsection}{\numberline {9.7}Quest\~ao 57 - Energia total relativística do elétron}{121}{subsection.9.7}%
-\contentsline {subsection}{\numberline {9.8}Quest\~ao 58 - Relatividade de uma nave espacial}{123}{subsection.9.8}%
-\contentsline {subsection}{\numberline {9.9}Quest\~ao 59 - Radioatividade}{125}{subsection.9.9}%
-\contentsline {subsection}{\numberline {9.10}Quest\~ao 60 - Radioatividade}{127}{subsection.9.10}%
-\contentsline {subsection}{\numberline {9.11}Quest\~ao - IFFAR 2023 - Exploração Espacial e Relatividade}{128}{subsection.9.11}%
-\contentsline {subsection}{\numberline {9.12}Quest\~ao 36 - IFSC 2023 - Efeito Fotoelétrico}{130}{subsection.9.12}%
-\contentsline {subsection}{\numberline {9.13}Quest\~ao }{131}{subsection.9.13}%
-\contentsline {section}{\numberline {10}\large \leavevmode {\color {blue}Mecânica quântica em 3D e átomo de Hidrogênio}}{131}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Quest\~ao 25 -IFSC 2023 - Mecânica Quântica}{132}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Questão 27 - IFSC 2023 - Mecânica Quântica - Probabilidade}{134}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Quest\~ao }{136}{subsection.10.3}%
+\contentsline {subsection}{\numberline {5.3}Quest\~ao - 39 IFSC 2023 - Ciclos Termodinamicos - Diesel}{76}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Quest\~ao }{79}{subsection.5.4}%
+\contentsline {section}{\numberline {6}\large \leavevmode {\color {blue}As equações de Maxwell}}{79}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Quest\~ao 38 IFSP 2015 - Solenoide}{80}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Quest\~ao 39 - IFSP 2015 - Corrente de deslocamento de Maxwell}{81}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Quest\~ao 35 - IFSP 2017 - Carga no capacitor}{83}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Quest\~ao 49 - Campo elétrico induzido por uma onda eletromagnética}{85}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Quest\~ao 50 - Lei de Gauss para dielétricos homogêneos}{88}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Quest\~ao 27 - Lei de Faraday/Lei de Ohm}{91}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}Quest\~ao 27 - IFFAR 2023 - Lei de Amp\`ere}{93}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}Quest\~ao 40 - IFFAR 2024 - Lei de Amp\`ere}{95}{subsection.6.8}%
+\contentsline {subsection}{\numberline {6.9}Quest\~ao 31 - IFSC 2023 - Lei de Gauss}{96}{subsection.6.9}%
+\contentsline {subsection}{\numberline {6.10}Quest\~ao 32 - IFSC 2023 - Associação de Capacitores}{98}{subsection.6.10}%
+\contentsline {subsection}{\numberline {6.11}Quest\~ao 34 - IFSC 2023 - Lei de Ampère }{99}{subsection.6.11}%
+\contentsline {subsection}{\numberline {6.12}Quest\~ao 40 - IFSC 2023 - Equa\c {c}\~oes de Maxwell}{103}{subsection.6.12}%
+\contentsline {subsection}{\numberline {6.13}Quest\~ao 42 - IFSC 2023 - Lei de Faraday/Lenz}{104}{subsection.6.13}%
+\contentsline {subsection}{\numberline {6.14}Quest\~ao }{106}{subsection.6.14}%
+\contentsline {section}{\numberline {7}\large \leavevmode {\color {blue}Óptica geométrica}}{106}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Quest\~ao Entrada da Fibra Óptica — Lei de Snell}{107}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Quest\~ao 23 - IFFAR 2023 - Associa\c {c}\~ao de Lentes Delgadas}{108}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Quest\~ao - 37 IFSC 2023 - Refração de Luz}{111}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Quest\~ao 43 - IFSC 2023 - Associação de Lentes}{112}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Quest\~ao }{115}{subsection.7.5}%
+\contentsline {section}{\numberline {8}\large \leavevmode {\color {blue}Interferência e difração}}{115}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Quest\~ao 43 - Filmes Finos}{115}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Quest\~ao 44 - Difração de um feixe de luz laser}{118}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Quest\~ao 42 - Rede de Difração}{120}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Quest\~ao }{121}{subsection.8.4}%
+\contentsline {section}{\numberline {9}\large \leavevmode {\color {blue}Relatividade restrita}}{122}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Quest\~ao 51 - Lei de Stefan--Boltzmann}{122}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Quest\~ao 52 - Temperatura de um corpo negro usando a lei de Wien}{125}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Quest\~ao 53 - Efeito fotoelétrico}{127}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Quest\~ao 54 - Efeito fotoelétrico}{129}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Quest\~ao 55 - Efeito Compton}{132}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Quest\~ao 56 - Efeito Compton}{134}{subsection.9.6}%
+\contentsline {subsection}{\numberline {9.7}Quest\~ao 57 - Energia total relativística do elétron}{137}{subsection.9.7}%
+\contentsline {subsection}{\numberline {9.8}Quest\~ao 58 - Relatividade de uma nave espacial}{139}{subsection.9.8}%
+\contentsline {subsection}{\numberline {9.9}Quest\~ao 59 - Radioatividade}{141}{subsection.9.9}%
+\contentsline {subsection}{\numberline {9.10}Quest\~ao 60 - Radioatividade}{142}{subsection.9.10}%
+\contentsline {subsection}{\numberline {9.11}Quest\~ao - IFFAR 2023 - Exploração Espacial e Relatividade}{144}{subsection.9.11}%
+\contentsline {subsection}{\numberline {9.12}Quest\~ao 36 - IFSC 2023 - Efeito Fotoelétrico}{146}{subsection.9.12}%
+\contentsline {subsection}{\numberline {9.13}Quest\~ao - 38 IFSC 2023 - Radioatividade}{147}{subsection.9.13}%
+\contentsline {subsection}{\numberline {9.14}Quest\~ao 41 - IFSC 2023 - Espalhamento f\'otons - Compton}{148}{subsection.9.14}%
+\contentsline {subsection}{\numberline {9.15}Quest\~ao }{150}{subsection.9.15}%
+\contentsline {section}{\numberline {10}\large \leavevmode {\color {blue}Mecânica quântica em 3D e átomo de Hidrogênio}}{150}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Quest\~ao 25 -IFSC 2023 - Mecânica Quântica}{151}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Questão 27 - IFSC 2023 - Mecânica Quântica - Probabilidade}{153}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Quest\~ao }{155}{subsection.10.3}%
