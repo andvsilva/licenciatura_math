@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  10 AUG 2025 19:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  12 AUG 2025 19:02
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1876,7 +1876,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1239--1240
 
  []
 
-<figures/colisao_impulso.png, id=732, 706.89093pt x 300.3722pt>
+<figures/colisao_impulso.png, id=744, 706.89093pt x 300.3722pt>
 File: figures/colisao_impulso.png Graphic file (type png)
 <use figures/colisao_impulso.png>
 Package pdftex.def Info: figures/colisao_impulso.png  used on input line 1254.
@@ -1886,7 +1886,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1339--1340
 
  []
 
-<figures/loop.png, id=742, 499.8675pt x 274.02374pt>
+<figures/loop.png, id=754, 499.8675pt x 274.02374pt>
 File: figures/loop.png Graphic file (type png)
 <use figures/loop.png>
 Package pdftex.def Info: figures/loop.png  used on input line 1354.
@@ -1896,7 +1896,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1456--1457
 
  []
 
-<figures/barra_momento_de_inercia.png, id=755, 523.20468pt x 300.3722pt>
+<figures/barra_momento_de_inercia.png, id=768, 523.20468pt x 300.3722pt>
 File: figures/barra_momento_de_inercia.png Graphic file (type png)
 <use figures/barra_momento_de_inercia.png>
 Package pdftex.def Info: figures/barra_momento_de_inercia.png  used on input li
@@ -1912,13 +1912,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 1646--1647
 
  []
 
-<figures/colisao.png, id=774, 355.3275pt x 171.64125pt>
+<figures/colisao.png, id=786, 355.3275pt x 171.64125pt>
 File: figures/colisao.png Graphic file (type png)
 <use figures/colisao.png>
 Package pdftex.def Info: figures/colisao.png  used on input line 1659.
 (pdftex.def)             Requested size: 273.14923pt x 131.94939pt.
 [39 <./figures/colisao.png (PNG copy)>] [40]
-<figures/polia_com_massa.png, id=783, 221.32687pt x 349.305pt>
+<figures/polia_com_massa.png, id=795, 221.32687pt x 349.305pt>
 File: figures/polia_com_massa.png Graphic file (type png)
 <use figures/polia_com_massa.png>
 Package pdftex.def Info: figures/polia_com_massa.png  used on input line 1755.
@@ -1946,7 +1946,7 @@ ion.2.17}) has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.222 \]
         ]
-<figures/momento_angular.png, id=819, 538.26094pt x 290.58563pt>
+<figures/momento_angular.png, id=831, 538.26094pt x 290.58563pt>
 File: figures/momento_angular.png Graphic file (type png)
 <use figures/momento_angular.png>
 Package pdftex.def Info: figures/momento_angular.png  used on input line 254.
@@ -1965,7 +1965,7 @@ LaTeX Font Warning: Command \huge invalid in math mode on input line 268.
 LaTeX Font Warning: Command \huge invalid in math mode on input line 269.
 
 [49] [50]
-<figures/fluido_tubo_eqs_massa_bernoulli.png, id=834, 816.80156pt x 469.755pt>
+<figures/fluido_tubo_eqs_massa_bernoulli.png, id=846, 816.80156pt x 469.755pt>
 File: figures/fluido_tubo_eqs_massa_bernoulli.png Graphic file (type png)
 <use figures/fluido_tubo_eqs_massa_bernoulli.png>
 Package pdftex.def Info: figures/fluido_tubo_eqs_massa_bernoulli.png  used on i
@@ -2020,7 +2020,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 238--239
  []
 
 [68]) (./qs5.tex
-<figures/barra_termica.png, id=913, 469.755pt x 160.34906pt>
+<figures/barra_termica.png, id=925, 469.755pt x 160.34906pt>
 File: figures/barra_termica.png Graphic file (type png)
 <use figures/barra_termica.png>
 Package pdftex.def Info: figures/barra_termica.png  used on input line 13.
@@ -2035,7 +2035,7 @@ Overfull \hbox (4.56436pt too wide) in paragraph at lines 298--299
 [][][][][][][] \T1/lmr/m/n/12 e trans-fer-ên-cia de calor
  []
 
-<figures/ciclo-termodinamico-diesel.png, id=964, 440.39531pt x 457.71pt>
+<figures/ciclo-termodinamico-diesel.png, id=976, 440.39531pt x 457.71pt>
 File: figures/ciclo-termodinamico-diesel.png Graphic file (type png)
 <use figures/ciclo-termodinamico-diesel.png>
 Package pdftex.def Info: figures/ciclo-termodinamico-diesel.png  used on input 
@@ -2051,7 +2051,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
 
-<figures/capacitor.png, id=995, 296.60812pt x 355.3275pt>
+<figures/capacitor.png, id=1007, 296.60812pt x 355.3275pt>
 File: figures/capacitor.png Graphic file (type png)
 <use figures/capacitor.png>
 Package pdftex.def Info: figures/capacitor.png  used on input line 84.
@@ -2073,119 +2073,117 @@ Underfull \hbox (badness 10000) in paragraph at lines 398--399
 
 [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101]
 [102] [103]
-<figures/lei-faraday-lenz.png, id=1095, 442.65375pt x 306.39468pt>
+<figures/lei-faraday-lenz.png, id=1107, 442.65375pt x 306.39468pt>
 File: figures/lei-faraday-lenz.png Graphic file (type png)
 <use figures/lei-faraday-lenz.png>
 Package pdftex.def Info: figures/lei-faraday-lenz.png  used on input line 1257.
 
 (pdftex.def)             Requested size: 221.32632pt x 153.19696pt.
- [104] [105 <./figures/lei-faraday-lenz.png (PNG copy)>]) (./qs7.tex [106] [107
-] [108] [109] [110] [111]
-<figures/associacao-de-lentes.png, id=1139, 453.19313pt x 227.34938pt>
+ [104] [105 <./figures/lei-faraday-lenz.png (PNG copy)>] [106]
+[107]) (./qs7.tex [108] [109] [110] [111] [112] [113]
+<figures/associacao-de-lentes.png, id=1159, 453.19313pt x 227.34938pt>
 File: figures/associacao-de-lentes.png Graphic file (type png)
 <use figures/associacao-de-lentes.png>
 Package pdftex.def Info: figures/associacao-de-lentes.png  used on input line 3
 06.
 (pdftex.def)             Requested size: 227.62206pt x 114.18782pt.
- [112] [113 <./figures/associacao-de-lentes.png (PNG copy)>] [114]) (./qs8.tex 
-[115] [116]
+ [114 <./figures/associacao-de-lentes.png (PNG copy)>] [115] [116]) (./qs8.tex 
+[117]
 Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 105.
-
-[117]
-
-LaTeX Warning: Command \textendash invalid in math mode on input line 107.
-
-[118]
+[118] [119] [120]
 Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
 
-[119] [120] [121]) (./qs9.tex [122]
+[121] [122] [123]) (./qs9.tex [124] [125]
 Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
-[123]
+
 Overfull \hbox (15.17776pt too wide) in paragraph at lines 75--76
 []\T1/lmr/m/n/12 Estimar a cor de um corpo aque-cido (por ex-em-plo, metais in-
 can-des-centes em fundições). 
  []
 
-<figures/radiacaocorponegro.png, id=1191, 758.835pt x 478.78876pt>
+[126]
+<figures/radiacaocorponegro.png, id=1215, 758.835pt x 478.78876pt>
 File: figures/radiacaocorponegro.png Graphic file (type png)
 <use figures/radiacaocorponegro.png>
 Package pdftex.def Info: figures/radiacaocorponegro.png  used on input line 117
 .
 (pdftex.def)             Requested size: 379.41658pt x 239.39378pt.
-[124] [125 <./figures/radiacaocorponegro.png (PNG copy)>] [126]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[127] [128 <./figures/radiacaocorponegro.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
-[127] [128]
+[129] [130]
 Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
 
-[129] [130]
+[131] [132] [133]
 Underfull \hbox (badness 10000) in paragraph at lines 390--391
 
  []
 
-[131] [132]
+[134] [135]
 Underfull \hbox (badness 10000) in paragraph at lines 484--485
 
  []
 
-[133] [134] [135] [136]
+[136] [137] [138]
 Underfull \hbox (badness 10000) in paragraph at lines 656--657
 
  []
 
-[137] [138]
+[139] [140]
 Underfull \hbox (badness 10000) in paragraph at lines 758--759
 
  []
 
-[139] [140]
+[141] [142]
 Underfull \hbox (badness 10000) in paragraph at lines 857--858
 
  []
 
-[141]
+[143] [144]
 Underfull \hbox (badness 10000) in paragraph at lines 936--937
 
  []
 
-[142] [143] [144] [145] [146] [147] [148]
-<figures/compton-foton.png, id=1305, 389.95688pt x 283.81032pt>
+[145] [146] [147] [148] [149] [150]
+<figures/compton-foton.png, id=1325, 389.95688pt x 283.81032pt>
 File: figures/compton-foton.png Graphic file (type png)
 <use figures/compton-foton.png>
 Package pdftex.def Info: figures/compton-foton.png  used on input line 1198.
 (pdftex.def)             Requested size: 227.62206pt x 165.66243pt.
- [149 <./figures/compton-foton.png (PNG copy)>]) (./qs10.tex [150] [151] [152] 
-[153] [154])
+ [151 <./figures/compton-foton.png (PNG copy)>] [152]) (./qs10.tex [153] [154] 
+[155] [156])
 
 Package caption Warning: Unused \captionsetup[sub] on input line 57.
 See the caption package documentation for explanation.
 
-[155] (./main.aux)
+[157] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 25FAD47771DBF8BB7AF11E78C974C04B;22047.
+(rerunfilecheck)             Checksum: FDED3ECF9518A9003124C226926C0C28;22665.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 71204 strings out of 478287
- 1749035 string characters out of 5849289
+ 71210 strings out of 478287
+ 1749113 string characters out of 5849289
  2718276 words of memory out of 5000000
- 88060 multiletter control sequences out of 15000+600000
+ 88062 multiletter control sequences out of 15000+600000
  580227 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,96p,1835b,2532s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2206,10 +2204,10 @@ b></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr
 /share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (155 pages, 1280190 bytes).
+Output written on main.pdf (157 pages, 1286095 bytes).
 PDF statistics:
- 1513 PDF objects out of 1728 (max. 8388607)
- 1260 compressed objects within 13 object streams
- 319 named destinations out of 1000 (max. 500000)
- 935 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1534 PDF objects out of 1728 (max. 8388607)
+ 1279 compressed objects within 13 object streams
+ 323 named destinations out of 1000 (max. 500000)
+ 951 words of extra memory for PDF output out of 10000 (max. 10000000)
 
