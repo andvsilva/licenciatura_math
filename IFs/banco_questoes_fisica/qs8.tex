@@ -1,4 +1,4 @@
-\section{\large \textcolor{blue}{Interferência e difração}}
+\section{\large \textcolor{blue}{Interferência, Difração, Refração e Reflexão}}
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Quest\~ao 43}}\\
@@ -325,6 +325,162 @@ o caminho óptico for um \textbf{par de meios comprimentos de onda}.
 
 Portanto, a resposta correta é alternativa \colorbox{green!50}{\textbf{A}}.
 \end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 30 - IFPA 2018 - Polariza\c{c}\~ao por Reflex\~ao (Ângulo de Brewster)}}\\
+\noindent
+
+\subsection{Quest\~ao 30 - IFPA 2018 - Polariza\c{c}\~ao por Reflex\~ao (Ângulo de Brewster)}
+
+Luz se propagando no ar é refletida por vidro com índice de refração $n$. O ângulo de incidência no qual a luz refletida é totalmente polarizada é
+
+\begin{itemize}
+\item[(A)] $\theta=\arcsin(n)$.
+\item[(B)] $\theta=\arcsin(1/n)$.
+\item[(C)] $\theta=\arctan(1/n)$.
+\item[(D)] $\theta=\arctan(n)$.
+\item[(E)] $\theta=\arccos(n)$.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/angulo_brewster.png} 
+\end{figure}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Para polarização total da luz refletida (ângulo de Brewster), os raios refletido e refratado ficam perpendiculares:
+\[
+\theta_B+\theta_t=90^\circ.
+\]
+Pela lei de Snell, com $n_1\simeq 1$ (ar) e $n_2=n$ (vidro),
+\[
+n_1\sin\theta_B=n_2\sin\theta_t
+\quad\Rightarrow\quad
+\sin\theta_t=\frac{n_1}{n_2}\sin\theta_B.
+\]
+Como $\theta_t=90^\circ-\theta_B$, então $\sin\theta_t=\cos\theta_B$, logo
+\[
+n_1\sin\theta_B=n_2\cos\theta_B
+\;\Rightarrow\;
+\tan\theta_B=\frac{n_2}{n_1}=n
+\;\Rightarrow\;
+\theta_B=\arctan(n).
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{D}}.
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 31 - IFPA 2018 Franjas Claras na Fenda Dupla}}\\
+\noindent
+
+\subsection{Quest\~ao 31 - IFPA 2018 - Franjas Claras na Fenda Dupla}
+
+O número máximo possível de franjas claras no experimento da fenda dupla de Young para distância entre as fendas igual a 
+$2{,}5$ vezes o comprimento de onda da luz incidente é
+
+\begin{itemize}
+\item[(A)] 1.
+\item[(B)] 3.
+\item[(C)] 5.
+\item[(D)] 7.
+\item[(E)] 9.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\[2mm]
+
+Máximos de interferência: 
+\[
+d\sin\theta = m\lambda \quad (m\in\mathbb{Z}),
+\]
+com a condição $|\sin\theta|\leq 1 \;\;\Rightarrow\;\; |m|\leq \frac{d}{\lambda}.
+$
+
+Dado $d = 2{,}5\,\lambda$, obtemos:
+\[
+m_{\max} = \left\lfloor 2{,}5 \right\rfloor = 2.
+\]
+
+Assim, o número total de franjas claras visíveis é:
+\[
+2m_{\max}+1 = 2\cdot2+1 = 5.
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{C}}.
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 28 IFRS 2023 - Índice do quarto meio (refração e ângulo crítico)}}\\
+\noindent
+
+\subsection{Quest\~ao 28 IFRS 2023 - Índice do quarto meio (refração e ângulo crítico)}
+
+Um raio de luz se propaga em um meio 1 ($n_1=1{,}5$) e sofre refração ao penetrar em um segundo meio com índice de refração igual a 
+$2$, com um ângulo de incidência na interface meio 1-meio 2 igual a $60^\circ$. Posteriormente, esse raio refrata novamente em um terceiro 
+meio, com um ângulo de refração igual a $\theta$ (onde $\sin\theta=0{,}25$). Ao incidir no quarto meio, o ângulo de incidência corresponde ao ângulo crítico, 
+resultando em reflexão interna total.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/lei_snell.png} 
+\end{figure}
+
+Qual é o índice de refração mais próximo para o quarto meio?
+
+\begin{itemize}
+\item[(A)] $\dfrac{3\sqrt{3}}{4}$
+\item[(B)] $\dfrac{\sqrt{3}}{3}$
+\item[(C)] $\sqrt{3}$
+\item[(D)] $2\sqrt{3}$
+\item[(E)] $3\sqrt{3}$
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\[2mm]
+
+Na interface meio 1 $\to$ meio 2, pela lei de Snell:
+\[
+n_1\sin 60^\circ = n_2\sin\beta,
+\]
+logo
+\[
+\sin\beta=\frac{n_1}{n_2}\sin60^\circ=\frac{1{,}5}{2}\cdot\frac{\sqrt{3}}{2}
+=\frac{3}{4}\cdot\frac{\sqrt{3}}{2}=\frac{3\sqrt{3}}{8}\approx 0{,}649519.
+\]
+
+Na interface meio 2 $\to$ meio 3, novamente Snell:
+\[
+n_2\sin\beta = n_3\sin\theta.
+\]
+Isolando $n_3$ e usando $\sin\theta=0{,}25$:
+\[
+n_3=\frac{n_2\sin\beta}{\sin\theta}
+= \frac{2\cdot\left(\dfrac{3\sqrt{3}}{8}\right)}{0{,}25}
+= \frac{\dfrac{3\sqrt{3}}{4}}{0{,}25}
+= 3\sqrt{3}.
+\]
+
+Na interface meio 3 $\to$ meio 4 o ângulo de incidência é o ângulo crítico $\theta_c$, portanto
+\[
+\sin\theta_c=\frac{n_4}{n_3}.
+\]
+Como o ângulo de incidência é igual a $\theta$ e $\sin\theta=0{,}25$, temos
+\[
+n_4 = n_3\sin\theta = 3\sqrt{3}\times 0{,}25 = \frac{3\sqrt{3}}{4}.
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{A}}.
+
+\end{flushleft}
+
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Quest\~ao - }}\\

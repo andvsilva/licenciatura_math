@@ -918,6 +918,215 @@ A resposta correta é alternativa \colorbox{green!50}{\textbf{E}}.
 \end{flushleft}
 
 \begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 28}}\\
+\subsection{Quest\~ao 28 - IFMS 2025 Termodinâmica - G\'as Ideal}
+Uma amostra de $2{,}0$ mols de um gás ideal inicialmente ocupa um volume de $10{,}0$ L a uma temperatura de $300$ K e pressão $P_1$. 
+O gás passa por um processo em três etapas:
+
+\begin{enumerate}
+    \item \textbf{Expansão isotérmica:} o gás duplica seu volume à temperatura constante;
+    \item \textbf{Compressão isocórica:} a pressão do gás triplica, sem variação de volume;
+    \item \textbf{Aquecimento isocórico:} o gás é aquecido até que sua temperatura alcance $1200$ K e sua pressão duplique.
+\end{enumerate}
+
+Qual será a pressão do gás após a terceira etapa?
+
+\bigskip
+
+\textbf{Dados:}
+
+\begin{itemize}
+    \item $R = 0{,}08 \ \text{atm} \cdot \text{L} / \text{mol} \cdot \text{K}$
+\end{itemize}
+
+\begin{itemize}
+\item[(A)] 4{,}8 atm.
+\item[(B)] 9{,}6 atm.  
+\item[(C)] 14{,}4 atm.
+\item[(D)] 19{,}2 atm.
+\item[(E)] 24{,}0 atm.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\subsection*{Etapa 1: Expansão isotérmica}
+
+Como o processo é isotérmico, a temperatura permanece constante em $300 \ \text{K}$. Aplicando a lei de Boyle-Mariotte:
+
+\begin{equation}
+P_1 \cdot V_1 = P_2 \cdot V_2
+\end{equation}
+
+Sabemos que o volume duplica:
+
+\begin{equation}
+V_2 = 2 \cdot V_1 = 20,0 \ \text{L}
+\end{equation}
+
+Portanto:
+
+\begin{equation}
+P_2 = \frac{P_1 \cdot V_1}{V_2} = \frac{P_1 \cdot 10,0}{20,0} = 0,5 \cdot P_1
+\end{equation}
+
+\subsection*{Etapa 2: Compressão isocórica}
+
+Neste processo, o volume permanece constante ($V_2 = V_3 = 20,0 \ \text{L}$), e a pressão triplica:
+
+\begin{equation}
+P_3 = 3 \cdot P_2 = 3 \cdot (0,5 \cdot P_1) = 1,5 \cdot P_1
+\end{equation}
+
+\subsection*{Etapa 3: Aquecimento isocórico}
+
+O volume continua constante ($V_3 = V_4 = 20,0 \ \text{L}$), mas a temperatura aumenta de $T_3$ para $T_4 = 1200 \ \text{K}$.
+
+Sabemos que na transformação isocórica, a pressão é diretamente proporcional à temperatura absoluta:
+
+\begin{equation}
+\frac{P_4}{P_3} = \frac{T_4}{T_3}
+\end{equation}
+
+\textbf{Mas precisamos primeiro saber qual era $T_3$.}
+
+Para isso, aplicamos a equação geral dos gases para o estado 3:
+
+Sabemos que da etapa 2:
+
+\[
+\text{Como } \frac{P_3}{P_2} = \frac{T_3}{T_2} \quad \text{(pois volume constante)}
+\]
+
+Sabemos também que:
+
+\begin{equation}
+P_3 = 3 \cdot P_2
+\end{equation}
+
+Então:
+
+\begin{equation}
+\frac{P_3}{P_2} = 3 = \frac{T_3}{T_2}
+\end{equation}
+
+Mas $T_2 = T_1 = 300 \ \text{K}$ (porque a primeira transformação foi isotérmica).
+
+Portanto:
+
+\begin{equation}
+T_3 = 3 \cdot 300 = 900 \ \text{K}
+\end{equation}
+
+Agora podemos calcular $P_4$:
+
+\begin{equation}
+\frac{P_4}{P_3} = \frac{1200}{900} = \frac{4}{3}
+\end{equation}
+
+Então:
+
+\begin{equation}
+P_4 = \frac{4}{3} \cdot P_3 = \frac{4}{3} \cdot 1,5 \cdot P_1 = 2,0 \cdot P_1
+\end{equation}
+
+Mas, como já vimos:
+
+\[
+P_3 = 1,5 \cdot P_1
+\]
+
+Logo:
+
+\[
+P_4 = 2,0 \cdot P_1 \times 1,5 = 3,0 \cdot P_1
+\]
+
+\subsection*{Determinando o valor de $P_1$}
+
+Utilizando a equação geral dos gases ideais no estado inicial:
+
+\begin{equation}
+P_1 \cdot V_1 = n \cdot R \cdot T_1
+\end{equation}
+
+Substituindo os valores:
+
+\begin{equation}
+P_1 \cdot 10,0 = 2,0 \cdot 0,08 \cdot 300
+\end{equation}
+
+\begin{equation}
+P_1 \cdot 10,0 = 48
+\end{equation}
+
+\begin{equation}
+P_1 = 4,8 \ \text{atm}
+\end{equation}
+
+\subsection*{Calculando $P_4$}
+
+Finalmente:
+
+\begin{equation}
+P_4 = 3{,}0 \cdot P_1 = 3{,}0 \cdot 4{,}8 = 14{,}4 \ \text{atm}
+\end{equation}
+
+\section*{Resposta Final}
+
+\[
+\boxed{14{,}4 \ \text{atm}}
+\]
+
+\textbf{Resposta correta: \colorbox{green!50}{(C)}}
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 38 - Termodinâmica - G\'as Ideal e G\'as Perfeito}}\\
+
+\subsection{Quest\~ao 38 - IFMS 2025 Termodinâmica - G\'as Ideal e G\'as Perfeito}
+Considerando o estudo dos gases, assinale a
+alternativa correta a respeito das definições de
+gás ideal, gás perfeito e vapor.
+
+\begin{itemize}
+    \item[(A)] Gás ideal e gás perfeito são sinônimos e
+    descrevem substâncias que obedecem à
+    equação dos gases ideais em qualquer condição
+    de temperatura e pressão.
+    \item[(B)] Gás perfeito é uma aproximação teórica que
+    considera
+    interações
+    intermoleculares
+    desprezíveis e colisões perfeitamente elásticas,
+    mas pode se comportar como um vapor em
+    determinadas condições.
+    \item[(\colorbox{green!50}{C})] Vapor refere-se ao estado gasoso de uma
+    substância que pode ser liquefeita por
+    compressão isoterma, enquanto um gás ideal
+    nunca pode ser liquefeito, independentemente da
+    pressão aplicada.
+    \item[(D)] Gás ideal é um modelo teórico que considera
+    volume molecular nulo e ausência de forças
+    intermoleculares, mas na prática todos os gases
+    reais seguem exatamente esse comportamento.
+    \item[(E)] Gás perfeito é aquele que obedece exatamente à
+    equação dos gases ideais, mesmo em altas
+    pressões e baixas temperaturas, sem apresentar
+    desvios significativos.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\textbf{Resposta correta: \colorbox{green!50}{(C)}}
+
+\end{flushleft}
+
+\begin{flushleft}
 \textbf{\textcolor{blue}{\Large Quest\~ao - }}\\
 \noindent
 
