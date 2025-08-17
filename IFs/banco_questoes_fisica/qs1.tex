@@ -1855,6 +1855,225 @@ Essa é a aceleração do sistema levando em conta o momento de inércia da poli
 
 \end{flushleft}
 
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 48 IFSC 2023 - Momento de In\'ercia}}\\
+\noindent
 
+\subsection{Quest\~ao 48 IFSC 2023 - Momento de In\'ercia}
 
-\noindent\rule{\linewidth}{0.6pt}\\
+Considere uma placa fina, de massa $m$, com largura $a$ e comprimento $2a$, que gira em torno de um eixo $O$ perpendicular ao plano da 
+placa e localizado a uma distância $a/2$ do seu centro de massa (C.M.). A placa parte do repouso e atinge uma velocidade angular de 
+$2\pi\ \text{rad/s}$ em $4\,\text{s}$. 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/torque_momento_inercia.png}
+\end{figure}
+
+(Considere $\pi=3$.) Qual é o torque resultante (em unidades do S.I.) aplicado à placa nesse intervalo?
+
+\begin{itemize}
+\item[(A)] $\dfrac{15ma^2}{24}$
+\item[(B)] $4ma^2$
+\item[(C)] $\dfrac{3ma^2}{8}$
+\item[(D)] $ma^2$
+\item[(E)] $\dfrac{3ma}{2}$
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Para um retângulo $a \times 2a$ girando em torno de um eixo perpendicular ao plano que passa pelo C.M.,
+
+\[
+I_{\rm cm}=\frac{1}{12}m\left(x^2+y^2\right)
+\]
+
+\[
+I_{\rm cm}=\frac{1}{12}m\left(a^2+(2a)^2\right)=\frac{5}{12}ma^2.
+\]
+Como o eixo real está a $d=\dfrac{a}{2}$ do C.M., pelo teorema dos eixos paralelos (Steiner),
+\[
+I_O=I_{\rm cm}+md^2=\frac{5}{12}ma^2+\frac{1}{4}ma^2
+=\frac{2}{3}ma^2.
+\]
+A aceleração angular é
+\[
+\alpha=\frac{\Delta\omega}{\Delta t}=\frac{2\pi-0}{4}
+=\frac{6}{4}=1{,}5\ \text{rad/s}^2,
+\]
+onde usamos $\pi=3$. O torque resultante é
+\[
+\tau = I_O\,\alpha = \left(\frac{2}{3}ma^2\right)\left(1{,}5\right)=ma^2.
+\]
+
+\medskip
+A resposta correta é a alternativa \colorbox{green!50}{\textbf{D}}.
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 49 - IFSC 2023 Cinemática - Movimento Parab\'olico}}\\
+\noindent
+
+\subsection{Quest\~ao 49 - IFSC 2023 Cinemática - Movimento Parab\'olico}
+
+Uma bola é arremessada obliquamente do topo de um prédio de altura $h=15\,\text{m}$, com velocidade inicial $v=20\,\text{m/s}$ formando ângulo 
+$\theta=30^\circ$ com a horizontal, conforme a figura. 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/momento_balistico.png} 
+\end{figure}
+
+Despreze a resistência do ar e adote $g=10\,\text{m/s}^2$.\\
+Qual a distância horizontal $d$ do ponto de lançamento ao ponto onde a bola atinge o solo?
+
+\begin{itemize}
+\item[(A)] $d \approx 17\,\text{m}$
+\item[(B)] $d \approx 21\,\text{m}$
+\item[(C)] $d \approx 30\,\text{m}$
+\item[(D)] $d \approx 41\,\text{m}$
+\item[(E)] $d \approx 52\,\text{m}$
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Componentes da velocidade inicial:
+\[
+v_x=v\cos\theta=20\cdot\frac{\sqrt{3}}{2}=10\sqrt{3}\ \text{m/s},\qquad
+v_y=v\sin\theta=20\cdot\frac{1}{2}=10\ \text{m/s}.
+\]
+
+Escolhendo $y=0$ no ponto de lançamento (solo está em $y=-h$), o movimento vertical é
+\[
+y(t)=v_y t-\frac{1}{2}gt^2.
+\]
+No instante de choque com o solo: $y(t_f)=-h=-15$:
+\[
+-\;15=10t_f-\frac{1}{2}\cdot 10\,t_f^2
+\ \Longrightarrow\ 
+5t_f^2-10t_f-15=0
+\ \Longrightarrow\ 
+t_f^2-2t_f-3=0.
+\]
+Logo,
+\[
+t_f=\frac{2+\sqrt{4+12}}{2}=3\ \text{s}.
+\]
+
+A distância horizontal é
+\[
+d=v_x\,t_f=(10\sqrt{3})\cdot 3=30\sqrt{3}\ \text{m}\approx 51{,}96\ \text{m}\approx 52\ \text{m}.
+\]
+
+\medskip
+A resposta correta é a alternativa \colorbox{green!50}{\textbf{E}}.
+
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 27 - IFRS 2023 Torque}}\\
+\noindent
+
+Considere uma placa fina quadrada, uniforme, de massa $M$ e lado $L$. Uma for\c{c}a $F$, paralela \`a superf\'{\i}cie da placa e perpendicular a $L$, \'e aplicada em uma das extremidades da placa, provocando rota\c{c}\~ao em torno de um eixo perpendicular ao plano da placa. O ponto de apoio desse eixo est\'a localizado a uma dist\^ancia $D$ do centro de massa da placa. Se a placa adquire acelera\c{c}\~ao angular
+\[
+\alpha=\frac{24F}{59ML},
+\]
+determine a dist\^ancia $D$ do ponto de apoio ao centro de massa.
+
+\subsection{Quest\~ao 27 - IFRS 2023 Torque}
+
+\begin{itemize}
+\item[(A)] \(\dfrac{L}{3}\)
+\item[(B)] \(\dfrac{5L}{7}\)
+\item[(C)] \(\dfrac{L}{8}\)
+\item[(D)] \(\dfrac{3L}{4}\)
+\item[(E)] \(\dfrac{3L}{8}\)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solu\c{c}\~ao:}}\\
+
+Tomamos o eixo perpendicular ao plano da placa passando por um ponto a dist\^ancia $D$ do centro de massa. O momento de in\'ercia em rela\c{c}\~ao ao centro de massa (eixo perpendicular ao plano) para uma placa quadrada de lado $L$ \'e
+\[
+I_{\text{cm}}=\frac{1}{12}M(L^2+L^2)=\frac{1}{6}ML^2.
+\]
+Pelo teorema dos eixos paralelos, o momento de in\'ercia em rela\c{c}\~ao ao eixo de apoio \'e
+\[
+I=I_{\text{cm}}+MD^2=\frac{1}{6}ML^2+MD^2.
+\]
+
+A for\c{c}a $F$ aplicada na extremidade da placa est\'a a uma dist\^ancia $L/2$ do centro. Se assumirmos que o ponto de apoio est\'a entre o centro e o ponto de aplica\c{c}\~ao da for\c{c}a (portanto $0\le D\le L/2$), o braço de alavanca relativo ao apoio vale $L/2-D$, e o torque em torno do apoio \'e
+\[
+\tau = F\,(L/2-D).
+\]
+
+Pela segunda lei da din\^amica para rota\c{c}\~oes,
+\[
+\tau = I\,\alpha.
+\]
+Substituindo $\tau$, $I$ e $\alpha$:
+\[
+F\,(L/2-D)=\Big(\frac{1}{6}ML^2+MD^2\Big)\frac{24F}{59ML}.
+\]
+
+Cancelando $F$ e $M$ (assumindo $F\neq0$, $M\neq0$):
+\[
+L/2 - D = \Big(\frac{1}{6}L^2 + D^2\Big)\frac{24}{59L}.
+\]
+
+Multiplicando ambos os lados por $59L$:
+\[
+59L\Big(\frac{L}{2}-D\Big)=24\Big(\frac{L^2}{6}+D^2\Big).
+\]
+
+Desenvolvendo:
+\[
+\frac{59}{2}L^2 - 59LD = 4L^2 + 24D^2,
+\]
+pois $24\cdot \frac{L^2}{6}=4L^2$.
+
+Rearranjando todos os termos para um lado e multiplicando por $2$ para eliminar a fra\c{c}\~ao:
+\[
+51L^2 - 118LD - 48D^2 = 0.
+\]
+Multiplicando por $-1$ e escrevendo como quadr\'atica em $D$:
+\[
+48D^2 + 118LD - 51L^2 = 0.
+\]
+
+Aplicando a f\'ormula quadr\'atica $D=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}$ com $a=48$, $b=118L$, $c=-51L^2$:
+\[
+D = \frac{-118L \pm \sqrt{(118L)^2 - 4\cdot 48 \cdot (-51L^2)}}{2\cdot 48}.
+\]
+Calculemos o discriminante (dividindo por $L^2$ para simplificar os n\'umeros):
+\[
+118^2 + 4\cdot 48\cdot 51 = 13924 + 9792 = 23716 = 154^2.
+\]
+Logo
+\[
+D = \frac{-118L \pm 154L}{96}.
+\]
+
+As duas solu\c{c}\~oes s\~ao
+\[
+D_1 = \frac{-118+154}{96}L = \frac{36}{96}L = \frac{3L}{8},
+\]
+\[
+D_2 = \frac{-118-154}{96}L = \frac{-272}{96}L = -\frac{17L}{6}.
+\]
+
+A solu\c{c}\~ao $D_2$ \'e f\'isicamente n\~ao aceit\'avel (dist\^ancia negativa e com m\'odulo maior que $L/2$ no contexto assumido), permanecendo a solu\c{c}\~ao f\'isica
+\[
+\boxed{D=\frac{3L}{8}}.
+\]
+
+Portanto a alternativa correta \'e \(\colorbox{green!50}{\textbf{(B) \(\dfrac{3L}{8}\)}}\).
+
+\end{flushleft}
+

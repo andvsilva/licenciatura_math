@@ -1376,6 +1376,60 @@ V_{AB} = V_A - V_B = 40 - 72 = -32 \ \text{V}.
 A resposta correta é alternativa \colorbox{green!50}{\textbf{C}}.
 \end{flushleft}
 
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 26 - IFRS 2023 Onda eletromagn\'etica}}\\
+\noindent
+
+\subsection{Quest\~ao 26 - IFRS 2023 Onda eletromagn\'etica}
+
+Considere uma onda eletromagn\'etica harm\^onica plana propagando-se na dire\c{c}\~ao $z$
+atrav\'es do v\'acuo. Suponha que esta onda, com amplitude $E_0$, tenha magnitude zero
+quando $t=0$ e $z=0$. Qual \'e o valor do fluxo instant\^aneo de energia por unidade de 
+\'area por unidade de tempo para essa onda?
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+O fluxo de energia \'e descrito pelo vetor de Poynting:
+\[
+\mathbf{S} = \frac{1}{\mu_0}\,\mathbf{E} \times \mathbf{B}.
+\]
+
+A onda el\'etrica pode ser escrita como
+\[
+\mathbf{E}(z,t) = E_0 \sin(kz - \omega t)\,\hat{\mathbf{x}},
+\]
+e o campo magn\'etico associado no v\'acuo \'e
+\[
+\mathbf{B}(z,t) = \frac{1}{c} E_0 \sin(kz - \omega t)\,\hat{\mathbf{y}}.
+\]
+
+Portanto,
+\[
+\mathbf{S}(z,t) = \frac{1}{\mu_0}\,E_0 \sin(kz - \omega t)\,\hat{\mathbf{x}}
+\times \frac{1}{c} E_0 \sin(kz - \omega t)\,\hat{\mathbf{y}}.
+\]
+
+Efetuando o produto vetorial:
+\[
+\mathbf{S}(z,t) = \frac{E_0^2}{\mu_0 c}\,\sin^2(kz - \omega t)\,\hat{\mathbf{z}}.
+\]
+
+Como
+\[
+\frac{1}{\mu_0 c} = \varepsilon_0 c,
+\]
+obtemos
+\[
+\boxed{\;\mathbf{S}(z,t) = \varepsilon_0 c\,E_0^2 \sin^2(kz - \omega t)\,\hat{\mathbf{z}}\;}
+\qquad \text{(W/m$^2$)}.
+\]
+
+No ponto $(z=0,t=0)$, tem-se $\sin(0)=0$, logo $\mathbf{S}(0,0)=0$. O valor m\'edio temporal do fluxo \'e
+\[
+\langle \mathbf{S} \rangle = \frac{1}{2}\,\varepsilon_0 c\,E_0^2\,\hat{\mathbf{z}}.
+\]
+
+\end{flushleft}
 
 
 \begin{flushleft}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  12 AUG 2025 19:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  16 AUG 2025 22:50
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1876,7 +1876,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1239--1240
 
  []
 
-<figures/colisao_impulso.png, id=744, 706.89093pt x 300.3722pt>
+<figures/colisao_impulso.png, id=823, 706.89093pt x 300.3722pt>
 File: figures/colisao_impulso.png Graphic file (type png)
 <use figures/colisao_impulso.png>
 Package pdftex.def Info: figures/colisao_impulso.png  used on input line 1254.
@@ -1886,7 +1886,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1339--1340
 
  []
 
-<figures/loop.png, id=754, 499.8675pt x 274.02374pt>
+<figures/loop.png, id=833, 499.8675pt x 274.02374pt>
 File: figures/loop.png Graphic file (type png)
 <use figures/loop.png>
 Package pdftex.def Info: figures/loop.png  used on input line 1354.
@@ -1896,7 +1896,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1456--1457
 
  []
 
-<figures/barra_momento_de_inercia.png, id=768, 523.20468pt x 300.3722pt>
+<figures/barra_momento_de_inercia.png, id=846, 523.20468pt x 300.3722pt>
 File: figures/barra_momento_de_inercia.png Graphic file (type png)
 <use figures/barra_momento_de_inercia.png>
 Package pdftex.def Info: figures/barra_momento_de_inercia.png  used on input li
@@ -1912,46 +1912,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 1646--1647
 
  []
 
-<figures/colisao.png, id=786, 355.3275pt x 171.64125pt>
+<figures/colisao.png, id=864, 355.3275pt x 171.64125pt>
 File: figures/colisao.png Graphic file (type png)
 <use figures/colisao.png>
 Package pdftex.def Info: figures/colisao.png  used on input line 1659.
 (pdftex.def)             Requested size: 273.14923pt x 131.94939pt.
 [39 <./figures/colisao.png (PNG copy)>] [40]
-<figures/polia_com_massa.png, id=795, 221.32687pt x 349.305pt>
+<figures/polia_com_massa.png, id=873, 221.32687pt x 349.305pt>
 File: figures/polia_com_massa.png Graphic file (type png)
 <use figures/polia_com_massa.png>
 Package pdftex.def Info: figures/polia_com_massa.png  used on input line 1755.
 (pdftex.def)             Requested size: 110.66315pt x 174.65207pt.
- [41 <./figures/polia_com_massa.png (PNG copy)>] [42])
-Underfull \hbox (badness 10000) in paragraph at lines 1860--140
+ [41 <./figures/polia_com_massa.png (PNG copy)>] [42]
+<figures/torque_momento_inercia.png, id=883, 324.46219pt x 217.5628pt>
+File: figures/torque_momento_inercia.png Graphic file (type png)
+<use figures/torque_momento_inercia.png>
+Package pdftex.def Info: figures/torque_momento_inercia.png  used on input line
+ 1870.
+(pdftex.def)             Requested size: 227.62206pt x 152.63153pt.
 
- []
 
-(./qs2.tex
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[43] [44 <./figures/torque_momento_inercia.png (PNG copy)>]
+<figures/momento_balistico.png, id=894, 493.845pt x 387.69844pt>
+File: figures/momento_balistico.png Graphic file (type png)
+<use figures/momento_balistico.png>
+Package pdftex.def Info: figures/momento_balistico.png  used on input line 1927
+.
+(pdftex.def)             Requested size: 227.62206pt x 178.69247pt.
+ [45 <./figures/momento_balistico.png (PNG copy)>] [46] [47] [48]) (./qs2.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
-[43] [44] [45]
+[49] [50] [51]
 
 LaTeX Warning: Command \c invalid in math mode on input line 149.
 
 
 LaTeX Warning: Command \~ invalid in math mode on input line 149.
 
-[46] [47pdfTeX warning (ext4): destination with the same identifier (name{equat
-ion.2.17}) has been already used, duplicate ignored
+[52pdfTeX warning (ext4): destination with the same identifier (name{equation.2
+.17}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.222 \]
+l.196 \]
         ]
-<figures/momento_angular.png, id=831, 538.26094pt x 290.58563pt>
+<figures/momento_angular.png, id=935, 538.26094pt x 290.58563pt>
 File: figures/momento_angular.png Graphic file (type png)
 <use figures/momento_angular.png>
 Package pdftex.def Info: figures/momento_angular.png  used on input line 254.
 (pdftex.def)             Requested size: 364.19667pt x 196.61569pt.
- [48 <./figures/momento_angular.png (PNG copy)>]
+ [53]
 
 LaTeX Font Warning: Command \huge invalid in math mode on input line 266.
 
@@ -1964,39 +1977,52 @@ LaTeX Font Warning: Command \huge invalid in math mode on input line 268.
 
 LaTeX Font Warning: Command \huge invalid in math mode on input line 269.
 
-[49] [50]
-<figures/fluido_tubo_eqs_massa_bernoulli.png, id=846, 816.80156pt x 469.755pt>
+[54 <./figures/momento_angular.png (PNG copy)>] [55]
+<figures/fluido_tubo_eqs_massa_bernoulli.png, id=950, 816.80156pt x 469.755pt>
 File: figures/fluido_tubo_eqs_massa_bernoulli.png Graphic file (type png)
 <use figures/fluido_tubo_eqs_massa_bernoulli.png>
 Package pdftex.def Info: figures/fluido_tubo_eqs_massa_bernoulli.png  used on i
 nput line 351.
 (pdftex.def)             Requested size: 245.04236pt x 140.92758pt.
- [51 <./figures/fluido_tubo_eqs_massa_bernoulli.png (PNG copy)>])
-Underfull \hbox (badness 10000) in paragraph at lines 440--142
+ [56 <./figures/fluido_tubo_eqs_massa_bernoulli.png (PNG copy)>] [57]
+<figures/bloco_queda_livre.png, id=960, 188.20313pt x 301.8778pt>
+File: figures/bloco_queda_livre.png Graphic file (type png)
+<use figures/bloco_queda_livre.png>
+Package pdftex.def Info: figures/bloco_queda_livre.png  used on input line 427.
+
+(pdftex.def)             Requested size: 136.57462pt x 219.0792pt.
+ [58 <./figures/bloco_queda_livre.png (PNG copy)>]
+Overfull \hbox (44.62726pt too wide) detected at line 462
+\OML/lmm/m/it/12 x \OT1/lmr/m/n/12 = [] = [] = [] = [] = [] = 0[]16 []\OML/lmm/
+m/it/12 :
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 498--142
 
  []
 
-(./qs3.tex [52] [53] [54] [55] [56]
+(./qs3.tex [59] [60] [61] [62] [63]
 Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
  []
 
-[57]
+[64]
 Overfull \hbox (4.6283pt too wide) in paragraph at lines 272--274
 [][][][][][][] 
  []
 
-[58]
+
 Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
-[59] [60] [61]) (./qs4.tex
+[65] [66] [67] [68]) (./qs4.tex
 Overfull \hbox (16.18637pt too wide) in paragraph at lines 8--10
 [][][][][][] 
  []
 
-[62] [63]
+[69] [70]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 63.
 
@@ -2009,182 +2035,208 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
-[64] [65]
+[71] [72]
 Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
-[66] [67]
+[73] [74]
 Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
  []
 
-[68]) (./qs5.tex
-<figures/barra_termica.png, id=925, 469.755pt x 160.34906pt>
+[75] [76] [77]) (./qs5.tex
+<figures/barra_termica.png, id=1047, 469.755pt x 160.34906pt>
 File: figures/barra_termica.png Graphic file (type png)
 <use figures/barra_termica.png>
 Package pdftex.def Info: figures/barra_termica.png  used on input line 13.
 (pdftex.def)             Requested size: 364.19667pt x 124.31572pt.
- [69] [70 <./figures/barra_termica.png (PNG copy)>] [71]
+ [78 <./figures/barra_termica.png (PNG copy)>]
+[79]
 Overfull \hbox (4.15015pt too wide) in paragraph at lines 115--116
 \T1/lmr/m/n/12 Um [][][][][][] re-al-iza-dos por
  []
 
-[72] [73] [74] [75]
+[80] [81] [82] [83]
 Overfull \hbox (4.56436pt too wide) in paragraph at lines 298--299
 [][][][][][][] \T1/lmr/m/n/12 e trans-fer-ên-cia de calor
  []
 
-<figures/ciclo-termodinamico-diesel.png, id=976, 440.39531pt x 457.71pt>
+[84]
+<figures/ciclo-termodinamico-diesel.png, id=1098, 440.39531pt x 457.71pt>
 File: figures/ciclo-termodinamico-diesel.png Graphic file (type png)
 <use figures/ciclo-termodinamico-diesel.png>
 Package pdftex.def Info: figures/ciclo-termodinamico-diesel.png  used on input 
 line 316.
 (pdftex.def)             Requested size: 220.19711pt x 228.85445pt.
-[76] [77 <./figures/ciclo-termodinamico-diesel.png (PNG copy)>] [78])
-Underfull \hbox (badness 10000) in paragraph at lines 412--148
+ [85 <./figures/ciclo-termodinamico-diesel.png (PNG copy)>] [86] [87]
+[88]
+Underfull \hbox (badness 10000) in paragraph at lines 448--449
 
  []
 
-(./qs6.tex [79] [80]
+[89]
+Underfull \hbox (badness 10000) in paragraph at lines 508--509
+
+ []
+
+[90] [91]
+Underfull \hbox (badness 10000) in paragraph at lines 575--576
+
+ []
+
+[92] [93]
+Overfull \hbox (4.15015pt too wide) in paragraph at lines 676--677
+\T1/lmr/m/n/12 Um [][][][][][] re-al-iza-dos por
+ []
+
+[94] [95] [96] [97]
+Overfull \hbox (4.56436pt too wide) in paragraph at lines 859--860
+[][][][][][][] \T1/lmr/m/n/12 e trans-fer-ên-cia de calor
+ []
+
+[98] [99])
+Underfull \hbox (badness 10000) in paragraph at lines 943--148
+
+ []
+
+(./qs6.tex [100]
 Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
 
-<figures/capacitor.png, id=1007, 296.60812pt x 355.3275pt>
+[101]
+<figures/capacitor.png, id=1200, 296.60812pt x 355.3275pt>
 File: figures/capacitor.png Graphic file (type png)
 <use figures/capacitor.png>
 Package pdftex.def Info: figures/capacitor.png  used on input line 84.
 (pdftex.def)             Requested size: 148.3037pt x 177.6633pt.
-[81 <./figures/capacitor.png (PNG copy)>] [82]
+ [102 <./figures/capacitor.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-[83] [84]
+[103] [104]
 Underfull \hbox (badness 10000) in paragraph at lines 266--267
 
  []
 
-[85] [86] [87]
+[105] [106] [107]
 Underfull \hbox (badness 10000) in paragraph at lines 398--399
 
  []
 
-[88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101]
-[102] [103]
-<figures/lei-faraday-lenz.png, id=1107, 442.65375pt x 306.39468pt>
+[108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119]
+[120] [121] [122] [123] [124]
+<figures/lei-faraday-lenz.png, id=1305, 442.65375pt x 306.39468pt>
 File: figures/lei-faraday-lenz.png Graphic file (type png)
 <use figures/lei-faraday-lenz.png>
 Package pdftex.def Info: figures/lei-faraday-lenz.png  used on input line 1257.
 
 (pdftex.def)             Requested size: 221.32632pt x 153.19696pt.
- [104] [105 <./figures/lei-faraday-lenz.png (PNG copy)>] [106]
-[107]) (./qs7.tex [108] [109] [110] [111] [112] [113]
-<figures/associacao-de-lentes.png, id=1159, 453.19313pt x 227.34938pt>
+ [125 <./figures/lei-faraday-lenz.png (PNG copy)>] [126] [127] [128]) (./qs7.te
+x [129] [130] [131] [132] [133] [134]
+<figures/associacao-de-lentes.png, id=1354, 453.19313pt x 227.34938pt>
 File: figures/associacao-de-lentes.png Graphic file (type png)
 <use figures/associacao-de-lentes.png>
 Package pdftex.def Info: figures/associacao-de-lentes.png  used on input line 3
 06.
 (pdftex.def)             Requested size: 227.62206pt x 114.18782pt.
- [114 <./figures/associacao-de-lentes.png (PNG copy)>] [115] [116]) (./qs8.tex 
-[117]
+ [135]
+[136 <./figures/associacao-de-lentes.png (PNG copy)>] [137]) (./qs8.tex
+[138] [139]
 Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
-[118] [119] [120]
+[140] [141]
 Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
 
-[121] [122] [123]) (./qs9.tex [124] [125]
+[142] [143] [144] [145]) (./qs9.tex [146]
 Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
-
+[147]
 Overfull \hbox (15.17776pt too wide) in paragraph at lines 75--76
 []\T1/lmr/m/n/12 Estimar a cor de um corpo aque-cido (por ex-em-plo, metais in-
 can-des-centes em fundições). 
  []
 
-[126]
-<figures/radiacaocorponegro.png, id=1215, 758.835pt x 478.78876pt>
+[148]
+<figures/radiacaocorponegro.png, id=1418, 758.835pt x 478.78876pt>
 File: figures/radiacaocorponegro.png Graphic file (type png)
 <use figures/radiacaocorponegro.png>
 Package pdftex.def Info: figures/radiacaocorponegro.png  used on input line 117
 .
 (pdftex.def)             Requested size: 379.41658pt x 239.39378pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[127] [128 <./figures/radiacaocorponegro.png (PNG copy)>]
+ [149 <./figures/radiacaocorponegro.png (PNG copy)>] [150]
 Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
-[129] [130]
+[151] [152]
 Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
 
-[131] [132] [133]
+[153] [154]
 Underfull \hbox (badness 10000) in paragraph at lines 390--391
 
  []
 
-[134] [135]
+[155] [156]
 Underfull \hbox (badness 10000) in paragraph at lines 484--485
 
  []
 
-[136] [137] [138]
+[157] [158] [159] [160]
 Underfull \hbox (badness 10000) in paragraph at lines 656--657
 
  []
 
-[139] [140]
+[161] [162]
 Underfull \hbox (badness 10000) in paragraph at lines 758--759
 
  []
 
-[141] [142]
+[163] [164]
 Underfull \hbox (badness 10000) in paragraph at lines 857--858
 
  []
 
-[143] [144]
+[165]
 Underfull \hbox (badness 10000) in paragraph at lines 936--937
 
  []
 
-[145] [146] [147] [148] [149] [150]
-<figures/compton-foton.png, id=1325, 389.95688pt x 283.81032pt>
+[166] [167] [168] [169] [170] [171] [172]
+<figures/compton-foton.png, id=1524, 389.95688pt x 283.81032pt>
 File: figures/compton-foton.png Graphic file (type png)
 <use figures/compton-foton.png>
 Package pdftex.def Info: figures/compton-foton.png  used on input line 1198.
 (pdftex.def)             Requested size: 227.62206pt x 165.66243pt.
- [151 <./figures/compton-foton.png (PNG copy)>] [152]) (./qs10.tex [153] [154] 
-[155] [156])
+ [173 <./figures/compton-foton.png (PNG copy)>] [174]) (./qs10.tex [175] [176] 
+[177] [178] [179] [180] [181] [182])
 
 Package caption Warning: Unused \captionsetup[sub] on input line 57.
 See the caption package documentation for explanation.
 
-[157] (./main.aux)
+[183] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FDED3ECF9518A9003124C226926C0C28;22665.
+(rerunfilecheck)             Checksum: 0B6091E8698DCF8B0E3BD26AB60B84C2;26924.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 71210 strings out of 478287
- 1749113 string characters out of 5849289
+ 71311 strings out of 478287
+ 1750681 string characters out of 5849289
  2718276 words of memory out of 5000000
- 88062 multiletter control sequences out of 15000+600000
- 580227 words of font info for 128 fonts, out of 8000000 for 9000
+ 88094 multiletter control sequences out of 15000+600000
+ 583160 words of font info for 129 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,96p,1835b,2532s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
@@ -2204,10 +2256,10 @@ b></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr
 /share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (157 pages, 1286095 bytes).
+Output written on main.pdf (183 pages, 1389484 bytes).
 PDF statistics:
- 1534 PDF objects out of 1728 (max. 8388607)
- 1279 compressed objects within 13 object streams
- 323 named destinations out of 1000 (max. 500000)
- 951 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1765 PDF objects out of 2073 (max. 8388607)
+ 1479 compressed objects within 15 object streams
+ 388 named destinations out of 1000 (max. 500000)
+ 1070 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -385,6 +385,537 @@ Logo, a sequ\^encia \emph{de cima para baixo} \'e \(\;2\;-\;1\;-\;4\;-\;3\;\).
 
 \end{flushleft}
 
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 40 - Termodinâmica: Funções de Estado}}\\
+\noindent
+\subsection{Quest\~ao 40 - IFS 2024 Termodinâmica: Funções de Estado}
+Uma função de estado de um sistema termodinâmico fica
+completamente definida quando o estado do sistema é
+especificado. Isso pode ser representado num diagrama
+pressão-volume do sistema, que ilustra seus estados inicial
+e final. Qual das grandezas abaixo é uma função de estado
+de um sistema termodinâmico?
+
+\begin{itemize}
+\item[(A)] A energia interna.
+\item[(B)] O calor.
+\item[(C)] O trabalho.
+\item[(D)] A massa.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\section*{Introdução: Funções de Estado em Termodinâmica}
+
+A Termodinâmica é a área da Física que estuda as transformações de energia e as propriedades macroscópicas da matéria, como temperatura, pressão e volume. Para descrever um sistema termodinâmico, é necessário especificar o \textbf{estado do sistema}, que é determinado por um conjunto de variáveis chamadas \textbf{variáveis de estado}.
+
+Quando um sistema evolui de um estado inicial para um estado final, podemos calcular as mudanças sofridas em algumas grandezas físicas. Algumas dessas grandezas dependem apenas do estado inicial e final do sistema, enquanto outras dependem do caminho seguido durante o processo.
+
+\subsection*{O que é uma função de estado?}
+
+Uma \textbf{função de estado} é uma grandeza física cujo valor só depende do estado atual do sistema, isto é, das condições termodinâmicas (como \(P\), \(V\), \(T\), \(U\) etc.), e \textbf{não depende do processo pelo qual o sistema chegou a esse estado}.
+
+Ou seja:
+\begin{quote}
+As funções de estado são propriedades macroscópicas que caracterizam completamente o estado do sistema. Sua variação entre dois estados é a mesma, independentemente do caminho percorrido entre eles.
+\end{quote}
+
+\subsection*{Exemplos clássicos de funções de estado:}
+\begin{itemize}
+    \item Energia interna (\(U\))
+    \item Entalpia (\(H\))
+    \item Entropia (\(S\))
+    \item Pressão (\(P\))
+    \item Volume (\(V\))
+    \item Temperatura (\(T\))
+\end{itemize}
+
+Essas grandezas podem ser representadas em diagramas, como os famosos diagramas \(P \times V\) ou \(T \times S\), que ilustram estados e trajetórias de processos.
+
+\subsection*{E o que não é função de estado?}
+
+Grandezas como o \textbf{calor trocado} (\(Q\)) e o \textbf{trabalho realizado} (\(W\)) durante um processo dependem de 
+como o sistema evoluiu — são chamadas de \textbf{funções de processo}.
+
+Por exemplo: para comprimir um gás do volume \(V_1\) ao volume \(V_2\), o trabalho realizado pode ser maior ou menor 
+dependendo do caminho seguido (isotérmico, adiabático etc.), mas a variação de energia interna só depende do estado inicial e final.
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{A}}.
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 41 - Lei da Termodinâmica: Carnot}}\\
+\noindent
+\subsection{Quest\~ao 41 - Lei da Termodinâmica: Carnot}
+Uma bomba de calor serve para extrair calor do ambiente
+externo a 7°C e aquecer o interior de uma casa a 27°C.
+Considerando que a bomba é uma máquina de Carnot, para
+cada 15.000 J de calor entregue dentro de casa, a menor
+quantidade de trabalho que deve ser fornecido à bomba é
+
+\begin{itemize}
+\item[(A)] 2.500 J.
+\item[(B)] 2.000 J.
+\item[(C)] 1.500 J.
+\item[(D)] 1.000 J.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\section*{Definição}
+
+Uma máquina térmica converte calor em trabalho, operando entre duas fontes térmicas.
+
+\section*{Rendimento}
+
+\[
+\eta = \frac{W}{Q_q} = \frac{Q_q - Q_f}{Q_q} = 1 - \frac{Q_f}{Q_q}
+\]
+
+\begin{itemize}
+  \item \( \eta \): rendimento
+  \item \( W \): trabalho útil
+  \item \( Q_q \): calor absorvido da fonte quente
+  \item \( Q_f \): calor rejeitado à fonte fria
+\end{itemize}
+
+\section*{Rendimento da Máquina de Carnot}
+
+\[
+\eta_{\text{Carnot}} = 1 - \frac{T_f}{T_q}
+\]
+
+\subsection*{Calcular o rendimento da bomba de calor:}
+
+\[
+\eta = 1 - \frac{T_f}{T_q} = 1 - \frac{7^{\circ}\textrm{C} + 273\textrm{K}}{27^{\circ}\textrm{C}+ 273\textrm{K}} = 1 - \frac{280}{300} = 1 - 0.933333 = 0.066667 = 6.67\%
+\]
+
+Agora podemos calcular o trabalho realizado pela bomba de calor:
+
+\[
+  W = \eta Q_q = 6.67\% \times 15.000 \textrm{J} = 1.000 \textrm{J}
+\]
+A resposta correta é alternativa \colorbox{green!50}{\textbf{D}}.
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\section*{Princ\'ipios da Termodinâmica}
+
+\subsection*{Primeiro Princípio}
+\begin{equation*}
+    \Delta U = Q - W   \hspace{0.5cm} \longrightarrow \hspace{0.5cm} Q = W + \Delta U
+\end{equation*}
+\subsection*{Segundo Princípio}
+\begin{itemize}
+    \item O calor não flui espontaneamente de um corpo frio para um corpo quente.
+    \item Entropia tende a aumentar.
+\end{itemize}
+
+\section*{O que é entropia?}
+A entropia (\(S\)) é uma função de estado que mede o grau de desordem de um sistema, a quantidade de microestados possíveis, e a irreversibilidade de processos.
+
+\section*{Definição termodinâmica}
+Para processos reversíveis:
+
+\[
+\Delta S = \int \frac{dQ_{\text{rev}}}{T}
+\]
+
+Para temperatura constante (isotérmico):
+
+\[
+\Delta S = \frac{Q_{\text{rev}}}{T}
+\]
+
+\section*{Segunda Lei da Termodinâmica}
+
+\[
+\Delta S_{\text{total}} \geq 0
+\]
+
+\begin{itemize}
+  \item \( \Delta S_{\text{total}} = 0 \): processo reversível
+  \item \( \Delta S_{\text{total}} > 0 \): processo irreversível
+\end{itemize}
+
+\section*{Entropia estatística (Boltzmann)}
+
+\[
+S = k_B \ln \Omega
+\]
+
+\begin{itemize}
+  \item \( k_B = 1{,}38 \times 10^{-23} \, \text{J/K} \)
+  \item \( \Omega \): número de microestados possíveis
+\end{itemize}
+
+\section*{Unidade}
+Joules por Kelvin (J/K)
+
+\section*{Exemplos onde a entropia aumenta}
+\begin{itemize}
+  \item Derretimento de gelo
+  \item Expansão de gás
+  \item Mistura de substâncias
+\end{itemize}
+
+\subsection*{Terceiro Princípio}
+\begin{itemize}
+    \item A entropia de um cristal perfeito é zero no zero absoluto $(0\,K)$.
+\end{itemize}
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao  42 - 2 Lei da Termodinâmica: Entropia}}\\
+\noindent
+\subsection{Quest\~ao 42 - IFS 2024 - 2 Lei da Termodinâmica: Entropia}
+Um corpo de massa m com calor específico C à temperatura
+de 500 K é colocado em contato com outro corpo de mesma
+massa e mesmo calor específico à temperatura de 100 K. O
+sistema é colocado dentro de uma caixa isolada
+termicamente durante o processo. A variação da entropia do
+sistema quando os blocos alcançam o equilíbrio térmico é
+
+\begin{itemize}
+\item[(A)] mCln 5.
+\item[(B)] mCln 3.
+\item[(C)] mCln(9/5).
+\item[(D)] mCln(5/3).
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\section*{Variação de Entropia do Sistema}
+
+\textbf{Dados do problema:}
+\begin{itemize}
+    \item Dois corpos idênticos: mesma massa \(m\) e mesmo calor específico \(C\)
+    \item Temperatura inicial do corpo quente: \(T_q = 500\,\mathrm{K}\)
+    \item Temperatura inicial do corpo frio: \(T_f = 100\,\mathrm{K}\)
+    \item Caixa isolada termicamente (processo adiabático para o universo, mas irreversível para o sistema)
+\end{itemize}
+
+Queremos calcular a variação de entropia do sistema quando os corpos atingem o equilíbrio térmico.
+
+\subsection*{Temperatura de equilíbrio}
+
+Como os corpos têm mesma massa e mesmo calor específico, a energia perdida pelo quente é igual à energia ganha pelo frio. Assim, a temperatura de equilíbrio é a média aritmética:
+\[
+T_e = \frac{T_q + T_f}{2} = \frac{500 + 100}{2} = 300\,\mathrm{K}
+\]
+
+\subsection*{Variação de entropia de cada corpo}
+
+Sabemos que a variação de entropia de um corpo com calor específico constante é dada por:
+\[
+\Delta S = mC \int_{T_i}^{T_f} \frac{dT}{T} = mC \ln\left( \frac{T_f}{T_i} \right)
+\]
+
+\textbf{Para o corpo quente:}
+\[
+\Delta S_q =
+mC \ln\left( \frac{T_e}{T_q} \right) =
+mC \ln\left( \frac{300}{500} \right) =
+mC \ln(0{,}6)
+\]
+
+\textbf{Para o corpo frio:}
+\[
+\Delta S_f =
+mC \ln\left( \frac{T_e}{T_f} \right) =
+mC \ln\left( \frac{300}{100} \right) =
+mC \ln(3)
+\]
+
+\subsection*{Variação de entropia total do sistema}
+
+A variação de entropia total do sistema é a soma das variações de cada corpo:
+\[
+\Delta S_\text{total} =
+\Delta S_q + \Delta S_f =
+mC \ln(0{,}6) + mC \ln(3)
+\]
+
+Utilizando a propriedade dos logaritmos:
+\[
+\ln(0{,}6) + \ln(3) = \ln(0{,}6 \times 3) = \ln(1{,}8)
+\]
+
+Logo:
+\[
+\Delta S_\text{total} =
+mC \ln(\frac{9}{5})
+\]
+
+\subsection*{Resposta final:}
+\[
+\boxed{
+\Delta S_\text{total} =
+mC \ln(\frac{9}{5})
+}
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{C}}.
+\end{flushleft}
+
+\section*{Ciclos Termodinâmicos — Descrição Detalhada}
+
+\subsection*{O que é um ciclo termodinâmico?}
+
+Um \colorbox{yellow!40}{\textbf{ciclo termodinâmico} é uma sequência de processos termodinâmicos} realizados por um sistema (geralmente um fluido de trabalho), que retorna ao seu estado inicial ao final do ciclo.
+
+O sistema troca calor \(Q\) com o meio externo e realiza trabalho \(W\), obedecendo à Primeira Lei da Termodinâmica:
+\[
+\Delta U = Q - W
+\]
+
+Como o \colorbox{yellow!40}{sistema retorna ao estado inicial (\(\Delta U = 0\))}, temos:
+\[
+Q_{\text{líquido}} = W_{\text{líquido}}
+\]
+
+\begin{itemize}
+  \item Se \colorbox{yellow!40}{o ciclo for \textbf{motor}: transforma calor em trabalho (\(W_{\text{líquido}} > 0\)).}
+  \item Se for \textbf{refrigerador/bomba de calor}: consome trabalho para transferir calor de um reservatório frio para um quente.
+\end{itemize}
+
+\subsection*{Ciclos Motores (Máquinas Térmicas)}
+
+\subsubsection*{\colorbox{yellow!40}{Ciclo de Carnot}}
+
+Ciclo ideal com a máxima eficiência possível entre duas temperaturas \(T_q\) (quente) e \(T_f\) (fria).
+
+\begin{enumerate}
+  \item \colorbox{green!30}{Isotérmica a \(T_q\) (expansão com entrada de calor \(Q_q\))}
+  \item \colorbox{green!30}{Adiabática (expansão até \(T_f\))}
+  \item \colorbox{green!30}{Isotérmica a \(T_f\) (compressão com rejeição de calor \(Q_f\))}
+  \item \colorbox{green!30}{Adiabática (compressão até \(T_q\))}
+\end{enumerate}
+
+Eficiência ideal:
+\[
+\boxed{
+\eta_C = 1 - \frac{T_f}{T_q}
+}
+\]
+
+\section*{O Ciclo de Carnot é Irreversível?}
+
+\textbf{Resposta curta:} \textbf{Não. O ciclo de Carnot é, por definição, completamente reversível.}
+
+\subsection*{Por quê?}
+
+O ciclo de Carnot é um modelo teórico ideal que estabelece o limite máximo de eficiência entre duas temperaturas \( T_q \) (quente) e \( T_f \) (fria). Ele é composto por quatro transformações \textbf{reversíveis}:
+\begin{itemize}
+  \item Duas isotérmicas reversíveis:
+    \begin{itemize}
+      \item Expansão isotérmica a \( T_q \) (absorve calor \( Q_q \))
+      \item Compressão isotérmica a \( T_f \) (rejeita calor \( Q_f \))
+    \end{itemize}
+  \item Duas adiabáticas reversíveis:
+    \begin{itemize}
+      \item Expansão adiabática (sem troca de calor)
+      \item Compressão adiabática (sem troca de calor)
+    \end{itemize}
+\end{itemize}
+
+Cada processo ocorre de modo infinitamente lento, mantendo o sistema em equilíbrio e sem produção de entropia:
+\[
+\oint \frac{\delta Q}{T} = 0
+\]
+
+\subsection*{Na prática}
+
+Nenhuma máquina real pode executar um ciclo de Carnot, pois:
+\begin{itemize}
+  \item As trocas infinitesimais de calor requerem tempo infinito.
+  \item Sempre há atrito, dissipação e gradientes de temperatura.
+\end{itemize}
+
+Portanto:
+\begin{center}
+
+\textbf{Ciclo de Carnot ideal: reversível e eficiência máxima.}\\
+\textbf{Máquinas reais: irreversíveis e menos eficientes.}
+\end{center}
+
+\begin{table}[h!]
+\centering
+\small
+\caption{Comparação entre o Ciclo de Carnot e Ciclo Real}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Característica} & \textbf{Ciclo de Carnot (Ideal)} & \textbf{Ciclo Real} \\ \hline
+\textbf{Reversibilidade} 
+& Totalmente reversível & Irreversível (perdas) \\ \hline
+\textbf{Produção/entropia} 
+& Zero & Maior que zero \\ \hline
+\textbf{Eficiência} 
+& Máxima teórica & Menor que Carnot \\ \hline
+\textbf{Processos} 
+& Isotérmicos/adiabáticos & Processos com dissipação\\ \hline
+\textbf{Velocidade/operação} 
+& Infinitamente lenta & Finita \\ \hline
+\textbf{Aplicabilidade} 
+& Apenas modelo teórico & Realizado em motores/máquinas \\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsubsection*{Ciclo Otto}
+
+Modelo ideal para motores a gasolina (ignição por centelha).
+
+\begin{enumerate}
+  \item Compressão adiabática
+  \item Aquecimento a volume constante (explosão da mistura combustível-ar)
+  \item Expansão adiabática
+  \item Resfriamento a volume constante (descarga dos gases)
+\end{enumerate}
+
+Eficiência ideal:
+\[
+\eta_O = 1 - \frac{1}{r^{\gamma-1}}, \quad r = \frac{V_{\text{máx}}}{V_{\text{mín}}}, \quad \gamma = \frac{c_p}{c_v}
+\]
+
+\subsubsection*{Ciclo Diesel}
+
+Modelo para motores diesel (ignição por compressão). Difere do Otto: calor adicionado a pressão constante.
+
+\begin{enumerate}
+  \item Compressão adiabática
+  \item Aquecimento a pressão constante
+  \item Expansão adiabática
+  \item Resfriamento a volume constante
+\end{enumerate}
+
+\subsubsection*{Ciclo de Brayton (ou Joule)}
+
+Usado em turbinas a gás e motores a jato.
+
+\begin{enumerate}
+  \item Compressão adiabática
+  \item Aquecimento a pressão constante
+  \item Expansão adiabática
+  \item Resfriamento a pressão constante
+\end{enumerate}
+
+\subsection*{Ciclos de Refrigeração e Bombas de Calor}
+
+\subsubsection*{Ciclo inverso de Carnot}
+
+Mesmo princípio do Carnot, mas “ao contrário”. Usa trabalho para transferir calor de \(T_f\) para \(T_q\).
+
+Coeficiente de performance (COP):
+\begin{itemize}
+  \item Refrigerador: 
+  \[
+  COP_R = \frac{T_f}{T_q - T_f}
+  \]
+  \item Bomba de calor: 
+  \[
+  COP_B = \frac{T_q}{T_q - T_f}
+  \]
+\end{itemize}
+
+\subsubsection*{Ciclo de Compressão de Vapor}
+
+Usado em geladeiras e ar-condicionado.
+
+\begin{enumerate}
+  \item Compressão adiabática (fluido é comprimido e aquecido)
+  \item Condensação a pressão constante (rejeita calor para o ambiente)
+  \item Expansão isentrópica (queda de \(P\) e \(T\))
+  \item Vaporização a pressão constante (absorve calor do ambiente interno)
+\end{enumerate}
+
+\subsection*{Resumo das Grandezas Importantes}
+
+Eficiência térmica de uma máquina térmica:
+\[
+\eta = \frac{W_{\text{líquido}}}{Q_{\text{quente}}}
+\]
+
+COP para refrigeradores e bombas:
+\begin{itemize}
+  \item Refrigerador: \(COP_R = \frac{Q_f}{W}\)
+  \item Bomba de calor: \(COP_B = \frac{Q_q}{W}\)
+\end{itemize}
+
+\subsection*{Observação Prática}
+
+\begin{itemize}
+  \item \colorbox{green!30}{Ciclos reais sempre têm perdas por atrito, irreversibilidades} e transferência de calor fora do equilíbrio — por isso a eficiência real é menor que a teórica.
+  \item O \colorbox{green!30}{\textbf{Ciclo de Carnot} é um limite superior (ideal), mas impraticável na prática.}
+\end{itemize}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large IFMS 2025 - Termodinâmica - Ciclo de Carnot}}\\
+\noindent
+
+\subsection{Quest\~ao 11 - IFMS 2025 - Termodinâmica - Ciclo de Carnot}
+Uma usina termelétrica opera um \colorbox{yellow!50}{ciclo de Carnot} entre dois reservatórios térmicos: um a 
+\SI{800}{\kelvin} e outro a \SI{300}{\kelvin}. A usina recebe \SI{500}{\mega\joule} de calor da 
+fonte quente por ciclo e realiza trabalho sobre um gerador elétrico. No entanto, devido a perdas 
+operacionais e imperfeições no sistema, a eficiência real da usina é 60\% da eficiência teórica do ciclo 
+de Carnot. Com base nessas informações, qual é o trabalho efetivo realizado pela usina em cada ciclo?
+
+\begin{itemize}
+\item[(A)] 90 MJ.
+\item[(B)] 25 MJ.
+\item[(C)] 300 MJ.
+\item[(D)] 312,5 MJ.
+\item[(E)] 187,5 MJ.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+\begin{itemize}
+    \item Temperatura da fonte quente: \( T_q = \SI{800}{\kelvin} \)
+    \item Temperatura da fonte fria: \( T_f = \SI{300}{\kelvin} \)
+    \item Calor recebido por ciclo: \( Q_q = \SI{500}{\mega\joule} \)
+    \item Eficiência real: \( \eta_{\text{real}} = 60\% \cdot \eta_{\text{Carnot}} \)
+\end{itemize}
+
+\vspace{1em}
+A eficiência teórica do ciclo de Carnot é dada por:
+
+\[
+\eta_{\text{Carnot}} = 1 - \frac{T_f}{T_q} = 1 - \frac{300}{800} = 1 - 0{,}375 = 0{,}625
+\]
+
+Eficiência real da usina:
+
+\[
+\eta_{\text{real}} = 60\% \cdot 0{,}625 = 0{,}60 \cdot 0{,}625 = 0{,}375
+\]
+
+O trabalho efetivo realizado por ciclo é:
+
+\[
+W = \eta_{\text{real}} \cdot Q_q = 0{,}375 \cdot \SI{500}{\mega\joule} = \SI{187.5}{\mega\joule}
+\]
+
+\[
+\boxed{W = \SI{187.5}{\mega\joule}}
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{E}}.
+
+\end{flushleft}
 
 \begin{flushleft}
 \textbf{\textcolor{blue}{\Large Quest\~ao - }}\\
