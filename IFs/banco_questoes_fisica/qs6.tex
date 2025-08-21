@@ -1433,22 +1433,270 @@ No ponto $(z=0,t=0)$, tem-se $\sin(0)=0$, logo $\mathbf{S}(0,0)=0$. O valor m\'e
 
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{\Large Q}}\\
+\textbf{\textcolor{blue}{\Large Questão 33 IFRS 2023 - Campo elétrico em casca esférica}}\\
 \noindent
 
-\subsection{Quest\~ao }
+\subsection{Questão 33 IFRS 2023 - Campo elétrico em casca esférica}
+
+Uma casca esférica possui raio interno $a$ e raio externo $b$, com densidade de carga volumétrica 
+\[
+\rho(r) = \sqrt{k r}, \quad a \le r \le b.
+\] 
+Determine o campo elétrico $\vec{E}$ na região $a < r < b$.
+
+\subsection*{Resolução}
+
+Pela \textbf{Lei de Gauss} para simetria esférica, temos:
+
+\[
+\oint \vec{E} \cdot d\vec{A} = \frac{Q_{\text{int}}}{\varepsilon_0} 
+\quad \Rightarrow \quad
+E(r) \cdot 4 \pi r^2 = \frac{Q_{\text{int}}(r)}{\varepsilon_0}
+\]
+
+\[
+\therefore \quad E(r) = \frac{Q_{\text{int}}(r)}{4 \pi \varepsilon_0 r^2}
+\]
+
+A carga interna até o ponto $r$ é:
+
+\[
+Q_{\text{int}}(r) = \int_{V} \rho(r') \, dV = \int_{a}^{r} \rho(r') \, 4 \pi r'^2 dr' 
+= 4 \pi \int_{a}^{r} r'^2 \sqrt{k r'} \, dr'
+= 4 \pi \sqrt{k} \int_{a}^{r} r'^{5/2} \, dr'
+\]
+
+Integrando:
+
+\[
+\int r'^{5/2} dr' = \frac{2}{7} r'^{7/2} \quad \Rightarrow \quad
+Q_{\text{int}}(r) = \frac{8 \pi \sqrt{k}}{7} \left( r^{7/2} - a^{7/2} \right)
+\]
+
+Substituindo na expressão de $E(r)$:
+
+\[
+E(r) = \frac{Q_{\text{int}}(r)}{4 \pi \varepsilon_0 r^2} 
+= \frac{2 \sqrt{k}}{7 \varepsilon_0} \left( r^{3/2} - \frac{a^{7/2}}{r^2} \right)
+\]
+
+Reescrevendo na forma desejada:
+
+\[
+\boxed{
+E(r) = \frac{2}{7 \varepsilon_0} \left( r \sqrt{k r} - \frac{a^3}{r^2} \sqrt{k a} \right), \quad a < r < b
+}
+\]
+
+\end{flushleft}
+
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 38 IFRS 2023 - Toroide (Lei de Amp\`ere)}}\\
+\noindent
+
+\subsection{Quest\~ao 38 - IFRS 2023 - Toroide (Lei de Amp\`ere)}
+
+Os toroides são dispositivos fundamentais em indutores utilizados em filtros e transformadores de alta potência. Esses componentes consistem em bobinas dispostas em forma de círculo fechado (formato cilíndrico), empregados para armazenar e controlar o fluxo de energia na forma de campo magnético. Imagine um toroide circular com $N=1500$ voltas, raio interno $a=5\,\text{cm}$ e raio externo $b=9\,\text{cm}$. Uma corrente elétrica de $I=140\,\text{mA}$ percorre esse toroide. Qual é a intensidade do campo magnético no ponto em que $r=7\,\text{cm}$? Use $\mu_0=4\pi\times10^{-7}\,\text{T}\,\text{m/A}$.
 
 \begin{itemize}
-\item[(A)] 
-\item[(B)] 
-\item[(C)] 
-\item[(D)] 
-\item[(E)] 
+\item[(A)] $6\times10^{-4}\ \text{T}$
+\item[(B)] $1{,}2\pi\times10^{-3}\ \text{T}$
+\item[(C)] $6\pi\times10^{-4}\ \text{T}$
+\item[(D)] $1{,}2\times10^{-3}\ \text{T}$
+\item[(E)] $6\times10^{-2}\ \text{T}$
 \end{itemize}
 
 \vspace{0.5cm}
 
-\textcolor{red}{\textbf{Solução:}}\\
+\textcolor{red}{\textbf{Solu\c{c}\~ao:}}\\
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+Para um toroide ideal, o campo magnético é azimutal e, pela Lei de Ampère, para $a<r<b$:
+\[
+\oint \vec{B}\cdot d\vec{\ell}=B(2\pi r)=\mu_0\,N\,I
+\;\;\Rightarrow\;\;
+B(r)=\frac{\mu_0 N I}{2\pi r}.
+\]
+Como $r=7\,\text{cm}$ está entre $a$ e $b$, aplica-se a expressão acima:
+\[
+B=\frac{(4\pi\times10^{-7})\,(1500)\,(0{,}14)}{2\pi\,(0{,}07)}
+= \left(\frac{4\pi}{2\pi}\right)10^{-7}\,\frac{1500\cdot0{,}14}{0{,}07}
+\]
+
+\[
+B=2\times10^{-7}\times\frac{210}{0{,}07}
+=2\times10^{-7}\times3000
+=6\times10^{-4}\ \text{T}.
+\]
+
+
+\textbf{Resposta:} \colorbox{green!50}{\textbf{(A)}}.
 \end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 32 -- Resist\^encias e coeficiente de temperatura}}\\
+
+\subsection{Quest\~ao 32 IFSUL 2013-- Resist\^encias e coeficiente de temperatura}
+
+\noindent Dados:
+
+\begin{itemize}
+\item Di\^ametro dos fios: $d=0{,}91\ \text{mm}=9{,}1\times10^{-4}\ \text{m}$;
+\item Temperatura inicial: $T_0=20^\circ\text{C}$; temperatura final: $T=300^\circ\text{C}$;
+\item Comprimento do fio de tungst\^enio: $L_T=40{,}0\ \text{m}$;
+\item Resist\^encia do fio de cobre na temperatura inicial: $R_{C0}=2{,}30\ \Omega$;
+\item Resistividades a $20^\circ\text{C}$: $\rho_C=1{,}72\times10^{-8}\ \Omega\cdot\text{m}$ (cobre),
+$\quad \rho_T=5{,}25\times10^{-8}\ \Omega\cdot\text{m}$ (tungst\^enio);
+\item Coeficientes de temperatura: $\alpha_C=0{,}00393\ ^\circ\text{C}^{-1}$, \; $\alpha_T=0{,}00450\ ^\circ\text{C}^{-1}$.
+\end{itemize}
+
+\bigskip
+
+\textbf{1) \; \,\'Area da se\c{c}\~ao transversal (mesma para ambos os fios)}:
+\[
+A=\frac{\pi d^2}{4}=\frac{\pi(9{,}1\times10^{-4})^2}{4}
+=\frac{\pi(8{,}281\times10^{-7})}{4}
+\approx 6{,}5027\times10^{-7}\ \text{m}^2.
+\]
+
+\bigskip
+
+\textbf{2) \; Comprimento do fio de cobre (obtido de $R=\rho L/A$ na condi\c{c}\~ao inicial)}:
+\[
+L_C=\frac{R_{C0}\,A}{\rho_C}
+= \frac{2{,}30\times 6{,}5027\times10^{-7}}{1{,}72\times10^{-8}}
+\approx \frac{1{,}49562\times10^{-6}}{1{,}72\times10^{-8}}
+\approx 86{,}9\ \text{m}.
+\]
+
+\bigskip
+
+\textbf{3) \; Resist\^encia inicial do fio de tungst\^enio}:
+\[
+R_{T0}=\frac{\rho_T\,L_T}{A}
+=\frac{5{,}25\times10^{-8}\times 40{,}0}{6{,}5027\times10^{-7}}
+=\frac{2{,}10\times10^{-6}}{6{,}5027\times10^{-7}}
+\approx 3{,}229\ \Omega.
+\]
+
+\bigskip
+
+\textbf{4) \; Varia\c{c}\~ao de temperatura:}
+\[
+\Delta T = T - T_0 = 300-20 = 280^\circ\text{C}.
+\]
+
+\bigskip
+
+\textbf{5) \; Resist\^encias a $300^\circ\text{C}$ (desprezando dilata\c{c}\~ao)}:
+
+A vari\^acao linear da resist\^encia: $R(T)=R_0\big(1+\alpha\,\Delta T\big)$.
+
+\medskip
+
+\emph{Cobre:}
+\[
+1+\alpha_C\Delta T = 1 + 0{,}00393\times280 = 1 + 1{,}1004 = 2{,}1004,
+\]
+\[
+R_C(300^\circ\text{C}) = 2{,}30\times 2{,}1004 \approx 4{,}8309\ \Omega \approx 4{,}83\ \Omega.
+\]
+
+\medskip
+
+\emph{Tungst\^enio:}
+\[
+1+\alpha_T\Delta T = 1 + 0{,}00450\times280 = 1 + 1{,}26 = 2{,}26,
+\]
+\[
+R_T(300^\circ\text{C}) = 3{,}229\times 2{,}26 \approx 7{,}2975\ \Omega \approx 7{,}30\ \Omega.
+\]
+
+\bigskip
+
+\textbf{6) \; Raz\~ao entre as resist\^encias a $300^\circ\text{C}$:}
+\[
+\frac{R_T(300^\circ\text{C})}{R_C(300^\circ\text{C})}
+\approx \frac{7{,}2975}{4{,}8309} \approx 1{,}511 \approx \boxed{1{,}51}.
+\]
+
+\vspace{0.4cm}
+
+\noindent Portanto, a raz\~ao pedida \`e aproximadamente \(\mathbf{1{,}51}\), correspondente \`a \textbf{alternativa (c)}.
+\end{flushleft}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao 33 -- Circuito RC}}\\
+
+\subsection{Quest\~ao 33 -- Circuito RC}
+
+\noindent Dados: \(\varepsilon = 12\ \text{V},\ R = 50\ \text{k}\Omega,\ C = 200\ \mu\text{F}\). O capacitor est\'a inicialmente 
+descarregado. Pergunta-se o tempo para atingir 90\% da carga m\'axima.
+
+\bigskip
+
+\textbf{1) Equa\c{c}\~ao de carga do capacitor:}
+\[
+Q(t) = Q_{\max}\left(1 - e^{-t/RC}\right),
+\]
+onde \(Q_{\max} = C\varepsilon\).
+
+\bigskip
+
+\textbf{2) Condi\c{c}\~ao de 90\% da carga m\'axima:}
+\[
+\frac{Q(t)}{Q_{\max}} = 0{,}90 \quad \Rightarrow \quad 1 - e^{-t/RC} = 0{,}90.
+\]
+\[
+e^{-t/RC} = 0{,}10 \quad \Rightarrow \quad -\frac{t}{RC} = \ln(0{,}10).
+\]
+\[
+t = -RC\,\ln(0{,}10) = RC\,\ln(10).
+\]
+
+\bigskip
+
+\textbf{3) Constante de tempo:}
+\[
+RC = (50\times 10^3)(200\times 10^{-6})
+= 50\,000 \times 0{,}0002 = 10\ \text{s}.
+\]
+
+\bigskip
+
+\textbf{4) C\'alculo do tempo:}
+\[
+t = 10 \times \ln(10) \approx 10 \times 2{,}3026 \approx 23{,}0\ \text{s}.
+\]
+
+\bigskip
+
+\noindent Portanto, o tempo aproximado para que o capacitor atinja 90\% da carga m\'axima \'e
+\[
+\boxed{23\ \text{s}}
+\]
+
+\noindent A resposta correta é a alternativa \colorbox{green!50}{\textbf{d)}}.
+\end{flushleft}
+
+
+%\begin{flushleft}
+%\textbf{\textcolor{blue}{\Large Q}}\\
+%\noindent
+%
+%\subsection{Quest\~ao }
+%
+%\begin{itemize}
+%\item[(A)] 
+%\item[(B)] 
+%\item[(C)] 
+%\item[(D)] 
+%\item[(E)] 
+%\end{itemize}
+%
+%\vspace{0.5cm}
+%
+%\textcolor{red}{\textbf{Solução:}}\\
+%
+%A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+%\end{flushleft}

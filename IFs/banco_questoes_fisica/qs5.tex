@@ -1127,26 +1127,91 @@ gás ideal, gás perfeito e vapor.
 \end{flushleft}
 
 \begin{flushleft}
-\textbf{\textcolor{blue}{\Large Quest\~ao - }}\\
+\textbf{\textcolor{blue}{\Large Quest\~ao 39 - IFRS 2023 - Varia\c{c}\~ao de entropia (processo isobárico)}}\\
 \noindent
 
-\subsection{Quest\~ao }
+\subsection{Quest\~ao 39 - IFRS 2023 - Varia\c{c}\~ao de entropia (processo isobárico)}
+
+Considere uma situação hipotética envolvendo $n=25$ mols de um gás ideal monoatômico que passa por um processo reversível 
+de expansão isobárica. O gás inicialmente está a uma temperatura $T_1=150\ \mathrm{K}$ e ocupa um volume $V_1=2\ \mathrm{m^3}$. 
+Durante esse processo, a temperatura cai para $T_2=100\ \mathrm{K}$ e o volume aumenta para $V_2=3\ \mathrm{m^3}$. Admitindo que 
+esse gás apresenta um calor específico molar a volume constante $C_V=4{,}1\ \mathrm{J/(mol\,K)}$, qual é, aproximadamente, a 
+variação de entropia desse gás para essa situação hipotética? Considere $R=8{,}31\ \mathrm{J/(mol\,K)}$, 
+$\ln\!\bigl(\tfrac{3}{2}\bigr)=0{,}41$ e $\ln\!\bigl(\tfrac{2}{3}\bigr)=-0{,}41$.
 
 \begin{itemize}
-\item[(A)] 
-\item[(B)] 
-\item[(C)]
-\item[(D)] 
-\item[(E)] 
+\item[(A)] $0\ \mathrm{J/K}.$
+\item[(B)] $42{,}0\ \mathrm{J/K}.$
+\item[(C)] $43{,}2\ \mathrm{J/K}.$
+\item[(D)] $85{,}2\ \mathrm{J/K}.$
+\item[(E)] $127{,}2\ \mathrm{J/K}.$
 \end{itemize}
 
 \vspace{0.5cm}
 
-\textcolor{red}{\textbf{Solução:}}\\
+\textcolor{red}{\textbf{Solu\c{c}\~ao:}}\\
 
+Para um processo reversível isobárico, o calor trocado é 
+\[
+\boxed{
+dQ_{\text{rev}}=nC_{p}\,dT,
+}
+\] 
+portanto a variação de entropia é
+\[
+\Delta S=\int_{T_1}^{T_2}\frac{dQ_{\text{rev}}}{T}
+= nC_{p}\int_{T_1}^{T_2}\frac{dT}{T}
+= nC_{p}\ln\!\left(\frac{T_2}{T_1}\right).
+\]
 
-A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+Como $C_p=C_V+R$, temos
+\[
+C_p=4{,}1+8{,}31=12{,}41\ \mathrm{J/(mol\,K)}.
+\]
 
+Logo,
+\[
+\Delta S = n\,C_p\,\ln\!\left(\frac{T_2}{T_1}\right)
+=25\cdot 12{,}41\cdot \ln\!\left(\frac{100}{150}\right)
+=25\cdot 12{,}41\cdot \ln\!\left(\tfrac{2}{3}\right).
+\]
+
+Usando $\ln\!\left(\tfrac{2}{3}\right)=-0{,}41$,
+\[
+\Delta S =25\times 12{,}41\times(-0{,}41)\approx -127{,}2\ \mathrm{J/K}.
+\]
+
+Portanto a variação de entropia é
+\[
+\boxed{\Delta S \approx -127{,}2\ \mathrm{J/K}.}
+\]
+
+O \colorbox{yellow!50}{sinal negativo indica que a entropia do gás diminuiu.} Se o problema pede apenas o valor numérico, a resposta correta é alternativa \colorbox{green!50}{\textbf{(E)}}.
 \end{flushleft}
 
-\noindent\rule{\linewidth}{0.6pt}\\
+
+%\begin{flushleft}
+%\textbf{\textcolor{blue}{\Large Quest\~ao - }}\\
+%\noindent
+%
+%\subsection{Quest\~ao }
+%
+%\begin{itemize}
+%\item[(A)] 
+%\item[(B)] 
+%\item[(C)]
+%\item[(D)] 
+%\item[(E)] 
+%\end{itemize}
+%
+%\vspace{0.5cm}
+%
+%\textcolor{red}{\textbf{Solução:}}\\
+%
+%
+%A resposta correta é alternativa \colorbox{green!50}{\textbf{...}}.
+%
+%\end{flushleft}
+%
+%\noindent\rule{\linewidth}{0.6pt}\\
+%
