@@ -1,0 +1,5 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Mec\^anica}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Quest\~ao 41 — Força mínima para imin\^encia de movimento rampa acima}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Quest\~ao 42 — Cilindro com atrito}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Quest\~ao 43 - Trabalho de uma força de resistência}{7}{subsection.1.3}%

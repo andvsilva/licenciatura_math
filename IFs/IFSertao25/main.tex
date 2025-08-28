@@ -1,0 +1,720 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[brazil, english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\addtolength{\topmargin}{-2.5pt}
+\usepackage{xcolor}
+\usepackage{amsmath, amssymb, bm}
+\usepackage{mathtools}
+\usepackage{cancel}
+\usepackage{tikz}
+\usepackage{newunicodechar}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{tikz-3dplot} % Necessário para coordenadas 3D
+\usetikzlibrary{intersections}
+\usepackage{siunitx}
+\usetikzlibrary{3d, arrows.meta}
+\usepackage{booktabs}
+
+
+\usepackage{color}
+\definecolor{myblue}{rgb}{.8, .8, 1}
+
+\definecolor{ao(english)}{rgb}{0.0, 0.5, 0.0}
+
+\usepackage{amsmath}
+\usepackage{empheq}
+
+\newlength\mytemplen
+\newsavebox\mytempbox
+
+\makeatletter
+\newcommand\mybluebox{%
+    \@ifnextchar[%]
+       {\@mybluebox}%
+       {\@mybluebox[0pt]}}
+
+\def\@mybluebox[#1]{%
+    \@ifnextchar[%]
+       {\@@mybluebox[#1]}%
+       {\@@mybluebox[#1][0pt]}}
+
+\def\@@mybluebox[#1][#2]#3{
+    \sbox\mytempbox{#3}%
+    \mytemplen\ht\mytempbox
+    \advance\mytemplen #1\relax
+    \ht\mytempbox\mytemplen
+    \mytemplen\dp\mytempbox
+    \advance\mytemplen #2\relax
+    \dp\mytempbox\mytemplen
+    \colorbox{myblue}{\hspace{1em}\usebox{\mytempbox}\hspace{1em}}}
+\makeatother
+
+\usepackage[most]{tcolorbox}
+
+\newtcbox{\mymath}[1][]{%
+    nobeforeafter, math upper, tcbox raise base,
+    enhanced, colframe=blue!30!black,
+    colback=blue!30, boxrule=1pt,
+    #1}
+
+\tcbset{
+    highlight math style={
+        enhanced,
+        colframe=red!60!black,
+        colback=yellow!50,
+        arc=4pt,
+        boxrule=1pt,
+        drop fuzzy shadow
+    }
+    }
+
+\usepackage{physics}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+\linespread{1.5}
+
+\definecolor{ao(english)}{rgb}{0.0, 0.5, 0.0}
+\definecolor{byzantium}{rgb}{0.44, 0.16, 0.39}
+\newunicodechar{∘}{\circ}
+
+\input{commands.tex}
+
+\hypersetup{
+    colorlinks=true,% make the links colored
+    linkcolor=blue
+}
+
+\usepackage{setspace}
+\addbibresource{bibliography.bib}
+
+\newcommand{\printingbibliography}{%
+
+    \pagestyle{myheadings}
+    \markright{}
+    \sloppy
+    \printbibliography[heading=bibintoc, % add to table of contents
+                   title=Refer\^encias % Chapter name
+                  ]
+    \fussy%
+}
+\PassOptionsToPackage{table}{xcolor}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\thepage}
+
+\geometry{a4paper,top=30mm,bottom=20mm,left=30mm,right=20mm}
+
+\titleformat*{\section}{\bfseries\large}
+\titleformat*{\subsection}{\bfseries\normalsize}
+
+\title{Concurso Público do Instituto Federal de Sert\~ao  \\ 
+EBTT \textbf{\large F\'isica}.}
+\author{Andr\'e V. Silva \\ \texttt{\url{www.andrevsilva.com}}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\noindent\rule{\linewidth}{0.4pt}\\
+\newpage
+\justifying
+
+\noindent\rule{\linewidth}{0.4pt}\\
+\section{Mec\^anica}
+\begin{flushleft}
+\subsection{Quest\~ao 41 — Força mínima para imin\^encia de movimento rampa acima}
+
+Um bloco de massa $m$ encontra-se em repouso sobre um plano inclinado de ângulo
+$\theta$ com a horizontal. Uma força $\vec{F}$ é aplicada ao bloco, formando ângulo
+$\varphi$ com a direção do plano, como indicado na figura. O coeficiente de atrito
+estático entre o bloco e o plano é $\mu$. Determine a intensidade mínima da força
+$\vec{F}$ necessária para colocar o bloco na iminência de subir a rampa.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.5]{figures/forca_minima.png}
+\end{figure}
+
+\subsection*{1) Equilíbrio de forças}
+
+Projetando as forças ao longo dos eixos $\hat{x}$ (paralelo à rampa, apontando para cima) e $\hat{y}$ (normal ao plano):
+
+\begin{equation}\label{eq:fx}
+F\cos\varphi - mg\sin\theta - \mu N = 0
+\end{equation}
+
+\begin{equation}\label{eq:fy}
+N - mg\cos\theta + F\sin\varphi = 0
+\;\;\;\Rightarrow\;\;\;
+N = mg\cos\theta - F\sin\varphi
+\end{equation}
+
+Substituindo \eqref{eq:fy} em \eqref{eq:fx}, obtemos:
+
+\begin{equation}\label{eq:equil}
+F\cos\varphi = mg\sin\theta + \mu\bigl(mg\cos\theta - F\sin\varphi\bigr).
+\end{equation}
+
+\subsection*{2) Expressão para a força aplicada}
+
+Da equação \eqref{eq:equil}, resulta:
+
+\begin{equation}\label{eq:fphi}
+F(\varphi) = \frac{mg(\sin\theta + \mu\cos\theta)}{\cos\varphi + \mu\sin\varphi}.
+\end{equation}
+
+\subsection*{3) Maximização do denominador via Cauchy--Schwarz}
+
+O denominador pode ser escrito como produto escalar:
+\[
+\cos\varphi + \mu\sin\varphi = (\cos\varphi,\;\sin\varphi)\cdot(1,\;\mu).
+\]
+
+Pela \colorbox{yellow!30}{desigualdade de Cauchy--Schwarz}:
+\begin{equation}\label{eq:cauchy}
+\boxed{
+\cos\varphi + \mu\sin\varphi \le \sqrt{1+\mu^2}.
+}
+\end{equation}
+
+A igualdade em \eqref{eq:cauchy} ocorre quando
+\begin{equation}\label{eq:tanphi}
+\tan\varphi^\star = \mu,
+\end{equation}
+isto é,
+\[
+\cos\varphi^\star = \frac{1}{\sqrt{1+\mu^2}},\qquad
+\sin\varphi^\star = \frac{\mu}{\sqrt{1+\mu^2}}.
+\]
+
+\subsection*{4) Força mínima}
+
+Substituindo o valor máximo do denominador \eqref{eq:cauchy} em \eqref{eq:fphi}, temos:
+
+\begin{equation}\label{eq:fmin}
+F_{\min} = \frac{mg(\sin\theta + \mu\cos\theta)}{\sqrt{1+\mu^2}}.
+\end{equation}
+
+Portanto, a força mínima aplicada que coloca o bloco na iminência de subir a rampa é dada por \eqref{eq:fmin}, atingida quando \eqref{eq:tanphi} vale.
+
+
+\textbf{Alternativa correta:} \textbf{D}.
+\end{flushleft}
+
+\newpage
+
+\noindent\rule{\linewidth}{0.6pt}\\
+
+\begin{flushleft}
+\subsection{Quest\~ao 42 — Cilindro com atrito}
+
+Uma prancha de madeira, com comprimento $L = 1{,}0\ \text{m}$ e massa $m = 0{,}4\ \text{kg}$, 
+possui um cilindro maciço e homogêneo de aço, com massa $M = 0{,}6\ \text{kg}$, 
+localizado na extremidade direita da prancha. 
+O sistema está em repouso sobre um plano horizontal liso. 
+Uma força constante $\vec{F} = (20\ \text{N})\,\hat{x}$ é aplicada à prancha, 
+fazendo com que os objetos comecem a se mover acelerados. 
+O cilindro rola suavemente, sem escorregar, sobre a prancha, devido à presença de atrito entre eles. 
+Desprezando o atrito entre a prancha e a superfície horizontal, bem como qualquer força de resistência do ar, 
+determine o intervalo de tempo, em segundos, que o cilindro levará para cair da prancha, ou seja, 
+para atingir a extremidade oposta e deixar de estar em contato com ela. 
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.5]{figures/q42.png}
+\end{figure}
+
+\begin{itemize}
+\item[(A)] 0,1 s
+\item[(B)] 0,2 s
+\item[(C)] 0,3 s
+\item[(D)] 0,4 s
+\item[(E)] 0,5 s
+\end{itemize}
+
+\subsection*{1) Definição das variáveis e forças}
+
+Seja $a_p$ a aceleração da prancha (para a direita) e $a_c$ a aceleração do centro do cilindro (para a direita),
+ambas medidas no referencial inercial do solo. Seja $f$ a força de atrito horizontal exercida pela prancha sobre o cilindro
+(no ponto de contato). Pela ação e reação, a prancha sofre $-f$ da parte do cilindro.
+
+Para o \colorbox{yellow!30}{cilindro maciço homogêneo, momento de inércia em relação ao centro:}
+\begin{equation}\label{eq:I}
+\boxed{
+I=\frac{1}{2}MR^{2}.
+}
+\end{equation}
+
+Não precisamos do valor de $R$ explicitamente, apenas das relações de rotação/translação.
+
+\subsection*{2) Equações de movimento}
+
+Equilíbrio (segunda lei) para a prancha (força total horizontal):
+\begin{equation}\label{eq:plank}
+F - f = m a_p .
+\end{equation}
+
+Equação de translação para o cilindro:
+\begin{equation}\label{eq:cyl_trans}
+f = M a_c .
+\end{equation}
+
+Equação de rotação para o cilindro (torque causado por $f$):
+\begin{equation}\label{eq:cyl_rot}
+fR = I \alpha = \left(\frac{1}{2}MR^{2}\right)\alpha.
+\end{equation}
+
+\textbf{\textcolor{red}{Condição de rolamento sem escorregar entre cilindro e prancha:
+a velocidade do ponto de contato do cilindro iguala a velocidade da prancha.}} Em termos das acelerações:
+\begin{equation}\label{eq:constraint}
+a_c - a_p = -R\alpha.
+\end{equation}
+
+(A escolha do sinal garante consistência: se a prancha acelera mais que o cilindro, o contato induz uma rotação que satisfaz \eqref{eq:constraint}.)
+
+\subsection*{3) Eliminação das incógnitas}
+
+Da \eqref{eq:cyl_rot} e de \eqref{eq:constraint} obtemos:
+\[
+fR = \tfrac{1}{2}MR^{2}\alpha \quad\Rightarrow\quad f = \tfrac{1}{2}M R \alpha.
+\]
+Usando \eqref{eq:constraint} $\alpha = -(a_c - a_p)/R$, resulta
+\begin{equation}\label{eq:f_from_rot}
+f = -\tfrac{1}{2}M (a_c - a_p).
+\end{equation}
+
+Por outro lado, pela translação do cilindro \eqref{eq:cyl_trans}:
+\begin{equation}\label{eq:f_from_trans}
+f = M a_c.
+\end{equation}
+
+Igualando \eqref{eq:f_from_rot} e \eqref{eq:f_from_trans}:
+\[
+M a_c = -\tfrac{1}{2}M (a_c - a_p).
+\]
+Dividindo por $M$ e rearranjando:
+\[
+a_c = -\tfrac{1}{2}a_c + \tfrac{1}{2}a_p
+\quad\Rightarrow\quad
+\tfrac{3}{2}a_c = \tfrac{1}{2}a_p
+\quad\Rightarrow\quad
+a_c = \tfrac{1}{3} a_p. \label{eq:ac_ap}
+\]
+
+Substituindo \eqref{eq:ac_ap} em \eqref{eq:plank} e usando \eqref{eq:cyl_trans} ($f=M a_c$):
+\[
+F - M a_c = m a_p.
+\]
+Como $a_c = a_p/3$, obtemos
+\[
+F - M\frac{a_p}{3} = m a_p
+\quad\Rightarrow\quad
+F = a_p\!\left(m + \frac{M}{3}\right).
+\]
+Logo a aceleração da prancha:
+\begin{equation}\label{eq:ap}
+a_p = \frac{F}{\,m + \dfrac{M}{3}\,} = \frac{3F}{3m+M}.
+\end{equation}
+E, pela \eqref{eq:ac_ap},
+\begin{equation}\label{eq:ac}
+a_c = \frac{a_p}{3} = \frac{F}{3m+M}.
+\end{equation}
+
+\subsection*{4) Aceleração relativa e tempo até cair}
+
+A aceleração relativa entre prancha e cilindro (aceleração com que a prancha “afasta-se” do cilindro) é
+\[
+a_{\text{rel}} = a_p - a_c = a_p - \frac{a_p}{3} = \frac{2}{3}a_p.
+\]
+Usando \eqref{eq:ap}:
+\begin{equation}\label{eq:arel}
+a_{\text{rel}} = \frac{2}{3}\cdot\frac{3F}{3m+M} = \frac{2F}{3m+M}.
+\end{equation}
+
+Inicialmente a velocidade relativa é zero (sistema parte do repouso). A distância relativa a percorrer para que
+o cilindro passe da extremidade direita até a esquerda da prancha é $L$. Para movimento uniformemente acelerado,
+o tempo $t$ satisfaz $L = \tfrac{1}{2} a_{\text{rel}} t^{2}$, portanto
+\begin{equation}\label{eq:time_general}
+t = \sqrt{\frac{2L}{a_{\text{rel}}}} = \sqrt{\frac{2L(3m+M)}{2F}} = \sqrt{\frac{(3m+M)\,L}{F}}.
+\end{equation}
+
+\subsection*{5) Substituição numérica}
+
+Dados: $m=0{,}4\ \mathrm{kg}$, $M=0{,}6\ \mathrm{kg}$, $L=1{,}0\ \mathrm{m}$, $F=20\ \mathrm{N}$.
+
+Calcule $3m+M$:
+\[
+3m+M = 3(0{,}4)+0{,}6 = 1{,}2+0{,}6 = 1{,}8\ \mathrm{kg}.
+\]
+
+Substituindo em \eqref{eq:time_general}:
+\[
+t = \sqrt{\frac{(3m+M) L}{F}}
+= \sqrt{\frac{1{,}8\times 1{,}0}{20}}
+= \sqrt{\frac{1{,}8}{20}}
+= \sqrt{0{,}09}
+= 0{,}30\ \mathrm{s}.
+\]
+
+\bigskip
+\noindent\textbf{Resposta:} $t = 0{,}3\ \mathrm{s}$. (Alternativa \textbf{C}.)
+
+
+\end{flushleft}
+
+\noindent\rule{\linewidth}{0.4pt}\\
+
+\begin{flushleft}
+\subsection{Quest\~ao 43 - Trabalho de uma força de resistência}
+\noindent
+Um projétil de massa $m$ é lançado verticalmente para cima a partir da posição $z=0$ com velocidade inicial 
+$\vec{v} = v_0 \hat{z}$ $(v_0>0)$ no instante $t=0$. Além da força gravitacional, atua sobre ele uma força de 
+resistência do ar proporcional à velocidade: $\vec{F} = - \beta m \vec{v}$, onde $\beta>0$ é o parâmetro de amortecimento. 
+A aceleração da gravidade é $\vec{g} = - g \hat{z}$. Determine o trabalho realizado pela força de resistência desde o lançamento até a altura máxima.
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+A força de resistência é:
+\[
+\vec{F}_r = - \beta m \vec{v} = - \beta m v \hat{z}.
+\]
+
+O trabalho realizado pela força de resistência até a altura máxima é:
+\[
+W_r = \int_{0}^{z_\text{max}} \vec{F}_r \cdot d\vec{z} = - \beta m \int_0^{z_\text{max}} v \, dz.
+\]
+
+A \colorbox{red!20}{equação do movimento é}:
+\[
+m \frac{dv}{dt} = - mg - \beta m v \quad \Rightarrow \quad \boxed{\frac{dv}{dt} + \beta v = - g.}
+\]
+
+Solução da equação diferencial:
+
+\[
+\frac{dv}{dt} + \beta v = - g \Rightarrow \frac{dv}{dt} = - g - \beta v 
+\]
+
+\[
+\frac{dv}{g+ \beta v} = - dt
+\]
+
+\[
+\int \frac{dv}{g+ \beta v} = - \int dt
+\]
+
+\[
+\frac{ln \left( g+ \beta v \right)}{\beta} = - t + C
+\]
+
+Usando as \colorbox{green!30}{condi\c{c}\~oes de contorno do problema (quando $t=0$ e $v=v_{o}$)}:
+
+\[C = \frac{ln \left( g+ \beta v_0 \right)}{\beta}\]
+
+\[
+\frac{ln \left( g+ \beta v \right)}{\beta} = - t + \frac{ln \left( g+ \beta v_0 \right)}{\beta}
+\]
+
+\[
+\frac{ln \left( g+ \beta v \right)}{\beta} - \frac{ln \left( g+ \beta v_0 \right)}{\beta} = - t
+\]
+
+\[
+ln \left( g+ \beta v \right) - ln \left( g+ \beta v_0 \right) = - \beta t
+\]
+
+\[
+ln \left[\frac{\left( g+ \beta v \right)}{ \left( g+ \beta v_0 \right)}\right] = - \beta t
+\]
+
+\[
+\frac{\left( g+ \beta v \right)}{ \left( g+ \beta v_0 \right)} = e^{- \beta t}
+\]
+
+\[
+\left( g+ \beta v \right)= \left( g+ \beta v_0 \right) e^{- \beta t}
+\]
+
+\[
+\beta v = \left( g+ \beta v_0 \right) e^{- \beta t} - g
+\]
+
+\[
+\boxed{
+v(t) = \left(v_0 + \frac{g}{\beta}\right) e^{-\beta t} - \frac{g}{\beta}.
+}
+\]
+
+\colorbox{green!30}{Altura máxima ocorre em $t_\text{max}$ tal que $v(t_\text{max}) = 0$}:
+\[
+0 = \left(v_0 + \frac{g}{\beta}\right) e^{-\beta t_\text{max}} - \frac{g}{\beta} 
+\quad \Rightarrow \quad 
+e^{-\beta t_\text{max}} = \frac{g/\beta}{v_0 + g/\beta} 
+\quad \Rightarrow \quad \boxed{t_\text{max} = \frac{1}{\beta} \ln \left( 1 + \frac{\beta v_0}{g} \right).}
+\]
+
+O trabalho da força de resistência:
+\[
+W_r = - \beta m \int_0^{t_\text{max}} v^2(t) \, dt
+= - \beta m \int_0^{t_\text{max}} \left[ \left(v_0 + \frac{g}{\beta}\right) e^{-\beta t} - \frac{g}{\beta} \right]^2 dt.
+\]
+
+\[
+W_r = - \beta m \int_0^{t_\text{max}} \left[ \left(v_0 + \frac{g}{\beta}\right) e^{-\beta t} - \frac{g}{\beta} \right]^2 dt
+\]
+
+\[
+\begin{aligned}
+W_r &= - \beta m \int_0^{t_\text{max}} \Bigg[ 
+\left(v_0 + \frac{g}{\beta}\right)^2 e^{-2\beta t} 
+- 2 \left(v_0 + \frac{g}{\beta}\right) \frac{g}{\beta} e^{-\beta t} 
++ \left(\frac{g}{\beta}\right)^2 
+\Bigg] dt \\
+&= - \beta m \Bigg[ 
+\left(v_0 + \frac{g}{\beta}\right)^2 \textcolor{red}{\int_0^{t_\text{max}} e^{-2\beta t} dt} 
+- 2 \left(v_0 + \frac{g}{\beta}\right) \frac{g}{\beta} \textcolor{orange!90}{\int_0^{t_\text{max}} e^{-\beta t} dt }
++ \left(\frac{g}{\beta}\right)^2 \textcolor{blue}{\int_0^{t_\text{max}} dt}
+\Bigg]
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+\textcolor{red}{\int_0^{t_\text{max}} e^{-2\beta t} dt} &= \frac{1 - e^{-2 \beta t_\text{max}}}{2\beta}, \\
+\textcolor{orange!90}{\int_0^{t_\text{max}} e^{-\beta t} dt } &= \frac{1 - e^{-\beta t_\text{max}}}{\beta}, \\
+\textcolor{blue}{\int_0^{t_\text{max}} dt} & = t_\text{max}.
+\end{aligned}
+\]
+
+Integrando e substituindo \(t_\text{max}\) e \(e^{-\beta t_\text{max}}\):
+
+\[
+t_\text{max} = \frac{1}{\beta} \ln \left( 1 + \frac{\beta v_0}{g} \right)
+\]
+
+\[
+1 - e^{-2\beta t_\text{max}} = 1 - e^{-2\beta \left(\frac{1}{\beta} \ln \left( 1 + \frac{\beta v_0}{g} \right)\right)}
+\]
+
+\[
+1 - e^{-2\beta t_\text{max}} = 1 - e^{-\ln \left( 1 + \frac{\beta v_0}{g} \right)^2}
+\]
+
+\[
+1 - e^{-2\beta t_\text{max}} = 1 - \left( 1 + \frac{\beta v_0}{g} \right)^{-2}
+\]
+
+\[
+1 - e^{-2\beta t_\text{max}} = 1 - \frac{1}{\left( 1 + \frac{\beta v_0}{g} \right)^{2}}
+\]
+
+\[
+1 - e^{-2\beta t_\text{max}} = \frac{\left( 1 + \frac{\beta v_0}{g} \right)^{2} -1}{\left( 1 + \frac{\beta v_0}{g} \right)^{2}}
+\]
+
+\[
+1 - e^{-2\beta t_\text{max}} = \frac{1 + \frac{2\beta v_0}{g} + \frac{\beta^2 v_0^2}{g^2} - 1}{\left( 1 + \frac{\beta v_0}{g} \right)^{2}}
+\]
+
+\[
+\boxed{
+1 - e^{-2\beta t_\text{max}} = \frac{\frac{2\beta v_0}{g} + \frac{\beta^2 v_0^2}{g^2}}{\left( 1 + \frac{\beta v_0}{g} \right)^{2}}
+}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+\textcolor{red}{\int_0^{t_\text{max}} e^{-2\beta t} dt} &= \frac{1 - e^{-2 \beta t_\text{max}}}{2\beta} =  \frac{1}{2\beta} \frac{\left[\frac{2\beta v_0}{g} + \frac{\beta^2 v_0^2}{g^2} \right]}{\left(\frac{\beta}{g}\right)^2 \left( \frac{g}{\beta} + v_0 \right)^{2}}\\
+\end{aligned}
+}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+\textcolor{red}{\int_0^{t_\text{max}} e^{-2\beta t} dt} &= \frac{g^2}{2 \beta^3} \frac{\left[\frac{2\beta v_0}{g} + \frac{\beta^2 v_0^2}{g^2} \right]}{\left( v_0 + \frac{g}{\beta} \right)^{2}}. \quad \checkmark
+\end{aligned}
+}
+\]
+
+\[
+1 - e^{-\beta t_\text{max}} = 1 - e^{-\beta \left(\frac{1}{\beta} \ln \left( 1 + \frac{\beta v_0}{g} \right)\right)}
+\]
+
+\[
+1 - e^{-\beta t_\text{max}} = 1 - e^{\ln \left( 1 + \frac{\beta v_0}{g} \right)^{-1}}
+\]
+
+\[
+1 - e^{-\beta t_\text{max}} = 1 - \left( 1 + \frac{\beta v_0}{g} \right)^{-1}
+\]
+
+\[
+1 - e^{-\beta t_\text{max}} = 1 - \frac{1}{\left( 1 + \frac{\beta v_0}{g} \right)}
+\]
+
+\[
+1 - e^{-\beta t_\text{max}} = \frac{\left( 1 + \frac{\beta v_0}{g} \right) - 1}{\left( 1 + \frac{\beta v_0}{g} \right)}
+\]
+
+\[
+1 - e^{-\beta t_\text{max}} = \frac{\left(\frac{\beta v_0}{g} \right)}{\left( 1 + \frac{\beta v_0}{g} \right)}
+\]
+
+\[
+1 - e^{-\beta t_\text{max}} = \frac{\left(\frac{\beta v_0}{g} \right)}{\left( 1 + \frac{\beta v_0}{g} \right)} = \frac{\left(\frac{\beta v_0}{g} \right)}{\frac{\beta}{g}\left( v_0 + \frac{g}{\beta} \right)} = \frac{v_0}{\left( v_0 + \frac{g}{\beta} \right)}
+\]
+
+\[
+\begin{aligned}
+\textcolor{orange!90}{\int_0^{t_\text{max}} e^{-\beta t} dt } &= \frac{1 - e^{-\beta t_\text{max}}}{\beta} = \frac{\frac{v_0}{\left( v_0 + \frac{g}{\beta} \right)}}{\beta} = \frac{v_0}{\beta\left( v_0 + \frac{g}{\beta} \right)} \\
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+\textcolor{orange!90}{\int_0^{t_\text{max}} e^{-\beta t} dt } &= \frac{v_0}{\beta\left( v_0 + \frac{g}{\beta} \right)}. \quad \checkmark \\
+\end{aligned}
+\]
+
+
+\[
+\begin{aligned}
+W_r &= - \beta m \Bigg[ 
+\cancel{\left(v_0 + \frac{g}{\beta}\right)^2} \left[\frac{g^2}{2 \beta^3 } \frac{\left[\frac{2\beta v_0}{g} + \frac{\beta^2 v_0^2}{g^2} \right]}{\cancel{\left( v_0 + \frac{\beta}{g} \right)^{2}}}\right]
+- 2 \cancel{\left(v_0 + \frac{g}{\beta}\right)}\frac{g}{\beta} \frac{v_0}{\beta\cancel{\left( v_0 + \frac{g}{\beta} \right)}} 
++ \left(\frac{g^2}{\beta^3}\right)\ln \left( 1 + \frac{\beta v_0}{g} \right)
+\Bigg]
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+W_r &= - \beta m \Bigg[ 
+\frac{g^2 \left[\frac{2\beta v_0}{g} + \frac{\beta^2 v_0^2}{g^2} \right]}{2 \beta^3}
+- 2 g\frac{v_0}{\beta} 
++ \left(\frac{g^2}{\beta^3}\right)\ln \left( 1 + \frac{\beta v_0}{g} \right)
+\Bigg]
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+W_r &= - \Bigg[ 
+\frac{m g^2}{2 \beta^2} \left[\frac{2\beta v_0}{g} + \frac{\beta^2 v_0^2}{g^2} \right]
+- 2 mg\frac{v_0}{\beta} 
++ \left(\frac{m g^2}{\beta^2}\right)\ln \left( 1 + \frac{\beta v_0}{g} \right)
+\Bigg]
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+W_r &= - \Bigg[ 
+\frac{m g v_0 }{\beta}  + \frac{m v_0^2}{2}
+- 2 mg\frac{v_0}{\beta} 
++ \left(\frac{m g^2}{\beta^2}\right)\ln \left( 1 + \frac{\beta v_0}{g} \right)
+\Bigg]
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+W_r &= 
+- \frac{m g v_0 }{\beta} - \frac{m v_0^2}{2}
++ \frac{2 mg v_0}{\beta} 
+- \left(\frac{m g^2}{\beta^2}\right)\ln \left( 1 + \frac{\beta v_0}{g} \right)
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+W_r &= 
+\frac{m g v_0 }{\beta}
+- \left(\frac{m g^2}{\beta^2}\right)\ln \left( 1 + \frac{\beta v_0}{g} \right) - \frac{m v_0^2}{2}
+\end{aligned}
+\]
+
+\[
+\boxed{
+\begin{aligned}
+W_r &=  \frac{m g v_0 }{\beta} \Bigg[1 - \left(\frac{m g^2}{\beta^2}\right)\ln \left( 1 + \frac{\beta v_0}{g} \right) \Bigg] - \frac{m v_0^2}{2}
+\end{aligned}
+}
+\quad \blacksquare
+\]
+
+
+\end{flushleft}
+
+
+
+
+\newpage 
+
+\begin{flushleft}
+\textbf{Problema.} Um pêndulo de massa $m_2$ e comprimento $L$ é solto do repouso na posição $A$, que faz um ângulo $\theta$ com a vertical. A corda passa por uma roldana ideal e traciona um bloco de massa $m_1$ sobre uma mesa horizontal. Ao o pêndulo atingir o ponto mais baixo $B$, qual deve ser o menor coeficiente de atrito estático $\mu_s$ entre $m_1$ e a mesa para que $m_1$ não deslize?
+
+\vspace{0.4cm}
+\textbf{Solução.}
+
+\textit{1) Velocidade do pêndulo em $B$.} Pela conservação de energia entre $A$ e $B$:
+\[
+m_2 g L\,(1-\cos\theta)=\frac12 m_2 v_B^2
+\;\;\Rightarrow\;\;
+v_B^2=2gL\,(1-\cos\theta).
+\]
+
+\textit{2) Tração na corda em $B$.} No ponto mais baixo, as forças radiais no pêndulo dão
+\[
+T_B - m_2 g = m_2\frac{v_B^2}{L}
+\;\;\Rightarrow\;\;
+T_B = m_2\!\left(g+\frac{v_B^2}{L}\right)
+     = m_2 g\bigl[1+2(1-\cos\theta)\bigr]
+     = m_2 g\,(3-2\cos\theta).
+\]
+
+Como a roldana é ideal, a tração que puxa $m_1$ na horizontal é $T_B$.
+
+\textit{3) Condição de não deslizamento de $m_1$.} Para $m_1$ permanecer em repouso,
+a força de atrito estático máxima deve ser ao menos igual à tração:
+\[
+f_{s,\max}=\mu_s N=\mu_s m_1 g \;\ge\; T_B.
+\]
+Logo, o coeficiente mínimo é
+\[
+\boxed{\;\mu_{s,\min}=\frac{T_B}{m_1 g}
+      =\frac{m_2}{m_1}\,\bigl(3-2\cos\theta\bigr)\; }.
+\]
+
+\textbf{Observação:} O ponto $B$ é o ponto mais baixo da trajetória, onde a tração é máxima; portanto, se $m_1$ não desliza em $B$, não deslizará em nenhuma outra posição.
+\end{flushleft}
+
+
+
+
+%%%%%%%% Bibliography 
+% Os comandos para incluir as referências bibliográficas
+%\printingbibliography
+
+\end{document}
