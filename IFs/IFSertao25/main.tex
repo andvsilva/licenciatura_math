@@ -668,7 +668,150 @@ W_r &=  \frac{m g v_0 }{\beta} \Bigg[1 - \left(\frac{m g^2}{\beta^2}\right)\ln \
 \end{flushleft}
 
 
+\begin{flushleft}
 
+\subsection{Quest\~ao 44 - P\^endulo F\'isico}
+Um p\^endulo f\'isico constitu\'{\i}do por uma placa fina e homog\^enea em forma de um setor circular de raio $R$ e \^angulo 
+central $\alpha$, est\'a suspenso verticalmente no centro $O$ do disco de origem. O p\^endulo \'{e} deslocado por um \^angulo 
+$\theta$ em rela\c{c}\~ao \`a vertical e, em seguida, abandonado a partir do repouso para oscilar. A acelera\c{c}\~ao local 
+da gravidade \'e $g$ e poss\'iveis atritos s\~ao desprez\'iveis. Assinale a alternativa que apresenta a express\~ao correta 
+para a frequ\^encia angular $\omega$ de pequenas oscila\c{c}\~oes do p\^endulo f\'isico.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.5]{figures/pendulo_fisico.png}
+\end{figure}
+
+
+\begin{itemize}
+\item[(A)] $\displaystyle \omega=\sqrt{\frac{4g}{3R}}$
+\item[(B)] $\displaystyle \omega=\sqrt{\frac{8g\cos(\alpha)}{3R\,\alpha}}$
+\item[(C)] $\displaystyle \omega=\sqrt{\frac{8g\sin(\alpha/2)}{3R\,\alpha}}$
+\item[(D)] $\displaystyle \omega=\sqrt{\frac{4g\sin(\alpha)}{3R\,\alpha}}$
+\item[(E)] $\displaystyle \omega=\sqrt{\frac{4g\cos(\alpha/2)}{3R\,\alpha}}$
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Para \colorbox{yellow!30}{pequenas oscila\c{c}\~oes linearizamos $\sin\theta\approx\theta$ e usamos a equa\c{c}\~ao do p\^endulo f\'isico:}
+\[
+I_O\,\ddot\theta + m g h\,\theta = 0,
+\]
+
+\[
+\,\ddot\theta + \frac{m g h}{I_O}\,\theta = 0,
+\]
+
+\[
+\,\ddot\theta + \omega^{2}\,\theta = 0,
+\]
+
+
+onde $I_O$ \'e o momento de in\'ercia em rela\c{c}\~ao ao ponto de suspens\~ao $O$ (eixo perpendicular ao plano) e $h$ \'e a dist\^ancia 
+do centro de massa ao ponto $O$.
+
+\textbf{1) Massa e momento de in\'ercia:}\\
+Para uma placa homog\^enea em forma de setor, a densidade superficial $\sigma$ satisfaz
+\[
+m=\sigma\cdot\text{área}=\sigma\left(\tfrac{1}{2}\alpha R^2\right).
+\]
+O momento de in\'ercia em rela\c{c}\~ao a $O$ (eixo perpendicular ao plano) é
+\[
+I_O=\sigma\int_{0}^{\alpha}\int_{0}^{R} r^2\;r\,dr\,d\phi
+=\sigma\frac{\alpha R^4}{4}.
+\]
+Substituindo $\sigma = \dfrac{2m}{\alpha R^2}$ obtemos
+\[
+I_O=\frac{2m}{\alpha R^2}\cdot\frac{\alpha R^4}{4}=\frac{mR^2}{2}.
+\]
+
+\textbf{2) Centro de massa (distância radial $h$ a partir de $O$):}\\
+O centro de massa de um setor circular encontra-se sobre a bissetriz e sua distância ao centro é
+\[
+\boxed{
+h=r_{CM}=\frac{4R\sin(\alpha/2)}{3\alpha}.
+}
+\]
+
+\textbf{3) Frequência angular:}\\
+\[
+\omega=\sqrt{\frac{m g h}{I_O}}
+=\sqrt{\frac{m g \,\dfrac{4R\sin(\alpha/2)}{3\alpha}}{\dfrac{mR^2}{2}}}
+=\sqrt{\frac{8g\sin(\alpha/2)}{3R\,\alpha}}.
+\]
+
+Portanto, a alternativa correta é \(\colorbox{green!50}{\textbf{(C)}}\).
+
+\end{flushleft}
+
+
+\begin{flushleft}
+\subsection{Quest\~ao 45 - Colis\~ao Unidimensional inel\'astica}
+
+Considere uma part\'icula de massa $m$, que se move com velocidade $v_0$, e realiza uma colis\~ao unidimensional inel\'astica com outra part\'icula de massa $M$, inicialmente em repouso. O coeficiente de restitui\c{c}\~ao do material constituinte das part\'iculas \'e denotado por $\varepsilon$. Considerando que a raz\~ao das massas das part\'iculas \'e $M/m=\lambda$, analise as assertivas abaixo:
+
+I. A velocidade da part\'icula de massa $m$ ap\'os a colis\~ao \'e $v=v_0(1-\varepsilon\lambda)/(1+\lambda)$.\\
+II. A velocidade da part\'icula de massa $M$ ap\'os a colis\~ao \'e $V=v_0(1+\varepsilon)/(1+\lambda)$.\\
+III. A raz\~ao entre a energia cin\'etica adquirida pela part\'icula de massa $M$ e a energia cin\'etica inicial da part\'icula de massa $m$ \'e $\lambda(\varepsilon+1)/(\lambda+1)$.
+
+Quais est\~ao corretas?
+
+\begin{itemize}
+\item[(A)] Apenas I.
+\item[(B)] Apenas II.
+\item[(C)] Apenas III.
+\item[(D)] Apenas I e II.
+\item[(E)] I, II e III.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Pela conserva\c{c}\~ao do momento e defini\c{c}\~ao do coeficiente de restitui\c{c}\~ao:
+\[
+m v_0 = m v + M V,
+\qquad
+V - v = \varepsilon (v_0-0)=\varepsilon v_0.
+\]
+Da segunda equa\c{c}\~ao temos $V=v+\varepsilon v_0$. Substituindo na conserva\c{c}\~ao do momento:
+\[
+m v_0 = m v + M(v+\varepsilon v_0)=(m+M)v + M\varepsilon v_0.
+\]
+Isolando $v$:
+\[
+(m+M)v = v_0(m - M\varepsilon)
+\quad\Rightarrow\quad
+v = v_0\frac{m - M\varepsilon}{m+M}
+= v_0\frac{1-\lambda\varepsilon}{1+\lambda},
+\]
+o que confirma a assertiva \textbf{I}.
+
+Agora $V=v+\varepsilon v_0$:
+\[
+V=v_0\frac{1-\lambda\varepsilon}{1+\lambda}+\varepsilon v_0
+= v_0\frac{1-\lambda\varepsilon+\varepsilon(1+\lambda)}{1+\lambda}
+= v_0\frac{1+\varepsilon}{1+\lambda},
+\]
+confirmando a assertiva \textbf{II}.
+
+Para a assertiva \textbf{III}, calculemos a raz\~ao das energias:
+\[
+\frac{K_M}{K_{m,\,\text{inicial}}}
+=\frac{\tfrac{1}{2}M V^2}{\tfrac{1}{2}m v_0^2}
+=\frac{M}{m}\left(\frac{V}{v_0}\right)^2
+=\lambda\left(\frac{1+\varepsilon}{1+\lambda}\right)^2
+=\frac{\lambda(1+\varepsilon)^2}{(1+\lambda)^2},
+\]
+que \textbf{não} coincide com $\dfrac{\lambda(1+\varepsilon)}{1+\lambda}$ (a dada na III). Portanto a assertiva \textbf{III} é falsa.
+
+Assim, est\~ao corretas apenas I e II.
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{(D)}}.
+
+\end{flushleft}
 
 \newpage 
 

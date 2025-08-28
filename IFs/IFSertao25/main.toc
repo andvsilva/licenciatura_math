@@ -3,3 +3,5 @@
 \contentsline {subsection}{\numberline {1.1}Quest\~ao 41 — Força mínima para imin\^encia de movimento rampa acima}{2}{subsection.1.1}%
 \contentsline {subsection}{\numberline {1.2}Quest\~ao 42 — Cilindro com atrito}{4}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Quest\~ao 43 - Trabalho de uma força de resistência}{7}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Quest\~ao 44 - P\^endulo F\'isico}{12}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Quest\~ao 45 - Colis\~ao Unidimensional inel\'astica}{14}{subsection.1.5}%
