@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  28 AUG 2025 18:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  30 AUG 2025 09:48
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1742,7 +1742,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
-<figures/forca_minima.png, id=90, 329.73187pt x 218.31563pt>
+<figures/forca_minima.png, id=114, 329.73187pt x 218.31563pt>
 File: figures/forca_minima.png Graphic file (type png)
 <use figures/forca_minima.png>
 Package pdftex.def Info: figures/forca_minima.png  used on input line 152.
@@ -1752,7 +1752,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
-<figures/q42.png, id=121, 529.22719pt x 243.15843pt>
+<figures/q42.png, id=145, 529.22719pt x 243.15843pt>
 File: figures/q42.png Graphic file (type png)
 <use figures/q42.png>
 Package pdftex.def Info: figures/q42.png  used on input line 241.
@@ -1768,28 +1768,52 @@ Overfull \hbox (35.81755pt too wide) detected at line 609
  []
 
 [11]
-<figures/pendulo_fisico.png, id=189, 346.29375pt x 341.02406pt>
+<figures/pendulo_fisico.png, id=213, 346.29375pt x 341.02406pt>
 File: figures/pendulo_fisico.png Graphic file (type png)
 <use figures/pendulo_fisico.png>
 Package pdftex.def Info: figures/pendulo_fisico.png  used on input line 682.
 (pdftex.def)             Requested size: 173.14644pt x 170.51161pt.
- [12 <./figures/pendulo_fisico.png (PNG copy)>] [13] [14] [15]
+ [12 <./figures/pendulo_fisico.png (PNG copy)>] [13] [14]
+<figures/sistema-massa-mola.png, id=228, 575.90157pt x 261.22594pt>
+File: figures/sistema-massa-mola.png Graphic file (type png)
+<use figures/sistema-massa-mola.png>
+Package pdftex.def Info: figures/sistema-massa-mola.png  used on input line 832
+.
+(pdftex.def)             Requested size: 287.95007pt x 130.61264pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15] [16 <./figures/sistema-massa-mola.png (PNG copy)>] [17]
+<figures/henry_cavendish.png, id=242, 690.32906pt x 475.02469pt>
+File: figures/henry_cavendish.png Graphic file (type png)
+<use figures/henry_cavendish.png>
+Package pdftex.def Info: figures/henry_cavendish.png  used on input line 981.
+(pdftex.def)             Requested size: 207.10031pt x 142.5085pt.
+ [18 <./figures/henry_cavendish.png (PNG copy)>] [19]
+<figures/satelite.png, id=253, 389.95688pt x 235.63031pt>
+File: figures/satelite.png Graphic file (type png)
+<use figures/satelite.png>
+Package pdftex.def Info: figures/satelite.png  used on input line 1047.
+(pdftex.def)             Requested size: 233.97592pt x 141.37927pt.
+ [20 <./figures/satelite.png (PNG copy)>]
+[21]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 57.
 See the caption package documentation for explanation.
 
-[16] (./main.aux)
+[22] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 491358A443DB2CDD26CA41F73AFDB6B6;1610.
+(rerunfilecheck)             Checksum: 4332D554E36B3D1A7B3750C1CF577293;2687.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56154 strings out of 478287
- 1297871 string characters out of 5849289
- 2073731 words of memory out of 5000000
- 73397 multiletter control sequences out of 15000+600000
+ 56196 strings out of 478287
+ 1298713 string characters out of 5849289
+ 2073930 words of memory out of 5000000
+ 73421 multiletter control sequences out of 15000+600000
  538613 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,19n,96p,1835b,1852s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1808,10 +1832,10 @@ lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (16 pages, 425122 bytes).
+Output written on main.pdf (22 pages, 712314 bytes).
 PDF statistics:
- 309 PDF objects out of 1000 (max. 8388607)
- 224 compressed objects within 3 object streams
- 44 named destinations out of 1000 (max. 500000)
- 220 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 370 PDF objects out of 1000 (max. 8388607)
+ 276 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 267 words of extra memory for PDF output out of 10000 (max. 10000000)
 

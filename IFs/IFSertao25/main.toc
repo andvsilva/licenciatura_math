@@ -5,3 +5,7 @@
 \contentsline {subsection}{\numberline {1.3}Quest\~ao 43 - Trabalho de uma força de resistência}{7}{subsection.1.3}%
 \contentsline {subsection}{\numberline {1.4}Quest\~ao 44 - P\^endulo F\'isico}{12}{subsection.1.4}%
 \contentsline {subsection}{\numberline {1.5}Quest\~ao 45 - Colis\~ao Unidimensional inel\'astica}{14}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Quest\~ao 47 - Oscila\c {c}\~oes acopladas}{15}{subsection.1.6}%
+\contentsline {section}{\numberline {2}Gravita\c {c}\~ao}{18}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Quest\~ao 46 - Balan\c {c}a de tor\c {c}\~ao de Cavendish}{18}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Questão 48 - Módulo da velocidade de um satélite orbitando a Terra}{20}{subsection.2.2}%

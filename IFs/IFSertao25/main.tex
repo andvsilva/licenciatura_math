@@ -813,6 +813,303 @@ A resposta correta é alternativa \colorbox{green!50}{\textbf{(D)}}.
 
 \end{flushleft}
 
+\begin{flushleft}
+\subsection{Quest\~ao 47 - Oscila\c{c}\~oes acopladas}
+
+Dois blocos (1 e 2) de massas iguais a  $m = 0,5\,\text{kg}$ são conectados a três molas que
+estão posicionadas entre duas paredes, conforme ilustrado na figura abaixo. A constante elástica das
+duas molas externas é $k = 2,0\,\text{N/m}$, e a constante elástica da mola do meio $k_0 = 8,0\,\text{N/m}$. As molas
+têm massa desprezível e satisfazem à lei de Hooke. Sabe-se também que quando os blocos se
+encontram simultaneamente em suas respectivas posições de equilíbrio, as molas não apresentam
+qualquer deformação. Considere que $x_1(t)$ e $x_2(t)$ denotam os deslocamentos dos blocos da esquerda
+e da direita, respectivamente, em relação às suas posições de equilíbrio. No instante inicial $t$ = 0,
+ambos os blocos 1 e 2 são soltos a partir do repouso nas posições $x_1(0)=10\,\text{cm}$ e $x_2(0)=0$,
+respectivamente. Assinale a alternativa que representa a posição dos blocos como função do tempo
+medido em unidades do sistema internacional.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.5]{figures/sistema-massa-mola.png}
+\end{figure}
+
+\begin{itemize}
+\item[(A)] $x_1(t)=0,05[\cos(2t)+\cos(6t)]\,\text{m}, \;\; x_2(t)=0,05[\cos(2t)-\cos(6t)]\,\text{m}$
+\item[(B)] $x_1(t)=0,05[\cos(2t)+\cos(4t)]\,\text{m}, \;\; x_2(t)=0,05[\cos(4t)-\cos(2t)]\,\text{m}$
+\item[(C)] $x_1(t)=0,05\cos(3t)\cos(t)\,\text{m}, \;\; x_2(t)=0,05\sin(3t)\sin(t)\,\text{m}$
+\item[(D)] $x_1(t)=0,10\cos(4t)\,\text{m}, \;\; x_2(t)=0,10\sin(2t)\,\text{m}$
+\item[(E)] $x_1(t)=0,10\cos(2t)\,\text{m}, \;\; x_2(t)=0,10\sin(4t)\,\text{m}$
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solu\c{c}\~ao:}}\\[2mm]
+
+1) \textbf{Equa\c{c}\~oes de movimento:}  
+Para o bloco 1:
+\[
+m\ddot{x}_1 = -k x_1 - k_0(x_1 - x_2).
+\]
+
+Para o bloco 2:
+\[
+m\ddot{x}_2 = -k x_2 - k_0(x_2 - x_1).
+\]
+
+\[
+\Rightarrow 
+\begin{cases}
+\ddot{x}_1 + \dfrac{k+k_0}{m}x_1 - \dfrac{k_0}{m}x_2 = 0, \\
+\ddot{x}_2 + \dfrac{k+k_0}{m}x_2 - \dfrac{k_0}{m}x_1 = 0.
+\end{cases}
+\]
+
+2) \textbf{Matriz do sistema:}  
+\[
+\begin{bmatrix}
+\ddot{x}_1 \\ \ddot{x}_2
+\end{bmatrix}
+= -\frac{1}{m}
+\begin{bmatrix}
+k+k_0 & -k_0 \\
+-k_0 & k+k_0
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\ x_2
+\end{bmatrix}.
+\]
+
+Com $m=0,5$, $k=2$ e $k_0=8$:
+\[
+A=\frac{1}{0,5}
+\begin{bmatrix}
+10 & -8 \\ -8 & 10
+\end{bmatrix}
+=
+\begin{bmatrix}
+20 & -16 \\ -16 & 20
+\end{bmatrix}.
+\]
+
+3) \textbf{Autovalores (modos normais):}  
+\[
+\det(A-\lambda I)=0 \;\;\Rightarrow\;\;
+(20-\lambda)^2-(-16)^2=0,
+\]
+\[
+(20-\lambda)^2-256=0,
+\;\;\Rightarrow\;\;
+20-\lambda=\pm 16.
+\]
+\[
+\lambda_1=4, \quad \lambda_2=36.
+\]
+
+Logo, as frequ\^encias s\~ao:
+\[
+\omega_1=\sqrt{4}=2, \qquad \omega_2=\sqrt{36}=6.
+\]
+
+4) \textbf{Autovetores:}  
+Para $\lambda_1=4$:  
+\[
+(20-4)x_1-16x_2=0 \;\;\Rightarrow\;\; x_1=x_2.
+\]
+
+Para $\lambda_2=36$:  
+\[
+(20-36)x_1-16x_2=0 \;\;\Rightarrow\;\; x_1=-x_2.
+\]
+
+\textbf{Modos normais:}
+\[
+\begin{cases}
+\text{Modo 1 (freq. 2 rad/s): } x_1=x_2, \\
+\text{Modo 2 (freq. 6 rad/s): } x_1=-x_2.
+\end{cases}
+\]
+
+5) \textbf{Combina\c{c}\~ao linear:}  
+Solu\c{c}\~ao geral:
+\[
+x_1(t)=A\cos(2t)+B\cos(6t), \quad
+x_2(t)=A\cos(2t)-B\cos(6t).
+\]
+
+6) \textbf{Condi\c{c}\~oes iniciais:}  
+No instante $t=0$:
+\[
+x_1(0)=A+B=0,10, \quad x_2(0)=A-B=0.
+\]
+
+\[
+A=B=0,05.
+\]
+
+7) \textbf{Solu\c{c}\~ao final:}
+\[
+x_1(t)=0,05[\cos(2t)+\cos(6t)] \;\text{m}, \qquad
+x_2(t)=0,05[\cos(2t)-\cos(6t)] \;\text{m}.
+\]
+
+\medskip
+
+A resposta correta \'e a alternativa \colorbox{green!50}{\textbf{(A)}}.
+
+\end{flushleft}
+
+
+\section{Gravita\c{c}\~ao}
+
+\begin{flushleft}
+\subsection{Quest\~ao 46 - Balan\c{c}a de tor\c{c}\~ao de Cavendish}
+
+No experimento de Henry Cavendish, de 1797, foi utilizada uma balan\c{c}a de tor\c{c}\~ao
+para determinar o valor da constante gravitacional $G$ da lei da gravita\c{c}\~ao universal de Newton.
+Considere uma balan\c{c}a de tor\c{c}\~ao composta por uma barra de massa desprez\'ivel e comprimento $L$,
+suspensa horizontalmente pelo seu centro por um fio de tor\c{c}\~ao vertical. Duas pequenas esferas de
+massa igual a $m$ est\~ao presas em cada extremidade da barra. No primeiro passo do experimento,
+observa-se que, quando a barra \'e girada com um pequeno \^angulo, torcendo o fio, e depois solta, o
+p\^endulo de tor\c{c}\~ao resultante sofre movimento harm\^onico simples com um per\'iodo $T$. Em seguida,
+ap\'os o p\^endulo ser parado e estar em sua posi\c{c}\~ao de equil\'ibrio, um par de esferas grandes de massa
+igual a $M$ s\~ao colocadas em lados opostos da barra, cada uma pr\'oxima a uma das massas $m$. Devido
+\`a atra\c{c}\~ao gravitacional apenas entre cada par de massas, a barra \'e observada girando por um pequeno
+\^angulo $\theta$ e depois parar nessa posi\c{c}\~ao, com cada massa $M$ a uma dist\^ancia $D$ da massa $m$
+correspondente. Determine uma express\~ao para $G$ em termos das vari\'aveis dadas no problema.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.3]{figures/henry_cavendish.png}
+\end{figure}
+
+\begin{itemize}
+\item[(A)] $\,G=\dfrac{\pi^2 D^2 L^2 \theta}{M T^2}$
+\item[(B)] $\,G=\dfrac{2\pi^2 D^2 L \theta}{M T^2}$
+\item[(C)] $\,G=\dfrac{4\pi^2 D^2 L^2 \theta}{M T^2}$
+\item[(D)] $\,G=\dfrac{\pi^2 D^2 L \theta}{m T^2}$
+\item[(E)] $\,G=\dfrac{\pi^2 D^2 L \theta}{4m T^2}$
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solu\c{c}\~ao:}}\\[2mm]
+
+1) \textbf{\colorbox{yellow!30}{Constante de tor\c{c}\~ao via o per\'iodo.}} Para pequenas oscila\c{c}\~oes, o p\^endulo de tor\c{c}\~ao satisfaz
+\[
+T=2\pi\sqrt{\frac{I}{\kappa}}
+\quad\Rightarrow\quad
+\boxed{\kappa=\frac{4\pi^2 I}{T^2}}.
+\]
+A barra \'e desprez\'ivel e h\'a duas massas $m$ a $L/2$ do eixo, logo
+\[
+I=2\,m\left(\frac{L}{2}\right)^2=\frac{mL^2}{2}
+\;\;\Rightarrow\;\;
+\kappa=\frac{4\pi^2}{T^2}\,\frac{mL^2}{2}
+=\frac{2\pi^2 m L^2}{T^2}.
+\]
+
+2)  \textbf{\colorbox{yellow!30}{Equil\'ibrio com as massas $M$.}} A for\c{c}a gravitacional entre $M$ e $m$ \'e
+\[
+F=\frac{G m M}{D^2}.
+\]
+Cada for\c{c}a produz um torque de m\'odulo $F\cdot (L/2)$ em torno do centro; s\~ao duas for\c{c}as sim\'etricas, portanto o torque gravitacional total vale
+\[
+\tau_g=2\,F\left(\frac{L}{2}\right)=F\,L.
+\]
+No novo equil\'ibrio, \colorbox{yellow!30}{o torque el\'astico do fio $\tau_{\kappa}=\kappa\,\theta$ (para pequeno $\theta$)} equilibra o torque gravitacional:
+\[
+\kappa\,\theta=F\,L=\frac{G m M}{D^2}\,L.
+\]
+
+3) \textbf{Isolando $G$.} Substituindo $\kappa$:
+\[
+\frac{2\pi^2 m L^2}{T^2}\,\theta=\frac{G m M}{D^2}\,L
+\;\;\Rightarrow\;\;
+\boxed{G=\frac{2\pi^2 D^2 L\,\theta}{M T^2}.}
+\]
+
+\medskip
+
+A resposta correta \'e a alternativa \colorbox{green!50}{\textbf{(B)}}.
+
+\end{flushleft}
+
+\begin{flushleft}
+\subsection{Questão 48 - Módulo da velocidade de um satélite orbitando a Terra}
+Um satélite artificial orbita a Terra em uma trajetória elíptica sob efeito apenas da
+força gravitacional. O satélite passa pelo perigeu $P$ (ponto mais próximo à Terra) com velocidade $\vec{v}_p$ e
+pelo apogeu $A$ (ponto mais afastado da Terra) com velocidade $\vec{v}_a$. A velocidade do satélite em um
+ponto $Y$, localizado na linha que passa pela Terra e perpendicular ao eixo maior da elipse, é denotada
+por $\vec{v}$. É correto afirmar que o módulo da velocidade $v$ no ponto $Y$, em termos de $v_p$ e $v_a$ , é expresso
+por:
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.6]{figures/satelite.png}
+\end{figure}
+
+\begin{itemize}
+\item[(A)] $v = \dfrac{v_a+v_p}{2}$
+\item[(B)] $v = \dfrac{2v_av_p}{v_a+v_p}$
+\item[(C)] $v = \sqrt{v_av_p}$
+\item[(D)] $v = \sqrt{\dfrac{v_a^2+v_p^2}{2}}$
+\item[(E)] $v = \sqrt{\dfrac{2v_a^2v_p^2}{v_a^2+v_p^2}}$
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Considerando a órbita elíptica com foco na Terra, usemos a equação de \emph{vis-viva} e a conservação do momento angular. Denotando por $\mu=GM$,
+
+\[
+v^2=\mu\!\left(\frac{2}{r}-\frac{1}{a}\right),
+\]
+onde $r$ é a distância ao foco (Terra) no ponto considerado e $a$ é o semieixo maior. Para o perigeu ($r_p$) e apogeu ($r_a$) temos
+\begin{align}
+v_p^2&=\mu\!\left(\frac{2}{r_p}-\frac{1}{a}\right),\label{vp}\\
+v_a^2&=\mu\!\left(\frac{2}{r_a}-\frac{1}{a}\right).\label{va}
+\end{align}
+
+Subtraindo \eqref{va} de \eqref{vp} obtemos
+\[
+v_p^2-v_a^2=2\mu\!\left(\frac{1}{r_p}-\frac{1}{r_a}\right)
+\quad\Rightarrow\quad
+\mu=\frac{v_p^2-v_a^2}{2\left(\dfrac{1}{r_p}-\dfrac{1}{r_a}\right)}.
+\]
+
+O ponto $Y$ corresponde ao ângulo verdadeiro $\theta=\tfrac{\pi}{2}$, portanto
+\[
+r_Y=\frac{a(1-e^2)}{1+0}=a(1-e^2).
+\]
+Usando a relação entre os raios de perigeu/apogeu e $a$ (isto é, $r_p=a(1-e)$ e $r_a=a(1+e)$) obtemos
+\[
+\frac{1}{r_Y}=\frac{a}{r_pr_a}=\frac{r_p+r_a}{2r_pr_a}.
+\]
+
+Agora escrevemos a velocidade em $Y$ via vis-viva (usando a expressão em $r_p$ e eliminando $1/a$):
+\[
+v_Y^2=v_p^2+2\mu\!\left(\frac{1}{r_Y}-\frac{1}{r_p}\right).
+\]
+Substituindo $\mu$ e $\dfrac{1}{r_Y}-\dfrac{1}{r_p}=\dfrac{r_p-r_a}{2r_pr_a}$ temos
+\[
+v_Y^2
+= v_p^2 + (v_p^2-v_a^2)\frac{r_pr_a}{r_a-r_p}\cdot\frac{r_p-r_a}{2r_pr_a}
+= v_p^2 -\frac{1}{2}(v_p^2-v_a^2).
+\]
+Portanto
+\[
+v_Y^2=\frac{v_p^2+v_a^2}{2},
+\]
+e
+\[
+\boxed{\,v_Y=\sqrt{\dfrac{v_p^2+v_a^2}{2}}\,.}
+\]
+
+\textbf{Resposta:} alternativa \(\colorbox{green!50}{\textbf{D}}\).
+
+\end{flushleft}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage 
 
 \begin{flushleft}
