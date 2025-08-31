@@ -9,3 +9,8 @@
 \contentsline {section}{\numberline {2}Gravita\c {c}\~ao}{18}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Quest\~ao 46 - Balan\c {c}a de tor\c {c}\~ao de Cavendish}{18}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Questão 48 - Módulo da velocidade de um satélite orbitando a Terra}{20}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Termodin\^amica}{22}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Quest\~ao 49 - Variação de Entropia Total}{22}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Quest\~ao 50 - ciclo termodinâmico: gás de fótons}{23}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Eletromagnetismo}{25}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Questão 51 - Equações de Maxwell no Vácuo}{25}{subsection.4.1}%

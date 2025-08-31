@@ -1109,6 +1109,264 @@ e
 
 \end{flushleft}
 
+
+\section{Termodin\^amica}
+
+\begin{flushleft}
+\subsection{Quest\~ao 49 - Variação de Entropia Total}
+Em um recipiente de capacidade térmica desprezível e termicamente isolado, uma quantidade de água de massa \(m_A=80\ \mathrm{g}\) 
+encontra-se inicialmente à temperatura \(T_A=60^\circ\mathrm{C}\). Um cubo de gelo com massa \(m_B=20\ \mathrm{g}\) a \(T_0=0^\circ\mathrm{C}\) é 
+introduzido no interior do recipiente. Sabe-se que o calor específico da água é \(c=1{.}0\ \mathrm{cal\;g^{-1}\;^\circ C^{-1}}\) e o calor 
+latente de fusão do gelo a \(0^\circ\mathrm{C}\) é \(L=80\ \mathrm{cal\;g^{-1}}\). Qual é a variação de entropia total do sistema ao atingir 
+o equilíbrio térmico, em unidades de \(\mathrm{cal\cdot K^{-1}}\)?
+
+\begin{itemize}
+\item[(A)] \(20\ln\!\left(\dfrac{305}{273}\right) - 80\ln\!\left(\dfrac{333}{305}\right)\)
+\item[(B)] \(20\ln\!\left(\dfrac{321}{273}\right) - 80\ln\!\left(\dfrac{333}{321}\right)\)
+\item[(C)] \(\dfrac{8000}{273} + 100\ln\!\left(\dfrac{323}{273}\right) - 100\ln\!\left(\dfrac{373}{323}\right)\)
+\item[(D)] \(\dfrac{1600}{273} + 20\ln\!\left(\dfrac{321}{273}\right) - 80\ln\!\left(\dfrac{333}{321}\right)\)
+\item[(E)] \(\dfrac{1600}{273} + 20\ln\!\left(\dfrac{305}{273}\right) - 80\ln\!\left(\dfrac{333}{305}\right)\)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Calculemos a temperatura de equilíbrio \(T_f\) pelo balanço de energia:
+\[
+m_A c (60 - T_f) = m_B L + m_B c (T_f - 0).
+\]
+Substituindo \(m_A=80\), \(m_B=20\), \(c=1\), \(L=80\):
+\[
+80(60 - T_f) = 20\cdot 80 + 20 T_f \quad\Rightarrow\quad 4800 - 80T_f = 1600 + 20T_f
+\]
+\[
+\Rightarrow\ 100T_f = 3200 \ \Rightarrow\ T_f = 32^\circ\mathrm{C}.
+\]
+
+Usando temperaturas absolutas \(T_K=T(^{\circ}{\rm C})+273\):
+\begin{itemize}
+\item Água: de \(333\ \mathrm{K}\) a \(305\ \mathrm{K}\)
+\[
+\Delta S_{\text{água}} = m_A c \ln\!\left(\frac{305}{333}\right) = 80\ln\!\left(\frac{305}{333}\right).
+\]
+\item Gelo (fusão a \(273\ \mathrm{K}\) + aquecimento de \(273\) a \(305\ \mathrm{K}\)):
+\[
+\Delta S_{\text{fusão}} = \frac{m_B L}{273} = \frac{20\cdot 80}{273} = \frac{1600}{273},
+\]
+\[
+\Delta S_{\text{aquec}} = m_B c \ln\!\left(\frac{305}{273}\right)=20\ln\!\left(\frac{305}{273}\right).
+\]
+\end{itemize}
+
+Somando todas as contribuições:
+\[
+\Delta S_{\text{total}} = \frac{1600}{273} + 20\ln\!\left(\frac{305}{273}\right) + 80\ln\!\left(\frac{305}{333}\right).
+\]
+Reescrevendo o último termo com sinal negativo:
+\[
+\Delta S_{\text{total}} = \frac{1600}{273} + 20\ln\!\left(\frac{305}{273}\right) - 80\ln\!\left(\frac{333}{305}\right).
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{(E)}}.
+
+\end{flushleft}
+
+
+\begin{flushleft}
+\subsection{Quest\~ao 50 - ciclo termodinâmico: gás de fótons}
+Processos termodinâmicos podem ser estendidos a partículas relativísticas, como um gás de fótons. Considere uma radiação 
+eletromagnética inicialmente confinada em uma cavidade de volume \(V\), a qual está em equilíbrio térmico com as paredes 
+da cavidade a uma temperatura \(T\). Essa radiação se comporta como um gás de fótons, cuja energia interna é dada por
+\[
+U=\frac{4\sigma}{c}\,V T^4,
+\]
+onde \(\sigma\) é a constante de Stefan-Boltzmann e \(c\) é a velocidade da luz no vácuo. A pressão \(P\) do gás de fótons 
+é um terço da densidade volumétrica de energia \(u=U/V\), ou seja:
+\[
+P=\frac{4\sigma}{3c}\,T^4.
+\]
+Esse gás de fótons é utilizado como substância de trabalho em um ciclo termodinâmico \((A\!B\!C\!D\!A)\), composto por dois 
+processos isobáricos e dois processos isocóricos, conforme ilustrado no diagrama \(P\) vs. \(V\) fornecido (retângulo com 
+vértices \(A(V_0,P_0), B(V_0,2P_0), C(2V_0,2P_0), D(2V_0,P_0)\)). Calcule a eficiência \(\eta\) do ciclo para o gás de fótons.
+
+\begin{itemize}
+\item[(A)] \(\eta = 9{,}0\%\)
+\item[(B)] \(\eta = 12{,}5\%\)
+\item[(C)] \(\eta = 14{,}3\%\)
+\item[(D)] \(\eta = 15{,}4\%\)
+\item[(E)] \(\eta = 25\%\)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Para o gás de fótons temos \(U=\dfrac{4\sigma}{c}VT^4\) e \(P=\dfrac{4\sigma}{3c}T^4\). Eliminando \(T^4\):
+\[
+T^4=\frac{3P}{a}\quad\text{com }a=\frac{4\sigma}{c},
+\]
+e
+\[
+U=aVT^4 = aV\frac{3P}{a}=3PV.
+\]
+Logo \(U=3PV\).
+
+Calculemos \(U\) em cada vértice (em unidades de \(P_0V_0\)):
+\[
+U_A=3P_0V_0,\qquad U_B=3(2P_0)V_0=6P_0V_0,
+\]
+\[
+U_C=3(2P_0)(2V_0)=12P_0V_0,\qquad U_D=3P_0(2V_0)=6P_0V_0.
+\]
+
+Trabalho líquido do ciclo \(W_{\text{líq}}\) é a área do retângulo:
+\[
+W_{\text{líq}}=(2P_0-P_0)(2V_0-V_0)=P_0V_0.
+\]
+
+Agora os calores absorvidos (processos com \(Q>0\)):
+
+1. \(A\to B\) (isocórico): \(W_{AB}=0\), \(\Delta U_{AB}=U_B-U_A=6P_0V_0-3P_0V_0=3P_0V_0\). Assim \(Q_{AB}=3P_0V_0\).
+
+2. \(B\to C\) (isobárico a \(P=2P_0\)): \(\Delta U_{BC}=U_C-U_B=12P_0V_0-6P_0V_0=6P_0V_0\). Trabalho \(W_{BC}=P\Delta V=2P_0(2V_0-V_0)=2P_0V_0\). Logo \(Q_{BC}=\Delta U_{BC}+W_{BC}=6P_0V_0+2P_0V_0=8P_0V_0\).
+
+Os outros processos \(C\to D\) e \(D\to A\) liberam calor (\(Q<0\)), portanto o calor total absorvido é
+\[
+Q_{\text{in}}=Q_{AB}+Q_{BC}=3P_0V_0+8P_0V_0=11P_0V_0.
+\]
+
+Portanto a eficiência do ciclo é
+\[
+\eta=\frac{W_{\text{líq}}}{Q_{\text{in}}}=\frac{P_0V_0}{11P_0V_0}=\frac{1}{11}\approx 0{,}0909\equiv 9{,}09\%.
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{(A) \(\eta=9{,}0\%\)}}.
+
+\end{flushleft}
+
+
+\section{Eletromagnetismo}
+
+\begin{flushleft}
+\subsection{Questão 51 - Equações de Maxwell no Vácuo}
+No artigo intitulado \textit{``A Dynamical Theory of the Electromagnetic Field''}, de 1865, James Clerk Maxwell formulou inicialmente 20 
+equações para descrever os campos elétricos e magnéticos na natureza. Foram Oliver Heaviside e Heinrich Hertz que, duas décadas após a morte 
+de Maxwell, as simplificaram em quatro, conhecidas hoje como: Lei de Gauss para eletricidade, Lei de Gauss para magnetismo, Lei de Faraday e Lei de 
+Ampère-Maxwell. Essas equações relacionam os vetores campo elétrico e campo magnético e suas fontes, como cargas elétricas e correntes. Considerando 
+as quatro equações de Maxwell, é possível demonstrar que campos elétricos \(\vec{E}(\vec{r},t)\) e magnéticos \(\vec{B}(\vec{r},t)\) dependentes do 
+espaço e tempo, no espaço vazio, satisfazem equações de onda, cuja velocidade de propagação é dada por \(1/\sqrt{\mu_0\varepsilon_0}\), 
+onde \(\varepsilon_0\) e \(\mu_0\) são a permissividade elétrica e a permeabilidade magnética do vácuo, respectivamente. 
+Sobre esse conjunto de equações, assinale a alternativa \colorbox{red!20}{\textbf{INCORRETA}.}
+
+\begin{itemize}
+\item[(A)] A lei de Gauss para eletricidade estabelece que cargas elétricas estacionárias produzem um campo elétrico, e o fluxo desse campo, ao passar por qualquer superfície fechada, é proporcional à carga total contida nessa superfície.
+\item[(B)] A lei de Gauss para o magnetismo estabelece que o fluxo magnético total que passa por qualquer superfície fechada é zero. Do ponto de vista experimental, esta equação descreve que as linhas de força do campo magnético não convergem nem divergem de nenhum ponto no espaço, o que implica diretamente na ausência de polos magnéticos isolados (monopolos magnéticos) na natureza.
+\item[(C)] A lei da indução eletromagnética, descoberta por Michael Faraday em 1831, em uma série de experimentos, afirma que a integral de linha do campo elétrico em torno de uma curva fechada \(C\) é igual ao negativo da taxa de variação temporal do fluxo magnético através de qualquer superfície \(S\) limitada pela curva \(C\).
+\item[(D)] A lei de Ampère-Maxwell afirma que a integral de linha do campo magnético em torno de qualquer curva fechada \(C\) é proporcional à soma da corrente elétrica de condução e da corrente de deslocamento através da superfície \(S\) limitada pela curva \(C\).
+\item[(E)] As equações de onda do campo elétrico e magnético são invariantes por transformação de Galileu entre as coordenadas espaço-tempo de dois referenciais inerciais.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{(E)}}.
+
+\bigskip
+
+\textbf{Explicação detalhada (alternativa a alternativa):}
+
+\medskip
+
+\textbf{(A) --- Correta.}\\
+Forma integral da Lei de Gauss (eletricidade):
+\[
+\oint_{S} \mathbf{E}\cdot d\mathbf{A}=\frac{Q_{\text{enc}}}{\varepsilon_0},
+\]
+e forma diferencial:
+\[
+\nabla\cdot\mathbf{E}=\frac{\rho}{\varepsilon_0}.
+\]
+Isto significa exatamente que o fluxo do campo elétrico através de qualquer superfície fechada é proporcional à carga total contida no volume delimitado por essa superfície. A alternativa A descreve corretamente a lei.
+
+\medskip
+
+\textbf{(B) --- Correta.}\\
+Lei de Gauss para o magnetismo (integral):
+\[
+\oint_{S}\mathbf{B}\cdot d\mathbf{A}=0,
+\]
+e diferencial:
+\[
+\nabla\cdot\mathbf{B}=0.
+\]
+Isso expressa que não há "fontes" ou "sumidouros" para \(\mathbf{B}\): as linhas de campo magnético são contínuas (laços fechados) e não existem monopolos magnéticos observados. A descrição da alternativa B está correta.
+
+\medskip
+
+\textbf{(C) --- Correta.}\\
+Lei de Faraday (forma integral):
+\[
+\oint_{C}\mathbf{E}\cdot d\mathbf{l}=-\frac{d}{dt}\int_{S}\mathbf{B}\cdot d\mathbf{A},
+\]
+ou diferencial:
+\[
+\nabla\times\mathbf{E}=-\frac{\partial\mathbf{B}}{\partial t}.
+\]
+Isto corresponde exatamente ao enunciado: a força eletromotriz ao longo de uma curva fechada é o negativo da variação temporal do fluxo magnético pela superfície limitada. A alternativa C está correta.
+
+\medskip
+
+\textbf{(D) --- Correta.}\\
+Lei de Ampère-Maxwell (integral):
+\[
+\oint_{C}\mathbf{B}\cdot d\mathbf{l}=\mu_0 I_{\text{enc}}+\mu_0\varepsilon_0\frac{d}{dt}\int_{S}\mathbf{E}\cdot d\mathbf{A},
+\]
+ou diferencial:
+\[
+\nabla\times\mathbf{B}=\mu_0\mathbf{J}+\mu_0\varepsilon_0\frac{\partial\mathbf{E}}{\partial t}.
+\]
+A inclusão do termo \(\mu_0\varepsilon_0\partial\mathbf{E}/\partial t\) (corrente de deslocamento) foi essencial para a consistência matemática e física das equações e para permitir equações de onda para \(\mathbf{E}\) e \(\mathbf{B}\). A alternativa D está correta.
+
+\medskip
+
+\textbf{(E) --- \underline{Incorreta} (explicação detalhada).}\\
+As equações de Maxwell no vácuo levam às equações de onda para os campos elétrico e magnético, por exemplo (forma escalar 1D para ilustrar):
+\[
+\frac{\partial^2 f}{\partial x^2}-\frac{1}{c^2}\frac{\partial^2 f}{\partial t^2}=0,
+\qquad c=\frac{1}{\sqrt{\mu_0\varepsilon_0}}.
+\]
+Essas equações de onda \emph{não} são invariantes sob transformações de Galileu. A transformação galileana entre dois referenciais que se movem com velocidade \(v\) (no eixo \(x\)) é
+\[
+x'=x-vt,\qquad t'=t.
+\]
+Aplicando a regra da cadeia:
+\[
+\frac{\partial}{\partial x}=\frac{\partial}{\partial x'},\qquad
+\frac{\partial}{\partial t}=\frac{\partial}{\partial t'}-v\frac{\partial}{\partial x'}.
+\]
+Logo
+\[
+\frac{\partial^2}{\partial t^2}
+=\frac{\partial^2}{\partial t'^2}-2v\frac{\partial^2}{\partial t'\partial x'}+v^2\frac{\partial^2}{\partial x'^2}.
+\]
+Substituindo na equação de onda obtemos termos mistos \(\partial^2/(\partial t'\partial x')\) e um coeficiente diferente no termo \(\partial^2/\partial x'^2\); o operador da onda não preserva sua forma original salvo nos casos triviais \(v=0\) ou \(c\to\infty\). Escrevendo:
+\[
+\frac{\partial^2}{\partial x'^2}-\frac{1}{c^2}\left(\frac{\partial^2}{\partial t'^2}-2v\frac{\partial^2}{\partial t'\partial x'}+v^2\frac{\partial^2}{\partial x'^2}\right)
+\neq
+\frac{\partial^2}{\partial x'^2}-\frac{1}{c^2}\frac{\partial^2}{\partial t'^2}.
+\]
+Portanto a equação de onda muda de forma sob a transformação galileana — não é invariante.
+
+Fisicamente, isso reflete que Maxwell prediz uma velocidade de propagação \(c\) da luz que é a mesma em todos os referenciais inerciais — este fato é incompatível com a adição simples de velocidades postulada pela transformação de Galileu. A resolução histórica dessa contradição levou às transformações de Lorentz e à teoria da relatividade restrita de Einstein: as equações de Maxwell são invariantes sob transformações de Lorentz, não sob Galileu. Assim a alternativa E está errada.
+
+\bigskip
+
+\textbf{Conclusão:} a única alternativa \emph{incorreta} é a \(\boxed{\text{E}}\) porque as equações de onda (e, em geral, as equações de Maxwell) não são invariantes sob transformações galileanas — elas exigem invariância de Lorentz.
+\end{flushleft}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage 
 
