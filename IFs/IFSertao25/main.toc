@@ -1,16 +1,20 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {1}Mec\^anica}{2}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Quest\~ao 41 — Força mínima para imin\^encia de movimento rampa acima}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Quest\~ao 42 — Cilindro com atrito}{4}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Quest\~ao 43 - Trabalho de uma força de resistência}{7}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Quest\~ao 44 - P\^endulo F\'isico}{12}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Quest\~ao 45 - Colis\~ao Unidimensional inel\'astica}{14}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Quest\~ao 47 - Oscila\c {c}\~oes acopladas}{15}{subsection.1.6}%
-\contentsline {section}{\numberline {2}Gravita\c {c}\~ao}{18}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Quest\~ao 46 - Balan\c {c}a de tor\c {c}\~ao de Cavendish}{18}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Questão 48 - Módulo da velocidade de um satélite orbitando a Terra}{20}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Termodin\^amica}{22}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Quest\~ao 49 - Variação de Entropia Total}{22}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Quest\~ao 50 - ciclo termodinâmico: gás de fótons}{23}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Eletromagnetismo}{25}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Questão 51 - Equações de Maxwell no Vácuo}{25}{subsection.4.1}%
+\contentsline {section}{\numberline {1}Mec\^anica}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Quest\~ao 41 — Força mínima para imin\^encia de movimento rampa acima}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Quest\~ao 42 — Cilindro com atrito}{5}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Quest\~ao 43 - Trabalho de uma força de resistência}{8}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Quest\~ao 44 - P\^endulo F\'isico}{13}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Quest\~ao 45 - Colis\~ao Unidimensional inel\'astica}{15}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Quest\~ao 47 - Oscila\c {c}\~oes acopladas}{16}{subsection.1.6}%
+\contentsline {section}{\numberline {2}Gravita\c {c}\~ao}{19}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Quest\~ao 46 - Balan\c {c}a de tor\c {c}\~ao de Cavendish}{19}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Questão 48 - Módulo da velocidade de um satélite orbitando a Terra}{21}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Termodin\^amica}{23}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Quest\~ao 49 - Variação de Entropia Total}{23}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Quest\~ao 50 - ciclo termodinâmico: gás de fótons}{24}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Eletromagnetismo}{26}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Questão 51 - Equações de Maxwell no Vácuo}{26}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Quest\~ao 52 - Lei de Gauss para Eletricidade}{29}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Questão 53 - Lei de Ampère}{32}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Resolução}{32}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Conclusão}{33}{subsection.4.5}%

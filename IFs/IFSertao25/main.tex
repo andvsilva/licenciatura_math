@@ -1366,6 +1366,166 @@ Fisicamente, isso reflete que Maxwell prediz uma velocidade de propagação \(c\
 \textbf{Conclusão:} a única alternativa \emph{incorreta} é a \(\boxed{\text{E}}\) porque as equações de onda (e, em geral, as equações de Maxwell) não são invariantes sob transformações galileanas — elas exigem invariância de Lorentz.
 \end{flushleft}
 
+\begin{flushleft}
+\subsection{Quest\~ao 52 - Lei de Gauss para Eletricidade}
+
+Uma carga elétrica pontual \(q>0\) se encontra no centro geométrico de uma superfície gaussiana cilíndrica de altura 
+\(2L\) e raio \(a\). Sabendo que \(\varepsilon_0\) é a permissividade elétrica do meio em todo o espaço e que as grandezas 
+são expressas no sistema internacional de unidades, analise as assertivas abaixo:
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.6]{figures/lei_de_gauss.png}
+\end{figure}
+
+I. O fluxo total do vetor campo elétrico na superfície gaussiana cilíndrica é dado por \(\dfrac{q}{2\pi\varepsilon_0RL}\).
+
+II. Os fluxos elétricos do vetor campo elétrico através de cada uma das superfícies circulares superior (\(\phi_1\)) e inferior (\(\phi_2\)) do cilindro são dados por:
+\[
+\phi_1=\phi_2=\frac{q}{2\varepsilon_0}\left(1-\frac{L}{\sqrt{L^2+a^2}}\right).
+\]
+
+III. O fluxo elétrico \(\phi_3\) através da superfície lateral do cilindro é dado por:
+\[
+\phi_3=\frac{q}{\varepsilon_0}\,\frac{a}{\sqrt{L^2+a^2}}.
+\]
+
+Quais estão corretas?
+
+\begin{itemize}
+\item[(A)] Apenas I.
+\item[(B)] Apenas II.
+\item[(C)] Apenas III.
+\item[(D)] Apenas II e III.
+\item[(E)] I, II e III.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Analisemos cada item.
+
+\textbf{Total de fluxo (verificação de I).} Por Teorema de Gauss, o fluxo elétrico total através de uma superfície fechada que envolve a carga pontual \(q\) é
+\[
+\Phi_{\text{total}}=\frac{q}{\varepsilon_0}.
+\]
+A expressão dada em I, \(\dfrac{q}{2\pi\varepsilon_0RL}\), não tem dimensão nem forma compatível com \(q/\varepsilon_0\). Portanto \textbf{I é falsa}.
+
+\textbf{Fluxo através de uma tampa circular (verificação de II).} Considere a tampa circular superior: a carga está no eixo, à distância \(L\) do plano da tampa, e a tampa tem raio \(a\). A semi-ângulo sólido \(\theta\) que a tampa subtende satisfa\-z \(\cos\theta=\dfrac{L}{\sqrt{L^2+a^2}}\). O ângulo sólido \(\Omega\) subtendido pela tampa (vista da carga) é
+\[
+\Omega = 2\pi(1-\cos\theta)=2\pi\left(1-\frac{L}{\sqrt{L^2+a^2}}\right).
+\]
+O fluxo através da tampa é a fração \(\Omega/(4\pi)\) do fluxo total \(q/\varepsilon_0\):
+\[
+\phi_1=\frac{q}{\varepsilon_0}\cdot\frac{\Omega}{4\pi}
+=\frac{q}{\varepsilon_0}\cdot\frac{2\pi\left(1-\dfrac{L}{\sqrt{L^2+a^2}}\right)}{4\pi}
+=\frac{q}{2\varepsilon_0}\left(1-\frac{L}{\sqrt{L^2+a^2}}\right).
+\]
+Como a tampa inferior é simétrica, \(\phi_2=\phi_1\). Logo a expressão em II está correta; \textbf{II é verdadeira}.
+
+\[
+\boxed{
+\phi_1= \phi_2=\frac{q}{2\varepsilon_0}\left(1-\frac{L}{\sqrt{L^2+a^2}}\right).
+}
+\]
+
+\textbf{Fluxo através da superfície lateral (verificação de III).} O fluxo lateral \(\phi_3\) é o fluxo total menos o fluxo pelas duas tampas:
+\[
+\phi_3=\Phi_{\text{total}}-2\phi_1
+=\frac{q}{\varepsilon_0}-2\cdot\frac{q}{2\varepsilon_0}\left(1-\frac{L}{\sqrt{L^2+a^2}}\right)
+=\frac{q}{\varepsilon_0}\cdot\frac{L}{\sqrt{L^2+a^2}}.
+\]
+
+\[
+\boxed{\phi_3=\frac{q}{\varepsilon_0}\,\frac{L}{\sqrt{L^2+a^2}}}
+\]
+Portanto o valor correto é \(\displaystyle \phi_3=\frac{q}{\varepsilon_0}\,\frac{L}{\sqrt{L^2+a^2}}\), não o dado em III (que tem \(a\) no numerador). Assim \textbf{III é falsa}.
+
+\vspace{0.3cm}
+Conclusão: apenas a assertiva II está correta.
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{(B) Apenas II}}.
+
+\end{flushleft}
+
+\begin{flushleft}
+\subsection{Questão 53 - Lei de Ampère}
+Uma espira retangular com lados $a$ e $b$ encontra-se situada no mesmo plano, a uma distância $D$ de um fio retilíneo muito longo, 
+conforme a figura. Sabe-se que no intervalo de tempo $0 \le t \le T$ o fio conduz uma corrente elétrica que varia linearmente 
+com o tempo de acordo com a função 
+\[
+I(t) = I_0 \left(1 - \frac{t}{T}\right),
+\] 
+onde $I_0$ representa a intensidade da corrente no instante de $t=0$. A constante de permeabilidade magnética do meio é $\mu_0$, 
+e o fio e a espira retangular estão fixos em suas posições. Desconsiderando os efeitos de autoindutância, determine o módulo da 
+força eletromotriz induzida $\mathcal{E}(t)$ na espira retangular para o intervalo de tempo $0 \le t \le T$.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.6]{figures/lei_de_ampere.png}
+\end{figure}
+
+\begin{itemize}
+\item[(A)] $|\mathcal{E}(t)| = \frac{\mu_0 a b I_0}{2 \pi D T}$
+\item[(B)] $|\mathcal{E}(t)| = \frac{\mu_0 b I_0}{2 \pi T} \ln \left( 1 + \frac{a}{D} \right)$
+\item[(C)] $|\mathcal{E}(t)| = \frac{\mu_0 b I_0}{2 \pi T} \left( \frac{1}{a} - \frac{1}{a+D} \right)$
+\item[(D)] $|\mathcal{E}(t)| = \frac{\mu_0 b I_0}{2 \pi} \left( 1 - \frac{t}{T} \right) \ln \left( 1 + \frac{a}{D} \right)$
+\item[(E)] $|\mathcal{E}(t)| = \frac{\mu_0 b I_0}{2 \pi} \left( 1 - \frac{t}{T} \right) \left( \frac{1}{a} - \frac{1}{a+D} \right)$
+\end{itemize}
+
+
+\subsection{Resolução}
+
+O fluxo magnético $\Phi_B$ através da espira devido ao fio retilíneo é dado por:
+\[
+\Phi_B(t) = \int_{\text{espira}} \vec{B} \cdot d\vec{S}.
+\]
+
+O campo magnético de um fio retilíneo infinito é:
+\[
+B(r,t) = \frac{\mu_0 I(t)}{2\pi r},
+\]
+onde $r$ é a distância perpendicular ao fio.
+
+Para uma espira retangular, integramos ao longo da direção $a$ (altura da espira):
+\[
+\Phi_B(t) = \int_{D}^{D+a} B(r,t) \, b \, dr = b \int_{D}^{D+a} \frac{\mu_0 I(t)}{2\pi r} dr = \frac{\mu_0 b I(t)}{2\pi} \int_{D}^{D+a} \frac{dr}{r}.
+\]
+
+O resultado da integral:
+\[
+\Phi_B(t) = \frac{\mu_0 b I(t)}{2\pi} \ln\left(\frac{D+a}{D}\right) = \frac{\mu_0 b I(t)}{2\pi} \ln\left(1 + \frac{a}{D}\right).
+\]
+
+A força eletromotriz induzida na espira é dada pela lei de Faraday:
+\[
+\mathcal{E}(t) = \left| - \frac{d\Phi_B(t)}{dt} \right| = \left| - \frac{\mu_0 b}{2\pi} \ln\left(1 + \frac{a}{D}\right) \frac{d I(t)}{dt} \right|.
+\]
+
+Como $I(t) = I_0 \left(1 - \frac{t}{T}\right)$, temos:
+\[
+\frac{d I(t)}{dt} = - \frac{I_0}{T}.
+\]
+
+Substituindo na expressão da FEM:
+\[
+\mathcal{E}(t) = \frac{\mu_0 b I_0}{2\pi T} \ln\left(1 + \frac{a}{D}\right).
+\]
+
+\subsection{Conclusão}
+
+O módulo da força eletromotriz induzida na espira retangular é constante e dado por:
+\[
+\boxed{\mathcal{E}(t) = \frac{\mu_0 b I_0}{2\pi T} \ln\left(1 + \frac{a}{D}\right)}.
+\]
+
+Portanto, a alternativa correta é \colorbox{green!50}{\textbf{B}}.
+
+\end{flushleft}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage 

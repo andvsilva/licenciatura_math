@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  31 AUG 2025 10:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  3 SEP 2025 21:53
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1726,7 +1726,9 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 3.
-)
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
@@ -1735,46 +1737,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
-<figures/forca_minima.png, id=144, 329.73187pt x 218.31563pt>
+<figures/forca_minima.png, id=172, 329.73187pt x 218.31563pt>
 File: figures/forca_minima.png Graphic file (type png)
 <use figures/forca_minima.png>
 Package pdftex.def Info: figures/forca_minima.png  used on input line 152.
 (pdftex.def)             Requested size: 164.86552pt x 109.15753pt.
-[2 <./figures/forca_minima.png (PNG copy)>] [3]
+[3 <./figures/forca_minima.png (PNG copy)>] [4]
 Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
-<figures/q42.png, id=176, 529.22719pt x 243.15843pt>
+<figures/q42.png, id=204, 529.22719pt x 243.15843pt>
 File: figures/q42.png Graphic file (type png)
 <use figures/q42.png>
 Package pdftex.def Info: figures/q42.png  used on input line 241.
 (pdftex.def)             Requested size: 264.61295pt x 121.57892pt.
-[4 <./figures/q42.png (PNG copy)>] [5] [6]
+[5 <./figures/q42.png (PNG copy)>] [6] [7]
 Underfull \hbox (badness 10000) in paragraph at lines 382--383
 
  []
 
-[7] [8] [9] [10]
+[8] [9] [10] [11]
 Overfull \hbox (35.81755pt too wide) detected at line 609
 [][]
  []
 
-[11]
-<figures/pendulo_fisico.png, id=243, 346.29375pt x 341.02406pt>
+[12]
+<figures/pendulo_fisico.png, id=271, 346.29375pt x 341.02406pt>
 File: figures/pendulo_fisico.png Graphic file (type png)
 <use figures/pendulo_fisico.png>
 Package pdftex.def Info: figures/pendulo_fisico.png  used on input line 682.
 (pdftex.def)             Requested size: 173.14644pt x 170.51161pt.
- [12 <./figures/pendulo_fisico.png (PNG copy)>] [13] [14]
-<figures/sistema-massa-mola.png, id=258, 575.90157pt x 261.22594pt>
+ [13 <./figures/pendulo_fisico.png (PNG copy)>] [14] [15]
+<figures/sistema-massa-mola.png, id=286, 575.90157pt x 261.22594pt>
 File: figures/sistema-massa-mola.png Graphic file (type png)
 <use figures/sistema-massa-mola.png>
 Package pdftex.def Info: figures/sistema-massa-mola.png  used on input line 832
@@ -1784,45 +1784,57 @@ Package pdftex.def Info: figures/sistema-massa-mola.png  used on input line 832
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[15] [16 <./figures/sistema-massa-mola.png (PNG copy)>] [17]
-<figures/henry_cavendish.png, id=272, 690.32906pt x 475.02469pt>
+[16] [17 <./figures/sistema-massa-mola.png (PNG copy)>] [18]
+<figures/henry_cavendish.png, id=300, 690.32906pt x 475.02469pt>
 File: figures/henry_cavendish.png Graphic file (type png)
 <use figures/henry_cavendish.png>
 Package pdftex.def Info: figures/henry_cavendish.png  used on input line 981.
 (pdftex.def)             Requested size: 207.10031pt x 142.5085pt.
- [18 <./figures/henry_cavendish.png (PNG copy)>] [19]
-<figures/satelite.png, id=283, 389.95688pt x 235.63031pt>
+ [19 <./figures/henry_cavendish.png (PNG copy)>] [20]
+<figures/satelite.png, id=312, 389.95688pt x 235.63031pt>
 File: figures/satelite.png Graphic file (type png)
 <use figures/satelite.png>
 Package pdftex.def Info: figures/satelite.png  used on input line 1047.
 (pdftex.def)             Requested size: 233.97592pt x 141.37927pt.
- [20 <./figures/satelite.png (PNG copy)>]
-[21]
+ [21 <./figures/satelite.png (PNG copy)>]
+[22]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 149.
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [22] [23] [24] [25] [26]
-[27] [28]
+) [23] [24] [25] [26] [27]
+[28]
+<figures/lei_de_gauss.png, id=354, 195.73125pt x 179.16937pt>
+File: figures/lei_de_gauss.png Graphic file (type png)
+<use figures/lei_de_gauss.png>
+Package pdftex.def Info: figures/lei_de_gauss.png  used on input line 1378.
+(pdftex.def)             Requested size: 117.43964pt x 107.50244pt.
+ [29] [30 <./figures/lei_de_gauss.png (PNG copy)>] [31]
+<figures/lei_de_ampere.png, id=369, 376.40625pt x 208.52907pt>
+File: figures/lei_de_ampere.png Graphic file (type png)
+<use figures/lei_de_ampere.png>
+Package pdftex.def Info: figures/lei_de_ampere.png  used on input line 1466.
+(pdftex.def)             Requested size: 225.84547pt x 125.1184pt.
+ [32 <./figures/lei_de_ampere.png (PNG copy)>] [33]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 57.
 See the caption package documentation for explanation.
 
-[29] (./main.aux)
+[34] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DCC189BCD40FC33F643814CB45376526;3825.
+(rerunfilecheck)             Checksum: 7A27116FA93831164FF40B1F93EFC4CA;4546.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56252 strings out of 478287
- 1299786 string characters out of 5849289
+ 56281 strings out of 478287
+ 1300362 string characters out of 5849289
  2073936 words of memory out of 5000000
- 73458 multiletter control sequences out of 15000+600000
+ 73474 multiletter control sequences out of 15000+600000
  547816 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,19n,96p,1835b,1852s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,19n,96p,1835b,2531s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/te
 xmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ma
@@ -1839,10 +1851,10 @@ nts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/typ
 e1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msam10.pfb>
-Output written on main.pdf (29 pages, 742820 bytes).
+Output written on main.pdf (34 pages, 810375 bytes).
 PDF statistics:
- 439 PDF objects out of 1000 (max. 8388607)
- 335 compressed objects within 4 object streams
- 71 named destinations out of 1000 (max. 500000)
- 307 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 491 PDF objects out of 1000 (max. 8388607)
+ 380 compressed objects within 4 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 349 words of extra memory for PDF output out of 10000 (max. 10000000)
 
