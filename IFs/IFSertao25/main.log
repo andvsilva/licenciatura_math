@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  6 SEP 2025 23:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.1.31)  7 SEP 2025 18:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1742,7 +1742,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
-<figures/forca_minima.png, id=197, 329.73187pt x 218.31563pt>
+<figures/forca_minima.png, id=227, 329.73187pt x 218.31563pt>
 File: figures/forca_minima.png Graphic file (type png)
 <use figures/forca_minima.png>
 Package pdftex.def Info: figures/forca_minima.png  used on input line 152.
@@ -1752,7 +1752,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
-<figures/q42.png, id=228, 529.22719pt x 243.15843pt>
+<figures/q42.png, id=258, 529.22719pt x 243.15843pt>
 File: figures/q42.png Graphic file (type png)
 <use figures/q42.png>
 Package pdftex.def Info: figures/q42.png  used on input line 241.
@@ -1768,13 +1768,13 @@ Overfull \hbox (35.81755pt too wide) detected at line 609
  []
 
 [12]
-<figures/pendulo_fisico.png, id=295, 346.29375pt x 341.02406pt>
+<figures/pendulo_fisico.png, id=326, 346.29375pt x 341.02406pt>
 File: figures/pendulo_fisico.png Graphic file (type png)
 <use figures/pendulo_fisico.png>
 Package pdftex.def Info: figures/pendulo_fisico.png  used on input line 682.
 (pdftex.def)             Requested size: 173.14644pt x 170.51161pt.
  [13 <./figures/pendulo_fisico.png (PNG copy)>] [14] [15]
-<figures/sistema-massa-mola.png, id=310, 575.90157pt x 261.22594pt>
+<figures/sistema-massa-mola.png, id=341, 575.90157pt x 261.22594pt>
 File: figures/sistema-massa-mola.png Graphic file (type png)
 <use figures/sistema-massa-mola.png>
 Package pdftex.def Info: figures/sistema-massa-mola.png  used on input line 832
@@ -1785,13 +1785,13 @@ Package pdftex.def Info: figures/sistema-massa-mola.png  used on input line 832
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [16] [17 <./figures/sistema-massa-mola.png (PNG copy)>] [18]
-<figures/henry_cavendish.png, id=325, 690.32906pt x 475.02469pt>
+<figures/henry_cavendish.png, id=355, 690.32906pt x 475.02469pt>
 File: figures/henry_cavendish.png Graphic file (type png)
 <use figures/henry_cavendish.png>
 Package pdftex.def Info: figures/henry_cavendish.png  used on input line 981.
 (pdftex.def)             Requested size: 207.10031pt x 142.5085pt.
  [19 <./figures/henry_cavendish.png (PNG copy)>] [20]
-<figures/satelite.png, id=336, 389.95688pt x 235.63031pt>
+<figures/satelite.png, id=366, 389.95688pt x 235.63031pt>
 File: figures/satelite.png Graphic file (type png)
 <use figures/satelite.png>
 Package pdftex.def Info: figures/satelite.png  used on input line 1047.
@@ -1804,47 +1804,65 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [23] [24] [25] [26] [27]
 [28]
-<figures/lei_de_gauss.png, id=378, 195.73125pt x 179.16937pt>
+<figures/lei_de_gauss.png, id=408, 195.73125pt x 179.16937pt>
 File: figures/lei_de_gauss.png Graphic file (type png)
 <use figures/lei_de_gauss.png>
 Package pdftex.def Info: figures/lei_de_gauss.png  used on input line 1378.
 (pdftex.def)             Requested size: 117.43964pt x 107.50244pt.
  [29] [30 <./figures/lei_de_gauss.png (PNG copy)>] [31]
-<figures/lei_de_ampere.png, id=393, 376.40625pt x 208.52907pt>
+<figures/lei_de_ampere.png, id=423, 376.40625pt x 208.52907pt>
 File: figures/lei_de_ampere.png Graphic file (type png)
 <use figures/lei_de_ampere.png>
 Package pdftex.def Info: figures/lei_de_ampere.png  used on input line 1466.
 (pdftex.def)             Requested size: 225.84547pt x 125.1184pt.
  [32 <./figures/lei_de_ampere.png (PNG copy)>] [33]
-<figures/optica_geometrica_lente.png, id=403, 413.29407pt x 261.22594pt>
+<figures/optica_geometrica_lente.png, id=433, 413.29407pt x 261.22594pt>
 File: figures/optica_geometrica_lente.png Graphic file (type png)
 <use figures/optica_geometrica_lente.png>
 Package pdftex.def Info: figures/optica_geometrica_lente.png  used on input lin
 e 1537.
 (pdftex.def)             Requested size: 247.97835pt x 156.73676pt.
  [34 <./figures/optica_geometrica_lente.png (PNG copy)>]
-<figures/reflexao_total.png, id=409, 401.24907pt x 264.23718pt>
+<figures/reflexao_total.png, id=439, 401.24907pt x 264.23718pt>
 File: figures/reflexao_total.png Graphic file (type png)
 <use figures/reflexao_total.png>
 Package pdftex.def Info: figures/reflexao_total.png  used on input line 1603.
 (pdftex.def)             Requested size: 240.75128pt x 158.54352pt.
- [35] [36 <./figures/reflexao_total.png (PNG copy)>] [37] [38]
+ [35] [36 <./figures/reflexao_total.png (PNG copy)>]
+<figures/espelho_LIoyd.png, id=450, 738.50906pt x 239.39438pt>
+File: figures/espelho_LIoyd.png Graphic file (type png)
+<use figures/espelho_LIoyd.png>
+Package pdftex.def Info: figures/espelho_LIoyd.png  used on input line 1653.
+(pdftex.def)             Requested size: 443.10886pt x 143.63773pt.
+ [37 <./figures/espelho_LIoyd.png (PNG copy)>] [38] [39]
+<figures/energia-momento.png, id=465, 377.15906pt x 260.47313pt>
+File: figures/energia-momento.png Graphic file (type png)
+<use figures/energia-momento.png>
+Package pdftex.def Info: figures/energia-momento.png  used on input line 1759.
+(pdftex.def)             Requested size: 226.29718pt x 156.28508pt.
+ [40 <./figures/energia-momento.png (PNG copy)>] [41]
+<figures/positronio.png, id=475, 441.90094pt x 292.84406pt>
+File: figures/positronio.png Graphic file (type png)
+<use figures/positronio.png>
+Package pdftex.def Info: figures/positronio.png  used on input line 1829.
+(pdftex.def)             Requested size: 265.14261pt x 175.70778pt.
+ [42 <./figures/positronio.png (PNG copy)>] [43] [44] [45]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 57.
 See the caption package documentation for explanation.
 
-[39] (./main.aux)
+[46] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 881152B0B94A746EEB7DE55312E1C9CB;5453.
+(rerunfilecheck)             Checksum: 48E29BE2CD06561A3346FE442D42C8D1;6896.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56310 strings out of 478287
- 1300993 string characters out of 5849289
- 2073945 words of memory out of 5000000
- 73490 multiletter control sequences out of 15000+600000
+ 56351 strings out of 478287
+ 1301820 string characters out of 5849289
+ 2073948 words of memory out of 5000000
+ 73513 multiletter control sequences out of 15000+600000
  547816 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,19n,96p,1835b,2531s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1863,11 +1881,12 @@ mr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/typ
 e1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/symbols/msam10.pfb>
-Output written on main.pdf (39 pages, 910977 bytes).
+nts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/symbols/msbm10.pfb>
+Output written on main.pdf (46 pages, 1266459 bytes).
 PDF statistics:
- 545 PDF objects out of 1000 (max. 8388607)
- 426 compressed objects within 5 object streams
- 93 named destinations out of 1000 (max. 500000)
- 391 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 617 PDF objects out of 1000 (max. 8388607)
+ 486 compressed objects within 5 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 446 words of extra memory for PDF output out of 10000 (max. 10000000)
 

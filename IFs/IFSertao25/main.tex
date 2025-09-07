@@ -1634,6 +1634,69 @@ A resposta correta é alternativa \colorbox{green!50}{\textbf{(A)}}.
 
 \end{flushleft}
 
+\begin{flushleft}
+\subsection{Quest\~ao 57 - Interferência da Luz} 
+
+No trabalho intitulado “Uso do espelho de Lloyd como método de ensino de óptica no Ensino Médio” 
+(Revista Brasileira de Ensino de Física, 2012), os autores propõem uma abordagem para o ensino de óptica, 
+com ênfase na aplicação de conceitos básicos sobre o fenômeno da interferência da luz. Foi utilizado o experimento denominado 
+“espelho de Lloyd”, que oferece uma ligação mais simples entre a óptica geométrica e a óptica física, sendo muito mais acessível 
+do que a experiência das duas fendas de Young, segundo os autores. No procedimento, um padrão de franjas de interferência é observado usando-se 
+luz emitida por uma fonte coerente, como um laser, e a luz refletida por uma placa de vidro (figura a). O padrão de interferência é projetado em 
+um anteparo. As distâncias entre a fonte luminosa em relação ao plano da placa de vidro e o anteparo são, respectivamente, \(d = 1,0\ \mathrm{mm}\) 
+e \(D = 2,0\ \mathrm{m}\) (figura b). Durante a realização do experimento, foi registrado um padrão de interferência (figura c) com 14 franjas por centímetro. 
+
+Qual é o valor do comprimento de onda \(\lambda\) da luz que foi medido, levando em consideração as informações fornecidas?
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.6]{figures/espelho_LIoyd.png}
+\end{figure}
+
+\begin{itemize}
+\item[(A)] 660 nm.
+\item[(B)] 680 nm.
+\item[(C)] 710 nm.
+\item[(D)] 750 nm.
+\item[(E)] 780 nm.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+No arranjo de Lloyd, a franja de interferência observada no anteparo é similar à obtida por duas fontes separadas por \(2d\) (a fonte real e a imagem especular). Para pequenas inclinações (parâmetro de aproximação de Gauss) a separação entre franjas sucessivas (franja brilhante para a próxima franja brilhante) é dada por
+\[
+\beta=\frac{\lambda\,D}{2d}.
+\]
+
+Da observação temos \(14\) franjas por centímetro, portanto a distância entre franjas é
+\[
+\beta=\frac{1\ \mathrm{cm}}{14}=\frac{0{,}01\ \mathrm{m}}{14}=7{,}142857\times 10^{-4}\ \mathrm{m}.
+\]
+
+Isolando \(\lambda\) na expressão para \(\beta\):
+\[
+\lambda=\frac{2d\,\beta}{D}.
+\]
+
+Substituindo os valores numéricos (\(d=1{,}0\ \mathrm{mm}=1{,}0\times10^{-3}\ \mathrm{m}\), \(D=2{,}0\ \mathrm{m}\)):
+\[
+\lambda=\frac{2\,(1{,}0\times10^{-3})\,(7{,}142857\times10^{-4})}{2{,}0}
+=\;1{,}0\times10^{-3}\times 7{,}142857\times10^{-4}
+=7{,}142857\times10^{-7}\ \mathrm{m}.
+\]
+
+Em unidades nanométricas:
+\[
+\lambda\approx 7{,}14\times10^{-7}\ \mathrm{m}=714\ \mathrm{nm}.
+\]
+
+Comparando com as alternativas apresentadas, o valor mais próximo é \(\mathbf{710\ \mathrm{nm}}\) (alternativa \textbf{(C)}).\\
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{(C) 710 nm}}.
+\end{flushleft}
+
 \section{Relatividade}
 
 \begin{flushleft}
@@ -1678,6 +1741,220 @@ Como \(\gamma(1-\beta)=\dfrac{1-\beta}{\sqrt{1-\beta^2}}=\sqrt{\dfrac{1-\beta}{1
 A resposta correta é alternativa \colorbox{green!50}{\textbf{(C)}}.
 
 \end{flushleft}
+
+\begin{flushleft}
+\subsection{Quest\~ao 58 - Energia-Momento Relativística} 
+
+Um experimento simplificado para verificar a relação energia-momento relativística de partículas beta emitidas por uma fonte radioativa foi 
+proposto recentemente por D. Jackson \textit{et al.} no \textit{American Journal of Physics}, 92, 775 (2024). No aparato experimental, as 
+partículas beta, de massa de repouso \(m_0\) e carga elétrica \(q\), são emitidas por uma fonte de \({}^{204}\mathrm{Tl}\) (tálio-204) e, 
+em seguida, passam por um colimador de aço que direciona suas trajetórias. Após saírem do colimador, as partículas beta seguem trajetórias 
+(aproximadamente) circulares devido a um campo magnético uniforme de intensidade \(B\). Um colimador de alumínio conduz as partículas para 
+um detector Geiger-Müller, que registra a chegada das partículas, permitindo a medição do raio \(R\) de suas trajetórias. Seja \(K\) a energia 
+cinética de uma partícula beta incidente na região do campo magnético e, considerando efeitos relativísticos, determine o raio \(R\) dessas trajetórias
+\'e dado pela expressão:
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.6]{figures/energia-momento.png}
+\end{figure}
+
+
+\begin{itemize}
+\item[(A)] \(R=\sqrt{\dfrac{2m_0K}{(q^2B^2)}}\)
+\item[(B)] \(R=\sqrt{\dfrac{m_0K}{(2q^2B^2)}}\)
+\item[(C)] \(R=\sqrt{\dfrac{K(2m_0c^2-K)}{(qBc)^2}}\)
+\item[(D)] \(R=\sqrt{\dfrac{K(2m_0c^2+K)}{(qBc)^2}}\)
+\item[(E)] \(R=\sqrt{\dfrac{2K(m_0c^2+K)}{(qBc)^2}}\)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+A força magnética fornece a força centrípeta responsável pela trajetória circular:
+\[
+qvB=\frac{p\,v}{R}\quad\Rightarrow\quad \boxed{R=\frac{p}{qB}},
+\]
+onde \(p\) é o momento relativístico da partícula.
+
+Relatividade special: a energia total é
+\[
+E=\gamma m_0 c^2 = K + m_0 c^2,
+\]
+e a relação energia-momento é
+\[
+E^2=(pc)^2+(m_0 c^2)^2.
+\]
+Isolando \(p\) obtemos
+\[
+(pc)^2 = E^2-(m_0 c^2)^2 = (K+m_0 c^2)^2-(m_0 c^2)^2
+=K^2+2K m_0 c^2.
+\]
+Portanto
+\[
+p=\frac{\sqrt{K^2+2K m_0 c^2}}{c}=\frac{\sqrt{K\,(K+2m_0 c^2)}}{c}.
+\]
+
+Substituindo em \(R=p/(qB)\):
+\[
+R=\frac{1}{qB}\,\frac{\sqrt{K^2+2K m_0 c^2}}{c}
+=\frac{\sqrt{K\,(K+2m_0 c^2)}}{qB c}.
+\]
+
+Escrevendo em forma equivalente (colocando o denominador \((qBc)^2\) sob o radical):
+\[
+\boxed{R=\sqrt{\dfrac{K\,(2m_0 c^2+K)}{(qBc)^2}}}.
+\]
+
+Assim, a alternativa que coincide com a expressão correta é a \(\mathbf{(D)}\).\\
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{(D)}}.
+\end{flushleft}
+
+\section{Mecânica quântica em três dimensões e átomo de Hidrogênio}
+
+\begin{flushleft}
+\subsection{Quest\~ao 59 - Modelo de Bohr para positrônio} 
+
+Recentemente, uma equipe de pesquisadores do CERN alcançou um avanço importante ao aplicar uma técnica inovadora de resfriamento a laser 
+em uma amostra de positrônio, uma partícula composta por um elétron (carga elétrica \(-e\) e massa \(m\)) e um pósitron (antipartícula com 
+carga positiva e massa semelhante à do elétron). Essa conquista permite uma investigação mais
+precisa das propriedades do positrônio, abrindo possibilidades para estudos fundamentais, como a
+produção de condensados Bose-Einstein de antimatéria e a geração de luz gama coerente, o que
+poderia trazer um leque de novas aplicações.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.6]{figures/positronio.png}
+\end{figure}
+
+Considerando o modelo de Bohr para átomos hidrogenoides, é correto afirmar que os níveis de energia de um positrônio, em função do número 
+quântico principal \(n\), são dados por:
+
+\begin{itemize}
+\item[(A)] \(E_n=-3{,}4/n^2\ \mathrm{eV}\)
+\item[(B)] \(E_n=-6{,}8/n^2\ \mathrm{eV}\)
+\item[(C)] \(E_n=-13{,}6/n^2\ \mathrm{eV}\)
+\item[(D)] \(E_n=-27{,}2/n^2\ \mathrm{eV}\)
+\item[(E)] \(E_n=-25{,}0/n^2\ \mathrm{MeV}\)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+No modelo de Bohr para um sistema de duas partículas (átomo hidrogenoide) as energias estão dadas por
+\[
+E_n=-\frac{\mu e^4}{2(4\pi\varepsilon_0)^2\hbar^2}\frac{1}{n^2},
+\]
+onde \(\mu\) é a massa reduzida do sistema. Para o hidrogênio (núcleo com massa muito maior que \(m\)) tem-se \(\mu\approx m_e\) e portanto
+\[
+E_n^{\text{H}}=-\frac{m_e e^4}{2(4\pi\varepsilon_0)^2\hbar^2}\frac{1}{n^2}=-\frac{13{,}6}{n^2}\ \mathrm{eV}.
+\]
+
+No caso do positrônio, o sistema é formado por um elétron e um pósitron com a mesma massa \(m_e\), então a \colorbox{yellow}{massa reduzida} é
+\[
+\mu=\frac{m_e\cdot m_e}{m_e+m_e}=\frac{m_e}{2}.
+\]
+Substituindo na expressão para \(E_n\) obtemos
+\[
+E_n^{\text{Ps}}=-\frac{(m_e/2)e^4}{2(4\pi\varepsilon_0)^2\hbar^2}\frac{1}{n^2}
+=-\frac{1}{2}\left(\frac{m_e e^4}{2(4\pi\varepsilon_0)^2\hbar^2}\right)\frac{1}{n^2}
+=-\frac{1}{2}\cdot\frac{13{,}6}{n^2}\ \mathrm{eV}.
+\]
+Logo
+\[
+\boxed{
+E_n^{\text{Ps}}=-\frac{6{,}8}{n^2}\ \mathrm{eV}}.
+\]
+
+Portanto, a alternativa correta é a \(\mathbf{(B)}\).\\
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{(B)  \(\,E_n=-6{,}8/n^2\ \mathrm{eV}\)}}.
+\end{flushleft}
+
+\begin{flushleft}
+\subsection{Quest\~ao 60 - \'Atomo de Hidrogênio} 
+
+O estado de um elétron em um átomo de hidrogênio, na representação posição 
+\(\vec{r} = x \hat{x} + y \hat{y} + z \hat{z}\), é descrito pela função de onda normalizada a seguir:
+
+\[
+\psi(\vec{r}) = \frac{1}{\sqrt{32 \pi a_0^5}} (\alpha x + \beta y + \gamma z)\exp\left(-\frac{r}{2a_0}\right),
+\]
+onde \(a_0\) é o raio de Bohr, \(r=\sqrt{x^2+y^2+z^2}\) e \(\alpha,\beta,\gamma\) são números reais que satisfazem \(\alpha^2+\beta^2+\gamma^2=1\). O estado \(\psi(\vec{r})\) é uma superposição das autofunções \(\psi_{nlm}(r,\theta,\phi)\) do átomo de hidrogênio, para \(n=2\).  
+
+A tabela apresenta as autofunções normalizadas do átomo de hidrogênio em coordenadas esféricas \((r,\theta,\phi)\) para os orbitais com \(n=2\):
+
+\[
+\begin{array}{|c|c|}
+\hline
+\text{Estado } (n,l,m) & \text{Função de onda} \\ \hline
+(2,0,0) & \psi_{200}(r,\theta,\phi) = \frac{1}{\sqrt{8\pi a_0^3}}\left(1-\frac{r}{2a_0}\right)e^{-r/2a_0} \\ \hline
+(2,1,0) & \psi_{210}(r,\theta,\phi) = \frac{1}{\sqrt{8\pi a_0^3}} \frac{r}{2a_0} e^{-r/2a_0}\cos\theta \\ \hline
+(2,1,\pm 1) & \psi_{21\pm1}(r,\theta,\phi) = \pm \frac{1}{\sqrt{16\pi a_0^3}}\left(\frac{r}{2a_0}\right)e^{-r/2a_0}\sin\theta e^{\pm i\phi} \\ \hline
+\end{array}
+\]
+
+Seja \(\hbar=h/2\pi\). Assinale a alternativa correta que representa a probabilidade de uma medida de \(\hat{L}_z\) resultar \(+\hbar\).
+
+\begin{itemize}
+\item[(A)] \(P(L_z=+\hbar)=\tfrac{1}{2}(\alpha^2+\beta^2)\)
+\item[(B)] \(P(L_z=+\hbar)=\alpha^2+\beta^2\)
+\item[(C)] \(P(L_z=+\hbar)=\tfrac{1}{2}(\alpha^2-\beta^2)\)
+\item[(D)] \(P(L_z=+\hbar)=\alpha^2-\beta^2\)
+\item[(E)] \(P(L_z=+\hbar)=\gamma^2\)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+A função de onda dada pode ser reescrita em coordenadas esféricas. Usando:
+\[
+x = r \sin\theta \cos\phi, \quad y = r \sin\theta \sin\phi, \quad z = r \cos\theta,
+\]
+obtemos
+\[
+\psi(r,\theta,\phi) = \frac{r}{\sqrt{32 \pi a_0^5}} \exp\left(-\frac{r}{2a_0}\right)\left[\alpha \sin\theta\cos\phi + \beta \sin\theta\sin\phi + \gamma \cos\theta\right].
+\]
+
+Comparando com as autofunções da tabela, vemos que:
+\[
+\psi_{210}(r,\theta,\phi)\propto \frac{r}{a_0}e^{-r/2a_0}\cos\theta,
+\]
+\[
+\psi_{21\pm1}(r,\theta,\phi)\propto \frac{r}{a_0}e^{-r/2a_0}\sin\theta e^{\pm i\phi}.
+\]
+
+Podemos escrever:
+\[
+\alpha \sin\theta \cos\phi + \beta \sin\theta \sin\phi = 
+\frac{\alpha - i\beta}{2} \sin\theta e^{i\phi} + \frac{\alpha+i\beta}{2}\sin\theta e^{-i\phi}.
+\]
+
+Assim, o estado é uma combinação linear:
+\[
+\psi \sim \gamma \psi_{210} + \frac{\alpha - i\beta}{\sqrt{2}} \psi_{21,1} + \frac{\alpha+i\beta}{\sqrt{2}} \psi_{21,-1}.
+\]
+
+Portanto, o coeficiente da autofunção \(\psi_{21,1}\) (que corresponde a \(m=+1\), logo \(L_z=+\hbar\)) é
+\[
+c_{+1} = \frac{\alpha - i\beta}{\sqrt{2}}.
+\]
+
+A probabilidade é
+\[
+P(L_z=+\hbar) = |c_{+1}|^2 = \frac{1}{2}(\alpha^2+\beta^2).
+\]
+
+Logo, a alternativa correta é a \(\mathbf{(A)}\).\\
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{(A) \(\, P(L_z=+\hbar)=\tfrac{1}{2}(\alpha^2+\beta^2)\)}}.
+\end{flushleft}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage 
