@@ -1475,7 +1475,7 @@ força eletromotriz induzida $\mathcal{E}(t)$ na espira retangular para o interv
 \end{itemize}
 
 
-\subsection{Resolução}
+\subsection*{Resolução}
 
 O fluxo magnético $\Phi_B$ através da espira devido ao fio retilíneo é dado por:
 \[
@@ -1513,7 +1513,7 @@ Substituindo na expressão da FEM:
 \mathcal{E}(t) = \frac{\mu_0 b I_0}{2\pi T} \ln\left(1 + \frac{a}{D}\right).
 \]
 
-\subsection{Conclusão}
+\subsection*{Conclusão}
 
 O módulo da força eletromotriz induzida na espira retangular é constante e dado por:
 \[
@@ -1524,8 +1524,160 @@ Portanto, a alternativa correta é \colorbox{green!50}{\textbf{B}}.
 
 \end{flushleft}
 
+\section{\'Optica Geométrica}
+\begin{flushleft}
+\subsection{Quest\~ao 54 - Lente Convergente}
 
+Uma lente delgada convergente de distância focal $f$ é colocada entre uma fonte luminosa e um anteparo, 
+que estão fixos e separados por uma distância $L$, com $L \geq 4f$. Qual é a expressão para a distância entre 
+as duas posições da lente que formarão imagens reais nítidas da fonte sobre o anteparo?
 
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.6]{figures/optica_geometrica_lente.png}
+\end{figure}
+
+\begin{itemize}
+\item[(A)] $L/2$
+\item[(B)] $\sqrt{L^{2}+2fL}$
+\item[(C)] $\sqrt{L^{2}+4fL}$
+\item[(D)] $\sqrt{L^{2}-2fL}$
+\item[(E)] $\sqrt{L^{2}-4fL}$
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Seja $p$ a distância objeto-lente (da fonte até a lente) e $q$ a distância lente–imagem (da lente até o anteparo). Como fonte e anteparo estão separados por $L$ e a lente fica entre eles, temos
+\[
+p+q=L.
+\]
+A equação da lente delgada é
+\[
+\frac{1}{f}=\frac{1}{p}+\frac{1}{q}.
+\]
+Substituindo $q=L-p$:
+\[
+\frac{1}{f}=\frac{1}{p}+\frac{1}{L-p}=\frac{L}{p(L-p)}.
+\]
+Multiplicando ambos os lados por $p(L-p)$:
+\[
+p(L-p)=fL.
+\]
+Isso resulta na equação quadrática
+\[
+p^{2}-Lp+fL=0.
+\]
+As raízes desta equação (as duas posições possíveis da lente que formam imagem nítida no anteparo) são
+\[
+p_{1,2}=\frac{L\pm\sqrt{L^{2}-4fL}}{2}.
+\]
+A distância entre as duas posições da lente é
+\[
+\Delta p=|p_1-p_2|=\sqrt{L^{2}-4fL}.
+\]
+Portanto a alternativa correta é a \colorbox{green!50}{\textbf{(E)}}.
+
+\end{flushleft}
+
+\section{Interfer\^encia e Difra\c{c}\~ao}
+
+\begin{flushleft}
+\subsection{Quest\~ao 55 - Fibras \'Opticas}
+\noindent
+
+O uso das fibras óticas é uma das principais aplicações tecnológicas da óptica na área
+de comunicações. Fibras cilíndricas finas de vidro ou plástico podem ser usadas para transmitir sinais
+ao invés de fios metálicos. A grande vantagem está na largura de banda disponível quando o portador
+são ondas eletromagnéticas. Isso permite que uma fibra carregue muito mais sinais independentes
+diferentes do que um fio condutor. Existem também vantagens em termos de peso e independência
+de recursos limitados. Considere uma fibra óptica composta por um núcleo de vidro fino com índice
+de refração \(n_f\), cercado por uma camada de revestimento de menor densidade com índice de refração
+\(n_r < n_f\). O índice de refração do ar é denotado por \(n_0\). Assinale a alternativa que expressa
+corretamente o ângulo de incidência máximo (\(\theta_m\)) que qualquer raio que incida na face de entrada
+seja guiado dentro da fibra por reflexões internas totais sucessivas.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=0.6]{figures/reflexao_total.png}
+\end{figure}
+
+\begin{itemize}
+\item[(A)] \(\displaystyle \theta_m=\arcsin\!\left(\frac{1}{n_0}\sqrt{n_f^2-n_r^2}\right)\)
+\item[(B)] \(\displaystyle \theta_m=\arcsin\!\left(\frac{n_f^2}{n_0^2}-\frac{n_f^4}{n_0^2 n_r^2}\right)\)
+\item[(C)] \(\displaystyle \theta_m=\arccos\!\left(\frac{1}{n_0}\sqrt{n_f^2-n_r^2}\right)\)
+\item[(D)] \(\displaystyle \theta_m=\arcsin\!\left(\frac{n_f}{n_r}\right)\)
+\item[(E)] \(\displaystyle \theta_m=\arccos\!\left(\frac{n_r}{n_f}\right)\)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Para guiar por reflexões internas totais, o raio dentro do núcleo deve atingir a interface núcleo-revestimento com um ângulo de incidência 
+igual ao mínimo permitido (ângulo crítico) \(\theta_c\) com \(\sin\theta_c=\dfrac{n_r}{n_f}\). Em termos do ângulo \(\theta'\) que o raio faz 
+com o eixo da fibra, a condição limite é \(\theta'_{\max}=90^\circ-\theta_c\), portanto
+\[
+\sin\theta'_{\max}=\cos\theta_c=\sqrt{1-\sin^2\theta_c}=\sqrt{1-\left(\frac{n_r}{n_f}\right)^2}=\frac{\sqrt{n_f^2-n_r^2}}{n_f}.
+\]
+Na face de entrada, pela lei de Snell \(n_0\sin\theta_m=n_f\sin\theta'\). Substituindo \(\sin\theta'=\sin\theta'_{\max}\) obtém-se
+\[
+\sin\theta_m=\frac{n_f}{n_0}\cdot\frac{\sqrt{n_f^2-n_r^2}}{n_f}=\frac{1}{n_0}\sqrt{n_f^2-n_r^2},
+\]
+logo
+\[
+\theta_m=\arcsin\!\left(\frac{1}{n_0}\sqrt{n_f^2-n_r^2}\right).
+\]
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{(A)}}.
+
+\end{flushleft}
+
+\section{Relatividade}
+
+\begin{flushleft}
+\subsection{Quest\~ao 56 - Transformação de Lorentz}
+
+Seja \(R\) um referencial inercial e \(R'\) um referencial inercial que se move em relação a \(R\), com velocidade constante \(\vec{v} = \beta c \hat{x}\), 
+na qual \(c\) é a velocidade da luz no vácuo e \(|\beta| < 1\) é um parâmetro adimensional. Os eixos \(x, y, z\) de \(R\) são paralelos aos 
+eixos \(x', y', z'\) de \(R'\), e as coordenadas espaço-tempo estão relacionadas entre si através da transformação de Lorentz. Sabe-se também que 
+as origens \(O\) e \(O'\) dos referenciais \(R\) e \(R'\) são coincidentes nos instantes \(t = t' = 0\). Considere as funções de onda 
+\(\Psi_\pm(x,t) = \Psi_0 \exp[ik\phi_\pm(x,t)]\), onde \(k\) é o vetor de onda e os comprimentos \(\phi_\pm\) são \(\phi_+(x,t) = x + ct\) e 
+\(\phi_-(x,t) = x - ct\). É correto afirmar que no referencial \(R'\) as grandezas \(\phi'_+\) e \(\phi'_-\) estão relacionadas através da seguinte 
+forma, respectivamente:
+
+\begin{itemize}
+\item[(A)] \(\phi'_+ = \phi_+(1+\beta)\) \quad e \quad \(\phi'_- = \phi_-(1-\beta)\)
+\item[(B)] \(\phi'_+ = \phi_+(1-\beta)\) \quad e \quad \(\phi'_- = \phi_-(1+\beta)\)
+\item[(C)] \(\phi'_+ = \phi_+\sqrt{\dfrac{1-\beta}{1+\beta}}\) \quad e \quad \(\phi'_- = \phi_-\sqrt{\dfrac{1+\beta}{1-\beta}}\)
+\item[(D)] \(\phi'_+ = \phi_+\sqrt{\dfrac{1+\beta}{1-\beta}}\) \quad e \quad \(\phi'_- = \phi_-\sqrt{\dfrac{1-\beta}{1+\beta}}\)
+\item[(E)] \(\phi'_+ = \dfrac{1}{\sqrt{1-\beta^2}}(\phi_+ - \beta\phi_-)\) \quad e \quad \(\phi'_- = \dfrac{1}{\sqrt{1-\beta^2}}(\phi_- + \beta\phi_+)\)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+Usando as transformações de Lorentz,
+\[
+\begin{aligned}
+\phi'_+ &= x' + c t' = \gamma(x-\beta ct) + c\gamma\left(t-\beta\frac{x}{c}\right) \\
+&= \gamma\big[(1-\beta)x + (1-\beta)ct\big] = \gamma(1-\beta)\,(x+ct)=\gamma(1-\beta)\,\phi_+.
+\end{aligned}
+\]
+Analogamente,
+\[
+\begin{aligned}
+\phi'_- &= x' - c t' = \gamma(x-\beta ct) - c\gamma\left(t-\beta\frac{x}{c}\right) \\
+&= \gamma\big[(1+\beta)x - (1+\beta)ct\big] = \gamma(1+\beta)\,(x-ct)=\gamma(1+\beta)\,\phi_-.
+\end{aligned}
+\]
+Como \(\gamma(1-\beta)=\dfrac{1-\beta}{\sqrt{1-\beta^2}}=\sqrt{\dfrac{1-\beta}{1+\beta}}\) e \(\gamma(1+\beta)=\sqrt{\dfrac{1+\beta}{1-\beta}}\), obtemos exatamente a alternativa (C).
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{(C)}}.
+
+\end{flushleft}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage 
