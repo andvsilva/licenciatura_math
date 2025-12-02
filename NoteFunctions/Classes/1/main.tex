@@ -1,0 +1,361 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+
+\input{commands.tex}
+
+\hypersetup{
+    colorlinks=true,% make the links colored
+    linkcolor=blue
+}
+
+\usepackage{setspace}
+\addbibresource{bibliography.bib}
+
+\newcommand{\printingbibliography}{%
+
+    \pagestyle{myheadings}
+    \markright{}
+    \sloppy
+    \printbibliography[heading=bibintoc, % add to table of contents
+                   title=Refer\^encias % Chapter name
+                  ]
+    \fussy%
+}
+\PassOptionsToPackage{table}{xcolor}
+\renewcommand{\baselinestretch}{1.5}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\thepage}
+
+\geometry{a4paper,top=30mm,bottom=20mm,left=30mm,right=20mm}
+
+\titleformat*{\section}{\bfseries\large}
+\titleformat*{\subsection}{\bfseries\normalsize}
+
+\title{ \textbf{\large Notas: Mec\^anica Qu\^antica - MQ} }
+\author{Andr\'e V. Silva}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+MQ $\rightarrow$ Teoria fundamental para compreens\~ao dos fen\^omenos f\'isicos.
+
+MQ descreve a intera\c{c}\~ao entre mat\'eria e radia\c{c}\~ao
+
+S\'eculo XIX eram descritas por teorias distintas:
+
+\begin{itemize}
+    \item Corpos Materiais: Leis da Mec\^anica Newtoniana
+    \item Radia\~c{c}\~ao: Teoria Eletromagn\'etica
+    \item intera\c{c}\~ao radia\c{c}\~ao-materia: For\c{c}a de Lorentz.
+\end{itemize}
+
+Os fen\^omenos que deram origem a teoria da MQ foram:
+
+\begin{itemize}
+    \item Radia\c{c}\~ao de Corpo Negro
+    \item Efeito Fotoel\'etrico
+    \item Efeito Comptom
+\end{itemize}
+
+\newpage
+\section*{2. Bound state of a particle in a ``delta function potential''}
+
+Consider a particle whose Hamiltonian \( H \) [operator defined by formula (D-10) of chapter I] is:
+\[
+H = -\frac{\hbar^2}{2m} \frac{d^2}{dx^2} - \alpha \delta(x),
+\]
+where \( \alpha \) is a positive constant whose dimensions are to be found.
+
+\begin{enumerate}
+    \item[(a)] Integrate the eigenvalue equation of \( H \) between \( -\epsilon \) and \( +\epsilon \). 
+    Letting \( \epsilon \to 0 \), show that the derivative of the eigenfunction \( \varphi(x) \) 
+    presents a discontinuity at \( x = 0 \) and determine it in terms of \( \alpha \), \( m \), and \( \varphi(0) \).
+
+    \textbf{Resolu\c{c}\~ao}:\\
+    A equação de Schrödinger independente do tempo é:
+
+    \[
+    H \varphi(x) = E \varphi(x),
+    \]
+\[
+-\frac{\hbar^2}{2m} \frac{d^2 \varphi(x)}{dx^2} - \alpha \delta(x) \varphi(x) = E \varphi(x),
+\]
+onde \( E \) é a energia da partícula. Vamos integrar essa equação em torno de \( x = 0 \).
+
+\paragraph{Integração da equação:}
+Integrando ambos os lados da equação de Schrödinger em \( x \in [-\epsilon, +\epsilon] \), temos:
+\[
+\int_{-\epsilon}^{+\epsilon} \left[ -\frac{\hbar^2}{2m} \frac{d^2 \varphi(x)}{dx^2} - \alpha \delta(x) \varphi(x) \right] dx = \int_{-\epsilon}^{+\epsilon} E \varphi(x) dx.
+\]
+
+1. O termo com \( \delta(x) \):
+\[
+\int_{-\epsilon}^{+\epsilon} \delta(x) \varphi(x) dx = \varphi(0),
+\]
+pois \( \delta(x) \) só contribui em \( x = 0 \).
+
+2. O termo com \( \frac{d^2 \varphi}{dx^2} \):
+\[
+\int_{-\epsilon}^{+\epsilon} \frac{d^2 \varphi}{dx^2} dx = \frac{d\varphi}{dx} \bigg|_{x=0^+} - \frac{d\varphi}{dx} \bigg|_{x=0^-}.
+\]
+
+3. Como \( \epsilon \to 0 \), o termo \( \int_{-\epsilon}^{+\epsilon} E \varphi(x) dx \) tende a zero.
+
+Assim, temos:
+\[
+\frac{\hbar^2}{2m} \left[ \frac{d\varphi}{dx} \bigg|_{x=0^+} - \frac{d\varphi}{dx} \bigg|_{x=0^-} \right] = -\alpha \varphi(0).
+\]
+
+\paragraph{Resultado:}
+A descontinuidade da derivada é:
+\[
+\frac{d\varphi}{dx} \bigg|_{x=0^+} - \frac{d\varphi}{dx} \bigg|_{x=0^-} = -\frac{2m\alpha}{\hbar^2} \varphi(0).
+\]
+    
+    \item[(b)] Assume that the energy \( E \) of the particle is negative (bound state). The eigenfunction \( \varphi(x) \) can then be written:
+    \[
+    \varphi(x) =
+    \begin{cases}
+        A_1 e^{\rho x} + A_1' e^{-\rho x}, & x < 0, \\
+        A_2 e^{\rho x} + A_2' e^{-\rho x}, & x > 0.
+    \end{cases}
+    \]
+    Express the constant \( \rho \) in terms of \( E \) and \( m \). Using the results of the preceding question, calculate the matrix \( M \) defined by:
+    \[
+    \begin{pmatrix}
+    A_2 \\ A_2'
+    \end{pmatrix}
+    = M
+    \begin{pmatrix}
+    A_1 \\ A_1'
+    \end{pmatrix}.
+    \]
+    Then, using the condition that \( \varphi(x) \) must be square-integrable, find the possible values of the energy. Calculate the corresponding normalized wave functions.
+
+    \textbf{Resolu\c{c}\~ao}:\\
+
+    A função de onda \( \varphi(x) \) para \( E < 0 \) (estado ligado) é escrita como:
+\begin{equation}
+\varphi(x) =
+\begin{cases}
+A_1 e^{\rho x} + A_1' e^{-\rho x}, & x < 0, \\
+A_2 e^{\rho x} + A_2' e^{-\rho x}, & x > 0,
+\end{cases}
+\end{equation}
+
+onde \( \rho > 0 \) é uma constante relacionada à energia \( E \).
+
+\subsection*{Determinando \( \rho \)}
+Para \( x \neq 0 \), o potencial \( -\alpha \delta(x) \) não contribui, e a equação de Schrödinger é:
+\begin{equation}
+-\frac{\hbar^2}{2m} \frac{d^2 \varphi(x)}{dx^2} = E \varphi(x).
+\end{equation}
+Rearranjando:
+\begin{equation}
+\frac{d^2 \varphi(x)}{dx^2} = -\frac{2m|E|}{\hbar^2} \varphi(x),
+\end{equation}
+
+onde \( E = -|E| \), pois o estado é ligado (\( E < 0 \)).
+
+A solução geral dessa equação diferencial é exponencial:
+\begin{equation}
+\varphi(x) \propto e^{\pm \rho x}, \quad \text{com } \rho = \sqrt{\frac{2m|E|}{\hbar^2}}.
+\end{equation}
+
+\subsection*{Condição de continuidade em \( x = 0 \)}
+A função de onda \( \varphi(x) \) deve ser contínua em \( x = 0 \). Assim:
+\begin{equation}
+\varphi(0^-) = \varphi(0^+).
+\end{equation}
+Substituindo:
+\begin{equation}
+A_1 + A_1' = A_2 + A_2'.
+\end{equation}
+
+\subsection*{Condição de descontinuidade da derivada}
+A descontinuidade da derivada é dada por:
+\begin{equation}
+\frac{d\varphi}{dx} \Big|_{x=0^+} - \frac{d\varphi}{dx} \Big|_{x=0^-} = -\frac{2m\alpha}{\hbar^2} \varphi(0).
+\end{equation}
+
+Calculando as derivadas:
+\begin{itemize}
+    \item Para \( x > 0 \):
+    \begin{equation}
+    \frac{d\varphi}{dx} \Big|_{x=0^+} = \rho A_2 - \rho A_2'.
+    \end{equation}
+    \item Para \( x < 0 \):
+    \begin{equation}
+    \frac{d\varphi}{dx} \Big|_{x=0^-} = \rho A_1' - \rho A_1.
+    \end{equation}
+\end{itemize}
+
+Substituindo na equação da descontinuidade:
+\begin{equation}
+\left( \rho A_2 - \rho A_2' \right) - \left( \rho A_1' - \rho A_1 \right) = -\frac{2m\alpha}{\hbar^2} \varphi(0).
+\end{equation}
+
+Reorganizando:
+\begin{equation}
+\rho (A_2 - A_2' - A_1' + A_1) = -\frac{2m\alpha}{\hbar^2} \varphi(0).
+\end{equation}
+
+Como \( \varphi(0) = A_1 + A_1' = A_2 + A_2' \), temos:
+\begin{equation}
+\rho (A_2 - A_2' - A_1' + A_1) = -\frac{2m\alpha}{\hbar^2} (A_1 + A_1').
+\end{equation}
+
+\subsection*{Construção da matriz \( M \)}
+A matriz \( M \) é definida como:
+\begin{equation}
+\begin{pmatrix}
+A_2 \\
+A_2'
+\end{pmatrix}
+= M
+\begin{pmatrix}
+A_1 \\
+A_1'
+\end{pmatrix},
+\end{equation}
+
+\begin{alignat}{4}
+    A_2 = M_{11} A_1 + M_{12} A_1' \\
+    A_2' = M_{21} A_1 + M_{22} A_1'
+ \end{alignat}
+
+com \( M \) escrita explicitamente a partir das condições de continuidade e descontinuidade. Da continuidade:
+\begin{equation}
+A_1 + A_1' = A_2 + A_2', \quad \text{ou seja, } A_2 = A_1 + A_1' - A_2'.
+\end{equation}
+
+\begin{equation}
+    A_1 + A_1' = A_2 + A_2', \quad \text{ou seja, } A_2' = A_1 - A_2 - A_1'.
+\end{equation}
+
+Da descontinuidade da derivada:
+\begin{equation}
+\rho (A_2 - A_2' - A_1' + A_1) = -\frac{2m\alpha}{\hbar^2} (A_1 + A_1').
+\end{equation}
+
+Substituindo \( A_2 \) em função de \( A_1, A_1' \) e \( A_2' \), temos:
+\begin{equation}
+\rho \big[(A_1 + A_1' - A_2') - A_2' - A_1' + A_1 \big] = -\frac{2m\alpha}{\hbar^2} (A_1 + A_1').
+\end{equation}
+Simplificando:
+
+\begin{equation}
+2\rho A_1 - 2\rho A_2' = -\frac{2m\alpha}{\hbar^2} (A_1 + A_1').
+\end{equation}
+
+\begin{equation}
+- 2\rho A_2' = -\frac{2m\alpha}{\hbar^2} (A_1 + A_1') - 2\rho A_1
+\end{equation}
+
+\begin{equation}
+A_2' = \frac{m\alpha}{\hbar^2 \rho} (A_1 + A_1') + A_1
+\end{equation}
+
+\begin{equation}
+\boxed{A_2' =  \left(\frac{m\alpha}{\hbar^2 \rho} + 1\right)A_1 + \frac{m\alpha}{\hbar^2 \rho}A_1'}
+\end{equation}
+
+\begin{equation}
+\boxed{A_2' = M_{21} A_1 + M_{22} A_1'}
+\end{equation}
+
+Da descontinuidade da derivada:
+\begin{equation}
+\rho (A_2 - A_2' - A_1' + A_1) = -\frac{2m\alpha}{\hbar^2} (A_1 + A_1').
+\end{equation}
+
+Substituindo \( A_2' \) em função de \( A_1, A_1' \) e \( A_2 \), temos:
+\begin{equation}
+\rho \big[(A_2 - A_2' - A_1' + A_1 \big] = -\frac{2m\alpha}{\hbar^2} (A_1 + A_1').
+\end{equation}
+
+\begin{equation}
+\rho \big[(A_2 - A_1 + A_2 - A_1' - A_1' + A_1 \big] = -\frac{2m\alpha}{\hbar^2} (A_1 + A_1').
+\end{equation}
+
+\begin{equation}
+    2\rho \big[(A_2 - A_1'\big] = -\frac{2m\alpha}{\hbar^2} (A_1 + A_1').
+\end{equation}
+
+\begin{equation}
+\boxed{A_2 =  -\frac{m\alpha}{\hbar^2\rho}A_1 + \left(1 - \frac{m\alpha}{\hbar^2\rho}\right)A_1'}
+\end{equation}
+
+\begin{equation}
+\boxed{A_2 = M_{11} A_1 + M_{12} A_1'}
+\end{equation}
+
+Simplificando:
+
+Reorganizando os termos, obtemos \( A_2 \) e \( A_2' \) em função de \( A_1 \) e \( A_1' \), definindo assim os elementos de \( M \):
+\begin{equation}
+M = 
+\begin{pmatrix}
+    -\frac{m\alpha}{\hbar^2\rho} & \left(1 - \frac{m\alpha}{\hbar^2\rho}\right) \\
+    \left(\frac{m\alpha}{\hbar^2 \rho} + 1\right) &  \frac{m\alpha}{\hbar^2 \rho}
+\end{pmatrix}.
+\end{equation}
+    
+    \item[(c)] Trace these wave functions graphically. Give an order of magnitude for their width \( \Delta x \).
+
+    \textbf{Resolu\c{c}\~ao}:\\
+
+    Trace as funções de onda \( \varphi(x) \) para os valores permitidos de \( E \). A largura \( \Delta x \) pode ser estimada como:
+\[
+\Delta x \sim \frac{1}{\rho} = \frac{\hbar}{\sqrt{2m|E|}}.
+\]
+    
+    \item[(d)] What is the probability \( \mathcal{P}(p) \) that a measurement of the momentum of the particle in one of the normalized stationary states calculated above will give a result included between \( p \) and \( p + dp \)? For what value of \( p \) is this probability maximum? In what domain, of dimension \( \Delta p \), does it take on non-negligible values? Give an order of magnitude for the product \( \Delta x \cdot \Delta p \).
+
+    \textbf{Resolu\c{c}\~ao}:\\
+
+    A probabilidade \( \mathcal{P}(p) \) de encontrar o momento entre \( p \) e \( p + dp \) é dada pela transformada de Fourier da função de onda:
+\[
+\mathcal{P}(p) \propto \left| \int_{-\infty}^{+\infty} \varphi(x) e^{-ipx/\hbar} dx \right|^2.
+\]
+
+\paragraph{Passos:}
+1. Calcule \( \mathcal{P}(p) \) explicitamente para \( \varphi(x) \).
+2. Encontre o valor de \( p \) para o qual \( \mathcal{P}(p) \) é máxima.
+3. Determine a largura \( \Delta p \) onde \( \mathcal{P}(p) \) é significativa.
+
+\paragraph{Incerteza:}
+A relação de incerteza deve ser verificada:
+\[
+\Delta x \cdot \Delta p \sim \hbar.
+\]
+    
+\end{enumerate}
+
+
+
+
+
+
+
+%%%%%%%% Bibliography 
+% Os comandos para incluir as referências bibliográficas
+%\printingbibliography
+
+\end{document}
