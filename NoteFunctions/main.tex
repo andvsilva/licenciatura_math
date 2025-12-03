@@ -11,6 +11,10 @@
 \usepackage{subcaption}
 \usepackage{fancyhdr}
 \usepackage{xcolor}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{amsmath}
+\usepackage{comment}
 
 \input{commands.tex}
 
@@ -68,6 +72,7 @@ com $t$ em segundos, $h(t)$ em metros e $0\le t\le T$. O tempo, em segundos, em 
     \item[d)] 8
     \item[e)] 10
 \end{itemize}
+
 
 {\color{blue}
 \textbf{Resolução detalhada}
@@ -131,7 +136,8 @@ Logo, a alternativa correta é \textbf{(e) 10}.
 
 \newpage
 
---------------------------------------------------------------------------------------------------
+\noindent\rule{\linewidth}{0.4pt}
+
 
 \textbf{Enunciado}
 
@@ -275,7 +281,8 @@ b = 4.
 \boxed{b = 4}
 \]
 
----------------------------------------------------------------------------
+\noindent\rule{\linewidth}{0.4pt}
+
 
 \begin{center}
     \Large \textbf{Resoluções -- Questões de Funções Quadráticas}
@@ -367,6 +374,7 @@ Uma função quadrática \(f:\mathbb{R}\to\mathbb{R}\) tem seu gráfico passando
 
 {\color{blue}\textbf{(a) Determine essa função, em forma fatorada.}}
 
+\begin{comment}
 \medskip
 
 \begin{itemize}
@@ -391,9 +399,11 @@ Uma função quadrática \(f:\mathbb{R}\to\mathbb{R}\) tem seu gráfico passando
 \end{itemize}
 
 \vspace{8pt}
+\end{comment}
 
 {\color{blue}\textbf{(b) Essa função tem valor máximo ou mínimo para seu conjunto imagem? Justifique e determine-o.}}
 
+\begin{comment}
 \medskip
 
 \begin{itemize}
@@ -420,10 +430,13 @@ Uma função quadrática \(f:\mathbb{R}\to\mathbb{R}\) tem seu gráfico passando
     \item Questão 2: (a) \(5\le x\le 13\). (b) \(y_V=-16\). (c) Confirmação mostrando \(x_V=9\) e \(f(9)=-16\).
     \item Questão 3: (a) \(f(x)=2(x+3)(x-11)\). (b) Valor mínimo \(y_{\min}=-98\) em \(x=4\).
 \end{itemize}
+\end{comment}
 
 \section*{Questão 1}
 
 \subsection*{a) \(\sqrt{21 - x} = 9 + x\)}
+
+\begin{comment}
 
 Primeiro, observamos o domínio:
 \[
@@ -475,9 +488,11 @@ Portanto, a solução é:
 \]
 
 \bigskip
+\end{comment}
 
 \subsection*{b) \(\sqrt{5x + 1} = \sqrt{4x - 3} + 1\)}
 
+\begin{comment}
 Domínios:
 \[
 5x + 1 \ge 0 \Rightarrow x \ge -\tfrac{1}{5},
@@ -554,6 +569,775 @@ Portanto:
 \[
 \boxed{\{3, 7\}}.
 \]
+\end{comment}
 
+\noindent\rule{\linewidth}{0.4pt}
+
+
+\begin{flushleft}
+\textbf{\Large Enunciado:}\\[0.3cm]
+Sejam as funções \(f\) e \(g\) de \(\mathbb{R}\) em \(\mathbb{R}\), definidas por
+\[
+f(x)=x^{2}-4x+10 \qquad\text{e}\qquad g(x)=-5x+20.
+\]
+Calcule o valor de
+\[
+\frac{(f(4))^{2}-g\big(f(4)\big)}{\,f(0)-g\big(f(0)\big)\,}.
+\]
+
+\vspace{0.6cm}
+\end{flushleft}
+
+\begin{comment}
+\begin{flushleft}
+\textbf{\Large Resolução:}\\[0.2cm]
+
+Primeiro calculamos \(f(4)\) e \(f(0)\).
+
+\[
+f(4)=4^{2}-4\cdot 4+10=16-16+10=10.
+\]
+
+\[
+f(0)=0^{2}-4\cdot 0+10=10.
+\]
+
+Agora calculamos \(g\big(f(4)\big)\) e \(g\big(f(0)\big)\). Note que \(f(4)=f(0)=10\), então ambos os valores de \(g\) serão iguais:
+
+\[
+g\big(f(4)\big)=g(10)=-5\cdot 10+20=-50+20=-30,
+\]
+
+\[
+g\big(f(0)\big)=g(10)=-30.
+\]
+
+Substituímos estes resultados na expressão pedida:
+
+\[
+\frac{(f(4))^{2}-g\big(f(4)\big)}{\,f(0)-g\big(f(0)\big)\,}
+=\frac{10^{2}-(-30)}{10-(-30)}
+=\frac{100+30}{10+30}
+=\frac{130}{40}.
+\]
+
+Simplificando a fração:
+
+\[
+\frac{130}{40}=\frac{13}{4}=3{,}25.
+\]
+
+\vspace{0.4cm}
+
+\textcolor{red}{\textbf{Solução:}}\\
+
+O valor da expressão é \(\boxed{\dfrac{13}{4}}\) (ou \(3{,}25\)).
+
+\end{flushleft}
+\end{comment}
+
+\noindent\rule{\linewidth}{0.4pt}
+
+\begin{flushleft}
+\textbf{\Large Questão 53}\\[0.3cm]
+Sejam \(f(x)=4^{x}\) e \(g(x)=1{,}5x\). Então a função composta \(f\circ g\) tem lei:
+
+\[
+(f\circ g)(x)=f\big(g(x)\big).
+\]
+
+\end{flushleft}
+\begin{comment}
+
+\begin{flushleft}
+Calculamos:
+\[
+g(x)=1{,}5x=\frac{3}{2}x.
+\]
+Logo
+\[
+(f\circ g)(x)=f\!\left(\frac{3}{2}x\right)=4^{\frac{3}{2}x}.
+\]
+Reescrevendo a potência:
+\[
+4^{\frac{3}{2}x}=\big(4^{\frac{3}{2}}\big)^{x}.
+\]
+Agora calculamos \(4^{3/2}\):
+\[
+4^{\frac{3}{2}}=\big(4^{1/2}\big)^3=(\sqrt{4})^3=2^3=8.
+\]
+Portanto
+\[
+(f\circ g)(x)=8^{x}.
+\]
+
+\textbf{Resposta:} alternativa \(\mathbf{(e)}\), \(\;f\circ g(x)=8^{x}.\)
+
+\vspace{0.8cm}
+\end{comment}
+
+\textbf{\Large Questão 54}\\[0.3cm]
+Considere as funções \(g(x)=4x+5\) e \(h(x)=3x-2\), definidas em \(\mathbb{R}\). Um estudante que resolve corretamente a equação
+\[
+g\big(h(x)\big)+h\big(g(x)\big)=g\big(h(2)\big)-h\big(g(0)\big)
+\]
+encontra para \(x\) que satisfaz a equação acima.
+
+\begin{comment}
+\bigskip
+
+Primeiro calculemos \(g(h(x))\) e \(h(g(x))\).
+
+\[
+h(x)=3x-2 \quad\Rightarrow\quad g\big(h(x)\big)=g(3x-2)=4(3x-2)+5=12x-8+5=12x-3.
+\]
+
+\[
+g(x)=4x+5 \quad\Rightarrow\quad h\big(g(x)\big)=h(4x+5)=3(4x+5)-2=12x+15-2=12x+13.
+\]
+
+Somando:
+\[
+g\big(h(x)\big)+h\big(g(x)\big)=(12x-3)+(12x+13)=24x+10.
+\]
+
+Agora o lado direito da equação:
+
+\[
+h(2)=3\cdot 2-2=6-2=4 \quad\Rightarrow\quad g(h(2))=g(4)=4\cdot 4+5=16+5=21.
+\]
+
+\[
+g(0)=4\cdot 0+5=5 \quad\Rightarrow\quad h(g(0))=h(5)=3\cdot 5-2=15-2=13.
+\]
+
+Logo
+\[
+g(h(2))-h(g(0))=21-13=8.
+\]
+
+Igualando os dois lados:
+\[
+24x+10=8 \quad\Rightarrow\quad 24x=8-10=-2 \quad\Rightarrow\quad x=\frac{-2}{24}=-\frac{1}{12}.
+\]
+
+\textbf{Resposta:} alternativa \(\mathbf{(c)}\), \(\;x=-\dfrac{1}{12}.\)
+
+\bigskip
+
+\end{flushleft}
+\end{comment}
+
+\noindent\rule{\linewidth}{0.4pt}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao - 55}}\\
+\noindent
+
+\subsection*{Enunciado}
+Seja a função \(f\) definida por
+\[
+f(x)=\begin{cases}
+2x-7, & \text{se } x\le 5,\\[4pt]
+18-3x, & \text{se } x>5.
+\end{cases}
+\]
+O valor de
+\[
+f\big(f(6)\big)-f\big(f(0)\big)
+\]
+é igual a:
+
+\begin{itemize}
+\item[(A)] $26$
+\item[(B)] $39$
+\item[(C)] $-13$
+\item[(D)] $-28$
+\item[(E)] $14$
+\end{itemize}
+
+\vspace{0.5cm}
+\end{flushleft}
+
+\begin{comment}
+\begin{flushleft}
+\textcolor{red}{\textbf{Solução:}}\\
+
+Calculamos passo a passo.
+
+1. Primeiro \(f(6)\). Como \(6>5\), usamos a segunda regra:
+\[
+f(6)=18-3\cdot 6=18-18=0.
+\]
+
+2. Então \(f\big(f(6)\big)=f(0)\). Para \(0\) aplicamos a primeira regra (\(0\le 5\)):
+\[
+f(0)=2\cdot 0-7=-7.
+\]
+Logo \(f\big(f(6)\big)=-7\).
+
+3. Agora \(f(0)\) já calculado é \(-7\). Precisamos de \(f\big(f(0)\big)=f(-7)\). Como \(-7\le 5\), usamos a primeira regra:
+\[
+f(-7)=2\cdot(-7)-7=-14-7=-21.
+\]
+
+4. Finalmente:
+\[
+f\big(f(6)\big)-f\big(f(0)\big)=(-7)-(-21)=-7+21=14.
+\]
+
+\medskip
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{(E) 14}}.
+
+\end{flushleft}
+
+\vspace{1cm}
+\end{comment}
+
+\begin{flushleft}
+\textbf{\textcolor{blue}{\Large Quest\~ao - 56}}\\
+\noindent
+
+\subsection*{Enunciado}
+Seja \(f(x)=2x-3\) e \(g\big(f(x)\big)=f\!\left(\dfrac{x}{2}+1\right)\). Então \(g(5)\) é igual a:
+
+\begin{itemize}
+\item[(A)] $2$
+\item[(B)] $3$
+\item[(C)] $4$
+\item[(D)] $5$
+\item[(E)] $6$
+\end{itemize}
+
+\vspace{0.5cm}
+\end{flushleft}
+
+\begin{comment}
+\begin{flushleft}
+\textcolor{red}{\textbf{Solução:}}\\
+
+Queremos determinar a função \(g\) (pelo menos em termos gerais) e avaliar \(g(5)\).
+
+1. Escrevemos a igualdade dada:
+\[
+g\big(f(x)\big)=f\!\left(\frac{x}{2}+1\right).
+\]
+
+2. Como \(f(x)=2x-3\), temos \(f(x)\) representando o argumento de \(g\). Seja \(u=f(x)=2x-3\). Podemos expressar \(x\) em função de \(u\):
+\[
+u=2x-3 \quad\Rightarrow\quad x=\frac{u+3}{2}.
+\]
+
+3. Agora escrevemos o membro direito usando \(x=\dfrac{u+3}{2}\):
+\[
+f\!\left(\frac{x}{2}+1\right)
+=2\!\left(\frac{x}{2}+1\right)-3
+= x+2-3
+= x-1.
+\]
+Substituindo \(x=\dfrac{u+3}{2}\):
+\[
+x-1=\frac{u+3}{2}-1=\frac{u+3-2}{2}=\frac{u+1}{2}.
+\]
+
+4. Portanto, para todo \(u\) da forma \(u=f(x)\) vale
+\[
+g(u)=\frac{u+1}{2}.
+\]
+Isso define \(g\) como a função afim \(g(t)=\dfrac{t+1}{2}\) (válida para os valores atingidos por \(f\), e que é a extensão natural para todo \(t\)).
+
+5. Assim
+\[
+g(5)=\frac{5+1}{2}=\frac{6}{2}=3.
+\]
+
+\medskip
+
+A resposta correta é alternativa \colorbox{green!50}{\textbf{(B) 3}}.
+
+\end{flushleft}
+\end{comment}
+
+\noindent\rule{\linewidth}{0.4pt}
+
+\subsection*{Enunciado}
+
+Sejam \( f : \mathbb{R} \to \mathbb{R} \) e \( g : \mathbb{R} \to \mathbb{R} \) tais que
+\[
+g(x)=\pi \cdot f(2x).
+\]
+Então o gráfico de \(g(x)\) pode ser obtido a partir do gráfico de \(f(x)\) através de:
+
+\begin{itemize}
+\item[(a)] uma dilatação horizontal e uma dilatação vertical.
+\item[(b)] uma dilatação horizontal e uma compressão vertical.
+\item[(c)] uma compressão horizontal e uma dilatação vertical.
+\item[(d)] uma compressão horizontal e uma compressão vertical.
+\item[(e)] uma dilatação horizontal e uma translação vertical.
+\end{itemize}
+
+\vspace{0.5cm}
+
+\begin{comment}
+\textcolor{red}{\textbf{Solução:}}\\
+
+Analisemos separadamente as transformações aplicadas à função \(f(x)\).
+
+\medskip
+
+\textbf{1. Transformação horizontal}
+
+A expressão
+\[
+f(2x)
+\]
+é da forma \(f(kx)\) com \(k=2\). Para \(k>1\), ocorre uma \textbf{compressão horizontal} pelo fator \(k\), pois a função passa a variar mais rapidamente.
+
+Logo,
+\[
+f(2x) \quad \Rightarrow \quad \text{compressão horizontal por fator }2.
+\]
+
+\medskip
+
+\textbf{2. Transformação vertical}
+
+A expressão
+\[
+\pi \cdot f(2x)
+\]
+multiplica a função por um fator \(\pi\), e como \(\pi > 1\), ocorre uma \textbf{dilatação vertical}.
+
+\[
+\pi \cdot f(x) \quad \Rightarrow \quad \text{dilatação vertical}.
+\]
+
+\medskip
+
+\textbf{Conclusão}
+
+O gráfico de \(g(x)\) é obtido do gráfico de \(f(x)\) aplicando:
+
+\[
+\text{compressão horizontal} \quad \text{e} \quad \text{dilatação vertical}.
+\]
+
+\medskip
+
+A resposta correta é a alternativa \colorbox{green!50}{\textbf{(c)}}.
+\end{comment}
+
+\noindent\rule{\linewidth}{0.4pt}
+
+\begin{flushleft}
+\subsection*{Enunciado}
+
+O gr\'afico da fun\c{c}\~ao \( f(x) \), definida para todo n\'umero real, est\'a representado abaixo:
+
+\[
+\text{(gráfico em V, com vértice na origem)}
+\]
+
+O gr\'afico que melhor representa a fun\c{c}\~ao
+\[
+g(x)=f(x-1)+2
+\]
+é:
+
+\vspace{0.5cm}
+\end{flushleft}
+
+
+\begin{comment}
+\begin{flushleft}
+\textcolor{red}{\textbf{Solu\c{c}\~ao:}}\\
+
+A fun\c{c}\~ao original \(f(x)\) possui um formato em ``V'' com v\'ertice em \((0,0)\).
+
+Queremos determinar o efeito das transforma\c{c}\~oes presentes em:
+
+\[
+g(x)=f(x-1)+2.
+\]
+
+\medskip
+
+\textbf{1. Transla\c{c}\~ao horizontal}
+
+A express\~ao \(f(x-1)\) desloca o gr\'afico de \(f\) para a \textbf{direita} de 1 unidade.
+
+Assim, o v\'ertice do ``V'', que antes estava em \((0,0)\), passa para:
+
+\[
+(1,0).
+\]
+
+\medskip
+
+\textbf{2. Transla\c{c}\~ao vertical}
+
+A soma de 2 unidades:
+
+\[
+f(x-1)+2
+\]
+
+desloca o gr\'afico \textbf{para cima} de 2 unidades.
+
+Logo, o v\'ertice, que estava em \((1,0)\), passa para:
+
+\[
+(1,2).
+\]
+
+\medskip
+
+\textbf{Conclus\~ao}
+
+O gr\'afico de \(g(x)\) é o mesmo ``V'' original, mas agora com v\'ertice no ponto \((1,2)\).  
+A figura que mostra exatamente esse deslocamento é a \textbf{alternativa (b)}.
+
+\medskip
+
+A resposta correta é a alternativa \colorbox{green!50}{\textbf{(b)}}.
+
+\end{flushleft}
+\end{comment}
+
+\noindent\rule{\linewidth}{0.4pt}
+
+\[
+\text{Dada } f(x) = \frac{2x+1}{x-2}, \quad \text{calcule } g(x) = f(f(x))
+\]
+
+\[
+g(x) = f\left(\frac{2x+1}{x-2}\right)
+\]
+
+\begin{comment}
+Substituindo na função:
+
+\[
+g(x) = \frac{2\left(\frac{2x+1}{x-2}\right)+1}{\left(\frac{2x+1}{x-2}\right)-2}
+\]
+
+Agora simplificando o numerador:
+
+\[
+2\left(\frac{2x+1}{x-2}\right)+1
+= \frac{4x+2}{x-2} + \frac{x-2}{x-2}
+= \frac{4x+2 + x - 2}{x-2}
+= \frac{5x}{x-2}
+\]
+
+Simplificando o denominador:
+
+\[
+\frac{2x+1}{x-2} - 2
+= \frac{2x+1}{x-2} - \frac{2(x-2)}{x-2}
+= \frac{2x+1 - 2x + 4}{x-2}
+= \frac{5}{x-2}
+\]
+
+Dividindo as frações:
+
+\[
+g(x)=\frac{\frac{5x}{x-2}}{\frac{5}{x-2}}
+\]
+
+\[
+g(x)=\frac{5x}{x-2} \cdot \frac{x-2}{5}
+\]
+
+\[
+g(x)=x
+\]
+
+\[
+\boxed{g(x)=x}
+\]
+
+\end{comment}
+
+\noindent\rule{\linewidth}{0.4pt}
+
+\[
+p(x) = \frac{1}{x - 2}
+\]
+
+\textbf{Domínio:}
+\[
+D(p) = \mathbb{R} \setminus \{2\}
+\]
+
+\begin{comment}
+\textbf{Assíntota vertical:}
+
+O denominador se anula em \(x = 2\), logo:
+
+\[
+x = 2 \quad \text{é uma assíntota vertical.}
+\]
+
+\textbf{Assíntota horizontal:}
+
+\[
+\lim_{x \to \pm\infty} \frac{1}{x - 2} = 0
+\]
+
+Portanto:
+
+\[
+y = 0 \quad \text{é uma assíntota horizontal.}
+\]
+
+\textbf{Comportamento da função:}
+
+\[
+\lim_{x \to 2^+} \frac{1}{x - 2} = +\infty
+\]
+
+\[
+\lim_{x \to 2^-} \frac{1}{x - 2} = -\infty
+\]
+
+Para valores grandes de \(x\):
+
+\[
+\lim_{x \to +\infty} p(x) = 0^+,
+\quad
+\lim_{x \to -\infty} p(x) = 0^-.
+\]
+
+\textbf{Interseção com os eixos:}
+
+Eixo \(x\):
+\[
+\frac{1}{x-2} = 0 \Rightarrow \text{não existe solução.}
+\]
+
+Eixo \(y\):
+\[
+p(0) = \frac{1}{-2} = -\frac{1}{2}.
+\]
+
+\textbf{Conclusão:}
+
+O gráfico é uma hipérbole obtida por uma translação da função
+\[
+f(x) = \frac{1}{x}
+\]
+2 unidades para a direita, possuindo:
+
+\begin{itemize}
+  \item Assíntota vertical em \(x = 2\);
+  \item Assíntota horizontal em \(y = 0\);
+  \item Ponto notável em \((0, -\frac{1}{2})\).
+\end{itemize}
+
+\end{comment}
+
+\noindent\rule{\linewidth}{0.4pt}
+
+\[
+g(x) = \frac{3x-1}{x}
+\]
+
+Separando os termos:
+
+\[
+g(x) = \frac{3x}{x} - \frac{1}{x}
+\]
+
+\[
+g(x) = 3 - \frac{1}{x}
+\]
+
+\textbf{Domínio:}
+
+\[
+D(g) = \mathbb{R} \setminus \{0\}
+\]
+
+\begin{comment}
+
+\textbf{Assíntota vertical:}
+
+\[
+x = 0
+\]
+
+\textbf{Assíntota horizontal:}
+
+\[
+\lim_{x \to \pm\infty} g(x) = 3
+\Rightarrow y = 3
+\]
+
+\textbf{Interceptos:}
+
+Eixo \(x\):
+
+\[
+3x - 1 = 0
+\Rightarrow x = \frac{1}{3}
+\]
+
+Eixo \(y\): não existe (pois \(x=0\) não pertence ao domínio).
+
+\textbf{Conclusão:}
+
+O gráfico de \(g(x)\) é uma hipérbole obtida por transformação da função:
+
+\[
+f(x) = \frac{1}{x}
+\]
+
+Refletida no eixo \(x\) e transladada 3 unidades para cima.
+
+% graphic: here
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = {$x$},
+    ylabel = {$y$},
+    xmin = -4, xmax = 4,
+    ymin = -2, ymax = 6,
+    samples = 200,
+    domain = -4:-0.1,
+    domain y = 0.1:4,
+    grid = both,
+    width=10cm,
+    height=8cm,
+    legend pos=north east
+]
+
+% Função
+\addplot[blue, thick] {3 - 1/x};
+\addlegendentry{$g(x)=3-\frac{1}{x}$}
+
+% Assíntota vertical x=0
+\addplot[dashed, red] coordinates {(0,-2) (0,6)};
+\addlegendentry{$x = 0$}
+
+% Assíntota horizontal y=3
+\addplot[dashed, green] coordinates {(-4,3) (4,3)};
+\addlegendentry{$y = 3$}
+
+% Interseção com eixo x
+\addplot[only marks, mark=*] coordinates {(0.3333,0)};
+\node[above] at (axis cs:0.3333,0) {$\left(\frac13,0\right)$};
+
+\end{axis}
+\end{tikzpicture}
+
+\end{comment}
+
+\noindent\rule{\linewidth}{0.4pt}
+
+\[
+h(x) = \frac{x}{x+1}
+\]
+
+Escrevendo como soma:
+
+\[
+h(x) = \frac{x+1 - 1}{x+1}
+\]
+
+\[
+h(x) = 1 - \frac{1}{x+1}
+\]
+
+\textbf{Domínio:}
+
+\[
+D(h) = \mathbb{R} \setminus \{-1\}
+\]
+
+\begin{comment}
+\textbf{Assíntota vertical:}
+
+\[
+x = -1
+\]
+
+\textbf{Assíntota horizontal:}
+
+\[
+\lim_{x \to \pm\infty} h(x) = 1
+\Rightarrow y = 1
+\]
+
+\textbf{Interceptos:}
+
+Eixo \(x\):
+
+\[
+h(x) = 0
+\Rightarrow x = 0
+\]
+
+Logo, o ponto é:
+\[
+(0,0)
+\]
+
+Eixo \(y\):
+
+\[
+h(0) = 0
+\]
+
+\textbf{Conclusão:}
+
+O gráfico de \(h(x)\) é uma hipérbole obtida por translação da função:
+
+\[
+f(x) = \frac{1}{x}
+\]
+
+1 unidade para a esquerda e reflexão no eixo \(x\).
+
+
+% graphic: here
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = {$x$},
+    ylabel = {$y$},
+    xmin = -5, xmax = 4,
+    ymin = -4, ymax = 4,
+    samples = 200,
+    domain = -5:-1.1,
+    domain y = -0.9:4,
+    grid = both,
+    width=10cm,
+    height=8cm,
+    legend pos=north east
+]
+
+% Função
+\addplot[blue, thick] {1 - 1/(x+1)};
+\addlegendentry{$h(x)=1-\frac{1}{x+1}$}
+
+% Assíntota vertical x=-1
+\addplot[dashed, red] coordinates {(-1,-4) (-1,4)};
+\addlegendentry{$x = -1$}
+
+% Assíntota horizontal y=1
+\addplot[dashed, green] coordinates {(-5,1) (4,1)};
+\addlegendentry{$y = 1$}
+
+% Ponto (0,0)
+\addplot[only marks, mark=*] coordinates {(0,0)};
+\node[below right] at (axis cs:0,0) {$(0,0)$};
+
+\end{axis}
+\end{tikzpicture}
+
+\noindent\rule{\linewidth}{0.4pt}
+\end{comment}
 
 \end{document}
