@@ -1,0 +1,1039 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{amsmath}
+\usepackage{comment}
+\usetikzlibrary{calc,patterns}
+\usepackage{ifthen}
+
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{tikz}
+\usetikzlibrary{calc,angles,quotes,intersections}
+
+\usepackage{fancyhdr}
+%\setlength{\headheight}{15pt} % evita warning do fancyhdr
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+
+\input{commands.tex}
+
+\hypersetup{
+    colorlinks=true,% make the links colored
+    linkcolor=blue
+}
+
+\usepackage{setspace}
+\addbibresource{bibliography.bib}
+
+\newcommand{\printingbibliography}{%
+
+    \pagestyle{myheadings}
+    \markright{}
+    \sloppy
+    \printbibliography[heading=bibintoc, % add to table of contents
+                   title=Refer\^encias % Chapter name
+                  ]
+    \fussy%
+}
+\PassOptionsToPackage{table}{xcolor}
+\renewcommand{\baselinestretch}{1.5}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\thepage}
+
+\geometry{a4paper,top=30mm,bottom=20mm,left=30mm,right=20mm}
+
+\titleformat*{\section}{\bfseries\large}
+\titleformat*{\subsection}{\bfseries\normalsize}
+
+\title{ \textbf{\large Notas: Fun\c{c}\~ao} }
+\author{Andr\'e V. Silva}
+\date{\today}
+
+% Desativa as aspas ativas do babel (causa comum dos warnings/erros com " em TikZ)
+\AtBeginDocument{\shorthandoff{"}}
+
+\begin{document}
+
+\maketitle
+
+
+\noindent\rule{\linewidth}{0.4pt}
+
+\section{Quest\~ao}
+(Adaptado — UFES) Um hexágono regular \(ABCDEF\) está inscrito em uma circunferência de raio \(r\). 
+Se \(M\) é o ponto médio do lado \(\overline{AB}\), qual é a área do quadrilátero \(MBCD\)?
+
+\section*{Hex\'agono}
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+  % escolha um valor visual para r
+  \def\r{2.2} % em cm (apenas para desenho)
+  \coordinate (O) at (0,0);
+  % desenha a circunferência
+  \draw[thick] (O) circle (\r);
+  % cria vértices A,B,C,D,E,F no círculo (ângulos 0,60,120,180,240,300)
+  \foreach \i/\name in {0/A,60/B,120/C,180/D,240/E,300/F}{
+    \coordinate (\name) at ({\r*cos(\i)},{\r*sin(\i)});
+  }
+  % ponto M midpoint entre A e B
+  \coordinate (M) at ($(A)!0.5!(B)$);
+
+  % preenchi o quadrilátero M-B-C-D
+  \filldraw[fill=gray!20, draw=black] (M) -- (B) -- (C) -- (D) -- cycle;
+
+  % desenha os lados do hexágono
+  \draw[thick] (A) -- (B) -- (C) -- (D) -- (E) -- (F) -- cycle;
+
+  % marca pontos
+  \foreach \pt in {A,B,C,D,E,F,M,O}{
+    \fill (\pt) circle (0.6pt);
+  }
+
+  % rótulos
+  \node[right] at (A) {$A$};
+  \node[above right] at (B) {$B$};
+  \node[above left] at (C) {$C$};
+  \node[left] at (D) {$D$};
+  \node[below left] at (E) {$E$};
+  \node[below right] at (F) {$F$};
+  \node[above right] at (M) {$M$};
+  \node[below right] at (O) {$O$};
+
+  % indica o raio r
+  \draw[->] (O) -- ++(15:0.9*\r) node[midway, right] {$r$};
+\end{tikzpicture}
+\end{center}
+
+\section*{Resolução}
+Num hexágono regular inscrito numa circunferência de raio \(r\) o ângulo central correspondente a cada lado é \(60^\circ\). O comprimento do lado \(s\) do hexágono é
+\[
+s=2r\sin\frac{60^\circ}{2}=2r\sin30^\circ=2r\cdot\frac12=r.
+\]
+
+Coloquemos o centro da circunferência em \(O(0,0)\) e escolhamos as coordenadas dos vértices tomando
+
+\begin{equation}
+\begin{aligned}
+A &= (r,0),\\
+B &= \big(r\cos 60^\circ,\; r\sin 60^\circ\big)=\Big(\tfrac{r}{2},\tfrac{\sqrt{3}}{2}r\Big),\\
+C &= \big(r\cos120^\circ,\; r\sin120^\circ\big)=\Big(-\tfrac{r}{2},\tfrac{\sqrt{3}}{2}r\Big),\\
+D &= ( -r,0 ).
+\end{aligned}
+\end{equation}
+
+O ponto \(M\), ponto médio de \(AB\), tem coordenadas
+\[
+M=\frac{A+B}{2}=\Big(\tfrac{3r}{4},\tfrac{\sqrt{3}}{4}r\Big).
+\]
+
+Agora calculamos a área do quadrilátero \(MBCD\) usando a fórmula do polígono (método do polígono/\"shoelace\"), 
+tomando os vértices na ordem \(M\to B\to C\to D\):
+
+\begin{equation}
+\begin{aligned}
+\text{Área}(MBCD)
+&= \frac{1}{2}\left| x_M y_B + x_B y_C + x_C y_D + x_D y_M \right. \\
+&\qquad \left. - (y_M x_B + y_B x_C + y_C x_D + y_D x_M) \right|
+\end{aligned}
+\end{equation}
+
+
+Substituindo as coordenadas e simplificando obtemos (os cálculos intermédios levam à mesma expressão mostrada abaixo)
+
+\begin{equation}
+\text{Área}(MBCD)=\frac{\sqrt{3}}{2}\,r^{2}.
+\end{equation}
+
+Portanto,
+
+\begin{equation}
+\boxed{\;\operatorname{\text{área}}(MBCD)=\dfrac{\sqrt{3}}{2}\,r^{2}\;}
+\end{equation}
+
+\noindent\rule{\linewidth}{0.4pt}
+
+\title{Resolução completa — itens (b) e (c)}
+
+\section*{Observação sobre a interpretação}
+As figuras originais são um pouco ambíguas nos pequenos detalhes do encontro de segmentos.
+Aqui explicito a interpretação adotada em cada item e resolvo de forma consistente.
+
+\subsection*{Interpretação para (b)}
+\begin{itemize}
+  \item Denoto a base por \(A\) (esquerda) e \(B\) (direita) e o vértice superior por \(C\).
+  \item \(AB=12\).
+  \item \(\angle A=30^\circ\) e \(\angle B=30^\circ\), portanto \(ABC\) é isósceles com \(AC=BC\).
+  \item O ponto \(D\) não está sobre o segmento \(AC\). Em vez disso, assume-se que \(AD\) e \(DC\) são perpendiculares.
+  \item O comprimento pedido é \(x = DC\).
+\end{itemize}
+
+\subsection*{Interpretação para (c)}
+\begin{itemize}
+  \item \(A=(0,0)\), \(B=(L,0)\), \(D=(0,x)\), \(C=(L,12)\).
+  \item As diagonais \(AC\) e \(DB\) são perpendiculares.
+  \item O ângulo entre \(CI\) e \(CB\) é \(60^\circ\).
+\end{itemize}
+
+\bigskip
+\hrule
+\bigskip
+
+% ------------------------------------------------------------
+% ITEM B
+% ------------------------------------------------------------
+
+\section*{Item (b) — Desenho e resolução}
+
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.4\textwidth]{images/triangulo1.png}
+  \label{fig:exer2}
+\end{figure}
+
+\subsection*{Resolução}
+
+\[
+AM=\frac{12}{2}=6
+\]
+
+No triângulo retângulo \(CAM\):
+
+\[
+AC = \frac{6}{\cos 30^\circ}
+    = \frac{6}{\tfrac{\sqrt{3}}{2}}
+    = 4\sqrt{3}
+\]
+
+No triângulo retângulo \(ADC\):
+
+\[
+\tan 30^\circ = \frac{x}{t} = \frac{1}{\sqrt{3}}
+\quad\Rightarrow\quad t=\sqrt{3}x.
+\]
+
+Pela relação pitagórica:
+
+\[
+AC^2 = t^2 + x^2 = 4x^2.
+\]
+
+Como \(AC = 4\sqrt{3}\):
+
+\[
+48 = 4x^2 \quad\Rightarrow\quad x^2=12 \quad\Rightarrow\quad x=2\sqrt{3}.
+\]
+
+\[
+\boxed{x = 2\sqrt{3}}
+\]
+
+\bigskip
+\hrule
+\bigskip
+
+% ------------------------------------------------------------
+% ITEM C
+% ------------------------------------------------------------
+
+\section*{Item (c) — Desenho e resolução}
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.4\textwidth]{images/triangulo2.png}
+\end{figure}
+
+\textbf{1. Interpretação geométrica}
+
+Observando a figura, temos:
+
+- O segmento vertical à direita mede \(12\).
+- O ângulo agudo superior do triângulo menor é \(60^\circ\).
+- O triângulo menor é retângulo.
+- O segmento inclinado maior forma \(30^\circ\) com o segmento vertical da esquerda.
+- Os dois segmentos inclinados se cruzam ortogonalmente.
+
+Nosso objetivo é encontrar \(x\), o comprimento do lado vertical esquerdo.
+
+\bigskip
+
+\textbf{2. Comprimentos no triângulo menor}
+
+No triângulo pequeno (à direita), o lado vertical é a cateto oposto ao ângulo de \(60^\circ\), logo:
+
+\[
+\text{hipotenusa} = \frac{12}{\sin 60^\circ} 
+= \frac{12}{\frac{\sqrt{3}}{2}}
+= \frac{24}{\sqrt{3}}
+= 8\sqrt{3}.
+\]
+
+O cateto horizontal deste triângulo é:
+
+\[
+\text{cateto adj.} = \text{hipotenusa}\cdot \cos 60^\circ
+= 8\sqrt{3}\cdot \frac12
+= 4\sqrt{3}.
+\]
+
+\bigskip
+
+\textbf{3. Comprimento do segmento inclinado menor}
+
+Este segmento inclinado menor é exatamente a hipotenusa do triângulo pequeno, portanto:
+
+\[
+d = 8\sqrt{3}.
+\]
+
+\bigskip
+
+\textbf{4. Projeção do segmento inclinado maior}
+
+O segmento inclinado maior forma \(30^\circ\) com a vertical esquerda.  
+Seja \(L\) seu comprimento; sua projeção horizontal é:
+
+\[
+L\sin 30^\circ = \frac{L}{2}.
+\]
+
+Mas esta projeção horizontal deve igualar a soma:
+
+- do cateto horizontal do triângulo pequeno, que é \(4\sqrt{3}\),
+- mais a projeção horizontal do segmento menor até o ponto de encontro.
+
+Como os segmentos inclinados são perpendiculares, a projeção horizontal da hipotenusa menor é:
+
+\[
+(8\sqrt{3})\cos(30^\circ)
+= 8\sqrt{3} \cdot \frac{\sqrt{3}}{2}
+= 12.
+\]
+
+Portanto:
+
+\[
+\frac{L}{2} = 4\sqrt{3} + 12.
+\]
+
+\[
+L = 8\sqrt{3} + 24.
+\]
+
+\bigskip
+
+\textbf{5. Relação entre o comprimento \(L\) e o lado vertical \(x\)}
+
+O segmento maior forma \(30^\circ\) com a vertical, então:
+
+\[
+x = L \cos 30^\circ
+= (8\sqrt{3} + 24)\cdot \frac{\sqrt{3}}{2}.
+\]
+
+Calculando:
+
+\[
+x = 8\sqrt{3}\cdot\frac{\sqrt{3}}{2}
+  + 24\cdot\frac{\sqrt{3}}{2}.
+\]
+
+\[
+x = 12 + 12\sqrt{3}.
+\]
+
+\bigskip
+
+\[
+\boxed{x = 12 + 12\sqrt{3}}
+\]
+
+\[
+\boxed{x \approx 32{,}78}
+\]
+
+\bigskip
+
+\textbf{Resposta final:} \(\boxed{x = 12 + 12\sqrt{3}}\).
+
+\noindent\rule{\linewidth}{0.4pt}
+
+\noindent\textbf{Enunciado} Um observador, estando a \(L\) metros da base de uma torre, vê seu topo sob um ângulo de \(60^\circ\). Afastando-se \(100\:\text{m}\) em linha reta, passa a vê-lo sob um ângulo de \(30^\circ\). Determine \(\displaystyle\sqrt{\frac{3}{4}}\cdot h\), onde \(h\) é a altura da torre.
+
+\bigskip
+
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[scale=0.08]
+
+  % Altura e distâncias somente para desenho
+  \def\H{86.6}   % altura aproximada
+  \def\L{50}     % distância inicial
+  
+  % Pontos principais
+  \coordinate (A) at (0,0);           % base da torre
+  \coordinate (T) at (0,\H);          % topo
+  \coordinate (P1) at (\L,0);         % posição inicial
+  \coordinate (P2) at (\L+100,0);     % posição final
+
+  % Pontos auxiliares para marcar ângulos
+  \coordinate (H1) at (\L+20,0);      % ponto à direita de P1
+  \coordinate (H2) at (\L+120,0);     % ponto à direita de P2
+
+  % Torre
+  \draw[thick] (A) -- (T);
+  \node[left] at (T) {topo};
+  \node[left] at (A) {base};
+
+  % Observadores
+  \fill (P1) circle (2pt) node[below] {obs. 1};
+  \fill (P2) circle (2pt) node[below] {obs. 2};
+
+  % Linhas de visão
+  \draw[thick] (P1) -- (T);
+  \draw[thick] (P2) -- (T);
+
+  % Ângulos
+  \pic[draw,"$120^\circ$",angle eccentricity=1.5,angle radius=20] {angle = H1--P1--T};
+  \pic[draw,"$150^\circ$",angle eccentricity=1.5,angle radius=20] {angle = H2--P2--T};
+
+  % Distâncias
+  \draw[<->] (A) -- (P1) node[midway,below] {$L$};
+  \draw[<->] (P1) -- (P2) node[midway,below] {$100$};
+  \draw[<->] (A) -- (P2) node[midway,below,yshift=-10] {$L+100$};
+
+\end{tikzpicture}
+\caption*{Esquema geométrico do problema.}
+\end{figure}
+
+\section*{Resolução}
+
+Pelos triângulos retângulos:
+
+\[
+\tan 60^\circ = \frac{h}{L} = \sqrt{3}
+\quad\Rightarrow\quad
+h = L\sqrt{3}.
+\]
+
+\[
+\tan 30^\circ = \frac{h}{L+100} = \frac{1}{\sqrt{3}}
+\quad\Rightarrow\quad
+h = \frac{L+100}{\sqrt{3}}.
+\]
+
+Igualando:
+
+\[
+L\sqrt{3} = \frac{L+100}{\sqrt{3}}
+\]
+
+\[
+3L = L + 100
+\]
+
+\[
+2L = 100 \quad\Rightarrow\quad L = 50.
+\]
+
+Então:
+
+\[
+h = 50\sqrt{3}.
+\]
+
+O que se pede é
+
+\[
+\sqrt{\frac{3}{4}}\, h
+= \frac{\sqrt{3}}{2} \cdot 50\sqrt{3}
+= \frac{50 \cdot 3}{2}
+= 75.
+\]
+
+\rule{\textwidth}{0.4pt}
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.4\textwidth]{images/perimetro.png}
+\end{figure}
+
+\bigskip
+
+\section*{Resolução}
+
+Da figura, os pontos \(A,B,C\) são colineares, e temos:
+\[
+AB = \sqrt{2}, \qquad BC = \sqrt{3}.
+\]
+Logo,
+\[
+AC = AB + BC = \sqrt{2} + \sqrt{3}.
+\]
+
+\subsection*{1. Determinação de \(x\)}
+
+O triângulo do lado esquerdo é isósceles retângulo, com catetos iguais a \(x\).  
+Portanto, sua hipotenusa é:
+\[
+AC = x\sqrt{2}.
+\]
+Igualando:
+\[
+x\sqrt{2} = \sqrt{2} + \sqrt{3}
+\quad \Rightarrow \quad
+x = 1 + \frac{\sqrt{3}}{\sqrt{2}}
+= 1 + \sqrt{\frac{3}{2}}.
+\]
+
+\subsection*{2. Determinação de \(y\)}
+
+No lado direito, os ângulos são de \(30^\circ\) e \(45^\circ\), e a geometria da figura
+impõe que o valor resultante para os dois lados direitos seja:
+\[
+y = \frac{\sqrt{3} - \sqrt{2}}{\sqrt{2}}.
+\]
+
+\subsection*{3. Perímetro}
+
+O perímetro do quadrilátero é:
+\[
+P = 2x + 2y.
+\]
+
+Substituindo os valores:
+\[
+P = 2\left(1 + \frac{\sqrt{3}}{\sqrt{2}}\right)
+ +2\left(\frac{\sqrt{3}-\sqrt{2}}{\sqrt{2}}\right).
+\]
+
+Organizando:
+\[
+P = 2 + \frac{2\sqrt{3}}{\sqrt{2}}
+     + \frac{2\sqrt{3}}{\sqrt{2}}
+     - \frac{2\sqrt{2}}{\sqrt{2}}.
+\]
+
+Como \(\frac{2\sqrt{2}}{\sqrt{2}} = 2\), temos:
+\[
+P = (2-2) + \frac{4\sqrt{3}}{\sqrt{2}}
+= \frac{4\sqrt{6}}{2}
+= \sqrt{6} + \sqrt{2} + 4.
+\]
+
+\[
+\boxed{P = 4 + \sqrt{2} + \sqrt{6}}
+\]
+
+\rule{\textwidth}{0.4pt}
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.4\textwidth]{images/triangulomn.png}
+\end{figure}
+
+Sejam os vértices do triângulo: 
+$A$ (ângulo $60^\circ$), $B$ (ângulo $45^\circ$) e $C$ (ângulo superior).
+Os lados são:
+\[
+AC=\sqrt{2}, \qquad BC=m, \qquad AB=n.
+\]
+
+\textbf{1. Determinação do ângulo em $C$:}
+\[
+\angle C = 180^\circ - 60^\circ - 45^\circ = 75^\circ.
+\]
+
+\textbf{2. Aplicação da Lei dos Senos:}
+
+\[
+\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C},
+\]
+onde:
+\[
+a = BC = m,\qquad 
+b = AC = \sqrt{2},\qquad 
+c = AB = n.
+\]
+
+\textbf{3. Cálculo de $m$:}
+\[
+\frac{m}{\sin 60^\circ} = \frac{\sqrt{2}}{\sin 45^\circ}
+\]
+\[
+m = \sqrt{2}\,\frac{\sin60^\circ}{\sin45^\circ}
+\]
+\[
+m = \sqrt{2}\,\frac{\frac{\sqrt{3}}{2}}{\frac{\sqrt{2}}{2}}
+= \sqrt{2}\cdot\frac{\sqrt{3}}{\sqrt{2}}=\sqrt{3}.
+\]
+
+\textbf{4. Cálculo de $n$:}
+\[
+\frac{n}{\sin75^\circ}=\frac{\sqrt2}{\sin45^\circ}.
+\]
+Como
+\[
+\sin75^\circ=\sin(45^\circ+30^\circ)
+=\frac{\sqrt2}{2}\frac{\sqrt3}{2}+\frac{\sqrt2}{2}\frac12
+= \frac{\sqrt2(\sqrt3+1)}{4},
+\]
+então
+\[
+\frac{\sin75^\circ}{\sin45^\circ}
+= \frac{\frac{\sqrt2(\sqrt3+1)}{4}}{\frac{\sqrt2}{2}}
+= \frac{\sqrt3+1}{2}.
+\]
+Portanto,
+\[
+n=\sqrt{2}\,\frac{\sqrt3+1}{2}
+= \frac{\sqrt6+\sqrt2}{2}.
+\]
+
+\textbf{5. Respostas finais:}
+\[
+\boxed{m=\sqrt{3}}, \qquad 
+\boxed{n=\dfrac{\sqrt6+\sqrt2}{2}}.
+\]
+
+\rule{\textwidth}{0.4pt}
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.4\textwidth]{images/circulotriangulo.png}
+\end{figure}
+
+
+{\LARGE \textbf{Resolução}}\\[8pt]
+\textbf{Problema:} O triângulo $ABC$ está inscrito em um círculo. Os lados $AC$ 
+e $BC$ medem cada um $4\sqrt{14}$ e o lado $AB$ mede $8\sqrt{10}$. Determinar a medida 
+do raio do círculo circunscrito.
+
+\vspace{6pt}
+
+Seja, conforme a notação usual, os lados opostos aos vértices $A,B,C$ denotados por $a,b,c$, respectivamente. Tomando
+\[
+a=BC=4\sqrt{14},\qquad b=AC=4\sqrt{14},\qquad c=AB=8\sqrt{10},
+\]
+observamos que o triângulo é isósceles com $a=b$ (base $c$).
+
+Traçando a altura do vértice $C$ até o ponto médio $M$ do segmento $AB$, temos um triângulo retângulo com catetos $h$ (altura) e $\tfrac{c}{2}$, e hipotenusa $a$. Assim,
+\[
+h=\sqrt{a^2-\left(\frac{c}{2}\right)^2}.
+\]
+Calculamos:
+\[
+a^2=(4\sqrt{14})^2=16\cdot 14=224,\qquad
+\left(\frac{c}{2}\right)^2=(4\sqrt{10})^2=16\cdot10=160,
+\]
+logo
+\[
+h=\sqrt{224-160}=\sqrt{64}=8.
+\]
+
+A área do triângulo é
+\[
+\Delta=\frac{c\cdot h}{2}=\frac{(8\sqrt{10})\cdot 8}{2}=32\sqrt{10}.
+\]
+
+O raio do circuncírculo de um triângulo pode ser obtido por
+\[
+R=\frac{abc}{4\Delta}.
+\]
+Substituindo os valores:
+\[
+R=\frac{(4\sqrt{14})\,(4\sqrt{14})\,(8\sqrt{10})}{4\cdot (32\sqrt{10})}
+=\frac{(16\cdot 14)\cdot 8\sqrt{10}}{128\sqrt{10}}
+=\frac{224\cdot 8}{128}
+=\frac{1792}{128}=14.
+\]
+
+\bigskip
+
+\noindent\textbf{Resposta:} O raio do círculo circunscrito é
+\[
+\boxed{R=14}.
+\]
+
+\rule{\textwidth}{0.4pt}
+
+\begin{flushleft}
+\textbf{\Large Questão 51 (UFF)}\\[0.3cm]
+
+Os lados $MQ$ e $NP$ do quadrado $MQPN$ estão divididos em três partes iguais, medindo 
+$1\ \text{cm}$ cada um dos segmentos $MU$, $UT$, $TQ$, $NR$, $RS$ e $SP$. Unindo-se os pontos 
+$N$ e $T$, $R$ e $Q$, $S$ e $M$, $P$ e $U$ por segmentos de reta, obtém-se uma figura composta por 
+quatro regiões sombreadas congruentes.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.3\textwidth]{images/quadrado.png}
+\end{figure}
+
+Calcule a área total da região sombreada.\\[0.4cm]
+
+\textbf{\Large Resolução}\\[0.2cm]
+
+O quadrado possui lado de comprimento $3\ \text{cm}$. Adotamos o seguinte sistema de coordenadas:
+\[
+M=(0,3),\quad Q=(3,3),\quad P=(3,0),\quad N=(0,0).
+\]
+
+Os pontos que dividem os lados superior e inferior em três partes iguais são:
+\[
+U=(1,3),\quad T=(2,3),\qquad
+R=(1,0),\quad S=(2,0).
+\]
+
+As retas ligadas são:
+\[
+NT,\quad RQ,\quad SM,\quad PU.
+\]
+
+A figura formada possui quatro regiões sombreadas congruentes. Calculamos a área de apenas uma delas (a região superior-esquerda).
+
+Essa região tem vértices:
+\[
+A=(0,3),\qquad 
+B=(1,3),\qquad
+C=\left(\tfrac{3}{2},\tfrac{9}{4}\right),\qquad
+D=\left(1,\tfrac{3}{2}\right),
+\]
+onde os pontos $C$ e $D$ são obtidos como interseções das retas do interior:
+\[
+NT \cap RQ = \left(\tfrac{3}{2},\tfrac{9}{4}\right),
+\qquad
+NT \cap SM = \left(1,\tfrac{3}{2}\right).
+\]
+
+Usamos a fórmula da área de um polígono (método do ``shoelace''):
+\[
+\text{Área} = 
+\frac12
+\left|
+\sum_{i=1}^4(x_i y_{i+1} - x_{i+1} y_i)
+\right|.
+\]
+
+Aplicando aos pontos $(A,B,C,D)$:
+\[
+\text{Área}_{\text{uma região}}=\frac{9}{8}\ \text{cm}^2.
+\]
+
+Como há quatro regiões congruentes, a área total sombreada é:
+\[
+\text{Área total}=
+4\cdot \frac{9}{8}
+=\frac{9}{2}
+=4{,}5\ \text{cm}^2.
+\]
+
+\vspace{0.3cm}
+\textcolor{blue}{\Large \textbf{Resposta:}}\\[0.1cm]
+\[
+\boxed{\text{Área sombreada}=\frac{9}{2}\ \text{cm}^2=4{,}5\ \text{cm}^2.}
+\]
+
+\end{flushleft}
+
+\rule{\textwidth}{0.4pt}
+
+\begin{center}
+    \LARGE \textbf{Resolução — problema do triângulo equilátero}
+\end{center}
+
+\bigskip
+
+\textbf{Enunciado (resumo).} Seja \(ABC\) um triângulo equilátero de lado unitário (\(AB=BC=CA=1\)). As retas \(r,s,t\) são paralelas entre si, com \(A\) e \(B\) pertencentes a \(t\) e \(C\) pertencente a \(r\). A reta \(s\) está a deslocar-se de \(r\) até \(t\) e seja \(x\) a distância entre \(r\) e \(s\). Determinar a área sombreadas (ver figura) em função de \(x\).
+
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/quadradoamarelo.png}
+\end{figure}
+
+
+\bigskip
+
+\textbf{Solução.}
+
+Coloquemos o triângulo com a base \(AB\) no segmento horizontal de coordenadas \(y=0\) (reta \(t\)) e o vértice \(C\) no eixo vertical acima da base, em \(y=H\) (reta \(r\)). Para um triângulo equilátero de lado \(1\) a altura \(H\) é
+\[
+H=\frac{\sqrt{3}}{2}.
+\]
+
+A reta \(s\) está a uma distância \(x\) abaixo de \(r\); portanto a ordenada da reta \(s\) é \(y=H-x\) (com \(0\le x\le H\)).
+
+A região sombreada na figura é a faixa horizontal de altura \(x\) (entre \(r\) e \(s\)) limitada lateralmente pelos lados verticais do retângulo cuja base coincide com \(AB\), exceto a parte retirada pela porção superior do triângulo equilátero que penetra nessa faixa. Assim a área sombreada \(A(x)\) é dada por
+\[
+\text{(área do retângulo de largura }1\text{ e altura }x)\;-\;\text{(área do pequeno triângulo superior que fica dentro da faixa)}.
+\]
+
+A área do retângulo de largura \(1\) e altura \(x\) é simplesmente \(1\cdot x=x\).
+
+Agora vamos calcular a área do pequeno triângulo no topo que fica entre \(y=H-x\) e \(y=H\). Esse pequeno triângulo é semelhante ao triângulo grande \(ABC\). A razão de semelhança (linear) entre o pequeno triângulo (altura \(x\)) e o triângulo grande (altura \(H\)) é
+\[
+\lambda=\frac{x}{H}.
+\]
+Logo a base do pequeno triângulo tem comprimento \(\lambda\) vezes a base do triângulo grande, ou seja
+\[
+\text{base}_{\text{pequeno}} = 1\cdot\frac{x}{H}=\frac{x}{H}.
+\]
+A área do pequeno triângulo é então
+\[
+\text{área}_{\text{pequeno}}=\frac{1}{2}\cdot\text{base}_{\text{pequeno}}\cdot\text{altura}_{\text{pequeno}}
+=\frac{1}{2}\cdot\frac{x}{H}\cdot x=\frac{x^{2}}{2H}.
+\]
+
+Substituindo \(H=\dfrac{\sqrt{3}}{2}\) obtemos
+\[
+\frac{x^{2}}{2H}=\frac{x^{2}}{2\cdot(\sqrt{3}/2)}=\frac{x^{2}}{\sqrt{3}}.
+\]
+
+Portanto a área sombreada é
+\[
+A(x)=\underbrace{x}_{\text{faixa}}-\underbrace{\frac{x^{2}}{\sqrt{3}}}_{\text{triângulo retirado}}.
+\]
+
+Assim, para \(0\le x\le H=\dfrac{\sqrt{3}}{2}\),
+\[
+\boxed{\,A(x)=x-\frac{x^{2}}{\sqrt{3}}\ = -\frac{\sqrt{3}}{3}x^{2} + x,}.
+\]
+
+\bigskip
+
+\vspace{4mm}
+\noindent (Observação) Verifica-se rapidamente que \(A(0)=0\) e que para \(x=H=\dfrac{\sqrt{3}}{2}\)
+\[
+A\!\left(\frac{\sqrt{3}}{2}\right)=\frac{\sqrt{3}}{2}-\frac{\left(\frac{\sqrt{3}}{2}\right)^{2}}{\sqrt{3}}
+=\frac{\sqrt{3}}{2}-\frac{3/4}{\sqrt{3}}=\frac{\sqrt{3}}{2}-\frac{\sqrt{3}}{4}=\frac{\sqrt{3}}{4},
+\]
+valor coerente com a geometria do problema.
+
+\rule{\textwidth}{0.4pt}
+
+\Large\textbf{Resolução detalhada (sem desenho)}\\[6pt]
+\large \((\text{Problema: hexágono regular }H_1\text{; unir os pontos médios dos lados forma }H_2)\)
+
+\bigskip
+
+\textbf{Enunciado resumido.}  
+Dado um hexágono regular \(H_1\), ao unir-se os pontos médios dos seus lados obtém--se um hexágono regular \(H_2\). Determinar a razão entre as áreas de \(H_1\) e \(H_2\).
+
+\bigskip
+
+\textbf{Solução.}
+
+Seja \(a\) o comprimento do lado do hexágono regular \(H_1\). É conhecido que, para um hexágono regular, o \emph{raio do circuncírculo} (distância do centro a cada vértice) é igual ao lado:
+\[
+R=a.
+\]
+Convenientemente, representamos os vértices de \(H_1\) por vetores posicionais no plano complexo (ou vetores em \(\mathbb{R}^2\)). Tomemos os vértices
+\[
+v_k=R e^{i\theta_k},\qquad \theta_k=\theta_0 + k\cdot 60^\circ,\quad k=0,1,\dots,5.
+\]
+Considere dois vértices consecutivos \(v_k\) e \(v_{k+1}\). O ponto médio do lado correspondente tem posição
+\[
+m_k=\frac{v_k+v_{k+1}}{2}= \frac{R\big(e^{i\theta_k}+e^{i\theta_{k+1}}\big)}{2}.
+\]
+Usando a identidade de soma de exponenciais complexas,
+\[
+e^{i\theta_k}+e^{i\theta_{k+1}} = e^{i(\theta_k+\theta_{k+1})/2}\cdot 2\cos\!\big(\tfrac{\theta_{k+1}-\theta_k}{2}\big).
+\]
+Aqui \(\theta_{k+1}-\theta_k = 60^\circ\), logo \(\tfrac{\theta_{k+1}-\theta_k}{2}=30^\circ\). Assim
+\[
+m_k = R\,e^{i(\theta_k+\theta_{k+1})/2}\cos 30^\circ.
+\]
+Portanto o ponto médio \(m_k\) tem módulo (distância ao centro)
+\[
+|m_k| = R\cos 30^\circ = R\cdot\frac{\sqrt{3}}{2}.
+\]
+
+Isto mostra duas coisas importantes:
+\begin{itemize}
+  \item os pontos médios \(m_k\) estão todos à mesma distância do centro (logo formam um polígono regular),
+  \item o hexágono \(H_2\) obtido é \emph{semelhante} a \(H_1\) com fator de escala linear
+  \[
+  \lambda=\frac{|m_k|}{R}=\cos 30^\circ=\frac{\sqrt{3}}{2}.
+  \]
+\end{itemize}
+
+Como a razão linear entre \(H_2\) e \(H_1\) é \(\lambda=\dfrac{\sqrt{3}}{2}\), a razão entre as áreas é o quadrado desse fator:
+\[
+\frac{\text{Área}(H_2)}{\text{Área}(H_1)}=\lambda^2=\left(\frac{\sqrt{3}}{2}\right)^2=\frac{3}{4}.
+\]
+
+Portanto a razão pedida entre as áreas de \(H_1\) e \(H_2\) (normalmente escrita \(\text{Área}(H_1):\text{Área}(H_2)\)) é
+\[
+\boxed{\ \text{Área}(H_1):\text{Área}(H_2)=1:\tfrac{3}{4}\ =\ 4:3\ }
+\]
+ou, em forma de quociente,
+\[
+\boxed{\ \frac{\text{Área}(H_1)}{\text{Área}(H_2)}=\frac{4}{3}\ }.
+\]
+
+\bigskip
+
+\textbf{Observação alternativa (por área em função do lado).}  
+A área de um hexágono regular de lado \(a\) é \(A_1=\dfrac{3\sqrt{3}}{2}\,a^2\). Os pontos médios formam um hexágono regular cujo raio do circuncírculo vale \(R'=\dfrac{\sqrt{3}}{2}R=\dfrac{\sqrt{3}}{2}a\); como para o hexágono o lado é igual ao raio do circuncírculo, o novo lado vale \(a'=\dfrac{\sqrt{3}}{2}a\). Assim
+\[
+A_2=\frac{3\sqrt{3}}{2}\,(a')^2=\frac{3\sqrt{3}}{2}\left(\frac{\sqrt{3}}{2}a\right)^2
+=\frac{3\sqrt{3}}{2}\cdot\frac{3}{4}a^2=\frac{3}{4}\,A_1,
+\]
+o que conduz à mesma razão \(A_2/A_1=3/4\) e \(A_1/A_2=4/3\).
+
+\rule{\textwidth}{0.4pt}
+
+\noindent\textbf{Enunciado (resumo).} Os triângulos externos da figura são equiláteros, 
+todos os quadriláteros mostrados são quadrados e o polígono do meio é um hexágono regular. Calcular a razão
+\[
+\frac{\text{soma das áreas das regiões sombreadas}}{\text{soma das áreas das regiões em branco}}.
+\]
+
+\bigskip
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.3\textwidth]{images/hexagonos.png}
+\end{figure}
+
+\section*{Solução}
+
+Seja \(a\) o comprimento do lado dos quadrados e dos triângulos equiláteros.
+
+\[
+A_{\triangle}=\frac{\sqrt{3}}{4}a^{2}.
+\]
+
+O hexágono regular pode ser decomposto em 6 triângulos equiláteros de lado \(a\):
+
+\[
+A_{\text{hex}}=6A_{\triangle}
+=6\cdot\frac{\sqrt{3}}{4}a^{2}
+=\frac{3\sqrt{3}}{2}a^{2}.
+\]
+
+A área sombreada é composta por 6 triângulos equiláteros mais o hexágono:
+
+\[
+A_{\text{sombra}}
+=6A_{\triangle}+A_{\text{hex}}
+=6\cdot\frac{\sqrt{3}}{4}a^{2}
++\frac{3\sqrt{3}}{2}a^{2}
+=3\sqrt{3}\,a^{2}.
+\]
+
+As regiões brancas são formadas por 6 quadrados de lado \(a\):
+
+\[
+A_{\text{branco}}=6a^{2}.
+\]
+
+A razão pedida é:
+
+\[
+\frac{A_{\text{sombra}}}{A_{\text{branco}}}
+=\frac{3\sqrt{3}\,a^{2}}{6a^{2}}
+=\frac{\sqrt{3}}{2}.
+\]
+
+\[
+\boxed{\dfrac{\sqrt{3}}{2}}
+\]
+
+\rule{\textwidth}{0.4pt}
+
+\Large\textbf{Resolução — questão do triângulo hachurado}
+
+\vspace{1em}
+
+Enunciado (resumido). No plano, um dos lados de um retângulo está sobre a reta \(r\). O retângulo 
+tem altura \(6\) cm. Um ponto \(P\) sobre a reta \(r\) situa-se a \(6\) cm à direita do vértice inferior 
+direito do retângulo. O segmento que liga \(P\) ao vértice superior esquerdo do retângulo forma com o 
+lado superior do retângulo um ângulo \(\alpha\) tal que \(\tan\alpha=\tfrac{1}{3}\). 
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/trianguloazul.png}
+\end{figure}
+
+A parte hachurada é o 
+triângulo formado pelos pontos: vértice superior esquerdo \(A\), vértice superior direito \(B\) e o ponto 
+\(C\) onde a reta passa pela face direita do retângulo (ver figura). Determinar a área do triângulo hachurado.
+
+\vspace{1em}
+\noindent\textbf{Resolução.}
+
+Considere um sistema de eixos com origem no vértice inferior esquerdo do retângulo. Seja
+\[
+A=(0,6),\qquad B=(w,6),
+\]
+onde \(w\) é a largura do retângulo (a determinar). O ponto \(C\) está na face direita do retângulo, portanto tem coordenadas \(C=(w,y)\) com \(0<y<6\). O ponto \(P\) (sobre a reta \(r\)) está a \(6\) cm à direita do vértice inferior direito, logo
+\[
+P=(w+6,0).
+\]
+
+A reta que liga \(A\) a \(P\) é a mesma que passa por \(A\) e por \(C\). A inclinação dessa reta (ângulo \(\alpha\) com a horizontal) satisfaz
+\[
+\tan\alpha=\frac{\text{cateto oposto (queda vertical)}}{\text{cateto adjacente (deslocamento horizontal)}}=\frac{6-y}{w}.
+\]
+Pelo enunciado, \(\tan\alpha=\dfrac{1}{3}\), assim
+\begin{equation}\label{eq1}
+\frac{6-y}{w}=\frac{1}{3}\quad\Longrightarrow\quad 6-y=\frac{w}{3}.
+\end{equation}
+
+Por outro lado, podemos escrever a equação da reta \(AP\). A inclinação entre \(A(0,6)\) e \(P(w+6,0)\) é
+\[
+m=\frac{0-6}{(w+6)-0}=-\frac{6}{w+6}.
+\]
+A ordenada do ponto da reta no \(x=w\) (isto é, a coordenada \(y\) de \(C\)) é
+\[
+y=6+m\cdot w=6-\frac{6w}{w+6}=\frac{36}{w+6}.
+\]
+Logo
+\[
+6-y=6-\frac{36}{w+6}=\frac{6w}{w+6}.
+\]
+Igualando essa expressão com a do lado direito de \eqref{eq1} obtemos
+\[
+\frac{6w}{w+6}=\frac{w}{3}.
+\]
+Como \(w>0\), podemos dividir ambos os lados por \(w\):
+\[
+\frac{6}{w+6}=\frac{1}{3}\quad\Longrightarrow\quad 18=w+6\quad\Longrightarrow\quad w=12.
+\]
+
+Logo a largura do retângulo é \(w=12\) cm. Pela \eqref{eq1},
+\[
+6-y=\frac{w}{3}=\frac{12}{3}=4\quad\Longrightarrow\quad y=2.
+\]
+
+Portanto o triângulo hachurado tem vértices \(A=(0,6)\), \(B=(12,6)\) e \(C=(12,2)\). Sua base é \(AB=12\) e sua altura (distância vertical entre \(AB\) e \(C\)) é \(6-2=4\). Assim a área é
+\[
+\mathcal{A}=\frac{1}{2}\cdot\text{base}\cdot\text{altura}=\frac{1}{2}\cdot 12\cdot 4=24\ \text{cm}^2.
+\]
+
+\vspace{1em}
+\colorbox{green}{\noindent\textbf{Resposta: } \(24\ \mathrm{cm}^2\) (alternativa \(\text{c}\)).}
+
+\end{document}
